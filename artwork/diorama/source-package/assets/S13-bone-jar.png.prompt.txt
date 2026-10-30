@@ -1,0 +1,9 @@
+Use case: lighting-weather.
+Asset type: Scruffy Colony S13-bone-jar scene prop, one square 1024 x 1024 RGBA PNG with real transparent alpha.
+Input image 1 is the FINAL FULL stage-2 jar, and is the exact object to preserve. Input image 2 is H01-resources-workstations.webp, a lighting and miniature camera reference ONLY.
+Use the SAME jar from image 1 as a small colony ground prop: preserve its squat ochre glazed clay body, side lugs, front-left chipped opening, neck rope, small ivory bones heaped above the rim, low foreshortened wooden lid folded open backwards behind/right, slack hemp tether, and calm amber interior light. Do not stand the lid upright or redesign the jar.
+Match H01's warm sunlight from upper left and muted petrol/brown shadows. Keep the handcrafted painted 3D miniature style and tangible clay, wood, rope and ivory bone.
+Composition: complete object about 60 percent of the square canvas height, centered horizontally, base at 80 percent canvas height, plenty of transparent space around it.
+Add ONE soft semi-transparent contact shadow directly beneath the base, fading gently toward lower right. Shadow only, no visible terrain or ground plane. Keep this shadow subtle so it works when overlaid onto H01.
+Outside the jar and its contact shadow, every pixel must be transparent. No ground patch, grass, dirt, rocks, floor, foliage, scenery, colony characters, buildings, backdrop, painted checkerboard or broad silhouette glow.
+No text, numbers, coins, currency, gifts, UI, frame, watermark, spilled bones, sparks or explosion.

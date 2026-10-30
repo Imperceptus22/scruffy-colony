@@ -1,0 +1,23 @@
+{
+  "id": "R02",
+  "key": "Wood",
+  "name": "Wood",
+  "group": "resources",
+  "file": "assets/R02-Wood.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 418,
+    "top": 0,
+    "width": 418,
+    "height": 430
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 430
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "0f7675ca07fb883b734ce0e1a641d9078eb1dc0546fcdee5ef9cc7bbfe7ef5b0",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,35 @@
+group,artifact,version,declared_license,evidence
+androidx.activity,activity,1.10.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.annotation,annotation,1.8.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.annotation,annotation-experimental,1.4.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.annotation,annotation-jvm,1.8.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.arch.core,core-common,2.2.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.arch.core,core-runtime,2.2.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.collection,collection,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.concurrent,concurrent-futures,1.1.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.core,core,1.13.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.core,core-ktx,1.13.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.core,core-viewtree,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.interpolator,interpolator,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-common,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-livedata-core,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-runtime,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-viewmodel,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-viewmodel-savedstate,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.profileinstaller,profileinstaller,1.4.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.savedstate,savedstate,1.2.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.startup,startup-runtime,1.1.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.tracing,tracing,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.versionedparcelable,versionedparcelable,1.1.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.webkit,webkit,1.14.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+com.google.guava,listenablefuture,1.0,"The Apache Software License, Version 2.0",POM parent com.google.guava:guava-parent:26.0-android in local Gradle cache
+org.jetbrains,annotations,23.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlin,kotlin-stdlib,2.2.21,Apache-2.0,POM metadata in local Gradle cache
+org.jetbrains.kotlin,kotlin-stdlib-common,2.2.21,Apache-2.0,POM metadata in local Gradle cache
+org.jetbrains.kotlin,kotlin-stdlib-jdk7,1.8.20,"The Apache License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlin,kotlin-stdlib-jdk8,1.8.20,"The Apache License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlinx,kotlinx-coroutines-android,1.7.3,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlinx,kotlinx-coroutines-bom,1.7.3,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlinx,kotlinx-coroutines-core,1.7.3,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+org.jetbrains.kotlinx,kotlinx-coroutines-core-jvm,1.7.3,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+org.jspecify,jspecify,1.0.0,"The Apache License, Version 2.0",POM metadata in local Gradle cache

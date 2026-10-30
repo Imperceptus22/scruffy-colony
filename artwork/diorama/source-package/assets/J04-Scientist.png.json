@@ -1,0 +1,23 @@
+{
+  "id": "J04",
+  "key": "Scientist",
+  "name": "Scientist",
+  "group": "jobs",
+  "file": "assets/J04-Scientist.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 1330,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "416e698a9be6fec366c8718a53a69012be849dc2c43fe5f180e601c01730095a",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "M08",
+  "key": "Void",
+  "name": "Void",
+  "group": "biomes",
+  "file": "assets/M08-Void.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 1330,
+    "top": 443,
+    "width": 444,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 444
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "05757f869ac59c3ab63a5738c9ee176e17b47d47eb831fad1ba22ae60b45a59d",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

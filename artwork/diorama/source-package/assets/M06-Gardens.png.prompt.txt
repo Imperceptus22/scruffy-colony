@@ -1,0 +1,5 @@
+Use case: stylized-concept edit
+Asset type: transparent-background correction to a high-resolution 4x2 game biome sprite atlas.
+Input image: Image 1 is the edit target. Preserve its eight biome diorama tiles and their artwork, dimensions, relative scale, order, colors and lighting exactly.
+Primary request: remove the gray checkerboard everywhere outside the eight rectangular terrain slabs and replace it with genuine fully transparent alpha. Preserve every landscape tile itself fully opaque, including its soil cutaway sides and natural silhouettes. Keep the same exact 4-column by 2-row layout and same ordered subjects: Random mixed landscape, Mountain, Forest, Sea, Depths, Gardens, Farmlands, Void.
+Constraints: this is a background transparency correction only; do not redraw or alter any biome content; no checkerboard visible, no new background or shadows outside tile silhouettes, actual alpha transparency around and between tiles, no labels, text, borders, or watermark.

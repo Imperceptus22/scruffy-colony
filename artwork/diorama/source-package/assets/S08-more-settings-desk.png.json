@@ -1,0 +1,23 @@
+{
+  "id": "S08",
+  "key": "more-settings-desk",
+  "name": "Mehr und Einstellungen",
+  "group": "scenes",
+  "file": "assets/S08-more-settings-desk.png",
+  "approved": false,
+  "source": "special/02-systems.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/systems.edit.prompt.txt",
+  "sha256": "cfe48984d78313de277c3898baccba80e9a3eb0ee92b6dd789d9480a967a83d0",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

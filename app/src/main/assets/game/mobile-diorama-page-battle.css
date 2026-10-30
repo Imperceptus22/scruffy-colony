@@ -1,0 +1,1198 @@
+/* Diorama page layer Kampf (battle). Loads after the shared Diorama layers and belongs to the battle page round.
+   Every rule starts with html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) (combat, map workbench and map chamber),
+   so it touches no other page (mobile-diorama.js mirrors the page into body[data-diorama-page]). Shared building
+   blocks (purchase tile, chip, info, amount tabs, colony scene head, header, navigation, dialogs, tokens) stay in
+   mobile-diorama.css, mobile-diorama-night.css and mobile-diorama-header.css. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps {
+  background:#efe1c5; border-style:solid; border-color:transparent; border-width:var(--dio-panel-border);
+  border-image:var(--dio-panel);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer {
+  background:var(--surface); color:var(--ink);
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-panel-border)!important;
+  border-image:var(--dio-panel)!important; box-shadow:0 2px 4px #291c1826;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #fightBtn {
+  color:#392810!important; background:#e5ad43!important;
+  border-image:var(--dio-btn-amber);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer { padding:8px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene {
+  height:128px; background-image:url("mobile-assets/diorama/S01-colony.webp");
+  background-position:center 52%; background-size:cover; border:1px solid #8c653b;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene::before { background:none; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  padding:8px!important; background:var(--surface)!important; border:1px solid #ba9b67; border-radius:3px;
+  grid-template-rows:auto auto 5px auto;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol { background:#f5e1c5!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow { gap:6px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .mobile-combat-heading { grid-template-rows:auto; grid-template-columns:minmax(0,1fr) auto; gap:2px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .innerFightBar { color:var(--ink)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow { padding:5px; background:#543c27; border-radius:5px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell[class="battleCell cellColorNotBeaten"],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell[class="cellColorNotBeaten battleCell"],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid .battleCell[class="battleCell cellColorNotBeaten"],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid .battleCell[class="cellColorNotBeaten battleCell"] {
+  background-image:url("mobile-assets/diorama/T01-terrain-grass.webp");
+  background-color:#849c4a; background-size:100% 100%; background-position:center;
+  border:1px solid #9c7c43; border-radius:4px; box-shadow:0 1px 2px #30261a66;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-tree-deciduous { background:url("mobile-assets/diorama/T04-marker-tree.webp") center/contain no-repeat; font-size:0; width:22px; height:25px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-apple { background:url("mobile-assets/diorama/T05-marker-food.webp") center/contain no-repeat; font-size:0; width:22px; height:22px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-th { background:url("mobile-assets/diorama/T06-marker-ore.webp") center/contain no-repeat; font-size:0; width:23px; height:22px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-book { background:url("mobile-assets/diorama/T07-marker-book.webp") center/contain no-repeat; font-size:0; width:21px; height:23px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-gift { background:url("mobile-assets/diorama/T08-marker-gift.webp") center/contain no-repeat; font-size:0; width:22px; height:22px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.glyphicon-user { background:url("mobile-assets/diorama/T09-marker-unlock.webp") center/contain no-repeat; font-size:0; width:20px; height:23px; vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .mobile-biome-art[data-diorama-scene] { background:var(--diorama-scene) center/contain no-repeat; background-color:#eddfc1; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .mobile-biome-art[data-diorama-scene]>svg,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .mobile-biome-art[data-diorama-scene]>span { visibility:hidden; }
+/* Combat surface tuned against the approved wide clearing; game nodes and states remain authoritative.
+   Framed surfaces use only the shared --dio-* frame tokens from mobile-diorama.css. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer {
+  min-width:0; padding:6px!important; overflow:visible;
+  background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important;
+  border:2px solid #7a512d!important; border-image:none!important; border-radius:6px!important;
+  box-shadow:0 2px 5px #1b100b99,inset 0 0 0 1px #bd9057;
+}
+/* One combat column: the two original wrappers only contribute their children, so formation and zone
+   can share a row. At 411x818 the 10x10 grid alone is ~390px, so the actions follow the combat stats
+   (reachable without scrolling) instead of sitting under the grid as in reference-combat.png. */
+html[data-graphics="diorama"] body[data-diorama-page="battle"] #battleContainer {
+  display:grid!important; grid-template-columns:auto minmax(0,1fr); gap:6px;
+}
+html[data-graphics="diorama"] body[data-diorama-page="battle"] #battleHeadContainer,
+html[data-graphics="diorama"] body[data-diorama-page="battle"] #gridRow { display:contents!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleHeadContainer>*,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow>* { grid-column:1/-1; min-width:0; margin-left:0; margin-right:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleHeadContainer>#mobile-combat-scene { order:1; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleHeadContainer>#battleStatsRow { order:2; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow>#battleBtnsColumn { order:3; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleHeadContainer>#colStances { order:4; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow>#mobile-combat-map-head { order:5; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow>#gridContainer { order:6; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow>* { order:7; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene {
+  width:100%; height:auto!important; min-height:72px; max-height:96px; aspect-ratio:4/1;
+  overflow:hidden; border:2px solid #7a512d; border-radius:4px 4px 2px 2px;
+  background:#6c7850 url("mobile-assets/diorama/H04-combat-clearing.webp") center 60%/cover no-repeat;
+  box-shadow:inset 0 0 0 1px #f4dba4,0 2px 3px #25180f88;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene::before { content:none; }
+/* Keep the original team and enemy art, giving each side room against the clearing. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene .mobile-trimp-art,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene #mobile-enemy-art {
+  bottom:0; width:min(30%,120px); max-width:40%;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene .mobile-trimp-art { left:6%; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene #mobile-enemy-art { right:6%; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene .mobile-duel-mark { top:50%; transform:translateY(-50%); }
+/* Two quiet parchment fields keep names, health and values legible at narrow widths. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow { min-width:0; gap:5px; margin:0; background:transparent!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  min-width:0; padding:6px 7px!important; overflow-wrap:anywhere;
+  background:#f3e7ce!important; color:#302e23!important;
+  border:1px solid #b49462!important; border-radius:4px!important;
+  box-shadow:inset 0 1px #fff9e9,0 1px 2px #39291a55;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading { min-width:0; min-height:44px; column-gap:4px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyName,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName {
+  min-width:0; color:#2d3025!important; font-size:clamp(.82rem,3.7vw,.98rem)!important;
+  line-height:1.25!important; overflow-wrap:anywhere;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-life { min-width:0; color:#5b4c36; font-size:.78rem; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-health-value { color:#302e23!important; font-size:.8rem!important; }
+/* Health bars: a dark recessed track so the remaining health reads at a glance on the parchment. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .fightBar {
+  min-width:0; height:7px!important; background:#3b2d20!important;
+  border:1px solid #2a1f15; border-radius:4px; box-shadow:inset 0 1px 2px #000a;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyBar { background:#3f8a5b!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyBar { background:#c0533a!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyStatsRow,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow { min-width:0; color:#302e23!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #damageDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div {
+  min-width:0; color:#302e23!important; font-size:clamp(.74rem,3.1vw,.85rem)!important;
+  line-height:1.4!important; overflow-wrap:anywhere;
+}
+/* V-182: the crit hint is a small bronze plaque like the signs of this page, in light ink. The tier keeps the original
+   wording (Weak! / Crit! / CRIT! / CRIT!! / symbol) and adds a coloured stripe on the left, so it is not told by colour alone. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):not(:empty) {
+  --crit:#c9a46a; display:inline-block; margin:0 0 0 6px!important; padding:0 6px 0 7px!important; line-height:1.35!important; white-space:nowrap; vertical-align:baseline;
+  color:#fff8e6!important; background:linear-gradient(#946330,#6b4416)!important; border:1px solid #4a2c0c; border-left:4px solid var(--crit); border-radius:3px;
+  box-shadow:inset 0 1px 0 #d9b37a88, 0 1px 2px #2c1e1466; font-weight:800; text-shadow:0 1px 0 #2e1a06!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit) * { color:inherit!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):has(>span[style*="cyan"]) { --crit:#7fd3d8; background:linear-gradient(#3d6a70,#1f4a52)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):has(>span[style*="orange"]) { --crit:#f0a040; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):has(>span[style*="red"]) { --crit:#ff6a4a; background:linear-gradient(#9a3a1c,#6e1f0c)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):has(>[class^="critTier"]) { --crit:#c58dff; background:linear-gradient(#6a3e8e,#45235f)!important; }
+/* Formation and zone remain their original controls and information nodes. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances {
+  min-width:0; margin:0; padding:3px 6px!important;
+  display:flex!important; flex-wrap:wrap; align-items:center; gap:4px 8px;
+  background:#efdcb6; border:2px solid #8e6839; border-radius:5px; box-shadow:0 1px 2px #2d1d1255;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances::before { content:"Formation"; color:#302e23; font:600 .82rem/1.2 var(--font-data); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances>.row { min-width:0; flex:0 1 auto; flex-wrap:wrap; gap:4px; margin:0; padding:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances .formFifth,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances .formSixth { flex:0 0 auto; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances .formationBtn {
+  align-items:center; justify-content:center; min-width:44px; min-height:44px; margin:0;
+  padding:4px; color:#302e23!important; background:#f8ecd2!important; font-weight:700;
+  border:1px solid #8e6839!important; border-radius:4px!important; box-shadow:inset 0 1px #fff9e8;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances .formationBtn.formationStateEnabled {
+  color:#fff5dc!important; background:#205958!important; border-color:#123e3c!important;
+}
+/* No unlocked formation: the original buttons (or their containers) are all hidden, so no empty
+   labelled band is drawn. Formation and zone sign each take a full row (V-149: a shared row squeezed map titles). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances:not(:has(:is(.formFifth,.formSixth):not([style*="display: none"])>.formationBtn[style*="display: block"])) { display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  min-width:0; min-height:48px; margin:0; padding:2px 0!important; color:#302e23!important;
+  display:flex; flex-wrap:nowrap; align-items:center; justify-content:center; gap:4px;
+  background:#d8b77d; border-style:solid; border-color:transparent; border-width:var(--dio-sign-border);
+  border-image:var(--dio-sign); border-radius:0; box-shadow:none;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle {
+  flex:1 1 auto; min-width:0; min-height:0!important; margin:0!important; padding:0!important;
+  color:#302e23!important; background:transparent!important; border:0; box-shadow:none;
+  font-size:.9rem!important; line-height:1.3!important; overflow-wrap:anywhere;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle #worldNumber { font-weight:700; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle #mapBonus:not(:empty) { flex-basis:100%; text-align:center; font-size:.78rem; color:#4c3b25; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head #mobile-return-world {
+  flex:0 0 auto; min-width:44px; min-height:44px; padding:2px 6px!important;
+  color:#174b49!important; background:transparent!important; border:0!important; border-image:none!important;
+  font-weight:700; white-space:nowrap;
+}
+/* The existing square game grid receives a thin dark wood lattice, not a flat band. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridContainer {
+  min-width:0; height:auto!important; padding:4px!important;
+  background:#493423 url("mobile-assets/diorama/P01-dark-wood.webp") center/220px repeat!important;
+  border:2px solid #754c2c; border-radius:5px;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid {
+  width:100%; height:auto!important; min-width:0; padding:2px; background:#2f2218; border:1px solid #916a3c; border-radius:4px;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleRow {
+  display:grid; grid-template-columns:repeat(10,minmax(0,1fr)); gap:2px;
+  width:100%; height:auto; margin:0 0 2px; padding:0; list-style:none;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell {
+  display:grid; place-items:center; box-sizing:border-box; width:auto!important; height:auto!important;
+  min-width:0; min-height:0; aspect-ratio:1/1; padding:0!important; vertical-align:top;
+  font-size:clamp(.8rem,4vw,1.15rem)!important; line-height:1!important;
+  border:1px solid #55391f!important; border-radius:3px!important;
+  box-shadow:inset 0 1px #f4daa066,0 1px 2px #21160f99;
+}
+/* Larger loot markers: the shared marker art fills most of a cell; font glyphs scale with the cell. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-tree-deciduous,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-apple,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-th,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-book,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-gift,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon-user,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.icon-cubes { width:76%; height:76%; background-size:contain; filter:drop-shadow(0 1px 1px #0009); }
+/* Metal used a tiny font glyph; it now uses the ore marker, its name stays in aria-label/title. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.icon-cubes {
+  display:inline-block; background:url("mobile-assets/diorama/T06-marker-ore.webp") center/contain no-repeat;
+  font-size:0; width:23px; height:22px; vertical-align:middle;
+}
+/* Gems used a tiny font glyph; the gem resource art reads as a marker (name stays in aria-label/title). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .battleCell>.icon-diamond {
+  display:inline-block; background:url("mobile-assets/diorama/R06-Gems.webp") center/contain no-repeat;
+  font-size:0; width:20px; height:18px; vertical-align:middle;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.icon-diamond { width:62%; height:62%; filter:drop-shadow(0 1px 1px #0009); }
+/* State cues only add an outline or a dimmer; original mutation, void, seasonal and selected
+   background classes are never replaced. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell.cellColorCurrent,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid .battleCell.cellColorCurrent {
+  position:relative; z-index:1; border-color:#ffd27a!important;
+  box-shadow:0 0 0 2px #ffb238,0 0 6px 2px #ffb238aa!important;
+}
+/* V-210: a tapped loot cell keeps its painted tile and size: no pressed plate (mobile-design.js skips grid cells), no
+   focus ring and no WebView tap highlight over the grid. The picked glow carries two attributes, so it outranks the
+   exact-class tile rules below that clear box-shadow. While its info is open it carries a light glow, distinct from the amber ring of the current cell. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) { -webkit-tap-highlight-color:transparent; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is(:focus,:focus-visible) {
+  filter:none!important; outline:none!important; transform:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell[data-mobile-picked][data-mobile-loot] {
+  position:relative; z-index:1; box-shadow:0 0 0 2px #fff8e6,0 0 8px 3px #fff3cfcc!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell.cellColorBeaten,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell.cellColorOverkill { filter:saturate(.55) brightness(.9); }
+/* Four native primary actions stay touch-sized; original hidden/locked attributes still decide visibility.
+   Each action shows exactly one visible label: the original text keeps the compact font-size:0 and
+   remains the accessible name, the short state label (data-short-label) is the only visible text. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary {
+  min-width:0; display:grid!important; grid-template-columns:none!important; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr);
+  gap:5px; margin:0; padding:0;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more { min-width:0; width:auto; margin:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more {
+  box-sizing:border-box; width:100%; min-width:44px; min-height:52px; padding:0 2px!important;
+  display:flex!important; flex-direction:row; align-items:center; justify-content:center; gap:4px;
+  font-size:0!important; line-height:0!important; color:#fff8e6!important; background:#205958!important;
+  border-style:solid!important; border-color:transparent!important; border-width:9px!important;
+  border-image:var(--dio-btn)!important; border-radius:4px!important; box-shadow:0 1px 2px #2c1e1455!important;
+  text-shadow:0 1px 1px #0b1f1e;
+}
+/* The adapter's hidden attribute (Maps inside a map, Repeat outside one) and original inline hiding still win. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[style*="display: none"],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>[hidden],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps[hidden],
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more[hidden] { display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn::before,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::before {
+  content:""!important; display:block!important; flex:0 0 18px; width:18px; height:18px; transform:none;
+  background:currentColor; mask:var(--compact-icon) center/contain no-repeat; -webkit-mask:var(--compact-icon) center/contain no-repeat;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps { --compact-icon:var(--mi-maps); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[data-short-label]::after,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::after,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more::after {
+  position:static; width:auto; height:auto; min-width:0; padding:0; border-radius:0;
+  background:transparent!important; color:inherit!important;
+  font:700 clamp(.78rem,3.4vw,.9rem)/1.15 var(--font-body); white-space:normal; text-align:center; overflow-wrap:normal;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[data-short-label]::after { content:attr(data-short-label)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::after { content:"Maps"; }
+/* "…" opens the Combat tools sheet (Map Chamber, Configure Maps, Combat info, further original actions). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more::after { content:"Tools"; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #fightBtn {
+  color:#392810!important; background:#e5ad43!important; border-image:var(--dio-btn-amber)!important; text-shadow:none;
+}
+/* Toggles: on = petrol frame, off = outline on parchment (DESIGN.md: an = Petrol, aus = Umriss). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[aria-pressed="false"] {
+  color:#302e23!important; background:#f3e7ce!important; border-image:none!important;
+  border:2px solid #205958!important; text-shadow:none;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[aria-pressed="true"] {
+  color:#fff8e6!important; background:#205958!important; border-image:var(--dio-btn)!important;
+  border-style:solid!important; border-color:transparent!important; border-width:9px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #fightInfo { min-width:44px; min-height:44px; }
+/* Chronicle: the shared parchment token is the single frame; no second sheet image underneath. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  box-sizing:border-box; height:clamp(240px,38dvh,320px)!important;
+  min-height:240px; max-height:320px; padding:4px var(--dio-gap) var(--dio-gap)!important;
+  background:#f3e7ce!important; background-image:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel>header { min-width:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel h2 { color:#302e23!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logColumn,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logContainer { min-height:0; overflow:hidden; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logBtnGroup {
+  grid-template-columns:repeat(4,minmax(0,1fr)) 48px; gap:4px; margin:0 0 6px; padding:0;
+}
+/* Filters: icon plus the original filter name as a visible short label; on = petrol, off = outline. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt {
+  box-sizing:border-box; width:100%; min-width:0; min-height:48px; margin:0; padding:2px 1px!important;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+  color:#302e23!important; background:#f3e7ce!important; font-weight:600;
+  border:2px solid #205958!important; border-image:none!important; border-radius:4px!important; box-shadow:none;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[aria-pressed="true"] {
+  color:#fff8e6!important; background:#205958!important;
+  border-style:solid!important; border-color:transparent!important; border-width:6px!important;
+  border-image:var(--dio-btn)!important; border-image-width:6px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logConfigBtn {
+  width:48px; min-width:44px; color:#205958!important; font-size:1.05rem!important; line-height:1!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logConfigBtn .glyphicon { font-size:1.15rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log {
+  min-height:0; height:auto!important; max-height:none!important; flex:1 1 auto;
+  padding:2px 6px 2px 2px!important; overflow:auto!important; overscroll-behavior:contain; background:transparent!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .message { border-bottom-color:#cdb58a; }
+/* Map workbench: controls drawn on the petrol frame keep light ink; sections sit on the panel's own paper. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-map-presets { background:transparent; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-preset-manage::before { background:#fff8e6; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-preset-editor-back { color:#fff8e6!important; }
+/* Disabled workbench actions (e.g. "Stop after this map"): the stone frame already reads as unavailable,
+   so the extra 60% opacity that washed the label out is dropped (light ink on stone ≈ 5.8:1). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps button:disabled { color:#fff8e6!important; text-shadow:0 1px 1px #0008; opacity:1; }
+/* Biome names ("Mountain") would break mid-word in four framed tiles at narrow width or large text:
+   the tiles move to two columns instead of shrinking the label. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-biome-tiles button>span { overflow-wrap:normal; word-break:normal; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #advBiomeContainer { container-type:inline-size; }
+@container (max-width:19.5rem) {
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-biome-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:360px) {
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn::before,
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::before { flex-basis:15px; width:15px; height:15px; }
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn,
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps,
+  html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more { flex-direction:column; gap:1px; }
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps {
+  background:transparent!important; border:0!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  background:var(--n-panel)!important; border:1px solid var(--n-line)!important; border-radius:4px!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+/* combat */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  background:var(--n-panel2)!important; border:1px solid var(--n-line)!important; color:var(--n-ivory)!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :not(:where(#critSpan,#critSpan *,#badCrit,#badCrit *)),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances::before,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle {
+  color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid {
+  background:var(--n-deep)!important; border:1px solid var(--n-line)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel h2,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #log {
+  color:var(--n-ivory)!important; background:transparent!important;
+}
+/* Concept layout for combat: scene, two stat cards, formation band and zone sign in rows of their own, grid, action bar, log. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer {
+  display:grid!important; grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important; grid-template-areas:"scene scene" "stats stats" "stance stance" "zone zone" "grid grid" "actions actions"!important; gap:6px!important; padding:6px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleHeadContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridRow {
+  display:contents!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene {
+  grid-area:scene!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene .mobile-trimp-art {
+  max-width:44%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene #mobile-enemy-art {
+  max-width:44%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow {
+  grid-area:stats!important; display:grid!important; grid-template-columns:1fr 1fr!important; gap:6px!important; position:relative; z-index:1;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  width:auto!important; opacity:1!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances {
+  grid-area:stance!important; min-height:52px!important; margin:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances:not(:has(.formationBtn[style*="display: block"])) {
+  display:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer:not(:has(#colStances .formationBtn[style*="display: block"])) #mobile-combat-map-head {
+  grid-column:1/-1!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  grid-area:zone!important; min-height:52px!important; margin:0!important; display:flex!important; align-items:center; justify-content:center; text-align:center;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle {
+  font:650 1.25rem/1.15 var(--n-serif)!important; text-align:center!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridContainer {
+  grid-area:grid!important; width:100%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>.glyphicon {
+  width:72%!important; height:72%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary {
+  grid-area:actions!important; display:grid!important; grid-template-columns:1.25fr 1.25fr 1.1fr .6fr!important; gap:6px!important; margin:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>button {
+  min-height:52px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  height:auto!important; min-height:0!important; max-height:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log {
+  max-height:150px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene .mobile-trimp-art {
+  width:132px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene #mobile-enemy-art {
+  width:132px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow {
+  margin-top:-26px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading {
+  grid-template-rows:auto!important; min-height:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  grid-template-rows:auto auto auto auto!important; row-gap:2px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  min-height:44px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell {
+  aspect-ratio:1.14/1!important;
+}
+/* K1: concept materials on the combat page - forest clearing, nailed parchment cards, wood signs, wood grid frame. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer {
+  background:#3a2a1c url("mobile-assets/diorama/P01-dark-wood.webp") center/240px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene {
+  background:url("mobile-assets/diorama/H04-combat-clearing.webp") center 60%/cover!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  background:#f3e7ce!important; border-style:solid!important; border-color:transparent!important; border-width:12px 13px 13px 12px!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; padding:2px 4px!important; box-shadow:0 4px 8px #0007!important;
+}
+/* V-161: the crit plates (#critSpan, #badCrit and their tier spans) keep their original light colours; card ink on the
+   dark plate drew an empty black field. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :not(:where(#critSpan,#critSpan *,#badCrit,#badCrit *)) {
+  color:#2d3025!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  background:#e6c792!important; border-style:solid!important; border-color:transparent!important; border-width:9px 30px!important; border-image:url("mobile-assets/diorama/U05-header-wood.webp") 34 112 36 112 fill / 9px 30px 9px 30px stretch!important; padding:2px 0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances::before,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleSideTitle * {
+  color:#2d3025!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid {
+  background:#4a3421 url("mobile-assets/diorama/P01-dark-wood.webp") center/200px!important; border:2px solid #7a512d!important; border-radius:4px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #fightBtn {
+  background:#e5ad43!important; color:#392810!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important; box-shadow:0 3px 6px #0007!important;
+}
+/* V-151: Repeat On draws like AutoFight (petrol plate); since V-273 its Off state is parchment with a slash (below). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #pauseFight,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #repeatBtn,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>button {
+  background:#205958!important; color:#fff8e6!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important; box-shadow:0 3px 6px #0007!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  background:#f3e7ce!important; border-style:solid!important; border-color:transparent!important; border-width:12px 13px 13px 12px!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; padding:2px 6px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel h2,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log * {
+  color:#2d3025!important; font-family:var(--font-body)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel h2 {
+  font:650 1.3rem/1.1 var(--n-serif)!important; color:#173e36!important;
+}
+/* Plastic tiles: no flat border/inset, earth edge and soft drop shadow, markers fill the tile and rise above it. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleRow {
+  gap:3px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell {
+  border:0!important; border-radius:5px!important; overflow:visible!important; position:relative; background-size:112% 112%!important; background-position:center 30%!important; box-shadow:0 3px 0 #4b2f1a,0 5px 6px #000a!important; filter:saturate(1.08);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>* {
+  background-size:contain!important; background-repeat:no-repeat!important; z-index:1; position:relative;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid {
+  padding:6px 5px 8px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="battle"] #battleContainer {
+  border-top:0!important; border-radius:0 0 4px 4px!important;
+}
+/* Clean transitions: no light rectangles behind frame corners, no hard image edges. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  background-color:transparent!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-map-head {
+  background-color:transparent!important; filter:drop-shadow(0 2px 3px #0008);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer {
+  border:0!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #gridContainer {
+  border:0!important; background:transparent!important; padding:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid {
+  border:0!important; box-shadow:0 0 0 3px #5a3a20,0 0 0 5px #2b1a0e,0 6px 12px #000a!important;
+}
+/* Markers: centred in the tile, finer, as in the concept. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell {
+  place-items:center!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>* {
+  transform:none!important; margin:auto!important; background-position:center!important; filter:drop-shadow(0 2px 1px #0008)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid .battleCell>* {
+  width:80%!important; height:80%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridContainer #grid .battleRow .battleCell>* {
+  width:80%!important; height:80%!important; max-width:none!important; max-height:none!important;
+}
+/* Map chamber: the biome preview sits on a night card; owned fragments read in gold. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) .mobile-biome-art[data-diorama-scene] { background-color:var(--n-panel2); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-fragments-owned { color:var(--n-gold)!important; }
+/* Combat card names wrap between words or at syllables, never inside a name. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyName,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName { overflow-wrap:normal; hyphens:auto; }
+/* Round 1 (reference-combat.png): compact cards, one formation/zone band, one action bar. */
+/* Cards: name row, health, bar and stat lines sit tight; the info and loot targets keep 44px through
+   negative margins instead of stretching the name row to 48px. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  align-content:start; row-gap:4px!important; padding:4px 6px 6px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading { align-items:center; min-height:26px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyName,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName {
+  font:700 clamp(.9rem,4.1vw,1.06rem)/1.2 var(--font-data)!important; color:#173e36!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.mobile-battle-values-info {
+  flex:0 0 44px; width:44px; height:44px; min-width:44px; min-height:44px!important; margin:-9px -8px -9px 0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #lootBdContainer { flex:0 0 auto; height:auto; margin:0; align-items:center; }
+/* Loot reads as the concept's small chip (original button, icon and name); an invisible layer keeps the 44px target. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #lootBdBtn {
+  position:relative; box-sizing:border-box; width:auto; min-width:44px; min-height:28px!important; height:28px; padding:0 7px 0 5px!important;
+  display:inline-flex; align-items:center; justify-content:center; gap:3px;
+  font:700 .74rem/1 var(--font-body)!important; color:#4a3318!important; text-decoration:none;
+  background:linear-gradient(#f7e4b8,#e3c487)!important; border:1px solid #9b7442; border-radius:4px;
+  box-shadow:inset 0 1px #fff6dc,0 1px 2px #3a271655;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #lootBdBtn::before { content:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName>.badBadge { height:18px; padding:1px 4px; margin-left:3px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #lootBdBtn::after { content:""; position:absolute; inset:-9px -2px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridRow>#mobile-combat-map-head #battleSideTitle[role="button"]::after { background:#5b4c36; align-self:center; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-life { font-size:.76rem!important; line-height:1.2; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-health-value { font-weight:700; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .fightBar { height:8px!important; }
+/* Stat lines: icon and value (no "Attack" word, V-143; the icon keeps its aria-label); crit keeps its plate at the end. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyStatsRow { display:flex!important; flex-direction:column; gap:1px; margin:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #damageDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div {
+  display:flex!important; flex-wrap:wrap; align-items:center; column-gap:4px; width:auto!important; float:none; padding:0!important;
+  font-weight:700; font-size:clamp(.74rem,3.2vw,.84rem)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #damageDiv>.mobile-stat-icon,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv>.mobile-stat-icon,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div>.mobile-stat-icon { order:-1; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #critSpan,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badCrit { order:2; }
+/* Formation and zone: one band of two wood signs; the zone sign carries the zone in large type. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances::before { font:700 .86rem/1.2 var(--font-body)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer:has(#colStances #formation2[style*="display: block"]) #colStances { flex-wrap:nowrap; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridRow>#mobile-combat-map-head #battleSideTitle {
+  display:flex; flex-wrap:wrap; align-items:baseline; align-content:center; justify-content:center; column-gap:6px; min-height:44px!important;
+  font:800 clamp(1.08rem,4.9vw,1.3rem)/1.15 var(--font-data)!important; letter-spacing:-.2px;
+}
+/* Pumpkimp map cells keep their original orange (mobile-design paints them as pale parchment, which read as
+   "already cleared" against the night terrain); only the state colour, no terrain art. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid .cellColorNotBeaten.battleCell.mapPumpkimp {
+  background:linear-gradient(#f27900,#bf5f00)!important; color:#1a0f05!important;
+}
+/* Sub-line "Cell 2 of 100" from the original counters mirrored by mobile-diorama.js (V-215: no cleared count, it
+   follows from the cell number and shows in the grid). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridRow>#mobile-combat-map-head #battleSideTitle[data-cell]:not([data-cells="0"])::before {
+  content:"Cell " attr(data-cell) " of " attr(data-cells); order:10; flex:1 0 100%;
+  font:600 .76rem/1.2 var(--font-body); letter-spacing:0; color:#4c3b25; text-align:center;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridRow>#mobile-combat-map-head #battleSideTitle #mapBonus:not(:empty) { font:600 .78rem/1.2 var(--font-body)!important; }
+/* Action bar: the visible original actions share the full width; Tools stays a narrower end button. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary { display:flex!important; gap:6px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps { flex:1 1 0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more { flex:0 0 auto; width:auto; min-width:64px; padding:0 8px!important; }
+/* Round 2 (reference-combat.png): Combat Log as one parchment card. Title and filter pills share a row
+   (the pills wrap below the title when they do not fit), a rule, then compact message lines.
+   The two original wrappers only contribute their children; nodes, handlers and filter states stay original. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel {
+  display:flex!important; flex-flow:row wrap; align-items:center; align-content:flex-start; column-gap:8px; row-gap:2px;
+  padding:4px 8px 6px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logColumn,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logContainer { display:contents!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel>header { flex:0 0 auto; min-height:44px; display:flex; align-items:center; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel h2 { margin:0!important; font:650 1.1rem/1.1 var(--n-serif)!important; white-space:nowrap; }
+/* V-258: the filter row never makes the card wider than its column; if the pictograms do not fit beside the title,
+   they wrap onto a further row instead of pushing the combat page sideways. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel { min-width:0; max-width:100%; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logBtnGroup {
+  flex:1 1 auto; display:flex!important; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:4px; width:auto; min-width:0; max-width:100%; margin:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logBtnGroup>.btn-group { flex:0 0 auto; width:auto!important; display:block; }
+/* V-258 variant A (user choice): each filter is a 44px pictogram, the icon of its log lines above a short caption.
+   The original text ("Story", "Unlocks off" …) stays in the button for screen readers but is not drawn (font-size 0);
+   on = petrol plate, off = parchment with a faded icon and a red slash, so the state does not rest on colour alone. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[aria-pressed="true"] {
+  position:relative; box-sizing:border-box; width:auto; min-width:60px; height:44px!important; min-height:44px!important; padding:3px 4px!important;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; font-size:0!important;
+  border-width:1px!important; border-style:solid!important; border-image:none!important; border-radius:4px!important;
+  box-shadow:inset 0 1px #fff8, 0 1px 1px #3a271633;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt { color:#205958!important; background:#f8ecd2!important; border-color:#9b7442!important; }
+/* Only the four filters have an off state; the settings gear (also .logFlt) keeps its plain parchment. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon]:not([aria-pressed="true"]) {
+  color:#6b5a40!important;
+  background:linear-gradient(to top right,transparent calc(50% - 1px),#8e1a0a calc(50% - 1px),#8e1a0a calc(50% + 1px),transparent calc(50% + 1px)),#f8ecd2!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[aria-pressed="true"] { color:#fff8e6!important; background:#205958!important; border-color:#123e3c!important; box-shadow:inset 0 1px #ffffff33,0 1px 1px #3a271633; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon]::before {
+  content:""!important; position:static; inset:auto; flex:none; width:20px; height:20px;
+  background:currentColor!important; -webkit-mask:var(--log-icon) center/contain no-repeat!important; mask:var(--log-icon) center/contain no-repeat!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon]:not([aria-pressed="true"])::before { opacity:.55; }
+/* Caption: fixed words per key (an attr() label rendered stretched on the device); German in mobile-i18n-de-game.js.
+   The WebView scales it with the Android text size (9px → 11.7px at 130 %), so the pictogram grows with its caption. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon]::after {
+  display:block; font:700 9px/1 var(--font-body); letter-spacing:0; white-space:nowrap;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon="Story"]::after { content:"Story"; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon="Loot"]::after { content:"Loot"; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon="Unlocks"]::after { content:"Unlocks"; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon="Combat"]::after { content:"Combat"; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logConfigBtn { width:44px; min-width:44px; height:44px; color:#205958!important; padding:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #logConfigBtn .glyphicon { font-size:.95rem!important; }
+/* Messages: a rule under the head row, small lines; game icons keep their own icon fonts. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log {
+  flex:1 0 100%; min-height:44px; margin-top:2px; padding:4px 4px 0 2px!important; border-top:1px solid #cdb58a; max-height:132px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .message {
+  padding:3px 0!important; border-bottom:0; font-size:.8rem!important; line-height:1.35!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log .glyphicon { font-family:'Glyphicons Halflings'!important; color:#205958!important; margin-right:5px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log [class*="icon-"]:not(.glyphicon) { font-family:'icomoon'!important; }
+/* Round 3 (reference-maps.png): map workbench. Head with back key and title on the night ground, compact tabs,
+   then one parchment card (preview with biome sign, fragments strip, settings, cost, Create map).
+   Inside the card the night palette tokens switch to parchment ink, so original and adapter nodes follow. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>#mobile-map-presets-head { margin:2px 0 8px!important; gap:10px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-map-back {
+  flex:0 0 44px; width:44px; min-height:44px; height:44px; color:#4a3318!important;
+  background:linear-gradient(#f7e4b8,#e3c487)!important; border:1px solid #9b7442!important; border-radius:5px!important;
+  box-shadow:inset 0 1px #fff6dc,0 2px 3px #0007!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-map-presets-head h2 { font:700 1.45rem/1.1 var(--n-serif)!important; color:var(--n-ivory)!important; margin:0!important; }
+/* Void Maps key: the original .voidMessage purple of the Void cells instead of the generic bronze action (V-154). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>#voidMapsBtn {
+  min-height:48px!important; padding:0 10px!important; line-height:46px!important; color:#ddddff!important; background:#2e0854!important;
+  border:1px solid #9d86c0!important; border-image:none!important; border-radius:3px!important; box-shadow:inset 0 1px #b9a3e044!important; font-weight:700;
+}
+/* Return to World: a framed secondary key. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-map-world {
+  min-height:44px!important; margin:0 0 8px!important; color:var(--n-ivory)!important; background:#24180fcc!important;
+  border:1px solid var(--n-gold)!important; box-shadow:none!important; font-weight:700;
+}
+/* Tabs: the other parchment; the selected one in the bronze of the active buy amount (#numTabs), not petrol (V-176),
+   and underlined so the state never rests on colour alone. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-workshop-tabs { gap:6px; margin:0 0 8px!important; padding:0 12px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-workshop-tabs>button {
+  min-height:44px!important; font:700 .95rem/1.1 var(--font-body)!important;
+  color:#302e23!important; background:linear-gradient(#f7e9c8,#e6cf9e)!important; border:1px solid #9b7442!important; border-radius:5px!important;
+  box-shadow:inset 0 1px #fff6dc,0 2px 3px #0006!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-workshop-tabs>button[aria-pressed="true"] {
+  color:#fff1d4!important; background:linear-gradient(125deg,#b67d2c,#714316)!important; border:1px solid #dba94e!important; box-shadow:inset 0 1px #f9d58b55,0 2px 3px #0006!important;
+  font-weight:800!important; text-decoration:underline 2px; text-underline-offset:4px;
+}
+/* The card. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps {
+  --ink:#2d3025; --muted:#5b4c36; --line:#cdb58a; --rule:#cdb58a; --selected:#e8d3a6; --accent:#205958; --onaccent:#fff8e6; --surface:#f8ecd2;
+  color:#2d3025!important; padding:6px 10px 12px!important; background-color:transparent!important;
+  border-style:solid!important; border-color:transparent!important; border-width:12px 13px 13px 12px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
+  box-shadow:0 4px 10px #0008;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps :is(h2,h3,h4,p,label,span,strong,dt,dd,.advMapsTitle,[id$="AdvMapsText"],.mapConfigContainer):not(:where([role="button"],button *,[role="button"] *,.workBtn *)) { color:#2d3025!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapLevelContainer { color:#2d3025!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapLevelInput { text-align:center; font-weight:700; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps :is(.mapConfigContainer,#mapLevelContainer,#mobile-map-presets) { border-color:#d6bd8f!important; }
+/* Preview with the biome name on a small wood sign overlapping its lower edge. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-workshop-hero .mobile-biome-art { background-color:transparent!important; filter:drop-shadow(0 4px 4px #3a271677); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-create-biome-caption {
+  position:relative; z-index:1; display:table; margin:-18px auto 10px!important; padding:2px 6px!important;
+  font:700 1rem/1.2 var(--font-data)!important; color:#302e23!important; text-align:center;
+  border-style:solid; border-color:transparent; border-width:7px 22px;
+  border-image:url("mobile-assets/diorama/U05-header-wood.webp") 34 112 36 112 fill / 7px 22px 7px 22px stretch;
+  filter:drop-shadow(0 2px 2px #0007);
+}
+/* Fragments: a light strip with the gem art. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments {
+  gap:8px; margin:0 0 10px!important; padding:6px 10px!important;
+  background:linear-gradient(#fbf1da,#ecd7ac); border:1px solid #b49462!important; border-radius:5px;
+  box-shadow:inset 0 1px #fff8e6,0 1px 2px #3a271644;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments::before {
+  content:""; flex:0 0 22px; height:20px; background:url("mobile-assets/diorama/R06-Gems.webp") center/contain no-repeat;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments>span { flex:1 1 auto; font:700 .95rem/1.2 var(--font-body)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments-owned { color:#173e36!important; font:800 1.3rem/1 var(--font-data)!important; }
+/* Fields and steppers read as parchment controls. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps :is(input:not([type="range"]),select) {
+  color:#2d3025!important; background:#fbf3e0!important; border:1px solid #9b7442!important; border-radius:4px; box-shadow:inset 0 1px 2px #3a271633;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps :is(.incrementBtn,#mobile-preset-choose,#mobile-preset-manage) {
+  color:#4a3318!important; background:linear-gradient(#f7e4b8,#e3c487)!important; border:1px solid #9b7442!important; border-radius:5px!important;
+  box-shadow:inset 0 1px #fff6dc,0 1px 2px #3a271655!important; font-weight:700;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-preset-manage::before { background:#4a3318!important; }
+/* Biome tiles: framed pictures with a dark label; the selected one glows gold. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button {
+  overflow:hidden; padding:0!important; background:#2a1d12!important; border:2px solid #7a512d!important; border-radius:5px!important; box-shadow:0 2px 3px #3a271666!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button>span { color:#fff8e6!important; background:#1c140dd9; font-weight:700; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button[aria-pressed="true"] { border-color:#ffd27a!important; box-shadow:0 0 0 2px #ffb238,0 0 8px 2px #ffb238aa!important; }
+/* Create map: the primary petrol frame. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapCreateBtn {
+  min-height:48px; display:flex; align-items:center; justify-content:center; color:#fff8e6!important; background:#205958!important;
+  border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+  box-shadow:0 3px 6px #0006!important; font:700 1.05rem/1.1 var(--font-body)!important;
+}
+/* Round 4: the whole workbench compact. Return to World shares the tab row, the preview is a low strip,
+   label and control share a row, and map cost sits beside Create map. Touch targets stay 44px. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps:not([hidden]) { display:flex!important; flex-wrap:wrap; align-items:stretch; column-gap:6px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>* { flex:1 0 100%; min-width:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>#mobile-map-world { flex:1 0 auto; width:auto!important; padding:0 10px!important; font-size:.88rem!important; white-space:nowrap; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>.mobile-workshop-tabs { flex:1 1 200px; padding:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>#mobile-map-presets-head { margin:0 0 6px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #mobile-map-presets-head h2 { font-size:1.3rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>:is(#mobile-map-world,.mobile-workshop-tabs) { margin-bottom:6px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps .mobile-workshop-tabs>button { font-size:.88rem!important; padding:0 6px!important; white-space:nowrap; }
+/* Large text: the tabs never break a label; when they do not fit beside Return to World they take their own row. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps>.mobile-workshop-tabs { min-width:min-content; }
+/* Level: label, minus, value and plus on a fixed grid, so the value sits centred between the steppers. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapLevelContainer {
+  display:grid!important; grid-template-columns:minmax(0,1fr) 44px minmax(56px,84px) 44px; align-items:center; gap:8px;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapLevelContainer>* { margin:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapLevelInput { width:100%!important; min-width:0; height:44px; justify-self:stretch; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps { padding:2px 6px 8px!important; }
+/* Preview: a low strip; the biome sign overlaps its foot. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-workshop-hero { height:auto!important; min-height:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-workshop-hero .mobile-biome-art { height:78px!important; min-height:0!important; background-size:contain!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-create-biome-caption { margin:-14px auto 6px!important; font-size:.88rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments { margin-bottom:6px!important; padding:3px 8px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments>span { font-size:.86rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-fragments-owned { font-size:1.1rem!important; }
+/* Settings: label and control on one row, small gaps. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps :is(#mapsCreateRow,#advMapsRow) { row-gap:4px!important; gap:4px!important; margin:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-presets:not([hidden]) { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; column-gap:8px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-presets>h3 { margin:0!important; font-size:.9rem!important; white-space:nowrap; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-presets>:not(h3) { grid-column:2; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-preset-toolbar :is(#mobile-preset-choose,#mobile-preset-manage) { min-height:44px; height:44px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-preset-manage { width:44px; flex:0 0 44px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-preset-choose { min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:.9rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #advBiomeContainer { margin-bottom:6px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #advBiomeContainer { row-gap:4px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #biomeAdvMapsSelect { min-height:44px; height:44px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles { gap:4px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button { min-height:52px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button>.mobile-biome-art { height:32px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-biome-tiles>button>span { padding:2px 2px 3px!important; font-size:.78rem!important; line-height:1.15!important; }
+/* Sliders: name and value above, the 44px range pulls up under them. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #advMapsRow>.mapConfigContainer { padding:0!important; row-gap:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #advMapsRow .mobile-map-range { margin-top:-8px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #advMapsRow :is(.advMapsTitle,[id$="AdvMapsText"]) { font-size:.82rem!important; line-height:1.2!important; }
+/* Cost beside Create map. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps .mobile-map-create-actions {
+  display:grid!important; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); align-items:center; gap:8px; margin:6px 0 0!important; padding:6px 0 0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-cost { grid-area:1/1; margin:0!important; padding:0!important; border:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-cost>div { display:flex; flex-direction:column; align-items:flex-start; gap:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-cost>div:first-child { flex-direction:row; flex-wrap:wrap; align-items:baseline; column-gap:6px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-cost span { font-size:.76rem!important; line-height:1.25!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mobile-map-price { font-size:.95rem!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-maps #preMaps #mapCreateBtn { grid-area:1/2; margin:0!important; width:auto!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel #log .pauseMsg { padding:4px 6px!important; border:1px solid #cdb58a!important; border-radius:4px; background:#efdcb6!important; }
+/* Painted field tiles (docs/design/diorama-field-tiles: two image-tool boards, cut by contour). A tile appears only on a
+   cell whose class is exactly an original base state (not beaten, current, beaten, overkill), optionally with the orange
+   seasonal class: those show the normal tile with a gold corner mark instead of the orange fill. Void cells and world
+   mutation cells (Magma, Corruption, Healthy) have their own boards (see below). Mutations without a board,
+   empowerment, snow (also HotSnow, CorruptSnow, HealthySnow) and every other original state class keep their colours, and so do grids
+   coloured by a container class (Darkness map .blackMap, Liquimp zones .liquid). Each cell picks its tile through
+   --dio-field: meadow variants by position, the running map biome (#mapGrid[data-biome], mobile-diorama.js), then
+   its marker. Tiles keep their painted proportions (contain). Markers with a tile stay in the DOM, transparent. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]) {
+  background:var(--dio-field,url("mobile-assets/diorama-field/F01-grass-a.webp")) center/contain no-repeat!important; border:0!important; border-radius:0!important; filter:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"]) { box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important; }
+/* Meadow: four variants along each row, shifted by two on every other row. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell:nth-child(4n+1) { --dio-field:url("mobile-assets/diorama-field/F01-grass-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell:nth-child(4n+2) { --dio-field:url("mobile-assets/diorama-field/F02-grass-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell:nth-child(4n+3) { --dio-field:url("mobile-assets/diorama-field/F03-grass-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell:nth-child(4n) { --dio-field:url("mobile-assets/diorama-field/F11-grass-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell:nth-child(4n+1) { --dio-field:url("mobile-assets/diorama-field/F03-grass-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell:nth-child(4n+2) { --dio-field:url("mobile-assets/diorama-field/F11-grass-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell:nth-child(4n+3) { --dio-field:url("mobile-assets/diorama-field/F01-grass-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell:nth-child(4n) { --dio-field:url("mobile-assets/diorama-field/F02-grass-b.webp"); }
+/* Map ground of the running map: two grounds on a checkerboard (Plentiful = Gardens); a sea map shows its shore on every
+   fifth cell, shifted per row. Other locations keep the meadow; F28 clover joins the meadow on maps. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome] .battleRow:nth-child(odd) .battleCell:nth-child(5n),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome] .battleRow:nth-child(even) .battleCell:nth-child(5n+2) { --dio-field:url("mobile-assets/diorama-field/F28-clover.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Mountain"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F21-mountain-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Mountain"] .battleRow:nth-child(odd) .battleCell:nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Mountain"] .battleRow:nth-child(even) .battleCell:nth-child(odd) { --dio-field:url("mobile-assets/diorama-field/F29-mountain-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Forest"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F22-forest-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Forest"] .battleRow:nth-child(odd) .battleCell:nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Forest"] .battleRow:nth-child(even) .battleCell:nth-child(odd) { --dio-field:url("mobile-assets/diorama-field/F30-forest-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Plentiful"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F25-garden-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Plentiful"] .battleRow:nth-child(odd) .battleCell:nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Plentiful"] .battleRow:nth-child(even) .battleCell:nth-child(odd) { --dio-field:url("mobile-assets/diorama-field/F31-garden-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Farmlands"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F26-farmland-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Farmlands"] .battleRow:nth-child(odd) .battleCell:nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Farmlands"] .battleRow:nth-child(even) .battleCell:nth-child(odd) { --dio-field:url("mobile-assets/diorama-field/F32-farmland-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Sea"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F19-sand-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Sea"] .battleRow:nth-child(odd) .battleCell:nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Sea"] .battleRow:nth-child(even) .battleCell:nth-child(odd) { --dio-field:url("mobile-assets/diorama-field/F20-sand-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Depths"] .battleRow:nth-child(n) .battleCell:nth-child(n) { --dio-field:url("mobile-assets/diorama-field/F24-depths.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Sea"] .battleRow:nth-child(odd) .battleCell:nth-child(5n+3),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"])[data-biome="Sea"] .battleRow:nth-child(even) .battleCell:nth-child(5n+1) { --dio-field:url("mobile-assets/diorama-field/F23-sea.webp"); }
+/* Marker tiles: the marker is painted into the ground; the original marker element stays (transparent) for its name and handlers. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-tree-deciduous) { --dio-field:url("mobile-assets/diorama-field/F04-tree.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-apple) { --dio-field:url("mobile-assets/diorama-field/F05-food.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.icon-cubes) { --dio-field:url("mobile-assets/diorama-field/F06-ore.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.icon-diamond) { --dio-field:url("mobile-assets/diorama-field/F07-gems.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-book) { --dio-field:url("mobile-assets/diorama-field/F08-book.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-gift) { --dio-field:url("mobile-assets/diorama-field/F09-gift.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-th) { --dio-field:url("mobile-assets/diorama-field/F13-fragments.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-user) { --dio-field:url("mobile-assets/diorama-field/F14-worker.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-question-sign) { --dio-field:url("mobile-assets/diorama-field/F15-plans.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-th-large) { --dio-field:url("mobile-assets/diorama-field/F16-unique-map.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.icon-leaf2) { --dio-field:url("mobile-assets/diorama-field/F17-mixed-loot.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell:nth-child(n):has(>.glyphicon-home) { --dio-field:url("mobile-assets/diorama-field/F18-blueprint.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-tree-deciduous,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-apple,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.icon-cubes,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.icon-diamond,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-book,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-gift,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-th,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-user,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-question-sign,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-th-large,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.icon-leaf2,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten"],[class="cellColorNotBeaten battleCell"],[class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent"],[class="cellColorCurrent battleCell"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"]):is(*,.mobile-has)>.glyphicon-home { opacity:0!important; }
+/* Beaten base cells show the stone slab with its carved check; their collected marker stays in the DOM, transparent. Overkill shows broken stone. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten"],[class="cellColorBeaten battleCell"],[class="battleCell cellColorBeaten Pumpkimp"],[class="battleCell cellColorBeaten mapPumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F10-cleared.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill"],[class="cellColorOverkill battleCell"],[class="battleCell cellColorOverkill Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F12-overkill.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten"],[class="cellColorBeaten battleCell"],[class="battleCell cellColorBeaten Pumpkimp"],[class="battleCell cellColorBeaten mapPumpkimp"])>:is(.glyphicon,.icomoon) { opacity:0!important; }
+/* Season mark: a gold hairline corner instead of the orange fill, so the season stays recognisable. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"],[class="battleCell cellColorBeaten Pumpkimp"],[class="battleCell cellColorBeaten mapPumpkimp"],[class="battleCell cellColorOverkill Pumpkimp"]) { position:relative; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) :is(#grid,#mapGrid):not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Pumpkimp"],[class="battleCell cellColorNotBeaten mapPumpkimp"],[class="battleCell cellColorCurrent Pumpkimp"],[class="battleCell cellColorCurrent mapPumpkimp"],[class="battleCell cellColorBeaten Pumpkimp"],[class="battleCell cellColorBeaten mapPumpkimp"],[class="battleCell cellColorOverkill Pumpkimp"])::after {
+  content:""; position:absolute; top:3px; right:3px; width:7px; height:7px; z-index:2; pointer-events:none;
+  border-top:2px solid #f0c46c; border-right:2px solid #f0c46c; border-radius:0 3px 0 0; filter:drop-shadow(0 0 1px #000c);
+}
+/* Void maps (V-183): every void map cell carries voidCell after its state class (main.js), so the base-state tiles above
+   never reach it. Void cells get their own painted board (docs/design/diorama-field-tiles, board c-void): eight dark void
+   grounds by position, painted void tiles for the markers that have one (others keep their glyph on the void ground),
+   the violet slab for beaten and violet broken stone for overkill cells (both without their collected marker). The current cell keeps its glowing outline, the
+   seasonal class its gold corner, and snow (CorruptSnow) and every other extra class keep their original colours. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]) {
+  background:var(--dio-void,url("mobile-assets/diorama-field/F33-void-a.webp")) center/contain no-repeat!important; border:0!important; border-radius:0!important; filter:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"]) { box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.voidCell:nth-child(4n+1) { --dio-void:url("mobile-assets/diorama-field/F33-void-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.voidCell:nth-child(4n+2) { --dio-void:url("mobile-assets/diorama-field/F34-void-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.voidCell:nth-child(4n+3) { --dio-void:url("mobile-assets/diorama-field/F35-void-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.voidCell:nth-child(4n) { --dio-void:url("mobile-assets/diorama-field/F36-void-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.voidCell:nth-child(4n+1) { --dio-void:url("mobile-assets/diorama-field/F47-void-g.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.voidCell:nth-child(4n+2) { --dio-void:url("mobile-assets/diorama-field/F48-void-h.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.voidCell:nth-child(4n+3) { --dio-void:url("mobile-assets/diorama-field/F45-void-e.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.voidCell:nth-child(4n) { --dio-void:url("mobile-assets/diorama-field/F46-void-f.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.glyphicon-tree-deciduous) { --dio-void:url("mobile-assets/diorama-field/F41-void-tree.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.glyphicon-apple) { --dio-void:url("mobile-assets/diorama-field/F42-void-food.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.icon-cubes) { --dio-void:url("mobile-assets/diorama-field/F43-void-ore.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.icon-diamond) { --dio-void:url("mobile-assets/diorama-field/F37-void-gems.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.glyphicon-book) { --dio-void:url("mobile-assets/diorama-field/F44-void-book.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(n) .battleCell.voidCell:nth-child(n):has(>.icon-leaf2) { --dio-void:url("mobile-assets/diorama-field/F38-void-mixed-loot.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.glyphicon-tree-deciduous,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.glyphicon-apple,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.icon-cubes,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.icon-diamond,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.glyphicon-book,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten voidCell"],[class="cellColorNotBeaten battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"]):is(*,.mobile-has)>.icon-leaf2 { opacity:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten voidCell"],[class="cellColorBeaten battleCell voidCell"],[class="battleCell cellColorBeaten mapPumpkimp voidCell"]) {
+  background:url("mobile-assets/diorama-field/F39-void-cleared.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill voidCell"],[class="cellColorOverkill battleCell voidCell"],[class="battleCell cellColorOverkill mapPumpkimp voidCell"]) {
+  background:url("mobile-assets/diorama-field/F40-void-overkill.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten voidCell"],[class="cellColorBeaten battleCell voidCell"],[class="battleCell cellColorBeaten mapPumpkimp voidCell"])>:is(.glyphicon,.icomoon),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill voidCell"],[class="cellColorOverkill battleCell voidCell"],[class="battleCell cellColorOverkill mapPumpkimp voidCell"])>:is(.glyphicon,.icomoon) { opacity:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"],[class="battleCell cellColorBeaten mapPumpkimp voidCell"],[class="battleCell cellColorOverkill mapPumpkimp voidCell"]) { position:relative; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"],[class="battleCell cellColorBeaten mapPumpkimp voidCell"],[class="battleCell cellColorOverkill mapPumpkimp voidCell"])::after {
+  content:""; position:absolute; top:3px; right:3px; width:7px; height:7px; z-index:2; pointer-events:none;
+  border-top:2px solid #f0c46c; border-right:2px solid #f0c46c; border-radius:0 3px 0 0; filter:drop-shadow(0 0 1px #000c);
+}
+/* Seasonal and current void cells keep their glyph in the light void ink; the original seasonal and current inks are dark
+   (made for the orange and yellow fills; the current cell carries e.g. the eye or archive marker at the end of the map). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mapGrid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorCurrent voidCell"],[class="cellColorCurrent battleCell voidCell"],[class="battleCell cellColorNotBeaten mapPumpkimp voidCell"],[class="battleCell cellColorCurrent mapPumpkimp voidCell"],[class="battleCell cellColorBeaten mapPumpkimp voidCell"],[class="battleCell cellColorOverkill mapPumpkimp voidCell"])>:is(.glyphicon,.icomoon) { color:#ddddff!important; }
+/* World mutations (V-193): the original builder adds Magma, Corruption or Healthy after the state class (main.js), so the
+   base-state tiles never reach those cells and they stayed flat red, violet and brown. They get their own painted board
+   (docs/design/diorama-field-tiles, board d-sonderfelder): four cracked magma grounds, four slime-corrupted meadows and two
+   healthy meadows by position, the stone slab with a magma crack, violet vein or green shoots for beaten cells and broken
+   stone with magma or crystal for overkill (Healthy overkill uses the plain broken stone). Markers keep their glyph on the
+   ground (the board has no mutation marker tiles), beaten and overkill cells hide their collected marker. The current cell
+   keeps its glowing outline, seasonal cells their gold corner; snow (HotSnow, CorruptSnow, HealthySnow, TrimpmasSnow),
+   empowerment, spire and every other extra class keep their original colours. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Magma"],[class="cellColorNotBeaten battleCell Magma"],[class="battleCell cellColorNotBeaten Magma Pumpkimp"],[class="battleCell cellColorCurrent Magma"],[class="cellColorCurrent battleCell Magma"],[class="battleCell cellColorCurrent Magma Pumpkimp"],[class="battleCell cellColorNotBeaten Corruption"],[class="cellColorNotBeaten battleCell Corruption"],[class="battleCell cellColorNotBeaten Corruption Pumpkimp"],[class="battleCell cellColorCurrent Corruption"],[class="cellColorCurrent battleCell Corruption"],[class="battleCell cellColorCurrent Corruption Pumpkimp"],[class="battleCell cellColorNotBeaten Healthy"],[class="cellColorNotBeaten battleCell Healthy"],[class="battleCell cellColorNotBeaten Healthy Pumpkimp"],[class="battleCell cellColorCurrent Healthy"],[class="cellColorCurrent battleCell Healthy"],[class="battleCell cellColorCurrent Healthy Pumpkimp"]) {
+  background:var(--dio-mut,url("mobile-assets/diorama-field/F49-magma-a.webp")) center/contain no-repeat!important; border:0!important; border-radius:0!important; filter:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Magma"],[class="cellColorNotBeaten battleCell Magma"],[class="battleCell cellColorNotBeaten Magma Pumpkimp"],[class="battleCell cellColorNotBeaten Corruption"],[class="cellColorNotBeaten battleCell Corruption"],[class="battleCell cellColorNotBeaten Corruption Pumpkimp"],[class="battleCell cellColorNotBeaten Healthy"],[class="cellColorNotBeaten battleCell Healthy"],[class="battleCell cellColorNotBeaten Healthy Pumpkimp"]) { box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Magma:nth-child(4n+1) { --dio-mut:url("mobile-assets/diorama-field/F49-magma-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Magma:nth-child(4n+2) { --dio-mut:url("mobile-assets/diorama-field/F50-magma-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Magma:nth-child(4n+3) { --dio-mut:url("mobile-assets/diorama-field/F51-magma-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Magma:nth-child(4n) { --dio-mut:url("mobile-assets/diorama-field/F52-magma-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Magma:nth-child(4n+1) { --dio-mut:url("mobile-assets/diorama-field/F51-magma-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Magma:nth-child(4n+2) { --dio-mut:url("mobile-assets/diorama-field/F52-magma-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Magma:nth-child(4n+3) { --dio-mut:url("mobile-assets/diorama-field/F49-magma-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Magma:nth-child(4n) { --dio-mut:url("mobile-assets/diorama-field/F50-magma-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Corruption:nth-child(4n+1) { --dio-mut:url("mobile-assets/diorama-field/F53-corruption-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Corruption:nth-child(4n+2) { --dio-mut:url("mobile-assets/diorama-field/F54-corruption-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Corruption:nth-child(4n+3) { --dio-mut:url("mobile-assets/diorama-field/F55-corruption-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Corruption:nth-child(4n) { --dio-mut:url("mobile-assets/diorama-field/F56-corruption-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Corruption:nth-child(4n+1) { --dio-mut:url("mobile-assets/diorama-field/F55-corruption-c.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Corruption:nth-child(4n+2) { --dio-mut:url("mobile-assets/diorama-field/F56-corruption-d.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Corruption:nth-child(4n+3) { --dio-mut:url("mobile-assets/diorama-field/F53-corruption-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Corruption:nth-child(4n) { --dio-mut:url("mobile-assets/diorama-field/F54-corruption-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Healthy:nth-child(odd) { --dio-mut:url("mobile-assets/diorama-field/F57-healthy-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell.Healthy:nth-child(even) { --dio-mut:url("mobile-assets/diorama-field/F58-healthy-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Healthy:nth-child(odd) { --dio-mut:url("mobile-assets/diorama-field/F58-healthy-b.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell.Healthy:nth-child(even) { --dio-mut:url("mobile-assets/diorama-field/F57-healthy-a.webp"); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten Magma"],[class="cellColorBeaten battleCell Magma"],[class="battleCell cellColorBeaten Magma Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F59-magma-cleared-a.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(odd) .battleCell:is([class="battleCell cellColorBeaten Magma"],[class="cellColorBeaten battleCell Magma"],[class="battleCell cellColorBeaten Magma Pumpkimp"]):nth-child(even),
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleRow:nth-child(even) .battleCell:is([class="battleCell cellColorBeaten Magma"],[class="cellColorBeaten battleCell Magma"],[class="battleCell cellColorBeaten Magma Pumpkimp"]):nth-child(odd) { background-image:url("mobile-assets/diorama-field/F60-magma-cleared-b.webp")!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten Corruption"],[class="cellColorBeaten battleCell Corruption"],[class="battleCell cellColorBeaten Corruption Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F61-corruption-cleared.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten Healthy"],[class="cellColorBeaten battleCell Healthy"],[class="battleCell cellColorBeaten Healthy Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F62-healthy-cleared.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill Magma"],[class="cellColorOverkill battleCell Magma"],[class="battleCell cellColorOverkill Magma Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F63-magma-overkill.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill Corruption"],[class="cellColorOverkill battleCell Corruption"],[class="battleCell cellColorOverkill Corruption Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F64-corruption-overkill.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorOverkill Healthy"],[class="cellColorOverkill battleCell Healthy"],[class="battleCell cellColorOverkill Healthy Pumpkimp"]) {
+  background:url("mobile-assets/diorama-field/F12-overkill.webp") center/contain no-repeat!important; border:0!important; border-radius:0!important; box-shadow:none!important; filter:drop-shadow(0 2px 2px #000a)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorBeaten Magma"],[class="cellColorBeaten battleCell Magma"],[class="battleCell cellColorBeaten Magma Pumpkimp"],[class="battleCell cellColorOverkill Magma"],[class="cellColorOverkill battleCell Magma"],[class="battleCell cellColorOverkill Magma Pumpkimp"],[class="battleCell cellColorBeaten Corruption"],[class="cellColorBeaten battleCell Corruption"],[class="battleCell cellColorBeaten Corruption Pumpkimp"],[class="battleCell cellColorOverkill Corruption"],[class="cellColorOverkill battleCell Corruption"],[class="battleCell cellColorOverkill Corruption Pumpkimp"],[class="battleCell cellColorBeaten Healthy"],[class="cellColorBeaten battleCell Healthy"],[class="battleCell cellColorBeaten Healthy Pumpkimp"],[class="battleCell cellColorOverkill Healthy"],[class="cellColorOverkill battleCell Healthy"],[class="battleCell cellColorOverkill Healthy Pumpkimp"])>:is(.glyphicon,.icomoon) { opacity:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Magma Pumpkimp"],[class="battleCell cellColorCurrent Magma Pumpkimp"],[class="battleCell cellColorBeaten Magma Pumpkimp"],[class="battleCell cellColorOverkill Magma Pumpkimp"],[class="battleCell cellColorNotBeaten Corruption Pumpkimp"],[class="battleCell cellColorCurrent Corruption Pumpkimp"],[class="battleCell cellColorBeaten Corruption Pumpkimp"],[class="battleCell cellColorOverkill Corruption Pumpkimp"],[class="battleCell cellColorNotBeaten Healthy Pumpkimp"],[class="battleCell cellColorCurrent Healthy Pumpkimp"],[class="battleCell cellColorBeaten Healthy Pumpkimp"],[class="battleCell cellColorOverkill Healthy Pumpkimp"]) { position:relative; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Magma Pumpkimp"],[class="battleCell cellColorCurrent Magma Pumpkimp"],[class="battleCell cellColorBeaten Magma Pumpkimp"],[class="battleCell cellColorOverkill Magma Pumpkimp"],[class="battleCell cellColorNotBeaten Corruption Pumpkimp"],[class="battleCell cellColorCurrent Corruption Pumpkimp"],[class="battleCell cellColorBeaten Corruption Pumpkimp"],[class="battleCell cellColorOverkill Corruption Pumpkimp"],[class="battleCell cellColorNotBeaten Healthy Pumpkimp"],[class="battleCell cellColorCurrent Healthy Pumpkimp"],[class="battleCell cellColorBeaten Healthy Pumpkimp"],[class="battleCell cellColorOverkill Healthy Pumpkimp"])::after {
+  content:""; position:absolute; top:3px; right:3px; width:7px; height:7px; z-index:2; pointer-events:none;
+  border-top:2px solid #f0c46c; border-right:2px solid #f0c46c; border-radius:0 3px 0 0; filter:drop-shadow(0 0 1px #000c);
+}
+/* Glyph ink on the painted grounds: the original current and seasonal inks are black or white for flat fills; magma and
+   corruption keep their own light inks (#ffdddd, #ddddff), the bright healthy meadow takes a dark ink. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Magma"],[class="cellColorNotBeaten battleCell Magma"],[class="battleCell cellColorNotBeaten Magma Pumpkimp"],[class="battleCell cellColorCurrent Magma"],[class="cellColorCurrent battleCell Magma"],[class="battleCell cellColorCurrent Magma Pumpkimp"])>:is(.glyphicon,.icomoon) { color:#ffdddd!important; text-shadow:0 1px 2px #000; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Corruption"],[class="cellColorNotBeaten battleCell Corruption"],[class="battleCell cellColorNotBeaten Corruption Pumpkimp"],[class="battleCell cellColorCurrent Corruption"],[class="cellColorCurrent battleCell Corruption"],[class="battleCell cellColorCurrent Corruption Pumpkimp"])>:is(.glyphicon,.icomoon) { color:#ddddff!important; text-shadow:0 1px 2px #000; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #grid:not(.blackMap,.liquid,[class*="liquid"]) .battleCell:is([class="battleCell cellColorNotBeaten Healthy"],[class="cellColorNotBeaten battleCell Healthy"],[class="battleCell cellColorNotBeaten Healthy Pumpkimp"],[class="battleCell cellColorCurrent Healthy"],[class="cellColorCurrent battleCell Healthy"],[class="battleCell cellColorCurrent Healthy Pumpkimp"])>:is(.glyphicon,.icomoon) { color:#1c2a0c!important; text-shadow:0 0 2px #f4ffd8; }
+/* Feedback 4.28 (V-143): flat combat cards with fixed rows, so neither the screen nor the health bars move with value
+   length or enemy change. Name row, health value, bar and stat lines each keep one line (a too long name or value ends
+   in an ellipsis instead of wrapping); the words "Health" and "Attack" are not shown, "Health" stays in the accessible
+   text and the stat icons keep their aria-labels. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol {
+  grid-template-rows:1.5rem 1.15rem 8px auto!important; row-gap:3px!important; padding:2px 6px 4px!important; align-content:start;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading {
+  display:flex!important; flex-wrap:nowrap!important; align-items:center; height:1.5rem; min-height:0!important; min-width:0;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.battleStatsTitle {
+  flex:1 1 auto; min-width:0!important; max-width:100%; overflow:hidden; white-space:nowrap!important; text-overflow:ellipsis; line-height:1.5rem!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName { display:inline!important; white-space:nowrap; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading .badge { vertical-align:middle; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading .badge[onmouseover] { cursor:pointer; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading .badge:is(.badBadge,.voidBadge)[onmouseover] :is(.glyphicon,.icomoon) { color:#fff8e6!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-life {
+  position:relative; flex-wrap:nowrap!important; justify-content:flex-start; height:1.15rem; line-height:1.15rem!important; overflow:hidden; white-space:nowrap;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-life>span:not(.mobile-health-value) {
+  position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-health-value { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #damageDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div {
+  flex-wrap:nowrap!important; height:1.3rem; line-height:1.3rem!important; overflow:hidden; white-space:nowrap!important;
+}
+/* Block: its own line under Attack with the shield before the value, like the swords before the attack. Before, the
+   value followed the "Attack" word on the same line, its shield was drawn in the light night ink (nearly invisible on
+   the parchment) and a long value wrapped out of the card under the enemy card. Hidden until the game unlocks block. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyStatsRow { flex-direction:column!important; flex-wrap:nowrap!important; align-items:stretch; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyStatsRow>:is(#damageDiv,#blockDiv) { flex:0 0 auto!important; width:auto!important; max-width:100%; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv[style*="visibility: hidden"] { display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv>#goodGuyBlockName { order:-1; margin:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #goodGuyBlockName.mobile-stat-block::before { background:currentColor; }
+/* "Next enemy" on the parchment card in card ink, not the light night ink. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol.mobile-enemy-pending::after { color:#2d3025; }
+/* V-148: the team and enemy art stand out from the clearing through a thin dark contour and a soft ground shadow on the
+   figure's own outline (alpha); no box, frame or backing surface, image files unchanged. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene :is(.mobile-trimp-art,#mobile-enemy-art) {
+  filter:drop-shadow(0 0 1px #1a1009) drop-shadow(0 0 1px #1a1009d9) drop-shadow(0 3px 4px #000000a6);
+}
+/* V-162: the cards covered the figures' feet (20px). The scene grows by 10px, the figures stand above its 18px fade and
+   end under the header (8px shorter), and the cards overlap the scene by 20px instead of 26px: actions move down 16px. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene#mobile-combat-scene {
+  height:calc(var(--mobile-header-height) + var(--dio-hero) + 10px)!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene :is(.mobile-trimp-art,#mobile-enemy-art) {
+  bottom:18px; height:calc(var(--dio-hero) - 8px);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow { margin-top:-20px!important; }
+/* Name fit (mobile-diorama.js): a long name shrinks with --dio-name-fit instead of wrapping into a second line. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-combat-heading>.battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName { font-size:max(11px,calc(clamp(.9rem,4.1vw,1.06rem) * var(--dio-name-fit,1)))!important; }
+/* V-149: on its full row the formation band keeps label and buttons on one line (the row takes the remaining width). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #colStances>.row { flex:1 1 0; }
+/* One line per value also with large text: values scale with the card width (container units) where the root size would
+   overflow it; icons never shrink. The value spans inherit the line size instead of their own fixed sizes. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#goodGuyCol,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol { container-type:inline-size; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-health-value { font-size:min(.8rem,9.4cqi)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #damageDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #blockDiv,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div { font-size:min(clamp(.74rem,3.2vw,.84rem),8.4cqi)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#goodGuyAttack,#badGuyAttack,#goodGuyBlock,#goodGuyHealth,#goodGuyHealthMax,#badGuyHealth,#badGuyHealthMax) { font-size:inherit!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(.mobile-stat-icon,#goodGuyBlockName) { flex:0 0 auto; }
+/* V-189: formation buttons in the combat button language. The label sits small above one row of up to six equal
+   buttons, so the sign gets flatter instead of wrapping S or W into a second line. The active formation is the amber
+   plate of Fight (bold, so not by colour alone); the others are quiet parchment plates with a bronze rim, because
+   petrol already means a switch on this page. Every button keeps its original element, handler and inline hiding. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances {
+  flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:2px; padding:2px 0 3px!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances::before { padding-left:2px; font:700 .78rem/1.1 var(--font-body)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances>.row { display:flex!important; flex:none; flex-wrap:nowrap; gap:3px; width:100%; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances>.row>:is(.formFifth,.formSixth):not([style*="display: none"]):has(>.formationBtn[style*="display: block"]) {
+  flex:1 1 0; min-width:0; width:auto!important; float:none; padding:0!important; margin:0!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances>.row>:is(.formFifth,.formSixth):not(:has(>.formationBtn[style*="display: block"])) { display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances .formationBtn[style*="display: block"] {
+  position:relative; display:flex!important; align-items:center; justify-content:center; box-sizing:border-box; width:100%; min-width:0; min-height:44px; padding:0!important;
+  color:#302e23!important; background:#f3e7ce!important; font:700 1rem/1 var(--font-data)!important;
+  border:2px solid #8e6839!important; border-image:none!important; border-radius:4px!important; box-shadow:inset 0 1px #fff9e8, 0 1px 2px #2d1d1255!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances .formationBtn.formationStateEnabled {
+  color:#392810!important; background:#e5ad43!important; font-weight:800!important; text-decoration:underline 2px; text-underline-offset:3px;
+  border-style:solid!important; border-color:transparent!important; border-width:7px!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; box-shadow:0 1px 2px #2c1e1455!important;
+}
+/* Six formations at 360 px leave 43 px per button; an invisible extension over the 3 px gaps keeps every target >= 44 px. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #colStances .formationBtn::after { content:''; position:absolute; inset:-2px; }
+/* V-207/V-209: a crit never changes the card height or the size of the damage value (user, 27.10.2026, variant A). Each
+   attack line is a grid: icon, value and a plaque column of fixed width (the widest plaque, CRIT!!, at that text size) that stays reserved without a crit, so nothing
+   moves when a plaque comes or goes. The value is a little smaller for good (90 %); mobile-diorama.js scales it down
+   further through --dio-atk-fit only when a very long value still does not fit, the ellipsis is the last resort. The
+   enemy plaque (Dodge!, crushing crits) sits in its own attack line like the player's; Loot moved to the health line. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#damageDiv,#badGuyRow>div) {
+  display:grid!important; grid-template-columns:auto minmax(0,1fr) var(--dio-plaque-w,calc(3em + 8px)); align-items:center; column-gap:4px!important; width:100%!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow .mobile-stat-attack { grid-column:1; grid-row:1; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit) { grid-column:3; grid-row:1; justify-self:end; order:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#critSpan,#badCrit):not(:empty) {
+  flex:none; margin:0!important; padding:0 3px 0 4px!important; border-left-width:3px; border-radius:2px;
+  font-size:max(8px,.72em); line-height:1.2!important; letter-spacing:.01em;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow :is(#goodGuyAttack,#badGuyAttack) { grid-column:2; grid-row:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:calc(.9em * var(--dio-atk-fit,1))!important; }
+/* V-254: the enemy value starts where it always did and runs on into the plaque column, so long values (1.20Qa-1.80Qa,
+   Qi, Sx …) keep the player's size instead of shrinking. The enemy plaque (Dodge!/Crit!, set and cleared on every
+   attack) leaves the line: it sits as a tag on the right end of the enemy's health bar, in the gap between the health
+   and the attack line, placed by mobile-diorama.js (--dio-bar-mid/--dio-bar-right). So the value has one size with and
+   without a plaque and the card keeps its height; the attack line stays one line high (it clips a second row). Until
+   the bar is measured, the plaque keeps its column and the value its own (--dio-atk-fit, the ellipsis last). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyRow>div:has(>#badCrit:empty)>#badGuyAttack,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol[style*="--dio-bar-mid"] #badGuyRow>div>#badGuyAttack { grid-column:2 / 4; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol[style*="--dio-bar-mid"] #badCrit:not(:empty) {
+  position:absolute; z-index:1; top:var(--dio-bar-mid); right:var(--dio-bar-right,0px); transform:translateY(-50%);
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol .mobile-health-value { flex-wrap:nowrap!important; font-size:calc(min(.8rem,9.4cqi) * var(--dio-hp-fit,1))!important; }
+/* V-199: the enemy name gets the full card width. Only the Loot chip leaves the name row: since V-209 the attack line
+   holds the damage value and its plaque column, so the chip sits at the right end of the health line at the attack
+   line's height, at most 20px also at large text (its 44px target stays through ::after; the health value leaves it
+   room and is fitted through --dio-hp-fit, mobile-diorama.js) and never reaches the bar; z-index lifts it above the later
+   health line and bar, which would otherwise take its taps
+   (bottom = attack line 1.3rem + card padding 4px + gap 3px + bar 8px + gap 3px + 1px). The ADVISOR
+   star of the first run stays in the name row at name height (target kept the same way). The name stays on one line and
+   shrinks through --dio-name-fit instead of wrapping, and a mutation name reads as coloured ink on the parchment instead of
+   a dark box. u2 mutation names stay in the card ink of the earlier card rule: several of their inline colours are too
+   faint on parchment (contrast below 3 : 1). Classic is unchanged. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow>#badGuyCol { position:relative; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol #lootBdContainer { flex:0 0 auto; width:auto!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol .mobile-combat-heading:has(#openTutorialContainer[style*="display: none"]) { column-gap:0!important; gap:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol .mobile-combat-heading:has(#openTutorialContainer[style*="display: none"]) #lootBdContainer { margin:0!important; padding:0!important; gap:0!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol #lootBdBtn { position:absolute!important; z-index:1; right:6px; bottom:calc(1.3rem + 19px); height:min(1.3rem,20px)!important; min-height:0!important; font-size:min(.74rem,11.5px)!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol #lootBdBtn::after { inset:calc((min(1.3rem,20px) - 44px) / 2) -2px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol[style*="--dio-life-mid"] #lootBdBtn { bottom:auto; top:calc(var(--dio-life-mid) - min(1.3rem,20px) / 2); }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol .mobile-health-value { max-width:calc(100% - 50px); overflow:hidden; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol #openTutorialBtn { position:relative; z-index:2; min-width:26px!important; min-height:0!important; height:1.4rem; font-size:1.05rem!important; color:#b07a12!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol #openTutorialBtn::after { content:""; position:absolute; inset:calc((1.4rem - 44px) / 2) -9px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyCol .mobile-combat-heading>.battleStatsTitle,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName,
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName * { white-space:nowrap!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName .badNameMutation {
+  background:none!important; padding:0!important; border:0!important; border-radius:0!important; box-shadow:none!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName .badNameMutation:not(.u2Mutation) { color:#5b3a1e!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName .badNameMutation:is(.Corruption,.CorruptSnow) { color:#5a2a8c!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName .badNameMutation:is(.Magma,.HotSnow) { color:#9b2c12!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleStatsRow #badGuyName .badNameMutation:is(.Healthy,.HealthySnow) { color:#3d6b1f!important; }
+/* V-272 (replaces the full-height lanes of V-223/V-234): the enemy mirrors the Scruffies. Its 132px box stands 6% from
+   the right edge as theirs does from the left, the picture centred in it like theirs. The bone tag (mobile-diorama-header.css,
+   3.2% from the right under the header) only reaches into the top of the figure, so only the picture rows at the tag's height
+   keep clear of it: mobile-bone-hints.js reads the opaque extent of those rows and moves the figure left by just that much
+   (--dio-tag-clear, 0 when they already clear the tag or no tag shows); the rows below may stand under the tag. The box
+   never starts more than 8px left of the scene centre: the figure's transparent margin keeps the art off the duel mark,
+   which comes later in the DOM and stays on top. Where that leaves too little room (wide tag in a narrow or large-font
+   scene), the script makes the figure shorter instead (--dio-tag-fit, feet in place). */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-combat-scene #mobile-enemy-art {
+  right:min(calc(6% + var(--dio-tag-clear,0px)),calc(50% - 124px))!important; width:132px!important;
+  height:calc((var(--dio-hero) - 8px) * var(--dio-tag-fit,1));
+}
+/* V-273: Repeat shows only its pictogram ("Wiederholen an/aus" did not fit its plate). The original text stays in the button
+   as its accessible name (font-size 0; mobile-compact.js names name and state in aria-label, aria-pressed the state). The
+   56px plate leaves the room it frees to Fight, AutoFight and Tools. On = the petrol plate of AutoFight (V-151); off =
+   parchment with a faded icon and a red slash like the log filters (V-258), so the state does not rest on colour alone. */
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer:has(>#repeatBtn) { flex:0 0 56px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #repeatBtn::after { content:none!important; display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #repeatBtn::before { flex-basis:24px; width:24px; height:24px; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #repeatBtn[aria-pressed="false"] {
+  color:#6b5a40!important; border:1px solid #9b7442!important; border-image:none!important; text-shadow:none;
+  background:linear-gradient(to top right,transparent calc(50% - 1.5px),#8e1a0a calc(50% - 1.5px),#8e1a0a calc(50% + 1.5px),transparent calc(50% + 1.5px)),#f8ecd2!important;
+  box-shadow:inset 0 1px #fff8,0 3px 6px #0007!important;
+}
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #repeatBtn[aria-pressed="false"]::before { opacity:.55; }

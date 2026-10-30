@@ -1,0 +1,23 @@
+{
+  "id": "J01",
+  "key": "Farmer",
+  "name": "Farmer",
+  "group": "jobs",
+  "file": "assets/J01-Farmer.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 443,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 443
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "19e5475fbcd97f2ef947d8e57d8992a458d11a20338740e9b3e5dad0d7f34724",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "R10-0",
+  "key": "bone-jar-0",
+  "name": "Bone Jar, stage 0 (almost empty)",
+  "group": "resources",
+  "file": "assets/R10-bone-jar-0.png",
+  "approved": false,
+  "source": "generation with the built-in image tool (prompt use case \"style-transfer\"), not an atlas cut; exported to 1024x1024 RGBA",
+  "nativeSize": {
+    "width": 1024,
+    "height": 1024
+  },
+  "sourcePrompt": "assets/R10-bone-jar-0.png.prompt.txt",
+  "references": [
+    "app/src/main/assets/game/mobile-assets/diorama/R09-Bones.webp",
+    "artwork/diorama/source-package/world/resources.png",
+    "app/src/main/assets/game/mobile-assets/diorama/H01-resources-workstations.webp"
+  ],
+  "consultedBeforeCreation": [
+    "docs/evidence/v201-bone-jar/evcard-diorama-411.png",
+    "docs/design/bone-jar/MALAUFTRAG.md"
+  ],
+  "createdFor": "V-201 Bone Jar, docs/design/bone-jar/MALAUFTRAG.md (A: stages 0/1/2, C: scene prop), delivered 2026-10-28",
+  "sha256": "bd1175422087ad8b4c822216ed77e19b29b52a4db6350b44a6b342f6fd1695ef",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

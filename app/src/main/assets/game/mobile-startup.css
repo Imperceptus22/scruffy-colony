@@ -1,0 +1,52 @@
+/* Opaque fallback also covers the frame before the body has been parsed. */
+html[data-mobile-starting]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 2147483646;
+    background: #231b12;
+}
+#mobile-startup { display:none; }
+html[data-mobile-starting] #mobile-startup {
+    display:block;
+    position:fixed;
+    inset: 0;
+    z-index:2147483647;
+    overflow:hidden;
+    background:#231b12 url("mobile-assets/diorama/P01-dark-wood.webp") center/100% auto;
+    color:#e8d6b5;
+    font:12px/1.5 'B2 Manrope',sans-serif;
+    text-align:center;
+}
+#mobile-startup::before {
+    content:""; position:absolute; inset:13.6% 0 12.3%;
+    background:url("mobile-assets/diorama/S01-colony.webp") center/cover no-repeat;
+    mask-image:linear-gradient(transparent,#000 10%,#000 77%,transparent);
+    -webkit-mask-image:linear-gradient(transparent,#000 10%,#000 77%,transparent);
+}
+#mobile-startup::after {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(#111a15b3,transparent 31%,transparent 57%,#151610ed 88%);
+}
+#mobile-startup .startup-title {
+    position:absolute; z-index:1; top:8%; left:50%; transform:translateX(-50%);
+    width:min(92%,330px); height:127px; display:flex; flex-direction:column; justify-content:center;
+    background:url("mobile-assets/diorama/U05-header-wood.webp") center/100% 100% no-repeat;
+    filter:drop-shadow(0 5px 7px #0008);
+    color:#173f3c; font:700 38px/.88 'Crimson Pro',Georgia,serif; letter-spacing:-1px;
+}
+#mobile-startup .startup-loading { position:absolute; z-index:1; bottom:11.7%; width:100%; padding:0 16px; }
+#mobile-startup .startup-dots { display:flex; justify-content:center; gap:8px; margin-bottom:18px; }
+#mobile-startup .startup-dots i { width:5px; height:5px; border-radius:50%; background:#c6a05f; animation:startup-pulse 1.2s ease-in-out infinite; }
+#mobile-startup .startup-dots i:nth-child(2) { animation-delay:.2s; }
+#mobile-startup .startup-dots i:nth-child(3) { animation-delay:.4s; }
+#mobile-startup [lang="de"],html[data-language="de"] #mobile-startup [lang="en"] { display:none; }
+html[data-language="de"] #mobile-startup [lang="de"] { display:inline; }
+#mobile-startup-version { position:absolute; z-index:1; bottom:4.8%; width:100%; font-size:11px; letter-spacing:1.3px; color:#d4c5a6; opacity:.7; }
+@keyframes startup-pulse { 0%,100% { opacity:.25; } 50% { opacity:1; } }
+@media (prefers-reduced-motion:reduce) { #mobile-startup .startup-dots i { animation:none; } }
+@media (max-height:520px) {
+    #mobile-startup .startup-title { top:5%; height:100px; width:min(82%,260px); font-size:30px; }
+    #mobile-startup .startup-loading { bottom:13%; }
+    #mobile-startup .startup-dots { margin-bottom:6px; }
+}

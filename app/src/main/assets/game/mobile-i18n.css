@@ -1,0 +1,15 @@
+/* V-237: German interface. The Diorama header paints "More" into its plate (header-strip.webp); in German a plate-coloured
+   label covers the painted word. The button text itself stays transparent and in the accessibility tree. */
+html[data-graphics="diorama"][data-language="de"] body #mobile-header#mobile-header #mobile-more-button::before {
+  content:"Mehr"; display:flex; align-items:center; justify-content:center; position:absolute; left:39%; top:31%; width:50%; height:44%;
+  background:linear-gradient(#433026,#36261d); -webkit-mask:none; mask:none; border-radius:2px; color:#efe3cb; pointer-events:none;
+  font:600 calc(3.2cqw / var(--text-zoom,1))/1 var(--font-body); letter-spacing:.01em;
+}
+/* Classic Bone Trader head: "Knochenhändler" is longer than "Bone Trader"; at 360 px with large text it breaks with a
+   hyphen instead of running under the Close button (the translation layer marks the title lang="de"). */
+html[data-language="de"]:not([data-graphics="diorama"]) #boneTitleContainer { hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word; }
+/* V-243 step 4i: the level column of the Fluffy table reads "Stufe 18" in German; where the width allows it stays on one
+   line. Classic at 360 px with large text keeps the break: the narrower ability column would split long German words
+   such as "Spezialfähigkeit" in the middle (the window is English-hyphenated, mobile-design.css breaks anywhere). */
+html[data-language="de"][data-graphics="diorama"] #fluffyLevelBreakdown td:first-child { white-space:nowrap; }
+@media (min-width:400px) { html[data-language="de"] #fluffyLevelBreakdown td:first-child { white-space:nowrap; } }

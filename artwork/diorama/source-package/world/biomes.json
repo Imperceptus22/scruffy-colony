@@ -1,0 +1,27 @@
+{
+  "atlas": "biomes",
+  "approved": false,
+  "grid": {
+    "columns": 4,
+    "rows": 2
+  },
+  "ordered_item_ids": [
+    "Random",
+    "Mountain",
+    "Forest",
+    "Sea",
+    "Depths",
+    "Gardens",
+    "Farmlands",
+    "Void"
+  ],
+  "empty_slots": [],
+  "reference_roles": [
+    "combat-map-concepts-2026-10-24/B-diorama.png: lighting/material reference",
+    "diorama-app-concepts-2026-10-24/01-resources.png: Scruffy Colony resource style reference",
+    "diorama-app-concepts-2026-10-24/04-map-workshop.png: map diorama UI style reference"
+  ],
+  "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-b698c510-21fb-43d3-8d4e-81ba713b68e9.png",
+  "prompt_file": "biomes.prompt.txt",
+  "transparency_fix_prompt_file": "biomes-transparency-fix.prompt.txt"
+}

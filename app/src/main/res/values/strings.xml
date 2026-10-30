@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Scruffy Colony</string>
+    <string name="previous_graphics">Classic graphics</string>
+    <string name="previous_graphics_launch">Open with classic graphics</string>
+    <string name="renderer_failed">The game view closed. Your last confirmed save is preserved. The game will reload when you return. If loading fails again, you can retry here.</string>
+    <string name="renderer_retry">Reload</string>
+    <string name="leave_title">Leave the game?</string>
+    <string name="leave_confirm">Save and exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Apply</string>
+    <string name="ok">OK</string>
+    <string name="export_saved">Export file saved.</string>
+    <string name="export_lost">The export was interrupted, so nothing was saved and the empty file was removed. Please export again. Your save is preserved.</string>
+    <string name="document_interrupted">File selection was interrupted. Please import or export again. Your save is preserved.</string>
+    <string name="unsaved_exit">Your current progress has not been saved again. The last confirmed save is preserved; any running offline calculation will restart next time. You can export a file before leaving.</string>
+    <string name="export_save">Export</string>
+    <string name="leave_unsaved">Exit anyway</string>
+    <string name="bridge_unavailable">The installed Android System WebView does not support save protection. Please update Android System WebView.</string>
+</resources>

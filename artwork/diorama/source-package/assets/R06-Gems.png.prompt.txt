@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: high-resolution transparent 3x3 sprite atlas of small mobile game inventory resource objects for Scruffy Colony.
+Input images: Image 1 is a diorama lighting/material reference; Images 2 and 3 are visual style references for the same game. Match their miniature handcrafted 3D diorama rendering, warm upper-left light, dark teal/brown shadowing and tactile wood, stone, moss, and glass.
+Primary request: Create exactly nine distinct isolated resource objects in a precise 3-column by 3-row grid, ordered row-major: Food, Wood, Metal, Science, Fragments, Gems, Helium, Radon, Bones. Food = small woven basket of red apples; Wood = tied stack of cut timber logs; Metal = small ore cart containing gray metallic ore; Science = blue glass flask beside a closed small book; Fragments = unmistakable scattered crystalline map shards and angular pieces, not currency; Gems = one cut jewel; Helium = one distinct glass atom-emblem/vial with a readable stylized helium atom symbol; Radon = a visibly different glass atom-emblem/vial with a distinct radon atom symbol, not a duplicate of helium; Bones = a small tied bundle of pale bones.
+Scene/backdrop: transparent canvas, no ground plane or scenery.
+Composition/framing: square canvas; equal square cells, generous transparent gutters and safe margin in every cell; one object centered per cell, miniature collectible icon occupying about 65% of cell. Consistent three-quarter view.
+Lighting/mood: soft warm light from upper left, crisp detailed highlights.
+Materials/textures: handcrafted carved wood, woven basket, rough ore, polished crystal, luminous blue glass, ivory bone; rich tactile diorama material, no flat vector art.
+Text (verbatim): none.
+Constraints: perfectly even 3x3 grid, clear separation, transparent background and actual alpha; no cell borders; no labels, no lettering, no numerals, no UI, no watermark. Preserve distinct silhouettes and avoid tangencies/cropping.

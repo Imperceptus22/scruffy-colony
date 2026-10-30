@@ -1,0 +1,61 @@
+/* Scoped decoration of the original late-game windows. */
+#tooltipDiv.ml-alchemy:where([data-mobile-has~="alchemyCraftTable"]):is(#tooltipDiv),#tooltipDiv.ml-assault:where([data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv){width:calc(100vw - 16px)!important;max-width:680px!important;left:8px!important;top:8px!important;max-height:calc(100dvh - 16px)!important;overflow:auto!important;}
+#alchHerbContainer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:12px;}
+#alchHerbContainer .alchemyPopupHerb{width:auto!important;display:block!important;min-width:0;padding:7px;background:var(--surface);border:1px solid var(--line);}
+#alchemyCraftTable,#alchemyCraftTable tbody,#alchemyCraftTable tr,#alchemyCraftTable td{display:block!important;width:100%!important;}
+#alchemyCraftTable .alchemyPopupCraft{margin:6px 0;padding:0!important;height:auto!important;}
+.ml-recipe summary{padding:12px;cursor:pointer;list-style:disclosure-closed;}
+.ml-recipe summary .alchemyPopupName{display:inline!important;font-size:1rem!important;font-weight:700;}
+.ml-recipe summary .alchemyPotionEffect{display:block!important;margin-top:5px;font-size:.85rem!important;}
+.ml-recipe-cost{display:block;font-size:.8rem;margin-top:5px;overflow-wrap:anywhere;}
+.ml-recipe[open]>*:not(summary){display:block!important;width:auto!important;margin:8px 12px!important;white-space:normal!important;}
+.ml-recipe .alchemyAuto input{width:90px!important;min-height:44px;font-size:1rem!important;}
+.ml-recipe [id^=alchCraftBtn]{min-height:44px!important;padding:10px!important;text-align:center;}
+#alchemyDropsTable{width:100%!important;table-layout:fixed;}
+#alchemyDropsTable td{padding:5px!important;overflow-wrap:anywhere;}
+#ml-assault-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:12px 0;}
+#ml-assault-tabs button,#ml-mut-detail button{min-height:44px;border:1px solid var(--accent);border-radius:5px;background:var(--surface);color:var(--ink);font-size:1rem;padding:8px;}
+#ml-assault-tabs [aria-selected=true],#ml-mut-detail button:not(:disabled){background:var(--accent);color:var(--onaccent);}
+#ml-assault-tools summary{padding:10px 0;cursor:pointer;}
+#ml-assault-head{position:sticky;top:-1px;z-index:2;background:var(--surface);padding:5px 0;border-bottom:1px solid var(--line);}
+.ml-assault-close{display:flex;justify-content:flex-end;gap:6px;}
+.ml-assault-close button{min-height:40px!important;padding:5px 12px;}
+.ml-fighters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;text-align:left;}
+#tooltipDiv.ml-assault .autoBattleBarHolder .innerFightBar{display:none;}
+#tooltipDiv.ml-assault #autoBattleNotes{height:auto;min-height:0;font-size:.9rem;padding:8px;}
+#tooltipDiv.ml-assault [hidden]{display:none!important;}
+#tooltipDiv.ml-assault #autoBattleMenuButtons{display:flex;flex-wrap:wrap;gap:5px;}
+#tooltipDiv.ml-assault #autoBattleMenuButtons button{flex:1 1 42%;font-size:.8rem!important;margin:0!important;min-width:0;}
+#tooltipDiv.ml-assault #autoDust{font-size:.8rem!important;white-space:normal;overflow-wrap:anywhere;}
+#tooltipDiv.ml-assault #abLevelButtons{display:flex;flex-wrap:wrap;gap:4px;}
+#tooltipDiv.ml-assault #abLevelButtons button{flex:1 1 42%;margin:0;font-size:.8rem!important;}
+#tooltipDiv.ml-assault .autoBattleTopName{display:none;}
+#tooltipDiv.ml-assault .ml-health-label{display:block;color:var(--ink)!important;font-size:.85rem!important;position:static!important;line-height:1.5!important;}
+#tooltipDiv.ml-assault .autoBattleBarHolder{display:block;width:100%!important;margin:0 0 5px;height:12px!important;}
+#tooltipDiv.ml-assault .autoStats{display:block;width:100%!important;min-width:0;margin:0 0 10px;}
+#tooltipDiv.ml-assault #autoItemsDiv{height:auto!important;max-height:none!important;overflow:visible!important;width:100%!important;}
+#tooltipDiv.ml-assault .autoItemContainer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;width:100%!important;margin:7px 0!important;padding:8px;border:1px solid var(--line);background:var(--surface);}
+#tooltipDiv.ml-assault .autoItemContainer .autoItem{width:auto!important;display:flex;align-items:center;justify-content:center;min-height:44px;font-size:.85rem!important;white-space:normal;overflow-wrap:anywhere;}
+#tooltipDiv.ml-assault .ml-item-info{grid-column:1/-1;min-height:40px;background:transparent;border:1px solid var(--line);border-radius:5px;}
+#tooltipDiv.ml-assault .autoBonusBox,#tooltipDiv.ml-assault .contractBox,#tooltipDiv.ml-assault .abMiscBox{display:block;width:100%!important;height:auto!important;min-height:44px;padding:12px!important;margin:7px 0;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:.9rem!important;line-height:1.45;overflow-wrap:anywhere;}
+#tooltipDiv.ml-assault #autoItemsDiv button{font-size:.85rem!important;white-space:normal;min-height:44px;}
+#mutTreeWrapper.ml-mutators{position:fixed!important;inset:0!important;display:grid!important;grid-template-rows:auto minmax(100px,1fr) auto;width:100%!important;height:100dvh!important;overflow:hidden!important;z-index:10000;padding:0!important;}
+#mutTreeWrapper.ml-mutators[style*="display: none"]{display:none!important;}
+.ml-mut-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;padding:8px;background:#24332f;z-index:3;}
+.ml-mut-header h1{font-size:1.2rem;margin:0;align-self:center;}
+#mutTreeWrapper.ml-mutators #mutTreeCloseBtn{position:static!important;display:flex!important;align-items:center;justify-content:center;font-size:.9rem;color:#f6f3ea;border:1px solid #81928a;border-radius:5px;padding:6px 12px;}
+#mutTreeWrapper.ml-mutators #mutTreeCloseBtn::before{content:none!important;}
+#mutTreeWrapper.ml-mutators #mutSeedCounter{grid-column:1/-1;position:static!important;font-size:.85rem!important;white-space:normal;text-align:left;}
+#mutTreeWrapper.ml-mutators #mutMenu{grid-column:1/-1;position:static!important;display:flex!important;gap:5px;}
+#mutTreeWrapper.ml-mutators #mutMenu br{display:none;}
+#mutTreeWrapper.ml-mutators #mutMenu .btn{margin:0!important;flex:1;font-size:.8rem!important;min-width:0;}
+#mutTreeWrapper.ml-mutators #mutZoomButtons{grid-column:1/-1;display:flex;gap:6px;position:static!important;}
+#mutTreeWrapper.ml-mutators #mutZoomButtons>*{display:inline-flex;width:auto;flex:1;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:0;padding:5px;background:var(--surface);color:var(--ink);border:1px solid var(--line);font-size:1rem!important;}
+.ml-mut-stage{position:relative;overflow:hidden;min-height:100px;}
+#mutTreeWrapper.ml-mutators #mutTree{position:absolute!important;top:50%!important;left:50%!important;}
+#ml-mut-detail{z-index:3;max-height:34dvh;overflow:auto;background:var(--surface);color:var(--ink);padding:10px 14px;border-top:1px solid var(--line);}
+#ml-mut-detail h2{font-size:1rem;margin:0 0 5px;font-weight:700;}
+#ml-mut-detail p{font-size:.85rem;line-height:1.4;margin:5px 0;}
+#ml-mut-detail button{width:100%;margin-top:6px;}
+#ml-mut-detail button:disabled{opacity:.65;}
+#mutTree .mutatorBox[aria-pressed=true]{outline:3px solid #fff8e9;outline-offset:3px;}

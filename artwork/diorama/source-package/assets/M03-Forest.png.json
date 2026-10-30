@@ -1,0 +1,23 @@
+{
+  "id": "M03",
+  "key": "Forest",
+  "name": "Forest",
+  "group": "biomes",
+  "file": "assets/M03-Forest.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 0,
+    "width": 443,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 443
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "b6a24c4687524830b17bf1c6fcf115d8ceb54feb05ffcd2d34cc3cb3513faee4",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

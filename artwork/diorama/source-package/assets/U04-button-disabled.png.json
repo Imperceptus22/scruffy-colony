@@ -1,0 +1,23 @@
+{
+  "id": "U04",
+  "key": "button-disabled",
+  "name": "Inaktive Taste",
+  "group": "interface",
+  "file": "assets/U04-button-disabled.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 542,
+    "top": 610,
+    "width": 482,
+    "height": 380
+  },
+  "nativeSize": {
+    "width": 482,
+    "height": 380
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "ae41d0ff4081882d5761d163dadbd4e93c76927f9561864bbc6fd09341404be1",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

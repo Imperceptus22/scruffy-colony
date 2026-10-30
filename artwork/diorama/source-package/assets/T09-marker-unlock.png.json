@@ -1,0 +1,23 @@
+{
+  "id": "T09",
+  "key": "marker-unlock",
+  "name": "Freischaltung",
+  "group": "terrain",
+  "file": "assets/T09-marker-unlock.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 1024,
+    "top": 682,
+    "width": 512,
+    "height": 342
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 342
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "ea01ea193c7b21feb6d078d5c611639136e6f50837da5ccec8d2d4b08a6a9ec8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

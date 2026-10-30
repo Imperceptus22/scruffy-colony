@@ -1,0 +1,23 @@
+{
+  "id": "B16",
+  "key": "Shed",
+  "name": "Shed",
+  "group": "buildings",
+  "file": "assets/B16-Shed.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 411,
+    "width": 418,
+    "height": 389
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 389
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "9255132cb8cd3b036b1a1f8191a1cf990260d9cce36dfc4eb5ebccd0cd9a9d2f",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

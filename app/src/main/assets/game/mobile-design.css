@@ -1,0 +1,402 @@
+/* Selected B2 + combat B. Values remain in the original nodes. */
+#numTabs .nav { display:grid!important; grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.7fr) minmax(0,1fr); overflow:visible; gap:3px; }
+#numTabs .nav li { width:auto!important; min-width:0; }
+#numTabs li>a,#numTabs #tab5>a { min-width:0!important; width:auto!important; padding:8px 1px!important; font-size:.78rem!important; white-space:nowrap!important; }
+#numTabs #tab5 { display:grid; grid-template-columns:minmax(0,1fr) 30px; gap:2px; }
+#tab5Text2::before { content:''; display:block; width:19px; height:19px; background:currentColor; mask:var(--mi-settings) center/contain no-repeat; -webkit-mask:var(--mi-settings) center/contain no-repeat; }
+#mobile-more>.mobile-file-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px; }
+#mobile-more .mobile-file-actions button { padding:8px; font-size:.85rem; }
+.mobile-menu-group { display:flex; flex-direction:column; margin-bottom:12px; }
+.mobile-menu-entry { display:flex; justify-content:space-between; align-items:center; gap:9px; width:100%; min-height:50px; padding:10px; border:0!important; border-bottom:1px solid var(--line)!important; background:transparent!important; color:var(--ink)!important; font-size:.95rem!important; text-align:left; }
+.mobile-menu-entry::after { content:''; width:16px; height:16px; margin-left:auto; background:currentColor; mask:var(--mi-next) center/contain no-repeat; -webkit-mask:var(--mi-next) center/contain no-repeat; }
+.mobile-menu-entry[data-menu-index="4"] { background:var(--selected)!important; font-weight:700; }
+.mobile-menu-entry[hidden] { display:none!important; }
+/* V-217: a single long label (Achievements at large font sizes) breaks inside the tile instead of running over the chevron:
+   hyphenated where the WebView can (lang="en"), otherwise at the edge. */
+.mobile-menu-entry { overflow-wrap:anywhere!important; hyphens:auto; -webkit-hyphens:auto; }
+#mobile-more #settingsRow { margin-top:0; }
+#mobile-more #logColumn { margin-top:8px; }
+#achievementsHere .littleAchievementWrapper { grid-template-columns:minmax(0,1fr)!important; }
+#achievementsHere .achievementContainer { display:grid!important; grid-template-columns:minmax(0,1fr) 48px; grid-template-rows:auto auto; min-height:62px!important; height:auto!important; gap:2px 8px; padding:7px 9px!important; text-align:left; }
+.mobile-achieve-name { grid-column:1; font:600 .9rem var(--font-data); }
+.mobile-achieve-status { grid-column:1; font-size:.75rem!important; }
+.mobile-achieve-info { grid-column:2; grid-row:1/3; min-height:48px; width:48px; padding:3px; font-size:.75rem; color:inherit!important; border-color:currentColor!important; }
+#battleStatsRow { border-top:0!important; border-radius:0 0 5px 5px!important; background:var(--surface); }
+#battleStatsRow>#goodGuyCol,#battleStatsRow>#badGuyCol { padding:8px!important; overflow-wrap:normal; display:flex; flex-direction:column; gap:5px; }
+#battleStatsRow>#badGuyCol { background:var(--enemy)!important; }
+#mobile-combat-scene { height:96px; position:relative; background:url(mobile-assets/feldstation.webp) center/cover; overflow:hidden; border:1px solid var(--line); border-radius:5px 5px 0 0; }
+#mobile-combat-scene::before { content:''; position:absolute; inset:0; background:linear-gradient(0deg,#e8e5d7aa,transparent); }
+.mobile-trimp-art,#mobile-enemy-art { position:absolute; bottom:0; width:120px; height:96px; object-fit:contain; }
+.mobile-trimp-art { left:10px; }
+#mobile-enemy-art { right:10px; background-repeat:no-repeat; }
+#mobile-enemy-art[data-mirror] { transform:scaleX(-1); }
+#mobile-enemy-art > svg { display:block; width:100%; height:100%; overflow:hidden; }
+#mobile-enemy-art[data-detail]:not([data-detail="0"])::after { content:''; position:absolute; width:16px; height:20px; right:22px; top:10px; background:#ddd0ac; border:2px solid #7e6442; clip-path:polygon(15% 0,85% 0,100% 75%,50% 100%,0 75%); }
+#mobile-enemy-art[data-detail="2"]::after,#mobile-enemy-art[data-detail="4"]::after { clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%); }
+#mobile-enemy-art[data-detail="3"]::after,#mobile-enemy-art[data-detail="5"]::after { clip-path:polygon(0 0,100% 0,75% 50%,100% 100%,0 100%,25% 50%); }
+.mobile-art-unknown::before { content:'?'; position:absolute; left:42%; top:20%; color:var(--muted); font-size:2rem; }
+.mobile-duel-mark { position:absolute; left:calc(50% - 12px); top:35px; width:24px; height:24px; background:var(--ink); mask:var(--mi-battle) center/contain no-repeat; -webkit-mask:var(--mi-battle) center/contain no-repeat; }
+#battleStatsRow .row { display:flex; flex-wrap:wrap; width:100%; min-height:0; }
+#battleStatsRow .row>div { width:100%!important; min-width:0; flex:none; }
+#battleStatsRow .battleStatsTitle { display:flex; align-items:center; flex-wrap:wrap; font-size:.92rem!important; font-weight:600; gap:3px; }
+#battleStatsRow #colGoodGuyName { width:100%; }
+#badGuyCol>div:first-child>.row { display:block; }
+#battleStatsRow #goodGuyStatsRow { display:flex; gap:4px 8px; flex-wrap:wrap; }
+#battleStatsRow #damageDiv,#battleStatsRow #blockDiv { width:auto!important; flex:1 1 90px; font-size:.8rem!important; min-width:0; white-space:normal; }
+#battleStatsRow #badGuyRow { font-size:.8rem!important; min-height:0; }
+#battleStatsRow .innerFightBar { min-height:0!important; padding:0!important; font-size:.8rem!important; line-height:1.4!important; display:inline-flex; flex-wrap:wrap; }
+.mobile-life { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 4px; font-size:.7rem; color:var(--muted); }
+.mobile-health-value { color:var(--ink); }
+#battleStatsRow .fightBar { overflow:visible; flex:none; height:5px!important; margin:0 0 3px!important; }
+.mobile-battle-values-info { margin-left:auto; min-height:32px!important; min-width:32px; padding:2px!important; font-size:0!important; }
+.mobile-battle-values-info::before { width:16px!important; height:16px!important; }
+/* V-161: the original crit texts (yellow, cyan, orange, red, tier classes) were made for a dark board; on the light cards
+   they keep their colours on a small dark plate (none without a crit). Two tiers are lifted for contrast on it, and the
+   tier icon stays in the line instead of its desktop absolute position. */
+#battleStatsRow :is(#critSpan,#badCrit):not(:empty) { display:inline-block; margin:1px 0 0 4px; padding:0 5px; border-radius:3px; background:#1a120b; line-height:1.35; white-space:nowrap; vertical-align:baseline; }
+#battleStatsRow #critSpan .critTier4 { color:#c58dff; }
+#battleStatsRow #critSpan .critTier7 { color:#7ff1fb; }
+#battleStatsRow #critSpan .icomoon { position:static; font-size:inherit; }
+#lootBdContainer { display:flex; align-items:center; }
+#lootBdBtn { display:inline-flex; align-items:center; min-height:32px; font-size:.7rem!important; width:auto; }
+#lootBdBtn::before { content:none!important; }
+#colStances { float:none!important; width:100%!important; display:flex; }
+#colStances>.row { display:flex; flex-wrap:wrap; width:100%; gap:4px; padding:0!important; }
+#colStances .formFifth,#colStances .formSixth { width:auto!important; flex:1; }
+#colStances .formationBtn { min-height:40px; min-width:40px; margin:4px 0; align-items:center; justify-content:center; }
+/* V-250: the original hides every formation button in its sheet and shows one only with an inline display:block
+   (unlockFormation); a button without that stays hidden. */
+#colStances .formationBtn[style*="display: block"] { display:flex!important; }
+body[data-mobile-page="battle"] #preMaps,body[data-mobile-page="maps"] #rightCol { display:none!important; }
+body[data-mobile-page="battle"] #battleContainer { display:block!important; }
+body[data-mobile-page="battle"] #battleHeadContainer { display:block!important; }
+body[data-mobile-page="battle"] #mobile-battle #grid { display:block!important; }
+body[data-mobile-page="battle"] #mobile-battle #mapGrid { display:none!important; }
+body[data-mobile-page="battle"]:where([data-mobile-has~="map-active"]):is(*,#mobile-has):is(*,.mobile-has) #grid { display:none!important; }
+body[data-mobile-page="battle"]:where([data-mobile-has~="map-active"]):is(*,#mobile-has):is(*,.mobile-has) #mapGrid { display:block!important; }
+body[data-mobile-page="maps"] #preMaps:not([hidden]) { display:block!important; }
+#mobile-map-transition { width:100%; margin-bottom:8px; }
+#mobile-map-transition[hidden],#mobile-map-state[hidden],#mobile-map-access[hidden] { display:none; }
+body[data-mobile-page="maps"] #selectMapBtns .workBtn { min-width:100px; }
+#battleBtnsColumn { grid-template-columns:repeat(3,minmax(0,1fr))!important; }
+#battleBtnsColumn #mapsBtn { width:100%; }
+#battleBtnsColumn .fightBtn { font-size:.8rem!important; padding:7px 3px!important; }
+@media(min-width:390px){#numTabs li>a,#numTabs #tab5>a {font-size:.875rem!important;}}
+
+#battleStatsRow #goodGuyStatsRow>div{min-height:0!important;padding:0!important;}
+#battleStatsRow #damageDiv,#battleStatsRow #blockDiv{display:block!important;flex:1 1 auto!important;}
+#battleStatsRow #blockDiv[style*="hidden"],#battleStatsRow #roboTrimpBtn[hidden]{display:none!important;}
+#mobile-more>.mobile-file-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+#achievementsHere .achievementContainer{place-items:stretch!important;}
+#achievementsHere .mobile-achieve-status{font-size:.75rem!important;}
+#achievementsHere .mobile-achieve-info{align-self:center;}
+
+#colGoodGuyName{display:flex;align-items:flex-start;gap:3px;}
+#colGoodGuyName #goodGuyName{flex:1;min-width:0;}
+#lootBdContainer{position:static!important;height:auto!important;}
+#badGuyCol>div:first-child .row>div{float:none!important;}
+#badGuyCol>div:first-child .row>.col-xs-1{display:flex!important;justify-content:flex-end;}
+#achievementsHere .achievementContainer .mobile-achieve-status{font-size:.75rem!important;}
+.mobile-menu-entry::before{content:"";width:20px;height:20px;flex:none;background:currentColor;mask:var(--mi,var(--mi-info)) center/contain no-repeat;-webkit-mask:var(--mi,var(--mi-info)) center/contain no-repeat;}
+.mobile-menu-entry[data-menu-index="4"]{--mi:var(--mi-achievements);}
+.mobile-menu-entry[data-menu-index="3"]{--mi:var(--mi-stats);}
+.mobile-menu-entry[data-menu-index="5"]{--mi:var(--mi-settings);}
+.mobile-menu-entry[data-menu-index="6"]{--mi:var(--mi-past);}
+.mobile-menu-entry[data-menu-index="7"]{--mi:var(--mi-changes);}
+.mobile-menu-entry[data-menu-index="8"]{--mi:var(--mi-pause);}
+#mobile-more-bones{--mi:var(--mi-gems);}
+#mobile-more-heirlooms{--mi:var(--mi-heirloom);}
+#mobile-more-portal{--mi:var(--mi-past);}
+
+/* Existing specialist windows: readable original layout, no new mechanics. */
+#natureContainer,#natureContainer>.row{height:auto!important;}
+#natureContainer .tabColNature{float:none!important;width:100%!important;height:auto!important;margin:0 0 12px;padding:10px!important;background:var(--surface)!important;border:1px solid var(--line)!important;box-shadow:none!important;color:var(--ink)!important;}
+#natureContainer .natureTop{height:auto!important;font-size:.9rem!important;text-align:left;}
+#natureContainer .natureTitle{font:600 1.1rem var(--font-data)!important;text-shadow:none!important;}
+#natureContainer .natureBuyIcon{display:flex!important;position:relative;flex-wrap:wrap;align-items:center;gap:6px;min-height:64px!important;height:auto!important;width:100%!important;margin:6px 0!important;padding:10px!important;border:1px solid var(--line)!important;background:var(--paper)!important;color:var(--ink)!important;box-shadow:none!important;}
+#natureContainer .natureBuyIconMini{width:100%!important;}
+#natureContainer .natureUpgradeLevel,#natureContainer .natureUpgradeCost{position:static!important;float:none!important;width:auto!important;font-size:.875rem!important;text-align:left;}
+#natureContainer .natureBuyIcon::before{content:'Upgrade';font-weight:600;}
+#natureContainer .natureBuyIcon[onclick*='stackTransfer']::before{content:'Retain';}
+#natureContainer .natureBuyIcon[onclick*='uberEmpower']::before{content:'Enlightenment';}
+#natureContainer .natureBuyIcon[onclick*='convert']::before{content:'Convert';}
+#natureContainer .natureBigIcon,#natureContainer .natureSmallIcon{position:static!important;width:auto!important;height:auto!important;font-size:1.2rem!important;margin-left:auto;text-shadow:none!important;}
+#natureContainer .natureBackgroundIcon{display:none!important;}
+#natureContainer .transferButtons{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+#natureContainer .infoSpanNature{position:static!important;float:right!important;min-width:48px;min-height:48px;font-size:.85rem!important;}
+#tooltipDiv .autoStats{float:none!important;width:100%!important;display:flex!important;flex-direction:column;gap:8px;margin:8px 0;padding:8px;background:var(--paper);border:1px solid var(--line);}
+#tooltipDiv .autoStatsBreakup{float:none!important;width:100%!important;margin:0!important;}
+#tooltipDiv #abHelpBtn,#tooltipDiv #abCloseBtn{position:static!important;min-height:48px;min-width:48px;font-size:.9rem!important;}
+#tooltipDiv .autoBattleBarHolder{height:18px!important;}
+#tooltipDiv .equalityScalingBtn{font-size:.875rem!important;min-height:48px;}
+#mutMenu{position:static!important;padding:8px;display:flex!important;gap:5px;flex-wrap:wrap;}
+#mutMenu>br{display:none;}
+#mutSeedCounter{background:transparent!important;white-space:normal;line-height:1.5;}
+#mobile-mut-canvas{position:relative;width:860px;height:880px;}
+#mutTree{position:absolute!important;left:430px!important;top:400px!important;}
+#mutZoomButtons{display:flex;gap:4px;bottom:8px!important;right:8px!important;}
+#mutZoomButtons>*{display:flex;align-items:center;justify-content:center;min-width:48px;min-height:48px;font-size:1.3rem!important;background:var(--surface);color:var(--ink);border:1px solid var(--line);}
+#mutTreeCloseBtn{display:none!important;}
+#mobile-mut-hint{margin:0 8px;color:#f3eddf;font-size:.8rem;}
+#mobile-mut-scroll{overflow:auto;width:100%;height:calc(100dvh - 180px);touch-action:pan-x pan-y;}
+.mobile-battle-values-info{min-height:48px!important;min-width:48px;}
+#lootBdContainer{justify-content:flex-end;}
+#lootBdBtn{min-height:48px;}
+#badGuyCol>div:first-child>.row{display:flex;flex-wrap:nowrap;align-items:start;gap:2px;}
+#badGuyCol>div:first-child>.row>.col-xs-11{flex:1!important;width:auto!important;}
+#badGuyCol>div:first-child>.row>.col-xs-1{width:auto!important;flex:none;}
+
+#natureContainer .natureBuyIcon::before{content:none!important;}
+#natureContainer .natureBuyIcon .mobile-info{margin-left:auto;font-size:.75rem!important;}
+#natureContainer .mobile-nature-label{font-size:.875rem;}
+
+#natureContainer *{text-shadow:none!important;}
+#natureContainer .natureTop{background:transparent!important;box-shadow:none!important;position:static!important;padding:0!important;margin-bottom:8px;}
+#natureContainer .natureTitle{background:transparent!important;color:var(--ink)!important;border:0!important;box-shadow:none!important;}
+#natureContainer .infoSpanNature{background:transparent!important;color:var(--ink)!important;border:1px solid var(--line);border-radius:5px;width:auto!important;height:auto!important;line-height:1.4!important;padding:8px!important;margin:0!important;top:auto!important;left:auto!important;right:auto!important;}
+#lootBdContainer{margin:0!important;padding:0!important;top:auto!important;}
+#mutZoomButtons{left:auto!important;width:auto!important;margin:0!important;}
+#portalPresetsTabs li,#portalPresetsTabs li>a{background:var(--surface)!important;color:var(--ink)!important;}
+#portalPresetsTabs .tabSelected>a{background:var(--accent)!important;color:var(--onaccent)!important;}
+#autoDust{font-size:1.15rem!important;line-height:1.4!important;margin-bottom:8px;}
+#tooltipDiv .autoBattleTopName{font-size:1.1rem!important;}
+#abHelpBtn::before,#abCloseBtn::before{content:none!important;}
+#mobile-mut-scroll{overscroll-behavior:contain;}
+
+#swapPortalUniverseBtn{position:static!important;display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;margin-bottom:8px;background:var(--surface)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:5px;padding:8px;}
+#portalTitle{clear:both;}
+#tooltipDiv .autoStats,#tooltipDiv .autoStatsBreakup{height:auto!important;min-height:0!important;}
+
+#natureContainer *{-webkit-text-stroke:0!important;}
+#natureContainer .infoSpanNature span{font-size:.875rem!important;}
+#tooltipDiv:where([data-mobile-has~="equalityScalingState2"]):is(#tooltipDiv) .thingName,#tooltipDiv #equalityScalingState2{font-size:.875rem!important;}
+
+#mobile-maps>#voidMapsBtn{width:100%;min-height:48px;margin-bottom:8px;}
+.mobile-achieve-markers{grid-column:1;font-size:.8rem!important;}
+.mobile-achieve-markers .pinnedAchieve{position:static!important;display:inline-block!important;}
+#achievementTracker{border:1px solid var(--line);border-radius:5px;padding:10px;margin:12px 0;background:var(--surface);color:var(--ink);}
+#achievementTracker>.row{display:flex;flex-wrap:wrap;gap:8px;margin:0;}
+#achievementTracker .col-xs-5,#achievementTracker .col-xs-4{width:100%;float:none;}
+#achievementTrackerIconContainer,#achievementTracker .col-xs-1{display:none;}
+#achievementTrackerTitle{white-space:normal!important;}
+#closeTrackedAchieve{min-height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;margin-left:auto;}
+
+/* Keep the original five-cell tower rows usable after stacking the panels. */
+#playerSpireSpireSpirePanel{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:auto!important;}
+#playerSpireSpireSpirePanel .playerSpireCell{float:none;width:auto;height:54px;margin:0;min-width:0;}
+#playerSpireTutorial{grid-column:1/-1;}
+#playerSpireSpireSpirePanel .spireTrapIcon{font-size:1rem;top:14px;left:5px;}
+#playerSpireSpireSpirePanel .playerSpireEnemy{font-size:.75rem;width:75%;height:auto;min-height:24px;}
+
+#challengesHere .thingName{font-size:.875rem!important;}
+#challengesHere sup,#specificChallengeDescription sup{font-size:.75rem!important;}
+#specificChallengeDescription .dailyTopRow{display:grid;grid-template-columns:repeat(7,minmax(48px,1fr));width:100%;margin:0 0 8px;padding:0;overflow-x:auto;gap:2px;}
+#specificChallengeDescription .dailyTopRow::before,#specificChallengeDescription .dailyTopRow::after{display:none;}
+#specificChallengeDescription .dailyTopRow>.dailyTop{float:none;width:auto!important;min-height:48px;padding:5px 2px;text-align:center;font-size:.75rem!important;border:1px solid var(--line);border-radius:5px;}
+#specificChallengeDescription .dailyTopRow>.colorSuccess{background:var(--selected);color:var(--ink);}
+#specificChallengeDescription .dailyTopRow>.colorInfo{background:var(--accent);color:var(--onaccent);}
+
+#fluffyTooltipTopContainer,#fluffyTooltipTopContainer *{font-size:.875rem!important;line-height:1.45!important;}
+#fluffyTooltipTopContainer .fluffyThird{display:block;width:100%;text-align:left;margin:3px 0;}
+#fluffyLevelBreakdownContainer{max-height:none!important;overflow:visible!important;font-size:.875rem!important;}
+#fluffyLevelBreakdownContainer .fluffFormZone{font-size:.875rem!important;}
+/* V-243 4g: the Fluffy table (Diorama and Classic) keeps its three columns inside the window at 360 px and 130 % (longer German words). */
+#fluffyLevelBreakdown{width:100%;max-width:100%;}
+#fluffyLevelBreakdown td{padding-inline:.3em!important;}
+#fluffyLevelBreakdown td:nth-child(2){overflow-wrap:anywhere;hyphens:auto;}
+#turkimpBuff .mobile-info{display:inline-flex;min-height:48px;margin-left:5px;}
+
+/* Original pins/notifications remain live; empty decorative marker rows take no height. */
+.mobile-achieve-markers:not(:has(.pinnedAchieve,[id$="Alert"])){display:none;}
+.mobile-achieve-markers>.icomoon:not(.pinnedAchieve):not([id$="Alert"]){display:none;}
+#natureContainer .infoSpanNature>.mobile-nature-info-title{color:var(--ink)!important;}
+
+#badGuyCol.mobile-enemy-pending{position:relative;}
+#badGuyCol.mobile-enemy-pending>*{visibility:hidden!important;}
+#badGuyCol.mobile-enemy-pending::after{content:'Next enemy:\A' attr(data-enemy-name);white-space:pre-line;position:absolute;inset:12px 8px;color:var(--ink);font-size:.875rem;}
+
+#portalTimer{background:transparent!important;color:var(--ink)!important;}
+#portalTimer[data-paused="true"]{color:var(--danger)!important;}
+
+/* Live original tracker in the normal page flow. */
+#achievementTracker{position:static!important;width:100%!important;height:auto!important;min-height:0;margin:12px 0;padding:12px;font-size:1rem!important;text-align:left;border:1px solid var(--line)!important;border-radius:5px;background:var(--surface)!important;color:var(--ink);}
+#achievementTracker>.row{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:6px;margin:0;}
+#achievementTracker>.row>div{float:none!important;width:auto!important;padding:0!important;min-width:0;}
+#achievementTracker .row::before,#achievementTracker .row::after{display:none;}
+#achievementTrackerIconContainer{display:none;}
+#achievementTrackerTitle{font:600 1rem var(--font-data)!important;white-space:normal!important;}
+#achievementTrackerDescription,#achievementTrackerProgress,#achievementTrackerReward{font-size:.875rem!important;line-height:1.45;margin:4px 0 0;overflow-wrap:anywhere;}
+#achievementTracker>.row>.col-xs-5,#achievementTracker>.row>.col-xs-4{grid-column:1;}
+#achievementTracker>.row>.col-xs-1{display:none;}
+#closeTrackedAchieve{position:static;inset:auto;z-index:auto;text-shadow:none;color:var(--ink);grid-column:2;grid-row:1/3;display:grid;place-items:center;width:48px;height:48px;cursor:pointer;font-size:1rem;}
+#closeTrackedAchieve::before{content:'';width:18px;height:18px;background:currentColor;mask:var(--mi-close) center/contain no-repeat;-webkit-mask:var(--mi-close) center/contain no-repeat;}
+#achievementTracker.achieveTrackerColorRed{border-color:var(--danger)!important;}
+#achievementTracker.achieveTrackerColorGreen{border-color:var(--accent)!important;}
+#achievementTracker.achieveTrackerColorYellow{border-color:var(--science)!important;}
+#achievementTrackerProgress span{color:inherit!important;}
+#mobile-more .mobile-menu-entry[data-menu-index="7"]{flex-wrap:wrap;}
+#achievementHover{max-height:calc(100dvh - 85px - var(--mobile-nav-height,60px));overflow:auto;}
+#portalTimer::after{display:none;}
+#portalTimer>span:not([hidden]){flex:1;}
+#portalTimer span>small{display:block;font-size:.7rem;color:var(--muted);}
+#mobile-run-clock{display:block;font:500 .875rem var(--font-data);}
+#mobile-pause-action{max-width:9em;font-size:.8rem;text-align:right;color:var(--accent);}
+#portalTimer[data-paused="true"] #mobile-pause-action{color:var(--danger);}
+
+/* Summary supplements original queue nodes without grouping or replacing them. */
+#queueContainer{grid-template-columns:minmax(0,1fr) auto;gap:0 6px;padding:4px 8px;}
+#mobile-queue-title{margin:0;font-size:.9rem!important;}
+#queueRow{grid-row:1/3;gap:3px;flex-direction:column;align-items:flex-end;}
+#queueRow>div{flex:none;min-width:0!important;font-size:.75rem;}
+#queueRow .workBtn{min-height:36px;padding:4px 12px!important;}
+#mobile-queue-summary{grid-column:1;grid-row:2;margin:0 0 4px;font-size:.7rem;line-height:1.4;color:var(--muted);}
+#buildingsQueue{grid-row:3;margin:0;}
+#queueItemsHere{gap:0;}
+#queueItemsHere .queueItem{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:center;min-height:34px;padding:5px 2px;text-align:left;line-height:20px;font-size:.8rem;}
+#queueItemsHere .queueItem::after{position:static;grid-column:2;grid-row:1;align-self:start;font-size:.7rem;}
+#queueItemsHere .queueItemName{grid-column:1;min-width:0;}
+#queueItemsHere #queueTimeRemaining{grid-column:1;font-size:.75rem;}
+#queueItemsHere .queueItem:first-child{padding-bottom:9px;}
+#queueItemsHere #animationDiv{grid-column:1/-1;}
+
+/* Shared header/life/bar/stats rows align both original combatants. */
+#battleStatsRow{column-gap:0;row-gap:5px;}
+#battleStatsRow>#goodGuyCol,#battleStatsRow>#badGuyCol{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(80px,auto) auto 5px auto;align-content:start;gap:5px;}
+@supports(grid-template-rows:subgrid){
+ #battleStatsRow{grid-template-rows:auto auto 5px auto;}
+ #battleStatsRow>#goodGuyCol,#battleStatsRow>#badGuyCol{grid-row:1/span 4;grid-template-rows:subgrid;}
+ #battleStatsRow>#goodGuyCol{grid-column:1;}
+ #battleStatsRow>#badGuyCol{grid-column:2;}
+}
+.mobile-combat-heading{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 48px;align-content:start;align-items:center;min-width:0;}
+#battleStatsRow .mobile-combat-heading>.battleStatsTitle,#battleStatsRow #goodGuyName{display:block!important;min-width:0;font-size:.9rem!important;line-height:1.4!important;overflow-wrap:anywhere;}
+.mobile-army-count{white-space:nowrap;display:inline-block;}
+.mobile-combat-heading>.mobile-battle-values-info{margin:0;width:48px;height:48px;}
+#battleStatsRow #lootBdContainer{display:flex;gap:4px;width:100%;min-width:0;align-items:center;margin:0;inset:auto;}
+#battleStatsRow #lootBdBtn{min-height:48px;font:500 .75rem var(--font-body)!important;color:var(--accent)!important;background:transparent;text-shadow:none;padding:0 4px;text-decoration:underline;text-underline-offset:3px;}
+#battleStatsRow #openTutorialContainer{width:auto;}
+#battleStatsRow #openTutorialBtn{min-width:32px;min-height:48px;padding:0;}
+#battleStatsRow #goodGuyStatsRow,#battleStatsRow #badGuyRow{align-content:start;}
+#battleStatsRow #goodGuyAttack,#battleStatsRow #badGuyAttack,#battleStatsRow #damageDiv,#battleStatsRow #blockDiv,#battleStatsRow #badGuyRow>div{font-size:.8rem!important;line-height:1.4!important;}
+#battleStatsRow #damageDiv,#battleStatsRow #badGuyRow>div{white-space:normal;}
+#battleStatsRow #blockDiv{flex-basis:100%!important;}
+#battleStatsRow .mobile-life{flex-wrap:wrap;}
+#battleStatsRow .mobile-health-value{white-space:nowrap;}
+#battleBtnsColumn{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:5px;margin:6px 0;}
+#gridRow{margin:0!important;}
+#gridRow>#battleSideTitle{grid-column:1/-1;margin:0 0 3px;padding:0;line-height:1.35;}
+#battleBtnsColumn>.battleSideBtnContainer{min-width:0;margin:0;width:auto;}
+#battleBtnsColumn>.battleSideBtnContainer[style*="display: none"]{display:none!important;}
+#battleBtnsColumn .fightBtn{width:100%;min-width:0;box-sizing:border-box;margin:0;font-size:.8rem!important;padding:7px 5px!important;}
+#battleBtnsColumn #fightInfo{flex:none;width:40px;min-width:40px;}
+#battleBtnsColumn #mapsBtn{display:flex;padding:0!important;}
+#mapsBtn[style*="display: none"]{display:none!important;}
+#mapsBtnText{display:grid;place-items:center;flex:1;min-width:0;min-height:48px;}
+#mapsBtn>.mobile-map-settings{display:grid;place-items:center;flex:0 0 44px;min-height:48px;border-left:1px solid var(--line);background:transparent!important;}
+#mapsBtn .glyphicon{background:transparent!important;color:var(--accent);}
+:where(.battleCell).cellColorNotBeaten{background-color:var(--surface);color:var(--ink);}
+/* Only plain original cells: extra classes/inline colors for special states keep their original styles. */
+li[class="battleCell cellColorBeaten"],li[class="cellColorBeaten battleCell"]{background:var(--selected)!important;}
+li[class="battleCell cellColorOverkill"],li[class="cellColorOverkill battleCell"]{background:#b8cdbb!important;}
+/* Seasonal markers remain distinct; original mutation/void/obsidian styles retain priority. */
+.cellColorNotBeaten.battleCell.mapPumpkimp{background-color:#ead2ab;color:var(--ink);}
+#row9 .battleCell.Pumpkimp{background-color:#b7c9aa;}
+#row9 .battleCell.PumpkimpBordered{box-shadow:inset 0 0 5px #74916c;}
+#grid .pumpkimpRow,#mapGrid .pumpkimpRow{background-color:#ead2ab!important;color:var(--ink);}
+
+/* The complete combat content comes before its own log card in page flow. */
+body[data-mobile-page="battle"]{height:auto;overflow-y:auto!important;padding-bottom:calc(var(--mobile-nav-height,60px) + 16px)!important;}
+#mobile-battle{position:relative;display:flex;flex-direction:column;gap:12px;padding:0!important;}
+#mobile-battle[hidden]{display:none!important;}
+#mobile-battle>#rightCol{order:1;min-height:0!important;flex:none;overflow:visible;padding-bottom:0!important;}
+#mobile-battle>#mobile-battle-hint{flex:none;margin:0;padding:4px 0;font-size:.8rem;}
+#mobile-log-panel{order:2;position:relative;z-index:auto;height:clamp(352px,52dvh,440px);max-height:none;flex:none;min-height:0;padding:6px 8px;background:var(--surface);border:1px solid var(--accent);border-radius:5px;display:flex;flex-direction:column;box-shadow:none;}
+#mobile-log-panel>header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex:none;}
+#mobile-log-panel h2{font:600 .85rem var(--font-data)!important;margin:0 0 4px;}
+#mobile-log-panel #logColumn,#mobile-log-panel #logContainer{display:flex;flex-direction:column;min-height:0;width:100%;height:auto!important;padding:0;margin:0;float:none;flex:1;background:transparent;border:0;}
+#mobile-log-panel #logBtnGroup{flex:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) 48px;gap:4px;margin:0 0 6px;width:100%;}
+#mobile-log-panel #logBtnGroup>.btn-group{width:auto;min-width:0;}
+#mobile-log-panel #logConfigHolder{width:auto!important;}
+#mobile-log-panel .logFlt{width:100%;min-width:0;min-height:48px;padding:4px 1px;font-size:.7rem!important;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;}
+#mobile-log-panel .logFlt[aria-pressed="true"]{background:var(--selected);border-color:var(--accent);font-weight:700;}
+#mobile-log-panel .logFlt[aria-pressed="true"]::after{content:' ✓';}
+/* The engine replaces filter text on every toggle; data attributes and masks survive it. */
+#mobile-log-panel [data-log-icon]{display:flex;align-items:center;justify-content:center;font-size:0!important;}
+#mobile-log-panel [data-log-icon]::before{content:'';width:26px;height:26px;background:currentColor;mask:var(--log-icon) center/contain no-repeat;}
+#mobile-log-panel [data-log-icon][aria-pressed="true"]::after{content:none;}
+[data-log-icon="Story"]{--log-icon:url('mobile-assets/log-story.svg');}
+[data-log-icon="Loot"]{--log-icon:url('mobile-assets/log-loot.svg');}
+[data-log-icon="Unlocks"]{--log-icon:url('mobile-assets/log-unlocks.svg');}
+[data-log-icon="Combat"]{--log-icon:url('mobile-assets/log-combat.svg');}
+#mobile-log-panel #log{display:flex;flex-direction:column;flex:1;min-height:0;height:auto!important;max-height:none!important;width:100%;overflow:auto;overflow-anchor:none;overscroll-behavior:contain;padding:0 5px 0 0;background:transparent;border:0;font-size:.875rem!important;scrollbar-color:var(--accent) var(--surface);scrollbar-width:thin;}
+#mobile-log-panel .message{flex-shrink:0;padding:4px 0!important;margin:0!important;line-height:1.4;border-bottom:1px solid var(--line);overflow-wrap:anywhere;}
+.mobile-message-time{display:block;color:var(--muted);font:500 .75rem var(--font-data);}
+#mobile-log-panel #log::-webkit-scrollbar{width:6px;}
+#mobile-log-panel #log::-webkit-scrollbar-track{background:var(--surface);}
+#mobile-log-panel #log::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px;}
+
+/* Actual press/operation feedback never invokes a game action. */
+.mobile-pressed{filter:brightness(.88)!important;outline:2px solid var(--accent)!important;outline-offset:-2px;transform:translateY(1px);}
+button:disabled,[aria-disabled="true"]{opacity:.6;cursor:default;}
+button[aria-busy="true"]{opacity:1;cursor:progress;background:var(--selected)!important;color:var(--ink)!important;}
+button[aria-busy="true"]::after{content:' …';font-weight:700;}
+@media(prefers-reduced-motion:reduce){.mobile-pressed{transform:none;}}
+
+#mobile-nav{grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);}
+#mobile-nav button[hidden]{display:none!important;}
+@keyframes mobile-nav-reveal{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:no-preference){#mobile-nav .mobile-nav-revealed{animation:mobile-nav-reveal 220ms ease-out;}}
+
+/* Approved message configuration: original filter state, native full-row checkboxes. */
+#tooltipDiv:where([data-mobile-has~="mobile-message-config"]):is([id]){font-size:1rem!important;}
+.mobile-message-config{display:flex;flex-direction:column;gap:16px;}
+.mobile-message-group{min-width:0;}
+.mobile-message-group .messageConfigTitle{display:block;font:600 1rem var(--font-data)!important;padding-bottom:5px;margin:0;border-bottom:1px solid var(--line);}
+.mobile-message-group .messageConfigContainer{display:block;width:100%;}
+.mobile-message-group label{display:flex!important;align-items:center;gap:12px;min-height:48px;width:100%;font:400 .95rem var(--font-body);margin:0;border-bottom:1px solid var(--line);cursor:pointer;}
+.mobile-message-group .messageConfigCheckbox{flex:none;appearance:auto!important;width:24px;height:24px;margin:0;accent-color:var(--accent);}
+.mobile-message-group .messageConfigCheckbox:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.mobile-message-group .messageNameHolder{font-size:.95rem!important;line-height:1.4;min-width:0;overflow-wrap:anywhere;}
+#messageConfigMessage{height:auto!important;font-size:.875rem!important;margin:0 0 16px;line-height:1.45;}
+.mobile-message-actions{display:flex;gap:8px;margin-top:16px;}
+.mobile-message-actions button{flex:1;min-width:0;min-height:48px;white-space:normal;}
+
+/* Keep the legal reader's close action opaque above long scrolling text. */
+#tooltipDiv:where([data-mobile-has~="mobile-imprint-title"],[data-mobile-has~="mobile-privacy-title"]):is(#tooltipDiv) .mobile-tooltip-close{width:100%;background:var(--surface)!important;}
+#tipText:where([data-mobile-has~="mobile-imprint-title"],[data-mobile-has~="mobile-privacy-title"]):is(*,#mobile-has) h2{font-weight:600!important;margin:12px 0 6px;}
+
+/* V-202: Bone Trader in play (mobile-bone-hints.js). A small bone tag hangs under the right end of the header and
+   scrolls with it (its target grows downward only, clear of More); the note floats under the header for a few seconds,
+   above pages and overlays (z 10/11) but below info windows (#tooltipDiv, z 20). Diorama restyles both. */
+#mobile-header { position:relative; }
+#mobile-bone-tag {
+  position:absolute; top:calc(100% + 2px); right:12px; z-index:6; display:inline-flex; align-items:center; gap:4px;
+  height:28px; min-width:44px; min-height:0; padding:0 9px 0 6px; border:1px solid var(--line); border-radius:999px;
+  background:var(--surface); color:var(--ink); font:700 .8rem/1 var(--font-data); box-shadow:0 1px 3px #0003;
+}
+#mobile-bone-tag::after { content:""; position:absolute; inset:0 -2px -16px; }
+#mobile-bone-tag[hidden], #mobile-bone-note[hidden] { display:none!important; }
+/* Bone Jar on the tag: a thin fill line at its lower edge; a soft amber glow while the jar is full. */
+.mobile-bone-tag-jar { position:absolute; left:10px; right:10px; bottom:3px; height:3px; border-radius:2px; pointer-events:none;
+  background:linear-gradient(90deg,#e0a640 var(--jar,0%),#00000033 var(--jar,0%)); }
+.mobile-bone-tag-jar[hidden] { display:none; }
+#mobile-bone-tag[data-jar-full] { box-shadow:0 0 0 2px #e0a640, 0 0 10px #e0a640aa!important; }
+.mobile-bone-tag-icon, .mobile-bone-note-icon { flex:none; width:20px; height:18px; background:url("mobile-assets/diorama/R09-Bones.webp") center/contain no-repeat; }
+#mobile-bone-note {
+  position:fixed; z-index:15; left:10px; right:10px; max-width:460px; margin-inline:auto;
+  top:calc(var(--mobile-banner-height,0px) + var(--mobile-header-height,47px) + 6px);
+  display:grid; grid-template-columns:auto minmax(0,1fr) auto auto; align-items:center; gap:8px; padding:8px 8px 8px 10px;
+  background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; box-shadow:0 4px 12px #0004;
+}
+#mobile-bone-note .mobile-bone-note-icon { width:34px; height:28px; }
+.mobile-bone-note-text strong { display:block; font:800 .84rem/1.2 var(--font-body); }
+.mobile-bone-note-text span { display:block; font:600 .74rem/1.25 var(--font-body); color:var(--muted); }
+#mobile-bone-note .mobile-bone-note-open { min-height:44px; padding:0 10px; font:700 .84rem/1 var(--font-body); white-space:nowrap; }
+#mobile-bone-note .mobile-bone-note-close {
+  position:relative; width:26px; height:26px; min-width:0; min-height:0; padding:0;
+  border-radius:50%; border:0; background:var(--ink); color:var(--paper); font:700 16px/26px system-ui; text-align:center;
+}
+#mobile-bone-note .mobile-bone-note-close::after { content:""; position:absolute; inset:-9px; }
+/* Opened from the Time Portal review (V-202), the Bone Trader overlay must lie above the portal overlay (both z 10;
+   the portal comes later in the document). Info windows (#tooltipDiv, z 20) stay above both. */
+#boneWrapper { z-index:11!important; }

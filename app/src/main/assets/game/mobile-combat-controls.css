@@ -1,0 +1,32 @@
+/* Approved B: four primary actions; all secondary original actions in the sheet. */
+#battleBtnsColumn.mobile-combat-primary{display:flex!important;flex-wrap:nowrap;gap:4px;margin:4px 0;}
+#battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer{flex:1 1 0;min-width:0;}
+#battleBtnsColumn.mobile-combat-primary [hidden]{display:none!important;}
+#battleBtnsColumn.mobile-combat-primary .fightBtn,#mobile-combat-maps,#mobile-combat-more{min-height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;gap:3px;padding:4px!important;}
+#battleBtnsColumn.mobile-combat-primary .fightBtn::before{width:18px;height:18px;flex-shrink:0;transform:none;}
+#battleBtnsColumn.mobile-combat-primary [data-short-label]::after{content:attr(data-short-label);position:static;font:600 .75rem/1.3 var(--font-body);background:transparent;color:inherit;width:auto;height:auto;border-radius:0;white-space:normal;}
+#battleBtnsColumn.mobile-combat-primary #pauseFight::after{background:transparent;color:inherit;}
+/* V-273: Repeat is a pictogram only ("Wiederholen an/aus" overflowed its plate at 360 px with 130 % text); its text stays the
+   accessible name. Off keeps the outlined look of mobile-compact.css and adds a red slash, so on and off do not rest on the fill alone. */
+#battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer:has(>#repeatBtn){flex:0 0 56px;}
+#battleBtnsColumn.mobile-combat-primary #repeatBtn::after{content:none;display:none;}
+#battleBtnsColumn.mobile-combat-primary #repeatBtn::before{width:22px;height:22px;}
+#battleBtnsColumn.mobile-combat-primary #repeatBtn[aria-pressed="false"]{background-image:linear-gradient(to top right,transparent calc(50% - 1.5px),#8e1a0a calc(50% - 1.5px),#8e1a0a calc(50% + 1.5px),transparent calc(50% + 1.5px))!important;}
+#battleBtnsColumn.mobile-combat-primary #repeatBtn[aria-pressed="false"]::before{opacity:.55;}
+#mobile-combat-maps{flex:1 1 0;font-size:.8rem;}
+#mobile-combat-more{flex:0 0 48px;font-size:1.4rem;}
+#mobile-combat-map-head{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;}
+#mobile-combat-map-head #battleSideTitle{flex:1;min-width:0;}
+#mobile-combat-map-head #mobile-return-world{width:auto;min-height:48px;padding:4px 8px;flex:0 0 auto;border:0;background:transparent;}
+/* The sheet sits on the measured navigation instead of a fixed 70px and keeps its own scroll (V-146). */
+#mobile-combat-tools{position:fixed;inset:auto 8px calc(var(--mobile-nav-height,60px) + 10px);margin:0 auto;width:calc(100% - 16px);max-width:600px;max-height:75dvh;overflow:auto;border:1px solid var(--line);border-radius:12px 12px 5px 5px;background:var(--surface);color:var(--ink);padding:8px 12px 14px;overscroll-behavior:contain;}
+#mobile-combat-tools::backdrop{background:#263f3966;}
+#mobile-combat-tools header{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+#mobile-combat-tools h2{font:600 1.1rem var(--font-data);margin:8px 0;}
+#mobile-combat-tools header button{width:48px;min-height:48px;border:0;font-size:1.6rem;}
+#mobile-combat-tools header+div>button,#mobile-combat-tools .battleSideBtnContainer{width:100%;min-width:0;border:0;border-top:1px solid var(--line);border-radius:0;margin:0;}
+#mobile-combat-tools header+div>button,#mobile-combat-tools .fightBtn{display:flex;align-items:center;gap:10px;text-align:left;white-space:normal;min-height:48px;width:100%;padding:10px 8px;font-size:.875rem!important;line-height:1.4!important;border:0!important;border-radius:0!important;color:var(--ink)!important;background:transparent!important;}
+#mobile-combat-tools .fightBtn::before{flex:0 0 22px;}
+#mobile-combat-tools .fightBtn{justify-content:flex-start!important;}
+#mobile-combat-tools #boneBtnText{font-size:.875rem!important;line-height:1.4!important;}
+#mobile-combat-tools .fightBtn[style*="display: none"]{display:none!important;}

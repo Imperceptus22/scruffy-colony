@@ -1,0 +1,23 @@
+{
+  "id": "S11",
+  "key": "alchemy",
+  "name": "Alchemie",
+  "group": "scenes",
+  "file": "assets/S11-alchemy.png",
+  "approved": false,
+  "source": "special/03-late-systems.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/late-systems.prompt.txt",
+  "sha256": "26bc794018ab0ca0a4fdc801f9732473af24a46240b7043e39c99d3884a933ae",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

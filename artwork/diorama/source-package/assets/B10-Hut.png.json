@@ -1,0 +1,23 @@
+{
+  "id": "B10",
+  "key": "Hut",
+  "name": "Hut",
+  "group": "buildings",
+  "file": "assets/B10-Hut.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 410,
+    "top": 645,
+    "width": 365,
+    "height": 379
+  },
+  "nativeSize": {
+    "width": 365,
+    "height": 379
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "e10aefc3ee13a4d666927038e84211bc33d95247e2bba750f0e30be71dba14a5",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

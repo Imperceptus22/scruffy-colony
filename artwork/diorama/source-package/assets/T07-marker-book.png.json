@@ -1,0 +1,23 @@
+{
+  "id": "T07",
+  "key": "marker-book",
+  "name": "Buch",
+  "group": "terrain",
+  "file": "assets/T07-marker-book.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 682,
+    "width": 512,
+    "height": 342
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 342
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "d040332e0beac45e18f1256d9011b6a3b8c6f2412d86da6539ea63e40ad1079c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

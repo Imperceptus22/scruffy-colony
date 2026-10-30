@@ -1,0 +1,23 @@
+{
+  "id": "S10",
+  "key": "spire-assault",
+  "name": "Spire Assault",
+  "group": "scenes",
+  "file": "assets/S10-spire-assault.png",
+  "approved": false,
+  "source": "special/03-late-systems.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/late-systems.prompt.txt",
+  "sha256": "0d7e23fb21a2bd63b484e457c631fddfa2c948947506e61fca1ffd9303d901c2",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

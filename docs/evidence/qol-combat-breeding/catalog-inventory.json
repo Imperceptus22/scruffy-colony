@@ -1,0 +1,1565 @@
+{
+  "originalVersion": "5.10.1",
+  "entryCount": 672,
+  "categories": {
+    "Buildings & housing": 21,
+    "Equipment & items": 31,
+    "Jobs": 12,
+    "Research & upgrades": 60,
+    "Perks": 41,
+    "Challenges": 60,
+    "Masteries": 60,
+    "Automation": 15,
+    "Generator": 10,
+    "Mutators": 42,
+    "Spire Assault": 82,
+    "Companions": 51,
+    "Maps & discoveries": 29,
+    "Game systems & progression": 45,
+    "Player Spire": 49,
+    "Heirlooms": 55,
+    "Nature": 9
+  },
+  "sourceSha256": {
+    "config.js": "8c8f0266b1d04e94e67e42960bbfbaa7b1341fe9982dccc65464ae4a1a805b63",
+    "objects.js": "404cc115f134d0caed609df2d796df327492baca6d46e50e68ae308a0a02482d",
+    "main.js": "8dc80431b0b0c3e1ab80d2d5bc648fa3be22f95616ba6b6d0596524aef5b9cf1",
+    "playerSpire.js": "eff616488fdd43f7771ed2b20f4001d4d0e2838f901258731e63bfe0b0df053b"
+  },
+  "inventories": {
+    "buildings": [
+      "Trap",
+      "Barn",
+      "Shed",
+      "Forge",
+      "Hut",
+      "House",
+      "Mansion",
+      "Hotel",
+      "Resort",
+      "Gateway",
+      "Wormhole",
+      "Collector",
+      "Warpstation",
+      "Hub",
+      "Gym",
+      "Smithy",
+      "Tribute",
+      "Nursery",
+      "Microchip",
+      "Antenna",
+      "Laboratory"
+    ],
+    "equipment": [
+      "Shield",
+      "Dagger",
+      "Boots",
+      "Mace",
+      "Helmet",
+      "Polearm",
+      "Pants",
+      "Battleaxe",
+      "Shoulderguards",
+      "Greatsword",
+      "Breastplate",
+      "Arbalest",
+      "Gambeson"
+    ],
+    "jobs": [
+      "Farmer",
+      "Lumberjack",
+      "Miner",
+      "Scientist",
+      "Trainer",
+      "Explorer",
+      "Dragimp",
+      "Geneticist",
+      "Magmamancer",
+      "Amalgamator",
+      "Meteorologist",
+      "Worshipper"
+    ],
+    "upgrades": [
+      "attackRelic",
+      "enemyAttackRelic",
+      "radonRelic",
+      "scienceRelic",
+      "breedRelic",
+      "Coordination",
+      "Gigastation",
+      "Battle",
+      "Bloodlust",
+      "Prismatic",
+      "Blockmaster",
+      "Trapstorm",
+      "Shieldblock",
+      "Bounty",
+      "Egg",
+      "Prismalicious",
+      "Anger",
+      "Rage",
+      "Gymystic",
+      "SuperShriek",
+      "Formations",
+      "Dominance",
+      "Barrier",
+      "Miners",
+      "Scientists",
+      "Trainers",
+      "Explorers",
+      "Magmamancers",
+      "UberHut",
+      "UberHouse",
+      "UberMansion",
+      "UberHotel",
+      "UberResort",
+      "Supershield",
+      "Dagadder",
+      "Bootboost",
+      "Megamace",
+      "Hellishmet",
+      "Polierarm",
+      "Pantastic",
+      "Axeidic",
+      "Smoldershoulder",
+      "Greatersword",
+      "Bestplate",
+      "Harmbalest",
+      "GambesOP",
+      "Potency",
+      "TrainTacular",
+      "Efficiency",
+      "Speedminer",
+      "Speedlumber",
+      "Speedfarming",
+      "Speedscience",
+      "Speedexplorer",
+      "Megaminer",
+      "Megalumber",
+      "Megafarming",
+      "Megascience"
+    ],
+    "portal": [
+      "Looting_II",
+      "Carpentry_II",
+      "Motivation_II",
+      "Power_II",
+      "Toughness_II",
+      "Capable",
+      "Cunning",
+      "Curious",
+      "Classy",
+      "Overkill",
+      "Resourceful",
+      "Coordinated",
+      "Siphonology",
+      "Anticipation",
+      "Resilience",
+      "Meditation",
+      "Relentlessness",
+      "Masterfulness",
+      "Greed",
+      "Tenacity",
+      "Criticality",
+      "Equality",
+      "Carpentry",
+      "Artisanistry",
+      "Range",
+      "Agility",
+      "Bait",
+      "Trumps",
+      "Pheromones",
+      "Packrat",
+      "Motivation",
+      "Power",
+      "Toughness",
+      "Looting",
+      "Prismal",
+      "Hunger",
+      "Championism",
+      "Frenzy",
+      "Observation",
+      "Smithology",
+      "Expansion"
+    ],
+    "challenges": [
+      "Daily",
+      "Discipline",
+      "Metal",
+      "Size",
+      "Balance",
+      "Scientist",
+      "Meditate",
+      "Decay",
+      "Trimp",
+      "Trapper",
+      "Electricity",
+      "Frugal",
+      "Life",
+      "Mapocalypse",
+      "Coordinate",
+      "Crushed",
+      "Slow",
+      "Nom",
+      "Mapology",
+      "Toxicity",
+      "Devastation",
+      "Watch",
+      "Lead",
+      "Corrupted",
+      "Domination",
+      "Obliterated",
+      "Eradicated",
+      "Frigid",
+      "Experience",
+      "Enlightened",
+      "Paralysis",
+      "Nometal",
+      "Topology",
+      "Waze",
+      "Toxad",
+      "Unlucky",
+      "Downsize",
+      "Transmute",
+      "Unbalance",
+      "Bublé",
+      "Duel",
+      "Melt",
+      "Trappapalooza",
+      "Quagmire",
+      "Wither",
+      "Revenge",
+      "Quest",
+      "Archaeology",
+      "Mayhem",
+      "Storm",
+      "Insanity",
+      "Berserk",
+      "Exterminate",
+      "Nurture",
+      "Pandemonium",
+      "Alchemy",
+      "Hypothermia",
+      "Glass",
+      "Smithless",
+      "Desolation"
+    ],
+    "talents": [
+      "portal",
+      "bionic",
+      "turkimp",
+      "housing",
+      "bounty",
+      "explorers",
+      "voidPower",
+      "pierce",
+      "heirloom",
+      "herbalist",
+      "headstart",
+      "scry",
+      "voidPower2",
+      "mapLoot",
+      "skeletimp",
+      "mapHealth",
+      "headstart2",
+      "daily",
+      "hyperspeed",
+      "blacksmith",
+      "turkimp2",
+      "magimp",
+      "headstart3",
+      "mapBattery",
+      "hyperspeed2",
+      "blacksmith2",
+      "skeletimp2",
+      "quickGen",
+      "magmaFlow",
+      "explorers2",
+      "voidPower3",
+      "blacksmith3",
+      "heirloom2",
+      "liquification",
+      "maz",
+      "scry2",
+      "magmamancer",
+      "mapLoot2",
+      "nature",
+      "kerfluffle",
+      "stillRowing",
+      "patience",
+      "voidSpecial",
+      "healthStrength",
+      "nature2",
+      "liquification2",
+      "stillRowing2",
+      "amalg",
+      "voidSpecial2",
+      "bionic2",
+      "fluffyExp",
+      "fluffyAbility",
+      "overkill",
+      "crit",
+      "voidMastery",
+      "healthStrength2",
+      "mesmer",
+      "liquification3",
+      "stillMagmamancer",
+      "angelic"
+    ],
+    "imports": [
+      "Goblimp",
+      "Feyimp",
+      "Flutimp",
+      "Tauntimp",
+      "Venimp",
+      "Whipimp",
+      "Jestimp",
+      "Titimp",
+      "Chronoimp",
+      "Magnimp"
+    ],
+    "permaBoneBonuses": [
+      "voidMaps",
+      "boosts",
+      "exotic",
+      "multitasking"
+    ],
+    "bwRewards": [
+      "Foremany",
+      "AutoJobs",
+      "AutoStructure",
+      "Geneticistassist",
+      "DoubleBuild",
+      "DecaBuild"
+    ],
+    "generatorUpgrades": [
+      "Efficiency",
+      "Capacity",
+      "Supply",
+      "Overclocker"
+    ],
+    "permanentGeneratorUpgrades": [
+      "Hybridization",
+      "Storage",
+      "Shielding",
+      "Slowburn",
+      "Supervision",
+      "Simulacrum"
+    ],
+    "mutators": [
+      "Scruffy",
+      "NovaScruff",
+      "Worship",
+      "Nullifium",
+      "Heirlots",
+      "Heirmazing",
+      "Slowva",
+      "Poppin",
+      "Worship2",
+      "Health",
+      "Trimps",
+      "Tauntimps",
+      "AvgExotic",
+      "Attack",
+      "Radon",
+      "AllRadon",
+      "Unrage",
+      "CritChance",
+      "GeneHealth",
+      "GeneAttack",
+      "Ragiffium",
+      "Overkill1",
+      "Overkill2",
+      "Overkill3",
+      "Decompress",
+      "MaxOverkill",
+      "Liq1",
+      "Smashing",
+      "Liq2",
+      "Smashing2",
+      "Liq3",
+      "MaZ",
+      "Loot",
+      "RandLoot",
+      "Dust",
+      "RandLoot2",
+      "Dust2",
+      "Runed",
+      "Brains",
+      "MadMap",
+      "Randimp1",
+      "Randimp2"
+    ],
+    "assault-items": [
+      "Menacing_Mask",
+      "Sword",
+      "Armor",
+      "Rusty_Dagger",
+      "Fists_of_Goo",
+      "Battery_Stick",
+      "Pants",
+      "Chemistry_Set",
+      "Comfy_Boots",
+      "Lifegiving_Gem",
+      "Mood_Bracelet",
+      "Hungering_Mold",
+      "Recycler",
+      "Shining_Armor",
+      "Shock_and_Awl",
+      "Tame_Snimp",
+      "Lich_Wraps",
+      "Wired_Wristguards",
+      "Sword_and_Board",
+      "Bilious_Boots",
+      "Bloodstained_Gloves",
+      "Unlucky_Coin",
+      "Eelimp_in_a_Bottle",
+      "Big_Cleaver",
+      "The_Globulator",
+      "Metal_Suit",
+      "Nozzled_Goggles",
+      "Sundering_Scythe",
+      "Plague_Bringer",
+      "Very_Large_Slime",
+      "Grounded_Crown",
+      "Fearsome_Piercer",
+      "Bag_of_Nails",
+      "Blessed_Protector",
+      "The_Doomspring",
+      "Snimp__Fanged_Blade",
+      "Wrath_Crafted_Hatchet",
+      "Goo_Golem",
+      "Omni_Enhancer",
+      "Box_of_Spores",
+      "Haunted_Harpoon",
+      "Stormbringer",
+      "Bad_Medkit",
+      "Putrid_Pouch",
+      "Raincoat",
+      "Labcoat",
+      "Aegis",
+      "Sacrificial_Shank",
+      "Basket_of_Souls",
+      "Monkimp_Paw",
+      "Spiked_Gloves",
+      "Nullifium_Armor",
+      "Doppelganger_Diadem",
+      "Doppelganger_Signet",
+      "Myco_Mitts",
+      "Gaseous_Greataxe",
+      "The_Fibrillator"
+    ],
+    "assault-oneTimers": [
+      "Gathermate",
+      "Smithriffic",
+      "Championism",
+      "Master_of_Arms",
+      "Artisan",
+      "Battlescruff",
+      "Collectology",
+      "Dusty_Tome",
+      "Whirlwind_of_Arms",
+      "Nullicious",
+      "Suprism",
+      "The_Ring",
+      "Mass_Hysteria",
+      "Burstier",
+      "Expanding_Tauntimp",
+      "More_Expansion"
+    ],
+    "assault-bonuses": [
+      "Extra_Limbs",
+      "Radon",
+      "Stats",
+      "Scaffolding"
+    ],
+    "assault-ringStats": [
+      "attack",
+      "health",
+      "defense",
+      "lifesteal",
+      "dustMult"
+    ],
+    "rewards": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "prestigeRewards": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "rewardsU2": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "uniqueMaps": [
+      "Prismatic Palace",
+      "Melting Point",
+      "Trimple Of Doom",
+      "Atlantrimp",
+      "Tricky Paradise",
+      "The Block",
+      "The Wall",
+      "Big Wall",
+      "The Prison",
+      "Bionic Wonderland",
+      "Imploding Star",
+      "Dimension of Anger",
+      "Dimension of Rage"
+    ],
+    "systems": [
+      "maps",
+      "portal",
+      "heirlooms",
+      "autoUpgrades",
+      "autoStorage",
+      "improvedAutoStorage",
+      "mapAtZone",
+      "autoEquip",
+      "boneTrader",
+      "breeding",
+      "challenge2",
+      "challenge3",
+      "masteries",
+      "scrying",
+      "spire",
+      "generator",
+      "nature",
+      "universe2",
+      "assault",
+      "mutators",
+      "u2spire",
+      "roboTrimp",
+      "noCoords",
+      "autoPrestige",
+      "foremen",
+      "autoGolden",
+      "autoTraps",
+      "formations",
+      "voidMaps",
+      "fluffy",
+      "scruffy",
+      "frozenCastle",
+      "blackBog",
+      "farmlands",
+      "alchemy",
+      "obsidian",
+      "advancedMaps",
+      "perfectMaps",
+      "extraMapLevels",
+      "gardens"
+    ],
+    "spireTraps": [
+      "Fire",
+      "Frost",
+      "Poison",
+      "Lightning",
+      "Strength",
+      "Condenser",
+      "Knowledge"
+    ],
+    "spireTrapUpgrades": [
+      "Fire:2",
+      "Fire:3",
+      "Fire:4",
+      "Fire:5",
+      "Fire:6",
+      "Fire:7",
+      "Fire:8",
+      "Fire:9",
+      "Fire:10",
+      "Frost:2",
+      "Frost:3",
+      "Frost:4",
+      "Frost:5",
+      "Frost:6",
+      "Frost:7",
+      "Frost:8",
+      "Poison:2",
+      "Poison:3",
+      "Poison:4",
+      "Poison:5",
+      "Poison:6",
+      "Poison:7",
+      "Poison:8",
+      "Poison:9",
+      "Lightning:2",
+      "Lightning:3",
+      "Lightning:4",
+      "Lightning:5",
+      "Lightning:6",
+      "Lightning:7",
+      "Strength:2",
+      "Strength:3",
+      "Strength:4",
+      "Strength:5",
+      "Condenser:2",
+      "Condenser:3",
+      "Condenser:4",
+      "Condenser:5",
+      "Knowledge:2",
+      "Knowledge:3",
+      "Knowledge:4",
+      "Knowledge:5"
+    ],
+    "goldenUpgrades": [
+      "Helium",
+      "Battle",
+      "Void"
+    ],
+    "mapSpecials": [
+      "fa",
+      "lc",
+      "ssc",
+      "swc",
+      "smc",
+      "src",
+      "p",
+      "hc",
+      "lsc",
+      "lwc",
+      "lmc",
+      "lrc"
+    ],
+    "potions": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "heirloomMods:Shield": [
+      "playerEfficiency",
+      "trainerEfficiency",
+      "storageSize",
+      "breedSpeed",
+      "trimpHealth",
+      "trimpAttack",
+      "trimpBlock",
+      "critDamage",
+      "critChance",
+      "voidMaps",
+      "plaguebringer",
+      "prismatic",
+      "gammaBurst",
+      "inequality",
+      "doubleCrit",
+      "empty"
+    ],
+    "heirloomMods:Staff": [
+      "metalDrop",
+      "foodDrop",
+      "woodDrop",
+      "gemsDrop",
+      "fragmentsDrop",
+      "FarmerSpeed",
+      "LumberjackSpeed",
+      "MinerSpeed",
+      "DragimpSpeed",
+      "ExplorerSpeed",
+      "ScientistSpeed",
+      "allMetal",
+      "allFood",
+      "allWood",
+      "FluffyExp",
+      "ParityPower",
+      "SeedDrop",
+      "empty"
+    ],
+    "heirloomMods:Core": [
+      "fireTrap",
+      "poisonTrap",
+      "lightningTrap",
+      "runestones",
+      "strengthEffect",
+      "condenserEffect"
+    ],
+    "heirloomTypes": [
+      "Shield",
+      "Staff",
+      "Core"
+    ],
+    "heirloomRarities": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resources": [
+      "food",
+      "wood",
+      "metal",
+      "science",
+      "gems",
+      "fragments"
+    ],
+    "nature": [
+      "Poison:level",
+      "Poison:transfer",
+      "Poison:enlighten",
+      "Wind:level",
+      "Wind:transfer",
+      "Wind:enlighten",
+      "Ice:level",
+      "Ice:transfer",
+      "Ice:enlighten"
+    ],
+    "u2SpireRewards": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "worldUnlocks": [
+      "Shield",
+      "Boots",
+      "Dagger",
+      "Mace",
+      "Helmet",
+      "Polearm",
+      "Pants",
+      "Battleaxe",
+      "Shoulderguards",
+      "Greatsword",
+      "Breastplate",
+      "Bloodlust",
+      "Efficiency",
+      "Gym",
+      "Prism1",
+      "TrainTacular",
+      "Smithy",
+      "Warpstation",
+      "Gymystic",
+      "Gymystic2",
+      "Meteorologists",
+      "Dominance",
+      "Barrier",
+      "Potency",
+      "Miner",
+      "Trainer",
+      "Scientist",
+      "Explorer",
+      "Speedscience",
+      "Megascience",
+      "Gigastation",
+      "Gigastation2",
+      "Gigastation3",
+      "Gigastation4",
+      "Gigastation5",
+      "Magmamancer",
+      "Speedfarming",
+      "Megafarming",
+      "Speedlumber",
+      "Megalumber",
+      "Speedminer",
+      "Megaminer",
+      "Geneticist",
+      "Foreman",
+      "Anger",
+      "Rage",
+      "PrismaticPalace",
+      "MeltingPoint",
+      "Coordination",
+      "Blockmaster",
+      "Egg",
+      "Doom",
+      "Atlantrimp",
+      "Worshipper",
+      "FirstMap",
+      "easterEgg",
+      "Map",
+      "fiveTrimpMax",
+      "fruit",
+      "groundLumber",
+      "freeMetals",
+      "spireMetals"
+    ],
+    "mapUnlocks": [
+      "roboTrimp",
+      "Geneticistassist",
+      "AutoStorage",
+      "ImprovedAutoStorage",
+      "MapAtZone",
+      "NoCoords",
+      "AutoEquip",
+      "AncientTreasure",
+      "SmithFree",
+      "Heirloom",
+      "Keys",
+      "Relentlessness",
+      "Portal",
+      "Prismalicious",
+      "Shieldblock",
+      "Bounty",
+      "Supershield",
+      "Dagadder",
+      "Bootboost",
+      "Megamace",
+      "Hellishmet",
+      "Polierarm",
+      "Pantastic",
+      "Axeidic",
+      "Smoldershoulder",
+      "Greatersword",
+      "Bestplate",
+      "Harmbalest",
+      "GambesOP",
+      "Speedexplorer",
+      "TheBlock",
+      "TheWall",
+      "BigWall",
+      "ThePrison",
+      "BionicWonderland",
+      "ImplodingStar",
+      "Mansion",
+      "Hotel",
+      "UberHut",
+      "UberHouse",
+      "UberMansion",
+      "UberHotel",
+      "UberResort",
+      "Resort",
+      "Gateway",
+      "Wormhole",
+      "Collector",
+      "Trapstorm",
+      "Nursery",
+      "gems",
+      "Gems",
+      "Any",
+      "Metal",
+      "Food",
+      "Wood"
+    ],
+    "triggers": [
+      "Trap",
+      "wood",
+      "Barn",
+      "Shed",
+      "Forge",
+      "jobs",
+      "Lumberjack",
+      "upgrades",
+      "Battle",
+      "Hut",
+      "House",
+      "breeding"
+    ],
+    "mapLocations": [
+      "Sea",
+      "Mountain",
+      "Forest",
+      "Depths",
+      "Plentiful",
+      "Farmlands",
+      "Hell",
+      "Prismatic",
+      "Block",
+      "Wall",
+      "Melting",
+      "Doom",
+      "Atlantis",
+      "Prison",
+      "Bionic",
+      "Void",
+      "Frozen",
+      "Star",
+      "Darkness",
+      "All"
+    ]
+  },
+  "sourceCoverage": {
+    "worldUnlocks.Shield": {
+      "entries": [
+        "equipment:Shield"
+      ]
+    },
+    "worldUnlocks.Boots": {
+      "entries": [
+        "equipment:Boots"
+      ]
+    },
+    "worldUnlocks.Dagger": {
+      "entries": [
+        "equipment:Dagger"
+      ]
+    },
+    "worldUnlocks.Mace": {
+      "entries": [
+        "equipment:Mace"
+      ]
+    },
+    "worldUnlocks.Helmet": {
+      "entries": [
+        "equipment:Helmet"
+      ]
+    },
+    "worldUnlocks.Polearm": {
+      "entries": [
+        "equipment:Polearm"
+      ]
+    },
+    "worldUnlocks.Pants": {
+      "entries": [
+        "equipment:Pants"
+      ]
+    },
+    "worldUnlocks.Battleaxe": {
+      "entries": [
+        "equipment:Battleaxe"
+      ]
+    },
+    "worldUnlocks.Shoulderguards": {
+      "entries": [
+        "equipment:Shoulderguards"
+      ]
+    },
+    "worldUnlocks.Greatsword": {
+      "entries": [
+        "equipment:Greatsword"
+      ]
+    },
+    "worldUnlocks.Breastplate": {
+      "entries": [
+        "equipment:Breastplate"
+      ]
+    },
+    "worldUnlocks.Bloodlust": {
+      "entries": [
+        "upgrades:Bloodlust"
+      ]
+    },
+    "worldUnlocks.Efficiency": {
+      "entries": [
+        "upgrades:Efficiency"
+      ]
+    },
+    "worldUnlocks.Gym": {
+      "entries": [
+        "buildings:Gym"
+      ]
+    },
+    "worldUnlocks.Prism1": {
+      "entries": [
+        "upgrades:Prismatic"
+      ]
+    },
+    "worldUnlocks.TrainTacular": {
+      "entries": [
+        "upgrades:TrainTacular"
+      ]
+    },
+    "worldUnlocks.Smithy": {
+      "entries": [
+        "buildings:Smithy"
+      ]
+    },
+    "worldUnlocks.Warpstation": {
+      "entries": [
+        "buildings:Warpstation"
+      ]
+    },
+    "worldUnlocks.Gymystic": {
+      "entries": [
+        "upgrades:Gymystic"
+      ]
+    },
+    "worldUnlocks.Gymystic2": {
+      "entries": [
+        "upgrades:Gymystic"
+      ]
+    },
+    "worldUnlocks.Meteorologists": {
+      "entries": [
+        "jobs:Meteorologist"
+      ]
+    },
+    "worldUnlocks.Dominance": {
+      "entries": [
+        "upgrades:Dominance"
+      ]
+    },
+    "worldUnlocks.Barrier": {
+      "entries": [
+        "upgrades:Barrier"
+      ]
+    },
+    "worldUnlocks.Potency": {
+      "entries": [
+        "upgrades:Potency"
+      ]
+    },
+    "worldUnlocks.Miner": {
+      "entries": [
+        "upgrades:Miners"
+      ]
+    },
+    "worldUnlocks.Trainer": {
+      "entries": [
+        "upgrades:Trainers"
+      ]
+    },
+    "worldUnlocks.Scientist": {
+      "entries": [
+        "upgrades:Scientists"
+      ]
+    },
+    "worldUnlocks.Explorer": {
+      "entries": [
+        "upgrades:Explorers"
+      ]
+    },
+    "worldUnlocks.Speedscience": {
+      "entries": [
+        "upgrades:Speedscience"
+      ]
+    },
+    "worldUnlocks.Megascience": {
+      "entries": [
+        "upgrades:Megascience"
+      ]
+    },
+    "worldUnlocks.Gigastation": {
+      "entries": [
+        "upgrades:Gigastation"
+      ]
+    },
+    "worldUnlocks.Gigastation2": {
+      "entries": [
+        "upgrades:Gigastation"
+      ]
+    },
+    "worldUnlocks.Gigastation3": {
+      "entries": [
+        "upgrades:Gigastation"
+      ]
+    },
+    "worldUnlocks.Gigastation4": {
+      "entries": [
+        "upgrades:Gigastation"
+      ]
+    },
+    "worldUnlocks.Gigastation5": {
+      "entries": [
+        "upgrades:Gigastation"
+      ]
+    },
+    "worldUnlocks.Magmamancer": {
+      "entries": [
+        "upgrades:Magmamancers"
+      ]
+    },
+    "worldUnlocks.Speedfarming": {
+      "entries": [
+        "upgrades:Speedfarming"
+      ]
+    },
+    "worldUnlocks.Megafarming": {
+      "entries": [
+        "upgrades:Megafarming"
+      ]
+    },
+    "worldUnlocks.Speedlumber": {
+      "entries": [
+        "upgrades:Speedlumber"
+      ]
+    },
+    "worldUnlocks.Megalumber": {
+      "entries": [
+        "upgrades:Megalumber"
+      ]
+    },
+    "worldUnlocks.Speedminer": {
+      "entries": [
+        "upgrades:Speedminer"
+      ]
+    },
+    "worldUnlocks.Megaminer": {
+      "entries": [
+        "upgrades:Megaminer"
+      ]
+    },
+    "worldUnlocks.Geneticist": {
+      "entries": [
+        "jobs:Geneticist"
+      ]
+    },
+    "worldUnlocks.Foreman": {
+      "entries": [
+        "systems:foremen"
+      ]
+    },
+    "worldUnlocks.Anger": {
+      "entries": [
+        "upgrades:Anger"
+      ]
+    },
+    "worldUnlocks.Rage": {
+      "entries": [
+        "upgrades:Rage"
+      ]
+    },
+    "worldUnlocks.PrismaticPalace": {
+      "entries": [
+        "uniqueMaps:Prismatic Palace"
+      ]
+    },
+    "worldUnlocks.MeltingPoint": {
+      "entries": [
+        "uniqueMaps:Melting Point"
+      ]
+    },
+    "worldUnlocks.Coordination": {
+      "entries": [
+        "upgrades:Coordination"
+      ]
+    },
+    "worldUnlocks.Blockmaster": {
+      "entries": [
+        "upgrades:Blockmaster"
+      ]
+    },
+    "worldUnlocks.Egg": {
+      "entries": [
+        "upgrades:Egg"
+      ]
+    },
+    "worldUnlocks.Doom": {
+      "entries": [
+        "uniqueMaps:Trimple Of Doom"
+      ]
+    },
+    "worldUnlocks.Atlantrimp": {
+      "entries": [
+        "uniqueMaps:Atlantrimp"
+      ]
+    },
+    "worldUnlocks.Worshipper": {
+      "entries": [
+        "jobs:Worshipper"
+      ]
+    },
+    "worldUnlocks.FirstMap": {
+      "entries": [
+        "uniqueMaps:Tricky Paradise"
+      ]
+    },
+    "worldUnlocks.easterEgg": {
+      "excluded": "Empty seasonal handler; no obtainable feature."
+    },
+    "worldUnlocks.Map": {
+      "entries": [
+        "resources:fragments",
+        "systems:maps"
+      ]
+    },
+    "worldUnlocks.fiveTrimpMax": {
+      "excluded": "Repeat housing reward; grants population rather than unlocking a new feature."
+    },
+    "worldUnlocks.fruit": {
+      "excluded": "Repeat Food loot."
+    },
+    "worldUnlocks.groundLumber": {
+      "excluded": "Repeat Wood loot."
+    },
+    "worldUnlocks.freeMetals": {
+      "excluded": "Repeat Metal loot."
+    },
+    "worldUnlocks.spireMetals": {
+      "excluded": "Repeat Spire Metal loot."
+    },
+    "mapUnlocks.roboTrimp": {
+      "entries": [
+        "systems:roboTrimp"
+      ]
+    },
+    "mapUnlocks.Geneticistassist": {
+      "excluded": "Deprecated handler always filtered out; current unlock is catalogued under bwRewards."
+    },
+    "mapUnlocks.AutoStorage": {
+      "entries": [
+        "systems:autoStorage",
+        "systems:heirlooms"
+      ]
+    },
+    "mapUnlocks.ImprovedAutoStorage": {
+      "entries": [
+        "systems:improvedAutoStorage"
+      ]
+    },
+    "mapUnlocks.MapAtZone": {
+      "entries": [
+        "systems:mapAtZone"
+      ]
+    },
+    "mapUnlocks.NoCoords": {
+      "entries": [
+        "systems:noCoords"
+      ]
+    },
+    "mapUnlocks.AutoEquip": {
+      "entries": [
+        "systems:autoEquip"
+      ]
+    },
+    "mapUnlocks.AncientTreasure": {
+      "excluded": "Repeat unique-map resource-doubling reward, no new feature."
+    },
+    "mapUnlocks.SmithFree": {
+      "excluded": "Repeat free Smithy reward, no new building unlock."
+    },
+    "mapUnlocks.Heirloom": {
+      "entries": [
+        "systems:heirlooms"
+      ]
+    },
+    "mapUnlocks.Keys": {
+      "entries": [
+        "challenges:Electricity"
+      ]
+    },
+    "mapUnlocks.Relentlessness": {
+      "entries": [
+        "portal:Relentlessness"
+      ]
+    },
+    "mapUnlocks.Portal": {
+      "entries": [
+        "systems:portal"
+      ]
+    },
+    "mapUnlocks.Prismalicious": {
+      "entries": [
+        "upgrades:Prismalicious"
+      ]
+    },
+    "mapUnlocks.Shieldblock": {
+      "entries": [
+        "upgrades:Shieldblock"
+      ]
+    },
+    "mapUnlocks.Bounty": {
+      "entries": [
+        "upgrades:Bounty"
+      ]
+    },
+    "mapUnlocks.Supershield": {
+      "entries": [
+        "upgrades:Supershield"
+      ]
+    },
+    "mapUnlocks.Dagadder": {
+      "entries": [
+        "upgrades:Dagadder"
+      ]
+    },
+    "mapUnlocks.Bootboost": {
+      "entries": [
+        "upgrades:Bootboost"
+      ]
+    },
+    "mapUnlocks.Megamace": {
+      "entries": [
+        "upgrades:Megamace"
+      ]
+    },
+    "mapUnlocks.Hellishmet": {
+      "entries": [
+        "upgrades:Hellishmet"
+      ]
+    },
+    "mapUnlocks.Polierarm": {
+      "entries": [
+        "upgrades:Polierarm"
+      ]
+    },
+    "mapUnlocks.Pantastic": {
+      "entries": [
+        "upgrades:Pantastic"
+      ]
+    },
+    "mapUnlocks.Axeidic": {
+      "entries": [
+        "upgrades:Axeidic"
+      ]
+    },
+    "mapUnlocks.Smoldershoulder": {
+      "entries": [
+        "upgrades:Smoldershoulder"
+      ]
+    },
+    "mapUnlocks.Greatersword": {
+      "entries": [
+        "upgrades:Greatersword"
+      ]
+    },
+    "mapUnlocks.Bestplate": {
+      "entries": [
+        "upgrades:Bestplate"
+      ]
+    },
+    "mapUnlocks.Harmbalest": {
+      "entries": [
+        "upgrades:Harmbalest"
+      ]
+    },
+    "mapUnlocks.GambesOP": {
+      "entries": [
+        "upgrades:GambesOP"
+      ]
+    },
+    "mapUnlocks.Speedexplorer": {
+      "entries": [
+        "upgrades:Speedexplorer"
+      ]
+    },
+    "mapUnlocks.TheBlock": {
+      "entries": [
+        "uniqueMaps:The Block"
+      ]
+    },
+    "mapUnlocks.TheWall": {
+      "entries": [
+        "uniqueMaps:The Wall"
+      ]
+    },
+    "mapUnlocks.BigWall": {
+      "entries": [
+        "uniqueMaps:Big Wall"
+      ]
+    },
+    "mapUnlocks.ThePrison": {
+      "entries": [
+        "uniqueMaps:The Prison"
+      ]
+    },
+    "mapUnlocks.BionicWonderland": {
+      "entries": [
+        "uniqueMaps:Bionic Wonderland"
+      ]
+    },
+    "mapUnlocks.ImplodingStar": {
+      "entries": [
+        "uniqueMaps:Imploding Star"
+      ]
+    },
+    "mapUnlocks.Mansion": {
+      "entries": [
+        "buildings:Mansion"
+      ]
+    },
+    "mapUnlocks.Hotel": {
+      "entries": [
+        "buildings:Hotel"
+      ]
+    },
+    "mapUnlocks.UberHut": {
+      "entries": [
+        "upgrades:UberHut"
+      ]
+    },
+    "mapUnlocks.UberHouse": {
+      "entries": [
+        "upgrades:UberHouse"
+      ]
+    },
+    "mapUnlocks.UberMansion": {
+      "entries": [
+        "upgrades:UberMansion"
+      ]
+    },
+    "mapUnlocks.UberHotel": {
+      "entries": [
+        "upgrades:UberHotel"
+      ]
+    },
+    "mapUnlocks.UberResort": {
+      "entries": [
+        "upgrades:UberResort"
+      ]
+    },
+    "mapUnlocks.Resort": {
+      "entries": [
+        "buildings:Resort"
+      ]
+    },
+    "mapUnlocks.Gateway": {
+      "entries": [
+        "buildings:Gateway"
+      ]
+    },
+    "mapUnlocks.Wormhole": {
+      "entries": [
+        "buildings:Wormhole"
+      ]
+    },
+    "mapUnlocks.Collector": {
+      "entries": [
+        "buildings:Collector"
+      ]
+    },
+    "mapUnlocks.Trapstorm": {
+      "entries": [
+        "upgrades:Trapstorm"
+      ]
+    },
+    "mapUnlocks.Nursery": {
+      "entries": [
+        "buildings:Nursery"
+      ]
+    },
+    "mapUnlocks.gems": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "mapUnlocks.Gems": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "mapUnlocks.Any": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "mapUnlocks.Metal": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "mapUnlocks.Food": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "mapUnlocks.Wood": {
+      "excluded": "Repeat resource loot, no new feature."
+    },
+    "triggers.Trap": {
+      "entries": [
+        "buildings:Trap"
+      ]
+    },
+    "triggers.wood": {
+      "entries": [
+        "resources:wood"
+      ]
+    },
+    "triggers.Barn": {
+      "entries": [
+        "buildings:Barn"
+      ]
+    },
+    "triggers.Shed": {
+      "entries": [
+        "buildings:Shed"
+      ]
+    },
+    "triggers.Forge": {
+      "entries": [
+        "buildings:Forge"
+      ]
+    },
+    "triggers.jobs": {
+      "entries": [
+        "jobs:Farmer"
+      ]
+    },
+    "triggers.Lumberjack": {
+      "entries": [
+        "jobs:Lumberjack"
+      ]
+    },
+    "triggers.upgrades": {
+      "entries": [
+        "resources:science"
+      ]
+    },
+    "triggers.Battle": {
+      "entries": [
+        "upgrades:Battle"
+      ]
+    },
+    "triggers.Hut": {
+      "entries": [
+        "buildings:Hut"
+      ]
+    },
+    "triggers.House": {
+      "entries": [
+        "buildings:House"
+      ]
+    },
+    "triggers.breeding": {
+      "entries": [
+        "systems:breeding"
+      ]
+    }
+  },
+  "dynamicSources": {
+    "main.sLevel>=4": [
+      "systems:autoPrestige"
+    ],
+    "main.getAvailableGoldenUpgrades": [
+      "goldenUpgrades:Helium",
+      "goldenUpgrades:Battle",
+      "goldenUpgrades:Void"
+    ]
+  },
+  "excluded": {
+    "upgrades:SuperShriek": "Unused: its world unlock is commented out in original 5.10.1; it cannot be obtained.",
+    "heirloomRarities:0": "Basic is a legacy rarity, not a new obtainable drop in 5.10.1; first new Spire Core is Common at Zone 300."
+  }
+}

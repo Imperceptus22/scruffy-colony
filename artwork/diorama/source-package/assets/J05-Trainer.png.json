@@ -1,0 +1,23 @@
+{
+  "id": "J05",
+  "key": "Trainer",
+  "name": "Trainer",
+  "group": "jobs",
+  "file": "assets/J05-Trainer.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "0380861c12039e6464d40de3ea8607b3304b4178fd64af6e978a250957e5f32c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

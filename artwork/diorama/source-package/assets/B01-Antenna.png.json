@@ -1,0 +1,23 @@
+{
+  "id": "B01",
+  "key": "Antenna",
+  "name": "Antenna",
+  "group": "buildings",
+  "file": "assets/B01-Antenna.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 375,
+    "height": 337
+  },
+  "nativeSize": {
+    "width": 375,
+    "height": 337
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "36e6dccd2bf57866f3ff7306b604610be109fbcefca2842c5ec25e63b63cf5e9",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

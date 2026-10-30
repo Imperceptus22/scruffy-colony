@@ -1,0 +1,2640 @@
+{
+  "approved": false,
+  "productionReady": false,
+  "date": "2026-10-24",
+  "scope": "Artwork for motif approval only; no app integration",
+  "count": 89,
+  "sourceRevision": "26366c1dbed61aeeb1c03a43410cfb813be1fcc7",
+  "sources": [
+    {
+      "group": "B",
+      "file": "objects/buildings-01-antenna-mansion.png",
+      "cols": 4,
+      "rows": 3,
+      "ids": [
+        "Antenna",
+        "Barn",
+        "Collector",
+        "Forge",
+        "Gateway",
+        "Gym",
+        "Hotel",
+        "House",
+        "Hub",
+        "Hut",
+        "Laboratory",
+        "Mansion"
+      ],
+      "prompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "rects": [
+        {
+          "left": 0,
+          "top": 0,
+          "width": 375,
+          "height": 337
+        },
+        {
+          "left": 375,
+          "top": 0,
+          "width": 400,
+          "height": 337
+        },
+        {
+          "left": 775,
+          "top": 0,
+          "width": 383,
+          "height": 337
+        },
+        {
+          "left": 1158,
+          "top": 0,
+          "width": 378,
+          "height": 337
+        },
+        {
+          "left": 0,
+          "top": 337,
+          "width": 375,
+          "height": 308
+        },
+        {
+          "left": 375,
+          "top": 337,
+          "width": 400,
+          "height": 308
+        },
+        {
+          "left": 775,
+          "top": 337,
+          "width": 383,
+          "height": 308
+        },
+        {
+          "left": 1158,
+          "top": 337,
+          "width": 378,
+          "height": 308
+        },
+        {
+          "left": 0,
+          "top": 645,
+          "width": 410,
+          "height": 379
+        },
+        {
+          "left": 410,
+          "top": 645,
+          "width": 365,
+          "height": 379
+        },
+        {
+          "left": 775,
+          "top": 645,
+          "width": 383,
+          "height": 379
+        },
+        {
+          "left": 1158,
+          "top": 645,
+          "width": 378,
+          "height": 379
+        }
+      ],
+      "nativeSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "B",
+      "file": "objects/buildings-02-microchip-wormhole.png",
+      "cols": 3,
+      "rows": 3,
+      "ids": [
+        "Microchip",
+        "Nursery",
+        "Resort",
+        "Shed",
+        "Smithy",
+        "Trap",
+        "Tribute",
+        "Warpstation",
+        "Wormhole"
+      ],
+      "prompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "rects": [
+        {
+          "left": 0,
+          "top": 0,
+          "width": 418,
+          "height": 411
+        },
+        {
+          "left": 418,
+          "top": 0,
+          "width": 418,
+          "height": 411
+        },
+        {
+          "left": 836,
+          "top": 0,
+          "width": 418,
+          "height": 411
+        },
+        {
+          "left": 0,
+          "top": 411,
+          "width": 418,
+          "height": 389
+        },
+        {
+          "left": 418,
+          "top": 411,
+          "width": 418,
+          "height": 389
+        },
+        {
+          "left": 836,
+          "top": 411,
+          "width": 418,
+          "height": 389
+        },
+        {
+          "left": 0,
+          "top": 800,
+          "width": 418,
+          "height": 454
+        },
+        {
+          "left": 418,
+          "top": 800,
+          "width": 418,
+          "height": 454
+        },
+        {
+          "left": 836,
+          "top": 800,
+          "width": 418,
+          "height": 454
+        }
+      ],
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "E",
+      "file": "objects/equipment-01-arbalest-greatsword.png",
+      "cols": 4,
+      "rows": 2,
+      "ids": [
+        "Arbalest",
+        "Battleaxe",
+        "Boots",
+        "Breastplate",
+        "Dagger",
+        "Gambeson",
+        "Greatsword",
+        null
+      ],
+      "prompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "nativeSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "E",
+      "file": "objects/equipment-02-helmet-shoulderguards.png",
+      "cols": 3,
+      "rows": 2,
+      "ids": [
+        "Helmet",
+        "Mace",
+        "Pants",
+        "Polearm",
+        "Shield",
+        "Shoulderguards"
+      ],
+      "prompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "nativeSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "R",
+      "file": "world/resources.png",
+      "cols": 3,
+      "rows": 3,
+      "ids": [
+        "Food",
+        "Wood",
+        "Metal",
+        "Science",
+        "Fragments",
+        "Gems",
+        "Helium",
+        "Radon",
+        "Bones"
+      ],
+      "prompt": "world/resources.prompt.txt",
+      "rects": [
+        {
+          "left": 0,
+          "top": 0,
+          "width": 418,
+          "height": 430
+        },
+        {
+          "left": 418,
+          "top": 0,
+          "width": 418,
+          "height": 430
+        },
+        {
+          "left": 836,
+          "top": 0,
+          "width": 418,
+          "height": 430
+        },
+        {
+          "left": 0,
+          "top": 430,
+          "width": 418,
+          "height": 380
+        },
+        {
+          "left": 418,
+          "top": 430,
+          "width": 418,
+          "height": 380
+        },
+        {
+          "left": 836,
+          "top": 430,
+          "width": 418,
+          "height": 380
+        },
+        {
+          "left": 0,
+          "top": 810,
+          "width": 418,
+          "height": 444
+        },
+        {
+          "left": 418,
+          "top": 810,
+          "width": 418,
+          "height": 444
+        },
+        {
+          "left": 836,
+          "top": 810,
+          "width": 418,
+          "height": 444
+        }
+      ],
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "J",
+      "file": "world/jobs.png",
+      "cols": 4,
+      "rows": 2,
+      "ids": [
+        "Farmer",
+        "Lumberjack",
+        "Miner",
+        "Scientist",
+        "Trainer",
+        "Explorer",
+        "Geneticist",
+        "Magmamancer"
+      ],
+      "prompt": "world/jobs.prompt.txt",
+      "nativeSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "M",
+      "file": "world/biomes.png",
+      "cols": 4,
+      "rows": 2,
+      "ids": [
+        "Random",
+        "Mountain",
+        "Forest",
+        "Sea",
+        "Depths",
+        "Gardens",
+        "Farmlands",
+        "Void"
+      ],
+      "prompt": "world/biomes-transparency-fix.prompt.txt",
+      "nativeSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "J",
+      "file": "world/jobs-extra.png",
+      "cols": 3,
+      "rows": 1,
+      "ids": [
+        "Amalgamator",
+        "Meteorologist",
+        "Worshipper"
+      ],
+      "prompt": "world/jobs-extra.prompt.txt",
+      "nativeSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "S",
+      "file": "special/01-common-scenes.png",
+      "cols": 2,
+      "rows": 2,
+      "ids": [
+        "colony",
+        "building-workshop",
+        "equipment-armory",
+        "jobs-camp"
+      ],
+      "prompt": "special/common-scenes.prompt.txt",
+      "scene": true,
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "approved": false
+    },
+    {
+      "group": "S",
+      "file": "special/02-systems.png",
+      "cols": 2,
+      "rows": 2,
+      "ids": [
+        "research-laboratory",
+        "portal",
+        "heirlooms-display",
+        "more-settings-desk"
+      ],
+      "prompt": "special/systems.edit.prompt.txt",
+      "scene": true,
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "approved": false
+    },
+    {
+      "group": "S",
+      "file": "special/03-late-systems.png",
+      "cols": 2,
+      "rows": 2,
+      "ids": [
+        "player-spire",
+        "spire-assault",
+        "alchemy",
+        "mutators"
+      ],
+      "prompt": "special/late-systems.prompt.txt",
+      "scene": true,
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "isOpaque": true,
+      "approved": false
+    },
+    {
+      "group": "T",
+      "file": "interface/terrain-markers.png",
+      "cols": 3,
+      "rows": 3,
+      "ids": [
+        "terrain-grass",
+        "terrain-cleared",
+        "terrain-stone",
+        "marker-tree",
+        "marker-food",
+        "marker-ore",
+        "marker-book",
+        "marker-gift",
+        "marker-unlock"
+      ],
+      "prompt": "interface/terrain-markers.prompt.txt",
+      "nativeSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    },
+    {
+      "group": "U",
+      "file": "interface/interface-materials.png",
+      "cols": 2,
+      "rows": 3,
+      "ids": [
+        "panel-parchment",
+        "button-petrol",
+        "button-amber",
+        "button-disabled",
+        "header-wood",
+        "frame-current"
+      ],
+      "prompt": "interface/interface-materials.prompt.txt",
+      "rects": [
+        {
+          "left": 0,
+          "top": 0,
+          "width": 542,
+          "height": 610
+        },
+        {
+          "left": 542,
+          "top": 0,
+          "width": 482,
+          "height": 610
+        },
+        {
+          "left": 0,
+          "top": 610,
+          "width": 542,
+          "height": 380
+        },
+        {
+          "left": 542,
+          "top": 610,
+          "width": 482,
+          "height": 380
+        },
+        {
+          "left": 0,
+          "top": 990,
+          "width": 620,
+          "height": 546
+        },
+        {
+          "left": 620,
+          "top": 990,
+          "width": 404,
+          "height": 546
+        }
+      ],
+      "nativeSize": {
+        "width": 1024,
+        "height": 1536
+      },
+      "hasAlpha": true,
+      "isOpaque": false,
+      "approved": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "B",
+      "key": "buildings",
+      "title": "Gebäude",
+      "count": 21
+    },
+    {
+      "id": "E",
+      "key": "equipment",
+      "title": "Ausrüstung",
+      "count": 13
+    },
+    {
+      "id": "R",
+      "key": "resources",
+      "title": "Ressourcen",
+      "count": 9
+    },
+    {
+      "id": "J",
+      "key": "jobs",
+      "title": "Arbeitsrollen",
+      "count": 11
+    },
+    {
+      "id": "M",
+      "key": "biomes",
+      "title": "Karten und Biome",
+      "count": 8
+    },
+    {
+      "id": "S",
+      "key": "scenes",
+      "title": "Szenen und Spielbereiche",
+      "count": 12
+    },
+    {
+      "id": "T",
+      "key": "terrain",
+      "title": "Kampffelder und Fundmarken",
+      "count": 9
+    },
+    {
+      "id": "U",
+      "key": "interface",
+      "title": "Rahmen und Oberflächen",
+      "count": 6
+    }
+  ],
+  "items": [
+    {
+      "id": "B01",
+      "key": "Antenna",
+      "name": "Antenna",
+      "group": "buildings",
+      "file": "assets/B01-Antenna.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 375,
+        "height": 337
+      },
+      "nativeSize": {
+        "width": 375,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "36e6dccd2bf57866f3ff7306b604610be109fbcefca2842c5ec25e63b63cf5e9",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B02",
+      "key": "Barn",
+      "name": "Barn",
+      "group": "buildings",
+      "file": "assets/B02-Barn.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 375,
+        "top": 0,
+        "width": 400,
+        "height": 337
+      },
+      "nativeSize": {
+        "width": 400,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "0800cfef79168f724636ba9251da84c2a8b780d64109018d86e26ba5bff2ba99",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B03",
+      "key": "Collector",
+      "name": "Collector",
+      "group": "buildings",
+      "file": "assets/B03-Collector.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 0,
+        "width": 383,
+        "height": 337
+      },
+      "nativeSize": {
+        "width": 383,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "bf09639c1aabdb0bc85e3ef1dd27ff67ce91502743bf492d3eabdeffb988ec40",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B04",
+      "key": "Forge",
+      "name": "Forge",
+      "group": "buildings",
+      "file": "assets/B04-Forge.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 0,
+        "width": 378,
+        "height": 337
+      },
+      "nativeSize": {
+        "width": 378,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "d626407a33608cb6ad5f4ce5fa4bff64652d064e9d2462afb377f6864c5beede",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B05",
+      "key": "Gateway",
+      "name": "Gateway",
+      "group": "buildings",
+      "file": "assets/B05-Gateway.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 337,
+        "width": 375,
+        "height": 308
+      },
+      "nativeSize": {
+        "width": 375,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "4bc643b74ebd498aa61329fb0c299ecc705533e82d521fdac17a4d424eb0f0de",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B06",
+      "key": "Gym",
+      "name": "Gym",
+      "group": "buildings",
+      "file": "assets/B06-Gym.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 375,
+        "top": 337,
+        "width": 400,
+        "height": 308
+      },
+      "nativeSize": {
+        "width": 400,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "56f49afa1e90aa94acc446262dd040424462ac8442cde9c83d0fba2c053cd03c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B07",
+      "key": "Hotel",
+      "name": "Hotel",
+      "group": "buildings",
+      "file": "assets/B07-Hotel.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 337,
+        "width": 383,
+        "height": 308
+      },
+      "nativeSize": {
+        "width": 383,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "570e12d992bde5996df3249476a5d2c74406fad70f210ed7796f012536246edf",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B08",
+      "key": "House",
+      "name": "House",
+      "group": "buildings",
+      "file": "assets/B08-House.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 337,
+        "width": 378,
+        "height": 308
+      },
+      "nativeSize": {
+        "width": 378,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "a8b5820608f24f2c0ed6903e3845cd994655f6df17c1fd91c809583ad1316e19",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B09",
+      "key": "Hub",
+      "name": "Hub",
+      "group": "buildings",
+      "file": "assets/B09-Hub.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 645,
+        "width": 410,
+        "height": 379
+      },
+      "nativeSize": {
+        "width": 410,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "00a1d08a214d36e547709a8a140236ebca39130fd8e20452ceb53e466b94b0f9",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B10",
+      "key": "Hut",
+      "name": "Hut",
+      "group": "buildings",
+      "file": "assets/B10-Hut.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 410,
+        "top": 645,
+        "width": 365,
+        "height": 379
+      },
+      "nativeSize": {
+        "width": 365,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "e10aefc3ee13a4d666927038e84211bc33d95247e2bba750f0e30be71dba14a5",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B11",
+      "key": "Laboratory",
+      "name": "Laboratory",
+      "group": "buildings",
+      "file": "assets/B11-Laboratory.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 645,
+        "width": 383,
+        "height": 379
+      },
+      "nativeSize": {
+        "width": 383,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "ffe5cf32052ecd0bbc8e9f9c0b9e43e16c06b99a1e360f054af13ff9651cbb55",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B12",
+      "key": "Mansion",
+      "name": "Mansion",
+      "group": "buildings",
+      "file": "assets/B12-Mansion.png",
+      "approved": false,
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 645,
+        "width": 378,
+        "height": 379
+      },
+      "nativeSize": {
+        "width": 378,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "sha256": "e3a51255e7901056192452b9d9f9f6f0133827580ccb5e2102c43dafed316300",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B13",
+      "key": "Microchip",
+      "name": "Microchip",
+      "group": "buildings",
+      "file": "assets/B13-Microchip.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "038ddb988aaff814babcc439ce260998e0f84850e05ee7ca7ec1f29f4fdfefdc",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B14",
+      "key": "Nursery",
+      "name": "Nursery",
+      "group": "buildings",
+      "file": "assets/B14-Nursery.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "08c589202595f8a74e608e1b0aa8835fddc1c00d1a4d676ae741f6135ab4527f",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B15",
+      "key": "Resort",
+      "name": "Resort",
+      "group": "buildings",
+      "file": "assets/B15-Resort.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "4beec8e97e5cc1091cbcfd74058f9a145b186e9a3f2052da9b2111940f2fa51d",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B16",
+      "key": "Shed",
+      "name": "Shed",
+      "group": "buildings",
+      "file": "assets/B16-Shed.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 411,
+        "width": 418,
+        "height": 389
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "9255132cb8cd3b036b1a1f8191a1cf990260d9cce36dfc4eb5ebccd0cd9a9d2f",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B17",
+      "key": "Smithy",
+      "name": "Smithy",
+      "group": "buildings",
+      "file": "assets/B17-Smithy.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 411,
+        "width": 418,
+        "height": 389
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "a6072cd7498fd9bd20827bd5920ca5c5b2cf9492792fd645032fddb7907b2c49",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B18",
+      "key": "Trap",
+      "name": "Trap",
+      "group": "buildings",
+      "file": "assets/B18-Trap.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 856,
+        "top": 411,
+        "width": 398,
+        "height": 389
+      },
+      "nativeSize": {
+        "width": 398,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "7df461dd19ec8f01ad013cceb2c55c4ae1fc6eca861e43c44e8854956c325e4b",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B19",
+      "key": "Tribute",
+      "name": "Tribute",
+      "group": "buildings",
+      "file": "assets/B19-Tribute.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "2043754d8f7a91922df727df26ef1c1bea73a99dc4cf093252e264a115e6a95b",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B20",
+      "key": "Warpstation",
+      "name": "Warpstation",
+      "group": "buildings",
+      "file": "assets/B20-Warpstation.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "1fc9ab8f71087885a1aa935229b03116e06d53a3a4eb616130b73c610bec2f74",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "B21",
+      "key": "Wormhole",
+      "name": "Wormhole",
+      "group": "buildings",
+      "file": "assets/B21-Wormhole.png",
+      "approved": false,
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "sha256": "7010bd63f099dd278c10890f57d933f678e9527b3d9623261eb2c37d78d6f610",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E01",
+      "key": "Arbalest",
+      "name": "Arbalest",
+      "group": "equipment",
+      "file": "assets/E01-Arbalest.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "9a49ccb56e69cf70df5b9f07ff5fb7743223adcc34366c0f7b54dc0e6c6978d8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E02",
+      "key": "Battleaxe",
+      "name": "Battleaxe",
+      "group": "equipment",
+      "file": "assets/E02-Battleaxe.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "fe85e9cbd9014ad77a3b4efbd19796061187a559d56564eb6728d704a0e25eee",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E03",
+      "key": "Boots",
+      "name": "Boots",
+      "group": "equipment",
+      "file": "assets/E03-Boots.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "efa9fee14e6c92289b14f3bb95a152d81d9009e26b196c76e78fb90d83b5626e",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E04",
+      "key": "Breastplate",
+      "name": "Breastplate",
+      "group": "equipment",
+      "file": "assets/E04-Breastplate.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "539208188d0cce98ecb8ececdce7a09cb7b45e7e72edfce4f866e2968272aa05",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E05",
+      "key": "Dagger",
+      "name": "Dagger",
+      "group": "equipment",
+      "file": "assets/E05-Dagger.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "8bcf3cb8a6365cb19bcfae9d9b1e66cdc66d511bfcafd5efd8378b96e66a2c7c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E06",
+      "key": "Gambeson",
+      "name": "Gambeson",
+      "group": "equipment",
+      "file": "assets/E06-Gambeson.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "0e14aae07624015723205019fa6db28ee39f892435fdae1b9064e0f712e77ee0",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E07",
+      "key": "Greatsword",
+      "name": "Greatsword",
+      "group": "equipment",
+      "file": "assets/E07-Greatsword.png",
+      "approved": false,
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "sha256": "d858fdedb37e7017137f3ac40e50cea8cfc2435afa99398e42f3a302b6664fe1",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E08",
+      "key": "Helmet",
+      "name": "Helmet",
+      "group": "equipment",
+      "file": "assets/E08-Helmet.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "94678b5424989b24f4096eba53407b43f8a203f5b095f73736b91e3e579a82ef",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E09",
+      "key": "Mace",
+      "name": "Mace",
+      "group": "equipment",
+      "file": "assets/E09-Mace.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "f26dcf547861d2abfffb3632863cee58c95d10d8c140b1580910b9337c263e9a",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E10",
+      "key": "Pants",
+      "name": "Pants",
+      "group": "equipment",
+      "file": "assets/E10-Pants.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "ff23e1b68edbf58d70b1ff978b9ed841b4dbacf5c2d2ea52bde77412782742e5",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E11",
+      "key": "Polearm",
+      "name": "Polearm",
+      "group": "equipment",
+      "file": "assets/E11-Polearm.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "aad380e2900fbbbc24f70ced3de2168b7eb7c48b59fa3a9fb4fb2bb5deb40828",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E12",
+      "key": "Shield",
+      "name": "Shield",
+      "group": "equipment",
+      "file": "assets/E12-Shield.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "1f16ee66baeba31c8209ff3bf7302f5e8614074522ec093d7146ea9bce90afce",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "E13",
+      "key": "Shoulderguards",
+      "name": "Shoulderguards",
+      "group": "equipment",
+      "file": "assets/E13-Shoulderguards.png",
+      "approved": false,
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "sha256": "d510ce4d6ae0c142e3665330061ac0254aab7ab86f00189650ca54cd4d56d0d8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R01",
+      "key": "Food",
+      "name": "Food",
+      "group": "resources",
+      "file": "assets/R01-Food.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "7e6a49478e42edaf253d0f02c1cdc8c399317091dce0ca09ecc4b2937e150e13",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R02",
+      "key": "Wood",
+      "name": "Wood",
+      "group": "resources",
+      "file": "assets/R02-Wood.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "0f7675ca07fb883b734ce0e1a641d9078eb1dc0546fcdee5ef9cc7bbfe7ef5b0",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R03",
+      "key": "Metal",
+      "name": "Metal",
+      "group": "resources",
+      "file": "assets/R03-Metal.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "d028bda1063bac12c1af2396dfaff7f5c529fb2c5c246a69c75a95ee90cbdec3",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R04",
+      "key": "Science",
+      "name": "Science",
+      "group": "resources",
+      "file": "assets/R04-Science.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "424385094d5b5b026c92676fcb4c9959ac213ef65899f8e59f1462dd2ba62bb5",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R05",
+      "key": "Fragments",
+      "name": "Fragments",
+      "group": "resources",
+      "file": "assets/R05-Fragments.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "29b86d008a70d816ac95c15261a3e630f325429b3e2071799df3d3b7ef0adfac",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R06",
+      "key": "Gems",
+      "name": "Gems",
+      "group": "resources",
+      "file": "assets/R06-Gems.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "01ae11034fb8e68d52b04028e79360ccf29ba79e7f5bd6120de215cc92549b5b",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R07",
+      "key": "Helium",
+      "name": "Helium",
+      "group": "resources",
+      "file": "assets/R07-Helium.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "3029127eaa4b62dc539f1657ec3e597df657b2c48d2f6c2060f66b2fc96c08bc",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R08",
+      "key": "Radon",
+      "name": "Radon",
+      "group": "resources",
+      "file": "assets/R08-Radon.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "6362655f9b9fea0787dec5c6822cac30d19b8adb642d8f716a7013850b0618f0",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "R09",
+      "key": "Bones",
+      "name": "Bones",
+      "group": "resources",
+      "file": "assets/R09-Bones.png",
+      "approved": false,
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "sha256": "4490ecb137bd865f54dbe1fa08fba2777da44099fc4ce4054378ad4481302a4d",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J01",
+      "key": "Farmer",
+      "name": "Farmer",
+      "group": "jobs",
+      "file": "assets/J01-Farmer.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "19e5475fbcd97f2ef947d8e57d8992a458d11a20338740e9b3e5dad0d7f34724",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J02",
+      "key": "Lumberjack",
+      "name": "Lumberjack",
+      "group": "jobs",
+      "file": "assets/J02-Lumberjack.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "604c01e3edd82e84d92691484a1c9daad3faa756525ca643f8d9edcfcda1bfe8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J03",
+      "key": "Miner",
+      "name": "Miner",
+      "group": "jobs",
+      "file": "assets/J03-Miner.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "8c1e1cc5972aaf88f4eea5d238202047d42b369d425984fe0b18eca61eb7a3c8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J04",
+      "key": "Scientist",
+      "name": "Scientist",
+      "group": "jobs",
+      "file": "assets/J04-Scientist.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "416e698a9be6fec366c8718a53a69012be849dc2c43fe5f180e601c01730095a",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J05",
+      "key": "Trainer",
+      "name": "Trainer",
+      "group": "jobs",
+      "file": "assets/J05-Trainer.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "0380861c12039e6464d40de3ea8607b3304b4178fd64af6e978a250957e5f32c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J06",
+      "key": "Explorer",
+      "name": "Explorer",
+      "group": "jobs",
+      "file": "assets/J06-Explorer.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "6ec71f399e94f07c47313f457d1fc3c6b86fd371a9eb1dfbe06017038b2d109f",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J07",
+      "key": "Geneticist",
+      "name": "Geneticist",
+      "group": "jobs",
+      "file": "assets/J07-Geneticist.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "700982d9fed962bde3ffe34f8dd3748d86b4d61f1761120d18a7a0b51c485348",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J08",
+      "key": "Magmamancer",
+      "name": "Magmamancer",
+      "group": "jobs",
+      "file": "assets/J08-Magmamancer.png",
+      "approved": false,
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "sha256": "608af305ed179ed6369e5dbb6decb75fd09cca64e975b8435ff780d2d02c6952",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M01",
+      "key": "Random",
+      "name": "Random",
+      "group": "biomes",
+      "file": "assets/M01-Random.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "0f1a1550dc6d1ef5ab76b72db423a3e4a379b8f7179b9e1e19a4ab807378eb99",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M02",
+      "key": "Mountain",
+      "name": "Mountain",
+      "group": "biomes",
+      "file": "assets/M02-Mountain.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "e864751a5ec71b68ff67d768408b161199678756e3069ebe68e57179ccdb32f6",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M03",
+      "key": "Forest",
+      "name": "Forest",
+      "group": "biomes",
+      "file": "assets/M03-Forest.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "b6a24c4687524830b17bf1c6fcf115d8ceb54feb05ffcd2d34cc3cb3513faee4",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M04",
+      "key": "Sea",
+      "name": "Sea",
+      "group": "biomes",
+      "file": "assets/M04-Sea.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "4159aa8945ed6ce5d9a950d46277cbd8c8bef3c75cd785fb235a59054259325a",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M05",
+      "key": "Depths",
+      "name": "Depths",
+      "group": "biomes",
+      "file": "assets/M05-Depths.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "213c23a73151146079fe49b3b358b9bb890fea841b1640c4ac4a2d780bdebd43",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M06",
+      "key": "Gardens",
+      "name": "Gardens",
+      "group": "biomes",
+      "file": "assets/M06-Gardens.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "75b03fc13fb54ee97d4264177356775641d3245b5b5381b60acff0983419632d",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M07",
+      "key": "Farmlands",
+      "name": "Farmlands",
+      "group": "biomes",
+      "file": "assets/M07-Farmlands.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "efdd2a2a93da8613df7125f11c227bc13bd9de68a46edf513ecada4a970c4903",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "M08",
+      "key": "Void",
+      "name": "Void",
+      "group": "biomes",
+      "file": "assets/M08-Void.png",
+      "approved": false,
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "nativeSize": {
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "sha256": "05757f869ac59c3ab63a5738c9ee176e17b47d47eb831fad1ba22ae60b45a59d",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J09",
+      "key": "Amalgamator",
+      "name": "Amalgamator",
+      "group": "jobs",
+      "file": "assets/J09-Amalgamator.png",
+      "approved": false,
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "nativeSize": {
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "sha256": "bab77d3c1b1cd5a257b8d5e395181ddf238925adbad9e0b1e07891ee33819248",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J10",
+      "key": "Meteorologist",
+      "name": "Meteorologist",
+      "group": "jobs",
+      "file": "assets/J10-Meteorologist.png",
+      "approved": false,
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 724,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "nativeSize": {
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "sha256": "5e8d022736b5fa9e39a95bc6a0b09bc49945831adb9337321c38433f2b64c614",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "J11",
+      "key": "Worshipper",
+      "name": "Worshipper",
+      "group": "jobs",
+      "file": "assets/J11-Worshipper.png",
+      "approved": false,
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 1448,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "nativeSize": {
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "sha256": "beeefbb7d0b793d7827c5f2dfeac09254f2dbb6a860c4a42155478663d804b2f",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "S01",
+      "key": "colony",
+      "name": "Kolonie",
+      "group": "scenes",
+      "file": "assets/S01-colony.png",
+      "approved": false,
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "sha256": "3cee5ccb5c2178c704b180fd8ff55291011afbccb303e5c8ec7209b7b6f0ab3a",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S02",
+      "key": "building-workshop",
+      "name": "Bauwerkstatt",
+      "group": "scenes",
+      "file": "assets/S02-building-workshop.png",
+      "approved": false,
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "sha256": "bceb77167433a6724df098b5c0794d36f7803aaa32db39d9b508fea8a0452d20",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S03",
+      "key": "equipment-armory",
+      "name": "Rüstkammer",
+      "group": "scenes",
+      "file": "assets/S03-equipment-armory.png",
+      "approved": false,
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "sha256": "adb89151712c63e89d4548d8ace1a310874c9b05d5e6f8707763c58c5ee4830f",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S04",
+      "key": "jobs-camp",
+      "name": "Arbeitslager",
+      "group": "scenes",
+      "file": "assets/S04-jobs-camp.png",
+      "approved": false,
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "sha256": "add11215d0e2989c42296d2e60830f7fbc5fe77ade700a947a4162a1095cbc0c",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S05",
+      "key": "research-laboratory",
+      "name": "Forschung",
+      "group": "scenes",
+      "file": "assets/S05-research-laboratory.png",
+      "approved": false,
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "sha256": "62451f6c8635994d715f3d78b8f2921eef4f006e77d5a3ffab71ff48ae34cdc4",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S06",
+      "key": "portal",
+      "name": "Portal",
+      "group": "scenes",
+      "file": "assets/S06-portal.png",
+      "approved": false,
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "sha256": "b0d2ec15e07bdf423e93cd25bcaaab0ac407c27f3dec40e2eafbf3f9971745ad",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S07",
+      "key": "heirlooms-display",
+      "name": "Heirlooms",
+      "group": "scenes",
+      "file": "assets/S07-heirlooms-display.png",
+      "approved": false,
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "sha256": "48e62b86063c614ca27745f2b3ece41a5c95faa32e6f628426dfcb3770c32c0d",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S08",
+      "key": "more-settings-desk",
+      "name": "Mehr und Einstellungen",
+      "group": "scenes",
+      "file": "assets/S08-more-settings-desk.png",
+      "approved": false,
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "sha256": "cfe48984d78313de277c3898baccba80e9a3eb0ee92b6dd789d9480a967a83d0",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S09",
+      "key": "player-spire",
+      "name": "Player Spire",
+      "group": "scenes",
+      "file": "assets/S09-player-spire.png",
+      "approved": false,
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "sha256": "b57c755823ef4cc70f5e4328a2badcc1b99a9aaaa0a08fef18458d61fcf050e8",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S10",
+      "key": "spire-assault",
+      "name": "Spire Assault",
+      "group": "scenes",
+      "file": "assets/S10-spire-assault.png",
+      "approved": false,
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "sha256": "0d7e23fb21a2bd63b484e457c631fddfa2c948947506e61fca1ffd9303d901c2",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S11",
+      "key": "alchemy",
+      "name": "Alchemie",
+      "group": "scenes",
+      "file": "assets/S11-alchemy.png",
+      "approved": false,
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "sha256": "26bc794018ab0ca0a4fdc801f9732473af24a46240b7043e39c99d3884a933ae",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "S12",
+      "key": "mutators",
+      "name": "Mutatoren",
+      "group": "scenes",
+      "file": "assets/S12-mutators.png",
+      "approved": false,
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "nativeSize": {
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "sha256": "f78c3d6d34fc6cf1f26f74db9fa6a53d0338f7737d4fe2abe7c27d17e339041a",
+      "needsEdgeReview": false,
+      "productionReady": false
+    },
+    {
+      "id": "T01",
+      "key": "terrain-grass",
+      "name": "Grasfeld",
+      "group": "terrain",
+      "file": "assets/T01-terrain-grass.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "649e7e2f4d732890981d70f8494f11357a2ea1224d1fa0cc64113625b955c2c7",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T02",
+      "key": "terrain-cleared",
+      "name": "Geräumtes Feld",
+      "group": "terrain",
+      "file": "assets/T02-terrain-cleared.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "f23caea5d7068e926aca2d77971af79f0880eb7c22cade8a8131a69bedb2afc4",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T03",
+      "key": "terrain-stone",
+      "name": "Steinfeld",
+      "group": "terrain",
+      "file": "assets/T03-terrain-stone.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "faa1e6f28980d8162f0290beabe9a38a876b057d115319c1fe28ece12efed67a",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T04",
+      "key": "marker-tree",
+      "name": "Baum",
+      "group": "terrain",
+      "file": "assets/T04-marker-tree.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "5df781e0e13d69672ca0004647fef5babe7a8c11ad45a7be43eefd09e6351a24",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T05",
+      "key": "marker-food",
+      "name": "Nahrung",
+      "group": "terrain",
+      "file": "assets/T05-marker-food.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "24b1c9cf98d39fbb1d96ddc2753abd94f89c2de3132fab83ba853c910670ac41",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T06",
+      "key": "marker-ore",
+      "name": "Erz",
+      "group": "terrain",
+      "file": "assets/T06-marker-ore.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "30e1d634b8b07739c6fbfb8ee79388474dce284be23864d2afff3db66d3125c8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T07",
+      "key": "marker-book",
+      "name": "Buch",
+      "group": "terrain",
+      "file": "assets/T07-marker-book.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "d040332e0beac45e18f1256d9011b6a3b8c6f2412d86da6539ea63e40ad1079c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T08",
+      "key": "marker-gift",
+      "name": "Geschenk",
+      "group": "terrain",
+      "file": "assets/T08-marker-gift.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "bed8410dc7c2a86868e0f04b4d9405ea720c87782b2ba247caa005128ee31a5f",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "T09",
+      "key": "marker-unlock",
+      "name": "Freischaltung",
+      "group": "terrain",
+      "file": "assets/T09-marker-unlock.png",
+      "approved": false,
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "nativeSize": {
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "sha256": "ea01ea193c7b21feb6d078d5c611639136e6f50837da5ccec8d2d4b08a6a9ec8",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U01",
+      "key": "panel-parchment",
+      "name": "Pergamentfläche",
+      "group": "interface",
+      "file": "assets/U01-panel-parchment.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 542,
+        "height": 610
+      },
+      "nativeSize": {
+        "width": 542,
+        "height": 610
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "222991d11574963ae2e86fb7a458b1a4dbb6edae192b630b873129bfcdbb908c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U02",
+      "key": "button-petrol",
+      "name": "Petroltaste",
+      "group": "interface",
+      "file": "assets/U02-button-petrol.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 542,
+        "top": 0,
+        "width": 482,
+        "height": 610
+      },
+      "nativeSize": {
+        "width": 482,
+        "height": 610
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "431bcc1a60001feb0b0a8bac5cceb7df7c2519271f538099d5c727a4fa39512b",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U03",
+      "key": "button-amber",
+      "name": "Bernsteintaste",
+      "group": "interface",
+      "file": "assets/U03-button-amber.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 610,
+        "width": 542,
+        "height": 380
+      },
+      "nativeSize": {
+        "width": 542,
+        "height": 380
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "d5613102d054fda4230b609625bb8ddb3291011a748def5d1245eddc3724f77b",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U04",
+      "key": "button-disabled",
+      "name": "Inaktive Taste",
+      "group": "interface",
+      "file": "assets/U04-button-disabled.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 542,
+        "top": 610,
+        "width": 482,
+        "height": 380
+      },
+      "nativeSize": {
+        "width": 482,
+        "height": 380
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "ae41d0ff4081882d5761d163dadbd4e93c76927f9561864bbc6fd09341404be1",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U05",
+      "key": "header-wood",
+      "name": "Holzkopf",
+      "group": "interface",
+      "file": "assets/U05-header-wood.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 990,
+        "width": 620,
+        "height": 546
+      },
+      "nativeSize": {
+        "width": 620,
+        "height": 546
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "3b202dd3fa17a1e7b385e430e217a6333f58229fc167811debbc3685f9df6f3c",
+      "needsEdgeReview": true,
+      "productionReady": false
+    },
+    {
+      "id": "U06",
+      "key": "frame-current",
+      "name": "Aktuelles Feld",
+      "group": "interface",
+      "file": "assets/U06-frame-current.png",
+      "approved": false,
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 620,
+        "top": 990,
+        "width": 404,
+        "height": 546
+      },
+      "nativeSize": {
+        "width": 404,
+        "height": 546
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "sha256": "bebd6ce326a0076fc733ea6ce7ba169663bd2d7e7be85d41894fa649eb206135",
+      "needsEdgeReview": true,
+      "productionReady": false
+    }
+  ],
+  "limitations": [
+    "Saturated matte fringes/stray edge pixels in several transparent sheets require cleanup before integration; review light and dark backgrounds",
+    "Atlas cell exports preserve native pixels; a final production crop and common optical scale are not validated",
+    "Material panels need measured scalable insets and device validation before implementation",
+    "Illustrations are decorative and do not promise unlocks, ownership, rewards or save states"
+  ]
+}

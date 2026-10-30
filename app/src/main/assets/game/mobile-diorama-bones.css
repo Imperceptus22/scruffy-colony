@@ -1,0 +1,142 @@
+/* Bone Trader (V-166, approved: bestiary catalogue B under the scene band of A). #boneWrapper is an overlay without
+   data-diorama-page, so every rule hangs on #boneWrapper. mobile-bones.js moves the original buttons and the ids the
+   engine writes into; purchase, confirmation, Info and tab handlers stay the original or adapter ones. Previous
+   graphics never loads this file. */
+html[data-graphics="diorama"] #boneWrapper {
+  --ink:#302e23; --muted:#64543c; --accent:#205958; --paper:#efe1c5;
+  /* Placeholder scene: a dedicated bone trader image replaces this one URL (asset swap, no markup change). */
+  --bone-scene:url("mobile-assets/diorama/S11-alchemy.webp");
+  padding:0 16px 28px!important; background:#422919 url("mobile-assets/diorama/P01-dark-wood.webp")!important; color:var(--ink)!important; scrollbar-color:var(--line) #422919;
+}
+/* Scene band: the original head row carries the scene, title, bone plaque and an outline Close. */
+html[data-graphics="diorama"] #boneWrapper #boneWrapper0>.mobile-bone-scene {
+  position:relative; display:flex; align-items:flex-end; gap:12px; min-height:176px; margin:0 -16px; padding:12px 16px!important;
+  background:linear-gradient(#0b171c00 25%,#0b171cb0 58%,#0b171cf2 82%),var(--bone-scene) center 58%/cover!important;
+  border-bottom:3px solid #6b4a24; box-shadow:inset 0 0 0 1px #d9aa6244,inset 0 -1px #d9aa6266;
+}
+html[data-graphics="diorama"] #boneWrapper #boneOwnedContainer { color:var(--n-ivory)!important; font-size:1rem!important; text-align:left; }
+html[data-graphics="diorama"] #boneWrapper #boneTitleContainer {
+  font:650 1.75rem/1.1 var(--n-serif)!important; color:var(--n-ivory)!important; letter-spacing:0!important; text-shadow:0 2px 4px #000,0 0 12px #000a!important;
+}
+/* V-235 A (user choice 28.10.2026): the balance is a plain line on the scene, bone and figure in ivory, not a plaque that
+   reads like a second button; Get bones sits beside it on the same centre line. Title on its own row, then count and button.
+   Both scale with the screen width at most, and Android text zoom (which multiplies even vw) is cancelled by --text-zoom
+   (mobile-ui.js), so they fit one line at 360 px with 130 % font; should a longer number still not fit, the button
+   wraps below instead of being cut off. */
+html[data-graphics="diorama"] #boneWrapper #boneOwnedContainer { display:flex!important; flex-wrap:wrap; align-items:center; column-gap:12px; row-gap:4px; }
+html[data-graphics="diorama"] #boneWrapper #boneOwnedContainer>#boneTitleContainer { flex:0 0 100%; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-balance {
+  display:inline-flex; align-items:center; gap:6px; min-height:44px; margin:0; padding:0; white-space:nowrap;
+  font:700 min(1.25rem,calc(5.2vw / var(--text-zoom,1)))/1 var(--font-data); color:var(--n-ivory); text-shadow:0 2px 4px #000,0 0 10px #000c;
+}
+html[data-graphics="diorama"] #boneWrapper #boneOwnedContainer>.mobile-bone-get-main { font-size:min(1rem,calc(4.2vw / var(--text-zoom,1)))!important; padding:0 min(14px,3vw)!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-balance #bonesOwned { font-weight:700; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-have { display:none; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-coin { display:block; width:24px; height:24px; background:url("mobile-assets/diorama/R09-Bones.webp") center/contain no-repeat; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-balance .mobile-bone-coin { width:28px; height:28px; filter:drop-shadow(0 2px 3px #000c); }
+/* V-229 A: Close is a small × in the top right corner of the scene (44 px, labelled "Close Bone Trader"); its column no
+   longer positions it, so it hangs on the scene band. */
+html[data-graphics="diorama"] #boneWrapper #boneWrapper0>.mobile-bone-scene>.col-xs-2 { position:static!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-close {
+  position:absolute; top:8px; right:8px; width:44px!important; min-width:44px!important; height:44px!important; min-height:44px!important; padding:0!important;
+  border-radius:50%!important; font-size:0!important; line-height:0!important;
+  background:#13242acc!important; color:var(--n-ivory)!important; border:1px solid var(--n-gold)!important; box-shadow:0 2px 4px #000a!important;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-close::before { content:"×"; font:600 1.75rem/1 var(--font-body); }
+/* V-229 A: the till in the head row, a large gold button beside the bone plaque. */
+html[data-graphics="diorama"] #boneWrapper :is(.mobile-bone-get-main,.mobile-bone-bar-get) {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:0 14px!important; vertical-align:middle;
+  font:700 1rem/1.1 var(--font-body)!important; color:#2a1c08!important; background:linear-gradient(#f6d27a,#d9a640 60%,#b9822a)!important; border:1px solid #fff0b8!important;
+  border-radius:5px!important; box-shadow:inset 0 1px #fff6dc,0 2px 5px #000b!important; white-space:nowrap; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-get-main { margin:0; }
+html[data-graphics="diorama"] #boneWrapper :is(.mobile-bone-get-main,.mobile-bone-bar-get)::before {
+  content:""; width:22px; height:22px; background:url("mobile-assets/diorama/R09-Bones.webp") center/contain no-repeat;
+}
+/* V-229 D: once the scene is scrolled away a narrow strip stays on top: bone count, what the cheapest offer of the open
+   section still lacks, and a small Get bones; the tabs stick below it. Its negative bottom margin keeps it out of the
+   flow, so the page does not jump when it appears. */
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-bar:not([hidden]) {
+  position:sticky; top:0; z-index:6; display:flex; align-items:center; gap:8px; height:52px; box-sizing:border-box; margin:0 -16px -52px; padding:4px 16px;
+  background:#e9d4aa; border-bottom:1px solid #6b4a24;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-bar-count { display:inline-flex; align-items:center; gap:4px; flex:none; font:700 1rem/1 var(--font-data); color:var(--ink); }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-short {
+  flex:1; min-width:0; overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; color:var(--ink); font:600 .8125rem/1.15 var(--font-body);
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-bar-get { flex:none; padding:0 10px!important; font-size:.875rem!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-bar-get::before { width:18px; height:18px; }
+/* V-229: the packs are their own view; Back returns to the section that was open. */
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-shop-back:not([hidden]) {
+  display:inline-flex; align-items:center; gap:6px; min-height:44px; margin:12px 0 4px; padding:0 14px!important; border-radius:5px!important;
+  font:600 .95rem var(--font-body)!important; color:var(--n-ivory)!important; background:#205958!important; border:1px solid var(--n-gold)!important;
+  box-shadow:inset 0 1px #ffffff2e,0 2px 3px #0006!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-shop-back::before { content:"←"; }
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-tabs>button[data-panel="shop"] { display:none!important; }
+/* Segment tabs shaped like the Create Map / My Maps tabs; an opaque block with the shared sticky-tab fade (mobile-diorama-night.css),
+   so no text hangs half under them. Get bones is no tab in Diorama (V-229), so the three offer sections share one row. */
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-tabs {
+  position:sticky; top:0; z-index:5; gap:6px; margin:0 -16px; padding:10px 16px!important; background:#e9d4aa!important; box-shadow:none;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-tabs>button {
+  min-height:44px!important; min-width:0; padding:0 2px!important; font:700 .875rem/1.1 var(--font-body)!important;
+  color:#302e23!important; background:linear-gradient(#f7e9c8,#e6cf9e)!important; border:1px solid #9b7442!important; border-radius:5px!important;
+  box-shadow:inset 0 1px #fff6dc,0 2px 3px #0006!important;
+}
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-tabs>button[aria-selected="true"] {
+  color:#fff8e6!important; background:#205958!important; border-color:var(--n-gold)!important; box-shadow:inset 0 1px #ffffff2e,0 2px 3px #0006!important;
+}
+html[data-graphics="diorama"] #boneWrapper #mobile-bone-tabs::after { background:linear-gradient(#e9d4aa,#e9d4aa00); }
+/* Section heads and notes on the night ground. */
+html[data-graphics="diorama"] #boneWrapper :is(.boneBuyTitle,.importLocation) { font:650 1.15rem/1.2 var(--n-serif)!important; color:#f3d79c!important; margin:16px 0 8px!important; }
+html[data-graphics="diorama"] #boneWrapper :is(.mobile-bone-intro,.boneBuyDesc) { color:#fff8e6!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-intro { margin-top:6px; }
+/* Bestiary cards: picture left, name and price, effect, then Info and the action. */
+html[data-graphics="diorama"] #boneWrapper .importsTable tbody { display:grid!important; gap:10px!important; }
+html[data-graphics="diorama"] #boneWrapper :is(.importsTable tr,.mobile-bone-offer) {
+  display:grid!important; grid-template-columns:84px minmax(0,1fr) auto!important; grid-template-areas:"pic name price" "pic eff eff" "pic ctrl ctrl";
+  gap:4px 12px!important; align-items:start; margin:0 0 10px!important; padding:10px!important; overflow-wrap:anywhere;
+  background:transparent!important; border:14px solid transparent!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch!important; border-radius:0!important; color:var(--ink)!important; box-shadow:none;
+}
+html[data-graphics="diorama"] #boneWrapper .importsTable tr { margin:0!important; }
+html[data-graphics="diorama"] #boneWrapper .importsTable tr.importOwned { border-color:#8a6a3a!important; }
+html[data-graphics="diorama"] #boneWrapper .importsTable td:first-child { display:contents!important; }
+html[data-graphics="diorama"] #boneWrapper .importsTable td:nth-child(2) { grid-area:eff; align-self:start; }
+html[data-graphics="diorama"] #boneWrapper :is(.importsTable td,.mobile-bone-offer)>strong { grid-area:name; font:700 1.12rem/1.2 var(--n-serif)!important; color:#244f43!important; min-width:0; }
+html[data-graphics="diorama"] #boneWrapper :is(.importsTable td,.mobile-bone-offer)>.mobile-bone-price {
+  grid-area:price; text-align:right; white-space:nowrap; color:var(--ink)!important; font:600 .85rem/1.4 var(--font-data)!important;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-offer>.mobile-bone-effect { grid-area:eff; }
+html[data-graphics="diorama"] #boneWrapper :is(.importsTable td,.mobile-bone-effect) { color:var(--ink)!important; font-size:.875rem!important; line-height:1.35!important; white-space:normal!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-controls { grid-area:ctrl; justify-content:flex-end; gap:4px!important; }
+/* V-220: Get bones under a locked offer in the gold of the prices, quiet; the packs' own status lines on the night ground. */
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-get { color:var(--accent)!important; font:600 .8125rem/1.2 var(--font-body)!important; background:none!important; border:0!important; border-image:none!important; text-decoration:underline; }
+html[data-graphics="diorama"] #boneWrapper :is(.mobile-bone-shop-note,.mobile-bone-shop-status,.mobile-bone-shop-terms,.mobile-bone-supporter) { color:var(--ink)!important; background:var(--paper); padding:16px; font-size:.875rem!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-shop-note { margin-bottom:0; padding-bottom:0; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-shop-details { color:#fff8e6; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-pic {
+  grid-area:pic; position:relative; display:block; width:84px; height:96px; border-radius:5px;
+  background:var(--pic) center 70%/88% no-repeat,radial-gradient(circle at 50% 40%,#2f4a4f,#0f1d22 75%); border:1px solid #8a6a3a;
+  box-shadow:inset 0 0 0 2px #0b171c,inset 0 0 14px #000a;
+}
+/* Ownership as a slanted stamp on the picture (word, not colour); the action repeats it with a check mark. */
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-pic[data-stamp]::after {
+  content:attr(data-stamp); position:absolute; left:50%; bottom:6px; transform:translateX(-50%) rotate(-10deg); padding:2px 7px; white-space:nowrap;
+  font:800 .72rem/1.2 var(--font-body); letter-spacing:.08em; text-transform:uppercase; color:#ffe6ae; background:#5a1f16e6;
+  border:2px double #e0b45e; border-radius:3px; box-shadow:0 2px 4px #000b;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-controls>:is(.mobile-bone-buy,.boneBtn) {
+  display:inline-flex; align-items:center; justify-content:center; width:auto!important; min-width:88px!important; min-height:44px!important; padding:0 12px!important;
+  border-radius:3px!important; font-weight:650!important; color:var(--n-ivory)!important;
+  background:linear-gradient(125deg,#b67d2c,#714316)!important; border:1px solid #dba94e!important; box-shadow:inset 0 1px #f9d58b55!important;
+}
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-controls>.mobile-bone-done { background:transparent!important; color:var(--accent)!important; border:1px solid var(--line)!important; box-shadow:none!important; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-controls>.mobile-bone-done::before { content:"✓"; margin-right:6px; font-weight:800; }
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-controls>.mobile-bone-locked { background:transparent!important; color:var(--muted)!important; border:1px dashed #9b7442!important; box-shadow:none!important; }
+/* Extras: Bone Portal gain. */
+html[data-graphics="diorama"] #boneWrapper .mobile-bone-gain { color:var(--ink); }
+html[data-graphics="diorama"] #boneWrapper #boneMiscColumn>.boneBuyTitle { margin-top:10px!important; }
+/* V-229 D: with the strip on top the tabs stick right below it. */
+html[data-graphics="diorama"] #boneWrapper:has(#mobile-bone-bar:not([hidden])) #mobile-bone-tabs { top:52px; }

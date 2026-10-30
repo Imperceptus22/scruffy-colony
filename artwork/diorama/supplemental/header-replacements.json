@@ -1,0 +1,26 @@
+[
+  {
+    "key": "resources",
+    "id": "H01",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-d1882bc4-c9d7-4e31-8573-8693141c97cc.png",
+    "prompt": "Generate ONE SINGLE WIDE LANDSCAPE PANORAMA, exact canvas aspect ratio THREE TO ONE (3:1). This is one unified illustration, NO ATLAS, no panels, no split screen. Handcrafted diorama 3D painterly illustration, real wood/stone/metal, forest greenery, soft upper-left amber light, deep petrol shadows and warm walnut wood. An entire woodland worksite with FOUR distinct workstations side by side, equally spaced: apple garden/farm, lumber bench, rocky mine with ore cart, study/laboratory with books and blue glass. FOUR tiny friendly cream-fur pointed-ear golden-green-hair Scruffies wearing petrol scarves work there. All stations visible, nothing cropped. Fine detail, tactile materials, immersive miniature depth, same selected Scruffy Colony reference style. The entire action must fill the whole 3:1 canvas and occupy the full image height, with no empty bars, frames, UI, text, numerals, labels, logos or watermarks. No text. It is a decorative panoramic header asset for a mobile game.",
+    "sourceRect": "full",
+    "replaces": "resources-workstations"
+  },
+  {
+    "key": "buildings",
+    "id": "H02",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-e52a4f71-8212-4264-a549-d0928e8315d5.png",
+    "prompt": "Generate ONE SINGLE WIDE LANDSCAPE PANORAMA, exact canvas aspect ratio THREE TO ONE (3:1). This is one unified illustration, NO ATLAS, no panels, no split screen. Handcrafted diorama 3D painterly illustration, real wood/stone/metal, forest greenery, soft upper-left amber light, deep petrol shadows and warm walnut wood. A carpenter workbench with FOUR SMALL miniature buildings side by side and fully visible: trap cage, thatched Hut, red Barn, stone Forge with glowing fire. Four different buildings equal importance, not one huge barn. Warm lantern at left, soft out-of-focus workshop at back, wood shavings/tool edges. Fine detail, tactile materials, immersive miniature depth, same selected Scruffy Colony reference style. The entire action must fill the whole 3:1 canvas and occupy the full image height, with no empty bars, frames, UI, text, numerals, labels, logos or watermarks. No text. It is a decorative panoramic header asset for a mobile game.",
+    "sourceRect": "full",
+    "replaces": "building-workshop"
+  },
+  {
+    "key": "equipment",
+    "id": "H03",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-2ce3e97c-b707-4b9a-9a0a-5f64586a8aa4.png",
+    "prompt": "Generate ONE SINGLE WIDE LANDSCAPE PANORAMA, exact canvas aspect ratio THREE TO ONE (3:1). This is one unified illustration, NO ATLAS, no panels, no split screen. Handcrafted diorama 3D painterly illustration, real wood/stone/metal, forest greenery, soft upper-left amber light, deep petrol shadows and warm walnut wood. A coherent armorer workshop panorama, blades and round shield on dark timber toolboard, polished helmet, leather boots, counter edge with petrol cloth, warm lantern at far left. No people or monsters. Beautiful handcrafted miniature world. Fine detail, tactile materials, immersive miniature depth, same selected Scruffy Colony reference style. The entire action must fill the whole 3:1 canvas and occupy the full image height, with no empty bars, frames, UI, text, numerals, labels, logos or watermarks. No text. It is a decorative panoramic header asset for a mobile game.",
+    "sourceRect": "full",
+    "replaces": "equipment-armory"
+  }
+]

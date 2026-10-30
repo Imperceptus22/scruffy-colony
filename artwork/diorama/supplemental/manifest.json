@@ -1,0 +1,194 @@
+[
+  {
+    "key": "materials",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-19a137b8-2faa-413d-a301-64b1ebce4276.png",
+    "prompt": "Production raster artwork for Scruffy Colony in the exact selected Diorama material language of the references: tactile handcrafted miniatures, believable wood/leather/stone, petrol and warm amber, excellent sculpted 3D detail with painterly finish, soft upper-left light. It is a production ASSET ATLAS, not a game screenshot, poster or mood board. No typography, labels, numerals, fake UI copy, branding, watermarks, icons not requested, or state/reward claims. Exact panel count and equal cell boundaries. Do not copy an entire UI screenshot into an asset. Create a square atlas with EXACTLY TWO COLUMNS and TWO ROWS, four distinct cells, in the following left-to-right top-to-bottom order. Cell1: an opaque, seamless dark walnut WOOD SURFACE, horizontal broad wooden planks with real carved depth, fine grain and warm matte material; fills its ENTIRE cell edge-to-edge, no frame, no objects, no spectacular highlights, a quiet rich base behind the UI. Cell2: an opaque dark PETROL VELVET PADDED RECESS, fine material folds only near the edges and quiet deep petrol center, a very thin dark timber rim; fills ENTIRE cell, designed to hold a separately rendered equipment object, NO objects in this cell. Cell3: an isolated long horizontal WOODEN RESOURCE SHELF, like the reference under the apple basket: thick dark worn wood with short visible front bevel and offset soft shadow, no items, no pegs/captions; actual transparent empty space above and around it, fit completely inside its cell. Cell4: an isolated tactile DARK CARVED WOOD NAVIGATION SLOT, a square recessed wooden button with modest brass corners, empty dark matte center, correct thick physical edge, no symbol or lettering, transparent outside the whole slot. Keep enough gutters around the isolated cells3/4. Actual PNG alpha outside shelf/navslot, opaque cells1/2. The wood and recess are real raster materials for semantic UI, no flat colored rectangles pretending to be a surface.",
+    "references": [
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-resources.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-equipment.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-buildings.png"
+    ],
+    "items": [
+      {
+        "id": "P01",
+        "key": "dark-wood",
+        "filename": "P01-dark-wood.webp",
+        "sourceRect": {
+          "left": 2,
+          "top": 2,
+          "width": 622,
+          "height": 620
+        },
+        "domain": "materials"
+      },
+      {
+        "id": "P02",
+        "key": "padded-bay",
+        "filename": "P02-padded-bay.webp",
+        "sourceRect": {
+          "left": 630,
+          "top": 2,
+          "width": 622,
+          "height": 620
+        },
+        "domain": "materials"
+      },
+      {
+        "id": "P03",
+        "key": "resource-shelf",
+        "filename": "P03-resource-shelf.webp",
+        "sourceRect": {
+          "left": 12,
+          "top": 850,
+          "width": 730,
+          "height": 220
+        },
+        "domain": "materials"
+      },
+      {
+        "id": "P04",
+        "key": "nav-slot",
+        "filename": "P04-nav-slot.webp",
+        "sourceRect": {
+          "left": 750,
+          "top": 700,
+          "width": 460,
+          "height": 430
+        },
+        "domain": "materials"
+      }
+    ]
+  },
+  {
+    "key": "headers",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-b524a5db-7909-4a35-b63e-695160943714.png",
+    "prompt": "Production raster artwork for Scruffy Colony in the exact selected Diorama material language of the references: tactile handcrafted miniatures, believable wood/leather/stone, petrol and warm amber, excellent sculpted 3D detail with painterly finish, soft upper-left light. It is a production ASSET ATLAS, not a game screenshot, poster or mood board. No typography, labels, numerals, fake UI copy, branding, watermarks, icons not requested, or state/reward claims. Exact panel count and equal cell boundaries. Do not copy an entire UI screenshot into an asset. Generate ONE square atlas split into EXACTLY THREE EQUAL HORIZONTAL STRIPS, one column and three rows. Each strip is a panoramic illustration with aspect3:1. A thin dark horizontal gutter separates strips; no external frame. TOP STRIP: a full-width contiguous little woodland work-site viewed from the front at miniature eye height, with FOUR DISTINCT workstations evenly distributed across width: tiny farm/apple garden on left, lumber workbench and timber second, open mine with small ore cart third, study/laboratory with books and blue glassware at right. Four small existing-family Scruffies are working there: cream fur, golden-green tousled hair, pointed ears, petrol scarves, friendly faces as in reference; these are decorative workers, NOT enemy monsters, and must match the reference family exactly. Keep the four stations recognizable even when the strip is shown at400x130px. MIDDLE STRIP: an artisan carpenter's workbench showing FOUR recognizable miniature models lined up SIDE BY SIDE across the FULL width: wooden trap cage, thatched Hut, red Barn, stone Forge with small warm fire. Fine tools/wood shavings at the front, restrained softly blurred workshop at back. No one dominant huge barn; all four models are visible and separated. BOTTOM STRIP: an integrated armorer's workshop panorama, shields and blades on a dark timber toolboard, polished steel helmet, leather boots, quiet counter edge and warm lamp on far left, a coherent deep miniature world. No model people or monsters in middle/bottom strips. Upper-left lighting, petrol cloth, dark walnut structural wood and gentle amber highlights across all strips. It must preserve the four-station/four-model narratives of the selected screen references rather than a crop of a random village or building. Text-free and entirely decorative.",
+    "references": [
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-resources.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-equipment.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-buildings.png"
+    ],
+    "items": [
+      {
+        "id": "H01",
+        "key": "resources-workstations",
+        "filename": "H01-resources-workstations.webp",
+        "sourceRect": {
+          "left": 0,
+          "top": 0,
+          "width": 2161,
+          "height": 294
+        },
+        "domain": "scenes"
+      },
+      {
+        "id": "H02",
+        "key": "building-workshop",
+        "filename": "H02-building-workshop.webp",
+        "sourceRect": {
+          "left": 0,
+          "top": 306,
+          "width": 2161,
+          "height": 210
+        },
+        "domain": "scenes"
+      },
+      {
+        "id": "H03",
+        "key": "equipment-armory",
+        "filename": "H03-equipment-armory.webp",
+        "sourceRect": {
+          "left": 0,
+          "top": 530,
+          "width": 2161,
+          "height": 198
+        },
+        "domain": "scenes"
+      }
+    ]
+  },
+  {
+    "key": "nav-glyphs",
+    "source": "<home>\\.codex\\generated_images\\01a16ecf-98ee-7b53-a03b-c87a55a70c36\\exec-96c5c757-dd3d-466a-816a-ff5ef970b61e.png",
+    "prompt": "Production raster artwork for Scruffy Colony in the exact selected Diorama material language of the references: tactile handcrafted miniatures, believable wood/leather/stone, petrol and warm amber, excellent sculpted 3D detail with painterly finish, soft upper-left light. It is a production ASSET ATLAS, not a game screenshot, poster or mood board. No typography, labels, numerals, fake UI copy, branding, watermarks, icons not requested, or state/reward claims. Exact panel count and equal cell boundaries. Do not copy an entire UI screenshot into an asset. Create ONE high-resolution transparent atlas with EXACTLY THREE COLUMNS and TWO ROWS, six isolated sculpted navigation icons in equal cells with generous clear alpha gutters, exact reading order. Top row: (1) two crossed short swords, (2) sturdy round-topped shield, (3) three small stacked wooden supply crates. Bottom row: (4) a cozy simple house/building silhouette with pitched roof, (5) two friendly abstract bust silhouettes as a personnel group, (6) a laboratory flask with a small amount of blue liquid. All six are built from the same beautifully sculpted warm brass/golden wood 3D material, tactile beveled depth and strong readable silhouette. These must read at24–30CSSpx, so simplify tiny ornament. No background plates or surrounding frames: ONLY the icon itself and a soft offset shadow on real transparent alpha. No circles, labels, lettering, numbers or extra people/characters. Uniform camera/front three-quarter angle and upper-left light. Match the six golden dimensional navigation symbols seen at the bottom of the reference screenshots, rather than drawing flat outline vectors. No red/cyan/magenta outline/chroma fringes.",
+    "references": [
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-resources.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-equipment.png",
+      "<home>/.codex/worktrees/play-rights-product/Trimps Mobile/docs/design/diorama/reference-buildings.png"
+    ],
+    "items": [
+      {
+        "id": "N01",
+        "key": "combat",
+        "filename": "N01-combat.webp",
+        "sourceRect": {
+          "left": 0,
+          "top": 0,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      },
+      {
+        "id": "N02",
+        "key": "equipment",
+        "filename": "N02-equipment.webp",
+        "sourceRect": {
+          "left": 512,
+          "top": 0,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      },
+      {
+        "id": "N03",
+        "key": "resources",
+        "filename": "N03-resources.webp",
+        "sourceRect": {
+          "left": 1024,
+          "top": 0,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      },
+      {
+        "id": "N04",
+        "key": "buildings",
+        "filename": "N04-buildings.webp",
+        "sourceRect": {
+          "left": 0,
+          "top": 512,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      },
+      {
+        "id": "N05",
+        "key": "jobs",
+        "filename": "N05-jobs.webp",
+        "sourceRect": {
+          "left": 512,
+          "top": 512,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      },
+      {
+        "id": "N06",
+        "key": "research",
+        "filename": "N06-research.webp",
+        "sourceRect": {
+          "left": 1024,
+          "top": 512,
+          "width": 512,
+          "height": 512
+        },
+        "domain": "navigation"
+      }
+    ]
+  }
+]

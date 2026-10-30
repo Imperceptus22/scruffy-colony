@@ -1,0 +1,67 @@
+.qol-page { max-width:46rem; margin-inline:auto; color:var(--ink); }
+.qol-page h2 { font:700 1.1rem var(--font-data); margin:24px 0 12px; }
+.qol-page p,.qol-page li { line-height:1.5; overflow-wrap:anywhere; }
+.qol-page button,.qol-page input,.qol-page select { font:inherit; color:var(--ink); min-height:44px; border:1px solid var(--line); border-radius:5px; background:var(--surface); padding:10px; max-width:100%; }
+.qol-page button { margin:4px 4px 4px 0; }
+.qol-page label { display:block; margin-block:12px; }
+.qol-page label input:not([type=checkbox]),.qol-page label select { display:block; width:100%; margin-top:4px; }
+.qol-page input[type=checkbox] { vertical-align:middle; min-height:24px; width:24px; margin-right:8px; }
+.qol-page details { border-bottom:1px solid var(--line); padding-block:8px; }
+.qol-page summary { padding-block:12px; cursor:pointer; overflow-wrap:anywhere; }
+.qol-page table { border-collapse:collapse; width:100%; table-layout:fixed; }
+.qol-page th,.qol-page td { border-bottom:1px solid var(--line); padding:8px 4px; text-align:right; overflow-wrap:anywhere; }
+.qol-page th:first-child,.qol-page td:first-child { text-align:left; }
+.qol-storage-note { color:var(--danger); }
+.qol-chart { width:100%; height:150px; color:var(--accent); overflow:visible; }
+.qol-chart text { font:12px sans-serif; fill:var(--ink); }
+.qol-chart polyline { fill:none; stroke:currentColor; stroke-width:2; }
+.qol-protected { color:var(--danger); }
+#heirloomWrapper.mobile-heirlooms #sortHeirloomsBtn,#heirloomWrapper.mobile-heirlooms #recycleAllHeirloomsBtn { font-size:1rem; padding:10px; min-height:44px; white-space:normal; }
+#qol-heirloom-tools { padding-block:12px; border-top:1px solid var(--line); }
+.qol-page svg { display:block; width:100%; height:150px; color:var(--accent); }
+#mobile-map-presets .mobile-map-slots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+#mobile-map-presets .mobile-map-slots > * { width:auto; min-width:0; overflow-wrap:anywhere; white-space:normal; min-height:44px; }
+#mobile-preset-toolbar{display:flex;gap:8px;align-items:stretch;}
+#mobile-preset-choose{flex:1;min-width:0;min-height:48px;text-align:left;padding:10px 32px 10px 12px;position:relative;font:600 1rem var(--font-data);overflow-wrap:anywhere;}
+#mobile-preset-choose::after{content:'';position:absolute;right:10px;top:calc(50% - 8px);width:16px;height:16px;background:currentColor;mask:var(--mi-next) center/contain no-repeat;transform:rotate(90deg);}
+#mobile-preset-manage{flex:none;width:48px;min-height:48px;position:relative;}
+#mobile-preset-manage::before{content:'';display:block;margin:auto;width:24px;height:24px;background:var(--accent);mask:var(--mi-settings) center/contain no-repeat;}
+#mobile-preset-choices{margin-top:8px;padding:4px;border:1px solid var(--accent);border-radius:5px;background:var(--surface);}
+#mobile-preset-choices[hidden],#mobile-preset-editor[hidden],.mobile-workshop-tabs[hidden]{display:none!important;}
+#mobile-preset-choices .mobile-map-slots{display:grid;grid-template-columns:1fr;gap:3px;}
+#mobile-preset-choices .mobile-map-slots>*{text-align:left!important;padding:10px;min-height:44px;font-size:.875rem;}
+#mobile-preset-choices .mobile-map-slots>*,#mobile-preset-editor-slots .mobile-map-slots>*{text-shadow:none!important;}
+#mobile-preset-editor{padding:4px 0 12px;}
+#mobile-preset-editor button,#mobile-preset-editor [role=button],#mobile-preset-editor input{min-height:44px;font:inherit;max-width:100%;}
+#mobile-preset-editor-back{margin-bottom:12px;color:var(--accent);}
+#mobile-preset-editor-slots .mobile-map-slots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0;}
+#mobile-preset-editor-slots .mobile-map-slots>*{width:auto;min-width:0;font-size:0!important;min-height:44px;}
+#mobile-preset-editor-slots .mobile-map-slots>*::before{content:attr(data-slot-number);font:600 1rem var(--font-data);}
+#mobile-preset-editor .mobile-map-slots [aria-pressed=true]{background:var(--accent);color:var(--onaccent);border-color:var(--accent);}
+#mobile-preset-selected{font:600 1rem var(--font-data);overflow-wrap:anywhere;}
+#qol-preset-naming,.mobile-preset-editor-settings{padding-top:16px;margin-top:16px;border-top:1px solid var(--line);}
+#qol-preset-naming label{display:block;font-size:.875rem;}
+#qol-preset-naming input{display:block;width:100%;padding:8px;margin:8px 0;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--ink);}
+#qol-preset-naming button{width:100%;}
+#qol-preset-naming p,#mobile-preset-current-settings,#mobile-preset-note{font-size:.8125rem;overflow-wrap:anywhere;}
+#mobile-preset-editor .mobile-map-preset-actions{display:grid;grid-template-columns:1fr;gap:8px;}
+#mobile-preset-editor .mobile-map-preset-actions>*{width:100%;text-align:center;white-space:normal;padding:10px;}
+#mobile-preset-editor #advMapsSaveBtn{background:var(--accent);color:var(--onaccent);border-color:var(--accent);}
+#mobile-equipment-research [role="status"]{grid-column:1/-1;font-size:.875rem;margin:4px 0;}
+#mobile-equipment-research [role="status"]:empty{display:none;}
+.qol-display-preferences{margin-bottom:20px;}
+.qol-display-preferences label{display:flex!important;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:12px 0;border-block:1px solid var(--line);}
+.qol-display-preferences small{display:block;font-size:.8rem;color:var(--muted);margin-top:5px;}
+.qol-page .qol-display-preferences input[type=checkbox]{appearance:none;flex:none;width:44px;height:26px;min-height:26px;border-radius:20px;background:var(--track);border:0;padding:0;margin:0;position:relative;cursor:pointer;}
+.qol-display-preferences input::after{content:'';position:absolute;width:20px;height:20px;top:3px;left:3px;border-radius:50%;background:var(--surface);}
+.qol-page .qol-display-preferences input:checked{background:var(--accent);}
+.qol-display-preferences input:checked::after{left:21px;}
+#qol-hide-storage,#qol-advisor-auto{outline:none;box-shadow:none;}
+.qol-display-preferences label+label{border-top:0;}
+#qol-hide-storage:focus-visible,#qol-advisor-auto:focus-visible{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--accent);}
+/* V-198: the feedback link looks like the page buttons, as a clear main action. */
+.qol-page a.qol-link { display:block; box-sizing:border-box; min-height:44px; margin:12px 0 4px; padding:11px 10px; border:1px solid var(--accent); border-radius:5px; color:var(--ink); background:var(--surface); font-weight:700; text-align:center; text-decoration:none; }
+/* V-265: the read-only current challenge view; the original description wraps and never scrolls sideways. */
+.qol-challenge-name { font:700 1.15rem var(--font-data); margin:8px 0; overflow-wrap:anywhere; }
+.qol-challenge-text { line-height:1.5; overflow-wrap:anywhere; max-width:100%; }
+.qol-challenge-text ul { padding-left:1.25em; margin:8px 0; }

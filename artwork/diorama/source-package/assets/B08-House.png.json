@@ -1,0 +1,23 @@
+{
+  "id": "B08",
+  "key": "House",
+  "name": "House",
+  "group": "buildings",
+  "file": "assets/B08-House.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 1158,
+    "top": 337,
+    "width": 378,
+    "height": 308
+  },
+  "nativeSize": {
+    "width": 378,
+    "height": 308
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "a8b5820608f24f2c0ed6903e3845cd994655f6df17c1fd91c809583ad1316e19",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

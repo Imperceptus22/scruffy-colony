@@ -1,0 +1,2961 @@
+{
+  "sourceRevision": "26366c1dbed61aeeb1c03a43410cfb813be1fcc7",
+  "count": 89,
+  "encoding": {
+    "format": "WebP",
+    "quality": 92,
+    "alphaQuality": 100,
+    "effort": 4,
+    "alphaCrop": {
+      "groups": [
+        "buildings",
+        "equipment",
+        "resources",
+        "interface",
+        "terrain tiles"
+      ],
+      "threshold": 8,
+      "padding": 2
+    },
+    "matteCleanup": "See docs/design/diorama-assets.md."
+  },
+  "items": [
+    {
+      "id": "B01",
+      "key": "Antenna",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B01-Antenna.webp",
+      "sourceAsset": "assets/B01-Antenna.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 375,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 55,
+        "top": 4,
+        "width": 292,
+        "height": 331
+      },
+      "sourceSha256": "36e6dccd2bf57866f3ff7306b604610be109fbcefca2842c5ec25e63b63cf5e9",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 375,
+        "height": 337
+      },
+      "outputSize": {
+        "width": 292,
+        "height": 331
+      },
+      "outputSha256": "a8fa8ff482a6d354f11c36bf83027c8a01a5da590561da3d92bcfbb5398e6d94"
+    },
+    {
+      "id": "B02",
+      "key": "Barn",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B02-Barn.webp",
+      "sourceAsset": "assets/B02-Barn.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 375,
+        "top": 0,
+        "width": 400,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 40,
+        "width": 400,
+        "height": 290
+      },
+      "sourceSha256": "0800cfef79168f724636ba9251da84c2a8b780d64109018d86e26ba5bff2ba99",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 400,
+        "height": 337
+      },
+      "outputSize": {
+        "width": 400,
+        "height": 290
+      },
+      "outputSha256": "4dc79814c5e9cb5c7f106aa37803e02f50168f73605bd7122aa43d53ab507eec"
+    },
+    {
+      "id": "B03",
+      "key": "Collector",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B03-Collector.webp",
+      "sourceAsset": "assets/B03-Collector.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 0,
+        "width": 383,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 18,
+        "top": 56,
+        "width": 346,
+        "height": 281
+      },
+      "sourceSha256": "bf09639c1aabdb0bc85e3ef1dd27ff67ce91502743bf492d3eabdeffb988ec40",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 383,
+        "height": 337
+      },
+      "outputSize": {
+        "width": 346,
+        "height": 281
+      },
+      "outputSha256": "bef974d14f8b6fe8b953f166a6233082fe96dfcfc38c7ab7305c8b68e4cd4c96"
+    },
+    {
+      "id": "B04",
+      "key": "Forge",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B04-Forge.webp",
+      "sourceAsset": "assets/B04-Forge.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 0,
+        "width": 378,
+        "height": 337
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 8,
+        "top": 4,
+        "width": 352,
+        "height": 323
+      },
+      "sourceSha256": "d626407a33608cb6ad5f4ce5fa4bff64652d064e9d2462afb377f6864c5beede",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 378,
+        "height": 337
+      },
+      "outputSize": {
+        "width": 352,
+        "height": 323
+      },
+      "outputSha256": "d90cf723b058d5ae9126ad813a914ab88e74ccde3cc46a56eded70b9eb774871"
+    },
+    {
+      "id": "B05",
+      "key": "Gateway",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B05-Gateway.webp",
+      "sourceAsset": "assets/B05-Gateway.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 337,
+        "width": 375,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 12,
+        "top": 10,
+        "width": 353,
+        "height": 297
+      },
+      "sourceSha256": "4bc643b74ebd498aa61329fb0c299ecc705533e82d521fdac17a4d424eb0f0de",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 375,
+        "height": 308
+      },
+      "outputSize": {
+        "width": 353,
+        "height": 297
+      },
+      "outputSha256": "52e6dfbc337a816a45ef33a69ef792e8a3afe8d71ea040f22b28e36f272bb9f2"
+    },
+    {
+      "id": "B06",
+      "key": "Gym",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B06-Gym.webp",
+      "sourceAsset": "assets/B06-Gym.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 375,
+        "top": 337,
+        "width": 400,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 7,
+        "top": 61,
+        "width": 383,
+        "height": 229
+      },
+      "sourceSha256": "56f49afa1e90aa94acc446262dd040424462ac8442cde9c83d0fba2c053cd03c",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 400,
+        "height": 308
+      },
+      "outputSize": {
+        "width": 383,
+        "height": 229
+      },
+      "outputSha256": "701eb357cf2bf042f7ee5c6cb9a94077c451e8b3d739be30f1c3712c0ce03d37"
+    },
+    {
+      "id": "B07",
+      "key": "Hotel",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B07-Hotel.webp",
+      "sourceAsset": "assets/B07-Hotel.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 337,
+        "width": 383,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 7,
+        "top": 0,
+        "width": 369,
+        "height": 308
+      },
+      "sourceSha256": "570e12d992bde5996df3249476a5d2c74406fad70f210ed7796f012536246edf",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 383,
+        "height": 308
+      },
+      "outputSize": {
+        "width": 369,
+        "height": 308
+      },
+      "outputSha256": "f298c5b428a822d6c367c373ebc92c0963eb0ac19d2a72b4a01dd9808db146ae"
+    },
+    {
+      "id": "B08",
+      "key": "House",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B08-House.webp",
+      "sourceAsset": "assets/B08-House.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 337,
+        "width": 378,
+        "height": 308
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 10,
+        "top": 14,
+        "width": 360,
+        "height": 294
+      },
+      "sourceSha256": "a8b5820608f24f2c0ed6903e3845cd994655f6df17c1fd91c809583ad1316e19",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 378,
+        "height": 308
+      },
+      "outputSize": {
+        "width": 360,
+        "height": 294
+      },
+      "outputSha256": "92943a0a4e7b177c5282cd21bc308e193d8d0cf4eb48290e56fcb8064cb3f558"
+    },
+    {
+      "id": "B09",
+      "key": "Hub",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B09-Hub.webp",
+      "sourceAsset": "assets/B09-Hub.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 645,
+        "width": 410,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 7,
+        "top": 2,
+        "width": 395,
+        "height": 341
+      },
+      "sourceSha256": "00a1d08a214d36e547709a8a140236ebca39130fd8e20452ceb53e466b94b0f9",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 410,
+        "height": 379
+      },
+      "outputSize": {
+        "width": 395,
+        "height": 341
+      },
+      "outputSha256": "10143e2fd1d51a5253003fb7d362c2fd565df72b5463cf0ed37615cfc6b79406"
+    },
+    {
+      "id": "B10",
+      "key": "Hut",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B10-Hut.webp",
+      "sourceAsset": "assets/B10-Hut.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 410,
+        "top": 645,
+        "width": 365,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 75,
+        "width": 362,
+        "height": 272
+      },
+      "sourceSha256": "e10aefc3ee13a4d666927038e84211bc33d95247e2bba750f0e30be71dba14a5",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 365,
+        "height": 379
+      },
+      "outputSize": {
+        "width": 362,
+        "height": 272
+      },
+      "outputSha256": "9cb51e0717042466eef17fcbd6bbda0d639d761b34c03bff14d63d3eeddb4ffd"
+    },
+    {
+      "id": "B11",
+      "key": "Laboratory",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B11-Laboratory.webp",
+      "sourceAsset": "assets/B11-Laboratory.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 775,
+        "top": 645,
+        "width": 383,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 12,
+        "top": 0,
+        "width": 371,
+        "height": 348
+      },
+      "sourceSha256": "ffe5cf32052ecd0bbc8e9f9c0b9e43e16c06b99a1e360f054af13ff9651cbb55",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 383,
+        "height": 379
+      },
+      "outputSize": {
+        "width": 371,
+        "height": 348
+      },
+      "outputSha256": "82a4b7388b190f3de013f7a4e1abd386541e678c3505fff96dc8566f6d6f0aad"
+    },
+    {
+      "id": "B12",
+      "key": "Mansion",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B12-Mansion.webp",
+      "sourceAsset": "assets/B12-Mansion.png",
+      "source": "objects/buildings-01-antenna-mansion.png",
+      "sourceRect": {
+        "left": 1158,
+        "top": 645,
+        "width": 378,
+        "height": 379
+      },
+      "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 11,
+        "width": 373,
+        "height": 339
+      },
+      "sourceSha256": "e3a51255e7901056192452b9d9f9f6f0133827580ccb5e2102c43dafed316300",
+      "sourceAtlasSha256": "247809f1c114aedc745e426fb1cca2f6763112bd4889c9b610667d3c79f915a4",
+      "sourcePromptSha256": "ea365e77016be4dfa1db2b95bb93c2344e75669a4c2b784c7119da9f06481b55",
+      "sourceSize": {
+        "width": 378,
+        "height": 379
+      },
+      "outputSize": {
+        "width": 373,
+        "height": 339
+      },
+      "outputSha256": "5d3562df50fc427e56d4403b2afd4b453174142b8968c706eab0a79bf96a9dad"
+    },
+    {
+      "id": "B13",
+      "key": "Microchip",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B13-Microchip.webp",
+      "sourceAsset": "assets/B13-Microchip.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 24,
+        "top": 59,
+        "width": 375,
+        "height": 340
+      },
+      "sourceSha256": "038ddb988aaff814babcc439ce260998e0f84850e05ee7ca7ec1f29f4fdfefdc",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 411
+      },
+      "outputSize": {
+        "width": 375,
+        "height": 340
+      },
+      "outputSha256": "d7a385d89828d2c796f6f492587bb229a863a8eca021dea1bd9ae608d0e98de4"
+    },
+    {
+      "id": "B14",
+      "key": "Nursery",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B14-Nursery.webp",
+      "sourceAsset": "assets/B14-Nursery.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 5,
+        "top": 31,
+        "width": 413,
+        "height": 360
+      },
+      "sourceSha256": "08c589202595f8a74e608e1b0aa8835fddc1c00d1a4d676ae741f6135ab4527f",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 411
+      },
+      "outputSize": {
+        "width": 413,
+        "height": 360
+      },
+      "outputSha256": "54621c4707e97c4eda18a5cf73345d47077a20dfc776d16a409fe80287818d98"
+    },
+    {
+      "id": "B15",
+      "key": "Resort",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B15-Resort.webp",
+      "sourceAsset": "assets/B15-Resort.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 0,
+        "width": 418,
+        "height": 411
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 24,
+        "width": 412,
+        "height": 387
+      },
+      "sourceSha256": "4beec8e97e5cc1091cbcfd74058f9a145b186e9a3f2052da9b2111940f2fa51d",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 411
+      },
+      "outputSize": {
+        "width": 412,
+        "height": 387
+      },
+      "outputSha256": "0cab22e79243d62f546b3e6bcd2f1494af3f579eaca2f48c8483ba2a642d79e6"
+    },
+    {
+      "id": "B16",
+      "key": "Shed",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B16-Shed.webp",
+      "sourceAsset": "assets/B16-Shed.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 411,
+        "width": 418,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 28,
+        "top": 48,
+        "width": 364,
+        "height": 341
+      },
+      "sourceSha256": "9255132cb8cd3b036b1a1f8191a1cf990260d9cce36dfc4eb5ebccd0cd9a9d2f",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 389
+      },
+      "outputSize": {
+        "width": 364,
+        "height": 341
+      },
+      "outputSha256": "bc1c2d02f29b63926fc88f89f841dcad52feab23be0ba41be9ad8982d938e43c"
+    },
+    {
+      "id": "B17",
+      "key": "Smithy",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B17-Smithy.webp",
+      "sourceAsset": "assets/B17-Smithy.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 411,
+        "width": 418,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 1,
+        "top": 6,
+        "width": 417,
+        "height": 379
+      },
+      "sourceSha256": "a6072cd7498fd9bd20827bd5920ca5c5b2cf9492792fd645032fddb7907b2c49",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 389
+      },
+      "outputSize": {
+        "width": 417,
+        "height": 379
+      },
+      "outputSha256": "7f50687a692485433d6d77e23d7c81bad4c77d1387bb12aaaaed9baef3f22c86"
+    },
+    {
+      "id": "B18",
+      "key": "Trap",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B18-Trap.webp",
+      "sourceAsset": "assets/B18-Trap.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 856,
+        "top": 411,
+        "width": 398,
+        "height": 389
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 11,
+        "top": 64,
+        "width": 369,
+        "height": 298
+      },
+      "sourceSha256": "7df461dd19ec8f01ad013cceb2c55c4ae1fc6eca861e43c44e8854956c325e4b",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 398,
+        "height": 389
+      },
+      "outputSize": {
+        "width": 369,
+        "height": 298
+      },
+      "outputSha256": "532e53e3b5f712b673a9bc5c1a0926fee2a7b26103a309d0c4486668fbf5fe4d"
+    },
+    {
+      "id": "B19",
+      "key": "Tribute",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B19-Tribute.webp",
+      "sourceAsset": "assets/B19-Tribute.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 32,
+        "top": 0,
+        "width": 355,
+        "height": 409
+      },
+      "sourceSha256": "2043754d8f7a91922df727df26ef1c1bea73a99dc4cf093252e264a115e6a95b",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 454
+      },
+      "outputSize": {
+        "width": 355,
+        "height": 409
+      },
+      "outputSha256": "d4a97602494fba3cbc6c22fcc66b29d7a19d9d95176660cb6e48e1b19bc0fd62"
+    },
+    {
+      "id": "B20",
+      "key": "Warpstation",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B20-Warpstation.webp",
+      "sourceAsset": "assets/B20-Warpstation.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 9,
+        "top": 10,
+        "width": 404,
+        "height": 406
+      },
+      "sourceSha256": "1fc9ab8f71087885a1aa935229b03116e06d53a3a4eb616130b73c610bec2f74",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 454
+      },
+      "outputSize": {
+        "width": 404,
+        "height": 406
+      },
+      "outputSha256": "39b431c78727aa003bc4ba962bf8ac5efc65c577bf502a6b6ca88b671f87aa85"
+    },
+    {
+      "id": "B21",
+      "key": "Wormhole",
+      "group": "buildings",
+      "file": "mobile-assets/diorama/B21-Wormhole.webp",
+      "sourceAsset": "assets/B21-Wormhole.png",
+      "source": "objects/buildings-02-microchip-wormhole.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 800,
+        "width": 418,
+        "height": 454
+      },
+      "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+      "renditionCrop": {
+        "left": 31,
+        "top": 28,
+        "width": 375,
+        "height": 384
+      },
+      "sourceSha256": "7010bd63f099dd278c10890f57d933f678e9527b3d9623261eb2c37d78d6f610",
+      "sourceAtlasSha256": "49b0ccf173455b52d053f9dbd203e0485b87a308683f39967f72095150f49d83",
+      "sourcePromptSha256": "40c3e2cb8b590a966f85192459da76877140152221594474d7bc4170a0fb805e",
+      "sourceSize": {
+        "width": 418,
+        "height": 454
+      },
+      "outputSize": {
+        "width": 375,
+        "height": 384
+      },
+      "outputSha256": "caa43159c57eaedf6328eabcc5633400fa37e1c51e5e5c2e3b424d53bfb70775"
+    },
+    {
+      "id": "E01",
+      "key": "Arbalest",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E01-Arbalest.webp",
+      "sourceAsset": "assets/E01-Arbalest.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 38,
+        "top": 82,
+        "width": 405,
+        "height": 345
+      },
+      "sourceSha256": "9a49ccb56e69cf70df5b9f07ff5fb7743223adcc34366c0f7b54dc0e6c6978d8",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 405,
+        "height": 345
+      },
+      "outputSha256": "d4c511789a9c8ee481a8ad46c53cf2768ec43708cca66a4ce4cd0a10bd92bcdc"
+    },
+    {
+      "id": "E02",
+      "key": "Battleaxe",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E02-Battleaxe.webp",
+      "sourceAsset": "assets/E02-Battleaxe.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 14,
+        "width": 437,
+        "height": 425
+      },
+      "sourceSha256": "fe85e9cbd9014ad77a3b4efbd19796061187a559d56564eb6728d704a0e25eee",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 437,
+        "height": 425
+      },
+      "outputSha256": "6f089280fbafc497426cf7387316478a01c9903e964e2253ccc4bd55ef916652"
+    },
+    {
+      "id": "E03",
+      "key": "Boots",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E03-Boots.webp",
+      "sourceAsset": "assets/E03-Boots.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 62,
+        "top": 81,
+        "width": 380,
+        "height": 354
+      },
+      "sourceSha256": "efa9fee14e6c92289b14f3bb95a152d81d9009e26b196c76e78fb90d83b5626e",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 380,
+        "height": 354
+      },
+      "outputSha256": "de69aaadabe1e361f7ad163ceaa76e694a4cd98403bc5426b91a4a3e995aa7fb"
+    },
+    {
+      "id": "E04",
+      "key": "Breastplate",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E04-Breastplate.webp",
+      "sourceAsset": "assets/E04-Breastplate.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 41,
+        "top": 39,
+        "width": 363,
+        "height": 398
+      },
+      "sourceSha256": "539208188d0cce98ecb8ececdce7a09cb7b45e7e72edfce4f866e2968272aa05",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 363,
+        "height": 398
+      },
+      "outputSha256": "193ab742a483405ad0300a1f18b1424f9d2e94766ca19c05809dc0304f25d72f"
+    },
+    {
+      "id": "E05",
+      "key": "Dagger",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E05-Dagger.webp",
+      "sourceAsset": "assets/E05-Dagger.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 59,
+        "top": 35,
+        "width": 324,
+        "height": 369
+      },
+      "sourceSha256": "8bcf3cb8a6365cb19bcfae9d9b1e66cdc66d511bfcafd5efd8378b96e66a2c7c",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 324,
+        "height": 369
+      },
+      "outputSha256": "c1621219b4151f47f29f49fa3b189e0deb24f7cdddce239de5ff7a94669d8b1e"
+    },
+    {
+      "id": "E06",
+      "key": "Gambeson",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E06-Gambeson.webp",
+      "sourceAsset": "assets/E06-Gambeson.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 40,
+        "width": 444,
+        "height": 373
+      },
+      "sourceSha256": "0e14aae07624015723205019fa6db28ee39f892435fdae1b9064e0f712e77ee0",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 444,
+        "height": 373
+      },
+      "outputSha256": "015609e0f1079495b7c41baa57f26e62e400020ae1a0e7e47252083157dc5ca4"
+    },
+    {
+      "id": "E07",
+      "key": "Greatsword",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E07-Greatsword.webp",
+      "sourceAsset": "assets/E07-Greatsword.png",
+      "source": "objects/equipment-01-arbalest-greatsword.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+      "renditionCrop": {
+        "left": 11,
+        "top": 9,
+        "width": 410,
+        "height": 404
+      },
+      "sourceSha256": "d858fdedb37e7017137f3ac40e50cea8cfc2435afa99398e42f3a302b6664fe1",
+      "sourceAtlasSha256": "5b59c1acb228967b37854c08eced7cda63a9aac75c488e2060cb8b268b258704",
+      "sourcePromptSha256": "57a752066a6812df421807ea788a0e88dfaaa948cc69bc11a2ba4255e894d9ff",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 410,
+        "height": 404
+      },
+      "outputSha256": "1352ea9999f133349a671bfb88f91a6accdccb28ae0f81ef749be37a943c7f0a"
+    },
+    {
+      "id": "E08",
+      "key": "Helmet",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E08-Helmet.webp",
+      "sourceAsset": "assets/E08-Helmet.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 79,
+        "top": 48,
+        "width": 409,
+        "height": 441
+      },
+      "sourceSha256": "94678b5424989b24f4096eba53407b43f8a203f5b095f73736b91e3e579a82ef",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 409,
+        "height": 441
+      },
+      "outputSha256": "1190c9f4f087100fac92c1c7765b11255f64d25c51c8207145b0e7ae0b001c58"
+    },
+    {
+      "id": "E09",
+      "key": "Mace",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E09-Mace.webp",
+      "sourceAsset": "assets/E09-Mace.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 92,
+        "top": 58,
+        "width": 385,
+        "height": 432
+      },
+      "sourceSha256": "f26dcf547861d2abfffb3632863cee58c95d10d8c140b1580910b9337c263e9a",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 385,
+        "height": 432
+      },
+      "outputSha256": "1f1eb9cf8b5a9ad50384229457810ecb13b4a645090b64de76d51c11df63d2ae"
+    },
+    {
+      "id": "E10",
+      "key": "Pants",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E10-Pants.webp",
+      "sourceAsset": "assets/E10-Pants.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 102,
+        "top": 37,
+        "width": 360,
+        "height": 452
+      },
+      "sourceSha256": "ff23e1b68edbf58d70b1ff978b9ed841b4dbacf5c2d2ea52bde77412782742e5",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 360,
+        "height": 452
+      },
+      "outputSha256": "c691190ef98c4e2aaa5fdbf1768f8995090c42b398e276cbee9877606484b698"
+    },
+    {
+      "id": "E11",
+      "key": "Polearm",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E11-Polearm.webp",
+      "sourceAsset": "assets/E11-Polearm.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 48,
+        "top": 2,
+        "width": 436,
+        "height": 469
+      },
+      "sourceSha256": "aad380e2900fbbbc24f70ced3de2168b7eb7c48b59fa3a9fb4fb2bb5deb40828",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 436,
+        "height": 469
+      },
+      "outputSha256": "a6e1a60aec0127e25a95a8d9360ad2cf8ce066e10165cb36ef388186b9dc3632"
+    },
+    {
+      "id": "E12",
+      "key": "Shield",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E12-Shield.webp",
+      "sourceAsset": "assets/E12-Shield.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 56,
+        "top": 20,
+        "width": 411,
+        "height": 432
+      },
+      "sourceSha256": "1f16ee66baeba31c8209ff3bf7302f5e8614074522ec093d7146ea9bce90afce",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 411,
+        "height": 432
+      },
+      "outputSha256": "e641bd3ffc6956bd635be3bbce780162f7ffd54e89182cf60f43706ab4d501ab"
+    },
+    {
+      "id": "E13",
+      "key": "Shoulderguards",
+      "group": "equipment",
+      "file": "mobile-assets/diorama/E13-Shoulderguards.webp",
+      "sourceAsset": "assets/E13-Shoulderguards.png",
+      "source": "objects/equipment-02-helmet-shoulderguards.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+      "renditionCrop": {
+        "left": 12,
+        "top": 76,
+        "width": 478,
+        "height": 342
+      },
+      "sourceSha256": "d510ce4d6ae0c142e3665330061ac0254aab7ab86f00189650ca54cd4d56d0d8",
+      "sourceAtlasSha256": "75a597ff5319757316f1ab83bc023de2193853b914f02882ddeea0e305d4fc18",
+      "sourcePromptSha256": "7674935a941e5cb3f50de8015f7a6c828dc87a382fed083b72d17155db712444",
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 478,
+        "height": 342
+      },
+      "outputSha256": "110765d1f1033a22e5a833597ef305ff2c080695acdfe0a75ab7f9552c92f447"
+    },
+    {
+      "id": "R01",
+      "key": "Food",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R01-Food.webp",
+      "sourceAsset": "assets/R01-Food.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 27,
+        "top": 74,
+        "width": 380,
+        "height": 341
+      },
+      "sourceSha256": "7e6a49478e42edaf253d0f02c1cdc8c399317091dce0ca09ecc4b2937e150e13",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 430
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 230
+      },
+      "outputSha256": "029c458fe3077e71d0539465c43641eea3691b039bd01c957e1e7b468e841b59"
+    },
+    {
+      "id": "R02",
+      "key": "Wood",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R02-Wood.webp",
+      "sourceAsset": "assets/R02-Wood.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 15,
+        "top": 71,
+        "width": 388,
+        "height": 346
+      },
+      "sourceSha256": "0f7675ca07fb883b734ce0e1a641d9078eb1dc0546fcdee5ef9cc7bbfe7ef5b0",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 430
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 228
+      },
+      "outputSha256": "87364ad73ff23bf43f7fb20a809d3ece26a50364f7df17d167df8e7f1d4d275a"
+    },
+    {
+      "id": "R03",
+      "key": "Metal",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R03-Metal.webp",
+      "sourceAsset": "assets/R03-Metal.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 0,
+        "width": 418,
+        "height": 430
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 14,
+        "top": 69,
+        "width": 386,
+        "height": 352
+      },
+      "sourceSha256": "d028bda1063bac12c1af2396dfaff7f5c529fb2c5c246a69c75a95ee90cbdec3",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 430
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 233
+      },
+      "outputSha256": "e037d67c0ccf49c9b3993ccdb99dc1a8988081aabe0c54b2d053850b41586ac7"
+    },
+    {
+      "id": "R04",
+      "key": "Science",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R04-Science.webp",
+      "sourceAsset": "assets/R04-Science.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 45,
+        "top": 36,
+        "width": 367,
+        "height": 331
+      },
+      "sourceSha256": "424385094d5b5b026c92676fcb4c9959ac213ef65899f8e59f1462dd2ba62bb5",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 380
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 231
+      },
+      "outputSha256": "d580cb01b216350c3aef1100eb8d596af1ff51882ad0f444d0ffc9d51d853a0d"
+    },
+    {
+      "id": "R05",
+      "key": "Fragments",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R05-Fragments.webp",
+      "sourceAsset": "assets/R05-Fragments.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 28,
+        "top": 41,
+        "width": 373,
+        "height": 323
+      },
+      "sourceSha256": "29b86d008a70d816ac95c15261a3e630f325429b3e2071799df3d3b7ef0adfac",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 380
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 222
+      },
+      "outputSha256": "9e1c613ba7fc2ffcda9b08e74a553abfc1f81152737640c774f6692303568529"
+    },
+    {
+      "id": "R06",
+      "key": "Gems",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R06-Gems.webp",
+      "sourceAsset": "assets/R06-Gems.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 430,
+        "width": 418,
+        "height": 380
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 63,
+        "top": 80,
+        "width": 283,
+        "height": 253
+      },
+      "sourceSha256": "01ae11034fb8e68d52b04028e79360ccf29ba79e7f5bd6120de215cc92549b5b",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 380
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 229
+      },
+      "outputSha256": "1ee0793bcf6a4cd63531a8813a9627836bbe42dc9b664732b1a3ab0dd2237ac4"
+    },
+    {
+      "id": "R07",
+      "key": "Helium",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R07-Helium.webp",
+      "sourceAsset": "assets/R07-Helium.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 69,
+        "top": 15,
+        "width": 296,
+        "height": 378
+      },
+      "sourceSha256": "3029127eaa4b62dc539f1657ec3e597df657b2c48d2f6c2060f66b2fc96c08bc",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 200,
+        "height": 256
+      },
+      "outputSha256": "97a6e7fc3dd7c2abe4054a3255709a80a9f19bd3657e67205bbc62b6961ba332"
+    },
+    {
+      "id": "R08",
+      "key": "Radon",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R08-Radon.webp",
+      "sourceAsset": "assets/R08-Radon.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 418,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 58,
+        "top": 14,
+        "width": 295,
+        "height": 378
+      },
+      "sourceSha256": "6362655f9b9fea0787dec5c6822cac30d19b8adb642d8f716a7013850b0618f0",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 200,
+        "height": 256
+      },
+      "outputSha256": "15b08eced882d466fa20469f7069eceb15eee7178dd4c6d262978e125f18830c"
+    },
+    {
+      "id": "R09",
+      "key": "Bones",
+      "group": "resources",
+      "file": "mobile-assets/diorama/R09-Bones.webp",
+      "sourceAsset": "assets/R09-Bones.png",
+      "source": "world/resources.png",
+      "sourceRect": {
+        "left": 836,
+        "top": 810,
+        "width": 418,
+        "height": 444
+      },
+      "sourcePrompt": "world/resources.prompt.txt",
+      "renditionCrop": {
+        "left": 10,
+        "top": 42,
+        "width": 384,
+        "height": 353
+      },
+      "sourceSha256": "4490ecb137bd865f54dbe1fa08fba2777da44099fc4ce4054378ad4481302a4d",
+      "sourceAtlasSha256": "bf65b57e2e27cb9e028132c3ddd3126132ec8bf5759538ffcf3237e18cbb9c9a",
+      "sourcePromptSha256": "2d86f1cf823ce83f39342c3fe90f1ee7fc0988619a90f005892520084286d95c",
+      "sourceSize": {
+        "width": 418,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 235
+      },
+      "outputSha256": "b489274a0dac3c221926e198647ce5c1399669b6f50484b6ca6df6c257ef9568"
+    },
+    {
+      "id": "J01",
+      "key": "Farmer",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J01-Farmer.webp",
+      "sourceAsset": "assets/J01-Farmer.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourceSha256": "19e5475fbcd97f2ef947d8e57d8992a458d11a20338740e9b3e5dad0d7f34724",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "27c3acbc0df96fac29403d5b0a3a8d0717eabf082046c076e5583a3a27b25ed2"
+    },
+    {
+      "id": "J02",
+      "key": "Lumberjack",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J02-Lumberjack.webp",
+      "sourceAsset": "assets/J02-Lumberjack.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourceSha256": "604c01e3edd82e84d92691484a1c9daad3faa756525ca643f8d9edcfcda1bfe8",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 383
+      },
+      "outputSha256": "c2b334f2ce5d16f24d95a86b10aa47c7f52cd8b34e31342f39dec03e9eecec76"
+    },
+    {
+      "id": "J03",
+      "key": "Miner",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J03-Miner.webp",
+      "sourceAsset": "assets/J03-Miner.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourceSha256": "8c1e1cc5972aaf88f4eea5d238202047d42b369d425984fe0b18eca61eb7a3c8",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "a21412c0d66ef1385775f58d97b99e7e84ce38162514244f2319ca14ab08ac27"
+    },
+    {
+      "id": "J04",
+      "key": "Scientist",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J04-Scientist.webp",
+      "sourceAsset": "assets/J04-Scientist.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourceSha256": "416e698a9be6fec366c8718a53a69012be849dc2c43fe5f180e601c01730095a",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 383
+      },
+      "outputSha256": "b4095055a5947a9022337219bf55033147f1c23de179899928e592bfd979b3ee"
+    },
+    {
+      "id": "J05",
+      "key": "Trainer",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J05-Trainer.webp",
+      "sourceAsset": "assets/J05-Trainer.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 444
+      },
+      "sourceSha256": "0380861c12039e6464d40de3ea8607b3304b4178fd64af6e978a250957e5f32c",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 383,
+        "height": 384
+      },
+      "outputSha256": "090129b6733be210548379f35e5e22f08be8fced1193c42abd4aacdf154b6e7d"
+    },
+    {
+      "id": "J06",
+      "key": "Explorer",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J06-Explorer.webp",
+      "sourceAsset": "assets/J06-Explorer.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 444
+      },
+      "sourceSha256": "6ec71f399e94f07c47313f457d1fc3c6b86fd371a9eb1dfbe06017038b2d109f",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "85e11901f14cd009973899d351628a77ba21bc5807393f7237e65aa3d3c205d5"
+    },
+    {
+      "id": "J07",
+      "key": "Geneticist",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J07-Geneticist.webp",
+      "sourceAsset": "assets/J07-Geneticist.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 444
+      },
+      "sourceSha256": "700982d9fed962bde3ffe34f8dd3748d86b4d61f1761120d18a7a0b51c485348",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 383,
+        "height": 384
+      },
+      "outputSha256": "87984504921450e827e8f32eb5254e52e8b9f4db7e6049ffc810f0524810e858"
+    },
+    {
+      "id": "J08",
+      "key": "Magmamancer",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J08-Magmamancer.webp",
+      "sourceAsset": "assets/J08-Magmamancer.png",
+      "source": "world/jobs.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/jobs.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 444
+      },
+      "sourceSha256": "608af305ed179ed6369e5dbb6decb75fd09cca64e975b8435ff780d2d02c6952",
+      "sourceAtlasSha256": "6b781f43ce2502722fdf2a951f26df27fb168a79f0a9e6fd0d9085ba7b82d6da",
+      "sourcePromptSha256": "4af6116397b519a9d38a720db723c4ae3b351fffc24ac88075b1242b25d17167",
+      "sourceSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "31e533e0bbcfc5ff0725cb60aa5cfee270f55788e8992b3b708198862b666809"
+    },
+    {
+      "id": "M01",
+      "key": "Random",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M01-Random.webp",
+      "sourceAsset": "assets/M01-Random.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourceSha256": "0f1a1550dc6d1ef5ab76b72db423a3e4a379b8f7179b9e1e19a4ab807378eb99",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSha256": "2f0d43ca9862ff6ae211425d212ee824c70b490063909fc2482d4db566244a5c"
+    },
+    {
+      "id": "M02",
+      "key": "Mountain",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M02-Mountain.webp",
+      "sourceAsset": "assets/M02-Mountain.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourceSha256": "e864751a5ec71b68ff67d768408b161199678756e3069ebe68e57179ccdb32f6",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSha256": "ad3b0164029993123424b56dca9d6edf65c5b6dd5845b33cedb0fa8efcf6840f"
+    },
+    {
+      "id": "M03",
+      "key": "Forest",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M03-Forest.webp",
+      "sourceAsset": "assets/M03-Forest.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 443
+      },
+      "sourceSha256": "b6a24c4687524830b17bf1c6fcf115d8ceb54feb05ffcd2d34cc3cb3513faee4",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 443,
+        "height": 443
+      },
+      "outputSha256": "52f6a54378c72c2fff461c04fd803ba6cd477e1adc6349f67ba7042a46945234"
+    },
+    {
+      "id": "M04",
+      "key": "Sea",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M04-Sea.webp",
+      "sourceAsset": "assets/M04-Sea.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 443
+      },
+      "sourceSha256": "4159aa8945ed6ce5d9a950d46277cbd8c8bef3c75cd785fb235a59054259325a",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSize": {
+        "width": 444,
+        "height": 443
+      },
+      "outputSha256": "ee7fc2644fa22dd711876d9a7486ebfd39b7a879e60e93c3930058f328d685e0"
+    },
+    {
+      "id": "M05",
+      "key": "Depths",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M05-Depths.webp",
+      "sourceAsset": "assets/M05-Depths.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 444
+      },
+      "sourceSha256": "213c23a73151146079fe49b3b358b9bb890fea841b1640c4ac4a2d780bdebd43",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSha256": "5c6decf6c8033ca5f09ca40851eddd85426eaf269340ff504bcf16616b9a88d5"
+    },
+    {
+      "id": "M06",
+      "key": "Gardens",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M06-Gardens.webp",
+      "sourceAsset": "assets/M06-Gardens.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 443,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 444
+      },
+      "sourceSha256": "75b03fc13fb54ee97d4264177356775641d3245b5b5381b60acff0983419632d",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSha256": "6013551d20505fbad95c0aa0ed80a088f3ea4cce6c95dde03aa7382e48dc6665"
+    },
+    {
+      "id": "M07",
+      "key": "Farmlands",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M07-Farmlands.webp",
+      "sourceAsset": "assets/M07-Farmlands.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 887,
+        "top": 443,
+        "width": 443,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 443,
+        "height": 444
+      },
+      "sourceSha256": "efdd2a2a93da8613df7125f11c227bc13bd9de68a46edf513ecada4a970c4903",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 443,
+        "height": 444
+      },
+      "outputSha256": "f7cb07da81dc754462fa8b0d7c4806ab201049c5cceb4de0990defa3fe1763f8"
+    },
+    {
+      "id": "M08",
+      "key": "Void",
+      "group": "biomes",
+      "file": "mobile-assets/diorama/M08-Void.webp",
+      "sourceAsset": "assets/M08-Void.png",
+      "source": "world/biomes.png",
+      "sourceRect": {
+        "left": 1330,
+        "top": 443,
+        "width": 444,
+        "height": 444
+      },
+      "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 444,
+        "height": 444
+      },
+      "sourceSha256": "05757f869ac59c3ab63a5738c9ee176e17b47d47eb831fad1ba22ae60b45a59d",
+      "sourceAtlasSha256": "943db89ab81364d40b97d0dc13fbebcbec8d21d4040914fd34e63ce1c94e210a",
+      "sourcePromptSha256": "753990c9e49dc621dce1f6d03c87476d349e974f13bde8f9411a376c9e0c6cc3",
+      "sourceSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSize": {
+        "width": 444,
+        "height": 444
+      },
+      "outputSha256": "f5cc9e5e2b5dcac88aa848368e0adc74cf6e44fcbbe1d54c81a28e6e66fb0520"
+    },
+    {
+      "id": "J09",
+      "key": "Amalgamator",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J09-Amalgamator.webp",
+      "sourceAsset": "assets/J09-Amalgamator.png",
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourceSha256": "bab77d3c1b1cd5a257b8d5e395181ddf238925adbad9e0b1e07891ee33819248",
+      "sourceAtlasSha256": "0d1c7429b71e21fcee6c31fcc4058a01499ed92102f431b1b841e667728b46ec",
+      "sourcePromptSha256": "886453abb780d88a877b1974330191df27dede7f17a9d4974198f282a01f856e",
+      "sourceSize": {
+        "width": 724,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "2ceb2ebe6b6e0e97e16be3f4b3a5c89be48c4c58cec7bd78023a26cc400d7f99"
+    },
+    {
+      "id": "J10",
+      "key": "Meteorologist",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J10-Meteorologist.webp",
+      "sourceAsset": "assets/J10-Meteorologist.png",
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 724,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourceSha256": "5e8d022736b5fa9e39a95bc6a0b09bc49945831adb9337321c38433f2b64c614",
+      "sourceAtlasSha256": "0d1c7429b71e21fcee6c31fcc4058a01499ed92102f431b1b841e667728b46ec",
+      "sourcePromptSha256": "886453abb780d88a877b1974330191df27dede7f17a9d4974198f282a01f856e",
+      "sourceSize": {
+        "width": 724,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "663f341c7eca1e4055d1c70f590cc2a5590a987909004aac739f669ccba4ffd5"
+    },
+    {
+      "id": "J11",
+      "key": "Worshipper",
+      "group": "jobs",
+      "file": "mobile-assets/diorama/J11-Worshipper.webp",
+      "sourceAsset": "assets/J11-Worshipper.png",
+      "source": "world/jobs-extra.png",
+      "sourceRect": {
+        "left": 1448,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourcePrompt": "world/jobs-extra.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 724,
+        "height": 724
+      },
+      "sourceSha256": "beeefbb7d0b793d7827c5f2dfeac09254f2dbb6a860c4a42155478663d804b2f",
+      "sourceAtlasSha256": "0d1c7429b71e21fcee6c31fcc4058a01499ed92102f431b1b841e667728b46ec",
+      "sourcePromptSha256": "886453abb780d88a877b1974330191df27dede7f17a9d4974198f282a01f856e",
+      "sourceSize": {
+        "width": 724,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 384,
+        "height": 384
+      },
+      "outputSha256": "4dc03f881d53585153426c74f2bb66e8fed9e67f3274a1f6a8543e5cea5726cc"
+    },
+    {
+      "id": "S01",
+      "key": "colony",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S01-colony.webp",
+      "sourceAsset": "assets/S01-colony.png",
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "3cee5ccb5c2178c704b180fd8ff55291011afbccb303e5c8ec7209b7b6f0ab3a",
+      "sourceAtlasSha256": "689fa590eadb2df7b941edfdf1b48f5523ecca69f03dbac82ebf879e1416461b",
+      "sourcePromptSha256": "b4265824941e532e071d00893602e1f50256f9ba552104209977a0f1d8bb4b61",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "58108875f5afbc1ca315d89c3e69fc5a6af84d3b156623c34b647e69e5d4c743"
+    },
+    {
+      "id": "S02",
+      "key": "building-workshop",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S02-building-workshop.webp",
+      "sourceAsset": "assets/S02-building-workshop.png",
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "bceb77167433a6724df098b5c0794d36f7803aaa32db39d9b508fea8a0452d20",
+      "sourceAtlasSha256": "689fa590eadb2df7b941edfdf1b48f5523ecca69f03dbac82ebf879e1416461b",
+      "sourcePromptSha256": "b4265824941e532e071d00893602e1f50256f9ba552104209977a0f1d8bb4b61",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "a48cbb74235a3d51192575a633fdaebb69952db598abfefeaff498970a1b02cc"
+    },
+    {
+      "id": "S03",
+      "key": "equipment-armory",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S03-equipment-armory.webp",
+      "sourceAsset": "assets/S03-equipment-armory.png",
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "adb89151712c63e89d4548d8ace1a310874c9b05d5e6f8707763c58c5ee4830f",
+      "sourceAtlasSha256": "689fa590eadb2df7b941edfdf1b48f5523ecca69f03dbac82ebf879e1416461b",
+      "sourcePromptSha256": "b4265824941e532e071d00893602e1f50256f9ba552104209977a0f1d8bb4b61",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "a81b9bb5fb0e7092cc3505d6b625c6427b1ee9095809ef4778f402005ab83a6b"
+    },
+    {
+      "id": "S04",
+      "key": "jobs-camp",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S04-jobs-camp.webp",
+      "sourceAsset": "assets/S04-jobs-camp.png",
+      "source": "special/01-common-scenes.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/common-scenes.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "add11215d0e2989c42296d2e60830f7fbc5fe77ade700a947a4162a1095cbc0c",
+      "sourceAtlasSha256": "689fa590eadb2df7b941edfdf1b48f5523ecca69f03dbac82ebf879e1416461b",
+      "sourcePromptSha256": "b4265824941e532e071d00893602e1f50256f9ba552104209977a0f1d8bb4b61",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "4b11893abd4d72aedab6ff9d062576fcda9274e6c35b95b70dd09b37664d935b"
+    },
+    {
+      "id": "S05",
+      "key": "research-laboratory",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S05-research-laboratory.webp",
+      "sourceAsset": "assets/S05-research-laboratory.png",
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "62451f6c8635994d715f3d78b8f2921eef4f006e77d5a3ffab71ff48ae34cdc4",
+      "sourceAtlasSha256": "641a709bdbe766b8562b37dbd1fc6564a9366f8131647bb533bde2aa6fcb3b63",
+      "sourcePromptSha256": "11f20ad520b958e86a3840012d704f10d9df6afb75a0898f03ab7e55ab178d6c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "80eb1a9d177a2d0a4418d3dd31cdc7628f6cfda12fe3763637a00ccbc82aa007"
+    },
+    {
+      "id": "S06",
+      "key": "portal",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S06-portal.webp",
+      "sourceAsset": "assets/S06-portal.png",
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "b0d2ec15e07bdf423e93cd25bcaaab0ac407c27f3dec40e2eafbf3f9971745ad",
+      "sourceAtlasSha256": "641a709bdbe766b8562b37dbd1fc6564a9366f8131647bb533bde2aa6fcb3b63",
+      "sourcePromptSha256": "11f20ad520b958e86a3840012d704f10d9df6afb75a0898f03ab7e55ab178d6c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "e18797ab10de06608b4f247c5cef9092b4ba8194d9b96b4dbe213c227112413d"
+    },
+    {
+      "id": "S07",
+      "key": "heirlooms-display",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S07-heirlooms-display.webp",
+      "sourceAsset": "assets/S07-heirlooms-display.png",
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "48e62b86063c614ca27745f2b3ece41a5c95faa32e6f628426dfcb3770c32c0d",
+      "sourceAtlasSha256": "641a709bdbe766b8562b37dbd1fc6564a9366f8131647bb533bde2aa6fcb3b63",
+      "sourcePromptSha256": "11f20ad520b958e86a3840012d704f10d9df6afb75a0898f03ab7e55ab178d6c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "fc9612cd4c90d7ec2feebeb5c030702396d6d04656f010011caa316d1d9eac31"
+    },
+    {
+      "id": "S08",
+      "key": "more-settings-desk",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S08-more-settings-desk.webp",
+      "sourceAsset": "assets/S08-more-settings-desk.png",
+      "source": "special/02-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/systems.edit.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "cfe48984d78313de277c3898baccba80e9a3eb0ee92b6dd789d9480a967a83d0",
+      "sourceAtlasSha256": "641a709bdbe766b8562b37dbd1fc6564a9366f8131647bb533bde2aa6fcb3b63",
+      "sourcePromptSha256": "11f20ad520b958e86a3840012d704f10d9df6afb75a0898f03ab7e55ab178d6c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "f77e643fc7aa4e7111c152386664c395f6ee9472337cc80768ca0e0d20cdb3b2"
+    },
+    {
+      "id": "S09",
+      "key": "player-spire",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S09-player-spire.webp",
+      "sourceAsset": "assets/S09-player-spire.png",
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "b57c755823ef4cc70f5e4328a2badcc1b99a9aaaa0a08fef18458d61fcf050e8",
+      "sourceAtlasSha256": "830cac2e9f1c40208631ea8563b0bef9ae40eec186917610d4004a3c7d347567",
+      "sourcePromptSha256": "93db4d9e337c6f4f269fee9e0809d6e6a309d6bb295ca31c4bdeddc343b54d9c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "ec34fee9cbf2d606ee5e6ad8e7b179a6b7c904342be6186682bbda27cee06b09"
+    },
+    {
+      "id": "S10",
+      "key": "spire-assault",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S10-spire-assault.webp",
+      "sourceAsset": "assets/S10-spire-assault.png",
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 10,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "0d7e23fb21a2bd63b484e457c631fddfa2c948947506e61fca1ffd9303d901c2",
+      "sourceAtlasSha256": "830cac2e9f1c40208631ea8563b0bef9ae40eec186917610d4004a3c7d347567",
+      "sourcePromptSha256": "93db4d9e337c6f4f269fee9e0809d6e6a309d6bb295ca31c4bdeddc343b54d9c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "665bbc73406dbd0b850d153f4a6acbe8580389c5f02539aa72d485014067df3b"
+    },
+    {
+      "id": "S11",
+      "key": "alchemy",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S11-alchemy.webp",
+      "sourceAsset": "assets/S11-alchemy.png",
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 10,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "26bc794018ab0ca0a4fdc801f9732473af24a46240b7043e39c99d3884a933ae",
+      "sourceAtlasSha256": "830cac2e9f1c40208631ea8563b0bef9ae40eec186917610d4004a3c7d347567",
+      "sourcePromptSha256": "93db4d9e337c6f4f269fee9e0809d6e6a309d6bb295ca31c4bdeddc343b54d9c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "7170b6c6f18a8a69ca894bbb833d03d943480e95e4870619805a32e3d71598f5"
+    },
+    {
+      "id": "S12",
+      "key": "mutators",
+      "group": "scenes",
+      "file": "mobile-assets/diorama/S12-mutators.webp",
+      "sourceAsset": "assets/S12-mutators.png",
+      "source": "special/03-late-systems.png",
+      "sourceRect": {
+        "left": 637,
+        "top": 637,
+        "width": 607,
+        "height": 607
+      },
+      "sourcePrompt": "special/late-systems.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 607,
+        "height": 607
+      },
+      "sourceSha256": "f78c3d6d34fc6cf1f26f74db9fa6a53d0338f7737d4fe2abe7c27d17e339041a",
+      "sourceAtlasSha256": "830cac2e9f1c40208631ea8563b0bef9ae40eec186917610d4004a3c7d347567",
+      "sourcePromptSha256": "93db4d9e337c6f4f269fee9e0809d6e6a309d6bb295ca31c4bdeddc343b54d9c",
+      "sourceSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSize": {
+        "width": 607,
+        "height": 607
+      },
+      "outputSha256": "846a8b968f886c64a9a70757aed70c124f6b703108331196f9cb10536fe9d3af"
+    },
+    {
+      "id": "T01",
+      "key": "terrain-grass",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T01-terrain-grass.webp",
+      "sourceAsset": "assets/T01-terrain-grass.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 108,
+        "top": 7,
+        "width": 363,
+        "height": 333
+      },
+      "sourceSha256": "649e7e2f4d732890981d70f8494f11357a2ea1224d1fa0cc64113625b955c2c7",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 235
+      },
+      "outputSha256": "45aaa3d61d1349fa18b43faea7ee40bfbf3237b738e55b44ae43d41d6a51307f"
+    },
+    {
+      "id": "T02",
+      "key": "terrain-cleared",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T02-terrain-cleared.webp",
+      "sourceAsset": "assets/T02-terrain-cleared.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 77,
+        "top": 5,
+        "width": 362,
+        "height": 336
+      },
+      "sourceSha256": "f23caea5d7068e926aca2d77971af79f0880eb7c22cade8a8131a69bedb2afc4",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 238
+      },
+      "outputSha256": "75f453240305d3e8778b632750d4c89da2b98ec3873be9112d655ec698404c51"
+    },
+    {
+      "id": "T03",
+      "key": "terrain-stone",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+      "sourceAsset": "assets/T03-terrain-stone.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 41,
+        "top": 6,
+        "width": 364,
+        "height": 335
+      },
+      "sourceSha256": "faa1e6f28980d8162f0290beabe9a38a876b057d115319c1fe28ece12efed67a",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 236
+      },
+      "outputSha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+    },
+    {
+      "id": "T04",
+      "key": "marker-tree",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T04-marker-tree.webp",
+      "sourceAsset": "assets/T04-marker-tree.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourceSha256": "5df781e0e13d69672ca0004647fef5babe7a8c11ad45a7be43eefd09e6351a24",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "c4d8fd777028368f615a896ab12860ea244764c0c7d7f583afc9ff56c889dedf"
+    },
+    {
+      "id": "T05",
+      "key": "marker-food",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T05-marker-food.webp",
+      "sourceAsset": "assets/T05-marker-food.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourceSha256": "24b1c9cf98d39fbb1d96ddc2753abd94f89c2de3132fab83ba853c910670ac41",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "bc4f4ef8100828234e347a6eee6346bca656e913065135b7a0324061ae06e736"
+    },
+    {
+      "id": "T06",
+      "key": "marker-ore",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T06-marker-ore.webp",
+      "sourceAsset": "assets/T06-marker-ore.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 341,
+        "width": 512,
+        "height": 341
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "sourceSha256": "30e1d634b8b07739c6fbfb8ee79388474dce284be23864d2afff3db66d3125c8",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 341
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "ccfd1b6afcbcb3138db33b377a88dd32f6c52ad74884f68c4af9a8624376a385"
+    },
+    {
+      "id": "T07",
+      "key": "marker-book",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T07-marker-book.webp",
+      "sourceAsset": "assets/T07-marker-book.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 342
+      },
+      "sourceSha256": "d040332e0beac45e18f1256d9011b6a3b8c6f2412d86da6539ea63e40ad1079c",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 342
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "eb4d919f27aa143a9568ecb5052010d3e77eedbe2904a8e9520f3c1a1d1a9214"
+    },
+    {
+      "id": "T08",
+      "key": "marker-gift",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T08-marker-gift.webp",
+      "sourceAsset": "assets/T08-marker-gift.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 512,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 342
+      },
+      "sourceSha256": "bed8410dc7c2a86868e0f04b4d9405ea720c87782b2ba247caa005128ee31a5f",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 342
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "3333369348d4eb13efe5cd6f946807255f62c886cb2f3cbb37ca891b29c770b8"
+    },
+    {
+      "id": "T09",
+      "key": "marker-unlock",
+      "group": "terrain",
+      "file": "mobile-assets/diorama/T09-marker-unlock.webp",
+      "sourceAsset": "assets/T09-marker-unlock.png",
+      "source": "interface/terrain-markers.png",
+      "sourceRect": {
+        "left": 1024,
+        "top": 682,
+        "width": 512,
+        "height": 342
+      },
+      "sourcePrompt": "interface/terrain-markers.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 342
+      },
+      "sourceSha256": "ea01ea193c7b21feb6d078d5c611639136e6f50837da5ccec8d2d4b08a6a9ec8",
+      "sourceAtlasSha256": "4f11b3e353769b2df5f18936aa3b97889eb16484cf89ab7def6a3f0e80b308b9",
+      "sourcePromptSha256": "1e43d066b73b7bc939c0ed7b0c31633ad0d1eaf6e92a5edc553b4a9b7a237f5e",
+      "sourceSize": {
+        "width": 512,
+        "height": 342
+      },
+      "outputSize": {
+        "width": 256,
+        "height": 171
+      },
+      "outputSha256": "9126f35b6b704751e6196baacd5665f293ded2dd21b009dada4b0a3907cb4420"
+    },
+    {
+      "id": "U01",
+      "key": "panel-parchment",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U01-panel-parchment.webp",
+      "sourceAsset": "assets/U01-panel-parchment.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 542,
+        "height": 610
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 11,
+        "top": 160,
+        "width": 518,
+        "height": 402
+      },
+      "sourceSha256": "222991d11574963ae2e86fb7a458b1a4dbb6edae192b630b873129bfcdbb908c",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 542,
+        "height": 610
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 397
+      },
+      "outputSha256": "755bbdaa97bf676416e09c36cd78792bc5f5e3f53dc9e924983bc96a99d252b5"
+    },
+    {
+      "id": "U02",
+      "key": "button-petrol",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U02-button-petrol.webp",
+      "sourceAsset": "assets/U02-button-petrol.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 542,
+        "top": 0,
+        "width": 482,
+        "height": 610
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 6,
+        "top": 257,
+        "width": 463,
+        "height": 267
+      },
+      "sourceSha256": "431bcc1a60001feb0b0a8bac5cceb7df7c2519271f538099d5c727a4fa39512b",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 482,
+        "height": 610
+      },
+      "outputSize": {
+        "width": 463,
+        "height": 267
+      },
+      "outputSha256": "841bfca2f40bd71668479e611f9cebe043c35a5cff4f4a5198ae620c707e9ec0"
+    },
+    {
+      "id": "U03",
+      "key": "button-amber",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U03-button-amber.webp",
+      "sourceAsset": "assets/U03-button-amber.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 610,
+        "width": 542,
+        "height": 380
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 10,
+        "top": 64,
+        "width": 518,
+        "height": 264
+      },
+      "sourceSha256": "d5613102d054fda4230b609625bb8ddb3291011a748def5d1245eddc3724f77b",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 542,
+        "height": 380
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 261
+      },
+      "outputSha256": "ddd1bb64889cff1e6c20e226a0567cdc7ffc7ec4a750b91e8e24f56a992dc2d2"
+    },
+    {
+      "id": "U04",
+      "key": "button-disabled",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U04-button-disabled.webp",
+      "sourceAsset": "assets/U04-button-disabled.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 542,
+        "top": 610,
+        "width": 482,
+        "height": 380
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 5,
+        "top": 62,
+        "width": 467,
+        "height": 261
+      },
+      "sourceSha256": "ae41d0ff4081882d5761d163dadbd4e93c76927f9561864bbc6fd09341404be1",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 482,
+        "height": 380
+      },
+      "outputSize": {
+        "width": 467,
+        "height": 261
+      },
+      "outputSha256": "d59e37c61efbba6444f65e1f1da94aa908cf67e9bcc10c0c96949e6ae78ee1e0"
+    },
+    {
+      "id": "U05",
+      "key": "header-wood",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U05-header-wood.webp",
+      "sourceAsset": "assets/U05-header-wood.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 0,
+        "top": 990,
+        "width": 620,
+        "height": 546
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 15,
+        "top": 87,
+        "width": 605,
+        "height": 234
+      },
+      "sourceSha256": "3b202dd3fa17a1e7b385e430e217a6333f58229fc167811debbc3685f9df6f3c",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 620,
+        "height": 546
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 198
+      },
+      "outputSha256": "5c0819c5b3758c8b519606b8d0e41f61158380356957eeac142c90906cc91e02"
+    },
+    {
+      "id": "U06",
+      "key": "frame-current",
+      "group": "interface",
+      "file": "mobile-assets/diorama/U06-frame-current.webp",
+      "sourceAsset": "assets/U06-frame-current.png",
+      "source": "interface/interface-materials.png",
+      "sourceRect": {
+        "left": 620,
+        "top": 990,
+        "width": 404,
+        "height": 546
+      },
+      "sourcePrompt": "interface/interface-materials.prompt.txt",
+      "renditionCrop": {
+        "left": 0,
+        "top": 3,
+        "width": 386,
+        "height": 382
+      },
+      "sourceSha256": "bebd6ce326a0076fc733ea6ce7ba169663bd2d7e7be85d41894fa649eb206135",
+      "sourceAtlasSha256": "c22615b84bac905d7cdf862e5129e8a2eb231ce603621b947bfc3cfcaaf29df1",
+      "sourcePromptSha256": "1724f85059ea38805c9c89096ee16c3868d9ee350620e1161325766cfd3fe0f0",
+      "sourceSize": {
+        "width": 404,
+        "height": 546
+      },
+      "outputSize": {
+        "width": 386,
+        "height": 382
+      },
+      "outputSha256": "5dd122a40ec8a68bad3ac0caf7c6c9e4c14cb16de432163796b6687f8a110257"
+    }
+  ]
+}

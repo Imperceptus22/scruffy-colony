@@ -1,0 +1,23 @@
+{
+  "id": "J11",
+  "key": "Worshipper",
+  "name": "Worshipper",
+  "group": "jobs",
+  "file": "assets/J11-Worshipper.png",
+  "approved": false,
+  "source": "world/jobs-extra.png",
+  "sourceRect": {
+    "left": 1448,
+    "top": 0,
+    "width": 724,
+    "height": 724
+  },
+  "nativeSize": {
+    "width": 724,
+    "height": 724
+  },
+  "sourcePrompt": "world/jobs-extra.prompt.txt",
+  "sha256": "beeefbb7d0b793d7827c5f2dfeac09254f2dbb6a860c4a42155478663d804b2f",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

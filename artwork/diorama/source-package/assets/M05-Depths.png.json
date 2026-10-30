@@ -1,0 +1,23 @@
+{
+  "id": "M05",
+  "key": "Depths",
+  "name": "Depths",
+  "group": "biomes",
+  "file": "assets/M05-Depths.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "213c23a73151146079fe49b3b358b9bb890fea841b1640c4ac4a2d780bdebd43",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "E10",
+  "key": "Pants",
+  "name": "Pants",
+  "group": "equipment",
+  "file": "assets/E10-Pants.png",
+  "approved": false,
+  "source": "objects/equipment-02-helmet-shoulderguards.png",
+  "sourceRect": {
+    "left": 1024,
+    "top": 0,
+    "width": 512,
+    "height": 512
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 512
+  },
+  "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+  "sha256": "ff23e1b68edbf58d70b1ff978b9ed841b4dbacf5c2d2ea52bde77412782742e5",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

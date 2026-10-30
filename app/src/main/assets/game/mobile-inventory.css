@@ -1,0 +1,114 @@
+/* C: two-column field inventory and compact blueprint cards. */
+#buildingsHere:not([style*="display: none"]):not([style*="display:none"]),#equipmentHere:not([style*="display: none"]):not([style*="display:none"]){display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important;align-items:stretch;}
+#equipmentHere{grid-auto-flow:row dense;}
+#equipmentHere>.mobile-inventory-tile[data-equipment-stat="health"]{grid-column:1;}
+#equipmentHere>.mobile-inventory-tile[data-equipment-stat="attack"]{grid-column:2;}
+#buyHere .mobile-inventory-tile{position:relative;min-width:0;display:flex;}
+#buyHere .mobile-inventory-tile>.thing{float:none!important;display:flex;flex-direction:column;gap:3px;min-width:0;width:100%!important;min-height:112px;margin:0!important;padding:7px 7px 7px 8px!important;text-align:left;line-height:1.3;border:1px solid var(--line)!important;border-left:1px solid var(--line)!important;border-radius:5px!important;background:#f3f1e6!important;color:var(--ink)!important;font-family:var(--font-data);white-space:normal;}
+#buyHere .mobile-inventory-tile>.thing:disabled{opacity:1;border-left-color:#b9bfb0!important;background:#eceadf!important;}
+.mobile-inventory-tile>.thing:disabled .mobile-item-art{opacity:.55;}
+.mobile-tile-name{display:block;align-self:stretch;padding-right:36px;min-height:28px;font-size:.9rem;font-weight:600;overflow-wrap:anywhere;}
+.mobile-tile-core{display:flex;align-items:center;gap:5px;min-width:0;width:100%;}
+.mobile-item-art{flex:none;width:46px;height:46px;object-fit:contain;}
+.mobile-tile-values{min-width:0;flex:1;}
+.mobile-tile-owned{display:flex;align-items:baseline;gap:4px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);overflow-wrap:anywhere;}
+.mobile-tile-owned b{font-size:1.3rem;color:var(--ink);font-weight:700;}
+.mobile-tile-owned small{font-size:.65rem;font-weight:400;}
+.mobile-tile-owned [id$="Numeral"]{font-size:.7rem;margin-left:3px;color:var(--muted);}
+.mobile-item-effect{display:block;font-size:.65rem;color:var(--muted);margin-top:2px;overflow-wrap:anywhere;}
+.mobile-inventory-tile>.mobile-info{position:absolute;top:0;right:0;width:44px!important;height:44px!important;min-height:44px!important;z-index:1;}
+.mobile-tile-price{display:block;width:100%;margin-top:auto;min-width:0;}
+.mobile-materials{display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px;width:100%;min-width:0;}
+.mobile-material{display:flex;align-items:center;gap:2px;min-width:0;font-size:.8rem;line-height:1.25;}
+.mobile-material b{font-weight:600;overflow-wrap:normal;white-space:nowrap;}
+.mobile-material-icon{display:inline-block;flex:none;width:13px;height:16px;background:var(--muted);mask:var(--mi-gems) center/contain no-repeat;}
+.mobile-material-icon[data-resource="food"]{background:var(--food);mask-image:var(--mi-food);}
+.mobile-material-icon[data-resource="wood"]{background:var(--wood);mask-image:var(--mi-wood);}
+.mobile-material-icon[data-resource="metal"]{background:var(--metal);mask-image:var(--mi-metal);}
+.mobile-material-icon[data-resource="gems"]{background:var(--accent);mask-image:var(--mi-gems);}
+.mobile-material-icon[data-resource="science"]{mask-image:var(--mi-upgrades);}
+.mobile-material-icon[data-resource="fragments"]{mask-image:var(--mi-fragments);}
+.mobile-material-icon[data-resource="helium"],.mobile-material-icon[data-resource="radon"]{mask-image:var(--mi-upgrades);}
+.mobile-material-missing{color:#a05d38;}
+.mobile-materials-many{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,4.2rem),1fr));gap:4px;align-items:start;}
+.mobile-materials-many .mobile-material{flex-direction:row;gap:2px;}
+.mobile-inventory-tile[data-type="equipment"] .mobile-material{display:grid;grid-template-columns:15px minmax(0,1fr) auto;width:100%;}
+.mobile-inventory-tile[data-type="equipment"] .mobile-material small{font-size:.65rem;color:var(--muted);text-align:right;}
+#buyHere .mobile-inventory-tile[data-type="buildings"]>.thing{min-height:96px;gap:2px;}
+.mobile-inventory-tile[data-type="buildings"] .mobile-item-art{width:32px;height:32px;border:1px solid #d1d8c8;border-radius:2px;background:#e9ecdf;}
+.mobile-pending{font-size:.65rem;color:#887947;}
+.mobile-pending::before{content:'• ';}
+.mobile-auto-building{font-size:.7rem;color:var(--muted);}
+#equipmentHere .efficientYes{box-shadow:none!important;}
+#buyHere #equipmentHere .efficientYes{border:2px solid #243a35!important;padding:6px 6px 6px 7px!important;}
+#buyHere #buildingsHere .efficientYes{border:2px solid #243a35!important;padding:6px 6px 6px 7px!important;}
+.mobile-purchase-note{display:block;min-height:1.4em;font-size:.75rem;line-height:1.4;margin-top:5px;color:var(--muted);overflow-wrap:anywhere;}
+#mobile-housing-legend{font-size:.8rem;line-height:1.5;margin:8px 0 12px;color:var(--muted);}
+#mobile-buy-best{display:flex;gap:6px;flex:none;margin-left:auto;}
+#mobile-buy-best[hidden]{display:none;}
+#mobile-buy-best button{display:flex;align-items:center;justify-content:center;gap:5px;min-width:44px;min-height:44px;padding:0 10px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--ink);font:500 .8rem/1 var(--font-body);box-shadow:none;}
+#mobile-buy-best button:disabled{opacity:.5;}
+#mobile-buy-best button span{width:17px;height:17px;flex:none;background:var(--accent);mask:var(--mi-battle) center/contain no-repeat;}
+#mobile-buy-best-health span{mask-image:var(--mi-equipment)!important;}
+#tipCost .mobile-materials{width:auto;gap:12px;flex-wrap:wrap;}
+#tipCost .mobile-material{font-size:1rem;}
+/* A: one compact queue overview; the original cancellable rows open below it. */
+#queueContainer{padding:6px 8px!important;position:relative;}
+#queueContainer>.mobile-queue-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px;align-items:center;}
+#mobile-queue-open{display:block;min-width:0;min-height:56px;width:100%;text-align:left;padding:0!important;background:transparent;border:0;border-radius:0;line-height:1.3;color:var(--ink);}
+#mobile-queue-title{display:block;font:600 .85rem var(--font-data);margin:0;}
+#mobile-queue-summary{display:block;font-size:.75rem;overflow-wrap:anywhere;}
+#mobile-queue-summary::before{content:'• ';color:var(--accent);}
+.mobile-queue-meta{display:flex;justify-content:flex-start;gap:2px 5px;font-size:.65rem;line-height:1.3;text-align:left;}
+.mobile-queue-meta span+span:not(:empty)::before{content:'· ';}
+#queueRow{gap:4px;}
+#queueRow>[data-compact-icon]{width:48px!important;min-width:48px!important;min-height:48px!important;border:1px solid var(--line);border-radius:5px;}
+#mobile-queue-progress{height:3px;background:#d2d8c7;margin-top:4px;overflow:hidden;}
+#mobile-queue-progress>span{display:block;width:100%;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left center;}
+#buildingsQueue[hidden]{display:none!important;}
+#buildingsQueue:not([hidden]){margin-top:6px;border-top:1px solid var(--line);}
+#queueItemsHere .queueItem{min-height:48px;padding:5px 36px 5px 0;position:relative;}
+#queueItemsHere .queueItem::after{content:'×';position:absolute;right:4px;top:8px;font-size:1.3rem;}
+#queueItemsHere #animationDiv{display:none;}
+#queueItemsHere #queueTimeRemaining{font-size:.75rem;}
+@media(max-width:380px){.mobile-materials{gap:3px}.mobile-material{font-size:.72rem;gap:1px}.mobile-material-icon{width:11px}.mobile-tile-owned small{font-size:.6rem}}
+
+#queueContainer:has(#queueItemsHere:empty) #mobile-queue-title{display:block;}
+#mobile-queue-title::before{display:none;}
+#mobile-queue-open #mobile-queue-title{font-size:.85rem!important;}
+#mobile-inventory-title{font:600 1.1rem var(--font-data);margin:2px 0 8px;}
+#equipmentTitleDiv{padding:0;margin:0;}
+#equipmentTitleDiv .row>div:not(:last-child){display:none;}
+#equipmentTitleDiv .row{gap:0;}
+
+#buyHere .mobile-inventory-tile{container-type:inline-size;}
+#mobile-inventory-title{font-family:var(--font-data)!important;}
+@container(max-width:10rem){
+ .mobile-materials-many{display:flex;flex-wrap:wrap;}
+ .mobile-materials-many .mobile-material{flex:1 0 calc(50% - 4px);width:max-content;min-width:max-content;}
+}
+
+#mobile-inventory-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;}
+#mobile-inventory-head[hidden]{display:none;}
+.mobile-inventory-tile[data-storage-hidden]{display:none!important;}
+#mobile-inventory-head #mobile-inventory-title{margin:0;}
+#mobile-inventory-head #autoStorageBtn{position:relative;float:none;width:132px;max-width:100%;min-height:44px;padding:6px 50px 6px 0!important;margin:0!important;border:0!important;border-radius:0;background:transparent!important;color:var(--ink)!important;font-family:var(--font-body);font-size:.75rem!important;line-height:1.3!important;text-align:left;white-space:normal;}
+#mobile-inventory-head #autoStorageBtn:focus-visible{outline:none;}
+#mobile-inventory-head #autoStorageBtn::before{content:'';position:absolute;right:0;top:calc(50% - 12px);width:40px;height:24px;border-radius:20px;background:var(--track);}
+#mobile-inventory-head #autoStorageBtn:focus-visible::before{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--accent);}
+#mobile-inventory-head #autoStorageBtn::after{content:'';position:absolute;right:19px;top:calc(50% - 9px);width:18px;height:18px;border-radius:50%;background:var(--surface);border:1px solid var(--muted);}
+#mobile-inventory-head #autoStorageBtn.colorSuccess::before{background:var(--accent);}
+#mobile-inventory-head #autoStorageBtn.colorSuccess::after{right:3px;border-color:var(--surface);}
+#mobile-inventory-head[data-category="equipment"] #autoStorageBtn{display:none!important;}
+
+.mobile-building-requirement{display:block;font-size:.7rem;margin-top:3px;color:var(--muted);}
+
+/* One common purchase meaning, independent of the engine efficiency recommendation. */
+#buyHere .mobile-inventory-tile[data-purchase-state="buyable"]>.thing{border-color:var(--accent)!important;background:#e0eadc!important;}
+#buyHere .mobile-inventory-tile[data-purchase-state="unavailable"]>.thing{border-color:#b9bfb0!important;background:#f3f1e6!important;}
+/* Keep engine children untouched: their direct indices are the cancellation contract. */
+#queueItemsHere{display:none!important;}
+#mobile-queue-groups details{border-bottom:1px solid var(--line);}
+#mobile-queue-groups summary{min-height:48px;padding:7px 4px;font-size:.85rem;cursor:pointer;}
+#mobile-queue-groups summary small{display:block;padding-left:16px;font-size:.7rem;color:var(--muted);}
+#mobile-queue-groups button{display:block;min-height:48px;width:100%;margin:3px 0;text-align:left;font-size:.8rem;}

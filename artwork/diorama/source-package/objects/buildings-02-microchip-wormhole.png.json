@@ -1,0 +1,24 @@
+{
+  "file": "buildings-02-microchip-wormhole.png",
+  "approved": false,
+  "grid": {
+    "rows": 3,
+    "cols": 3
+  },
+  "orderedItemIds": [
+    "Microchip",
+    "Nursery",
+    "Resort",
+    "Shed",
+    "Smithy",
+    "Trap",
+    "Tribute",
+    "Warpstation",
+    "Wormhole"
+  ],
+  "references": [
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+  ],
+  "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-d5c28fc2-4f11-415d-8d51-e3073c0f00fa.png"
+}

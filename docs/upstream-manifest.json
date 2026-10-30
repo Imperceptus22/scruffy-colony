@@ -1,0 +1,152 @@
+{
+  "source": "https://github.com/Trimps/Trimps.github.io",
+  "commit": "b9edb1dfee270ebf81bef8d934dc71276bf8d963",
+  "files": [
+    {
+      "path": "config.js",
+      "sha256": "8c8f0266b1d04e94e67e42960bbfbaa7b1341fe9982dccc65464ae4a1a805b63"
+    },
+    {
+      "path": "css/bg2.png",
+      "sha256": "1845347d6cdbfc69cde93bc68e16a4933ec2d9abb77e5a88545b12ab50f8acb3"
+    },
+    {
+      "path": "css/bg2_vert.png",
+      "sha256": "1e013e7f154edfcc2e8833d44550165485670cae94284b9a29845221dd961fa0"
+    },
+    {
+      "path": "css/bootstrap.css",
+      "sha256": "4ee4b324f183317a662468a32bceec282511a342c17d66bd68698e90ad1807ba"
+    },
+    {
+      "path": "css/dark.css",
+      "sha256": "c246187a9e9a8aca106db4059f1a15ef20a2a66371fdc27b5c103a9497626cf8"
+    },
+    {
+      "path": "css/default.css",
+      "sha256": "6d73df538adc189d7357669cb03c76cd685c1f0f32ff4e98d5176d446115c714"
+    },
+    {
+      "path": "css/gradient.css",
+      "sha256": "43333c0ed1c39759f67fe15a6ed92dffb0360772b29e694d3d854f118ca48a27"
+    },
+    {
+      "path": "css/style.css",
+      "sha256": "e710d46911e6a5d8bd0704334583d19658c4a0064c58cd93cd4d8bb638fdef24"
+    },
+    {
+      "path": "css/styleBak.css",
+      "sha256": "556704d4327cc18dea19b625a2ce2fb4f26978cb4b2847ec1de614b19e7b3fe1"
+    },
+    {
+      "path": "decimal.min.js",
+      "sha256": "2bcc6e7c101707fa21a658ac6ab9b4fb7b67316936eee4d2bd430ef4b9f4543f"
+    },
+    {
+      "path": "favicon.ico",
+      "sha256": "94bacd856a68a555647247ce371d6547cdbd9a4c2d9fe6ff7145e286de2e6458"
+    },
+    {
+      "path": "fonts/glyphicons-halflings-regular.eot",
+      "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+    },
+    {
+      "path": "fonts/glyphicons-halflings-regular.svg",
+      "sha256": "d985cda034eab4c9f2403976f8d171fbf6efc4b593107d8b1401e5b6daa46295"
+    },
+    {
+      "path": "fonts/glyphicons-halflings-regular.ttf",
+      "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456"
+    },
+    {
+      "path": "fonts/glyphicons-halflings-regular.woff",
+      "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742"
+    },
+    {
+      "path": "fonts/glyphicons-halflings-regular.woff2",
+      "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c"
+    },
+    {
+      "path": "fonts/icomoon/fonts/icomoon.eot",
+      "sha256": "699f6314d9314c1eb954378252fd0f00a6c9e90dc83f00385529414a30a407e7"
+    },
+    {
+      "path": "fonts/icomoon/fonts/icomoon.svg",
+      "sha256": "e5358cb51b7f9273eb5c882297386cabb8b3e9e0f78053dbd2575c3317159c14"
+    },
+    {
+      "path": "fonts/icomoon/fonts/icomoon.ttf",
+      "sha256": "95f5e943c0aa91007805f512d0eb8a0669a143fe91bd7d949929bb18e0df77a2"
+    },
+    {
+      "path": "fonts/icomoon/fonts/icomoon.woff",
+      "sha256": "2a0ae30debaca64d94e2b43d6016b87a85ddb2596b5f0009c26063ae54e2fb06"
+    },
+    {
+      "path": "fonts/icomoon/style.css",
+      "sha256": "0cc160e680bade7b06a2209d1802b01675d664de839212d0f49f1eb307fe8213"
+    },
+    {
+      "path": "imgs/discord_logo.png",
+      "sha256": "0424baad71430f7666ae99a6ff7ce1553bcf05ebfe2ddd9d80fffbc1ec1641a2"
+    },
+    {
+      "path": "imgs/kred_single.png",
+      "sha256": "990db8030664ae56cb9e2e7f5198136e5fbf15819ddb626e5c12d60cb342ae39"
+    },
+    {
+      "path": "imgs/reddit_logo.png",
+      "sha256": "7590e22bfa38c508170efbba71ca54dffba344cad75972d903d70ee53645e144"
+    },
+    {
+      "path": "imgs/steam_logo.png",
+      "sha256": "848e7da53764fc008fbb18eb7bf377e409e548a4a03978c210aec30098a1a42f"
+    },
+    {
+      "path": "index.html",
+      "sha256": "24cddca8206cd9cf9a80e9a422e59ad6da363b2e974a6debce4260a2d75111f6"
+    },
+    {
+      "path": "license.txt",
+      "sha256": "ab3fe34d3c62e3348015a4dd0128b09a5da2024d1467a478311003373c18a3f0"
+    },
+    {
+      "path": "lz-string.js",
+      "sha256": "3dba0d131336890f42d1a0d1e8ebdeb1cf1a1826223b073f74fda037fc3a6aa1"
+    },
+    {
+      "path": "main.js",
+      "sha256": "29e369e6972c8ca0b44857067b423dfd04a82636ba33b6b1476890f1ea251356"
+    },
+    {
+      "path": "objects.js",
+      "sha256": "404cc115f134d0caed609df2d796df327492baca6d46e50e68ae308a0a02482d"
+    },
+    {
+      "path": "playerSpire.js",
+      "sha256": "eff616488fdd43f7771ed2b20f4001d4d0e2838f901258731e63bfe0b0df053b"
+    },
+    {
+      "path": "updates.html",
+      "sha256": "15856856d2d260fa679e6a8ecaa0b62da420f0382bec6a4f0bacdd5088a47d91"
+    },
+    {
+      "path": "updates.js",
+      "sha256": "ea9cc8009f2ebe6aea113827e05aa5773dc913dca25130788543d4bcd5be0efe"
+    }
+  ],
+  "excludedFromApp": [
+    "fonts/icomoon/style.css",
+    "fonts/icomoon/fonts/icomoon.eot",
+    "fonts/icomoon/fonts/icomoon.ttf",
+    "fonts/icomoon/fonts/icomoon.woff",
+    "fonts/icomoon/fonts/icomoon.svg",
+    "css/bg2.png",
+    "css/bg2_vert.png",
+    "favicon.ico",
+    "imgs/steam_logo.png",
+    "imgs/reddit_logo.png",
+    "imgs/discord_logo.png",
+    "imgs/kred_single.png"
+  ]
+}

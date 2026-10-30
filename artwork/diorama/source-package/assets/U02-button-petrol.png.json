@@ -1,0 +1,23 @@
+{
+  "id": "U02",
+  "key": "button-petrol",
+  "name": "Petroltaste",
+  "group": "interface",
+  "file": "assets/U02-button-petrol.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 542,
+    "top": 0,
+    "width": 482,
+    "height": 610
+  },
+  "nativeSize": {
+    "width": 482,
+    "height": 610
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "431bcc1a60001feb0b0a8bac5cceb7df7c2519271f538099d5c727a4fa39512b",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

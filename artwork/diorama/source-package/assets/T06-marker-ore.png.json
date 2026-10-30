@@ -1,0 +1,23 @@
+{
+  "id": "T06",
+  "key": "marker-ore",
+  "name": "Erz",
+  "group": "terrain",
+  "file": "assets/T06-marker-ore.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 1024,
+    "top": 341,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "30e1d634b8b07739c6fbfb8ee79388474dce284be23864d2afff3db66d3125c8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

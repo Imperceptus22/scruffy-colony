@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Scruffy Colony</string>
+    <string name="previous_graphics">Klassische Grafik</string>
+    <string name="previous_graphics_launch">Mit klassischer Grafik öffnen</string>
+    <string name="renderer_failed">Die Spielansicht wurde geschlossen. Dein zuletzt bestätigter Spielstand bleibt erhalten. Das Spiel lädt neu, wenn du zurückkehrst. Schlägt das Laden erneut fehl, kannst du es hier noch einmal versuchen.</string>
+    <string name="renderer_retry">Neu laden</string>
+    <string name="leave_title">Spiel verlassen?</string>
+    <string name="leave_confirm">Speichern und beenden</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="confirm">Übernehmen</string>
+    <string name="ok">OK</string>
+    <string name="export_saved">Exportdatei gespeichert.</string>
+    <string name="export_lost">Der Export wurde unterbrochen. Deshalb wurde nichts gespeichert und die leere Datei entfernt. Bitte exportiere erneut. Dein Spielstand bleibt erhalten.</string>
+    <string name="document_interrupted">Die Dateiauswahl wurde unterbrochen. Bitte importiere oder exportiere erneut. Dein Spielstand bleibt erhalten.</string>
+    <string name="unsaved_exit">Dein aktueller Fortschritt wurde noch nicht erneut gespeichert. Der zuletzt bestätigte Spielstand bleibt erhalten; eine laufende Offline-Berechnung beginnt beim nächsten Start neu. Du kannst vor dem Verlassen eine Datei exportieren.</string>
+    <string name="export_save">Exportieren</string>
+    <string name="leave_unsaved">Trotzdem beenden</string>
+    <string name="bridge_unavailable">Das installierte Android System WebView unterstützt den Speicherschutz nicht. Bitte aktualisiere Android System WebView.</string>
+</resources>

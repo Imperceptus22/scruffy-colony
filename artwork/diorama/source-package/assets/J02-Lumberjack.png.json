@@ -1,0 +1,23 @@
+{
+  "id": "J02",
+  "key": "Lumberjack",
+  "name": "Lumberjack",
+  "group": "jobs",
+  "file": "assets/J02-Lumberjack.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "604c01e3edd82e84d92691484a1c9daad3faa756525ca643f8d9edcfcda1bfe8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

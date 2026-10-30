@@ -1,0 +1,23 @@
+{
+  "id": "B05",
+  "key": "Gateway",
+  "name": "Gateway",
+  "group": "buildings",
+  "file": "assets/B05-Gateway.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 337,
+    "width": 375,
+    "height": 308
+  },
+  "nativeSize": {
+    "width": 375,
+    "height": 308
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "4bc643b74ebd498aa61329fb0c299ecc705533e82d521fdac17a4d424eb0f0de",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "B07",
+  "key": "Hotel",
+  "name": "Hotel",
+  "group": "buildings",
+  "file": "assets/B07-Hotel.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 775,
+    "top": 337,
+    "width": 383,
+    "height": 308
+  },
+  "nativeSize": {
+    "width": 383,
+    "height": 308
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "570e12d992bde5996df3249476a5d2c74406fad70f210ed7796f012536246edf",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

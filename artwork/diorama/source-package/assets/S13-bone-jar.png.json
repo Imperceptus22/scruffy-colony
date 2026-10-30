@@ -1,0 +1,26 @@
+{
+  "id": "S13",
+  "key": "bone-jar",
+  "name": "Bone Jar, scene prop for the colony scene (full)",
+  "group": "scenes",
+  "file": "assets/S13-bone-jar.png",
+  "approved": false,
+  "source": "image edit with the built-in image tool (prompt use case \"lighting-weather\") of R10-bone-jar-2, H01 as lighting and camera reference only; not an atlas cut; exported to 1024x1024 RGBA",
+  "nativeSize": {
+    "width": 1024,
+    "height": 1024
+  },
+  "sourcePrompt": "assets/S13-bone-jar.png.prompt.txt",
+  "references": [
+    "artwork/diorama/source-package/assets/R10-bone-jar-2.png",
+    "app/src/main/assets/game/mobile-assets/diorama/H01-resources-workstations.webp"
+  ],
+  "consultedBeforeCreation": [
+    "docs/evidence/v201-bone-jar/evcard-diorama-411.png",
+    "docs/design/bone-jar/MALAUFTRAG.md"
+  ],
+  "createdFor": "V-201 Bone Jar, docs/design/bone-jar/MALAUFTRAG.md (A: stages 0/1/2, C: scene prop), delivered 2026-10-28",
+  "sha256": "e33119b8bd489f918894f20e2fbf96c9f15c37f1898bf1bfd7af08fbd45e073e",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

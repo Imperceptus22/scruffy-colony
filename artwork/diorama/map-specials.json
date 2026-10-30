@@ -1,0 +1,267 @@
+{
+  "tool": "tools/build-map-specials.cjs",
+  "encoding": {
+    "format": "WebP",
+    "quality": 0.92,
+    "size": 444
+  },
+  "slabs": {
+    "stone": "T03-terrain-stone.webp",
+    "cleared": "T02-terrain-cleared.webp"
+  },
+  "aliases": {
+    "Plentiful": {
+      "file": "mobile-assets/diorama/M06-Gardens.webp",
+      "sha256": "6013551d20505fbad95c0aa0ed80a088f3ea4cce6c95dde03aa7382e48dc6665"
+    },
+    "Atlantis": {
+      "file": "mobile-assets/diorama/M04-Sea.webp",
+      "sha256": "ee7fc2644fa22dd711876d9a7486ebfd39b7a879e60e93c3930058f328d685e0"
+    }
+  },
+  "items": [
+    {
+      "key": "Hell",
+      "file": "MX01-Hell.webp",
+      "object": "B04-Forge.webp",
+      "slab": "cleared",
+      "filter": "saturate(1.25) hue-rotate(-12deg)",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B04-Forge.webp",
+          "sha256": "d90cf723b058d5ae9126ad813a914ab88e74ccde3cc46a56eded70b9eb774871"
+        },
+        {
+          "file": "mobile-assets/diorama/T02-terrain-cleared.webp",
+          "sha256": "75f453240305d3e8778b632750d4c89da2b98ec3873be9112d655ec698404c51"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX01-Hell.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 87252,
+        "sha256": "faf49b635206b27d32ee07452b5ae5aae72b0ff3c8287d15125c324bec9c4741"
+      }
+    },
+    {
+      "key": "Wall",
+      "file": "MX02-Wall.webp",
+      "scene": "S10-spire-assault.webp",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/S10-spire-assault.webp",
+          "sha256": "665bbc73406dbd0b850d153f4a6acbe8580389c5f02539aa72d485014067df3b"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX02-Wall.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 90206,
+        "sha256": "2f71d4984cfe380cef3daf64e23a58bbc04b6bcbc2c7e716069e6c82d9e2dad2"
+      }
+    },
+    {
+      "key": "Block",
+      "file": "MX03-Block.webp",
+      "object": "E12-Shield.webp",
+      "slab": "stone",
+      "width": 0.52,
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/E12-Shield.webp",
+          "sha256": "e641bd3ffc6956bd635be3bbce780162f7ffd54e89182cf60f43706ab4d501ab"
+        },
+        {
+          "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+          "sha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX03-Block.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 92598,
+        "sha256": "7175e3ff048969473761b2eec35f4f64f3cedaa5f2dbb18f1a0ed8fff7661d1c"
+      }
+    },
+    {
+      "key": "Doom",
+      "file": "MX04-Doom.webp",
+      "object": "B19-Tribute.webp",
+      "slab": "stone",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B19-Tribute.webp",
+          "sha256": "d4a97602494fba3cbc6c22fcc66b29d7a19d9d95176660cb6e48e1b19bc0fd62"
+        },
+        {
+          "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+          "sha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX04-Doom.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 96740,
+        "sha256": "2cd220eefbf9117dd0ff36304ebfb5cbb286f2fecdce0ebb8049b2121919d0d9"
+      }
+    },
+    {
+      "key": "Prison",
+      "file": "MX05-Prison.webp",
+      "object": "B18-Trap.webp",
+      "slab": "stone",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B18-Trap.webp",
+          "sha256": "532e53e3b5f712b673a9bc5c1a0926fee2a7b26103a309d0c4486668fbf5fe4d"
+        },
+        {
+          "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+          "sha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX05-Prison.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 91848,
+        "sha256": "5e01ed243d75e7a50e7073252b8580ae32ee53e96b785366209f2d686556db19"
+      }
+    },
+    {
+      "key": "Bionic",
+      "file": "MX06-Bionic.webp",
+      "object": "B13-Microchip.webp",
+      "slab": "cleared",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B13-Microchip.webp",
+          "sha256": "d7a385d89828d2c796f6f492587bb229a863a8eca021dea1bd9ae608d0e98de4"
+        },
+        {
+          "file": "mobile-assets/diorama/T02-terrain-cleared.webp",
+          "sha256": "75f453240305d3e8778b632750d4c89da2b98ec3873be9112d655ec698404c51"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX06-Bionic.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 90586,
+        "sha256": "a8f1b13c9bbdf079e13122b42bc5aa8197e94798671d5cd3ec61158d1f750407"
+      }
+    },
+    {
+      "key": "Star",
+      "file": "MX07-Star.webp",
+      "object": "B21-Wormhole.webp",
+      "slab": "stone",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B21-Wormhole.webp",
+          "sha256": "caa43159c57eaedf6328eabcc5633400fa37e1c51e5e5c2e3b424d53bfb70775"
+        },
+        {
+          "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+          "sha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX07-Star.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 95574,
+        "sha256": "898ec655c121a4f0c292a6c37cc86976dd917e56d63fe15a089ba0433c4115b8"
+      }
+    },
+    {
+      "key": "Darkness",
+      "file": "MX08-Darkness.webp",
+      "tint": "M05-Depths.webp",
+      "filter": "brightness(.55) saturate(.7)",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/M05-Depths.webp",
+          "sha256": "5c6decf6c8033ca5f09ca40851eddd85426eaf269340ff504bcf16616b9a88d5"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX08-Darkness.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 53880,
+        "sha256": "fad020021a25a05f462918fb426d9ecd685ab85be0f2a907481a16b54e032677"
+      }
+    },
+    {
+      "key": "Melting",
+      "file": "MX09-Melting.webp",
+      "object": "B17-Smithy.webp",
+      "slab": "cleared",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/B17-Smithy.webp",
+          "sha256": "7f50687a692485433d6d77e23d7c81bad4c77d1387bb12aaaaed9baef3f22c86"
+        },
+        {
+          "file": "mobile-assets/diorama/T02-terrain-cleared.webp",
+          "sha256": "75f453240305d3e8778b632750d4c89da2b98ec3873be9112d655ec698404c51"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX09-Melting.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 87700,
+        "sha256": "c684f7d8a9fca64ff3607a9df004c8a70f8f364d6e20bfb48a42dfb022716ee5"
+      }
+    },
+    {
+      "key": "Frozen",
+      "file": "MX10-Frozen.webp",
+      "scene": "S09-player-spire.webp",
+      "filter": "saturate(.55) hue-rotate(160deg) brightness(1.05)",
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/S09-player-spire.webp",
+          "sha256": "ec34fee9cbf2d606ee5e6ad8e7b179a6b7c904342be6186682bbda27cee06b09"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX10-Frozen.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 89300,
+        "sha256": "20ae627aeb95fc32c6ee4ee04728646677e9124914e4351ae3db3cc28781b6cd"
+      }
+    },
+    {
+      "key": "Prismatic",
+      "file": "MX11-Prismatic.webp",
+      "object": "R05-Fragments.webp",
+      "slab": "stone",
+      "width": 0.56,
+      "inputs": [
+        {
+          "file": "mobile-assets/diorama/R05-Fragments.webp",
+          "sha256": "9e1c613ba7fc2ffcda9b08e74a553abfc1f81152737640c774f6692303568529"
+        },
+        {
+          "file": "mobile-assets/diorama/T03-terrain-stone.webp",
+          "sha256": "44c1ed61ede868e877a937ced1d6d94cad5c7bec8c4e407f14ad629d0538b537"
+        }
+      ],
+      "output": {
+        "file": "mobile-assets/diorama/MX11-Prismatic.webp",
+        "width": 444,
+        "height": 444,
+        "bytes": 90762,
+        "sha256": "ce6edbc9664c255a4f899c88178f84c57c8324bdad6d3a469b52646d208bbbcf"
+      }
+    }
+  ]
+}

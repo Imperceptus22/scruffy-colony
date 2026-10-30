@@ -1,0 +1,23 @@
+{
+  "id": "E09",
+  "key": "Mace",
+  "name": "Mace",
+  "group": "equipment",
+  "file": "assets/E09-Mace.png",
+  "approved": false,
+  "source": "objects/equipment-02-helmet-shoulderguards.png",
+  "sourceRect": {
+    "left": 512,
+    "top": 0,
+    "width": 512,
+    "height": 512
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 512
+  },
+  "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+  "sha256": "f26dcf547861d2abfffb3632863cee58c95d10d8c140b1580910b9337c263e9a",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

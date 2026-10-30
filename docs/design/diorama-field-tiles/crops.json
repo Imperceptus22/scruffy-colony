@@ -1,0 +1,102 @@
+[
+ {
+  "name": "F01-grass-a",
+  "concept": "row 0 column 7",
+  "crop": {
+   "left": 1157,
+   "top": 1320,
+   "width": 147,
+   "height": 132
+  }
+ },
+ {
+  "name": "F02-grass-b",
+  "concept": "row 1 column 5",
+  "crop": {
+   "left": 856,
+   "top": 1453,
+   "width": 146,
+   "height": 133
+  }
+ },
+ {
+  "name": "F03-grass-c",
+  "concept": "row 1 column 6",
+  "crop": {
+   "left": 1006,
+   "top": 1452,
+   "width": 149,
+   "height": 133
+  }
+ },
+ {
+  "name": "F04-tree",
+  "concept": "row 0 column 6",
+  "crop": {
+   "left": 1003,
+   "top": 1318,
+   "width": 149,
+   "height": 134
+  }
+ },
+ {
+  "name": "F05-food",
+  "concept": "row 0 column 4",
+  "crop": {
+   "left": 706,
+   "top": 1319,
+   "width": 148,
+   "height": 133
+  }
+ },
+ {
+  "name": "F06-ore",
+  "concept": "row 0 column 2",
+  "crop": {
+   "left": 402,
+   "top": 1319,
+   "width": 148,
+   "height": 133
+  }
+ },
+ {
+  "name": "F07-gems",
+  "concept": "row 0 column 5",
+  "crop": {
+   "left": 857,
+   "top": 1319,
+   "width": 145,
+   "height": 133
+  }
+ },
+ {
+  "name": "F08-book",
+  "concept": "row 0 column 9",
+  "crop": {
+   "left": 1462,
+   "top": 1318,
+   "width": 150,
+   "height": 134
+  }
+ },
+ {
+  "name": "F09-gift",
+  "concept": "row 8 column 5",
+  "crop": {
+   "left": 858,
+   "top": 2424,
+   "width": 153,
+   "height": 144
+  }
+ },
+ {
+  "name": "F10-cleared",
+  "concept": "row 9 column 0",
+  "crop": {
+   "left": 55,
+   "top": 2577,
+   "width": 153,
+   "height": 155
+  }
+ }
+]

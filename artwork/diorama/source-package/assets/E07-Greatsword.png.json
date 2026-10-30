@@ -1,0 +1,23 @@
+{
+  "id": "E07",
+  "key": "Greatsword",
+  "name": "Greatsword",
+  "group": "equipment",
+  "file": "assets/E07-Greatsword.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "d858fdedb37e7017137f3ac40e50cea8cfc2435afa99398e42f3a302b6664fe1",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

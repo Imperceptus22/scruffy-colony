@@ -1,0 +1,23 @@
+{
+  "id": "J09",
+  "key": "Amalgamator",
+  "name": "Amalgamator",
+  "group": "jobs",
+  "file": "assets/J09-Amalgamator.png",
+  "approved": false,
+  "source": "world/jobs-extra.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 724,
+    "height": 724
+  },
+  "nativeSize": {
+    "width": 724,
+    "height": 724
+  },
+  "sourcePrompt": "world/jobs-extra.prompt.txt",
+  "sha256": "bab77d3c1b1cd5a257b8d5e395181ddf238925adbad9e0b1e07891ee33819248",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

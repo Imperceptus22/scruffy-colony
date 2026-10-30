@@ -1,0 +1,23 @@
+{
+  "id": "R06",
+  "key": "Gems",
+  "name": "Gems",
+  "group": "resources",
+  "file": "assets/R06-Gems.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 836,
+    "top": 430,
+    "width": 418,
+    "height": 380
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 380
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "01ae11034fb8e68d52b04028e79360ccf29ba79e7f5bd6120de215cc92549b5b",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

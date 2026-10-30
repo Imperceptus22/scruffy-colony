@@ -1,0 +1,1458 @@
+{
+  "resize": "Lanczos (premultiplied alpha), longest edge at most 400 px, aspect ratio preserved",
+  "maxEdge": 400,
+  "encoding": "lossy WebP, quality 85, lossless alpha, effort 6, smart subsampling",
+  "quality": 85,
+  "sharp": "0.35.5",
+  "libvips": "8.18.7",
+  "libwebp": "1.6.0",
+  "originalBytes": 161585671,
+  "appBytes": 4558194,
+  "assets": [
+    {
+      "name": "Arachnimp",
+      "original": "docs/design/enemy-originals/Arachnimp.png",
+      "originalSha256": "dbceda594cf170285ae6c2db393a305e11427c2c42a7c1714ad42e71f9f7f3e0",
+      "originalBytes": 2130924,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Arachnimp.webp",
+      "appSha256": "daf616a35d014052e1c3c9349122ba40fc00aa0fc0184663c3138fe688ccc249",
+      "appBytes": 70588,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Artimp",
+      "original": "docs/design/enemy-originals/Artimp.png",
+      "originalSha256": "64c83dd0bceee0f17812e8f38f1d08d5c345d95f2a52378224671386d14aefb4",
+      "originalBytes": 2088074,
+      "originalSize": [
+        1230,
+        1278
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Artimp.webp",
+      "appSha256": "7313fb3aa45112a1fc3e45f904ad7201f81e868448ba41b9a44c57a5102109da",
+      "appBytes": 62442,
+      "appSize": [
+        385,
+        400
+      ]
+    },
+    {
+      "name": "Autoimp",
+      "original": "docs/design/enemy-originals/Autoimp.png",
+      "originalSha256": "680aa7faa5484bd7071f5f1d38c810d03ebc0403a30950e30d925325d3534b93",
+      "originalBytes": 1785374,
+      "originalSize": [
+        1374,
+        1145
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Autoimp.webp",
+      "appSha256": "c0db5b67754e191571dcd1b17d37f5f3fc4f358c824987ad71e03de10fad7602",
+      "appBytes": 47152,
+      "appSize": [
+        400,
+        333
+      ]
+    },
+    {
+      "name": "Beetlimp",
+      "original": "docs/design/enemy-originals/Beetlimp.png",
+      "originalSha256": "e39326f5a98197a665f107c0b4c43c3e61833534a216010e769e1174dab67e72",
+      "originalBytes": 1779638,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Beetlimp.webp",
+      "appSha256": "2fdf942965d8c7d3103b7ae5033a4ad7bb6f5abf65e5b5b31ed01e89c0c414d5",
+      "appBytes": 49296,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Blimp",
+      "original": "docs/design/enemy-originals/Blimp.png",
+      "originalSha256": "d3865142d3d5da4499846b7380817c184fd87131451635c301e6a54c7d53e07b",
+      "originalBytes": 2159333,
+      "originalSize": [
+        1222,
+        1287
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Blimp.webp",
+      "appSha256": "64c9235f1e1c2820b78c0d07ff5bda5662b383c388398a73eab0081418fa22ee",
+      "appBytes": 55642,
+      "appSize": [
+        380,
+        400
+      ]
+    },
+    {
+      "name": "Brickimp",
+      "original": "docs/design/enemy-originals/Brickimp.png",
+      "originalSha256": "8d41a77124931af9ca2d22caea7b974ab3404e4f6174789369a2f160d6927571",
+      "originalBytes": 1612092,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Brickimp.webp",
+      "appSha256": "f0de784e3317a1245b459ed17d8f99bba5bda3375d7d1d60820d2715343e1690",
+      "appBytes": 43806,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Butterflimp",
+      "original": "docs/design/enemy-originals/Butterflimp.png",
+      "originalSha256": "a8aeb3f5edf714c2b4c0f37d6dfa4727b0a1bb112e1d3567dc83161dc29ce345",
+      "originalBytes": 1484755,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Butterflimp.webp",
+      "appSha256": "e6d04b65b77f4ab1fc970932d3fd7af2de056158fe566c54e5642677d534e261",
+      "appBytes": 45180,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Carbimp",
+      "original": "docs/design/enemy-originals/Carbimp.png",
+      "originalSha256": "69c93d1bdd12d1d3ee599b9e748340af6f7698884448bb2a955736b2c6e1bd30",
+      "originalBytes": 1951080,
+      "originalSize": [
+        1297,
+        1212
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Carbimp.webp",
+      "appSha256": "c9e9cf87a424c64c5a99fb119236edc6c75583d9ef266dca7a1f07f4c7ff1504",
+      "appBytes": 53094,
+      "appSize": [
+        400,
+        374
+      ]
+    },
+    {
+      "name": "Chickimp",
+      "original": "docs/design/enemy-originals/Chickimp.png",
+      "originalSha256": "893777de3a05b831ac416d7a8462f3f7f5b4386368f315347eb0d1f1654055c1",
+      "originalBytes": 1854817,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Chickimp.webp",
+      "appSha256": "2d6ead96d06ad5ef0179a465383522e5137316366fe00b258a8d5b12988513c4",
+      "appBytes": 55668,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Chimp",
+      "original": "docs/design/enemy-originals/Chimp.png",
+      "originalSha256": "1601f501c5ec8fbb14e3624a34e16d66b113e79a8fcd2615aa116f5f5eea5599",
+      "originalBytes": 1400783,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Chimp.webp",
+      "appSha256": "6892c8d223e58ca4152e72f42470e0a981aa80926cf153204d57f67977d3734c",
+      "appBytes": 43758,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Chronoimp",
+      "original": "docs/design/enemy-originals/Chronoimp.png",
+      "originalSha256": "4711f5936c6e7278701217a04c268cd8800bc4a9b9199a2ff93b8acc8f16f512",
+      "originalBytes": 1948072,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Chronoimp.webp",
+      "appSha256": "b81900089c277a23c4a3ff619ba6127245a988dc6d038794aaee9f0ebdc95f4f",
+      "appBytes": 51512,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Cthulimp",
+      "original": "docs/design/enemy-originals/Cthulimp.png",
+      "originalSha256": "8cc25c601906440f7394330af4e8874ca820f7773ed255ddd88f7ad29b823573",
+      "originalBytes": 2356411,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Cthulimp.webp",
+      "appSha256": "0e82cf03306c657badc04e6bb1b25baa8ec057f5d5e9d3622bb1f6c37d5ab73d",
+      "appBytes": 38506,
+      "appSize": [
+        400,
+        267
+      ]
+    },
+    {
+      "name": "Darknimp",
+      "original": "docs/design/enemy-originals/Darknimp.png",
+      "originalSha256": "74902852a23dc8b05e50b14be86cad0c42a6c74b7f294a0bab6dbd8c23bd54e6",
+      "originalBytes": 2428593,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Darknimp.webp",
+      "appSha256": "886ec26c40e7c6a12217b4f802d29d1a940978ff4f681eccb3691f4a1e2d064e",
+      "appBytes": 38336,
+      "appSize": [
+        400,
+        267
+      ]
+    },
+    {
+      "name": "Destructimp",
+      "original": "docs/design/enemy-originals/Destructimp.png",
+      "originalSha256": "ff9537bb582298510654b436ab7d4b422233fc647ea7b7c374cc3a9d41431091",
+      "originalBytes": 1990496,
+      "originalSize": [
+        1374,
+        1145
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Destructimp.webp",
+      "appSha256": "830b367188a009651564213299cfe2f5a4d4f58ccc40cfd79f7b5628d1d24fd3",
+      "appBytes": 49778,
+      "appSize": [
+        400,
+        333
+      ]
+    },
+    {
+      "name": "Dragimp",
+      "original": "docs/design/enemy-originals/Dragimp.png",
+      "originalSha256": "d1e69ba74b9c95ceecd437daaadc5471ce8b654f505ec0efd9634354f993c7a7",
+      "originalBytes": 2062651,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Dragimp.webp",
+      "appSha256": "4c08744636a4ede3737a41b365c5c1636acdfe1f8437254f3e966d82d5218a0e",
+      "appBytes": 59858,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Duckimp",
+      "original": "docs/design/enemy-originals/Duckimp.png",
+      "originalSha256": "bcfe83416e59ccca9cb5b182dc47b9a9794940d6b7b5a8ae147677011c2e2866",
+      "originalBytes": 1543163,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Duckimp.webp",
+      "appSha256": "62ca4dbf1cec45ed33ccd3ccb46f4394590504f5bbb7fdeb5f60ae83dc06e1a0",
+      "appBytes": 45552,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Elephimp",
+      "original": "docs/design/enemy-originals/Elephimp.png",
+      "originalSha256": "19475c9f83718d89d090d6161b23614cfff4a832611a5ec07e92fbebaf60f12a",
+      "originalBytes": 2196594,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Elephimp.webp",
+      "appSha256": "801af4c9122feb7da1b91e109bb4b8bb4ec207b9df8a84f2dab535dabcf51fee",
+      "appBytes": 56998,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Entimp",
+      "original": "docs/design/enemy-originals/Entimp.png",
+      "originalSha256": "f8bd61b380a06c6dec4c7a8ef1e77b48f023c2fc41ba87ec6a57388ee1e2e86b",
+      "originalBytes": 1803221,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Entimp.webp",
+      "appSha256": "cd75eb78ef04ceacaf518d29f43a0cb2b1fd8e37ac0e4977c2a880dfe3c8c08f",
+      "appBytes": 56226,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Feyimp",
+      "original": "docs/design/enemy-originals/Feyimp.png",
+      "originalSha256": "bdf6490620718e24581d720cab238dc74cb9d89605578bcf34afb42a8d2c5f79",
+      "originalBytes": 2106509,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Feyimp.webp",
+      "appSha256": "bc3141e126fcc97713b3a660a1900332e8336a525264b00fadea104eedef0384",
+      "appBytes": 64790,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Flowimp",
+      "original": "docs/design/enemy-originals/Flowimp.png",
+      "originalSha256": "c06134fb005d1e6b0d47b2e88846a4cca94cb6f49ef2b27c239974fcb1a111b6",
+      "originalBytes": 1129325,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Flowimp.webp",
+      "appSha256": "ef048c8e58695c73443a6749a261897063625f75d9b2a27eef3d2577d277bfb1",
+      "appBytes": 42702,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Flutimp",
+      "original": "docs/design/enemy-originals/Flutimp.png",
+      "originalSha256": "e206c00837b20fb627d21e099c2ff79b195b70d86521045e6221aa61f9a88e13",
+      "originalBytes": 1750903,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Flutimp.webp",
+      "appSha256": "56fcd57186692a4b14951db069b8d830625aac9e57a6a028c34382d43f691bfd",
+      "appBytes": 54008,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Freezo",
+      "original": "docs/design/enemy-originals/Freezo.png",
+      "originalSha256": "7f59445ad83c44e21460d6de521e2421701299ff087109cf289cef5343b3e927",
+      "originalBytes": 1475445,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Freezo.webp",
+      "appSha256": "5d2dcff9172d8a532814c1743554cbf9139b4150b8621a4526e658321cc2944e",
+      "appBytes": 42062,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Frimp",
+      "original": "docs/design/enemy-originals/Frimp.png",
+      "originalSha256": "3e9c2757a8fff7bb60d482bb92c6a4cdb5f26477a635f6afd1f5d27b40e8c6ca",
+      "originalBytes": 1454400,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Frimp.webp",
+      "appSha256": "94e71f0b38309d6341f02355f7b041a8dcfa40aae2eb15672f8acd03b4a29fa0",
+      "appBytes": 47482,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Frosnimp",
+      "original": "docs/design/enemy-originals/Frosnimp.png",
+      "originalSha256": "357801c32d352b05917edce5d18ad2df0ff6761797b04319501d4757c25aebd1",
+      "originalBytes": 1491563,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Frosnimp.webp",
+      "appSha256": "469c8cdf15a47e023830d7520439c20317b5199925c9d8656f4a5d772d55bd6c",
+      "appBytes": 49274,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Fusimp",
+      "original": "docs/design/enemy-originals/Fusimp.png",
+      "originalSha256": "78311e01d5f7ebb4d9dc3d92192f00a1bcf6e5d4975595e886dd716b1b4dc75f",
+      "originalBytes": 1943180,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Fusimp.webp",
+      "appSha256": "c4c24bb73a0363e59f1f2b25777880008e39badba3e775824df58fa7d764fba4",
+      "appBytes": 53212,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Gnomimp",
+      "original": "docs/design/enemy-originals/Gnomimp.png",
+      "originalSha256": "c04efe60e73eab60eaf82b7c09703c0a79315f1884e9ca47226c8c8bbf79b954",
+      "originalBytes": 1364543,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Gnomimp.webp",
+      "appSha256": "1138a74cb0e55aa6d76ccc70d88a07ecbe19a43dc7431af15f000c982d66c088",
+      "appBytes": 38404,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Goblimp",
+      "original": "docs/design/enemy-originals/Goblimp.png",
+      "originalSha256": "2ec8273fa8af6d7cbfd28736bd6e9e0201e741ff52eee01f9d4be89789b765b7",
+      "originalBytes": 2047286,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Goblimp.webp",
+      "appSha256": "0f26909d93018ad548cd7d0a75ddbebb3167311b2b2f5dd0ea247a55e951b3e5",
+      "appBytes": 62222,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Golimp",
+      "original": "docs/design/enemy-originals/Golimp.png",
+      "originalSha256": "2b675a8258a3506a74b484c39b3f4127e41075782c84562d6950ba230fd228f7",
+      "originalBytes": 2471443,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Golimp.webp",
+      "appSha256": "9c730962f5088e52c464c5ea67540c2f6347fa913bb7397ff620c6b5dd898a6f",
+      "appBytes": 67116,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Gorillimp",
+      "original": "docs/design/enemy-originals/Gorillimp.png",
+      "originalSha256": "88ce30c8de5f87cce4a1fdd8e59409c2359e226fd49841c3f64462f4f72090cd",
+      "originalBytes": 2320043,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Gorillimp.webp",
+      "appSha256": "6837e94cb8df16e718df49ce6e2ff807bcd136bbb8a66e21cf55d9083e8c3c91",
+      "appBytes": 60350,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Gravelimp",
+      "original": "docs/design/enemy-originals/Gravelimp.png",
+      "originalSha256": "28b4b47b7367fcef964af8ee2d49e987e78846a5928ff68604e9452146c3c5ed",
+      "originalBytes": 1542119,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Gravelimp.webp",
+      "appSha256": "140daf0afa527c7477423072f4b466c40c7a8b04c4dbd49c94714a18565cf8b1",
+      "appBytes": 42048,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Grimp",
+      "original": "docs/design/enemy-originals/Grimp.png",
+      "originalSha256": "12fdab9af9f5f2e4649a499572055389c8d72a89987a6eb44f95a298db13513c",
+      "originalBytes": 1693044,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Grimp.webp",
+      "appSha256": "abb466442e461763cd72610d0bbe8789be0476568feb9463f01c62388aace992",
+      "appBytes": 51854,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Hippopotamimp",
+      "original": "docs/design/enemy-originals/Hippopotamimp.png",
+      "originalSha256": "d2611f878aa3370b949eb01b8f900db35c4a647b1f3018e5e7b032ee2e3520bb",
+      "originalBytes": 2253701,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Hippopotamimp.webp",
+      "appSha256": "eb5dbc93d318afbdd951148378f0f9642d8cd6041a230719c60217cad021a9be",
+      "appBytes": 56940,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Horrimp",
+      "original": "docs/design/enemy-originals/Horrimp.png",
+      "originalSha256": "587dd42c5dea2b7bf5487ded409bc6e3f849dc1e0a50899d851b341d151f3ea5",
+      "originalBytes": 2271983,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Horrimp.webp",
+      "appSha256": "4ae9ec109bff00e3f33d90b4a35927fd2270c3501f7cdb37bd582589a55605a6",
+      "appBytes": 39020,
+      "appSize": [
+        400,
+        267
+      ]
+    },
+    {
+      "name": "Hulking_Mutimp",
+      "original": "docs/design/enemy-originals/Hulking_Mutimp.png",
+      "originalSha256": "db7b0fb865b0a43928122e45ef317bfd3e8139abe20a29a77ba8942b039e688a",
+      "originalBytes": 2525437,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Hulking_Mutimp.webp",
+      "appSha256": "0d546ebe1e651c2cb13643fb57987a8cb2be122f1523820b72b5c442a1665147",
+      "appBytes": 40370,
+      "appSize": [
+        400,
+        267
+      ]
+    },
+    {
+      "name": "Hydrogimp",
+      "original": "docs/design/enemy-originals/Hydrogimp.png",
+      "originalSha256": "ae765e4bafee8b4eac914dfb7d233f857556450404eb410fcf4a3da888aa00f3",
+      "originalBytes": 1782270,
+      "originalSize": [
+        1230,
+        1278
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Hydrogimp.webp",
+      "appSha256": "d7250f083ad4ac0e8248ed3fbef3795dd63c092ae2ca1830505dab460649dff6",
+      "appBytes": 58988,
+      "appSize": [
+        385,
+        400
+      ]
+    },
+    {
+      "name": "Improbability",
+      "original": "docs/design/enemy-originals/Improbability.png",
+      "originalSha256": "839363eb8cc7980272cbc662e42309497212a5ec84d158b919a2def85d088247",
+      "originalBytes": 1834099,
+      "originalSize": [
+        1374,
+        1145
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Improbability.webp",
+      "appSha256": "d0716a4505fedfc7409257d9c894718f96e598c24c748c1c2d3da00d2a17475b",
+      "appBytes": 58762,
+      "appSize": [
+        400,
+        333
+      ]
+    },
+    {
+      "name": "Indianimp",
+      "original": "docs/design/enemy-originals/Indianimp.png",
+      "originalSha256": "6fd432d6d8196082858d45c6cc056f766c1fd575158e5428accb87e222f6d4f8",
+      "originalBytes": 2128961,
+      "originalSize": [
+        1222,
+        1287
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Indianimp.webp",
+      "appSha256": "dbb6146fbcbf5bda12b1f75ad0fd265e759d0e36ef9e1c3baa98d902f2b1444c",
+      "appBytes": 64184,
+      "appSize": [
+        380,
+        400
+      ]
+    },
+    {
+      "name": "Jestimp",
+      "original": "docs/design/enemy-originals/Jestimp.png",
+      "originalSha256": "34c4a41f55bb192d40891384e0fe799902dc85f66f3e4a42934fb76bc16111f3",
+      "originalBytes": 1742755,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Jestimp.webp",
+      "appSha256": "577ab796fcf3f39d5b36b33ed093ead706b200771952be373a27a8b6061bc261",
+      "appBytes": 51666,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Kangarimp",
+      "original": "docs/design/enemy-originals/Kangarimp.png",
+      "originalSha256": "cbf1ef2f148f589388bdc6e809c2d6c31dd23bc9005541d6d97792fce8c5d04b",
+      "originalBytes": 1898854,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Kangarimp.webp",
+      "appSha256": "309192e1583f162fa78fce560767722706e3dc752a26c5058c2e09b726ceeda9",
+      "appBytes": 54224,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Kittimp",
+      "original": "docs/design/enemy-originals/Kittimp.png",
+      "originalSha256": "ac5bb6350ba22a3c99362d03c513688270f33830b68117367530af83b1540ae1",
+      "originalBytes": 1977132,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Kittimp.webp",
+      "appSha256": "e95bed14bed01b6675cf4e0774eea55fd5002c033d85c8ba1e28e87e490b2578",
+      "appBytes": 61912,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Lavimp",
+      "original": "docs/design/enemy-originals/Lavimp.png",
+      "originalSha256": "9dc0bd44e9b83ab1251e64423c000615707c6c6c5b8cf97739a2b74a10de5ad5",
+      "originalBytes": 1578820,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Lavimp.webp",
+      "appSha256": "18aa9c905ff3c010ecb798512d94d2c56ccd87a5082494d4697fa5c44f601b67",
+      "appBytes": 46430,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Lightimp",
+      "original": "docs/design/enemy-originals/Lightimp.png",
+      "originalSha256": "1319ef94d85dce5a95d8cabb28271aa721cccc1f9b3586fcb8f554b4b20ed8ee",
+      "originalBytes": 1850830,
+      "originalSize": [
+        1223,
+        1286
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Lightimp.webp",
+      "appSha256": "61ceb293677455dbde57c7e986de04401d4e6dd03942a20806050967dac5f8fe",
+      "appBytes": 61304,
+      "appSize": [
+        380,
+        400
+      ]
+    },
+    {
+      "name": "Liquimp",
+      "original": "docs/design/enemy-originals/Liquimp.png",
+      "originalSha256": "ca0372f9ac494421062ddc681da30de4bed0bb16e9b565326007bd0e10a2993e",
+      "originalBytes": 1763723,
+      "originalSize": [
+        1274,
+        1234
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Liquimp.webp",
+      "appSha256": "c67f43915073b032095c5e7191e66efc540de4c906dd4f5ebc70c519b50076f9",
+      "appBytes": 64016,
+      "appSize": [
+        400,
+        387
+      ]
+    },
+    {
+      "name": "Magimp",
+      "original": "docs/design/enemy-originals/Magimp.png",
+      "originalSha256": "d2b1e0b7b0676fa429fb1ea830f6733a55155ee884c8b5e90c779b875b96494e",
+      "originalBytes": 1983229,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Magimp.webp",
+      "appSha256": "87033f4ab36b2f6c14a5352d361ca1c7aba54108b78bae8ec71d11009d5a3534",
+      "appBytes": 50934,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Magnimp",
+      "original": "docs/design/enemy-originals/Magnimp.png",
+      "originalSha256": "c6dd7b77426eca86358555d289f36115ec776359a0c61a5a9ce803a3e408db06",
+      "originalBytes": 1821634,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Magnimp.webp",
+      "appSha256": "863e04ea9ab7053a6325f9b51133ff4f2da2e327b0a8b08456c9345b80c262dc",
+      "appBytes": 54144,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Mantimp",
+      "original": "docs/design/enemy-originals/Mantimp.png",
+      "originalSha256": "a047cdc1098d434c3f776d5063ae02417fe9670de02873654ee67529f61b93a6",
+      "originalBytes": 1130981,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Mantimp.webp",
+      "appSha256": "ae4a2ba46e71a506d4ef47a60795840b5fe0bfdeb64bac332a26fd89cf2fb415",
+      "appBytes": 38962,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Mechimp",
+      "original": "docs/design/enemy-originals/Mechimp.png",
+      "originalSha256": "4618a932ba23e50eb42ec4592bb21640cd29dfb9e8c6c264419b35883f95f7b6",
+      "originalBytes": 1719229,
+      "originalSize": [
+        1213,
+        1296
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Mechimp.webp",
+      "appSha256": "c5e9b1640d5d4b908ee0b7f3682c790327c3b0715284810458312078e8866410",
+      "appBytes": 57994,
+      "appSize": [
+        374,
+        400
+      ]
+    },
+    {
+      "name": "Megablimp",
+      "original": "docs/design/enemy-originals/Megablimp.png",
+      "originalSha256": "3ccec43734e52f193de493a40e412e1b67487fde1297d06e029b3161fe269d6a",
+      "originalBytes": 2386101,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Megablimp.webp",
+      "appSha256": "9f363ba9de4a7d0cddfc294e5c6f336b25af94d151511930d4573e4e29e98c9d",
+      "appBytes": 58982,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Megaskeletimp",
+      "original": "docs/design/enemy-originals/Megaskeletimp.png",
+      "originalSha256": "81a07609212d88d0bdab3db1669f81eee13fbd7c6742e1e7ad853d00a8a04f48",
+      "originalBytes": 2223616,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Megaskeletimp.webp",
+      "appSha256": "c8a90c5bbf934dc8768b5ae7e820c7894f1aecab1998eab0af68bc3c5eff9e42",
+      "appBytes": 68440,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Meltimp",
+      "original": "docs/design/enemy-originals/Meltimp.png",
+      "originalSha256": "2873b172a2af55fbcc1026bb246e1cd04e2ba59a3a076c15894040eb11ead80d",
+      "originalBytes": 1645944,
+      "originalSize": [
+        1374,
+        1145
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Meltimp.webp",
+      "appSha256": "4cefd0a379f8286e68131d13d0fda63445da6dbfdac531da50a01b6439859eff",
+      "appBytes": 44928,
+      "appSize": [
+        400,
+        333
+      ]
+    },
+    {
+      "name": "Mitschimp",
+      "original": "docs/design/enemy-originals/Mitschimp.png",
+      "originalSha256": "cb2d104eb8458e5e7b6775e14d0cd0c925a7c61ee494d717ba9f85348d35c8d5",
+      "originalBytes": 1646835,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Mitschimp.webp",
+      "appSha256": "f692a4a1858fff1c6d7c4069b3a3be375b75ed40f70dd5d2c0023e889a56bcd0",
+      "appBytes": 42752,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Moltimp",
+      "original": "docs/design/enemy-originals/Moltimp.png",
+      "originalSha256": "b9722f07d68f057fc3c5ac393e1bd48c8972d7b0e091f5713d53b447d7287852",
+      "originalBytes": 1305898,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Moltimp.webp",
+      "appSha256": "bc501e87261ac03a5ff0ab0e1cbe09f7cb232fbbd81127bdca06a277a3704d84",
+      "appBytes": 46912,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Mountimp",
+      "original": "docs/design/enemy-originals/Mountimp.png",
+      "originalSha256": "0fa7aaa0023275fbdba67a2b5afe6be6d932c55288e7fa25505743828a2606d8",
+      "originalBytes": 1887401,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Mountimp.webp",
+      "appSha256": "26fbc4fc7fa8176ecfa0bffdc282ef87ce14442e8125f2e351b589554e2dd1e5",
+      "appBytes": 48132,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Mutimp",
+      "original": "docs/design/enemy-originals/Mutimp.png",
+      "originalSha256": "bfdd60b3e5a82660217fa9af9fbea0400886739847fa5d7955f84eddf1f21c2d",
+      "originalBytes": 1969304,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Mutimp.webp",
+      "appSha256": "b0e357c49d3ed74cb37cf12e1dd7ec9258969917903f2e40f493d29af86e889d",
+      "appBytes": 57594,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Neutrimp",
+      "original": "docs/design/enemy-originals/Neutrimp.png",
+      "originalSha256": "0542496066335ada61f73df5e552fba657d0816bc952c1676cb30cccdb635c7a",
+      "originalBytes": 1839822,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Neutrimp.webp",
+      "appSha256": "0cecfa30c63131c6c1566bd76c3e7ba02c8595b7f600c334b53b7bd36fcf04ee",
+      "appBytes": 44690,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Nooimp",
+      "original": "docs/design/enemy-originals/Nooimp.png",
+      "originalSha256": "4de901ff9ad70237a2ead1e62f93e5f6489cd7b2d66d04e9bff88706669a3287",
+      "originalBytes": 1605719,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Nooimp.webp",
+      "appSha256": "89735499c12bba26ea6a5d622ab6b8fa7a7434c75b43fee58455013c8e99f6c3",
+      "appBytes": 52636,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Omnipotrimp",
+      "original": "docs/design/enemy-originals/Omnipotrimp.png",
+      "originalSha256": "17433ba9a98210192f754227a7ae4bb1837c82290f46c2f60f45e8b2f35a08bf",
+      "originalBytes": 2418926,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Omnipotrimp.webp",
+      "appSha256": "42153a560ce5cf6f0a3ec0077de295caef36eeac494d9cd86eca932927bf96e6",
+      "appBytes": 78424,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Onoudidimp",
+      "original": "docs/design/enemy-originals/Onoudidimp.png",
+      "originalSha256": "0b604e99ae27eabe062152d6ae0be8cb2ee06d0bca1a4341dcacd096de932597",
+      "originalBytes": 2069989,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Onoudidimp.webp",
+      "appSha256": "155296ec68b0f149dc34248e02fc20c909f4d5418cccae3651c37a93b20d394b",
+      "appBytes": 55548,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Penguimp",
+      "original": "docs/design/enemy-originals/Penguimp.png",
+      "originalSha256": "19659458a9f44dc2667b8eacaef4d055194bfb38e27832725a8e70705fcfbfed",
+      "originalBytes": 1892069,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Penguimp.webp",
+      "appSha256": "5948fb209ef31d71904316d78459a0027fee9ac371b19dfbc1c56fbf920db085",
+      "appBytes": 48386,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Platypimp",
+      "original": "docs/design/enemy-originals/Platypimp.png",
+      "originalSha256": "619813b1ce42e808300896d5b119dad7696f3726f7f181af8f64094489e942f6",
+      "originalBytes": 1958531,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Platypimp.webp",
+      "appSha256": "78ed6b9d602c86fc2ff7f170951b38e97325e14f55b11b35db9af46a36a44ed7",
+      "appBytes": 52106,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Poseidimp",
+      "original": "docs/design/enemy-originals/Poseidimp.png",
+      "originalSha256": "e57cc1f26bad59b3a6daad97cabfad450390de17ef5080fc13d04d0e9324706d",
+      "originalBytes": 1874009,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Poseidimp.webp",
+      "appSha256": "e5d31a0a0fece7279f1a65e00ec0583f918b8289e92d766c5d691527dc45726b",
+      "appBytes": 59134,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Presimpt",
+      "original": "docs/design/enemy-originals/Presimpt.png",
+      "originalSha256": "2e976d86d13a3a5264a7151c94d7108a2f31cd413af9b391d5ce2c4881a793db",
+      "originalBytes": 1897499,
+      "originalSize": [
+        1312,
+        1199
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Presimpt.webp",
+      "appSha256": "468531aa9cdae32dee7aae445886e7a6a638241601138e4e86f4e8c28421b427",
+      "appBytes": 50024,
+      "appSize": [
+        400,
+        366
+      ]
+    },
+    {
+      "name": "Prismimp",
+      "original": "docs/design/enemy-originals/Prismimp.png",
+      "originalSha256": "54d136ce60a2555a3e76743217ac7326c48c58c56610c689caa509074e8a3650",
+      "originalBytes": 2268348,
+      "originalSize": [
+        1240,
+        1268
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Prismimp.webp",
+      "appSha256": "1a31d4af27593f8ea3cd42b67d3421cedcb1b8b0d696f5a1cec96cc90bee9b41",
+      "appBytes": 70128,
+      "appSize": [
+        391,
+        400
+      ]
+    },
+    {
+      "name": "Pumpkimp",
+      "original": "docs/design/enemy-originals/Pumpkimp.png",
+      "originalSha256": "f838cb969dce021de216852b781f9cd89b8a7417990678b49908c54c5f17b145",
+      "originalBytes": 1636760,
+      "originalSize": [
+        1374,
+        1145
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Pumpkimp.webp",
+      "appSha256": "8b6b17eb52a73dac7cf4ca04b6b373f5cf059b6e9147e570b8536583cd365638",
+      "appBytes": 41280,
+      "appSize": [
+        400,
+        333
+      ]
+    },
+    {
+      "name": "Rainbimp",
+      "original": "docs/design/enemy-originals/Rainbimp.png",
+      "originalSha256": "a52af6d9da937306051c7e4e61ba9160e4ef9e2add9afe7a2181323070737dae",
+      "originalBytes": 2022871,
+      "originalSize": [
+        1320,
+        1192
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Rainbimp.webp",
+      "appSha256": "48e14a46fe4ae8f8a02cbb3e62105f17604aae69cf08b93522a7b9702eb5c162",
+      "appBytes": 57082,
+      "appSize": [
+        400,
+        361
+      ]
+    },
+    {
+      "name": "Robotrimp",
+      "original": "docs/design/enemy-originals/Robotrimp.png",
+      "originalSha256": "977fc2ee122db457110d66c60265818f2c561c1eb3effcee5fd6763fbd36311d",
+      "originalBytes": 2313748,
+      "originalSize": [
+        1309,
+        1201
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Robotrimp.webp",
+      "appSha256": "3fe4d1019c647f196305784b2a37ec66a56f77f6e9d2ca3af66b0844ba82e8f2",
+      "appBytes": 81290,
+      "appSize": [
+        400,
+        367
+      ]
+    },
+    {
+      "name": "Seirimp",
+      "original": "docs/design/enemy-originals/Seirimp.png",
+      "originalSha256": "1019bd1ece02f2865b23b48d6feb09ce76ca8be1038c74a152d927855c1e9d8b",
+      "originalBytes": 2339553,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Seirimp.webp",
+      "appSha256": "92cd6c3883f2a153e1bc65fdfd4fd127231d79120b254e1483d1c9b68d08cd11",
+      "appBytes": 61372,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Shadimp",
+      "original": "docs/design/enemy-originals/Shadimp.png",
+      "originalSha256": "993f7d4d5d3d992a8cccc9ad24697b1b64a886bea9f46d9064914fa039a2ee01",
+      "originalBytes": 2602020,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Shadimp.webp",
+      "appSha256": "ac0b767b2841f21d45223270fd1052de7da6293373c7459f32adff04866dd1b1",
+      "appBytes": 55322,
+      "appSize": [
+        400,
+        267
+      ]
+    },
+    {
+      "name": "Shrimp",
+      "original": "docs/design/enemy-originals/Shrimp.png",
+      "originalSha256": "18e776137f1b9ecdc66a777e176d983d88e44162db87dfce45e8067c2fda0280",
+      "originalBytes": 1348513,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Shrimp.webp",
+      "appSha256": "957af48ae09f1d24a328f4bc8df3737dd129b367c2c8ea4602715deb3c737741",
+      "appBytes": 49050,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Skeletimp",
+      "original": "docs/design/enemy-originals/Skeletimp.png",
+      "originalSha256": "01c3dc8164559a932de99787fe4a8ff4bad790f4d8890a0e0c0a89337d4b6d1d",
+      "originalBytes": 1625601,
+      "originalSize": [
+        1200,
+        1311
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Skeletimp.webp",
+      "appSha256": "c4af258377a48aa4087a3a88f4462b51f1ad0d2d9cac06a4f18de8520b40945f",
+      "appBytes": 49412,
+      "appSize": [
+        366,
+        400
+      ]
+    },
+    {
+      "name": "Slagimp",
+      "original": "docs/design/enemy-originals/Slagimp.png",
+      "originalSha256": "49b26873df972edac39faf145eb43ecaa39ab3a18bceba36d961c3afea93146e",
+      "originalBytes": 2491330,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Slagimp.webp",
+      "appSha256": "269de088756ed5b4591f518e24543d36e29f92e1c3abbc65a45a862ae01d4dc5",
+      "appBytes": 68824,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Slosnimp",
+      "original": "docs/design/enemy-originals/Slosnimp.png",
+      "originalSha256": "1bfeea8ba387d1c5872c1b7a4ba0da6f9f0503150028a228f2702b0713c18e7d",
+      "originalBytes": 1695989,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Slosnimp.webp",
+      "appSha256": "64e2d5a851401a22941be513f455a2a29ebb2660376abcde8948c7ae1d27d18e",
+      "appBytes": 44612,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Snimp",
+      "original": "docs/design/enemy-originals/Snimp.png",
+      "originalSha256": "747790f1c28bd3a14633c6a1563d69bdfdea818df7093030ada241651d4a1682",
+      "originalBytes": 1890863,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Snimp.webp",
+      "appSha256": "6656325f789981030dcf3c42434e50ff7e91ce78a65fcce3b339797975bf9724",
+      "appBytes": 58470,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Squimp",
+      "original": "docs/design/enemy-originals/Squimp.png",
+      "originalSha256": "3c319df55271ce58c682d19eb1888eaa0b954de79a2787f77b08a5e7387549c0",
+      "originalBytes": 2000593,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Squimp.webp",
+      "appSha256": "f55197f61977683c7249cdc60037f2900a6ee048928aa8051a55177fbdb49396",
+      "appBytes": 60768,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Squirrimp",
+      "original": "docs/design/enemy-originals/Squirrimp.png",
+      "originalSha256": "6b781c353f5d90da83a41fd92f7cb56a9c7bcbe0023f90d29e79febe3e4bd60b",
+      "originalBytes": 2162038,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Squirrimp.webp",
+      "appSha256": "1c87294d9e72d6bed6f09e967e6c3bc9a17abe0915e6d0b086c532b935b4372f",
+      "appBytes": 56176,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Sweltimp",
+      "original": "docs/design/enemy-originals/Sweltimp.png",
+      "originalSha256": "e7a92e06da68bd85260504add00a21c3c9ef06646236a8f4724c786b21864af0",
+      "originalBytes": 1595226,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Sweltimp.webp",
+      "appSha256": "6ecc2d1ac7d2830372e1db73ac747546a40067e4426600b7b255d7f06b455a4b",
+      "appBytes": 43086,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Tauntimp",
+      "original": "docs/design/enemy-originals/Tauntimp.png",
+      "originalSha256": "6bdba02edf33cf744f081636c9cad02b966fa4477031689c81f0ee1efed1c2c2",
+      "originalBytes": 1581489,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Tauntimp.webp",
+      "appSha256": "9d5419f4f3623dba74e102ebc16ce1204ac4824c56bac87f4922af2f750c6f04",
+      "appBytes": 48994,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Terminatimp",
+      "original": "docs/design/enemy-originals/Terminatimp.png",
+      "originalSha256": "6538ab9d806a0c0a897b9293779ed94b6a0e57d46fb89279c1a12e0503d31667",
+      "originalBytes": 1710959,
+      "originalSize": [
+        1208,
+        1302
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Terminatimp.webp",
+      "appSha256": "7d91033f481f722d52127f2fabb2a1f592f8c21779672323e3414bbcc744b6cb",
+      "appBytes": 47062,
+      "appSize": [
+        371,
+        400
+      ]
+    },
+    {
+      "name": "Titimp",
+      "original": "docs/design/enemy-originals/Titimp.png",
+      "originalSha256": "ce01f990d5c399e81e6018e0d148730fa3babbd67a998948a81d784e0be39f1e",
+      "originalBytes": 2366205,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Titimp.webp",
+      "appSha256": "4d8faaa2fe853b2b4e8846a8ef3e55408fe7ded6a17d48a1f8bb950aa3470621",
+      "appBytes": 61854,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Turkimp",
+      "original": "docs/design/enemy-originals/Turkimp.png",
+      "originalSha256": "eb1a5bdfbddb89c8417cec378931a2872047016d03205ca67d1bde0fc2890183",
+      "originalBytes": 2324273,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Turkimp.webp",
+      "appSha256": "c331e8ab58a224e08da1cb75d8c8716cab890ded1b63baf09a213d0d1cf57874",
+      "appBytes": 66602,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Turtlimp",
+      "original": "docs/design/enemy-originals/Turtlimp.png",
+      "originalSha256": "ca2d124c0514560da70ff09d7270ea698eddc58c298ef7f996f3ae4b6ccee101",
+      "originalBytes": 2217934,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Turtlimp.webp",
+      "appSha256": "32fae4d64a8b17db65a5bd04542ebd8d00d32f4ac1efc163cd6a93137fa92d47",
+      "appBytes": 58702,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Venimp",
+      "original": "docs/design/enemy-originals/Venimp.png",
+      "originalSha256": "7aade63c34d34deb4284db1bb226a782eee72e1a5a2e0eb32b197d27d60feb6c",
+      "originalBytes": 1898103,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Venimp.webp",
+      "appSha256": "cf7eb068dd97ab3a2b4b756c5f6b2b284b545551ca277c62cf7077959a76e349",
+      "appBytes": 56690,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Voidsnimp",
+      "original": "docs/design/enemy-originals/Voidsnimp.png",
+      "originalSha256": "54510bc1a846869b86b60517858b438491e932e071aa97b56807f8e55f52150f",
+      "originalBytes": 1466192,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Voidsnimp.webp",
+      "appSha256": "4d0221395aac614fd34ff909f231d713a0ff9bac9c170b670d8fcbcb686fa5de",
+      "appBytes": 45300,
+      "appSize": [
+        400,
+        400
+      ]
+    },
+    {
+      "name": "Warden",
+      "original": "docs/design/enemy-originals/Warden.png",
+      "originalSha256": "4f79a4dbed66c19b41a90ed1a3b1a9c7828660f1bceb14e8da02346996caa923",
+      "originalBytes": 2139495,
+      "originalSize": [
+        1307,
+        1203
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Warden.webp",
+      "appSha256": "bb58d53bbf52cf1c1cdc2940d878851612202d440d8e943b431ac548674a2d5f",
+      "appBytes": 55090,
+      "appSize": [
+        400,
+        368
+      ]
+    },
+    {
+      "name": "Whipimp",
+      "original": "docs/design/enemy-originals/Whipimp.png",
+      "originalSha256": "411f7ad0310fde310ff451d8d7485ccfbba5243330ab3af2766d41eb7797e97d",
+      "originalBytes": 1636393,
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "app": "app/src/main/assets/game/mobile-assets/imp-family/Whipimp.webp",
+      "appSha256": "7c24dae703abc65e790198b3982ec0cb1cba8c2e69cdcea329a8342d41da2875",
+      "appBytes": 53574,
+      "appSize": [
+        400,
+        400
+      ]
+    }
+  ]
+}

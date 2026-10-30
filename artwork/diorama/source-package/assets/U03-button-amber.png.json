@@ -1,0 +1,23 @@
+{
+  "id": "U03",
+  "key": "button-amber",
+  "name": "Bernsteintaste",
+  "group": "interface",
+  "file": "assets/U03-button-amber.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 610,
+    "width": 542,
+    "height": 380
+  },
+  "nativeSize": {
+    "width": 542,
+    "height": 380
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "d5613102d054fda4230b609625bb8ddb3291011a748def5d1245eddc3724f77b",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

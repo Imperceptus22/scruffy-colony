@@ -1,0 +1,23 @@
+{
+  "id": "B21",
+  "key": "Wormhole",
+  "name": "Wormhole",
+  "group": "buildings",
+  "file": "assets/B21-Wormhole.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 836,
+    "top": 800,
+    "width": 418,
+    "height": 454
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 454
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "7010bd63f099dd278c10890f57d933f678e9527b3d9623261eb2c37d78d6f610",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

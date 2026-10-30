@@ -1,0 +1,13 @@
+{
+  "tool": "built-in imagegen",
+  "prompts": [
+    "Use case: stylized-concept. Asset type: transparent character cutout for a compact mobile Trimps battle UI in the approved Feldstation palette. Create an original, charming but brave party of three small fantasy creatures, round furry moss-grey bodies, wide expressive faces, little pointed ears, wearing simple linen and leather adventurer gear, carrying tiny wooden shields and short iron swords. They are an illustrative interpretation of Trimps, not an official game portrait. Three-quarter view facing RIGHT, full bodies, central creature strongest silhouette, cohesive group. High quality hand-painted strategy-game illustration with fine warm brushwork, clean readable silhouette at 80px, natural sage, linen, petrol and honey palette, gentle sunlight. Actual transparent background, no scenery, no ground plane, no text, letters, UI frame or watermark. Group fills most of the square canvas, breathing room around all edges.",
+    "Use case: stylized-concept. Asset type: transparent enemy cutout for a compact mobile Trimps battle UI in the approved Feldstation palette. Create an original fantasy Elephimp: a stout elephant-like wilderness creature with slate grey leathery skin, large warm ears, sturdy short legs, two short ivory tusks, curled trunk and expressive determined eyes. Charming, formidable, not grotesque. It is an illustrative interpretation, not an official game portrait. Three-quarter view facing LEFT, full body. High quality hand-painted strategy-game illustration with fine warm brushwork, clean readable silhouette at 80px, natural slate, warm stone, sage and honey highlights, gentle sunlight. Actual transparent background, no scenery, no ground plane, no text, letters, UI frame or watermark. Creature fills most of the square canvas, breathing room around all edges."
+  ],
+  "reference": "B2 Feldstation; Originalfiguren frei interpretiert, keine offiziellen Trimps-Porträts",
+  "files": [
+    "trimps.png",
+    "elephimp.png"
+  ],
+  "landscape": "field.png: unveränderte lokale Kopie der zuvor mit ImageGen erzeugten Feldstation-Illustration; Herkunft und Prompt in ../waldwerk-varianten/Bildprompts.json"
+}

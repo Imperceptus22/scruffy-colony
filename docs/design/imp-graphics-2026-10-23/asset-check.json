@@ -1,0 +1,305 @@
+{
+  "count": 20,
+  "results": [
+    {
+      "name": "Kittimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 848242,
+      "bounds": {
+        "minX": 151,
+        "minY": 33,
+        "maxX": 1180,
+        "maxY": 1223
+      },
+      "bytes": 1977132,
+      "sha256": "ac5bb6350ba22a3c99362d03c513688270f33830b68117367530af83b1540ae1",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Penguimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 856794,
+      "bounds": {
+        "minX": 129,
+        "minY": 64,
+        "maxX": 1124,
+        "maxY": 1215
+      },
+      "bytes": 1892069,
+      "sha256": "19659458a9f44dc2667b8eacaef4d055194bfb38e27832725a8e70705fcfbfed",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Kangarimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 866949,
+      "bounds": {
+        "minX": 178,
+        "minY": 22,
+        "maxX": 1237,
+        "maxY": 1242
+      },
+      "bytes": 1898854,
+      "sha256": "cbf1ef2f148f589388bdc6e809c2d6c31dd23bc9005541d6d97792fce8c5d04b",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Squirrimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 739928,
+      "bounds": {
+        "minX": 168,
+        "minY": 60,
+        "maxX": 1166,
+        "maxY": 1207
+      },
+      "bytes": 2162038,
+      "sha256": "6b781c353f5d90da83a41fd92f7cb56a9c7bcbe0023f90d29e79febe3e4bd60b",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Platypimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 833369,
+      "bounds": {
+        "minX": 85,
+        "minY": 104,
+        "maxX": 1230,
+        "maxY": 1195
+      },
+      "bytes": 1958531,
+      "sha256": "619813b1ce42e808300896d5b119dad7696f3726f7f181af8f64094489e942f6",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Chickimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 864626,
+      "bounds": {
+        "minX": 165,
+        "minY": 32,
+        "maxX": 1114,
+        "maxY": 1231
+      },
+      "bytes": 1854817,
+      "sha256": "893777de3a05b831ac416d7a8462f3f7f5b4386368f315347eb0d1f1654055c1",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Hippopotamimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 699427,
+      "bounds": {
+        "minX": 59,
+        "minY": 64,
+        "maxX": 1204,
+        "maxY": 1211
+      },
+      "bytes": 2253701,
+      "sha256": "d2611f878aa3370b949eb01b8f900db35c4a647b1f3018e5e7b032ee2e3520bb",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Dragimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 795004,
+      "bounds": {
+        "minX": 140,
+        "minY": 88,
+        "maxX": 1197,
+        "maxY": 1216
+      },
+      "bytes": 2062651,
+      "sha256": "d1e69ba74b9c95ceecd437daaadc5471ce8b654f505ec0efd9634354f993c7a7",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Seirimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 717142,
+      "bounds": {
+        "minX": 177,
+        "minY": 48,
+        "maxX": 1171,
+        "maxY": 1216
+      },
+      "bytes": 2339553,
+      "sha256": "1019bd1ece02f2865b23b48d6feb09ce76ca8be1038c74a152d927855c1e9d8b",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Onoudidimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 826593,
+      "bounds": {
+        "minX": 135,
+        "minY": 44,
+        "maxX": 1181,
+        "maxY": 1217
+      },
+      "bytes": 2069989,
+      "sha256": "0b604e99ae27eabe062152d6ae0be8cb2ee06d0bca1a4341dcacd096de932597",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Goblimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 804586,
+      "bounds": {
+        "minX": 106,
+        "minY": 47,
+        "maxX": 1188,
+        "maxY": 1214
+      },
+      "bytes": 2047286,
+      "sha256": "2ec8273fa8af6d7cbfd28736bd6e9e0201e741ff52eee01f9d4be89789b765b7",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Feyimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 825524,
+      "bounds": {
+        "minX": 72,
+        "minY": 36,
+        "maxX": 1158,
+        "maxY": 1224
+      },
+      "bytes": 2106509,
+      "sha256": "bdf6490620718e24581d720cab238dc74cb9d89605578bcf34afb42a8d2c5f79",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Flutimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 910958,
+      "bounds": {
+        "minX": 114,
+        "minY": 39,
+        "maxX": 1107,
+        "maxY": 1212
+      },
+      "bytes": 1750903,
+      "sha256": "e206c00837b20fb627d21e099c2ff79b195b70d86521045e6221aa61f9a88e13",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Tauntimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 999699,
+      "bounds": {
+        "minX": 201,
+        "minY": 47,
+        "maxX": 1149,
+        "maxY": 1205
+      },
+      "bytes": 1581489,
+      "sha256": "6bdba02edf33cf744f081636c9cad02b966fa4477031689c81f0ee1efed1c2c2",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Venimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 876996,
+      "bounds": {
+        "minX": 129,
+        "minY": 23,
+        "maxX": 1175,
+        "maxY": 1234
+      },
+      "bytes": 1898103,
+      "sha256": "7aade63c34d34deb4284db1bb226a782eee72e1a5a2e0eb32b197d27d60feb6c",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Whipimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 974125,
+      "bounds": {
+        "minX": 113,
+        "minY": 63,
+        "maxX": 1181,
+        "maxY": 1219
+      },
+      "bytes": 1636393,
+      "sha256": "411f7ad0310fde310ff451d8d7485ccfbba5243330ab3af2766d41eb7797e97d",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Jestimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 954467,
+      "bounds": {
+        "minX": 171,
+        "minY": 60,
+        "maxX": 1130,
+        "maxY": 1206
+      },
+      "bytes": 1742755,
+      "sha256": "34c4a41f55bb192d40891384e0fe799902dc85f66f3e4a42934fb76bc16111f3",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Titimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 738195,
+      "bounds": {
+        "minX": 95,
+        "minY": 92,
+        "maxX": 1209,
+        "maxY": 1193
+      },
+      "bytes": 2366205,
+      "sha256": "ce01f990d5c399e81e6018e0d148730fa3babbd67a998948a81d784e0be39f1e",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Chronoimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 852259,
+      "bounds": {
+        "minX": 145,
+        "minY": 51,
+        "maxX": 1163,
+        "maxY": 1223
+      },
+      "bytes": 1948072,
+      "sha256": "4711f5936c6e7278701217a04c268cd8800bc4a9b9199a2ff93b8acc8f16f512",
+      "originalUnchanged": true
+    },
+    {
+      "name": "Magnimp",
+      "width": 1254,
+      "height": 1254,
+      "transparentPixels": 896251,
+      "bounds": {
+        "minX": 57,
+        "minY": 98,
+        "maxX": 1209,
+        "maxY": 1191
+      },
+      "bytes": 1821634,
+      "sha256": "c6dd7b77426eca86358555d289f36115ec776359a0c61a5a9ce803a3e408db06",
+      "originalUnchanged": true
+    }
+  ]
+}

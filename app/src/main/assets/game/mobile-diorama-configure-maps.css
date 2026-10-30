@@ -1,0 +1,67 @@
+/* V-274 (variant A, user choice 29.10.2026): "Configure Maps" (#tooltipDiv2, marked by mobile-diorama-configure-maps.js)
+   as the parchment card of the info windows (mobile-diorama-dialogs.css, V-197/V-219/V-257): U01 parchment on the darkened
+   game, title band with a centred petrol ×, group headings, rows with the setting name and step marks on the left and the
+   original button as a light value plate with a cycle sign on the right, Close as the petrol plate at the bottom right.
+   Every value state looks the same; the value text and the marks carry it, not the colour. 44px targets.
+   Every rule starts with html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps], so Classic and the other
+   windows of #tooltipDiv2 keep their look. */
+
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] {
+  --ink:#2d3025; --muted:#5b4c36; --rule:#9a7a4d88;
+  color:var(--ink)!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  box-shadow:0 0 0 100vmax #0b120f8c!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px 15px 15px 14px stretch!important;
+  padding:14px 13px 12px!important; overflow-x:hidden!important;
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] :is(#tipTitle2,#tipText2,#tipText2 *:not(button,.settingsBtn),#tipCost2) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipTitle2 {
+  margin:-2px -1px 4px!important; padding:11px 52px 11px 12px!important; min-height:48px; box-sizing:border-box; text-align:left!important;
+  font:700 1.2rem/1.2 var(--n-serif,serif)!important; background:#ead2a3!important; border:1px solid #9a7442!important; border-radius:3px; box-shadow:inset 0 1px #fff4d8;
+}
+/* The × sits in the title band like the X of the info windows (V-219): 2px from its top, 4px from its right edge. */
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-close {
+  position:absolute!important; top:15px; right:17px; width:44px; height:44px; min-height:44px!important; padding:0 0 2px!important; margin:0!important;
+  display:flex; align-items:center; justify-content:center; font:700 1.5rem/1 var(--font-body,sans-serif)!important;
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] > hr:first-of-type,
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipText2 > hr,
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipText2 > [hidden],
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipText2 > #GATargetError:empty { display:none!important; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] hr { border-color:var(--rule)!important; margin:8px 0!important; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipText2 .maxCenter { display:block!important; text-align:left!important; margin:0!important; }
+
+/* Groups and rows. */
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-group { margin:0 0 6px; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-group > h3 {
+  margin:8px 0 2px!important; padding:0 0 3px!important; font:700 1.05rem/1.2 var(--n-serif,serif)!important; color:var(--muted)!important;
+  border-bottom:1px solid var(--rule); letter-spacing:.02em;
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-row {
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,52%); grid-template-areas:"name btn" "steps btn"; align-items:center; column-gap:8px;
+  min-height:52px; padding:5px 0; border-bottom:1px dotted var(--rule);
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-row:last-child { border-bottom:0; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-name {
+  grid-area:name; align-self:end; min-width:0; overflow-wrap:break-word; font-weight:600!important; font-size:.88rem!important; line-height:1.2!important;
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-steps { grid-area:steps; align-self:start; font-size:.7rem!important; letter-spacing:.08em; color:var(--muted)!important; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-row > :is(.optionContainer,button) {
+  grid-area:btn; display:block!important; width:auto!important; margin:0!important; float:none!important; padding:0!important;
+}
+/* The original button as the value plate: one look for every value (the original colours settingBtn0/1/2 by index only). */
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-row :is(.settingsBtn,#repeatBtn2)[class] {
+  display:flex!important; align-items:center; justify-content:space-between; gap:6px; width:100%!important; min-height:44px!important; margin:0!important; float:none!important;
+  padding:4px 8px 4px 10px!important; text-align:left!important; font:700 .9rem/1.2 var(--font-body,sans-serif)!important; white-space:normal!important; overflow-wrap:break-word;
+  color:var(--ink)!important; background:#fffaf0!important; border:1px solid #9a7442!important; border-radius:3px!important; box-shadow:inset 0 -2px #e6d2aa!important;
+}
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] .mobile-cm-row :is(.settingsBtn,#repeatBtn2)[class]::after { content:"\21bb"; flex:none; font-size:1rem; color:#1f5a63; }
+
+/* Close at the end: the calm petrol plate, right-aligned like the other info windows. */
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipCost2 .maxCenter { display:flex!important; justify-content:flex-end; }
+html[data-graphics="diorama"] #tooltipDiv2[data-mobile-configure-maps] #tipCost2 #confirmTooltipBtn {
+  min-height:44px; padding:0 18px!important; display:inline-flex; align-items:center; font-weight:700!important; box-shadow:none!important; text-shadow:none!important;
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}

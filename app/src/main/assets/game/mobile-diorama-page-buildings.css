@@ -1,0 +1,186 @@
+/* Diorama page layer Gebäude (buildings). Loads after the shared Diorama layers and belongs to the buildings page round.
+   Every rule starts with html[data-graphics="diorama"] body[data-diorama-page="buildings"],
+   so it touches no other page (mobile-diorama.js mirrors the page into body[data-diorama-page]). Shared building
+   blocks (purchase tile, chip, info, amount tabs, colony scene head, header, navigation, dialogs, tokens) stay in
+   mobile-diorama.css, mobile-diorama-night.css and mobile-diorama-header.css. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-housing-legend {
+  color:#493d2b; background:#eddbbb; padding:6px 9px; margin:5px 6px;
+  border:1px solid #af8b56; border-radius:3px;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer {
+  background:var(--surface); color:var(--ink);
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-panel-border)!important;
+  border-image:var(--dio-panel)!important; box-shadow:0 2px 4px #291c1826;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing {
+  grid-template-columns:60px auto minmax(0,1fr) auto;
+  grid-template-areas:"art name owned action" "art pending pending action" "art price price action" "art note note action";
+}
+/* Building names are short; in the wide row they stay whole next to the owned count. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-tile-name { white-space:nowrap; }
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-tile-owned {
+  grid-area:owned;
+  justify-content:flex-start;
+  min-width:0;
+  color:var(--muted)!important;
+  font:500 .8rem/1.2 var(--font-data);
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-pending {
+  grid-area:pending;
+  justify-self:start;
+  min-width:0;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.2;
+  overflow-wrap:break-word;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-item-effect:empty { display:none; }
+/* Narrow or enlarged text: name and values get the full width; the action moves next to cost and note. */
+@container (max-width:20rem) {
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing {
+    grid-template-columns:48px minmax(0,1fr) auto;
+    grid-template-rows:auto auto auto auto minmax(0,1fr);
+    grid-template-areas:"art name name" "art owned owned" "art pending pending" "art price action" "art note action";
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-tile-name { white-space:normal; }
+}
+@media (min-width:620px) {
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer {
+  background:var(--n-panel)!important; border:1px solid var(--n-line)!important; border-radius:4px!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-housing-legend {
+  background:transparent!important; border:0!important; border-top:1px solid var(--n-line)!important; color:var(--n-muted)!important; border-radius:0!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-tile-owned {
+  grid-area:values!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer>*:not(button) {
+  background:transparent!important; border:0!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer button {
+  background:#13242a!important; border:1px solid #8a6d44!important; box-shadow:none!important;
+}
+
+/* ---- Page round 3: night tiles in the equipment pattern (user feedback 25.10.2026: stay dark, larger miniatures) ----
+   Same tile as the equipment page: the name takes the top row beside Info, the 52px miniature sits beside the owned
+   count, cost and a small chip share the last row; real resource art names the material. Gold marks only the
+   recommended purchase. */
+/* Build queue: one slim night bar; the summary is plain text (no second frame), Build an outline. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer {
+  padding:2px 4px 2px 10px!important; margin-bottom:8px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueContainer #mobile-queue-open {
+  min-height:44px!important; padding:2px 0!important; background:transparent!important; border:0!important; border-image:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-queue-title { font-size:.85rem!important; line-height:1.25!important; margin:0!important; }
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-queue-summary { font-size:.75rem!important; line-height:1.25!important; color:var(--n-muted)!important; margin:0!important; }
+/* V-163: Build manually and AutoTraps share one switch: Off the night outline; On a cool tint, a doubled cyan frame and
+   a check mark (no gold, which marks only the recommended purchase). */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueRow>[data-compact-icon] {
+  width:44px!important; min-width:44px!important; height:44px!important; min-height:44px!important;
+  background:#13242a!important; border:1px solid #8a6d44!important; border-image:none!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueRow>[data-compact-icon][aria-pressed="true"] {
+  background:#1d3a40!important; border-color:var(--n-cyan)!important; box-shadow:inset 0 0 0 1px var(--n-cyan)!important; color:var(--n-cyan)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #queueRow>[data-compact-icon][aria-pressed="true"]::after {
+  background:var(--n-cyan); color:var(--n-ink);
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-queue-progress { margin-top:0!important; }
+/* Housing hint: the gold outline speaks for itself on this page (user decision 25.10.2026); the text stays in the DOM. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #mobile-housing-legend { display:none!important; }
+
+/* Tile (as equipment): name row, miniature beside owned count, cost and chip in the last row. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing {
+  grid-template-columns:52px minmax(0,1fr) auto!important;
+  grid-template-rows:auto auto auto minmax(0,1fr)!important;
+  grid-template-areas:"name name name" "art values values" "pending pending pending" "price price action"!important;
+  align-items:center; row-gap:3px!important; padding:6px 8px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-inventory-tile .mobile-tile-name {
+  white-space:normal; min-height:0; padding-right:36px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-item-art {
+  width:52px!important; height:52px!important; padding:2px;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-tile-price { align-self:end; margin-top:0!important; }
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-materials { gap:0 8px!important; }
+/* Cost entries wrap as whole entries instead of shrinking into each other; real resource art as on equipment. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-material { flex:none; gap:4px; }
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-material-icon {
+  width:18px; height:18px; mask:none; background:url("mobile-assets/diorama/R06-Gems.webp") center/contain no-repeat;
+}
+/* New-building marker: a small badge in front of the name instead of a large disc. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-tile-name .alert:not(:empty) {
+  vertical-align:2px; text-align:center; width:16px; min-width:16px; height:16px; padding:0!important; margin:0 5px 0 0!important;
+  font-size:.65rem!important; line-height:16px!important; border-radius:50%!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-tile-name .alert:empty { display:none!important; }
+/* Purchase chip: small, bottom right; the whole tile stays the original purchase button. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .diorama-action-label:not([hidden]) {
+  align-self:end!important; justify-self:end!important; height:28px!important; min-width:52px!important; margin:0!important;
+  padding:0 12px!important; border-radius:14px!important; font-size:.8rem!important;
+}
+/* Purchase states follow the adapter's own state: buyable is a filled petrol chip with bronze rim, anything else an
+   empty outline. A missing cost reads in rust and dims the miniature a little (a paused game does not). */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-inventory-tile[data-purchase-state="buyable"] .diorama-action-label:not([hidden]) {
+  background:#24434a!important; border:1px solid #c49a5a!important; color:#fff1d4!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-inventory-tile:not([data-purchase-state="buyable"]) .diorama-action-label:not([hidden]) {
+  background:transparent!important; border:1px solid #3b4a4c!important; color:#8e9a9a!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-inventory-tile:not([data-purchase-state="buyable"]):has(.mobile-material-missing) .mobile-item-art {
+  filter:saturate(.6) brightness(.8);
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-material-missing,
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-material-missing b {
+  color:#e39a7b!important;
+}
+/* Housing cost (V-156): the bottleneck chosen by the adapter comes first with icon and value; the other costs follow in
+   the same row as small dimmed icons without a number (the Info dialog keeps every value). A missing bottleneck carries
+   a red "!" badge on its icon and any other missing cost an underline, so a shortage never reads by colour alone. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck {
+  flex-wrap:wrap; align-items:center; gap:2px 3px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material-key {
+  order:-1; position:relative;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material-key:not(:only-child)::after {
+  content:''; align-self:stretch; width:1px; margin:2px 2px 2px 1px; background:#3b4a4c;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material-key.mobile-material-missing::before {
+  content:'!'; position:absolute; left:12px; top:-4px; display:grid; place-items:center; width:11px; height:11px; border-radius:50%;
+  background:#c4573b; box-shadow:0 0 0 1.5px #13242a; color:#fff1d4; font:800 8px/1 var(--font-data);
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material:not(.mobile-material-key) b { display:none; }
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material:not(.mobile-material-key) .mobile-material-icon {
+  width:13px; height:13px; opacity:.72;
+}
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-materials-bottleneck .mobile-material-missing:not(.mobile-material-key) .mobile-material-icon {
+  opacity:1; box-shadow:0 2px 0 #e39a7b;
+}
+/* Narrow tiles (360 px, large text): the same rows; the owned count is short enough to stay beside a 48px
+   miniature, and the cost wraps entry by entry beside the chip. */
+@container (max-width:11.5rem) {
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing {
+    grid-template-columns:48px minmax(0,1fr) auto!important;
+    grid-template-areas:"name name name" "art values values" "pending pending pending" "price price action"!important;
+    column-gap:6px!important;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere #buildingsHere .mobile-inventory-tile .mobile-tile-name {
+    padding-right:30px!important; font-size:min(.95rem,10cqi)!important;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .mobile-item-art { width:48px!important; height:48px!important; }
+  html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buildingsHere .diorama-action-label:not([hidden]) {
+    justify-self:end!important; min-width:48px!important; padding:0 10px!important;
+  }
+}
+/* Dimensional Generator entry: a night panel row like the tiles, not a second gold bar. */
+html[data-graphics="diorama"] body[data-diorama-page="buildings"] #buyHere .mg-entry {
+  min-height:48px!important; padding:10px 12px!important; background:#13242a!important; border:1px solid #2c3f43!important;
+  border-image:none!important; border-radius:4px!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}

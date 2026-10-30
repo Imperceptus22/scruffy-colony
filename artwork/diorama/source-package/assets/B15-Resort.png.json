@@ -1,0 +1,23 @@
+{
+  "id": "B15",
+  "key": "Resort",
+  "name": "Resort",
+  "group": "buildings",
+  "file": "assets/B15-Resort.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 836,
+    "top": 0,
+    "width": 418,
+    "height": 411
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 411
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "4beec8e97e5cc1091cbcfd74058f9a145b186e9a3f2052da9b2111940f2fa51d",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

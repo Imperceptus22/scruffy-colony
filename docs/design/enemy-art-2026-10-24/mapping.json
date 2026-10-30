@@ -1,0 +1,1398 @@
+{
+  "base": "4174b4985da0509001f8d90662028d19f835a169",
+  "count": 85,
+  "mapping": [
+    {
+      "name": "Arachnimp",
+      "before": {
+        "family": "spider",
+        "src": "mobile-assets/imp-family/Arachnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "spider",
+        "src": "mobile-assets/imp-family/Arachnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Beetlimp",
+      "before": {
+        "family": "beetle",
+        "src": "mobile-assets/enemies-0.png",
+        "cell": 1,
+        "detail": 0
+      },
+      "after": {
+        "family": "beetle",
+        "src": "mobile-assets/imp-family/Beetlimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Mantimp",
+      "before": {
+        "family": "mantis",
+        "src": "mobile-assets/enemies-0.png",
+        "cell": 2,
+        "detail": 0
+      },
+      "after": {
+        "family": "mantis",
+        "src": "mobile-assets/imp-family/Mantimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Butterflimp",
+      "before": {
+        "family": "butterfly",
+        "src": "mobile-assets/enemies-0.png",
+        "cell": 3,
+        "detail": 0
+      },
+      "after": {
+        "family": "butterfly",
+        "src": "mobile-assets/imp-family/Butterflimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Penguimp",
+      "before": {
+        "family": "penguin",
+        "src": "mobile-assets/imp-family/Penguimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "penguin",
+        "src": "mobile-assets/imp-family/Penguimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Turtlimp",
+      "before": {
+        "family": "turtle",
+        "src": "mobile-assets/imp-family/Turtlimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "turtle",
+        "src": "mobile-assets/imp-family/Turtlimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Snimp",
+      "before": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Snimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Snimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Voidsnimp",
+      "before": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Snimp.png",
+        "cell": 0,
+        "detail": 1,
+        "standalone": true
+      },
+      "after": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Voidsnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Slosnimp",
+      "before": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Snimp.png",
+        "cell": 0,
+        "detail": 2,
+        "standalone": true
+      },
+      "after": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Slosnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Frosnimp",
+      "before": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Snimp.png",
+        "cell": 0,
+        "detail": 3,
+        "standalone": true
+      },
+      "after": {
+        "family": "snake",
+        "src": "mobile-assets/imp-family/Frosnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Squimp",
+      "before": {
+        "family": "squid",
+        "src": "mobile-assets/imp-family/Squimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "squid",
+        "src": "mobile-assets/imp-family/Squimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Shrimp",
+      "before": {
+        "family": "shrimp",
+        "src": "mobile-assets/enemies-0.png",
+        "cell": 8,
+        "detail": 0
+      },
+      "after": {
+        "family": "shrimp",
+        "src": "mobile-assets/imp-family/Shrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Chimp",
+      "before": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Gorillimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Chimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Gorillimp",
+      "before": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Gorillimp.png",
+        "cell": 0,
+        "detail": 1,
+        "standalone": true
+      },
+      "after": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Gorillimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Mitschimp",
+      "before": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Gorillimp.png",
+        "cell": 0,
+        "detail": 2,
+        "standalone": true
+      },
+      "after": {
+        "family": "ape",
+        "src": "mobile-assets/imp-family/Mitschimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Hippopotamimp",
+      "before": {
+        "family": "hippo",
+        "src": "mobile-assets/imp-family/Hippopotamimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "hippo",
+        "src": "mobile-assets/imp-family/Hippopotamimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Duckimp",
+      "before": {
+        "family": "duck",
+        "src": "mobile-assets/enemies-1.png",
+        "cell": 2,
+        "detail": 0
+      },
+      "after": {
+        "family": "duck",
+        "src": "mobile-assets/imp-family/Duckimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Platypimp",
+      "before": {
+        "family": "platypus",
+        "src": "mobile-assets/imp-family/Platypimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "platypus",
+        "src": "mobile-assets/imp-family/Platypimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Kittimp",
+      "before": {
+        "family": "cat",
+        "src": "mobile-assets/imp-family/Kittimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "cat",
+        "src": "mobile-assets/imp-family/Kittimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Kangarimp",
+      "before": {
+        "family": "kangaroo",
+        "src": "mobile-assets/imp-family/Kangarimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "kangaroo",
+        "src": "mobile-assets/imp-family/Kangarimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Squirrimp",
+      "before": {
+        "family": "squirrel",
+        "src": "mobile-assets/imp-family/Squirrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "squirrel",
+        "src": "mobile-assets/imp-family/Squirrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Turkimp",
+      "before": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Turkimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Turkimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Chickimp",
+      "before": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Chickimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Chickimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Flutimp",
+      "before": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Flutimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "turkey",
+        "src": "mobile-assets/imp-family/Flutimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Dragimp",
+      "before": {
+        "family": "dragon",
+        "src": "mobile-assets/imp-family/Dragimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "dragon",
+        "src": "mobile-assets/imp-family/Dragimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Frimp",
+      "before": {
+        "family": "tree",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 0,
+        "detail": 0
+      },
+      "after": {
+        "family": "tree",
+        "src": "mobile-assets/imp-family/Frimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Entimp",
+      "before": {
+        "family": "tree",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 0,
+        "detail": 1
+      },
+      "after": {
+        "family": "tree",
+        "src": "mobile-assets/imp-family/Entimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Mountimp",
+      "before": {
+        "family": "stone",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 1,
+        "detail": 0
+      },
+      "after": {
+        "family": "stone",
+        "src": "mobile-assets/imp-family/Mountimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Gravelimp",
+      "before": {
+        "family": "stone",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 1,
+        "detail": 1
+      },
+      "after": {
+        "family": "stone",
+        "src": "mobile-assets/imp-family/Gravelimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Brickimp",
+      "before": {
+        "family": "stone",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 1,
+        "detail": 2
+      },
+      "after": {
+        "family": "stone",
+        "src": "mobile-assets/imp-family/Brickimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Golimp",
+      "before": {
+        "family": "stone",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 1,
+        "detail": 3
+      },
+      "after": {
+        "family": "stone",
+        "src": "mobile-assets/imp-family/Golimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Slagimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 0
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Slagimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Moltimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 1
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Moltimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Lavimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 2
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Lavimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Flowimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 3
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Flowimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Meltimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 4
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Meltimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Sweltimp",
+      "before": {
+        "family": "lava",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 2,
+        "detail": 5
+      },
+      "after": {
+        "family": "lava",
+        "src": "mobile-assets/imp-family/Sweltimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Freezo",
+      "before": {
+        "family": "ice",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 3,
+        "detail": 0
+      },
+      "after": {
+        "family": "ice",
+        "src": "mobile-assets/imp-family/Freezo.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Skeletimp",
+      "before": {
+        "family": "skeleton",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 4,
+        "detail": 0
+      },
+      "after": {
+        "family": "skeleton",
+        "src": "mobile-assets/imp-family/Skeletimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Megaskeletimp",
+      "before": {
+        "family": "skeleton",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 4,
+        "detail": 1
+      },
+      "after": {
+        "family": "skeleton",
+        "src": "mobile-assets/imp-family/Megaskeletimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Robotrimp",
+      "before": {
+        "family": "robot",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 5,
+        "detail": 0
+      },
+      "after": {
+        "family": "robot",
+        "src": "mobile-assets/imp-family/Robotrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Mechimp",
+      "before": {
+        "family": "robot",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 5,
+        "detail": 1
+      },
+      "after": {
+        "family": "robot",
+        "src": "mobile-assets/imp-family/Mechimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Destructimp",
+      "before": {
+        "family": "robot",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 5,
+        "detail": 2
+      },
+      "after": {
+        "family": "robot",
+        "src": "mobile-assets/imp-family/Destructimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Terminatimp",
+      "before": {
+        "family": "robot",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 5,
+        "detail": 3
+      },
+      "after": {
+        "family": "robot",
+        "src": "mobile-assets/imp-family/Terminatimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Autoimp",
+      "before": {
+        "family": "robot",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 5,
+        "detail": 4
+      },
+      "after": {
+        "family": "robot",
+        "src": "mobile-assets/imp-family/Autoimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Prismimp",
+      "before": {
+        "family": "crystal",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 6,
+        "detail": 0
+      },
+      "after": {
+        "family": "crystal",
+        "src": "mobile-assets/imp-family/Prismimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Rainbimp",
+      "before": {
+        "family": "crystal",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 6,
+        "detail": 1
+      },
+      "after": {
+        "family": "crystal",
+        "src": "mobile-assets/imp-family/Rainbimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Lightimp",
+      "before": {
+        "family": "crystal",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 6,
+        "detail": 2
+      },
+      "after": {
+        "family": "crystal",
+        "src": "mobile-assets/imp-family/Lightimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Artimp",
+      "before": {
+        "family": "atom",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 7,
+        "detail": 0
+      },
+      "after": {
+        "family": "atom",
+        "src": "mobile-assets/imp-family/Artimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Neutrimp",
+      "before": {
+        "family": "atom",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 7,
+        "detail": 1
+      },
+      "after": {
+        "family": "atom",
+        "src": "mobile-assets/imp-family/Neutrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Fusimp",
+      "before": {
+        "family": "atom",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 7,
+        "detail": 2
+      },
+      "after": {
+        "family": "atom",
+        "src": "mobile-assets/imp-family/Fusimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Hydrogimp",
+      "before": {
+        "family": "atom",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 7,
+        "detail": 3
+      },
+      "after": {
+        "family": "atom",
+        "src": "mobile-assets/imp-family/Hydrogimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Carbimp",
+      "before": {
+        "family": "atom",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 7,
+        "detail": 4
+      },
+      "after": {
+        "family": "atom",
+        "src": "mobile-assets/imp-family/Carbimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Blimp",
+      "before": {
+        "family": "blimp",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 8,
+        "detail": 0
+      },
+      "after": {
+        "family": "blimp",
+        "src": "mobile-assets/imp-family/Blimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Megablimp",
+      "before": {
+        "family": "blimp",
+        "src": "mobile-assets/enemies-2.png",
+        "cell": 8,
+        "detail": 1
+      },
+      "after": {
+        "family": "blimp",
+        "src": "mobile-assets/imp-family/Megablimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Magimp",
+      "before": {
+        "family": "wizard",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 0,
+        "detail": 0
+      },
+      "after": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Magimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Feyimp",
+      "before": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Feyimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Feyimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Jestimp",
+      "before": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Jestimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Jestimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Chronoimp",
+      "before": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Chronoimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Chronoimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Magnimp",
+      "before": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Magnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "wizard",
+        "src": "mobile-assets/imp-family/Magnimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Gnomimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 1,
+        "detail": 0
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Gnomimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Goblimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Goblimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Goblimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Grimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 1,
+        "detail": 2
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Grimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Seirimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Seirimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Seirimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Onoudidimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Onoudidimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Onoudidimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Nooimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 1,
+        "detail": 5
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Nooimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Tauntimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Tauntimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Tauntimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Whipimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Whipimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Whipimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Venimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Venimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Venimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Titimp",
+      "before": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Titimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "goblin",
+        "src": "mobile-assets/imp-family/Titimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Pumpkimp",
+      "before": {
+        "family": "pumpkin",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 2,
+        "detail": 0
+      },
+      "after": {
+        "family": "pumpkin",
+        "src": "mobile-assets/imp-family/Pumpkimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Presimpt",
+      "before": {
+        "family": "gift",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 3,
+        "detail": 0
+      },
+      "after": {
+        "family": "gift",
+        "src": "mobile-assets/imp-family/Presimpt.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Indianimp",
+      "before": {
+        "family": "ranger",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 4,
+        "detail": 0
+      },
+      "after": {
+        "family": "ranger",
+        "src": "mobile-assets/imp-family/Indianimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Warden",
+      "before": {
+        "family": "warden",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 5,
+        "detail": 0
+      },
+      "after": {
+        "family": "warden",
+        "src": "mobile-assets/imp-family/Warden.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Liquimp",
+      "before": {
+        "family": "water",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 6,
+        "detail": 0
+      },
+      "after": {
+        "family": "water",
+        "src": "mobile-assets/imp-family/Liquimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Poseidimp",
+      "before": {
+        "family": "water",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 6,
+        "detail": 1
+      },
+      "after": {
+        "family": "water",
+        "src": "mobile-assets/imp-family/Poseidimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Horrimp",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 0
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Horrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Cthulimp",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 1
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Cthulimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Shadimp",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 2
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Shadimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Darknimp",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 3
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Darknimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Improbability",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 4
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Improbability.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Omnipotrimp",
+      "before": {
+        "family": "eldritch",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 7,
+        "detail": 5
+      },
+      "after": {
+        "family": "eldritch",
+        "src": "mobile-assets/imp-family/Omnipotrimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Mutimp",
+      "before": {
+        "family": "mutant",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 8,
+        "detail": 0
+      },
+      "after": {
+        "family": "mutant",
+        "src": "mobile-assets/imp-family/Mutimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Hulking_Mutimp",
+      "before": {
+        "family": "mutant",
+        "src": "mobile-assets/enemies-3.png",
+        "cell": 8,
+        "detail": 1
+      },
+      "after": {
+        "family": "mutant",
+        "src": "mobile-assets/imp-family/Hulking_Mutimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    },
+    {
+      "name": "Elephimp",
+      "before": {
+        "family": "elephant",
+        "src": "mobile-assets/imp-family/Elephimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      },
+      "after": {
+        "family": "elephant",
+        "src": "mobile-assets/imp-family/Elephimp.png",
+        "cell": 0,
+        "detail": 0,
+        "standalone": true
+      }
+    }
+  ]
+}

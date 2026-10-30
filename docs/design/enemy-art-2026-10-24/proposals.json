@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-24",
+  "basis": "d27e7e793799ee684ff0dea2ea3a3713aad2564f",
+  "status": "Entwürfe; keine Freigabe oder Umsetzung",
+  "boards": [
+    {"id": "01", "title": "Tiermerkmale und Verwandte", "models": [
+      ["Beetlimp", "Kompakter olivgrüner Imp mit gewölbten Käfer-Flügeldecken am Rücken und kräftigen Panzerarmen."],
+      ["Mantimp", "Schlanker salbeigrüner Imp mit langen, angewinkelten Fangarmen und kleinen Chitinplatten."],
+      ["Butterflimp", "Leichter Imp mit großen creme-petrolfarbenen Schmetterlingsflügeln und feinen Fühlern zwischen den Hörnern."],
+      ["Shrimp", "Korallfarbener Imp mit gegliedertem Rückenpanzer, langen Fühlern und eingerolltem Garnelenschwanz."],
+      ["Duckimp", "Gedrungener Imp mit kurzem Entenschnabel, dunklem Federkragen und breiten Schwimmfüßen."],
+      ["Turkimp", "Stolzer kupferbrauner Truthahn-Imp mit breitem Schwanzfächer und rotem Kehllappen; klar von Chickimp und Flutimp unterscheidbar."],
+      ["Chimp", "Schlanker Schimpansen-Imp mit langen Armen, heller Gesichtsmaske und kurzem dunklem Fell; deutlich leichter als Gorillimp."],
+      ["Mitschimp", "Stämmiger Affen-Imp mit mächtigen Fäusten, dichter Schulterbehaarung und breitem, entschlossenem Gesicht."],
+      ["Slosnimp", "Schwerer olivbrauner Schlangen-Imp mit tiefem Stand, breitem Bauch und kurzem, dickem Ringelschwanz."],
+      ["Frosnimp", "Blaugrauer Schlangen-Imp mit vereisten Schuppenkanten und einem geschwungenen Schwanz; der Imp-Kopf bleibt sichtbar."]
+    ]},
+    {"id": "02", "title": "Wald, Stein und kleine Sonderlinge", "models": [
+      ["Frimp", "Moosgrüner Wald-Imp mit rindenartigen Unterarmen und kleinen Farnbüscheln an den Schultern."],
+      ["Entimp", "Breiter Baum-Imp mit knorrigem Rindenkörper, Wurzelfüßen und wenigen Blättern an den Hörnern."],
+      ["Mountimp", "Massiger grauer Fels-Imp mit bergförmiger Schulterlinie, rauer Steinhaut und erdfarbenem Leinentuch."],
+      ["Gravelimp", "Kleiner Kies-Imp aus runden Steinsegmenten, mit lockeren Kieseln an Schultern und Knöcheln."],
+      ["Brickimp", "Kantiger Imp mit ziegelroten, gemauert wirkenden Körperplatten und breiten rechteckigen Unterarmen."],
+      ["Golimp", "Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung."],
+      ["Gnomimp", "Kleiner, bärtiger Imp mit kurzer Stoffkappe zwischen sichtbaren Hörnern und abgetragenem Ledergürtel."],
+      ["Grimp", "Dunkelgrüner Wald-Imp mit grimmigen Brauen, zottigem Nacken und großem, löchrigem Blattumhang."],
+      ["Nooimp", "Türkisgrauer Meeres-Imp mit runden Flossenohren, Algenbüschel und einer Muschel am Gürtel."],
+      ["Voidsnimp", "Schlanker dunkelvioletter Schlangen-Imp mit hellen Schuppenrissen und sichelförmig eingerolltem Schwanz."]
+    ]},
+    {"id": "03", "title": "Glut, Eis und Kristall", "models": [
+      ["Slagimp", "Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen."],
+      ["Moltimp", "Kupferoranger Imp mit weich fließenden, metallisch wirkenden Körperkanten und schweren Tropfen an den Unterarmen."],
+      ["Lavimp", "Breiter Basalt-Imp mit klar erkennbaren orangefarbenen Lavakanälen zwischen großen Gesteinsplatten."],
+      ["Flowimp", "Schlanker rostroter Imp mit glatten, wellenförmigen Körperrippen und einer seitlich fließenden Silhouette."],
+      ["Meltimp", "Asymmetrischer Imp mit abgesunkenen Schultern und schmelzend wirkenden, stumpf goldenen Körperplatten."],
+      ["Sweltimp", "Kräftiger ziegelroter Hitze-Imp mit aufgeblähten Wangen und breiten, dunklen Schuppenplatten."],
+      ["Freezo", "Gedrungener Eis-Imp mit rauer Frosthaut, kurzen Eiszapfen an den Brauen und petrolfarbenem Leinentuch."],
+      ["Prismimp", "Imp mit großen, klaren prismatischen Kristallplatten auf Rücken und Unterarmen; Gesicht und Ohren bleiben lesbar."],
+      ["Rainbimp", "Perlmuttfarbener Imp mit wenigen breiten, gedämpft regenbogenfarbenen Kristallfächern an den Schultern."],
+      ["Lightimp", "Schlanker elfenbeinfarbener Imp mit schmalen bernsteinfarbenen Kristallkanten und einer klaren, hellen Silhouette."]
+    ]},
+    {"id": "04", "title": "Mechanik und Sternmaterie", "models": [
+      ["Robotrimp", "Breiter Eisen-Kupfer-Roboter in Imp-Gestalt mit genieteten Hörnern, Ohrenplatten und sichtbaren Gelenken."],
+      ["Mechimp", "Drahtiger mechanischer Imp mit kleinen freiliegenden Zahnrädern, dünnen Gliedmaßen und einfacher Leinen-Schürze."],
+      ["Destructimp", "Schwerer Maschinen-Imp mit großen Hammerfäusten und abgenutzten dunklen Panzerplatten."],
+      ["Terminatimp", "Aufrechter, kompakter Stahl-Imp mit schmalen bernsteinfarbenen Augenschlitzen und glatten, strengen Panzerformen."],
+      ["Autoimp", "Kleiner tonnenförmiger Automaten-Imp mit runden Gelenken, aufziehschlüsselartigem Rückenstück und kurzen Armen."],
+      ["Artimp", "Kupferfarbener Bionik-Imp mit asymmetrisch ergänztem Mechanikarm und kreisförmiger Brustplatte."],
+      ["Neutrimp", "Schiefergrauer Sternmaterie-Imp mit dichtem, rundlichem Körperkern und wenigen matten Kugelknoten an den Schultern."],
+      ["Fusimp", "Breiter Imp mit zwei ineinandergreifenden Brustplatten und einer einzelnen warm glühenden Fuge in der Mitte."],
+      ["Hydrogimp", "Sehr leichter blassblauer Imp mit abgerundeten, fast durchscheinenden Hautpartien und einem einzelnen ovalen Rückenring."],
+      ["Carbimp", "Anthrazitfarbener Imp mit facettierter Kohlenstoffhaut und wenigen klaren diamantartigen Kristallspitzen."]
+    ]},
+    {"id": "05", "title": "Sondergegner und besondere Rollen", "models": [
+      ["Blimp", "Rundlicher Imp mit ballonartig aufgeblähtem Oberkörper, kleinen Armen und deutlich sichtbaren Füßen; keine Luftschiff-Gondel."],
+      ["Megablimp", "Sehr breiter Ballon-Imp mit tief gefaltetem Bauch, kräftigeren Hörnern und schweren, kurzen Beinen."],
+      ["Magimp", "Randimp: verschmitzter Imp mit verschieden geformten Stoffflicken, einem Würfel und einer geschlossenen Überraschungstasche; deutlich ohne Magnimps Magnet."],
+      ["Pumpkimp", "Imp mit geripptem kürbisfarbenem Rumpf und kleinem Blattkragen; natürliche Hörner und lebendiges Gesicht statt Kürbislaterne."],
+      ["Presimpt", "Warmbrauner Imp mit kurzen, geschenkbandartigen Stoffstreifen und einem kleinen verpackten Päckchen unter dem Arm."],
+      ["Indianimp", "Eigenständiger Wildnis-Imp in schlichter Leinen- und Lederkleidung, mit Wanderstock und geflochtener Tasche."],
+      ["Warden", "Breitschultriger Wächter-Imp mit abgetragenem Lederschurz, kleinem Schlüsselbund und massiven Unterarmen."],
+      ["Liquimp", "Aquamarinfarbener Imp mit weichen, wasserartig fließenden Körperrändern und kleinen Tropfen am Unterarm."],
+      ["Poseidimp", "Kräftiger meergrüner Imp mit Flossenkamm, kurzem Korallen-Dreizack und breit gefächertem Schwanz."],
+      ["Skeletimp", "Schlanker knochenfarbener Imp mit sichtbarem stilisiertem Rippenkorb, gehörntem Schädel und zerrissenem Leinentuch; ohne Blut."]
+    ]},
+    {"id": "06", "title": "Schatten, Bosse und Mutationen", "models": [
+      ["Megaskeletimp", "Massiger Skelett-Imp mit breitem Rippenkorb, großen Knochenfäusten und dicken Hörnern; ohne Blut."],
+      ["Horrimp", "Unruhig gekrümmter, asymmetrischer Imp mit langem Rücken, ungleichen Ohren und angespannten Brauen."],
+      ["Cthulimp", "Tief meergrüner Imp mit kurzem Tentakelbart, kleinen gefalteten Membranflügeln und klar sichtbaren Armen und Beinen."],
+      ["Shadimp", "Schmaler rauchgrauer Imp mit weich aufgelösten Körperrändern, spitzen Ohren und sichtbaren bernsteinfarbenen Augen."],
+      ["Darknimp", "Breiter nachtblauer Imp mit matten, gefalteten Schattenplatten und deutlicher Kontur; vollständig gezeichnet statt schwarzem Fleck."],
+      ["Improbability", "Imp mit wenigen bewusst unmöglich gegeneinander versetzten Körpersegmenten und schwebenden Steinfragmenten; Kopf und Gliedmaßen bleiben eindeutig."],
+      ["Omnipotrimp", "Großer, ruhiger Boss-Imp mit breiten Schultern, kronenartig angeordneten Hornspitzen und wenigen schwebenden Kristallplatten."],
+      ["Mutimp", "Gedrungener violettgrüner Imp mit einem vergrößerten Arm, ungleichen Hörnern und einzelnen knolligen Hautplatten."],
+      ["Hulking_Mutimp", "Sehr massiger Mutanten-Imp mit gewaltigem asymmetrischem Oberkörper, großem Einzelarm und kräftigen, standfesten Beinen."]
+    ]}
+  ]
+}

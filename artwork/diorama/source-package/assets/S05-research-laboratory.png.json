@@ -1,0 +1,23 @@
+{
+  "id": "S05",
+  "key": "research-laboratory",
+  "name": "Forschung",
+  "group": "scenes",
+  "file": "assets/S05-research-laboratory.png",
+  "approved": false,
+  "source": "special/02-systems.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/systems.edit.prompt.txt",
+  "sha256": "62451f6c8635994d715f3d78b8f2921eef4f006e77d5a3ffab71ff48ae34cdc4",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

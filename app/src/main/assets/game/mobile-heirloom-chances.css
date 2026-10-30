@@ -1,0 +1,13 @@
+#heirRare { margin:12px 0; padding:14px; border:1px solid var(--line); border-radius:5px; background:var(--surface); color:var(--ink); text-align:left; font-size:.875rem; }
+.mobile-chance-head { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 12px; }
+.mobile-chance-head > strong { font-size:1rem; }
+.mobile-chance-head > span { color:var(--muted); }
+.mobile-chance-bar { display:flex; height:14px; margin:16px 0; border-radius:var(--radius); overflow:hidden; }
+.mobile-chance-segment { display:block; height:100%; flex:none; }
+.mobile-chance-legend { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 12px; }
+.mobile-chance-entry { display:grid; grid-template-columns:8px minmax(0,1fr); gap:0 8px; align-items:baseline; }
+.mobile-chance-name { overflow-wrap:anywhere; }
+.mobile-chance-dot { display:block; width:7px; height:7px; border-radius:50%; align-self:start; margin-top:.45em; }
+.mobile-chance-entry > strong { grid-column:2; font-size:1rem; font-variant-numeric:tabular-nums; }
+.mobile-chance-footer { display:flex; justify-content:space-between; gap:6px 12px; flex-wrap:wrap; margin-top:16px; padding-top:12px; border-top:1px solid var(--line); }
+.mobile-chance-footer > span { color:var(--muted); }

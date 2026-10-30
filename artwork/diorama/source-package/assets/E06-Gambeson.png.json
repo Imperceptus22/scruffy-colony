@@ -1,0 +1,23 @@
+{
+  "id": "E06",
+  "key": "Gambeson",
+  "name": "Gambeson",
+  "group": "equipment",
+  "file": "assets/E06-Gambeson.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 443,
+    "width": 444,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 444
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "0e14aae07624015723205019fa6db28ee39f892435fdae1b9064e0f712e77ee0",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

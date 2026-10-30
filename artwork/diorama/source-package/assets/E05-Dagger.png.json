@@ -1,0 +1,23 @@
+{
+  "id": "E05",
+  "key": "Dagger",
+  "name": "Dagger",
+  "group": "equipment",
+  "file": "assets/E05-Dagger.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "8bcf3cb8a6365cb19bcfae9d9b1e66cdc66d511bfcafd5efd8378b96e66a2c7c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

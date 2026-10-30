@@ -1,0 +1,23 @@
+{
+  "id": "E13",
+  "key": "Shoulderguards",
+  "name": "Shoulderguards",
+  "group": "equipment",
+  "file": "assets/E13-Shoulderguards.png",
+  "approved": false,
+  "source": "objects/equipment-02-helmet-shoulderguards.png",
+  "sourceRect": {
+    "left": 1024,
+    "top": 512,
+    "width": 512,
+    "height": 512
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 512
+  },
+  "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+  "sha256": "d510ce4d6ae0c142e3665330061ac0254aab7ab86f00189650ca54cd4d56d0d8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

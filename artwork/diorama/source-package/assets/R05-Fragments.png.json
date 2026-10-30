@@ -1,0 +1,23 @@
+{
+  "id": "R05",
+  "key": "Fragments",
+  "name": "Fragments",
+  "group": "resources",
+  "file": "assets/R05-Fragments.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 418,
+    "top": 430,
+    "width": 418,
+    "height": 380
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 380
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "29b86d008a70d816ac95c15261a3e630f325429b3e2071799df3d3b7ef0adfac",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

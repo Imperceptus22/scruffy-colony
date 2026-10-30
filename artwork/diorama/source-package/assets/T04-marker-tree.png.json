@@ -1,0 +1,23 @@
+{
+  "id": "T04",
+  "key": "marker-tree",
+  "name": "Baum",
+  "group": "terrain",
+  "file": "assets/T04-marker-tree.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 341,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "5df781e0e13d69672ca0004647fef5babe7a8c11ad45a7be43eefd09e6351a24",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

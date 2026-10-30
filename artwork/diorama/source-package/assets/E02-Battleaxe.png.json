@@ -1,0 +1,23 @@
+{
+  "id": "E02",
+  "key": "Battleaxe",
+  "name": "Battleaxe",
+  "group": "equipment",
+  "file": "assets/E02-Battleaxe.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "fe85e9cbd9014ad77a3b4efbd19796061187a559d56564eb6728d704a0e25eee",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

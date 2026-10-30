@@ -1,0 +1,106 @@
+{
+  "approved": false,
+  "created": "2026-10-24",
+  "itemsTotal": 34,
+  "atlases": [
+    {
+      "file": "buildings-01-antenna-mansion.png",
+      "approved": false,
+      "grid": {
+        "rows": 3,
+        "cols": 4
+      },
+      "orderedItemIds": [
+        "Antenna",
+        "Barn",
+        "Collector",
+        "Forge",
+        "Gateway",
+        "Gym",
+        "Hotel",
+        "House",
+        "Hub",
+        "Hut",
+        "Laboratory",
+        "Mansion"
+      ],
+      "references": [
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+      ],
+      "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-073e90ad-2920-42cb-96fa-c6e747b4d0a9.png"
+    },
+    {
+      "file": "buildings-02-microchip-wormhole.png",
+      "approved": false,
+      "grid": {
+        "rows": 3,
+        "cols": 3
+      },
+      "orderedItemIds": [
+        "Microchip",
+        "Nursery",
+        "Resort",
+        "Shed",
+        "Smithy",
+        "Trap",
+        "Tribute",
+        "Warpstation",
+        "Wormhole"
+      ],
+      "references": [
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+      ],
+      "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-d5c28fc2-4f11-415d-8d51-e3073c0f00fa.png"
+    },
+    {
+      "file": "equipment-01-arbalest-greatsword.png",
+      "approved": false,
+      "grid": {
+        "rows": 2,
+        "cols": 4
+      },
+      "orderedItemIds": [
+        "Arbalest",
+        "Battleaxe",
+        "Boots",
+        "Breastplate",
+        "Dagger",
+        "Gambeson",
+        "Greatsword",
+        null
+      ],
+      "references": [
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+      ],
+      "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-3ecc9eec-8852-4560-939f-30aa0c4671f9.png"
+    },
+    {
+      "file": "equipment-02-helmet-shoulderguards.png",
+      "approved": false,
+      "grid": {
+        "rows": 2,
+        "cols": 3
+      },
+      "orderedItemIds": [
+        "Helmet",
+        "Mace",
+        "Pants",
+        "Polearm",
+        "Shield",
+        "Shoulderguards"
+      ],
+      "references": [
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+        "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+      ],
+      "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-36aaaf1c-a80c-4137-a89d-8aa4e9c5e0af.png"
+    }
+  ],
+  "unresolvedIssues": [
+    "The second building atlas has visible red fringe or stray red pixels around silhouettes in the generated image; it persisted after one targeted regeneration and may need manual visual cleanup before export."
+  ],
+  "scope": "Artwork only. No UI integration, cropping, or app changes."
+}

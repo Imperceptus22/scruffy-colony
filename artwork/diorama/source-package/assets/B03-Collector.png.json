@@ -1,0 +1,23 @@
+{
+  "id": "B03",
+  "key": "Collector",
+  "name": "Collector",
+  "group": "buildings",
+  "file": "assets/B03-Collector.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 775,
+    "top": 0,
+    "width": 383,
+    "height": 337
+  },
+  "nativeSize": {
+    "width": 383,
+    "height": 337
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "bf09639c1aabdb0bc85e3ef1dd27ff67ce91502743bf492d3eabdeffb988ec40",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

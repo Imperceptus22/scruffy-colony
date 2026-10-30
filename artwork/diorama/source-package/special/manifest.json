@@ -1,0 +1,87 @@
+{
+  "task": "Scruffy Colony special diorama atlas plates",
+  "created": "2026-10-24",
+  "atlas_count": 3,
+  "approved": false,
+  "atlases": [
+    {
+      "id": "common-scenes",
+      "image": "01-common-scenes.png",
+      "native_width": 1254,
+      "native_height": 1254,
+      "grid": "2 columns x 2 rows",
+      "cell_order": [
+        "colony",
+        "building-workshop",
+        "equipment-armory",
+        "jobs-camp"
+      ],
+      "role": "approval preview atlas; no integration or cropping",
+      "prompt_file": "common-scenes.prompt.txt",
+      "edit_prompt_file": null,
+      "source_output_hint": "<home>\\.codex\\generated_images\\01a16f65-ca8c-79b2-ba87-cef0b290ea14\\exec-0122d039-20c0-46f5-9042-57e5ef5fdfd1.png",
+      "source_generated_at": "2026-10-24T21:33:23+02:00",
+      "references": [
+        "output/diorama-app-concepts-2026-10-24/05-portal.png",
+        "output/diorama-app-concepts-2026-10-24/02-buildings.png",
+        "output/diorama-app-concepts-2026-10-24/03-equipment.png",
+        "output/combat-diorama-full-2026-10-24/combat-waddleby.png"
+      ],
+      "approved": false,
+      "inspection_note": "All four requested scenes are present; no notable deviation observed."
+    },
+    {
+      "id": "systems",
+      "image": "02-systems.png",
+      "native_width": 1254,
+      "native_height": 1254,
+      "grid": "2 columns x 2 rows",
+      "cell_order": [
+        "research-laboratory",
+        "portal",
+        "heirlooms-display",
+        "more-settings-desk"
+      ],
+      "role": "approval preview atlas; no integration or cropping",
+      "prompt_file": "systems.prompt.txt",
+      "edit_prompt_file": "systems.edit.prompt.txt",
+      "source_output_hint": "<home>\\.codex\\generated_images\\01a16f65-ca8c-79b2-ba87-cef0b290ea14\\exec-778ff8fe-79d5-4d0b-8c7b-75c36a2a67cf.png",
+      "source_generated_at": "2026-10-24T21:39:42+02:00",
+      "references": [
+        "output/diorama-app-concepts-2026-10-24/05-portal.png",
+        "output/diorama-app-concepts-2026-10-24/02-buildings.png",
+        "output/diorama-app-concepts-2026-10-24/03-equipment.png",
+        "output/combat-diorama-full-2026-10-24/combat-waddleby.png"
+      ],
+      "approved": false,
+      "inspection_note": "The lower-right desk was revised twice to remove one notebook, but visual inspection still does not clearly confirm the requested exact count of three closed notebooks.",
+      "revision_source_output_hint": "<home>\\.codex\\generated_images\\01a16f65-ca8c-79b2-ba87-cef0b290ea14\\exec-4b74fcb4-6489-49f3-aec4-b7ec8fe6eea9.png"
+    },
+    {
+      "id": "late-systems",
+      "image": "03-late-systems.png",
+      "native_width": 1254,
+      "native_height": 1254,
+      "grid": "2 columns x 2 rows",
+      "cell_order": [
+        "player-spire",
+        "spire-assault",
+        "alchemy",
+        "mutators"
+      ],
+      "role": "approval preview atlas; no integration or cropping",
+      "prompt_file": "late-systems.prompt.txt",
+      "edit_prompt_file": null,
+      "source_output_hint": "<home>\\.codex\\generated_images\\01a16f65-ca8c-79b2-ba87-cef0b290ea14\\exec-d8724bf9-14ef-4c46-8089-e8a5b7a67031.png",
+      "source_generated_at": "2026-10-24T21:35:28+02:00",
+      "references": [
+        "output/diorama-app-concepts-2026-10-24/05-portal.png",
+        "output/diorama-app-concepts-2026-10-24/02-buildings.png",
+        "output/diorama-app-concepts-2026-10-24/03-equipment.png",
+        "output/combat-diorama-full-2026-10-24/combat-waddleby.png"
+      ],
+      "approved": false,
+      "inspection_note": "All four requested scene concepts are present; no characters, labels, or gameplay claims observed."
+    }
+  ]
+}

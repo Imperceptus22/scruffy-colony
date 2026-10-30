@@ -1,0 +1,23 @@
+{
+  "id": "R04",
+  "key": "Science",
+  "name": "Science",
+  "group": "resources",
+  "file": "assets/R04-Science.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 430,
+    "width": 418,
+    "height": 380
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 380
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "424385094d5b5b026c92676fcb4c9959ac213ef65899f8e59f1462dd2ba62bb5",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/Grimy/Grimy.github.io",
+  "commit": "f678ddc718ba4cede2b7a86fbb8bcb96951a329f",
+  "license": "WTFPL",
+  "sources": {
+    "perks.ts": "src/perks.ts",
+    "trimps.ts": "src/trimps.ts",
+    "LICENSE.txt": "LICENSE.txt"
+  },
+  "build": "node tools/build-perky.cjs (Node 24 built-in TypeScript transform)",
+  "files": {
+    "perks.ts": "43b52cfef80061a49f2fc0d144ca124b3086e8a544c7503a43bc4003c53ddb40",
+    "trimps.ts": "f4756c861510e11e6b21a12b4a9c91e3b95d8084de6e613db2bada304c7b940b",
+    "LICENSE.txt": "40f2791ae84e097cc964b740cbd974e78296a36aa1490dcb76dcc004bf865ac8",
+    "perky.js": "1f7c62e139d6842ea2453becf39449eb04fb10c4580a0e8f3f67ee2d6c964b2e"
+  }
+}

@@ -1,0 +1,51 @@
+/* Guided start (V-240 A, mobile-guided-start.js): a light frame around one control darkens the rest of the screen a
+   little, a bubble with one sentence, the step and Skip points at it. Light and darkening never take a tap
+   (pointer-events:none), so every control stays usable; info windows (z-index 20) open above them.
+   V-249: when the step changes, light, bubble and tail glide to the new place in a quarter second (the script sets
+   .mobile-guide-glide for that moment only, so they never lag behind a scrolled control; none with reduced motion).
+   Classic: light card in the B2 palette; Diorama: parchment card like the info windows. To withdraw it, delete this file,
+   mobile-guided-start.js and their lines in index.html. */
+#mobile-guide-ring.mobile-guide-glide { transition:left .25s ease-out, top .25s ease-out, width .25s ease-out, height .25s ease-out; }
+#mobile-guide.mobile-guide-glide { transition:top .25s ease-out; }
+#mobile-guide-tail.mobile-guide-glide { transition:left .25s ease-out, top .25s ease-out; }
+@media (prefers-reduced-motion: reduce) { #mobile-guide-ring.mobile-guide-glide, #mobile-guide.mobile-guide-glide, #mobile-guide-tail.mobile-guide-glide { transition:none; } }
+#mobile-guide-ring {
+  position:fixed; z-index:16; pointer-events:none; box-sizing:border-box; border-radius:10px;
+  box-shadow:0 0 0 3px #ffd77a, 0 0 14px 4px #ffd77acc, 0 0 0 100vmax #0b120f8c;
+}
+#mobile-guide {
+  position:fixed; z-index:17; left:12px; right:12px; box-sizing:border-box; margin:0; padding:10px 12px 6px;
+  color:#2d3025; background:#fff8e6; border:2px solid #9a7442; border-radius:10px; box-shadow:0 6px 16px #0006;
+  font:600 .95rem/1.4 var(--font-body, sans-serif);
+}
+#mobile-guide p { margin:0; overflow-wrap:break-word; }
+#mobile-guide .mobile-guide-progress { margin-top:4px; font:700 .875rem/1.3 var(--font-data, sans-serif); color:#5b4c36; }
+#mobile-guide .mobile-guide-row { display:flex; align-items:center; gap:8px; margin-top:4px; }
+#mobile-guide .mobile-guide-step { font-size:.8rem; font-weight:500; color:#5b4c36; }
+#mobile-guide button {
+  margin-left:auto; min-width:44px; min-height:44px; padding:0 14px; font:700 .875rem/1 var(--font-body, sans-serif);
+  color:#1f5a63; background:transparent; border:1px solid #1f5a6399; border-radius:8px;
+}
+#mobile-guide button:focus-visible { outline:3px solid #1f5a63; outline-offset:2px; }
+#mobile-guide-tail {
+  position:fixed; z-index:18; width:16px; height:16px; pointer-events:none; box-sizing:border-box; transform:rotate(45deg);
+  background:#fff8e6; border:2px solid #9a7442;
+}
+#mobile-guide-tail[data-side="below"] { border-right:0; border-bottom:0; }
+#mobile-guide-tail[data-side="above"] { border-left:0; border-top:0; }
+
+html[data-graphics="diorama"] #mobile-guide {
+  background:transparent; border:1px solid transparent; border-radius:0; box-shadow:none; filter:drop-shadow(0 4px 8px #000b);
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch;
+  padding:12px 14px 8px;
+}
+html[data-graphics="diorama"] #mobile-guide button {
+  color:#2a1606; background:none; border:7px solid transparent; border-radius:0;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch; padding:0 8px;
+}
+html[data-graphics="diorama"] #mobile-guide-tail { background:#f3e3c2; border-color:#9a7442; }
+
+/* V-262: the welcome of a new save (#mobile-welcome in #tipText) fits 360 x 640 px with 130 % text without scrolling, its
+   button in view: the window may use the whole height (the game behind it is covered anyway), lines and gaps are tighter. */
+#tooltipDiv:where([data-mobile-has~="mobile-welcome"]):is(#tooltipDiv) { top:8px!important; max-height:calc(100dvh - 16px)!important; }
+#mobile-welcome p { margin:0 0 6px!important; line-height:1.35!important; }

@@ -1,0 +1,908 @@
+{
+  "base": "4174b4985da0509001f8d90662028d19f835a169",
+  "records": [
+    {
+      "name": "Beetlimp",
+      "description": "Kompakter olivgrüner Imp mit gewölbten Käfer-Flügeldecken am Rücken und kräftigen Panzerarmen.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-6a286d78-fec1-4b69-bf85-d8c082c5c640.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Beetlimp. A compact olive-green imp with rounded beetle wing cases on its back and strong plated arms.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "e39326f5a98197a665f107c0b4c43c3e61833534a216010e769e1174dab67e72"
+    },
+    {
+      "name": "Mantimp",
+      "description": "Schlanker salbeigrüner Imp mit langen, angewinkelten Fangarmen und kleinen Chitinplatten.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-308f3600-2b74-414f-91d5-5a9650ef2cb2.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct. Image 2 is the user-approved concept board and is authoritative for the requested correction. This is a targeted production correction of the same named character, not a new design. Keep hand-painted warm fantasy rendering, amber eyes, imp horns and pointed ears, linen waist wrap and leather belt. Full body including horns, all hands and feet inside the square canvas with 10 percent transparent margin. TRUE transparent alpha background; no lettering, board, extra creatures, scene, floor, glow, shadows or border. Remove ONLY the large pale translucent insect wing extending down from the back. The approved Mantimp is at TOP ROW, SECOND COLUMN of image 2: it has only small chitin plates, no large back wing. Preserve the existing lean sage/olive mantis-imp figure, both long bent catching forearms, head, face, horns, ears, torso, legs, stance and every other detail. Do not remove either mantis catching forearm and do not add a tail or another wing.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\app\\src\\main\\assets\\game\\mobile-assets\\imp-family\\Mantimp.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-01.png"
+      ],
+      "mode": "built-in image_gen review correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Mantimp",
+        "description": "Schlanker salbeigrüner Imp mit langen, angewinkelten Fangarmen und kleinen Chitinplatten.",
+        "board": "01",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-d271d891-3230-4a12-873d-166a5ea1220f.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Mantimp. A slender sage-green imp with long bent mantis catching forearms and small chitin plates.",
+        "mode": "built-in image_gen",
+        "transparent": true,
+        "sourceSha256": "484364cf2b42361ddcd47218691996a3d7f42d5f248aec2f420ce6579b563837"
+      },
+      "sourceSha256": "a047cdc1098d434c3f776d5063ae02417fe9670de02873654ee67529f61b93a6"
+    },
+    {
+      "name": "Shrimp",
+      "description": "Korallfarbener Imp mit gegliedertem Rückenpanzer, langen Fühlern und eingerolltem Garnelenschwanz.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-30c5f916-33b0-4656-aafa-69589e1f114a.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Shrimp. Korallfarbener Imp mit gegliedertem Rückenpanzer, langen Fühlern und eingerolltem Garnelenschwanz. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "18e776137f1b9ecdc66a777e176d983d88e44162db87dfce45e8067c2fda0280"
+    },
+    {
+      "name": "Duckimp",
+      "description": "Gedrungener Imp mit kurzem Entenschnabel, dunklem Federkragen und breiten Schwimmfüßen.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-53da3d5a-8b65-4f5d-bdf2-fcf3b230dc36.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Duckimp. Gedrungener Imp mit kurzem Entenschnabel, dunklem Federkragen und breiten Schwimmfüßen. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "bcfe83416e59ccca9cb5b182dc47b9a9794940d6b7b5a8ae147677011c2e2866"
+    },
+    {
+      "name": "Slosnimp",
+      "description": "Schwerer olivbrauner Schlangen-Imp mit tiefem Stand, breitem Bauch und kurzem, dickem Ringelschwanz.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-4233640c-d45b-4b4d-8dd5-56741f65e43d.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Slosnimp. Schwerer olivbrauner Schlangen-Imp mit tiefem Stand, breitem Bauch und kurzem, dickem Ringelschwanz. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "1bfeea8ba387d1c5872c1b7a4ba0da6f9f0503150028a228f2702b0713c18e7d"
+    },
+    {
+      "name": "Frosnimp",
+      "description": "Blaugrauer Schlangen-Imp mit vereisten Schuppenkanten und einem geschwungenen Schwanz; der Imp-Kopf bleibt sichtbar.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-f0375cdc-0758-49fb-9913-4f2ec87a82c7.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Frosnimp. Blaugrauer Schlangen-Imp mit vereisten Schuppenkanten und einem geschwungenen Schwanz; der Imp-Kopf bleibt sichtbar. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "357801c32d352b05917edce5d18ad2df0ff6761797b04319501d4757c25aebd1"
+    },
+    {
+      "name": "Frimp",
+      "description": "Moosgrüner Wald-Imp mit rindenartigen Unterarmen und kleinen Farnbüscheln an den Schultern.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-90d0c820-5ae2-4ad2-a025-ce0c05c45b52.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Frimp. Moosgrüner Wald-Imp mit rindenartigen Unterarmen und kleinen Farnbüscheln an den Schultern. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "3e9c2757a8fff7bb60d482bb92c6a4cdb5f26477a635f6afd1f5d27b40e8c6ca"
+    },
+    {
+      "name": "Entimp",
+      "description": "Breiter Baum-Imp mit knorrigem Rindenkörper, Wurzelfüßen und wenigen Blättern an den Hörnern.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2317d6b5-9431-4fa6-b3ed-e86e2b267d30.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Entimp. Breiter Baum-Imp mit knorrigem Rindenkörper, Wurzelfüßen und wenigen Blättern an den Hörnern. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "f8bd61b380a06c6dec4c7a8ef1e77b48f023c2fc41ba87ec6a57388ee1e2e86b"
+    },
+    {
+      "name": "Mountimp",
+      "description": "Massiger grauer Fels-Imp mit bergförmiger Schulterlinie, rauer Steinhaut und erdfarbenem Leinentuch.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-77dae205-0a92-407c-9b50-a79c5eaa824c.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Mountimp. Massiger grauer Fels-Imp mit bergförmiger Schulterlinie, rauer Steinhaut und erdfarbenem Leinentuch. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "0fa7aaa0023275fbdba67a2b5afe6be6d932c55288e7fa25505743828a2606d8"
+    },
+    {
+      "name": "Grimp",
+      "description": "Dunkelgrüner Wald-Imp mit grimmigen Brauen, zottigem Nacken und großem, löchrigem Blattumhang.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-c0b30631-1600-4bbd-8045-c60df49c4bb3.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Grimp. Dunkelgrüner Wald-Imp mit grimmigen Brauen, zottigem Nacken und großem, löchrigem Blattumhang. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "12fdab9af9f5f2e4649a499572055389c8d72a89987a6eb44f95a298db13513c"
+    },
+    {
+      "name": "Nooimp",
+      "description": "Türkisgrauer Meeres-Imp mit runden Flossenohren, Algenbüschel und einer Muschel am Gürtel.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b03449e4-7fd4-431b-a6ef-db112c1087fe.png",
+      "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Nooimp. Türkisgrauer Meeres-Imp mit runden Flossenohren, Algenbüschel und einer Muschel am Gürtel. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "4de901ff9ad70237a2ead1e62f93e5f6489cd7b2d66d04e9bff88706669a3287"
+    },
+    {
+      "name": "Artimp",
+      "description": "Kupferfarbener Bionik-Imp mit asymmetrisch ergänztem Mechanikarm und kreisförmiger Brustplatte.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-dfaa4a16-dc1c-46b9-b8df-3b07f2dd90a8.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Artimp at row 2, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Kupferfarbener Bionik-Imp mit asymmetrisch ergänztem Mechanikarm und kreisförmiger Brustplatte. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "64c83dd0bceee0f17812e8f38f1d08d5c345d95f2a52378224671386d14aefb4"
+    },
+    {
+      "name": "Autoimp",
+      "description": "Kleiner tonnenförmiger Automaten-Imp mit runden Gelenken, aufziehschlüsselartigem Rückenstück und kurzen Armen.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-4e40158d-6160-40c8-9ac3-c69a20cfcab4.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Autoimp at row 1, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Kleiner tonnenförmiger Automaten-Imp mit runden Gelenken, aufziehschlüsselartigem Rückenstück und kurzen Armen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "680aa7faa5484bd7071f5f1d38c810d03ebc0403a30950e30d925325d3534b93"
+    },
+    {
+      "name": "Blimp",
+      "description": "Rundlicher Imp mit ballonartig aufgeblähtem Oberkörper, kleinen Armen und deutlich sichtbaren Füßen; keine Luftschiff-Gondel.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-9a0d1482-6ca7-491c-bc6d-07e663e0039f.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Blimp at row 1, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Rundlicher Imp mit ballonartig aufgeblähtem Oberkörper, kleinen Armen und deutlich sichtbaren Füßen; keine Luftschiff-Gondel. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "d3865142d3d5da4499846b7380817c184fd87131451635c301e6a54c7d53e07b"
+    },
+    {
+      "name": "Brickimp",
+      "description": "Kantiger Imp mit ziegelroten, gemauert wirkenden Körperplatten und breiten rechteckigen Unterarmen.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-3ad343d1-cf36-4982-855a-18672d5cc5d9.png",
+      "prompt": "Use case: precise-object-edit. Reference image 1 is the production sprite to correct; image 2 is the approved board for identity. Remove ONLY the unapproved bat wings from Brickimp. Also remove its unapproved long devil tail; the approved board character has no tail. Keep its head, horns, pointed ears, amber eyes, face, body, posture, colors, costume, hands, feet, painterly rendering and all other features unchanged. Keep the entire full body comfortably within the square canvas with visible transparent margin. No new props or limbs. True transparent alpha background, no floor shadow, no text, labels or other creatures. This is a targeted correction, not a new concept.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-048f696e-9c93-43f1-9b42-ad570390a61d.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Brickimp",
+        "description": "Kantiger Imp mit ziegelroten, gemauert wirkenden Körperplatten und breiten rechteckigen Unterarmen.",
+        "board": "02",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-048f696e-9c93-43f1-9b42-ad570390a61d.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Brickimp. Kantiger Imp mit ziegelroten, gemauert wirkenden Körperplatten und breiten rechteckigen Unterarmen. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "8d41a77124931af9ca2d22caea7b974ab3404e4f6174789369a2f160d6927571"
+    },
+    {
+      "name": "Butterflimp",
+      "description": "Leichter Imp mit großen creme-petrolfarbenen Schmetterlingsflügeln und feinen Fühlern zwischen den Hörnern.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-5fc8ee35-6ffb-4232-9d2e-c557e7e463e4.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved long furry tail. Keep both large approved butterfly wings, antennae and all limbs intact. The approved Butterflimp on the board has these features: Leichter Imp mit großen creme-petrolfarbenen Schmetterlingsflügeln und feinen Fühlern zwischen den Hörnern. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b0f91223-eb78-4e40-9da9-2029b6d64d28.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-01.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Butterflimp",
+        "description": "Leichter Imp mit großen creme-petrolfarbenen Schmetterlingsflügeln und feinen Fühlern zwischen den Hörnern.",
+        "board": "01",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b0f91223-eb78-4e40-9da9-2029b6d64d28.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Butterflimp. A light imp with large cream-and-dark-petrol butterfly wings and fine antennae between its horns.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "a8aeb3f5edf714c2b4c0f37d6dfa4727b0a1bb112e1d3567dc83161dc29ce345"
+    },
+    {
+      "name": "Carbimp",
+      "description": "Anthrazitfarbener Imp mit facettierter Kohlenstoffhaut und wenigen klaren diamantartigen Kristallspitzen.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-47807144-d279-48f5-882c-fb12ddc247aa.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Carbimp at row 2, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Anthrazitfarbener Imp mit facettierter Kohlenstoffhaut und wenigen klaren diamantartigen Kristallspitzen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "69c93d1bdd12d1d3ee599b9e748340af6f7698884448bb2a955736b2c6e1bd30"
+    },
+    {
+      "name": "Chimp",
+      "description": "Schlanker Schimpansen-Imp mit langen Armen, heller Gesichtsmaske und kurzem dunklem Fell; deutlich leichter als Gorillimp.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-25cb3ece-361a-40af-9b2f-c2e984d89d9e.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved long tail. The approved Chimp on the board has these features: Schlanker Schimpansen-Imp mit langen Armen, heller Gesichtsmaske und kurzem dunklem Fell; deutlich leichter als Gorillimp. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b26b85d0-8d72-4246-8a9d-6b065b2516d7.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-01.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Chimp",
+        "description": "Schlanker Schimpansen-Imp mit langen Armen, heller Gesichtsmaske und kurzem dunklem Fell; deutlich leichter als Gorillimp.",
+        "board": "01",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b26b85d0-8d72-4246-8a9d-6b065b2516d7.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Chimp. Schlanker Schimpansen-Imp mit langen Armen, heller Gesichtsmaske und kurzem dunklem Fell; deutlich leichter als Gorillimp. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "1601f501c5ec8fbb14e3624a34e16d66b113e79a8fcd2615aa116f5f5eea5599"
+    },
+    {
+      "name": "Cthulimp",
+      "description": "Tief meergrüner Imp mit kurzem Tentakelbart, kleinen gefalteten Membranflügeln und klar sichtbaren Armen und Beinen.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-55742b00-e9f1-4ec6-b3cb-a691532ff017.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Cthulimp at row 1, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Tief meergrüner Imp mit kurzem Tentakelbart, kleinen gefalteten Membranflügeln und klar sichtbaren Armen und Beinen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "8cc25c601906440f7394330af4e8874ca820f7773ed255ddd88f7ad29b823573"
+    },
+    {
+      "name": "Darknimp",
+      "description": "Breiter nachtblauer Imp mit matten, gefalteten Schattenplatten und deutlicher Kontur; vollständig gezeichnet statt schwarzem Fleck.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b6e56c9e-641e-4cb1-b5c6-2e8a5d1b8acc.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Darknimp at row 2, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Breiter nachtblauer Imp mit matten, gefalteten Schattenplatten und deutlicher Kontur; vollständig gezeichnet statt schwarzem Fleck. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "74902852a23dc8b05e50b14be86cad0c42a6c74b7f294a0bab6dbd8c23bd54e6"
+    },
+    {
+      "name": "Destructimp",
+      "description": "Schwerer Maschinen-Imp mit großen Hammerfäusten und abgenutzten dunklen Panzerplatten.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-a0bdd8b6-561d-4496-9cb8-19e7a72a9d58.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Destructimp at row 1, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Schwerer Maschinen-Imp mit großen Hammerfäusten und abgenutzten dunklen Panzerplatten. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "ff9537bb582298510654b436ab7d4b422233fc647ea7b7c374cc3a9d41431091"
+    },
+    {
+      "name": "Flowimp",
+      "description": "Schlanker rostroter Imp mit glatten, wellenförmigen Körperrippen und einer seitlich fließenden Silhouette.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-54662613-f228-4179-8aa7-63d19a33135c.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Keep its approved curved flowing tail intact. The approved Flowimp on the board has these features: Schlanker rostroter Imp mit glatten, wellenförmigen Körperrippen und einer seitlich fließenden Silhouette. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-c6c0b630-72d7-4bd5-82bd-8a2e5f57d707.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Flowimp",
+        "description": "Schlanker rostroter Imp mit glatten, wellenförmigen Körperrippen und einer seitlich fließenden Silhouette.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-c6c0b630-72d7-4bd5-82bd-8a2e5f57d707.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Flowimp. Schlanker rostroter Imp mit glatten, wellenförmigen Körperrippen und einer seitlich fließenden Silhouette. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "c06134fb005d1e6b0d47b2e88846a4cca94cb6f49ef2b27c239974fcb1a111b6"
+    },
+    {
+      "name": "Freezo",
+      "description": "Gedrungener Eis-Imp mit rauer Frosthaut, kurzen Eiszapfen an den Brauen und petrolfarbenem Leinentuch.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-cb75ee2e-c858-4f76-be3e-ecab21bc09db.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Also remove the unapproved long devil tail. The approved Freezo on the board has these features: Gedrungener Eis-Imp mit rauer Frosthaut, kurzen Eiszapfen an den Brauen und petrolfarbenem Leinentuch. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2b7751e0-5601-4aa9-801c-3948dfe03e29.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Freezo",
+        "description": "Gedrungener Eis-Imp mit rauer Frosthaut, kurzen Eiszapfen an den Brauen und petrolfarbenem Leinentuch.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2b7751e0-5601-4aa9-801c-3948dfe03e29.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Freezo. Gedrungener Eis-Imp mit rauer Frosthaut, kurzen Eiszapfen an den Brauen und petrolfarbenem Leinentuch. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "7f59445ad83c44e21460d6de521e2421701299ff087109cf289cef5343b3e927"
+    },
+    {
+      "name": "Fusimp",
+      "description": "Breiter Imp mit zwei ineinandergreifenden Brustplatten und einer einzelnen warm glühenden Fuge in der Mitte.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-480907f9-7417-4ac0-87b1-611ff70fb6db.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Fusimp at row 2, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Breiter Imp mit zwei ineinandergreifenden Brustplatten und einer einzelnen warm glühenden Fuge in der Mitte. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "78311e01d5f7ebb4d9dc3d92192f00a1bcf6e5d4975595e886dd716b1b4dc75f"
+    },
+    {
+      "name": "Gnomimp",
+      "description": "Kleiner, bärtiger Imp mit kurzer Stoffkappe zwischen sichtbaren Hörnern und abgetragenem Ledergürtel.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-4e05827f-d5b2-46a7-b61a-0a1ec0647356.png",
+      "prompt": "Use case: precise-object-edit. Reference image 1 is the production sprite to correct; image 2 is the approved board for identity. Remove ONLY the unapproved bat wings from Gnomimp. Also remove its unapproved long devil tail; the approved board character has no tail. Keep its head, horns, pointed ears, amber eyes, face, body, posture, colors, costume, hands, feet, painterly rendering and all other features unchanged. Keep the entire full body comfortably within the square canvas with visible transparent margin. No new props or limbs. True transparent alpha background, no floor shadow, no text, labels or other creatures. This is a targeted correction, not a new concept.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-6fa8cd59-71c2-4b43-ba22-57f68f3940eb.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Gnomimp",
+        "description": "Kleiner, bärtiger Imp mit kurzer Stoffkappe zwischen sichtbaren Hörnern und abgetragenem Ledergürtel.",
+        "board": "02",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-6fa8cd59-71c2-4b43-ba22-57f68f3940eb.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Gnomimp. Kleiner, bärtiger Imp mit kurzer Stoffkappe zwischen sichtbaren Hörnern und abgetragenem Ledergürtel. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "c04efe60e73eab60eaf82b7c09703c0a79315f1884e9ca47226c8c8bbf79b954"
+    },
+    {
+      "name": "Golimp",
+      "description": "Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-87d94786-2248-4285-a49f-ee3c1210fb14.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct. Image 2 is the user-approved concept board and is authoritative for the requested correction. This is a targeted production correction of the same named character, not a new design. Keep hand-painted warm fantasy rendering, amber eyes, imp horns and pointed ears, linen waist wrap and leather belt. Full body including horns, all hands and feet inside the square canvas with 10 percent transparent margin. TRUE transparent alpha background; no lettering, board, extra creatures, scene, floor, glow, shadows or border. Correct the BODY MASS AND FISTS to match the exact approved Golimp at BOTTOM ROW, FIRST COLUMN of image 2. The current image 1 is incorrectly slender and narrow-shouldered. Make the same old golem-imp very broad, squat and massive, with thick rounded shoulders, a wide heavy torso, enormous forearms and oversized massive stone plate fists. Recreate the approved golem's large hewn pale grey/earthy stone slabs and deep joints, sturdy thick legs and broad feet; retain the weathered circular chest mark, imp face, ears and horns. The width across shoulders and fists must rival the overall standing height as on the board. Keep its existing three-quarter LEFT orientation, earthy palette, belt and worn linen wrap. No tail, wings, extra props or slim limbs.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\app\\src\\main\\assets\\game\\mobile-assets\\imp-family\\Golimp.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+      ],
+      "mode": "built-in image_gen review correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Golimp",
+        "description": "Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung.",
+        "board": "02",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-969f42d3-9992-4ba4-b20b-9c92e6f9e589.png",
+        "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved long tail. The approved Golimp on the board has these features: Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+        "references": [
+          "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-c01477c4-145b-49af-a557-43f873afd28d.png",
+          "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+        ],
+        "mode": "built-in image_gen targeted correction",
+        "transparent": true,
+        "previousProduction": {
+          "name": "Golimp",
+          "description": "Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung.",
+          "board": "02",
+          "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-c01477c4-145b-49af-a557-43f873afd28d.png",
+          "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Golimp. Alter Golem-Imp mit großen behauenen Steinplatten, tiefen Fugen und einer einzelnen verwitterten Brustmarkierung. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+          "mode": "built-in image_gen",
+          "transparent": true
+        },
+        "sourceSha256": "a13663c2b3eb2d5b85beeeabea7526979e2c57be93b622bff988374a8120c7c3"
+      },
+      "sourceSha256": "2b675a8258a3506a74b484c39b3f4127e41075782c84562d6950ba230fd228f7"
+    },
+    {
+      "name": "Gravelimp",
+      "description": "Kleiner Kies-Imp aus runden Steinsegmenten, mit lockeren Kieseln an Schultern und Knöcheln.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-bc99afe8-928a-4ad9-bfaa-4ecb37cc58ef.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved long tail. The approved Gravelimp on the board has these features: Kleiner Kies-Imp aus runden Steinsegmenten, mit lockeren Kieseln an Schultern und Knöcheln. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b9bcc09f-f566-4810-8bfc-15c2b4ff4573.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Gravelimp",
+        "description": "Kleiner Kies-Imp aus runden Steinsegmenten, mit lockeren Kieseln an Schultern und Knöcheln.",
+        "board": "02",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-b9bcc09f-f566-4810-8bfc-15c2b4ff4573.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Gravelimp. Kleiner Kies-Imp aus runden Steinsegmenten, mit lockeren Kieseln an Schultern und Knöcheln. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "28b4b47b7367fcef964af8ee2d49e987e78846a5928ff68604e9452146c3c5ed"
+    },
+    {
+      "name": "Horrimp",
+      "description": "Unruhig gekrümmter, asymmetrischer Imp mit langem Rücken, ungleichen Ohren und angespannten Brauen.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-07c4cebe-c75c-4f72-b497-99bccf9d1882.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Horrimp at row 1, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Unruhig gekrümmter, asymmetrischer Imp mit langem Rücken, ungleichen Ohren und angespannten Brauen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "587dd42c5dea2b7bf5487ded409bc6e3f849dc1e0a50899d851b341d151f3ea5"
+    },
+    {
+      "name": "Hulking_Mutimp",
+      "description": "Sehr massiger Mutanten-Imp mit gewaltigem asymmetrischem Oberkörper, großem Einzelarm und kräftigen, standfesten Beinen.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-fdcb08c5-32ab-4b9d-a1df-9964c4b30d13.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Hulking_Mutimp at row 3, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Sehr massiger Mutanten-Imp mit gewaltigem asymmetrischem Oberkörper, großem Einzelarm und kräftigen, standfesten Beinen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "db7b0fb865b0a43928122e45ef317bfd3e8139abe20a29a77ba8942b039e688a"
+    },
+    {
+      "name": "Hydrogimp",
+      "description": "Sehr leichter blassblauer Imp mit abgerundeten, fast durchscheinenden Hautpartien und einem einzelnen ovalen Rückenring.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-9243a95b-67b9-49c4-a211-78ca5080210f.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Hydrogimp at row 2, column 4 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Sehr leichter blassblauer Imp mit abgerundeten, fast durchscheinenden Hautpartien und einem einzelnen ovalen Rückenring. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "ae765e4bafee8b4eac914dfb7d233f857556450404eb410fcf4a3da888aa00f3"
+    },
+    {
+      "name": "Improbability",
+      "description": "Imp mit wenigen bewusst unmöglich gegeneinander versetzten Körpersegmenten und schwebenden Steinfragmenten; Kopf und Gliedmaßen bleiben eindeutig.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-643bf170-5107-4baf-82da-0070556f81ab.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Improbability at row 2, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Imp mit wenigen bewusst unmöglich gegeneinander versetzten Körpersegmenten und schwebenden Steinfragmenten; Kopf und Gliedmaßen bleiben eindeutig. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "839363eb8cc7980272cbc662e42309497212a5ec84d158b919a2def85d088247"
+    },
+    {
+      "name": "Indianimp",
+      "description": "Eigenständiger Wildnis-Imp in schlichter Leinen- und Lederkleidung, mit Wanderstock und geflochtener Tasche.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-5bb1c954-76be-4e43-b710-de5114f263c1.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Indianimp at row 2, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Eigenständiger Wildnis-Imp in schlichter Leinen- und Lederkleidung, mit Wanderstock und geflochtener Tasche. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "6fd432d6d8196082858d45c6cc056f766c1fd575158e5428accb87e222f6d4f8"
+    },
+    {
+      "name": "Lavimp",
+      "description": "Breiter Basalt-Imp mit klar erkennbaren orangefarbenen Lavakanälen zwischen großen Gesteinsplatten.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-18bf3ef4-9283-415e-afa1-61c31b87b166.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Also remove the unapproved long devil tail. The approved Lavimp on the board has these features: Breiter Basalt-Imp mit klar erkennbaren orangefarbenen Lavakanälen zwischen großen Gesteinsplatten. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-e8336efc-7225-4d0c-9db9-4a756842a8e7.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Lavimp",
+        "description": "Breiter Basalt-Imp mit klar erkennbaren orangefarbenen Lavakanälen zwischen großen Gesteinsplatten.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-e8336efc-7225-4d0c-9db9-4a756842a8e7.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Lavimp. Breiter Basalt-Imp mit klar erkennbaren orangefarbenen Lavakanälen zwischen großen Gesteinsplatten. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "9dc0bd44e9b83ab1251e64423c000615707c6c6c5b8cf97739a2b74a10de5ad5"
+    },
+    {
+      "name": "Lightimp",
+      "description": "Schlanker elfenbeinfarbener Imp mit schmalen bernsteinfarbenen Kristallkanten und einer klaren, hellen Silhouette.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-cb6c91b1-598f-4dd0-a46c-46e8b3169f4b.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Lightimp at row 2, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Schlanker elfenbeinfarbener Imp mit schmalen bernsteinfarbenen Kristallkanten und einer klaren, hellen Silhouette. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "1319ef94d85dce5a95d8cabb28271aa721cccc1f9b3586fcb8f554b4b20ed8ee"
+    },
+    {
+      "name": "Liquimp",
+      "description": "Aquamarinfarbener Imp mit weichen, wasserartig fließenden Körperrändern und kleinen Tropfen am Unterarm.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-29b97acc-f1c5-48ec-8e11-038d1642b5aa.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Liquimp at row 2, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Aquamarinfarbener Imp mit weichen, wasserartig fließenden Körperrändern und kleinen Tropfen am Unterarm. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "ca0372f9ac494421062ddc681da30de4bed0bb16e9b565326007bd0e10a2993e"
+    },
+    {
+      "name": "Magimp",
+      "description": "Randimp: verschmitzter Imp mit verschieden geformten Stoffflicken, einem Würfel und einer geschlossenen Überraschungstasche; deutlich ohne Magnimps Magnet.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-9ef01bdd-a4c2-4570-a24e-9050c346dff2.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Magimp at row 1, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Randimp: verschmitzter Imp mit verschieden geformten Stoffflicken, einem Würfel und einer geschlossenen Überraschungstasche; deutlich ohne Magnimps Magnet. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "d2b1e0b7b0676fa429fb1ea830f6733a55155ee884c8b5e90c779b875b96494e"
+    },
+    {
+      "name": "Mechimp",
+      "description": "Drahtiger mechanischer Imp mit kleinen freiliegenden Zahnrädern, dünnen Gliedmaßen und einfacher Leinen-Schürze.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-bc790539-87ea-436a-8408-6d9aaca81621.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Mechimp at row 1, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Drahtiger mechanischer Imp mit kleinen freiliegenden Zahnrädern, dünnen Gliedmaßen und einfacher Leinen-Schürze. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "4618a932ba23e50eb42ec4592bb21640cd29dfb9e8c6c264419b35883f95f7b6"
+    },
+    {
+      "name": "Megablimp",
+      "description": "Sehr breiter Ballon-Imp mit tief gefaltetem Bauch, kräftigeren Hörnern und schweren, kurzen Beinen.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-58585579-bcd2-4cc8-9378-8c660ebb816b.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Megablimp at row 1, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Sehr breiter Ballon-Imp mit tief gefaltetem Bauch, kräftigeren Hörnern und schweren, kurzen Beinen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "3ccec43734e52f193de493a40e412e1b67487fde1297d06e029b3161fe269d6a"
+    },
+    {
+      "name": "Megaskeletimp",
+      "description": "Massiger Skelett-Imp mit breitem Rippenkorb, großen Knochenfäusten und dicken Hörnern; ohne Blut.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-e86fe6d4-a9c2-4c56-a84f-1ca9000f5187.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Megaskeletimp at row 1, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Massiger Skelett-Imp mit breitem Rippenkorb, großen Knochenfäusten und dicken Hörnern; ohne Blut. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "81a07609212d88d0bdab3db1669f81eee13fbd7c6742e1e7ad853d00a8a04f48"
+    },
+    {
+      "name": "Meltimp",
+      "description": "Asymmetrischer Imp mit abgesunkenen Schultern und schmelzend wirkenden, stumpf goldenen Körperplatten.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-35e629c1-0bb9-41c3-a709-a394e7c5587f.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Meltimp at row 1, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Asymmetrischer Imp mit abgesunkenen Schultern und schmelzend wirkenden, stumpf goldenen Körperplatten. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "2873b172a2af55fbcc1026bb246e1cd04e2ba59a3a076c15894040eb11ead80d"
+    },
+    {
+      "name": "Mitschimp",
+      "description": "Stämmiger Affen-Imp mit mächtigen Fäusten, dichter Schulterbehaarung und breitem, entschlossenem Gesicht.",
+      "board": "01",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2e00a5a3-2af2-4990-9917-98ce26a6344e.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved long tail. The approved Mitschimp on the board has these features: Stämmiger Affen-Imp mit mächtigen Fäusten, dichter Schulterbehaarung und breitem, entschlossenem Gesicht. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2033798a-98af-415b-b071-4d9867b60238.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-01.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Mitschimp",
+        "description": "Stämmiger Affen-Imp mit mächtigen Fäusten, dichter Schulterbehaarung und breitem, entschlossenem Gesicht.",
+        "board": "01",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2033798a-98af-415b-b071-4d9867b60238.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Mitschimp. Stämmiger Affen-Imp mit mächtigen Fäusten, dichter Schulterbehaarung und breitem, entschlossenem Gesicht. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "cb2d104eb8458e5e7b6775e14d0cd0c925a7c61ee494d717ba9f85348d35c8d5"
+    },
+    {
+      "name": "Moltimp",
+      "description": "Kupferoranger Imp mit weich fließenden, metallisch wirkenden Körperkanten und schweren Tropfen an den Unterarmen.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-151e9a35-a81f-4599-bae9-abb18f5426ee.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Also remove the unapproved long devil tail. The approved Moltimp on the board has these features: Kupferoranger Imp mit weich fließenden, metallisch wirkenden Körperkanten und schweren Tropfen an den Unterarmen. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-fb8e6b52-099e-4a21-8b00-6cbcedcb3c5d.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Moltimp",
+        "description": "Kupferoranger Imp mit weich fließenden, metallisch wirkenden Körperkanten und schweren Tropfen an den Unterarmen.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-fb8e6b52-099e-4a21-8b00-6cbcedcb3c5d.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Moltimp. Kupferoranger Imp mit weich fließenden, metallisch wirkenden Körperkanten und schweren Tropfen an den Unterarmen. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "b9722f07d68f057fc3c5ac393e1bd48c8972d7b0e091f5713d53b447d7287852"
+    },
+    {
+      "name": "Mutimp",
+      "description": "Gedrungener violettgrüner Imp mit einem vergrößerten Arm, ungleichen Hörnern und einzelnen knolligen Hautplatten.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-19a48fda-cf84-4b92-8e85-b8b69a1163c8.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Mutimp at row 3, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Gedrungener violettgrüner Imp mit einem vergrößerten Arm, ungleichen Hörnern und einzelnen knolligen Hautplatten. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "bfdd60b3e5a82660217fa9af9fbea0400886739847fa5d7955f84eddf1f21c2d"
+    },
+    {
+      "name": "Neutrimp",
+      "description": "Schiefergrauer Sternmaterie-Imp mit dichtem, rundlichem Körperkern und wenigen matten Kugelknoten an den Schultern.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0c78255b-5a1a-456f-b193-ae87aee793f6.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Neutrimp at row 2, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Schiefergrauer Sternmaterie-Imp mit dichtem, rundlichem Körperkern und wenigen matten Kugelknoten an den Schultern. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "0542496066335ada61f73df5e552fba657d0816bc952c1676cb30cccdb635c7a"
+    },
+    {
+      "name": "Omnipotrimp",
+      "description": "Großer, ruhiger Boss-Imp mit breiten Schultern, kronenartig angeordneten Hornspitzen und wenigen schwebenden Kristallplatten.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-1694c27a-be5c-44b5-b1d6-e4016769830e.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Omnipotrimp at row 3, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Großer, ruhiger Boss-Imp mit breiten Schultern, kronenartig angeordneten Hornspitzen und wenigen schwebenden Kristallplatten. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "17433ba9a98210192f754227a7ae4bb1837c82290f46c2f60f45e8b2f35a08bf"
+    },
+    {
+      "name": "Poseidimp",
+      "description": "Kräftiger meergrüner Imp mit Flossenkamm, kurzem Korallen-Dreizack und breit gefächertem Schwanz.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-8c606f2a-eaa2-42bb-b1e7-3e8bcbc5c50a.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Poseidimp at row 2, column 4 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Kräftiger meergrüner Imp mit Flossenkamm, kurzem Korallen-Dreizack und breit gefächertem Schwanz. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "e57cc1f26bad59b3a6daad97cabfad450390de17ef5080fc13d04d0e9324706d"
+    },
+    {
+      "name": "Presimpt",
+      "description": "Warmbrauner Imp mit kurzen, geschenkbandartigen Stoffstreifen und einem kleinen verpackten Päckchen unter dem Arm.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-9dd2ed6c-77f1-462e-80cd-c50241e953e3.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Presimpt at row 1, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Warmbrauner Imp mit kurzen, geschenkbandartigen Stoffstreifen und einem kleinen verpackten Päckchen unter dem Arm. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "2e976d86d13a3a5264a7151c94d7108a2f31cd413af9b391d5ce2c4881a793db"
+    },
+    {
+      "name": "Prismimp",
+      "description": "Imp mit großen, klaren prismatischen Kristallplatten auf Rücken und Unterarmen; Gesicht und Ohren bleiben lesbar.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-e09df6f4-df47-4fc4-9822-1e8d028de5ad.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Prismimp at row 2, column 3 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Imp mit großen, klaren prismatischen Kristallplatten auf Rücken und Unterarmen; Gesicht und Ohren bleiben lesbar. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "54d136ce60a2555a3e76743217ac7326c48c58c56610c689caa509074e8a3650"
+    },
+    {
+      "name": "Pumpkimp",
+      "description": "Imp mit geripptem kürbisfarbenem Rumpf und kleinem Blattkragen; natürliche Hörner und lebendiges Gesicht statt Kürbislaterne.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-bcceccc4-955d-4331-b96d-3c341e504b84.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Pumpkimp at row 1, column 4 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Imp mit geripptem kürbisfarbenem Rumpf und kleinem Blattkragen; natürliche Hörner und lebendiges Gesicht statt Kürbislaterne. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "f838cb969dce021de216852b781f9cd89b8a7417990678b49908c54c5f17b145"
+    },
+    {
+      "name": "Rainbimp",
+      "description": "Perlmuttfarbener Imp mit wenigen breiten, gedämpft regenbogenfarbenen Kristallfächern an den Schultern.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-27f55f75-02ef-4e2b-955b-05bd180327df.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Rainbimp at row 2, column 4 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Perlmuttfarbener Imp mit wenigen breiten, gedämpft regenbogenfarbenen Kristallfächern an den Schultern. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "a52af6d9da937306051c7e4e61ba9160e4ef9e2add9afe7a2181323070737dae"
+    },
+    {
+      "name": "Robotrimp",
+      "description": "Breiter Eisen-Kupfer-Roboter in Imp-Gestalt mit genieteten Hörnern, Ohrenplatten und sichtbaren Gelenken.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-d963ebb4-2cca-4909-9d78-ea44477b0fe9.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Robotrimp at row 1, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Breiter Eisen-Kupfer-Roboter in Imp-Gestalt mit genieteten Hörnern, Ohrenplatten und sichtbaren Gelenken. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "977fc2ee122db457110d66c60265818f2c561c1eb3effcee5fd6763fbd36311d"
+    },
+    {
+      "name": "Shadimp",
+      "description": "Schmaler rauchgrauer Imp mit weich aufgelösten Körperrändern, spitzen Ohren und sichtbaren bernsteinfarbenen Augen.",
+      "board": "06",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0a6dfecb-14cf-4bcb-a770-c853751a5143.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Shadimp at row 2, column 1 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Schmaler rauchgrauer Imp mit weich aufgelösten Körperrändern, spitzen Ohren und sichtbaren bernsteinfarbenen Augen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-06.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "993f7d4d5d3d992a8cccc9ad24697b1b64a886bea9f46d9064914fa039a2ee01"
+    },
+    {
+      "name": "Skeletimp",
+      "description": "Schlanker knochenfarbener Imp mit sichtbarem stilisiertem Rippenkorb, gehörntem Schädel und zerrissenem Leinentuch; ohne Blut.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-2046bc1b-8a8f-4d4e-bd7e-213c396cb44a.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Skeletimp at row 2, column 5 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Schlanker knochenfarbener Imp mit sichtbarem stilisiertem Rippenkorb, gehörntem Schädel und zerrissenem Leinentuch; ohne Blut. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "01c3dc8164559a932de99787fe4a8ff4bad790f4d8890a0e0c0a89337d4b6d1d"
+    },
+    {
+      "name": "Slagimp",
+      "description": "Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-9dc2584f-80ac-48b3-8cde-f69329653002.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct. Image 2 is the user-approved concept board and is authoritative for the requested correction. This is a targeted production correction of the same named character, not a new design. Keep hand-painted warm fantasy rendering, amber eyes, imp horns and pointed ears, linen waist wrap and leather belt. Full body including horns, all hands and feet inside the square canvas with 10 percent transparent margin. TRUE transparent alpha background; no lettering, board, extra creatures, scene, floor, glow, shadows or border. Correct the BUILD, SLAG ARMOR AND GLOW to match the exact approved Slagimp at TOP ROW, FIRST COLUMN of image 2. Image 1 is incorrectly wiry with excessive bright orange lava lines. Make the same slag-imp heavy, squat and broad, with a thick hunched trunk, huge rounded porous black slag armor plates, massive armored arms and substantial feet. Most of the body is matte charcoal-black porous stone. Only a FEW thin deep seams glow VERY DIM dull burnt orange; remove the extensive bright fiery orange network and all flames/embers. Amber eyes remain clearly readable and the face fully drawn. Match the board's heavy silhouette and porous black armor closely, preserving the imp species, pointed ears, horns, linen wrap, belt and three-quarter LEFT orientation. No tail or wings.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\app\\src\\main\\assets\\game\\mobile-assets\\imp-family\\Slagimp.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen review correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Slagimp",
+        "description": "Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-e4029af7-3a2a-43ca-a6dc-da6432b737e8.png",
+        "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Also remove the unapproved long devil tail. The approved Slagimp on the board has these features: Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+        "references": [
+          "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0b716072-8562-466c-8814-8c28cbb5f6f7.png",
+          "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+        ],
+        "mode": "built-in image_gen targeted correction",
+        "transparent": true,
+        "previousProduction": {
+          "name": "Slagimp",
+          "description": "Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen.",
+          "board": "03",
+          "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0b716072-8562-466c-8814-8c28cbb5f6f7.png",
+          "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Slagimp. Dunkler Schlacken-Imp mit porösem schwarzem Panzer und nur wenigen mattglühenden Fugen. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+          "mode": "built-in image_gen",
+          "transparent": true
+        },
+        "sourceSha256": "47f84b2f50d3d1e67dabdfe15d7637effa072c0b0960d9ae4b21780cd23f6180"
+      },
+      "sourceSha256": "49b26873df972edac39faf145eb43ecaa39ab3a18bceba36d961c3afea93146e"
+    },
+    {
+      "name": "Sweltimp",
+      "description": "Kräftiger ziegelroter Hitze-Imp mit aufgeblähten Wangen und breiten, dunklen Schuppenplatten.",
+      "board": "03",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-04a7827a-66a5-4580-8748-f7038bb0f5b0.png",
+      "prompt": "Use case: precise-object-edit. Image 1 is the existing production sprite to correct; image 2 is the approved concept board. Remove ONLY the unapproved bat wings. Also remove the unapproved long devil tail. The approved Sweltimp on the board has these features: Kräftiger ziegelroter Hitze-Imp mit aufgeblähten Wangen und breiten, dunklen Schuppenplatten. Keep every other part of image 1 unchanged: head, horns, eyes, ears, face, body, arms, hands, legs, feet, pose, proportions, clothing, palette, materials and painterly rendering. Do not invent new accessories or anatomy. This is a targeted removal, not a redesign. Entire full-body figure centered within square canvas with transparent margin. True transparent alpha background. No ground, shadow, lettering, board, labels, other characters or scenery.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-f9c7bdd9-e57f-4918-a5f3-fcec9aa4c236.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-03.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Sweltimp",
+        "description": "Kräftiger ziegelroter Hitze-Imp mit aufgeblähten Wangen und breiten, dunklen Schuppenplatten.",
+        "board": "03",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-f9c7bdd9-e57f-4918-a5f3-fcec9aa4c236.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Sweltimp. Kräftiger ziegelroter Hitze-Imp mit aufgeblähten Wangen und breiten, dunklen Schuppenplatten. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "e7a92e06da68bd85260504add00a21c3c9ef06646236a8f4724c786b21864af0"
+    },
+    {
+      "name": "Terminatimp",
+      "description": "Aufrechter, kompakter Stahl-Imp mit schmalen bernsteinfarbenen Augenschlitzen und glatten, strengen Panzerformen.",
+      "board": "04",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-17a7c0c4-01d2-464d-a18e-4caf6fb19ed1.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Terminatimp at row 1, column 4 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Aufrechter, kompakter Stahl-Imp mit schmalen bernsteinfarbenen Augenschlitzen und glatten, strengen Panzerformen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-04.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "6538ab9d806a0c0a897b9293779ed94b6a0e57d46fb89279c1a12e0503d31667"
+    },
+    {
+      "name": "Voidsnimp",
+      "description": "Schlanker dunkelvioletter Schlangen-Imp mit hellen Schuppenrissen und sichelförmig eingerolltem Schwanz.",
+      "board": "02",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-358c14bf-c4c8-4727-bf14-799d0fe903d4.png",
+      "prompt": "Use case: precise-object-edit. Reference image 1 is the production sprite to correct; image 2 is the approved board for identity. Remove ONLY the unapproved bat wings from Voidsnimp. Keep the approved curled snake tail. Keep its head, horns, pointed ears, amber eyes, face, body, posture, colors, costume, hands, feet, painterly rendering and all other features unchanged. Keep the entire full body comfortably within the square canvas with visible transparent margin. No new props or limbs. True transparent alpha background, no floor shadow, no text, labels or other creatures. This is a targeted correction, not a new concept.",
+      "references": [
+        "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0db935ed-4ca3-461d-939c-1b68197d951f.png",
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-02.png"
+      ],
+      "mode": "built-in image_gen targeted correction",
+      "transparent": true,
+      "previousProduction": {
+        "name": "Voidsnimp",
+        "description": "Schlanker dunkelvioletter Schlangen-Imp mit hellen Schuppenrissen und sichelförmig eingerolltem Schwanz.",
+        "board": "02",
+        "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-0db935ed-4ca3-461d-939c-1b68197d951f.png",
+        "prompt": "Use case: stylized-concept. Create ONE production game sprite, not a presentation board. Hand-painted detailed warm fantasy creature illustration matching the approved designs: broad goblin imp face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, three-fingered hands, three-toed feet, rough linen waist-wrap and leather belt. Three-quarter view facing LEFT. Entire full body including all horns, ears, wings, tail, feet, props comfortably inside a square canvas, with 8 percent transparent margin on EVERY side. Real transparent alpha background, no ground, no floor shadow, no text, no border, no watermark, no labels, no UI, no extra creatures. Strong readable silhouette for a small mobile combat portrait. Painterly matte materials, fine warm outlines, dimensional shading, coherent anatomy; no chibi, glossy plastic, photorealism or gore. The requested character is: Voidsnimp. Schlanker dunkelvioletter Schlangen-Imp mit hellen Schuppenrissen und sichelförmig eingerolltem Schwanz. Match the approved concept: Preserve the imp species and described proportions. Repaint individually at full resolution; do not create a board or multiple subjects.",
+        "mode": "built-in image_gen",
+        "transparent": true
+      },
+      "sourceSha256": "54510bc1a846869b86b60517858b438491e932e071aa97b56807f8e55f52150f"
+    },
+    {
+      "name": "Warden",
+      "description": "Breitschultriger Wächter-Imp mit abgetragenem Lederschurz, kleinem Schlüsselbund und massiven Unterarmen.",
+      "board": "05",
+      "source": "<home>\\.codex\\generated_images\\01a16f35-6e8a-79d2-8a2f-fb70917d54d3\\exec-ce818814-3dc4-4607-bb78-51fd736ea9fa.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final production mobile game sprite. Reference image 1 is the exact approved CHARACTER IDENTITY, not a layout to reproduce. Repaint only Warden at row 2, column 2 of the approved board as one freshly drawn isolated full-body transparent game sprite. Keep its approved anatomy, body mass, proportions, face, colors, costume and accessories. Character brief: Breitschultriger Wächter-Imp mit abgetragenem Lederschurz, kleinem Schlüsselbund und massiven Unterarmen. Preserve the imp species: broad goblin face, low expressive brows, amber eyes, short crooked horns, pointed ears, bipedal stance, rough linen waist wrap and leather belt. Same detailed warm hand-painted fantasy rendering as the reference. Full body, all horn tips, toes, tail and specified props fully visible; three-quarter view facing LEFT; 10 percent empty transparent margin on all sides. Repaint at high individual resolution, never crop the presentation board. Do not invent extra wings, tails, weapons or accessories absent from this specific approved character. No board, lettering, text, labels, checkerboard, scenery, floor, ground shadow, glow, frame or additional characters. True transparent alpha background required. No gore, glossy plastic or photorealism.",
+      "references": [
+        "<home>\\.codex\\worktrees\\remaining-enemy-art\\Trimps Mobile\\docs\\design\\enemy-art-2026-10-24\\tafel-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "transparent": true,
+      "sourceSha256": "4f79a4dbed66c19b41a90ed1a3b1a9c7828660f1bceb14e8da02346996caa923"
+    }
+  ]
+}

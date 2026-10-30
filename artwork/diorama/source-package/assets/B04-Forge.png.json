@@ -1,0 +1,23 @@
+{
+  "id": "B04",
+  "key": "Forge",
+  "name": "Forge",
+  "group": "buildings",
+  "file": "assets/B04-Forge.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 1158,
+    "top": 0,
+    "width": 378,
+    "height": 337
+  },
+  "nativeSize": {
+    "width": 378,
+    "height": 337
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "d626407a33608cb6ad5f4ce5fa4bff64652d064e9d2462afb377f6864c5beede",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

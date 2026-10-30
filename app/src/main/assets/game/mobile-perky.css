@@ -1,0 +1,86 @@
+/* Approved B workbench; Classic retains the Feldstation materials. */
+#mobile-portal-perks #mobile-perky-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:60px;margin:0 0 12px;padding:14px 16px;background:var(--accent)!important;color:var(--onaccent)!important;border:1px solid var(--accent);border-radius:var(--radius);font:600 1.1rem var(--font-data);text-align:left;white-space:normal;}
+#mobile-perky-entry::after{content:'→';font-size:1.4rem;}
+html #portalWrapper[data-perky-open][data-portal-view]>:not(#mobile-perky){display:none!important;}
+#portalWrapper #mobile-perky{position:fixed;inset:0;z-index:1;display:flex;flex-direction:column;box-sizing:border-box;margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);overflow:hidden;}
+#portalWrapper #mobile-perky[hidden]{display:none;}
+#mobile-perky .pk-body{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:8px 12px 16px;}
+#mobile-perky :is(.pk-header,.pk-footer,.pk-status){flex:none;}
+#mobile-perky .pk-nav{display:flex;justify-content:space-between;gap:12px;}
+#mobile-perky :focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+.pk-header{border-bottom:1px solid var(--line);padding:8px 16px 12px;}
+#mobile-perky .pk-header h1{font:600 1.2rem var(--font-data);margin:8px 0 0;}
+#mobile-perky button{min-height:48px;min-width:48px;font:inherit;white-space:normal;}
+#mobile-perky .pk-header button{background:transparent;border:0;padding:4px;font-size:.8rem;}
+.pk-budget{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.8rem;}
+.pk-budget strong{font:600 1.1rem var(--font-data);text-align:right;overflow-wrap:anywhere;}
+.pk-loaded{color:var(--accent);font-size:.875rem;padding:8px 0;}
+#mobile-perky h2{font:600 1.1rem var(--font-data);margin:8px 0;}
+.pk-goal{background:var(--selected);border-radius:5px;padding:12px;}
+.pk-goal>p{font-size:.85rem;color:var(--muted);margin:6px 0 14px;}
+.pk-field{display:block;font-size:.8rem;color:var(--muted);margin:10px 0;}
+#mobile-perky input,#mobile-perky textarea,#mobile-perky select{display:block;width:100%;max-width:100%;min-width:0;min-height:48px;box-sizing:border-box;padding:8px;margin-top:5px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--ink);font:1rem var(--font-data);}
+#mobile-perky textarea{min-height:80px;resize:vertical;}
+.pk-stepper{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;align-items:center;gap:4px;}
+#mobile-perky .pk-stepper input{text-align:center;font-size:1.4rem;font-weight:600;}
+.pk-stepper button{border:0;background:transparent;font-size:1.4rem!important;}
+.pk-weights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:12px 0;}
+.pk-weights>div{background:var(--wash);padding:8px 2px;text-align:center;}
+.pk-weights span{display:block;font-size:.7rem;}
+.pk-weights strong{display:block;font:600 1.2rem var(--font-data);margin-top:5px;}
+.pk-detail{border-bottom:1px solid var(--line);margin:10px 0;}
+#mobile-perky summary{min-height:48px;padding:12px 0;font-size:.875rem;}
+.pk-input-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.pk-help{font-size:.75rem;line-height:1.5;color:var(--muted);margin:8px 0;}
+.pk-mode{padding:18px 0 8px;font-size:.875rem;}
+.pk-mode p{margin:8px 0;}
+.pk-footer{padding:10px 12px max(12px,env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line);max-height:45%;overflow:auto;}
+.pk-footer>button{display:block;width:100%;margin:6px 0;}
+#mobile-perky .pk-primary{background:var(--accent);color:var(--onaccent);border:1px solid var(--accent);padding:12px;}
+#mobile-perky button:disabled{opacity:.65;}
+.pk-footer>.pk-help{text-align:center;}
+.pk-summary{padding:14px 0;border-bottom:1px solid var(--line);}
+.pk-summary>p{font-size:.85rem;}
+.pk-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pk-facts span{display:block;color:var(--muted);font-size:.75rem;}
+.pk-facts strong{display:block;font:600 1.3rem var(--font-data);margin-top:5px;overflow-wrap:anywhere;}
+.pk-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.8rem;}
+.pk-table th,.pk-table td{text-align:right;padding:12px 3px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;font-variant-numeric:tabular-nums;}
+.pk-table th:first-child,.pk-table td:first-child{width:40%;text-align:left;}
+.pk-table th{font-weight:400;color:var(--muted);}
+.pk-table td:not(:first-child){font-family:var(--font-data);font-weight:600;}
+.pk-increase{color:var(--accent);}.pk-decrease{color:var(--danger);}
+.pk-warning{background:var(--bonus);color:var(--bonus-ink);padding:10px;font-size:.85rem;line-height:1.5;}
+.pk-status{padding:10px 0;color:var(--danger);font-size:.875rem;overflow-wrap:anywhere;}
+
+/* Cover the entire viewport, including the former portal margins and action bar. */
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky{
+  background:#2c1e14 url("mobile-assets/diorama/P01-dark-wood.webp") center/260px;
+  --ink:#2d3025;--muted:#5b4a33;--accent:#205958;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-header{
+  margin:0;padding:8px 20px 16px!important;
+  border-image-width:12px!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-header h1{
+  font:600 1.65rem/1.2 "B2 Fraunces",Georgia,serif;margin:8px 0 0;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-header button{
+  background:transparent!important;border:0!important;border-image:none!important;color:#2d3025!important;padding:4px!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-allocation{
+  margin:8px 0;color:#2d3025;background:transparent;border:1px solid transparent;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px stretch;padding:14px;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky :is(.pk-allocation,.pk-summary,.pk-goal) h2{
+  color:#2d3025!important;font:600 1.35rem/1.25 "B2 Fraunces",Georgia,serif;
+}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky :is(.pk-budget,.pk-goal,.pk-summary,.pk-mode,.pk-body>.pk-detail){padding:16px!important;}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-loaded{border:0!important;font-weight:400!important;}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky .pk-footer>.pk-help{background:#f6e7c6;color:#503c25!important;text-shadow:none!important;padding:4px 6px;}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky #pk-discard{border:0!important;border-image:none!important;background:transparent!important;text-decoration:underline;}
+#portalWrapper #mobile-perky #mobile-portal-step-next{width:100%;min-height:48px;white-space:normal;}
+html[data-graphics="diorama"] #portalWrapper[data-perky-open] #mobile-perky #mobile-portal-step-next{
+  color:#2a1606!important;background:transparent!important;border:1px solid transparent!important;border-radius:0!important;box-shadow:none!important;font-weight:700;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important;
+}

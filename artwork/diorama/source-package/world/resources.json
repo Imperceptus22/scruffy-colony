@@ -1,0 +1,27 @@
+{
+  "atlas": "resources",
+  "approved": false,
+  "grid": {
+    "columns": 3,
+    "rows": 3
+  },
+  "ordered_item_ids": [
+    "Food",
+    "Wood",
+    "Metal",
+    "Science",
+    "Fragments",
+    "Gems",
+    "Helium",
+    "Radon",
+    "Bones"
+  ],
+  "empty_slots": [],
+  "reference_roles": [
+    "combat-map-concepts-2026-10-24/B-diorama.png: lighting/material reference",
+    "diorama-app-concepts-2026-10-24/01-resources.png: Scruffy Colony resource style reference",
+    "diorama-app-concepts-2026-10-24/04-map-workshop.png: map diorama UI style reference"
+  ],
+  "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-9c3556d6-0fc3-4fb4-abfc-f6f3d2305668.png",
+  "prompt_file": "resources.prompt.txt"
+}

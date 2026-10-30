@@ -1,0 +1,23 @@
+{
+  "id": "S06",
+  "key": "portal",
+  "name": "Portal",
+  "group": "scenes",
+  "file": "assets/S06-portal.png",
+  "approved": false,
+  "source": "special/02-systems.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/systems.edit.prompt.txt",
+  "sha256": "b0d2ec15e07bdf423e93cd25bcaaab0ac407c27f3dec40e2eafbf3f9971745ad",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

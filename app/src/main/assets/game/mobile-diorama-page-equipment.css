@@ -1,0 +1,184 @@
+/* Diorama page layer Ausrüstung (equipment). Loads after the shared Diorama layers and belongs to the equipment page round.
+   Every rule starts with html[data-graphics="diorama"] body[data-diorama-page="equipment"],
+   so it touches no other page (mobile-diorama.js mirrors the page into body[data-diorama-page]). Shared building
+   blocks (purchase tile, chip, info, amount tabs, colony scene head, header, navigation, dialogs, tokens) stay in
+   mobile-diorama.css, mobile-diorama-night.css and mobile-diorama-header.css. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  grid-template-areas:"art name name action" "art values values action" "art price price action" "art note note action";
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-item-art {
+  padding:3px;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-material small {
+  color:var(--muted);
+  font-size:.75rem;
+  white-space:nowrap;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-tile-values {
+  grid-area:values;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:0 8px;
+  min-width:0;
+  padding:0;
+  overflow:visible;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-tile-owned {
+  min-width:0;
+  gap:2px 4px;
+  color:var(--muted)!important;
+  font:500 .8rem/1.2 var(--font-data);
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-item-effect {
+  margin:0;
+  font:500 .8rem/1.2 var(--font-data);
+}
+/* Narrow or enlarged text: name and values get the full width; the action moves next to cost and note. */
+@container (max-width:20rem) {
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+    grid-template-areas:"art name name" "art values values" "art price action" "art note action";
+  }
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile[data-equipment-stat="health"],
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile[data-equipment-stat="attack"] {
+  grid-column:1;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile>.thing {
+  min-width:0;
+}
+@media (min-width:620px) {
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile[data-equipment-stat="health"] {
+    grid-column:1;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile[data-equipment-stat="attack"] {
+    grid-column:2;
+  }
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-material {
+  display:flex!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere>.mobile-inventory-tile {
+  grid-column:auto!important;
+}
+/* Page round 1 (user feedback 25.10.2026). The shared night tile sets most of these with !important, so the page
+   overrides need it too (except display: the tile keeps the shared grid, so no original display lock is overridden).
+   Tile: the name takes the full top row beside the Info button; the larger miniature sits beside level and effect;
+   cost and the small purchase chip share the full last row. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  grid-template-columns:52px minmax(0,1fr) auto!important;
+  grid-template-rows:auto auto auto!important;
+  grid-template-areas:"name name name" "art values values" "price price action"!important;
+  align-items:center;
+  row-gap:3px!important;
+  padding:6px 8px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere .mobile-inventory-tile .mobile-tile-name {
+  min-height:0;
+  padding-right:36px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-item-art {
+  width:52px!important;
+  height:52px!important;
+  padding:2px;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-tile-values {
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-tile-price {
+  margin-top:0;
+}
+/* The tier numeral reads as a word instead of a stray stroke after the level. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere .mobile-inventory-tile [id$="Numeral"]:not(:empty)::before {
+  content:"Tier ";
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere .mobile-inventory-tile [id$="Numeral"] {
+  margin-left:2px;
+  white-space:nowrap;
+}
+/* Cost: the share of the current stock is noise next to the absolute price; the real resource art names the material. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-material small {
+  display:none;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-material {
+  gap:4px;
+  font-size:.9rem;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-material-icon {
+  width:18px;
+  height:18px;
+  mask:none;
+  background:url("mobile-assets/diorama/R06-Gems.webp") center/contain no-repeat;
+}
+/* Recommended purchase: only the shared gold outline marks it; its chip looks like every other chip. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere .efficientYes .diorama-action-label:not([hidden]) {
+  background:#13242a!important;
+  border-color:#8a6d44!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere .efficientYes.thingColorCanNotAfford .diorama-action-label:not([hidden]) {
+  background:transparent!important;
+  border-color:#3b4a4c!important;
+}
+/* Narrow tiles (360 px, large system text): level, tier and effect take the full width under the name, so large
+   late-game values never break into four lines; the miniature sits beside cost and chip, which stack so a long
+   cost never runs into the chip. */
+@container (max-width:11.5rem) {
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+    grid-template-columns:48px minmax(0,1fr)!important;
+    grid-template-rows:auto auto auto auto!important;
+    grid-template-areas:"name name" "values values" "art price" "art action"!important;
+    column-gap:6px!important;
+  }
+  /* The longest name (Shoulderguards) fits one line beside the Info button instead of breaking mid-word.
+     Android text zoom scales the font after cqi, so the size divides by --text-zoom like the header. */
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere #equipmentHere .mobile-inventory-tile .mobile-tile-name {
+    padding-right:30px!important;
+    font-size:min(.95rem,calc(10cqi / var(--text-zoom,1)))!important;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .mobile-item-art {
+    width:48px!important;
+    height:48px!important;
+  }
+  html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere .diorama-action-label:not([hidden]) {
+    justify-self:end;
+    margin-top:0!important;
+    padding:0 8px!important;
+  }
+}
+/* The same narrow tile for large system text on the device: Android text zoom leaves the rem-based container query
+   above untouched, so mobile-ui.js marks html[data-text-zoom="large"] from 115 % on (the :where() keeps the
+   specificity of the rules above). */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere:where(:root[data-text-zoom="large"] *) #equipmentHere>.mobile-inventory-tile>.thing {
+  grid-template-columns:48px minmax(0,1fr)!important;
+  grid-template-rows:auto auto auto auto!important;
+  grid-template-areas:"name name" "values values" "art price" "art action"!important;
+  column-gap:6px!important;
+}
+/* The longest name (Shoulderguards) fits one line beside the Info button instead of breaking mid-word. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #buyHere:where(:root[data-text-zoom="large"] *) #equipmentHere .mobile-inventory-tile .mobile-tile-name {
+  padding-right:30px!important;
+  font-size:min(.95rem,calc(10cqi / var(--text-zoom,1)))!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere:where(:root[data-text-zoom="large"] *) .mobile-item-art {
+  width:48px!important;
+  height:48px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #equipmentHere:where(:root[data-text-zoom="large"] *) .diorama-action-label:not([hidden]) {
+  justify-self:end;
+  margin-top:0!important;
+  padding:0 8px!important;
+}
+/* Buy best (V-160): two small outlined helpers in the head beside the title. The ID rules outrank the shared bronze
+   button rule of mobile-diorama-night.css, which also uses !important. */
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #mobile-buy-best button {
+  min-width:44px!important; min-height:44px!important; padding:0 10px!important; gap:5px!important;
+  background:transparent!important; border:1px solid var(--n-line)!important; border-radius:4px!important; box-shadow:none!important;
+  color:var(--n-ivory)!important; font:500 .8rem/1 var(--font-body)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #mobile-buy-best button span { background:var(--n-gold)!important; }
+html[data-graphics="diorama"] body[data-diorama-page="equipment"] #mobile-buy-best button:disabled { opacity:.5; color:var(--n-muted)!important; }

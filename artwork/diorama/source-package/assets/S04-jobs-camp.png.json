@@ -1,0 +1,23 @@
+{
+  "id": "S04",
+  "key": "jobs-camp",
+  "name": "Arbeitslager",
+  "group": "scenes",
+  "file": "assets/S04-jobs-camp.png",
+  "approved": false,
+  "source": "special/01-common-scenes.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/common-scenes.prompt.txt",
+  "sha256": "add11215d0e2989c42296d2e60830f7fbc5fe77ade700a947a4162a1095cbc0c",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

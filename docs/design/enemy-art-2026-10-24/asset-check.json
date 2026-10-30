@@ -1,0 +1,2427 @@
+{
+  "count": 59,
+  "newCount": 58,
+  "missing": [],
+  "method": "Pillow: RGBA, alpha extrema, raw bounds, alpha>2 bounds, visible alpha>16 bounds and edge max alpha<=16; byte-identical original-output SHA-256; original images never modified",
+  "assets": [
+    {
+      "name": "Beetlimp",
+      "sha256": "e39326f5a98197a665f107c0b4c43c3e61833534a216010e769e1174dab67e72",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        31,
+        1238,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        92,
+        55,
+        1166,
+        1214
+      ],
+      "visibleBounds": [
+        94,
+        57,
+        1164,
+        1212
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        94,
+        57,
+        90,
+        42
+      ],
+      "bytes": 1779638,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Mantimp",
+      "sha256": "a047cdc1098d434c3f776d5063ae02417fe9670de02873654ee67529f61b93a6",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        35,
+        1240,
+        1236
+      ],
+      "alphaAbove2Bounds": [
+        146,
+        38,
+        1139,
+        1230
+      ],
+      "visibleBounds": [
+        148,
+        40,
+        1137,
+        1228
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        148,
+        40,
+        117,
+        26
+      ],
+      "bytes": 1130981,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Butterflimp",
+      "sha256": "a8aeb3f5edf714c2b4c0f37d6dfa4727b0a1bb112e1d3567dc83161dc29ce345",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        18,
+        1236,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        175,
+        21,
+        1188,
+        1233
+      ],
+      "visibleBounds": [
+        176,
+        23,
+        1186,
+        1231
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        176,
+        23,
+        68,
+        23
+      ],
+      "bytes": 1484755,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Shrimp",
+      "sha256": "18e776137f1b9ecdc66a777e176d983d88e44162db87dfce45e8067c2fda0280",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        19,
+        1238,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        154,
+        31,
+        1174,
+        1225
+      ],
+      "visibleBounds": [
+        154,
+        33,
+        1171,
+        1223
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        154,
+        33,
+        83,
+        31
+      ],
+      "bytes": 1348513,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Duckimp",
+      "sha256": "bcfe83416e59ccca9cb5b182dc47b9a9794940d6b7b5a8ae147677011c2e2866",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1253,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        179,
+        37,
+        1136,
+        1231
+      ],
+      "visibleBounds": [
+        179,
+        39,
+        1134,
+        1229
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        179,
+        39,
+        120,
+        25
+      ],
+      "bytes": 1543163,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Turkimp",
+      "sha256": "eb1a5bdfbddb89c8417cec378931a2872047016d03205ca67d1bde0fc2890183",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1240,
+        1246
+      ],
+      "alphaAbove2Bounds": [
+        115,
+        24,
+        1237,
+        1245
+      ],
+      "visibleBounds": [
+        117,
+        26,
+        1235,
+        1243
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        117,
+        26,
+        19,
+        11
+      ],
+      "bytes": 2324273,
+      "sourceOutputUnchanged": true,
+      "preserved": true
+    },
+    {
+      "name": "Chimp",
+      "sha256": "1601f501c5ec8fbb14e3624a34e16d66b113e79a8fcd2615aa116f5f5eea5599",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        17,
+        19,
+        1240,
+        1238
+      ],
+      "alphaAbove2Bounds": [
+        184,
+        23,
+        1092,
+        1230
+      ],
+      "visibleBounds": [
+        186,
+        25,
+        1092,
+        1228
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        186,
+        25,
+        162,
+        26
+      ],
+      "bytes": 1400783,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Mitschimp",
+      "sha256": "cb2d104eb8458e5e7b6775e14d0cd0c925a7c61ee494d717ba9f85348d35c8d5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        31,
+        1224,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        64,
+        38,
+        1105,
+        1215
+      ],
+      "visibleBounds": [
+        66,
+        40,
+        1103,
+        1213
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        66,
+        40,
+        151,
+        41
+      ],
+      "bytes": 1646835,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Slosnimp",
+      "sha256": "1bfeea8ba387d1c5872c1b7a4ba0da6f9f0503150028a228f2702b0713c18e7d",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        19,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        70,
+        47,
+        1213,
+        1213
+      ],
+      "visibleBounds": [
+        72,
+        49,
+        1211,
+        1211
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        72,
+        49,
+        43,
+        43
+      ],
+      "bytes": 1695989,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Frosnimp",
+      "sha256": "357801c32d352b05917edce5d18ad2df0ff6761797b04319501d4757c25aebd1",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        23,
+        18,
+        1244,
+        1222
+      ],
+      "alphaAbove2Bounds": [
+        205,
+        59,
+        1179,
+        1216
+      ],
+      "visibleBounds": [
+        207,
+        61,
+        1177,
+        1214
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        207,
+        61,
+        77,
+        40
+      ],
+      "bytes": 1491563,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Frimp",
+      "sha256": "3e9c2757a8fff7bb60d482bb92c6a4cdb5f26477a635f6afd1f5d27b40e8c6ca",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        17,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        184,
+        25,
+        1132,
+        1212
+      ],
+      "visibleBounds": [
+        185,
+        27,
+        1130,
+        1210
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        185,
+        27,
+        124,
+        44
+      ],
+      "bytes": 1454400,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Entimp",
+      "sha256": "f8bd61b380a06c6dec4c7a8ef1e77b48f023c2fc41ba87ec6a57388ee1e2e86b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        19,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        145,
+        44,
+        1122,
+        1213
+      ],
+      "visibleBounds": [
+        147,
+        46,
+        1120,
+        1211
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        147,
+        46,
+        134,
+        43
+      ],
+      "bytes": 1803221,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Mountimp",
+      "sha256": "0fa7aaa0023275fbdba67a2b5afe6be6d932c55288e7fa25505743828a2606d8",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        35,
+        1238,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        112,
+        39,
+        1160,
+        1208
+      ],
+      "visibleBounds": [
+        114,
+        41,
+        1158,
+        1206
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        114,
+        41,
+        96,
+        48
+      ],
+      "bytes": 1887401,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Gravelimp",
+      "sha256": "28b4b47b7367fcef964af8ee2d49e987e78846a5928ff68604e9452146c3c5ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        25,
+        1232,
+        1224
+      ],
+      "alphaAbove2Bounds": [
+        138,
+        51,
+        1033,
+        1221
+      ],
+      "visibleBounds": [
+        140,
+        53,
+        1031,
+        1219
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        140,
+        53,
+        223,
+        35
+      ],
+      "bytes": 1542119,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Brickimp",
+      "sha256": "8d41a77124931af9ca2d22caea7b974ab3404e4f6174789369a2f160d6927571",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        28,
+        1220,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        41,
+        28,
+        1094,
+        1246
+      ],
+      "visibleBounds": [
+        43,
+        30,
+        1094,
+        1245
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        43,
+        30,
+        160,
+        9
+      ],
+      "bytes": 1612092,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Golimp",
+      "sha256": "2b675a8258a3506a74b484c39b3f4127e41075782c84562d6950ba230fd228f7",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        4,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        18,
+        19,
+        1238,
+        1242
+      ],
+      "visibleBounds": [
+        20,
+        20,
+        1237,
+        1240
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        20,
+        20,
+        17,
+        14
+      ],
+      "bytes": 2471443,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Gnomimp",
+      "sha256": "c04efe60e73eab60eaf82b7c09703c0a79315f1884e9ca47226c8c8bbf79b954",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        13,
+        1240,
+        1230
+      ],
+      "alphaAbove2Bounds": [
+        139,
+        37,
+        977,
+        1221
+      ],
+      "visibleBounds": [
+        141,
+        39,
+        975,
+        1219
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        141,
+        39,
+        279,
+        35
+      ],
+      "bytes": 1364543,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Grimp",
+      "sha256": "12fdab9af9f5f2e4649a499572055389c8d72a89987a6eb44f95a298db13513c",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        11,
+        1224,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        107,
+        59,
+        1222,
+        1210
+      ],
+      "visibleBounds": [
+        110,
+        61,
+        1220,
+        1208
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        110,
+        61,
+        34,
+        46
+      ],
+      "bytes": 1693044,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Nooimp",
+      "sha256": "4de901ff9ad70237a2ead1e62f93e5f6489cd7b2d66d04e9bff88706669a3287",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1242,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        208,
+        7,
+        1156,
+        1240
+      ],
+      "visibleBounds": [
+        210,
+        10,
+        1154,
+        1239
+      ],
+      "edgeMaxAlpha": 2,
+      "transparentMargins": [
+        210,
+        10,
+        100,
+        15
+      ],
+      "bytes": 1605719,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Voidsnimp",
+      "sha256": "54510bc1a846869b86b60517858b438491e932e071aa97b56807f8e55f52150f",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        82,
+        30,
+        1220,
+        1230
+      ],
+      "alphaAbove2Bounds": [
+        84,
+        30,
+        1214,
+        1230
+      ],
+      "visibleBounds": [
+        86,
+        32,
+        1212,
+        1228
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        86,
+        32,
+        42,
+        26
+      ],
+      "bytes": 1466192,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Slagimp",
+      "sha256": "49b26873df972edac39faf145eb43ecaa39ab3a18bceba36d961c3afea93146e",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1234,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        45,
+        0,
+        1203,
+        1254
+      ],
+      "visibleBounds": [
+        47,
+        7,
+        1201,
+        1252
+      ],
+      "edgeMaxAlpha": 6,
+      "transparentMargins": [
+        47,
+        7,
+        53,
+        2
+      ],
+      "bytes": 2491330,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Moltimp",
+      "sha256": "b9722f07d68f057fc3c5ac393e1bd48c8972d7b0e091f5713d53b447d7287852",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        17,
+        1248,
+        1232
+      ],
+      "alphaAbove2Bounds": [
+        82,
+        20,
+        1046,
+        1230
+      ],
+      "visibleBounds": [
+        84,
+        24,
+        1045,
+        1228
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        84,
+        24,
+        209,
+        26
+      ],
+      "bytes": 1305898,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Lavimp",
+      "sha256": "9dc0bd44e9b83ab1251e64423c000615707c6c6c5b8cf97739a2b74a10de5ad5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        37,
+        56,
+        1050,
+        1225
+      ],
+      "visibleBounds": [
+        39,
+        59,
+        1050,
+        1223
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        39,
+        59,
+        204,
+        31
+      ],
+      "bytes": 1578820,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Flowimp",
+      "sha256": "c06134fb005d1e6b0d47b2e88846a4cca94cb6f49ef2b27c239974fcb1a111b6",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        19,
+        1228,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        140,
+        20,
+        1226,
+        1238
+      ],
+      "visibleBounds": [
+        142,
+        22,
+        1224,
+        1237
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        142,
+        22,
+        30,
+        17
+      ],
+      "bytes": 1129325,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Meltimp",
+      "sha256": "2873b172a2af55fbcc1026bb246e1cd04e2ba59a3a076c15894040eb11ead80d",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        17,
+        1364,
+        1145
+      ],
+      "alphaAbove2Bounds": [
+        242,
+        25,
+        1189,
+        1102
+      ],
+      "visibleBounds": [
+        244,
+        27,
+        1188,
+        1100
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        244,
+        27,
+        186,
+        45
+      ],
+      "bytes": 1645944,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Sweltimp",
+      "sha256": "e7a92e06da68bd85260504add00a21c3c9ef06646236a8f4724c786b21864af0",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        43,
+        31,
+        1224,
+        1240
+      ],
+      "alphaAbove2Bounds": [
+        93,
+        31,
+        1157,
+        1240
+      ],
+      "visibleBounds": [
+        95,
+        33,
+        1155,
+        1238
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        95,
+        33,
+        99,
+        16
+      ],
+      "bytes": 1595226,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Freezo",
+      "sha256": "7f59445ad83c44e21460d6de521e2421701299ff087109cf289cef5343b3e927",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        15,
+        1234,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        139,
+        52,
+        1003,
+        1224
+      ],
+      "visibleBounds": [
+        141,
+        54,
+        1001,
+        1222
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        141,
+        54,
+        253,
+        32
+      ],
+      "bytes": 1475445,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Prismimp",
+      "sha256": "54d136ce60a2555a3e76743217ac7326c48c58c56610c689caa509074e8a3650",
+      "size": [
+        1240,
+        1268
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        12,
+        1202,
+        1268
+      ],
+      "alphaAbove2Bounds": [
+        96,
+        14,
+        1185,
+        1251
+      ],
+      "visibleBounds": [
+        98,
+        14,
+        1182,
+        1250
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        98,
+        14,
+        58,
+        18
+      ],
+      "bytes": 2268348,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Rainbimp",
+      "sha256": "a52af6d9da937306051c7e4e61ba9160e4ef9e2add9afe7a2181323070737dae",
+      "size": [
+        1320,
+        1192
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        13,
+        1264,
+        1192
+      ],
+      "alphaAbove2Bounds": [
+        153,
+        26,
+        1193,
+        1181
+      ],
+      "visibleBounds": [
+        154,
+        28,
+        1192,
+        1179
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        154,
+        28,
+        128,
+        13
+      ],
+      "bytes": 2022871,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Lightimp",
+      "sha256": "1319ef94d85dce5a95d8cabb28271aa721cccc1f9b3586fcb8f554b4b20ed8ee",
+      "size": [
+        1223,
+        1286
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        17,
+        1209,
+        1286
+      ],
+      "alphaAbove2Bounds": [
+        128,
+        18,
+        1136,
+        1261
+      ],
+      "visibleBounds": [
+        129,
+        20,
+        1133,
+        1259
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        129,
+        20,
+        90,
+        27
+      ],
+      "bytes": 1850830,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Robotrimp",
+      "sha256": "977fc2ee122db457110d66c60265818f2c561c1eb3effcee5fd6763fbd36311d",
+      "size": [
+        1309,
+        1201
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1309,
+        1201
+      ],
+      "alphaAbove2Bounds": [
+        0,
+        0,
+        1309,
+        1201
+      ],
+      "visibleBounds": [
+        151,
+        26,
+        1146,
+        1162
+      ],
+      "edgeMaxAlpha": 8,
+      "transparentMargins": [
+        151,
+        26,
+        163,
+        39
+      ],
+      "bytes": 2313748,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Mechimp",
+      "sha256": "4618a932ba23e50eb42ec4592bb21640cd29dfb9e8c6c264419b35883f95f7b6",
+      "size": [
+        1213,
+        1296
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        25,
+        14,
+        1199,
+        1296
+      ],
+      "alphaAbove2Bounds": [
+        144,
+        16,
+        1130,
+        1285
+      ],
+      "visibleBounds": [
+        146,
+        16,
+        1128,
+        1285
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        146,
+        16,
+        85,
+        11
+      ],
+      "bytes": 1719229,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Destructimp",
+      "sha256": "ff9537bb582298510654b436ab7d4b422233fc647ea7b7c374cc3a9d41431091",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        31,
+        1338,
+        1111
+      ],
+      "alphaAbove2Bounds": [
+        172,
+        45,
+        1239,
+        1105
+      ],
+      "visibleBounds": [
+        174,
+        47,
+        1237,
+        1102
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        174,
+        47,
+        137,
+        43
+      ],
+      "bytes": 1990496,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Terminatimp",
+      "sha256": "6538ab9d806a0c0a897b9293779ed94b6a0e57d46fb89279c1a12e0503d31667",
+      "size": [
+        1208,
+        1302
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        35,
+        1207,
+        1302
+      ],
+      "alphaAbove2Bounds": [
+        181,
+        56,
+        1055,
+        1268
+      ],
+      "visibleBounds": [
+        183,
+        58,
+        1053,
+        1266
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        183,
+        58,
+        155,
+        36
+      ],
+      "bytes": 1710959,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Autoimp",
+      "sha256": "680aa7faa5484bd7071f5f1d38c810d03ebc0403a30950e30d925325d3534b93",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        32,
+        1354,
+        1145
+      ],
+      "alphaAbove2Bounds": [
+        226,
+        32,
+        1194,
+        1119
+      ],
+      "visibleBounds": [
+        228,
+        34,
+        1192,
+        1117
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        228,
+        34,
+        182,
+        28
+      ],
+      "bytes": 1785374,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Artimp",
+      "sha256": "64c83dd0bceee0f17812e8f38f1d08d5c345d95f2a52378224671386d14aefb4",
+      "size": [
+        1230,
+        1278
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        49,
+        19,
+        1190,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        110,
+        35,
+        1188,
+        1253
+      ],
+      "visibleBounds": [
+        112,
+        37,
+        1186,
+        1251
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        112,
+        37,
+        44,
+        27
+      ],
+      "bytes": 2088074,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Neutrimp",
+      "sha256": "0542496066335ada61f73df5e552fba657d0816bc952c1676cb30cccdb635c7a",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        23,
+        20,
+        1298,
+        1175
+      ],
+      "alphaAbove2Bounds": [
+        199,
+        44,
+        1140,
+        1174
+      ],
+      "visibleBounds": [
+        200,
+        46,
+        1138,
+        1172
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        200,
+        46,
+        174,
+        27
+      ],
+      "bytes": 1839822,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Fusimp",
+      "sha256": "78311e01d5f7ebb4d9dc3d92192f00a1bcf6e5d4975595e886dd716b1b4dc75f",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        21,
+        1298,
+        1199
+      ],
+      "alphaAbove2Bounds": [
+        179,
+        31,
+        1157,
+        1176
+      ],
+      "visibleBounds": [
+        181,
+        33,
+        1155,
+        1174
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        181,
+        33,
+        157,
+        25
+      ],
+      "bytes": 1943180,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Hydrogimp",
+      "sha256": "ae765e4bafee8b4eac914dfb7d233f857556450404eb410fcf4a3da888aa00f3",
+      "size": [
+        1230,
+        1278
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        7,
+        1216,
+        1278
+      ],
+      "alphaAbove2Bounds": [
+        149,
+        45,
+        1148,
+        1256
+      ],
+      "visibleBounds": [
+        152,
+        47,
+        1148,
+        1254
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        152,
+        47,
+        82,
+        24
+      ],
+      "bytes": 1782270,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Carbimp",
+      "sha256": "69c93d1bdd12d1d3ee599b9e748340af6f7698884448bb2a955736b2c6e1bd30",
+      "size": [
+        1297,
+        1212
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        22,
+        1283,
+        1212
+      ],
+      "alphaAbove2Bounds": [
+        192,
+        23,
+        1146,
+        1183
+      ],
+      "visibleBounds": [
+        194,
+        25,
+        1144,
+        1181
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        194,
+        25,
+        153,
+        31
+      ],
+      "bytes": 1951080,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Blimp",
+      "sha256": "d3865142d3d5da4499846b7380817c184fd87131451635c301e6a54c7d53e07b",
+      "size": [
+        1222,
+        1287
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        9,
+        1208,
+        1287
+      ],
+      "alphaAbove2Bounds": [
+        145,
+        24,
+        1127,
+        1244
+      ],
+      "visibleBounds": [
+        145,
+        26,
+        1125,
+        1242
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        145,
+        26,
+        97,
+        45
+      ],
+      "bytes": 2159333,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Megablimp",
+      "sha256": "3ccec43734e52f193de493a40e412e1b67487fde1297d06e029b3161fe269d6a",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        17,
+        1292,
+        1187
+      ],
+      "alphaAbove2Bounds": [
+        108,
+        21,
+        1288,
+        1179
+      ],
+      "visibleBounds": [
+        110,
+        24,
+        1287,
+        1176
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        110,
+        24,
+        25,
+        23
+      ],
+      "bytes": 2386101,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Magimp",
+      "sha256": "d2b1e0b7b0676fa429fb1ea830f6733a55155ee884c8b5e90c779b875b96494e",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1292,
+        1167
+      ],
+      "alphaAbove2Bounds": [
+        200,
+        24,
+        1233,
+        1165
+      ],
+      "visibleBounds": [
+        202,
+        26,
+        1231,
+        1163
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        202,
+        26,
+        81,
+        36
+      ],
+      "bytes": 1983229,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Pumpkimp",
+      "sha256": "f838cb969dce021de216852b781f9cd89b8a7417990678b49908c54c5f17b145",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1361,
+        1119
+      ],
+      "alphaAbove2Bounds": [
+        260,
+        60,
+        1185,
+        1107
+      ],
+      "visibleBounds": [
+        260,
+        62,
+        1185,
+        1105
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        260,
+        62,
+        189,
+        40
+      ],
+      "bytes": 1636760,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Presimpt",
+      "sha256": "2e976d86d13a3a5264a7151c94d7108a2f31cd413af9b391d5ce2c4881a793db",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        33,
+        1282,
+        1159
+      ],
+      "alphaAbove2Bounds": [
+        210,
+        35,
+        1233,
+        1149
+      ],
+      "visibleBounds": [
+        211,
+        37,
+        1232,
+        1147
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        211,
+        37,
+        80,
+        52
+      ],
+      "bytes": 1897499,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Indianimp",
+      "sha256": "6fd432d6d8196082858d45c6cc056f766c1fd575158e5428accb87e222f6d4f8",
+      "size": [
+        1222,
+        1287
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        21,
+        1202,
+        1287
+      ],
+      "alphaAbove2Bounds": [
+        45,
+        89,
+        1152,
+        1235
+      ],
+      "visibleBounds": [
+        47,
+        92,
+        1149,
+        1233
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        47,
+        92,
+        73,
+        54
+      ],
+      "bytes": 2128961,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Warden",
+      "sha256": "4f79a4dbed66c19b41a90ed1a3b1a9c7828660f1bceb14e8da02346996caa923",
+      "size": [
+        1307,
+        1203
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        4,
+        1303,
+        1203
+      ],
+      "alphaAbove2Bounds": [
+        157,
+        51,
+        1189,
+        1164
+      ],
+      "visibleBounds": [
+        159,
+        52,
+        1186,
+        1162
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        159,
+        52,
+        121,
+        41
+      ],
+      "bytes": 2139495,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Liquimp",
+      "sha256": "ca0372f9ac494421062ddc681da30de4bed0bb16e9b565326007bd0e10a2993e",
+      "size": [
+        1274,
+        1234
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        4,
+        1260,
+        1198
+      ],
+      "alphaAbove2Bounds": [
+        223,
+        52,
+        1191,
+        1185
+      ],
+      "visibleBounds": [
+        223,
+        54,
+        1188,
+        1184
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        223,
+        54,
+        86,
+        50
+      ],
+      "bytes": 1763723,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Poseidimp",
+      "sha256": "e57cc1f26bad59b3a6daad97cabfad450390de17ef5080fc13d04d0e9324706d",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        7,
+        1288,
+        1177
+      ],
+      "alphaAbove2Bounds": [
+        58,
+        53,
+        1278,
+        1169
+      ],
+      "visibleBounds": [
+        60,
+        56,
+        1276,
+        1167
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        60,
+        56,
+        36,
+        32
+      ],
+      "bytes": 1874009,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Skeletimp",
+      "sha256": "01c3dc8164559a932de99787fe4a8ff4bad790f4d8890a0e0c0a89337d4b6d1d",
+      "size": [
+        1200,
+        1311
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1162,
+        1295
+      ],
+      "alphaAbove2Bounds": [
+        198,
+        67,
+        1058,
+        1269
+      ],
+      "visibleBounds": [
+        200,
+        69,
+        1057,
+        1267
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        200,
+        69,
+        143,
+        44
+      ],
+      "bytes": 1625601,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Megaskeletimp",
+      "sha256": "81a07609212d88d0bdab3db1669f81eee13fbd7c6742e1e7ad853d00a8a04f48",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        30,
+        21,
+        1234,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        35,
+        74,
+        1221,
+        1179
+      ],
+      "visibleBounds": [
+        39,
+        76,
+        1219,
+        1177
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        39,
+        76,
+        35,
+        77
+      ],
+      "bytes": 2223616,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Horrimp",
+      "sha256": "587dd42c5dea2b7bf5487ded409bc6e3f849dc1e0a50899d851b341d151f3ea5",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "rawAlphaBounds": [
+        0,
+        23,
+        1518,
+        1024
+      ],
+      "alphaAbove2Bounds": [
+        271,
+        42,
+        1394,
+        990
+      ],
+      "visibleBounds": [
+        273,
+        44,
+        1394,
+        988
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        273,
+        44,
+        142,
+        36
+      ],
+      "bytes": 2271983,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Cthulimp",
+      "sha256": "8cc25c601906440f7394330af4e8874ca820f7773ed255ddd88f7ad29b823573",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "rawAlphaBounds": [
+        57,
+        17,
+        1466,
+        991
+      ],
+      "alphaAbove2Bounds": [
+        253,
+        19,
+        1339,
+        989
+      ],
+      "visibleBounds": [
+        255,
+        21,
+        1337,
+        989
+      ],
+      "edgeMaxAlpha": 0,
+      "transparentMargins": [
+        255,
+        21,
+        199,
+        35
+      ],
+      "bytes": 2356411,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Shadimp",
+      "sha256": "993f7d4d5d3d992a8cccc9ad24697b1b64a886bea9f46d9064914fa039a2ee01",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1530,
+        1024
+      ],
+      "alphaAbove2Bounds": [
+        134,
+        33,
+        1434,
+        1002
+      ],
+      "visibleBounds": [
+        136,
+        34,
+        1432,
+        1001
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        136,
+        34,
+        104,
+        23
+      ],
+      "bytes": 2602020,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Darknimp",
+      "sha256": "74902852a23dc8b05e50b14be86cad0c42a6c74b7f294a0bab6dbd8c23bd54e6",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "rawAlphaBounds": [
+        0,
+        12,
+        1522,
+        1008
+      ],
+      "alphaAbove2Bounds": [
+        185,
+        14,
+        1375,
+        1006
+      ],
+      "visibleBounds": [
+        186,
+        14,
+        1375,
+        1006
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        186,
+        14,
+        161,
+        18
+      ],
+      "bytes": 2428593,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Improbability",
+      "sha256": "839363eb8cc7980272cbc662e42309497212a5ec84d158b919a2def85d088247",
+      "size": [
+        1374,
+        1145
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1338,
+        1145
+      ],
+      "alphaAbove2Bounds": [
+        5,
+        7,
+        1290,
+        1085
+      ],
+      "visibleBounds": [
+        11,
+        15,
+        1288,
+        1083
+      ],
+      "edgeMaxAlpha": 2,
+      "transparentMargins": [
+        11,
+        15,
+        86,
+        62
+      ],
+      "bytes": 1834099,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Omnipotrimp",
+      "sha256": "17433ba9a98210192f754227a7ae4bb1837c82290f46c2f60f45e8b2f35a08bf",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        3,
+        1240,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        68,
+        57,
+        1214,
+        1213
+      ],
+      "visibleBounds": [
+        70,
+        59,
+        1212,
+        1211
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        70,
+        59,
+        42,
+        43
+      ],
+      "bytes": 2418926,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Mutimp",
+      "sha256": "bfdd60b3e5a82660217fa9af9fbea0400886739847fa5d7955f84eddf1f21c2d",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "rawAlphaBounds": [
+        0,
+        0,
+        1236,
+        1254
+      ],
+      "alphaAbove2Bounds": [
+        112,
+        86,
+        1217,
+        1174
+      ],
+      "visibleBounds": [
+        114,
+        88,
+        1214,
+        1172
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        114,
+        88,
+        40,
+        82
+      ],
+      "bytes": 1969304,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    },
+    {
+      "name": "Hulking_Mutimp",
+      "sha256": "db7b0fb865b0a43928122e45ef317bfd3e8139abe20a29a77ba8942b039e688a",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "rawAlphaBounds": [
+        0,
+        16,
+        1516,
+        992
+      ],
+      "alphaAbove2Bounds": [
+        231,
+        18,
+        1310,
+        962
+      ],
+      "visibleBounds": [
+        233,
+        19,
+        1308,
+        962
+      ],
+      "edgeMaxAlpha": 1,
+      "transparentMargins": [
+        233,
+        19,
+        228,
+        62
+      ],
+      "bytes": 2525437,
+      "sourceOutputUnchanged": true,
+      "preserved": false
+    }
+  ]
+}

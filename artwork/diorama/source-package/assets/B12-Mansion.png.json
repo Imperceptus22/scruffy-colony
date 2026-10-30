@@ -1,0 +1,23 @@
+{
+  "id": "B12",
+  "key": "Mansion",
+  "name": "Mansion",
+  "group": "buildings",
+  "file": "assets/B12-Mansion.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 1158,
+    "top": 645,
+    "width": 378,
+    "height": 379
+  },
+  "nativeSize": {
+    "width": 378,
+    "height": 379
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "e3a51255e7901056192452b9d9f9f6f0133827580ccb5e2102c43dafed316300",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

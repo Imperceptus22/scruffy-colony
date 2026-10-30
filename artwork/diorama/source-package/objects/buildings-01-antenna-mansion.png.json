@@ -1,0 +1,27 @@
+{
+  "file": "buildings-01-antenna-mansion.png",
+  "approved": false,
+  "grid": {
+    "rows": 3,
+    "cols": 4
+  },
+  "orderedItemIds": [
+    "Antenna",
+    "Barn",
+    "Collector",
+    "Forge",
+    "Gateway",
+    "Gym",
+    "Hotel",
+    "House",
+    "Hub",
+    "Hut",
+    "Laboratory",
+    "Mansion"
+  ],
+  "references": [
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+  ],
+  "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-073e90ad-2920-42cb-96fa-c6e747b4d0a9.png"
+}

@@ -1,0 +1,412 @@
+/* Diorama night layer: the scruffycolony.de homepage language (night ground, ivory text, bronze actions, gold
+   hairlines, Crimson Pro headings) over the Diorama materials. Composed from the approved comps in
+   docs/design/diorama-night (combat K6, inventory I6); combat keeps the concept materials (clearing, parchment
+   cards, wood signs, wood grid frame). Header and scene bands live in mobile-diorama-header.css, which loads after
+   this file. Previous graphics never loads these rules. */
+@font-face { font-family:'Crimson Pro'; font-weight:200 900; font-display:swap; src:url(mobile-assets/font-crimson-pro.ttf) format('truetype'); }
+/* tokens and ground */
+html[data-graphics="diorama"] {
+  --n-ink:#0b171c; --n-deep:#081216; --n-panel:#13242a; --n-panel2:#182d34; --n-ivory:#fff1d4; --n-muted:#b9c4c4; --n-gold:#d9aa62; --n-line:#65533b; --n-cyan:#9be4df; --n-serif:'Crimson Pro',Georgia,serif; color-scheme:dark;
+}
+/* Flat type on the night ground, as on the homepage. */
+html[data-graphics="diorama"] * {
+  text-shadow:none!important;
+}
+/* Parchment, sign and petrol frames that the material layer draws without !important give way to night lines.
+   :where() keeps the reset at the old universal specificity, so the combat materials and the frames this layer draws
+   itself still win. */
+html[data-graphics="diorama"] :where(button,.btn,.workBtn,#mobile-maps,#mobile-colony,#mobile-colony-tabs [aria-selected="true"],#mobile-more .mm-detail,.mobile-portal-confirm #tipTitle,#mobile-portal-overview>h1,#buildingsHere,#equipmentHere,.diorama-action-label,#mobile-combat-map-head) {
+  border-image:none!important;
+}
+/* Frames whose transparent material border would otherwise stay behind as an empty 9-13px gap. */
+html[data-graphics="diorama"] #mobile-more .mm-detail,
+html[data-graphics="diorama"] .mobile-portal-confirm #tipTitle {
+  border:1px solid var(--n-line)!important;
+}
+html[data-graphics="diorama"] body {
+  background:var(--n-ink)!important; background-image:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] #mobile-nav {
+  background:var(--n-deep)!important; border:0!important; border-top:1px solid var(--n-line)!important; box-shadow:0 -6px 14px #0008!important;
+}
+html[data-graphics="diorama"] #mobile-nav button {
+  background:transparent!important; color:var(--n-muted)!important; box-shadow:none!important; border:0!important;
+}
+html[data-graphics="diorama"] #mobile-nav button[aria-current="page"] {
+  color:var(--n-gold)!important; background:linear-gradient(#d9aa6222,transparent)!important; box-shadow:inset 0 2px 0 var(--n-gold)!important;
+}
+/* pages and headings */
+html[data-graphics="diorama"] .mobile-page,
+html[data-graphics="diorama"] #mobile-colony,
+html[data-graphics="diorama"] #mobile-colony-content,
+html[data-graphics="diorama"] #mobile-more {
+  background:transparent!important; border:0!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] .mobile-page h1,
+html[data-graphics="diorama"] .mobile-page h2,
+html[data-graphics="diorama"] #mobile-colony-content h2 {
+  background:transparent!important; border:0!important; padding:4px 2px!important; color:var(--n-ivory)!important; font:650 1.5rem/1.1 var(--n-serif)!important; letter-spacing:-.01em!important; text-transform:none!important;
+}
+html[data-graphics="diorama"] #mobile-colony-content::before {
+  background-size:cover!important;
+}
+/* surfaces */
+html[data-graphics="diorama"] .mm-pane,
+html[data-graphics="diorama"] #mobile-resource-summary {
+  background:var(--n-panel)!important; border:1px solid var(--n-line)!important; border-radius:4px!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] #mobile-colony-content>p,
+html[data-graphics="diorama"] #mobile-colony-content>small {
+  background:transparent!important; border:0!important; border-top:1px solid var(--n-line)!important; color:var(--n-muted)!important; border-radius:0!important;
+}
+/* Status notices float over the scene band, so they bring their own night surface. */
+html[data-graphics="diorama"] #mobile-status:not(:empty) {
+  background:#081216e6!important; border:0!important; border-bottom:1px solid var(--n-line)!important; border-radius:0!important; color:var(--n-ivory)!important; padding:6px 12px!important;
+}
+html[data-graphics="diorama"] .mobile-purchase {
+  background:transparent!important; border:0!important; border-bottom:1px solid var(--n-line)!important; border-radius:0!important; color:var(--n-ivory)!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] .mobile-purchase *,
+html[data-graphics="diorama"] .playerGather * {
+  color:inherit;
+}
+html[data-graphics="diorama"] .mobile-tile-owned,
+html[data-graphics="diorama"] .mobile-item-effect,
+html[data-graphics="diorama"] .mobile-tile-price,
+html[data-graphics="diorama"] .mobile-material,
+html[data-graphics="diorama"] .psText,
+html[data-graphics="diorama"] .mobile-fill-time,
+html[data-graphics="diorama"] .thingOwned,
+html[data-graphics="diorama"] .mobile-price {
+  color:var(--n-muted)!important;
+}
+html[data-graphics="diorama"] .mobile-tile-name,
+html[data-graphics="diorama"] .thingName,
+html[data-graphics="diorama"] .playerGather>.title {
+  color:var(--n-ivory)!important; font-family:var(--n-serif)!important; font-weight:650!important; font-size:1.12rem!important;
+}
+html[data-graphics="diorama"] .ownedArea {
+  color:var(--n-ivory)!important;
+}
+/* buttons: controls whose original colour is the game state keep it (same exclusions as mobile-diorama.css). Setting
+   toggles and warning/danger actions are excluded too: their night state colours follow below. */
+html[data-graphics="diorama"] button:not(.thing):not(.mobile-info):not(:where(.mutatorBox)):not(:where(#mutMenu *)):not(:where(.mh-item)):not(:where(.mh-types [aria-pressed="false"])):not(:where(#mobile-more .mm-group>*)):not(:where(#mobile-perk-filters>*)):not(:where(.mobile-perk-info)):not(:where(#mobile-portal-back)):not(:where(.mobile-achieve-info)):not(:where(.ms-status>*)):not(:where(#autoBattleMenuButtons>*)):not(:where(#abLevelButtons>*)):not(:where(.ml-assault-close>*)):not(:where([class*="settingBtn"],.btn-danger,.btn-warning,.btn-yellow,.colorYellow,.dangerColor,.colorDanger,.stateDanger)),
+html[data-graphics="diorama"] .btn:not(.thing):not(:where(.mutatorBox)):not(:where(#mutMenu *)):not(:where(.mh-item)):not(:where(.mh-types [aria-pressed="false"])):not(:where(#mobile-more .mm-group>*)):not(:where(#mobile-perk-filters>*)):not(:where(.mobile-perk-info)):not(:where(#mobile-portal-back)):not(:where(.mobile-achieve-info)):not(:where(.ms-status>*)):not(:where(#autoBattleMenuButtons>*)):not(:where(#abLevelButtons>*)):not(:where(.ml-assault-close>*)):not(:where([class*="settingBtn"],.btn-danger,.btn-warning,.btn-yellow,.colorYellow,.dangerColor,.colorDanger,.stateDanger)),
+html[data-graphics="diorama"] .workBtn,
+html[data-graphics="diorama"] #buyHere .mobile-purchase>.thing,
+html[data-graphics="diorama"] .diorama-action-label:not([hidden]) {
+  background:linear-gradient(125deg,#b67d2c,#714316)!important; border:1px solid #dba94e!important; border-radius:3px!important; color:var(--n-ivory)!important; box-shadow:inset 0 1px #f9d58b55!important; font-weight:650;
+}
+html[data-graphics="diorama"] button:not(.thing):disabled:not(:where(.mutatorBox)):not(:where(#mutMenu *)),
+html[data-graphics="diorama"] .btn.disabled:not(:where(.mutatorBox)):not(:where(#mutMenu *)),
+html[data-graphics="diorama"] .thingColorCanNotAfford .diorama-action-label,
+html[data-graphics="diorama"] #buyHere .mobile-purchase>.thing.thingColorCanNotAfford {
+  background:transparent!important; border-color:var(--n-line)!important; color:var(--n-muted)!important; box-shadow:none!important;
+}
+/* Night state colours of the original controls (mobile-b2.css maps the same states for the day palette): on is
+   bronze, off an outline, the second state gold, warnings amber and destructive actions brick. Setting states 3-5
+   keep their mobile-b2 tints. */
+html[data-graphics="diorama"] .settingBtn0,
+html[data-graphics="diorama"] .settingBtnfalse {
+  background:transparent!important; border:1px solid var(--n-line)!important; color:var(--n-muted)!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] .settingBtn1,
+html[data-graphics="diorama"] .settingBtntrue {
+  background:linear-gradient(125deg,#b67d2c,#714316)!important; border:1px solid #dba94e!important; color:var(--n-ivory)!important; box-shadow:inset 0 1px #f9d58b55!important;
+}
+html[data-graphics="diorama"] .settingBtn2 {
+  background:#3a3016!important; border:1px solid var(--n-gold)!important; color:#f3dca4!important; box-shadow:none!important;
+}
+/* States 3-5 outside the settings list (e.g. map Repeat for Any): night versions of the original teal, violet and olive. */
+html[data-graphics="diorama"] .settingBtn3 { background:#173e44!important; border:1px solid #6fb3bb!important; color:#d4f0f2!important; box-shadow:none!important; }
+html[data-graphics="diorama"] .settingBtn4 { background:#2e2240!important; border:1px solid #9d86c0!important; color:#e9e0f5!important; box-shadow:none!important; }
+html[data-graphics="diorama"] .settingBtn5 { background:#353112!important; border:1px solid #b3a45e!important; color:#efe6b8!important; box-shadow:none!important; }
+html[data-graphics="diorama"] .btn-warning,
+html[data-graphics="diorama"] .btn-yellow,
+html[data-graphics="diorama"] .colorYellow {
+  background:#4a3a14!important; border:1px solid #c9a24d!important; color:#fbe6b0!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] .btn-danger,
+html[data-graphics="diorama"] .dangerColor,
+html[data-graphics="diorama"] .colorDanger,
+html[data-graphics="diorama"] .stateDanger {
+  background:#5b231c!important; border:1px solid #c8735e!important; color:#ffe3d8!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] .mobile-info {
+  color:var(--n-gold)!important;
+}
+html[data-graphics="diorama"] #numTabs li>a,
+html[data-graphics="diorama"] #mobile-more .mm-tabs button {
+  background:transparent!important; border:1px solid var(--n-line)!important; color:var(--n-ivory)!important; border-radius:3px!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] #numTabs li.tabSelected>a,
+html[data-graphics="diorama"] #mobile-more .mm-tabs button[aria-current="page"] {
+  background:#5d3e1c!important; border-color:var(--n-gold)!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] #mobile-more .mm-entry,
+html[data-graphics="diorama"] #mobile-more .mm-group>button {
+  background:transparent!important; color:var(--n-ivory)!important; border-bottom:1px solid var(--n-line)!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  display:grid!important; min-height:0!important; border-bottom:1px solid var(--n-line)!important; box-shadow:none!important; color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-item-art,
+html[data-graphics="diorama"] #equipmentHere .mobile-item-art {
+  grid-area:art!important; border:1px solid var(--n-line)!important; border-radius:4px!important; background:radial-gradient(circle at 50% 60%,#2b4a4f,#0f1e22)!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-core,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-core {
+  display:contents!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-name,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-name {
+  grid-area:name!important; padding:0!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-values,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-values {
+  grid-area:values!important; display:flex!important; flex-wrap:wrap; gap:0 8px;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-price,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-price {
+  grid-area:price!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-materials,
+html[data-graphics="diorama"] #equipmentHere .mobile-materials {
+  display:flex!important; flex-wrap:wrap; gap:0 8px!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-purchase-note,
+html[data-graphics="diorama"] #equipmentHere .mobile-purchase-note {
+  display:none!important;
+}
+html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) {
+  grid-area:action!important; display:grid!important; place-items:center;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile>.mobile-info {
+  background:transparent!important;
+}
+/* dialogs */
+html[data-graphics="diorama"] #tooltipDiv {
+  background:var(--n-panel)!important; color:var(--n-ivory)!important; border:1px solid var(--n-gold)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv * {
+  color:inherit;
+}
+/* V-142: original breakdowns (Loot, resources, max Trimps, combat stats, Zone, keybinds) are Bootstrap
+   .table-striped tables whose odd rows paint #f9f9f9 behind the ivory night text. Stripe in night tones instead. */
+html[data-graphics="diorama"] #tooltipDiv .table-striped>tbody>tr:nth-of-type(odd),
+html[data-graphics="diorama"] #tooltipDiv .table-hover>tbody>tr:hover {
+  background-color:var(--n-panel2)!important;
+}
+html[data-graphics="diorama"] input,
+html[data-graphics="diorama"] select {
+  background:var(--n-deep)!important; color:var(--n-ivory)!important; border:1px solid var(--n-line)!important;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name *,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-owned b {
+  color:var(--n-ivory)!important;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-owned {
+  color:var(--n-muted)!important;
+}
+/* Quieter inventory: outline actions, bronze fill only for the recommended (outlined original) purchase. */
+html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) {
+  background:#13242a!important; border:1px solid #8a6d44!important; color:#fff1d4!important; box-shadow:none!important; font-weight:600;
+}
+html[data-graphics="diorama"] #buyHere .efficientYes .diorama-action-label:not([hidden]) {
+  background:linear-gradient(125deg,#b67d2c,#714316)!important; border-color:#dba94e!important;
+}
+html[data-graphics="diorama"] #buildingsHere .thingColorCanNotAfford .diorama-action-label,
+html[data-graphics="diorama"] #equipmentHere .thingColorCanNotAfford .diorama-action-label {
+  background:transparent!important; border-color:#3b4a4c!important; color:#8e9a9a!important;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .alert,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .glyphicon-exclamation-sign,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile [class*="badge"] {
+  filter:saturate(.4) brightness(.85);
+}
+html[data-graphics="diorama"] #mobile-colony-content>p {
+  border-left-color:#65533b!important;
+}
+/* Two items per row: compact tiles with miniature, name, owned, cost and a full-width action. */
+html[data-graphics="diorama"] #buildingsHere,
+html[data-graphics="diorama"] #equipmentHere {
+  display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:8px!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  height:100%; background:#13242a!important; border:1px solid #2c3f43!important; border-radius:4px!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-name,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-name {
+  font-size:1.02rem!important; line-height:1.1!important; padding-right:30px!important; overflow-wrap:normal; hyphens:auto;
+}
+html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) {
+  margin-top:4px;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile {
+  position:relative;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile>.mobile-info {
+  top:2px!important; right:2px!important; bottom:auto!important; width:44px!important; min-width:44px!important; min-height:44px!important;
+}
+html[data-graphics="diorama"] #buyHere .efficientYes {
+  box-shadow:inset 0 0 0 1px #d9aa62!important;
+}
+/* The whole tile is already the original purchase button: show the action as a small chip beside the cost instead of a full-width bar. The tap target stays the entire tile; Info keeps its own 44px target. */
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  grid-template-columns:44px minmax(0,1fr) auto!important; grid-template-rows:auto auto auto!important; grid-template-areas:"art name name" "art values values" "price price action"!important; align-items:center; padding:7px 8px!important; gap:1px 8px!important;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-item-art,
+html[data-graphics="diorama"] #equipmentHere .mobile-item-art {
+  width:44px!important; height:44px!important;
+}
+html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) {
+  min-height:0!important; height:26px; margin:0!important; padding:0 10px!important; font-size:.78rem!important; border-radius:13px!important; align-self:end; justify-self:end;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing:active,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing:active {
+  background:#1d353b!important;
+}
+/* Neutralise the merged list surface from the parchment build for this comp. */
+html[data-graphics="diorama"] #buyHere #buildingsHere,
+html[data-graphics="diorama"] #buyHere #equipmentHere {
+  background:transparent!important; border:0!important; border-image:none!important; padding:0!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-inventory-tile .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-inventory-tile .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-inventory-tile .mobile-tile-name *,
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-inventory-tile .mobile-tile-name * {
+  color:#fff1d4!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-inventory-tile>.mobile-info,
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-inventory-tile>.mobile-info {
+  position:absolute!important; top:2px!important; right:2px!important; left:auto!important; bottom:auto!important; transform:none!important; width:44px!important; height:44px!important; min-height:44px!important; z-index:2;
+}
+/* Recommended purchase: distinct outline only, no glowing tile. */
+html[data-graphics="diorama"] #buyHere .efficientYes,
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing.efficientYes,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing.efficientYes {
+  background:#13242a!important; border:2px solid #d9aa62!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] #buyHere .efficientYes * {
+  color:inherit;
+}
+html[data-graphics="diorama"] #buyHere .efficientYes .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere .efficientYes .mobile-tile-name * {
+  color:#fff1d4!important;
+}
+html[data-graphics="diorama"] #buyHere .efficientYes .mobile-tile-owned,
+html[data-graphics="diorama"] #buyHere .efficientYes .mobile-item-effect,
+html[data-graphics="diorama"] #buyHere .efficientYes .mobile-material {
+  color:#b9c4c4!important;
+}
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name * {
+  color:#fff1d4!important; opacity:1!important;
+}
+html[data-graphics="diorama"] #buyHere .mobile-item-effect,
+html[data-graphics="diorama"] #buyHere .mobile-item-effect * {
+  color:#b9c4c4!important; opacity:1!important;
+}
+
+/* ---- Night tokens for everything the comps did not draw explicitly ----
+   The material layer and the base sheets colour text and surfaces through these tokens; on the night ground
+   their parchment values would give dark text on dark. Surfaces that stay light (combat cards, log, amount
+   tabs as in the approved comp) set their own dark ink above or below. */
+html[data-graphics="diorama"] {
+  --paper:var(--n-ink); --surface:var(--n-panel); --wash:var(--n-panel2); --nav:var(--n-deep); --enemy:var(--n-panel2);
+  --ink:var(--n-ivory); --muted:var(--n-muted); --line:var(--n-line); --rule:var(--n-line); --selected:#1d353b;
+}
+/* Combat scene band: the night container has 6px padding and no border; the page keeps its 5px margin + 6px padding. */
+html[data-graphics="diorama"] body { --dio-scene-top:6px; --dio-scene-side:11px; }
+/* Amount tabs read like the Buy chips of the inventory tiles: night panel, bronze hairline, ivory figures and the
+   chip rounding; the active amount takes the bronze fill of the recommended purchase (V-145). */
+html[data-graphics="diorama"] #numTabs li>a,
+html[data-graphics="diorama"] #numTabs li.tabNotSelected>a { background:#13242a!important; color:#fff1d4!important; border:1px solid #8a6d44!important; border-radius:14px!important; box-shadow:none!important; font-weight:600; }
+html[data-graphics="diorama"] #numTabs li.tabSelected>a { background:linear-gradient(125deg,#b67d2c,#714316)!important; color:#fff1d4!important; border-color:#dba94e!important; box-shadow:inset 0 1px #f9d58b55!important; font-weight:700; }
+html[data-graphics="diorama"] #numTabs li { background:transparent!important; border-radius:14px!important; }
+/* More: tabs sit on the night ground; the Graphic style field reads like every other night input.
+   Sticky tab bars (More, Bone Trader V-166) are an opaque night block with a fade below, so scrolled text never shows
+   through or hangs half under them (V-170). */
+html[data-graphics="diorama"] #mobile-more .mm-tabs { background:var(--n-ink); border-bottom-color:var(--n-line); padding:8px 0; box-shadow:0 8px 10px -6px #000c; }
+html[data-graphics="diorama"] :is(#boneWrapper #mobile-bone-tabs,#mobile-more .mm-tabs)::after {
+  content:""; position:absolute; left:0; right:0; bottom:-22px; height:22px; background:linear-gradient(#0b171c,#0b171c00); pointer-events:none;
+}
+html[data-graphics="diorama"] #mobile-more select[aria-label="Graphic style"] { color:var(--n-ivory); background-color:var(--n-deep); border-color:var(--n-gold); }
+/* Secondary figures inside inventory tiles (tier numerals, share of income) stay readable on the night tile. */
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile small,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile [id$="Numeral"] { color:var(--n-muted)!important; opacity:1!important; }
+/* Dialog heads (Portal, Heirlooms, More details) are night bars with a gold hairline, like the homepage header. */
+html[data-graphics="diorama"] .mh-header,
+html[data-graphics="diorama"] .mm-detail-head,
+html[data-graphics="diorama"] #mobile-portal-header { background:var(--n-deep); color:var(--n-ivory); border-color:var(--n-line); }
+/* V-152: the item view's Upgrade/Compare tabs show which one is open; the other is an outline like an off toggle. */
+html[data-graphics="diorama"] .mh-detail-tabs button[aria-pressed="false"] {
+  background:transparent!important; border:1px solid var(--n-line)!important; color:var(--n-muted)!important; box-shadow:none!important;
+}
+/* Portal overview: night panels and a serif title instead of parchment sheets and a wood sign. */
+html[data-graphics="diorama"] #mobile-portal-overview>h1 { background:transparent!important; border:0!important; padding:4px 0!important; }
+html[data-graphics="diorama"] #mobile-portal-overview #portalTitle { font:650 1.6rem/1.15 var(--n-serif)!important; color:var(--n-ivory)!important; }
+html[data-graphics="diorama"] #portalWrapper #titleCol2>div,
+html[data-graphics="diorama"] #mobile-portal-overview>button {
+  background:var(--n-panel)!important; color:var(--n-ivory); border:1px solid #2c3f43!important; border-image:none!important; border-radius:4px; box-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-portal-overview>button strong,
+html[data-graphics="diorama"] #portalWrapper #portalHelium { color:var(--n-gold); }
+/* Dialog and portal actions: bronze primary, outlined secondary, as everywhere else on the night ground. */
+html[data-graphics="diorama"] #tooltipDiv .btn:not(.thing):not(:where([class*="settingBtn"],.btn-danger,.btn-warning,.btn-yellow,.colorYellow,.dangerColor,.colorDanger,.stateDanger)),
+html[data-graphics="diorama"] #portalWrapper #activatePortalBtn {
+  background:linear-gradient(125deg,#b67d2c,#714316)!important; color:var(--n-ivory)!important;
+  border:1px solid #dba94e!important; border-image:none!important; border-radius:3px!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(.mobile-portal-confirm) #tipCost .btn[onclick^="cancelTooltip"] {
+  background:transparent!important; color:var(--n-ivory)!important; border-color:#8a6d44!important; border-image:none!important;
+}
+/* The olive Spire category keeps its original colour; dark ink reads on it. Portal info links stay muted ivory. */
+html[data-graphics="diorama"] #spireA { color:var(--n-ink)!important; }
+html[data-graphics="diorama"] #portalWrapper #ptabInfoText { color:var(--n-muted)!important; }
+/* Time Portal guided run (V-157/V-158): night values for the tokens of mobile-portal.css. */
+html[data-graphics="diorama"] #portalWrapper {
+  --pp-gold:var(--n-gold); --pp-on-gold:var(--n-ink); --pp-frame:#2c3f43; --pp-rim:#8a6d44; --pp-ground:var(--n-deep);
+  --pp-primary:linear-gradient(125deg,#b67d2c,#714316); --pp-on-primary:var(--n-ivory); --pp-primary-rim:#dba94e; --pp-brick-ink:#f6b4a4;
+}
+/* Challenge tiles: names take the tile's own state colour (C² tiles bring dark ink on their light grades) instead of
+   ivory everywhere; repeatable Challenges become a petrol tile and the selection keeps ivory, never light on light. */
+html[data-graphics="diorama"] #portalWrapper #challengesHere .thingName { color:inherit!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.challengeRepeatable { background-color:#1d3a40; color:var(--n-cyan); border-color:#3f6b70!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.cBorderOn { color:var(--n-ivory)!important; border-color:var(--n-gold)!important; }
+/* Narrow tiles (small phones, large system text): price and chip each get a full row and names hyphenate at
+   syllables instead of breaking anywhere. 11.5rem keeps the side-by-side chip at 411 px with standard text. */
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile { container-type:inline-size; }
+@container (max-width:11.5rem) {
+  html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+  html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+    grid-template-columns:44px minmax(0,1fr)!important; grid-template-areas:"art name" "art values" "price price" "action action"!important;
+  }
+  html[data-graphics="diorama"] #buildingsHere .mobile-tile-name,
+  html[data-graphics="diorama"] #equipmentHere .mobile-tile-name { font-size:.95rem!important; }
+  html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+  html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) { justify-self:stretch; margin-top:4px!important; }
+}
+/* Tile names: the material layer lets names break anywhere; on the night tiles they wrap between words or hyphenate. */
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name * { overflow-wrap:normal!important; word-break:normal!important; hyphens:auto; }
+/* Narrow tiles: the name takes its own full row above miniature and values; only a word wider than the whole
+   tile may still break. */
+@container (max-width:11.5rem) {
+  html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+  html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+    grid-template-areas:"name name" "art values" "price price" "action action"!important;
+  }
+  html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name { min-height:0!important; font-size:.9rem!important; }
+  html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name,
+  html[data-graphics="diorama"] #buyHere .mobile-inventory-tile .mobile-tile-name * { overflow-wrap:break-word!important; }
+}

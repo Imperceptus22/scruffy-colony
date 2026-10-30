@@ -1,0 +1,73 @@
+{
+  "approved": false,
+  "production_date": "2026-10-24",
+  "generation_tool": "built-in image_gen",
+  "generation_calls": 5,
+  "atlases": [
+    {
+      "ordered_ids": [
+        "Food",
+        "Wood",
+        "Metal",
+        "Science",
+        "Fragments",
+        "Gems",
+        "Helium",
+        "Radon",
+        "Bones"
+      ],
+      "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-9c3556d6-0fc3-4fb4-abfc-f6f3d2305668.png",
+      "sidecar": "resources.json",
+      "file": "resources.png",
+      "prompt": "resources.prompt.txt",
+      "grid": "3x3"
+    },
+    {
+      "ordered_ids": [
+        "Farmer",
+        "Lumberjack",
+        "Miner",
+        "Scientist",
+        "Trainer",
+        "Explorer",
+        "Geneticist",
+        "Magmamancer"
+      ],
+      "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-0b8299bb-a438-4d50-99ed-08af748a8b76.png",
+      "sidecar": "jobs.json",
+      "file": "jobs.png",
+      "prompt": "jobs.prompt.txt",
+      "grid": "4x2"
+    },
+    {
+      "ordered_ids": [
+        "Random",
+        "Mountain",
+        "Forest",
+        "Sea",
+        "Depths",
+        "Gardens",
+        "Farmlands",
+        "Void"
+      ],
+      "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-b698c510-21fb-43d3-8d4e-81ba713b68e9.png",
+      "sidecar": "biomes.json",
+      "file": "biomes.png",
+      "prompt": "biomes.prompt.txt",
+      "grid": "4x2",
+      "transparency_fix_prompt": "biomes-transparency-fix.prompt.txt"
+    },
+    {
+      "file": "jobs-extra.png",
+      "sidecar": "jobs-extra.json",
+      "prompt": "jobs-extra.prompt.txt",
+      "grid": "3x1",
+      "ordered_ids": [
+        "Amalgamator",
+        "Meteorologist",
+        "Worshipper"
+      ],
+      "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-3379c380-ef89-4a0d-8f43-fe184f73150e.png"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "E12",
+  "key": "Shield",
+  "name": "Shield",
+  "group": "equipment",
+  "file": "assets/E12-Shield.png",
+  "approved": false,
+  "source": "objects/equipment-02-helmet-shoulderguards.png",
+  "sourceRect": {
+    "left": 512,
+    "top": 512,
+    "width": 512,
+    "height": 512
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 512
+  },
+  "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+  "sha256": "1f16ee66baeba31c8209ff3bf7302f5e8614074522ec093d7146ea9bce90afce",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

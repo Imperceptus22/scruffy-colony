@@ -1,0 +1,23 @@
+{
+  "id": "J08",
+  "key": "Magmamancer",
+  "name": "Magmamancer",
+  "group": "jobs",
+  "file": "assets/J08-Magmamancer.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 1330,
+    "top": 443,
+    "width": 444,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 444
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "608af305ed179ed6369e5dbb6decb75fd09cca64e975b8435ff780d2d02c6952",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

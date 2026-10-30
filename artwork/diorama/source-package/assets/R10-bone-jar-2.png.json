@@ -1,0 +1,25 @@
+{
+  "id": "R10-2",
+  "key": "bone-jar-2",
+  "name": "Bone Jar, stage 2 (full)",
+  "group": "resources",
+  "file": "assets/R10-bone-jar-2.png",
+  "approved": false,
+  "source": "image edit with the built-in image tool (prompt use case \"precise-object-edit\") of the stage-0 master R10-bone-jar-0; not an atlas cut; exported to 1024x1024 RGBA",
+  "nativeSize": {
+    "width": 1024,
+    "height": 1024
+  },
+  "sourcePrompt": "assets/R10-bone-jar-2.png.prompt.txt",
+  "references": [
+    "artwork/diorama/source-package/assets/R10-bone-jar-0.png"
+  ],
+  "consultedBeforeCreation": [
+    "docs/evidence/v201-bone-jar/evcard-diorama-411.png",
+    "docs/design/bone-jar/MALAUFTRAG.md"
+  ],
+  "createdFor": "V-201 Bone Jar, docs/design/bone-jar/MALAUFTRAG.md (A: stages 0/1/2, C: scene prop), delivered 2026-10-28",
+  "sha256": "23e216c83d59aef894b4fd42dc851e2f5f6000214d18dc4d7a73288a3f6bb927",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "E08",
+  "key": "Helmet",
+  "name": "Helmet",
+  "group": "equipment",
+  "file": "assets/E08-Helmet.png",
+  "approved": false,
+  "source": "objects/equipment-02-helmet-shoulderguards.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 512,
+    "height": 512
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 512
+  },
+  "sourcePrompt": "objects/equipment-02-helmet-shoulderguards.png.prompt.txt",
+  "sha256": "94678b5424989b24f4096eba53407b43f8a203f5b095f73736b91e3e579a82ef",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

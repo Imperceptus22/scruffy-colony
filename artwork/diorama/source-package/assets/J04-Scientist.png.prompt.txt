@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: high-resolution transparent 4x2 portrait sprite atlas for Scruffy Colony mobile game, eight worker-role portraits.
+Input images: Image 1 is the visual identity reference, Images 2 and 3 are game style references. Preserve Scruffy: tiny friendly creature, cream fur, mossy golden-green hair, pointed ears, petrol-blue scarf; same coherent species and face proportions in every slot.
+Primary request: exactly eight separate chest-up portraits, ordered row-major in an even 4-column by 2-row grid: Farmer, Lumberjack, Miner, Scientist, Trainer, Explorer, Geneticist, Magmamancer. This order maps role identity through visible work gear: Farmer with a small apple sprig and straw-like work accent; Lumberjack with a wooden-handled hatchet held safely downward; Miner with a miner lamp and a few ore stones; Scientist with blue glass flask and small closed book; Trainer with simple practice staff and padded glove; Explorer with rolled blank map and compass; Geneticist with a glass vial and tiny green sprout; Magmamancer with warm ember-lit crystal and subtle magma glow. Each is the same Scruffy individual/species with different work attire/props.
+Scene/backdrop: transparent canvas, no scenery.
+Composition/framing: square canvas, exactly 4 columns x 2 rows, each portrait centered inside its own generously separated cell with transparent gutters, torso-up, consistent scale and camera, no cropping. Reserve each role's clothing/prop visible within its own cell.
+Lighting/mood: warm upper-left light, gentle handcrafted game collectible presentation.
+Materials/textures: realistic textured cream fur, mossy/golden-green hair strands, pointed ears, petrol-blue scarf; stitched cloth, carved wood, metal, glass; handcrafted 3D diorama miniature. Detailed painterly realism, not flat vector, not toy plastic.
+Text (verbatim): none.
+Constraints: preserve Scruffy's identity and scarf in every portrait; eight workers exactly; no monsters, no extra creatures, no extra portrait; no background scene; no labels, lettering, numerals, UI, frames, or watermark; actual transparent alpha.

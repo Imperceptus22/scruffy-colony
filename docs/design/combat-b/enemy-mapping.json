@@ -1,0 +1,512 @@
+{
+  "Arachnimp": {
+    "family": "spider",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 0,
+    "detail": 0
+  },
+  "Beetlimp": {
+    "family": "beetle",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 1,
+    "detail": 0
+  },
+  "Mantimp": {
+    "family": "mantis",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 2,
+    "detail": 0
+  },
+  "Butterflimp": {
+    "family": "butterfly",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 3,
+    "detail": 0
+  },
+  "Penguimp": {
+    "family": "penguin",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 4,
+    "detail": 0
+  },
+  "Turtlimp": {
+    "family": "turtle",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 5,
+    "detail": 0
+  },
+  "Snimp": {
+    "family": "snake",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 6,
+    "detail": 0
+  },
+  "Voidsnimp": {
+    "family": "snake",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 6,
+    "detail": 1
+  },
+  "Slosnimp": {
+    "family": "snake",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 6,
+    "detail": 2
+  },
+  "Frosnimp": {
+    "family": "snake",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 6,
+    "detail": 3
+  },
+  "Squimp": {
+    "family": "squid",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 7,
+    "detail": 0
+  },
+  "Shrimp": {
+    "family": "shrimp",
+    "src": "mobile-assets/enemies-0.png",
+    "cell": 8,
+    "detail": 0
+  },
+  "Chimp": {
+    "family": "ape",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 0,
+    "detail": 0
+  },
+  "Gorillimp": {
+    "family": "ape",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 0,
+    "detail": 1
+  },
+  "Mitschimp": {
+    "family": "ape",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 0,
+    "detail": 2
+  },
+  "Hippopotamimp": {
+    "family": "hippo",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 1,
+    "detail": 0
+  },
+  "Duckimp": {
+    "family": "duck",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 2,
+    "detail": 0
+  },
+  "Platypimp": {
+    "family": "platypus",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 3,
+    "detail": 0
+  },
+  "Kittimp": {
+    "family": "cat",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 4,
+    "detail": 0
+  },
+  "Kangarimp": {
+    "family": "kangaroo",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 5,
+    "detail": 0
+  },
+  "Squirrimp": {
+    "family": "squirrel",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 6,
+    "detail": 0
+  },
+  "Turkimp": {
+    "family": "turkey",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 7,
+    "detail": 0
+  },
+  "Chickimp": {
+    "family": "turkey",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 7,
+    "detail": 1
+  },
+  "Flutimp": {
+    "family": "turkey",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 7,
+    "detail": 2
+  },
+  "Dragimp": {
+    "family": "dragon",
+    "src": "mobile-assets/enemies-1.png",
+    "cell": 8,
+    "detail": 0
+  },
+  "Frimp": {
+    "family": "tree",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 0,
+    "detail": 0
+  },
+  "Entimp": {
+    "family": "tree",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 0,
+    "detail": 1
+  },
+  "Mountimp": {
+    "family": "stone",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 1,
+    "detail": 0
+  },
+  "Gravelimp": {
+    "family": "stone",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 1,
+    "detail": 1
+  },
+  "Brickimp": {
+    "family": "stone",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 1,
+    "detail": 2
+  },
+  "Golimp": {
+    "family": "stone",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 1,
+    "detail": 3
+  },
+  "Slagimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 0
+  },
+  "Moltimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 1
+  },
+  "Lavimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 2
+  },
+  "Flowimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 3
+  },
+  "Meltimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 4
+  },
+  "Sweltimp": {
+    "family": "lava",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 2,
+    "detail": 5
+  },
+  "Freezo": {
+    "family": "ice",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 3,
+    "detail": 0
+  },
+  "Skeletimp": {
+    "family": "skeleton",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 4,
+    "detail": 0
+  },
+  "Megaskeletimp": {
+    "family": "skeleton",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 4,
+    "detail": 1
+  },
+  "Robotrimp": {
+    "family": "robot",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 5,
+    "detail": 0
+  },
+  "Mechimp": {
+    "family": "robot",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 5,
+    "detail": 1
+  },
+  "Destructimp": {
+    "family": "robot",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 5,
+    "detail": 2
+  },
+  "Terminatimp": {
+    "family": "robot",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 5,
+    "detail": 3
+  },
+  "Autoimp": {
+    "family": "robot",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 5,
+    "detail": 4
+  },
+  "Prismimp": {
+    "family": "crystal",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 6,
+    "detail": 0
+  },
+  "Rainbimp": {
+    "family": "crystal",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 6,
+    "detail": 1
+  },
+  "Lightimp": {
+    "family": "crystal",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 6,
+    "detail": 2
+  },
+  "Artimp": {
+    "family": "atom",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 7,
+    "detail": 0
+  },
+  "Neutrimp": {
+    "family": "atom",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 7,
+    "detail": 1
+  },
+  "Fusimp": {
+    "family": "atom",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 7,
+    "detail": 2
+  },
+  "Hydrogimp": {
+    "family": "atom",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 7,
+    "detail": 3
+  },
+  "Carbimp": {
+    "family": "atom",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 7,
+    "detail": 4
+  },
+  "Blimp": {
+    "family": "blimp",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 8,
+    "detail": 0
+  },
+  "Megablimp": {
+    "family": "blimp",
+    "src": "mobile-assets/enemies-2.png",
+    "cell": 8,
+    "detail": 1
+  },
+  "Magimp": {
+    "family": "wizard",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 0,
+    "detail": 0
+  },
+  "Feyimp": {
+    "family": "wizard",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 0,
+    "detail": 1
+  },
+  "Jestimp": {
+    "family": "wizard",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 0,
+    "detail": 2
+  },
+  "Chronoimp": {
+    "family": "wizard",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 0,
+    "detail": 3
+  },
+  "Magnimp": {
+    "family": "wizard",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 0,
+    "detail": 4
+  },
+  "Gnomimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 0
+  },
+  "Goblimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 1
+  },
+  "Grimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 2
+  },
+  "Seirimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 3
+  },
+  "Onoudidimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 4
+  },
+  "Nooimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 5
+  },
+  "Tauntimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 6
+  },
+  "Whipimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 7
+  },
+  "Venimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 8
+  },
+  "Titimp": {
+    "family": "goblin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 1,
+    "detail": 9
+  },
+  "Pumpkimp": {
+    "family": "pumpkin",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 2,
+    "detail": 0
+  },
+  "Presimpt": {
+    "family": "gift",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 3,
+    "detail": 0
+  },
+  "Indianimp": {
+    "family": "ranger",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 4,
+    "detail": 0
+  },
+  "Warden": {
+    "family": "warden",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 5,
+    "detail": 0
+  },
+  "Liquimp": {
+    "family": "water",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 6,
+    "detail": 0
+  },
+  "Poseidimp": {
+    "family": "water",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 6,
+    "detail": 1
+  },
+  "Horrimp": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 0
+  },
+  "Cthulimp": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 1
+  },
+  "Shadimp": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 2
+  },
+  "Darknimp": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 3
+  },
+  "Improbability": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 4
+  },
+  "Omnipotrimp": {
+    "family": "eldritch",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 7,
+    "detail": 5
+  },
+  "Mutimp": {
+    "family": "mutant",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 8,
+    "detail": 0
+  },
+  "Hulking_Mutimp": {
+    "family": "mutant",
+    "src": "mobile-assets/enemies-3.png",
+    "cell": 8,
+    "detail": 1
+  },
+  "Elephimp": {
+    "family": "elephant",
+    "src": "mobile-assets/elephimp.png",
+    "cell": 0,
+    "detail": 0
+  }
+}

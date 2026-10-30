@@ -1,0 +1,23 @@
+{
+  "id": "S09",
+  "key": "player-spire",
+  "name": "Player Spire",
+  "group": "scenes",
+  "file": "assets/S09-player-spire.png",
+  "approved": false,
+  "source": "special/03-late-systems.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/late-systems.prompt.txt",
+  "sha256": "b57c755823ef4cc70f5e4328a2badcc1b99a9aaaa0a08fef18458d61fcf050e8",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

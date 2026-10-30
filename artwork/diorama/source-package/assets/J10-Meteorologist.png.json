@@ -1,0 +1,23 @@
+{
+  "id": "J10",
+  "key": "Meteorologist",
+  "name": "Meteorologist",
+  "group": "jobs",
+  "file": "assets/J10-Meteorologist.png",
+  "approved": false,
+  "source": "world/jobs-extra.png",
+  "sourceRect": {
+    "left": 724,
+    "top": 0,
+    "width": 724,
+    "height": 724
+  },
+  "nativeSize": {
+    "width": 724,
+    "height": 724
+  },
+  "sourcePrompt": "world/jobs-extra.prompt.txt",
+  "sha256": "5e8d022736b5fa9e39a95bc6a0b09bc49945831adb9337321c38433f2b64c614",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

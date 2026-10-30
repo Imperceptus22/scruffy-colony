@@ -1,0 +1,123 @@
+/* A: compact inventory with a separate comparison and original upgrade controls. */
+#heirloomWrapper.mobile-heirlooms { padding:0!important; overflow:hidden!important; z-index:10; top:var(--mh-dev-offset,0px)!important; height:calc(100% - var(--mh-dev-offset,0px))!important; }
+#heirloomWrapper.mobile-heirlooms:not([style*="none"]) { display:flex!important; flex-direction:column; }
+#heirloomWrapper.mobile-heirlooms [hidden] { display:none!important; }
+.mobile-heirlooms { font-size:1rem!important; line-height:1.45; }
+.mobile-heirlooms button, .mobile-heirlooms select { min-height:44px; border:1px solid var(--line); border-radius:var(--radius); padding:10px 12px; background:var(--surface); color:var(--ink); font-size:1rem; }
+.mobile-heirlooms button:focus-visible, .mobile-heirlooms [role="button"]:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.mobile-heirlooms button:disabled, .mobile-heirlooms [aria-disabled="true"] { opacity:.6; }
+.mh-header { flex:none; display:flex; align-items:center; gap:8px; padding:8px 16px; border-bottom:1px solid var(--line); }
+.mh-header h1 { flex:1; min-width:0; font:700 1.25rem/1.3 var(--font-data); margin:0; overflow-wrap:anywhere; }
+.mh-header button { font-size:1.75rem; line-height:1; min-width:44px; padding:8px; background:transparent; border:0; }
+.mh-wallet { flex:none; display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; padding:8px 16px; border-bottom:1px solid var(--line); }
+#heirloomWrapper.mobile-heirlooms #nullifiumContainer { float:none; width:auto; flex:1; padding:0; font-size:.875rem; }
+.mh-capacity { font-size:.75rem; color:var(--muted); }
+.mh-wallet #nullifiumCount { font:700 1.25rem var(--font-data); }
+.mh-scroll { flex:1; min-height:0; padding:0 16px 20px; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; }
+.mh-types, .mh-detail-tabs { display:flex; gap:8px; padding:8px 0; }
+.mh-detail-tabs button { flex:1; }
+.mh-detail-tabs [aria-pressed="true"] { color:var(--accent); border-bottom:2px solid var(--accent); border-radius:0; background:transparent; }
+.mh-types button { flex:1; min-width:0; padding:10px 4px; }
+.mh-types [aria-pressed="true"], .mh-primary { background:var(--accent)!important; color:var(--onaccent)!important; }
+.mh-section { padding:4px 0 8px; border-top:1px solid var(--line); }
+.mh-section h2, .mh-preview h2 { display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; font:700 1.05rem var(--font-data); margin:12px 0 8px; }
+.mh-section h2 span { margin-left:auto; font:400 .875rem var(--font-body); color:var(--muted); }
+.mobile-heirlooms .mh-item { display:flex; width:100%; align-items:center; gap:10px; text-align:left; margin:0; padding:9px 2px; border:0; border-radius:0; border-bottom:1px solid var(--line); background:transparent; }
+.mh-item.is-selected { background:var(--selected); border-color:var(--accent); }
+.mh-item-icon { font-size:1.25rem; flex:none; background:transparent!important; border:0!important; padding:0!important; }
+.mh-item-text { flex:1; min-width:0; overflow-wrap:anywhere; }
+.mh-item-text strong, .mh-item-text small { display:block; }
+.mh-item-text small, .mh-note, .mh-empty { color:var(--muted); font-size:.875rem; }
+.mh-item-text .mh-item-mods { font-size:.75rem; line-height:1.45; margin-top:2px; }
+.mh-item-text .mh-protected { color:var(--accent); font-weight:600; font-size:.75rem; }
+.mh-note { margin:8px 0; }
+.mh-note b { color:var(--ink)!important; font-size:inherit!important; }
+.mh-preview { padding:0; margin:0; border:0; background:transparent; }
+.mh-preview h2 { margin:0 0 8px; overflow-wrap:anywhere; }
+.mh-preview-mod { padding:4px 0; font-size:.875rem; }
+.mh-preview button { width:100%; margin:0; overflow-wrap:anywhere; }
+.mh-pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:12px 0; }
+.mh-pair > div { min-width:0; }
+.mh-pair strong, .mh-pair small { display:block; overflow-wrap:anywhere; }
+.mh-pair small { color:var(--muted); font-size:.75rem; }
+.mh-comparison table { table-layout:fixed; width:100%; border-collapse:collapse; font-size:.75rem; }
+.mh-comparison th, .mh-comparison td { padding:10px 3px; text-align:right; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.mh-comparison th:first-child, .mh-comparison td:first-child { width:36%; text-align:left; }
+.mh-comparison p { color:var(--muted); font-size:.75rem; line-height:1.5; }
+.mh-positive { color:var(--accent); font-weight:600; }
+.mh-negative { color:var(--danger); font-weight:600; }
+.mh-comparison > button, .mh-protection > button { display:block; width:100%; margin-top:8px; }
+.mh-tools > button { margin:4px; }
+.mh-collection-actions { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.mh-collection > button { margin:0 8px 8px 0; }
+.mh-status { flex:1; font-size:.875rem; color:var(--muted); }
+.mh-detail-name { display:flex; align-items:center; gap:8px; padding:12px 0; border-bottom:1px solid var(--line); }
+#heirloomWrapper.mobile-heirlooms #selectedHeirloom { padding:0!important; margin:0!important; background:transparent!important; color:var(--ink); border:0!important; }
+#heirloomWrapper.mobile-heirlooms .selectedHeirloomItem { width:100%!important; padding:0!important; background:transparent!important; color:var(--ink)!important; border:0!important; font-size:1rem!important; }
+.mobile-heirlooms .selectedHeirloomRow { display:flex; align-items:center; gap:10px; margin:0!important; }
+.mobile-heirlooms .selectedHeirloomRow::before, .mobile-heirlooms .selectedHeirloomRow::after { display:none; }
+.mobile-heirlooms .selectedHeirloomRow > div { float:none; width:auto; padding:0; min-width:0; }
+.mobile-heirlooms .selectedHeirloomRow > div:last-child { flex:1; }
+#selectedHeirloomTitle { font:700 1.1rem/1.4 var(--font-data)!important; min-height:44px; display:flex; align-items:center; overflow-wrap:anywhere; }
+#selectedHeirloomIcon { min-width:44px; min-height:44px; display:grid; place-items:center; font-size:1.25rem; }
+.mobile-heirlooms .heirloomSpent { display:block; padding:12px 0; border-block:1px solid var(--line); font-size:.875rem!important; color:var(--ink)!important; }
+.mobile-heirlooms .heirloomMod { display:block; min-height:44px; padding:10px; border-bottom:1px solid var(--line); font-size:1rem!important; color:var(--ink)!important; background:transparent!important; text-align:left; }
+.mobile-heirlooms .heirloomMod[style*="opacity"] { opacity:.7!important; }
+.mobile-heirlooms .selectedHeirloomItem > br { display:none; }
+.mobile-heirlooms .heirloomRenameTip, .mobile-heirlooms .heirloomEquipped { display:none; }
+.mobile-heirlooms .heirloomMod.innate { color:var(--muted)!important; font-size:.875rem!important; }
+#heirloomWrapper.mobile-heirlooms #modBreakdown { padding:12px 0; }
+.mobile-heirlooms #modBreakdown > .row { display:block; margin:0; }
+.mobile-heirlooms #modUpgradeBox { float:none; width:100%; padding:0; }
+.mobile-heirlooms #modUpgradeCost, .mobile-heirlooms #specialModDescription { font-size:.875rem!important; padding:8px 0; }
+.mobile-heirlooms .modUpgradeBtn { width:calc((100% - 16px)/3)!important; min-width:0!important; padding:10px 2px!important; margin:8px 0!important; vertical-align:top; font-size:.875rem!important; }
+.mobile-heirlooms #modUpgradeBtn10 { margin-inline:8px!important; }
+.mh-replace-link { width:100%; margin-top:8px; }
+.mh-replace h2 { font:700 1.1rem var(--font-data); overflow-wrap:anywhere; }
+.mh-replace label { display:block; margin:16px 0 8px; }
+.mh-replace #modReplaceBox { float:none; width:100%; padding:0; }
+.mh-replace select { width:100%; white-space:normal; margin:0 0 12px; }
+.mh-replace #modReplaceBtn { width:100%; }
+.mobile-heirlooms .heirBtn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; min-width:44px; padding:10px 12px; margin:0; font-size:1rem; box-shadow:none; white-space:normal; }
+.mh-actions { flex:none; padding:10px 16px max(10px,env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--paper); }
+.mobile-heirlooms .heirloomBtnGroup { display:flex; flex-wrap:wrap; gap:8px; background:transparent!important; border:0; }
+.mh-actions button { flex:1 1 42%; }
+.mh-actions #recycleHeirloomBtn { flex-basis:100%; background:transparent!important; color:var(--danger)!important; border:1px solid var(--danger); }
+.mobile-heirlooms #heirloomHelp { padding:16px 0; font-size:1rem!important; line-height:1.5; color:var(--ink)!important; }
+.mobile-heirlooms #heirloomHelp b { color:var(--ink)!important; }
+.mobile-heirlooms #heirloomDropChances { flex-wrap:wrap; align-items:center; gap:8px; padding:16px 0; }
+.mobile-heirlooms #heirloomRarityMain { order:-1; flex-basis:100%; width:100%; }
+.mobile-heirlooms .heirloomChanceBtnContainer { flex:1; width:auto; }
+.mobile-heirlooms .heirloomChanceBtnContainer span { min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:var(--radius); }
+.mobile-heirlooms #heirloomNameInput { max-width:100%; min-height:44px; padding:8px; }
+.mobile-heirlooms .renameHeirloomBtn { min-height:44px; display:inline-flex; padding:10px 14px; align-items:center; font-size:1rem; top:0; border-radius:22px; margin:4px; }
+#heirloomsPopup { position:fixed!important; top:calc(var(--mh-dev-offset,0px) + 12px)!important; left:12px!important; right:12px!important; width:auto!important; max-height:calc(100dvh - var(--mobile-nav-height,96px) - var(--mh-dev-offset,0px) - 32px); overflow:auto; z-index:19; padding:16px!important; background:var(--surface)!important; color:var(--ink)!important; border:1px solid var(--line)!important; border-radius:var(--radius)!important; box-shadow:0 8px 24px rgba(48,68,64,.18); }
+#heirloomsPopup .selectedHeirloomItem { width:100%!important; background:transparent!important; color:var(--ink)!important; border:0!important; font-size:1rem!important; }
+#heirloomsPopup .heirloomMod { display:block; min-height:44px; padding:10px; font-size:1rem!important; }
+#heirloomsPopupBtns > * { min-height:48px; min-width:48px; }
+
+/* Reset desktop vw geometry on the retained original editor. */
+#heirloomWrapper.mobile-heirlooms #nullifiumContainer { color:var(--ink)!important; text-align:left; }
+#heirloomWrapper.mobile-heirlooms .heirloomMod { border:0!important; border-bottom:1px solid var(--line)!important; border-radius:0; height:auto!important; margin:0!important; }
+#heirloomWrapper.mobile-heirlooms .heirloomMod[aria-current="true"] { background:var(--selected)!important; border:1px solid var(--accent)!important; border-radius:var(--radius); }
+#heirloomWrapper.mobile-heirlooms #modBreakdown { width:100%; margin:0; }
+#heirloomWrapper.mobile-heirlooms #modUpgradeBox, #heirloomWrapper.mobile-heirlooms #modReplaceBox { height:auto; border:0; font-size:1rem; }
+#heirloomWrapper.mobile-heirlooms #modUpgradeBox:not([style*="none"]) { display:grid!important; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+#heirloomWrapper.mobile-heirlooms #modUpgradeCost { grid-column:1/-1; }
+#heirloomWrapper.mobile-heirlooms .modUpgradeBtn { width:100%!important; margin:0!important; display:block; }
+#heirloomWrapper.mobile-heirlooms #modUpgradeBtn10 { margin:0!important; }
+#heirloomsPopup .heirloomMod { border:0!important; border-bottom:1px solid var(--line)!important; border-radius:0; background:transparent!important; color:var(--ink)!important; height:auto!important; }
+
+#heirloomWrapper.mobile-heirlooms #modReplaceSelect { background:var(--surface)!important; color:var(--ink)!important; border:1px solid var(--line)!important; font-size:1rem!important; height:auto; min-height:48px; }
+#heirloomWrapper.mobile-heirlooms #modReplaceBtn { margin:0; padding:10px 12px; }
+#heirloomWrapper.mobile-heirlooms .mh-scroll { text-align:left; }
+#heirloomWrapper.mobile-heirlooms .mh-replace { padding-top:12px; }
+
+#heirloomsPopupBtns { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding-bottom:12px; background:transparent!important; color:var(--ink)!important; font-size:1rem!important; }
+#heirloomsPopupBtns button { border:1px solid var(--line); background:var(--paper); color:var(--ink); border-radius:var(--radius); padding:10px; font-size:1rem; }
+#heirloomsPopup .selectedHeirloomRow { display:flex; align-items:center; margin:0; }
+#heirloomsPopup .selectedHeirloomRow > div { float:none; width:auto; padding:0; min-width:0; }
+#heirloomsPopup .selectedHeirloomRow > div:last-child { flex:1; }
+#heirloomsPopup .selectedHeirloomIcon { min-height:44px; min-width:44px; font-size:1.25rem; line-height:1; }
+#heirloomsPopup .selectedHeirloomItem > br { display:none; }
+#heirloomsPopup .heirloomSpent { display:block; padding:12px 0; font-size:.875rem; }

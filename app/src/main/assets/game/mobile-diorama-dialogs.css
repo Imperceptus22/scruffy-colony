@@ -1,0 +1,116 @@
+/* Info and detail windows in wood and parchment (Diorama only, V-197 A, user approval 26.10.2026): the original dialog
+   #tooltipDiv becomes the parchment card of the configuration windows (V-194) on the slightly darkened game, with the
+   title in a parchment band, the original main action as the amber plate, every other action and Close as the petrol plate,
+   window tabs as parchment tabs and tables with calm rules whose values never split. A table wider than the card keeps
+   its full size and scrolls sideways inside it, so the original stays complete.
+   Every rule starts with html[data-graphics="diorama"] #tooltipDiv and leaves out the windows with their own rebuild:
+   the configuration windows (:has(.autoCheckbox), mobile-diorama-subviews.css) and Alchemy and Spire Assault with their
+   scene (#alchemyCraftTable, #autoItemsDiv, [data-diorama-scene], mobile-late-systems.css). The portal confirmation uses
+   this frame too; mobile-diorama-portal.css adds its order and sticky actions (V-203). Content, handlers and texts stay those of the game. To withdraw it,
+   delete this file and its <link> in index.html (and markLootTab in mobile-diorama.js). */
+
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) {
+  --ink:#2d3025; --muted:#5b4c36; --bad:#8e1a0a;
+  color:var(--ink)!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  box-shadow:0 0 0 100vmax #0b120f8c!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px 15px 15px 14px stretch!important;
+  padding:14px 13px 12px!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) :is(#tipTitle,#tipText,#tipText *:not(a,.btn,input,select,textarea,option),#tipCost,#tipCost *:not(.btn)) {
+  color:var(--ink)!important; text-shadow:none!important;
+}
+/* "Bad" lines of the original (inline red, e.g. Overheating (Magma)) and missing materials stay a dark red on the parchment. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is([style*="color: red"],[style*="color:red"],.red),
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is([style*="color: red"],[style*="color:red"],.red) *:not(a),
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost .mobile-material-missing,
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost .mobile-material-missing * {
+  color:var(--bad)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipTitle {
+  margin:-2px -1px 8px!important; padding:11px 52px 11px 12px!important; min-height:48px; box-sizing:border-box; text-align:left!important; font:700 1.2rem/1.2 var(--n-serif,serif)!important;
+  background:#ead2a3!important; border:1px solid #9a7442!important; border-radius:3px; box-shadow:inset 0 1px #fff4d8;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) hr { border-color:#9a7a4d88!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) a { color:#1f5a63!important; text-decoration:underline; }
+/* Fields (Custom amount, Rename, Map At Zone, number formats): light parchment fields with dark ink, as in V-194; the
+   night sheet would leave them near black under the parchment ink. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(input:not([type="checkbox"],[type="radio"]),select) {
+  min-height:44px; color:var(--ink)!important; background:#fffaf0!important; border:1px solid #9a7442!important; border-radius:3px;
+}
+
+/* Actions: the original main action (#confirmTooltipBtn: Confirm, Refresh, Rename, ...) is the amber plate, Cancel and every
+   other action the calm petrol plate; 44px targets. Dangerous actions of the original (.btn-danger / .btn-warning that do
+   not cancel, e.g. Delete Save) stay a plain dark red plate, so they never look like Cancel; Export's harmless
+   Download as File (#downloadBtn, red in the original) is a petrol plate.
+   The Cancel entry in the list lifts the rule over the night sheet's outlined Cancel (mobile-diorama-night.css). */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) :is(#tipCost .btn:not(.btn-danger,.btn-warning),#tipCost #downloadBtn,#tipCost .btn[onclick^="cancelTooltip"],#mobile-tooltip-close:not([hidden])) {
+  min-height:44px; padding:0 18px!important; display:inline-flex; align-items:center; font-weight:700!important; box-shadow:none!important; text-shadow:none!important;
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+/* V-219: the X sits inside the title band, 2px from its top and 4px from its right edge (card padding 14px/13px + band margin
+   -2px/-1px + 1px border), so it never covers the band edge or the frame; one-line titles are centred next to it (48px band).
+   V-257: the doubled id outranks the plate rule above (its :is() list counts as two ids), whose 18px side padding pushed
+   the × 7px right of the plate's centre; 2px at the bottom lift it 1px onto the centre of the drawn plate, whose image
+   carries its shadow below. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #mobile-tooltip-close#mobile-tooltip-close:not([hidden]) { top:15px!important; right:17px!important; padding:0 0 2px!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost #confirmTooltipBtn:not(.btn-danger,.btn-warning) {
+  color:#2a1606!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost :is(.btn-danger,.btn-warning):not([onclick^="cancelTooltip"],#downloadBtn) {
+  min-height:44px; padding:0 18px!important; display:inline-flex; align-items:center; font-weight:700!important; text-shadow:none!important;
+  color:#fff1e8!important; background:#7a2418!important; border:1px solid #4a120b!important; border-image:none!important; border-radius:3px!important;
+  box-shadow:inset 0 1px #b4553f!important;
+}
+
+/* Window tabs (Loot Breakdown): parchment tabs in a 2 x 2 grid on narrow cards, the open one (marked by mobile-diorama.js) as the
+   amber plate. The tab text shrinks with the row (cqi) only where the longest name, Food/Wood/Metal, would not fit. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs {
+  display:grid!important; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:4px; border:0!important; margin:0 0 8px!important;
+  background:transparent!important; width:auto!important; container-type:inline-size;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs::before,
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs::after { display:none!important; content:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs>li {
+  float:none!important; display:block!important; width:auto!important; margin:0!important; border:0!important; background:none!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs>li>a {
+  display:grid; place-items:center; min-height:44px; margin:0!important; padding:2px 4px!important; font:700 min(.8rem,4.4cqi)/1.15 var(--font-body)!important;
+  color:var(--ink)!important; text-decoration:none!important; overflow-wrap:break-word;
+  background:#ead2a3!important; border:1px solid #9a7442!important; border-radius:3px!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #lootBdTabs>li[data-dio-open]>a {
+  color:#2a1606!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important;
+}
+
+/* Breakdown tables (.bdTable / .bdTableSm, V-197 A): calm rules in the parchment tone, names left and bold, values right and
+   never split. V-257: the table fits the card without sideways scrolling: tight cell padding, column heads and row names
+   wrap at their spaces and slashes, and mobile-diorama.js scales the cells of a table that is still too wide through
+   --dio-bd-fit (text and side padding; never below 10px text, column heads included; the cells carry the size, as
+   mobile-b2.css fixes it per cell). Only a table still
+   wider then scrolls sideways inside the card, with a soft shadow at the edge that still has columns behind it (the parchment-coloured cover scrolls along and hides it at the end). Other tables
+   (hotkeys, number formats) keep their own layout and only lose the night stripes. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) {
+  display:block!important; max-width:100%; overflow-x:auto; border-collapse:collapse!important; font-size:.85rem!important;
+  background:linear-gradient(to left,#f2e1bf 40%,#f2e1bf00) right / 28px 100% no-repeat local, linear-gradient(to left,#5b4c3670,#5b4c3600) right / 14px 100% no-repeat scroll!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(table,tr,thead,tbody) { background-color:transparent!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) :is(td,th) {
+  padding:5px calc(4px * var(--dio-bd-fit,1))!important; white-space:nowrap!important; text-align:right!important; background:transparent!important; font-size:calc(.8rem * var(--dio-bd-fit,1))!important;
+  border:0!important; border-bottom:1px solid #b89566!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) :is(td,th):first-child { text-align:left!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) :is(th,tr:first-child>td) { font-size:calc(.78rem * var(--dio-bd-fit,1))!important; font-weight:700; color:var(--muted)!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) :is(th,tr:first-child>td,td:first-child) { white-space:normal!important; overflow-wrap:normal; }
+/* V-214: the tapped grid tile, enlarged above the cell info (copied from the cell by mobile-loot.js). */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .mobile-cell-art {
+  width:min(120px,40%); margin:2px auto 10px; border-radius:6px; box-shadow:0 0 0 1px #9a7442,0 2px 4px #5a3b1a55;
+}
+/* Row names bold; explanation links in them stay underlined petrol links. */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(.bdTable,.bdTableSm) :is(td:first-child,td:first-child *) { font-weight:700; }
+/* V-222: the World Info overview is prose: rows wrap at the card edge and stay left (map loot, items and time included). */
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .bdTable.mobile-zone-info { overflow:visible; background:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .bdTable.mobile-zone-info :is(tbody,tr,td) { display:block!important; width:auto!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .bdTable.mobile-zone-info .mobile-zone-map-row>td:not(:last-child) { border-bottom:0!important; padding-bottom:0!important; }
+html[data-graphics="diorama"] #tooltipDiv:not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .bdTable.mobile-zone-info :is(td,th) { white-space:normal!important; text-align:left!important; overflow-wrap:anywhere; }

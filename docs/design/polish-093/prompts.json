@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-15",
+  "selection": "all three approved by user 2026-10-15",
+  "assets": [
+    {
+      "file": "launcher-foreground.png",
+      "sourceOutput": "exec-2bd5f9b2-fd87-4b55-af7f-cbf1c51986f8.png",
+      "reference": "app/src/main/assets/game/mobile-assets/trimps.png",
+      "transparentBackground": true,
+      "prompt": "Edit/transform this reference into ONE polished mobile game launcher foreground icon for Trimps Mobile. The reference is an identity and art-style source, not a layout to preserve. Keep only the recognizable middle hero Trimp's face, mossy short hair, distinctive pointed ears and a little deep petrol scarf/shoulders; no other characters, weapons, shields, badge, text or letters. A friendly confident three-quarter bust, rich hand-painted storybook fantasy craft matching the reference, warm ivory fur, natural moss hair, large expressive eyes. Simplify tiny fur details into strong readable shapes suitable for a 48px Android launcher icon. Transparent background with clean alpha. Square 1024x1024 composition: entire head including ears and shoulders must remain within the central 62 percent of the canvas, generous transparent space on every side so circular Android adaptive masks preserve the whole character. No drop shadow, no ground plane, no rounded-square frame. Beautiful memorable silhouette and warm welcoming expression. Output only the single icon asset."
+    },
+    {
+      "file": "maps-workbench.png",
+      "sourceOutput": "exec-85927b76-7e57-46f8-91f2-0872e26569f4.png",
+      "reference": "app/src/main/assets/game/mobile-assets/feldstation.webp",
+      "transparentBackground": false,
+      "prompt": "Create a new companion panoramic illustration for the maps chamber of the same storybook fantasy mobile game as this reference. Reference image is STYLE, COLOR AND WORLD reference, not an edit target to preserve. Replace the colony landscape with an inviting cartographer's wooden workbench: a beautiful unfolded parchment map showing winding trails, green forests, a small mountain range, a brass compass, rolled map scrolls and a soft leather travel satchel. Beyond the table, distant pine-covered mountains in muted mist. Purpose is immediately legible as planning maps and expeditions. Warm parchment/ivory, moss green, deep petrol and restrained brass, painterly finely crafted fantasy illustration exactly compatible with the reference. No characters, no text, letters, numbers, UI controls, borders or frame. Composition is an exceptionally WIDE shallow header illustration, 6:1 panorama, ideally 1536x256. All meaningful subjects MUST lie along the central narrow horizontal band and be legible as large clear shapes in a header only 50px high at 380px wide; avoid tiny detail or objects near top/bottom that would be cropped. Relaxed balanced horizontal arrangement across the whole width. Nothing modern, no globe, no glowing magical effects. Deliver only the scenic artwork."
+    }
+  ]
+}

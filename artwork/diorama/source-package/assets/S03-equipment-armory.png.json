@@ -1,0 +1,23 @@
+{
+  "id": "S03",
+  "key": "equipment-armory",
+  "name": "Rüstkammer",
+  "group": "scenes",
+  "file": "assets/S03-equipment-armory.png",
+  "approved": false,
+  "source": "special/01-common-scenes.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/common-scenes.prompt.txt",
+  "sha256": "adb89151712c63e89d4548d8ace1a310874c9b05d5e6f8707763c58c5ee4830f",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

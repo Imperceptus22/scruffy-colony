@@ -1,0 +1,23 @@
+{
+  "id": "B11",
+  "key": "Laboratory",
+  "name": "Laboratory",
+  "group": "buildings",
+  "file": "assets/B11-Laboratory.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 775,
+    "top": 645,
+    "width": 383,
+    "height": 379
+  },
+  "nativeSize": {
+    "width": 383,
+    "height": 379
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "ffe5cf32052ecd0bbc8e9f9c0b9e43e16c06b99a1e360f054af13ff9651cbb55",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

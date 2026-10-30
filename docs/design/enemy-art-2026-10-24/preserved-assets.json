@@ -1,0 +1,113 @@
+{
+  "base": "4174b4985da0509001f8d90662028d19f835a169",
+  "assets": [
+    {
+      "name": "Arachnimp",
+      "sha256": "dbceda594cf170285ae6c2db393a305e11427c2c42a7c1714ad42e71f9f7f3e0"
+    },
+    {
+      "name": "Penguimp",
+      "sha256": "19659458a9f44dc2667b8eacaef4d055194bfb38e27832725a8e70705fcfbfed"
+    },
+    {
+      "name": "Turtlimp",
+      "sha256": "ca2d124c0514560da70ff09d7270ea698eddc58c298ef7f996f3ae4b6ccee101"
+    },
+    {
+      "name": "Snimp",
+      "sha256": "747790f1c28bd3a14633c6a1563d69bdfdea818df7093030ada241651d4a1682"
+    },
+    {
+      "name": "Squimp",
+      "sha256": "3c319df55271ce58c682d19eb1888eaa0b954de79a2787f77b08a5e7387549c0"
+    },
+    {
+      "name": "Gorillimp",
+      "sha256": "88ce30c8de5f87cce4a1fdd8e59409c2359e226fd49841c3f64462f4f72090cd"
+    },
+    {
+      "name": "Hippopotamimp",
+      "sha256": "d2611f878aa3370b949eb01b8f900db35c4a647b1f3018e5e7b032ee2e3520bb"
+    },
+    {
+      "name": "Platypimp",
+      "sha256": "619813b1ce42e808300896d5b119dad7696f3726f7f181af8f64094489e942f6"
+    },
+    {
+      "name": "Kittimp",
+      "sha256": "ac5bb6350ba22a3c99362d03c513688270f33830b68117367530af83b1540ae1"
+    },
+    {
+      "name": "Kangarimp",
+      "sha256": "cbf1ef2f148f589388bdc6e809c2d6c31dd23bc9005541d6d97792fce8c5d04b"
+    },
+    {
+      "name": "Squirrimp",
+      "sha256": "6b781c353f5d90da83a41fd92f7cb56a9c7bcbe0023f90d29e79febe3e4bd60b"
+    },
+    {
+      "name": "Turkimp",
+      "sha256": "eb1a5bdfbddb89c8417cec378931a2872047016d03205ca67d1bde0fc2890183"
+    },
+    {
+      "name": "Chickimp",
+      "sha256": "893777de3a05b831ac416d7a8462f3f7f5b4386368f315347eb0d1f1654055c1"
+    },
+    {
+      "name": "Flutimp",
+      "sha256": "e206c00837b20fb627d21e099c2ff79b195b70d86521045e6221aa61f9a88e13"
+    },
+    {
+      "name": "Dragimp",
+      "sha256": "d1e69ba74b9c95ceecd437daaadc5471ce8b654f505ec0efd9634354f993c7a7"
+    },
+    {
+      "name": "Feyimp",
+      "sha256": "bdf6490620718e24581d720cab238dc74cb9d89605578bcf34afb42a8d2c5f79"
+    },
+    {
+      "name": "Jestimp",
+      "sha256": "34c4a41f55bb192d40891384e0fe799902dc85f66f3e4a42934fb76bc16111f3"
+    },
+    {
+      "name": "Chronoimp",
+      "sha256": "4711f5936c6e7278701217a04c268cd8800bc4a9b9199a2ff93b8acc8f16f512"
+    },
+    {
+      "name": "Magnimp",
+      "sha256": "c6dd7b77426eca86358555d289f36115ec776359a0c61a5a9ce803a3e408db06"
+    },
+    {
+      "name": "Goblimp",
+      "sha256": "2ec8273fa8af6d7cbfd28736bd6e9e0201e741ff52eee01f9d4be89789b765b7"
+    },
+    {
+      "name": "Seirimp",
+      "sha256": "1019bd1ece02f2865b23b48d6feb09ce76ca8be1038c74a152d927855c1e9d8b"
+    },
+    {
+      "name": "Onoudidimp",
+      "sha256": "0b604e99ae27eabe062152d6ae0be8cb2ee06d0bca1a4341dcacd096de932597"
+    },
+    {
+      "name": "Tauntimp",
+      "sha256": "6bdba02edf33cf744f081636c9cad02b966fa4477031689c81f0ee1efed1c2c2"
+    },
+    {
+      "name": "Whipimp",
+      "sha256": "411f7ad0310fde310ff451d8d7485ccfbba5243330ab3af2766d41eb7797e97d"
+    },
+    {
+      "name": "Venimp",
+      "sha256": "7aade63c34d34deb4284db1bb226a782eee72e1a5a2e0eb32b197d27d60feb6c"
+    },
+    {
+      "name": "Titimp",
+      "sha256": "ce01f990d5c399e81e6018e0d148730fa3babbd67a998948a81d784e0be39f1e"
+    },
+    {
+      "name": "Elephimp",
+      "sha256": "19475c9f83718d89d090d6161b23614cfff4a832611a5ec07e92fbebaf60f12a"
+    }
+  ]
+}

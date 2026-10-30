@@ -1,0 +1,23 @@
+{
+  "id": "B13",
+  "key": "Microchip",
+  "name": "Microchip",
+  "group": "buildings",
+  "file": "assets/B13-Microchip.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 418,
+    "height": 411
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 411
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "038ddb988aaff814babcc439ce260998e0f84850e05ee7ca7ec1f29f4fdfefdc",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

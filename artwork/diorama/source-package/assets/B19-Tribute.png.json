@@ -1,0 +1,23 @@
+{
+  "id": "B19",
+  "key": "Tribute",
+  "name": "Tribute",
+  "group": "buildings",
+  "file": "assets/B19-Tribute.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 800,
+    "width": 418,
+    "height": 454
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 454
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "2043754d8f7a91922df727df26ef1c1bea73a99dc4cf093252e264a115e6a95b",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

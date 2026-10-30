@@ -1,0 +1,26 @@
+{
+  "id": "late-systems",
+  "image": "03-late-systems.png",
+  "native_width": 1254,
+  "native_height": 1254,
+  "grid": "2 columns x 2 rows",
+  "cell_order": [
+    "player-spire",
+    "spire-assault",
+    "alchemy",
+    "mutators"
+  ],
+  "role": "approval preview atlas; no integration or cropping",
+  "prompt_file": "late-systems.prompt.txt",
+  "edit_prompt_file": null,
+  "source_output_hint": "<home>\\.codex\\generated_images\\01a16f65-ca8c-79b2-ba87-cef0b290ea14\\exec-d8724bf9-14ef-4c46-8089-e8a5b7a67031.png",
+  "source_generated_at": "2026-10-24T21:35:28+02:00",
+  "references": [
+    "output/diorama-app-concepts-2026-10-24/05-portal.png",
+    "output/diorama-app-concepts-2026-10-24/02-buildings.png",
+    "output/diorama-app-concepts-2026-10-24/03-equipment.png",
+    "output/combat-diorama-full-2026-10-24/combat-waddleby.png"
+  ],
+  "approved": false,
+  "inspection_note": "All four requested scene concepts are present; no characters, labels, or gameplay claims observed."
+}

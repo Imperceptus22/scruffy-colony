@@ -1,0 +1,23 @@
+{
+  "id": "S01",
+  "key": "colony",
+  "name": "Kolonie",
+  "group": "scenes",
+  "file": "assets/S01-colony.png",
+  "approved": false,
+  "source": "special/01-common-scenes.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/common-scenes.prompt.txt",
+  "sha256": "3cee5ccb5c2178c704b180fd8ff55291011afbccb303e5c8ec7209b7b6f0ab3a",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "T08",
+  "key": "marker-gift",
+  "name": "Geschenk",
+  "group": "terrain",
+  "file": "assets/T08-marker-gift.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 512,
+    "top": 682,
+    "width": 512,
+    "height": 342
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 342
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "bed8410dc7c2a86868e0f04b4d9405ea720c87782b2ba247caa005128ee31a5f",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

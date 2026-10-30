@@ -1,0 +1,21 @@
+{
+  "file": "equipment-02-helmet-shoulderguards.png",
+  "approved": false,
+  "grid": {
+    "rows": 2,
+    "cols": 3
+  },
+  "orderedItemIds": [
+    "Helmet",
+    "Mace",
+    "Pants",
+    "Polearm",
+    "Shield",
+    "Shoulderguards"
+  ],
+  "references": [
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+  ],
+  "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-36aaaf1c-a80c-4137-a89d-8aa4e9c5e0af.png"
+}

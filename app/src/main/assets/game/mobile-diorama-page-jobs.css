@@ -1,0 +1,127 @@
+/* Diorama page layer Jobs (jobs). Loads after the shared Diorama layers and belongs to the jobs page round.
+   Every rule starts with html[data-graphics="diorama"] body[data-diorama-page="jobs"],
+   so it touches no other page (mobile-diorama.js mirrors the page into body[data-diorama-page]). Shared building
+   blocks (purchase tile, chip, info, amount tabs, colony scene head, header, navigation, dialogs, tokens) stay in
+   mobile-diorama.css, mobile-diorama-night.css and mobile-diorama-header.css. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-job-quantity {
+  color:#493d2b; background:#eddbbb; padding:6px 9px; margin:5px 6px;
+  border:1px solid #af8b56; border-radius:3px;
+}
+/* ---- Package C: colony lists, research, portal overview ---- */
+/* F03: the "new" badge is a fixed-size pill beside the title; long titles wrap next to it. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-item-meta .thingName { display:flex; align-items:flex-start; gap:6px; min-width:0; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-item-meta .thingName>.alert.badge:not(:empty) {
+  flex:none; display:inline-grid; place-items:center; box-sizing:border-box;
+  min-width:1.35em; height:1.35em; padding:0 .3em; margin:.05em 0 0; font-size:.78em; line-height:1;
+}
+/* F12/V-150: hire and fire are one control family and look the same; only the glyph differs.
+   Unavailable states drop the fill so they read as inactive without hiding the glyph. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus {
+  position:relative; width:100%!important; min-width:0!important; height:40px!important; min-height:40px!important; max-height:40px!important;
+  place-items:center; padding:0!important; margin:0!important;
+  font:700 1.35rem/1 var(--font-data)!important; text-shadow:none;
+  border:1px solid transparent!important; border-radius:4px!important; box-shadow:0 1px 2px #37231355;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus {
+  color:var(--onaccent)!important; background:var(--accent)!important; border-image:var(--dio-btn)!important;
+}
+/* Inactive controls lose their fill and become a thin outline with a muted glyph, so an active control
+   always stands out. Hire that is only unaffordable keeps a petrol outline. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus.thingColorCanNotAfford,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus:disabled,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus:disabled {
+  color:#93a3a2!important; background:transparent!important; box-shadow:none; opacity:1;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus.thingColorCanNotAfford,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus:disabled,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus:disabled {
+  border:1px solid #3e5459!important; border-image:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus.thingColorCanNotAfford:not(:disabled) { border-color:#2f6d69!important; }
+/* Two role tiles per row like the building tiles: name across the top, a 64px portrait with count and cost,
+   then fire and hire as two equal halves. Info sits on the portrait as its target with a corner badge.
+   Fire and hire draw 40px high; an invisible ::after extends each tap target to 48px. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere {
+  display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px!important;
+  padding:0!important; background:transparent!important; border:0!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-job {
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important; grid-template-rows:auto auto auto auto auto;
+  grid-template-areas:none; gap:4px 6px!important; min-width:0; min-height:0; padding:8px!important; align-content:start;
+}
+/* V-195: every portrait is the role's painted Diorama art (J01-J12 through --diorama-art from mobile-diorama.js) instead of
+   the older six-role sprite, also inside the Geneticist container, which the compact layer's child rules do not reach. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-job::before {
+  content:''; grid-area:2/1/4/-1; align-self:center; justify-self:start; width:64px!important; height:64px!important; border-radius:4px;
+  background:var(--diorama-art) center/contain no-repeat;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .thingName { grid-area:1/1/2/-1; align-self:start; min-height:1.5em; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .thingOwned { grid-area:2/1/4/-1; align-self:center; padding-left:72px; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .thingOwned>span { font-size:1.2rem; line-height:1.15; }
+/* V-208: the cost line has its own row under the portrait across the whole card at every text size (before only at large
+   text), so cost, share and the short wait time (mobile-ui.js shortTime) stay on one line and every card keeps its height
+   while the wait time ticks; the ellipsis is only a last resort for extreme values. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-price { grid-area:4/1/5/-1; align-self:start; margin-top:2px; text-align:left; padding-left:0!important;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus { grid-area:5/1/6/2; margin-top:4px!important; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus { grid-area:5/2/6/3; margin-top:4px!important; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-info {
+  grid-area:2/1/4/-1; position:relative; z-index:1; align-self:center; justify-self:start;
+  width:64px!important; min-width:64px!important; height:64px!important; min-height:64px!important; place-items:end;
+  border-radius:4px; background:radial-gradient(circle at calc(100% - 9px) calc(100% - 9px),var(--n-deep) 0 10px,transparent 11px)!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-info::before { position:absolute; right:0; bottom:0; width:18px; height:18px; margin:0; }
+/* Every role with a painted portrait (J01-J12, V-195; Draken/Dragimp since 4.98) shows it; a future role without one gets a
+   framed "?" instead of an empty box that looks like a failed load. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-job:not(:has([data-job="Farmer"],[data-job="Lumberjack"],[data-job="Miner"],[data-job="Scientist"],[data-job="Trainer"],[data-job="Explorer"],[data-job="Geneticist"],[data-job="Magmamancer"],[data-job="Amalgamator"],[data-job="Meteorologist"],[data-job="Worshipper"],[data-job="Dragimp"]))::before {
+  display:grid; place-items:center start; padding-left:8px; box-sizing:border-box; border:1px solid var(--n-line); background:var(--n-panel2);
+  color:var(--n-gold); font:600 2rem/1 var(--n-serif); content:'?';
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .thingOwned>span { color:var(--ink); }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-price { color:#54452f!important; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-job-free { color:#54452f; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-job-quantity {
+  background:transparent!important; border:0!important; border-top:1px solid var(--n-line)!important; color:var(--n-muted)!important; border-radius:0!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .mobile-price,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-job-free { color:var(--n-muted)!important; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #jobsHere .thingOwned>span { color:var(--n-ivory); }
+/* Population bar (only on Jobs): count on the left, Check Traps as a quiet outlined toggle that fills while
+   trapping, and the details chevron as a plain icon instead of a second amber block. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head { grid-template-columns:minmax(0,1fr) auto 44px; align-items:center; gap:8px; min-height:48px; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trapArea { align-self:center; border:0!important; }
+/* V-155: one bar of constant height. Check Traps / Trapping (original text, still read by TalkBack) shows as the
+   Diorama trap with the original trap count; the fill tells the two states apart. Count and rate never wrap. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trimpsCollectBtn {
+  display:flex; align-items:center; justify-content:center; gap:5px; min-width:64px; height:44px; min-height:44px; padding:0 10px!important; white-space:nowrap; line-height:1!important;
+  font-family:var(--font-body)!important; font-size:0!important; font-weight:600; border-radius:4px!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trimpsCollectBtn::before {
+  content:''; flex:none; width:26px; height:24px; background:url("mobile-assets/diorama/B18-Trap.webp") center/contain no-repeat;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trimpTrapText { font-family:var(--font-data); font-size:.9rem; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-title { flex-wrap:nowrap; min-width:0; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-title #trimpsPs,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-summary .ownedArea { min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; overflow-wrap:normal; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trimpsCollectBtn.workColorOff {
+  color:var(--n-gold)!important; background:transparent!important; border:1px solid var(--n-gold)!important; border-image:none!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-head #trappingProgress { height:3px; margin:0; border-radius:0 0 4px 4px; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-pop-toggle {
+  display:grid; place-items:center; width:44px!important; min-width:44px!important; min-height:44px!important; padding:0!important;
+  color:var(--n-gold)!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; font-size:0!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-pop-toggle::before {
+  content:''!important; width:20px; height:20px; background:currentColor; transform:rotate(90deg);
+  -webkit-mask:var(--mi-next) center/contain no-repeat; mask:var(--mi-next) center/contain no-repeat;
+}
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #mobile-pop-toggle[aria-expanded="true"]::before { transform:rotate(-90deg); }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] .mobile-pop-summary { align-self:center; }
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus::after,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus::after { content:''; position:absolute; inset:-5px -1px; }
+/* The tile below the controls covered the lower half of the ::after extension; lifting the controls keeps it symmetric. */
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-minus,
+html[data-graphics="diorama"] body[data-diorama-page="jobs"] #buyHere #jobsHere .mobile-job-plus { z-index:1; }
+

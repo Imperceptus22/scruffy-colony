@@ -1,0 +1,23 @@
+{
+  "id": "M04",
+  "key": "Sea",
+  "name": "Sea",
+  "group": "biomes",
+  "file": "assets/M04-Sea.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 1330,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "4159aa8945ed6ce5d9a950d46277cbd8c8bef3c75cd785fb235a59054259325a",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

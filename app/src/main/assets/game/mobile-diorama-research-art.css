@@ -1,0 +1,66 @@
+/* Research miniatures (V-172, Diorama only): one painted picture per research in the art slot of the parchment card
+   (mobile-diorama-parchment.css draws the slot as the card's ::before). The pictures come from four image-tool boards,
+   cut by contour (docs/design/research-miniatures/); every one rests on a book or scroll and carries the gold upgrade
+   chevron, so research never reads as the plain equipment, building or job. A research card without its own rule (future ids)
+   shows the neutral research book; golden upgrades are bare buttons, not cards, and get no slot. Every rule starts with html[data-graphics="diorama"] and
+   body[data-diorama-page="upgrades"], so Classic and other tabs stay untouched. The original button id inside the card
+   names the research, so nothing in the game or adapter code changes. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere { --research-art:url("mobile-assets/diorama-research/U-R16-research.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #mobile-equipment-research { --research-art:url("mobile-assets/diorama-research/U-R15-equipment-optimization.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Dagadder) { --research-art:url("mobile-assets/diorama-research/U-R01-Dagadder.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Megamace) { --research-art:url("mobile-assets/diorama-research/U-R02-Megamace.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Polierarm) { --research-art:url("mobile-assets/diorama-research/U-R03-Polierarm.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Axeidic) { --research-art:url("mobile-assets/diorama-research/U-R04-Axeidic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Greatersword) { --research-art:url("mobile-assets/diorama-research/U-R05-Greatersword.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Harmbalest) { --research-art:url("mobile-assets/diorama-research/U-R06-Harmbalest.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Supershield) { --research-art:url("mobile-assets/diorama-research/U-R07-Supershield.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Shieldblock) { --research-art:url("mobile-assets/diorama-research/U-R08-Shieldblock.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Bootboost) { --research-art:url("mobile-assets/diorama-research/U-R09-Bootboost.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Hellishmet) { --research-art:url("mobile-assets/diorama-research/U-R10-Hellishmet.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Pantastic) { --research-art:url("mobile-assets/diorama-research/U-R11-Pantastic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Smoldershoulder) { --research-art:url("mobile-assets/diorama-research/U-R12-Smoldershoulder.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Bestplate) { --research-art:url("mobile-assets/diorama-research/U-R13-Bestplate.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#GambesOP) { --research-art:url("mobile-assets/diorama-research/U-R14-GambesOP.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Speedminer) { --research-art:url("mobile-assets/diorama-research/U-R17-Speedminer.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Speedlumber) { --research-art:url("mobile-assets/diorama-research/U-R18-Speedlumber.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Speedfarming) { --research-art:url("mobile-assets/diorama-research/U-R19-Speedfarming.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Speedscience) { --research-art:url("mobile-assets/diorama-research/U-R20-Speedscience.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Speedexplorer) { --research-art:url("mobile-assets/diorama-research/U-R21-Speedexplorer.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Megaminer) { --research-art:url("mobile-assets/diorama-research/U-R22-Megaminer.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Megalumber) { --research-art:url("mobile-assets/diorama-research/U-R23-Megalumber.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Megafarming) { --research-art:url("mobile-assets/diorama-research/U-R24-Megafarming.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Megascience) { --research-art:url("mobile-assets/diorama-research/U-R25-Megascience.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Efficiency) { --research-art:url("mobile-assets/diorama-research/U-R26-Efficiency.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Potency) { --research-art:url("mobile-assets/diorama-research/U-R27-Potency.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Coordination) { --research-art:url("mobile-assets/diorama-research/U-R28-Coordination.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#TrainTacular) { --research-art:url("mobile-assets/diorama-research/U-R29-TrainTacular.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Bounty) { --research-art:url("mobile-assets/diorama-research/U-R30-Bounty.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Egg) { --research-art:url("mobile-assets/diorama-research/U-R31-Egg.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Gymystic) { --research-art:url("mobile-assets/diorama-research/U-R32-Gymystic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Miners) { --research-art:url("mobile-assets/diorama-research/U-R33-Miners.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Scientists) { --research-art:url("mobile-assets/diorama-research/U-R34-Scientists.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Trainers) { --research-art:url("mobile-assets/diorama-research/U-R35-Trainers.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Explorers) { --research-art:url("mobile-assets/diorama-research/U-R36-Explorers.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Magmamancers) { --research-art:url("mobile-assets/diorama-research/U-R37-Magmamancers.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#UberHut) { --research-art:url("mobile-assets/diorama-research/U-R38-UberHut.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#UberHouse) { --research-art:url("mobile-assets/diorama-research/U-R39-UberHouse.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#UberMansion) { --research-art:url("mobile-assets/diorama-research/U-R40-UberMansion.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#UberHotel) { --research-art:url("mobile-assets/diorama-research/U-R41-UberHotel.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#UberResort) { --research-art:url("mobile-assets/diorama-research/U-R42-UberResort.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Gigastation) { --research-art:url("mobile-assets/diorama-research/U-R43-Gigastation.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Blockmaster) { --research-art:url("mobile-assets/diorama-research/U-R44-Blockmaster.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Trapstorm) { --research-art:url("mobile-assets/diorama-research/U-R45-Trapstorm.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Battle) { --research-art:url("mobile-assets/diorama-research/U-R46-Battle.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Bloodlust) { --research-art:url("mobile-assets/diorama-research/U-R47-Bloodlust.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Prismatic) { --research-art:url("mobile-assets/diorama-research/U-R48-Prismatic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Prismalicious) { --research-art:url("mobile-assets/diorama-research/U-R49-Prismalicious.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Anger) { --research-art:url("mobile-assets/diorama-research/U-R50-Anger.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Rage) { --research-art:url("mobile-assets/diorama-research/U-R51-Rage.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Formations) { --research-art:url("mobile-assets/diorama-research/U-R52-Formations.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Dominance) { --research-art:url("mobile-assets/diorama-research/U-R53-Dominance.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#Barrier) { --research-art:url("mobile-assets/diorama-research/U-R54-Barrier.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#attackRelic) { --research-art:url("mobile-assets/diorama-research/U-R55-attackRelic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#enemyAttackRelic) { --research-art:url("mobile-assets/diorama-research/U-R56-enemyAttackRelic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#radonRelic) { --research-art:url("mobile-assets/diorama-research/U-R57-radonRelic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#scienceRelic) { --research-art:url("mobile-assets/diorama-research/U-R58-scienceRelic.webp"); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>#breedRelic) { --research-art:url("mobile-assets/diorama-research/U-R59-breedRelic.webp"); }

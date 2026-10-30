@@ -1,0 +1,29 @@
+// Original Trimps formula, snapshot 1a8475e; GPL-3.0-or-later, Zach Hood / Greensatellite.
+function calculateParityBonus(updateCost){
+	if (!game.global.StaffEquipped || game.global.StaffEquipped.rarity < 10) {
+		game.global.parityBonus = 1;
+		return;
+	}
+	var allowed = ["Farmer", "Lumberjack", "Miner"];
+	var totalWorkers = 0;
+	var workerRatios = [];
+	var numWorkers = [];
+	for (var x = 0; x < allowed.length; x++){
+		var thisWorkers = game.jobs[allowed[x]].owned;
+		totalWorkers += thisWorkers;
+		numWorkers[x] = thisWorkers;
+	}
+	for (var x = 0; x < numWorkers.length; x++){
+		workerRatios.push(numWorkers[x] / totalWorkers);
+	}
+	var resourcePop = totalWorkers;
+	resourcePop = Math.log(resourcePop) / Math.log(3);
+	var largestWorker = Math.log(Math.max(...numWorkers)) / Math.log(3);
+	var spreadFactor = resourcePop - largestWorker;
+    var preLoomBonus = (spreadFactor*spreadFactor);
+	var parityMult = (updateCost) ? getHazardParityMult() : game.global.hazardParityMult;
+	var finalWithParity = (1 + preLoomBonus) * parityMult;
+	game.global.parityBonus = finalWithParity;
+	return finalWithParity;
+}
+

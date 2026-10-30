@@ -1,0 +1,58 @@
+{
+  "tool": "built-in imagegen",
+  "reference": "elephimp.png from selected combat B; original files retained in generated_images",
+  "prompts": [
+    "Use case: stylized-concept. Create a transparent GAME SPRITE ATLAS with EXACTLY 3 columns and 3 rows, 9 equal square cells. No visible grid. One full-body character centred inside EACH cell, all edges inside its cell, broad 15% transparent margins. Characters never cross cells. Match the reference image's polished hand-painted warm fantasy strategy-game style, natural linen/petrol/sage/wood palette, soft sunlight, clear silhouettes when small. All face LEFT. Original designs, not official Trimps artwork. Reading order from top-left across rows: spider with eight visible legs; armoured beetle; praying mantis; large butterfly; penguin; turtle with broad shell; coiled snake; tentacled squid; curled shrimp. All 9 characters distinct and equally sized within their cells. Actual transparent background. NO text, labels, numbers, watermarks, scenery, shadows on a ground plane or UI borders. A square atlas, perfect evenly spaced alignment matters for CSS sprites.",
+    "Use case: stylized-concept. Create a transparent GAME SPRITE ATLAS with EXACTLY 3 columns and 3 rows, 9 equal square cells. No visible grid. One full-body character centred inside EACH cell, all edges inside its cell, broad 15% transparent margins. Characters never cross cells. Match the reference image's polished hand-painted warm fantasy strategy-game style, natural linen/petrol/sage/wood palette, soft sunlight, clear silhouettes when small. All face LEFT. Original designs, not official Trimps artwork. Reading order from top-left across rows: stocky gorilla ape; hippopotamus; duck; platypus with broad bill and flat tail; wild cat; kangaroo; squirrel with bushy tail; turkey bird; small dragon. All 9 characters distinct and equally sized within their cells. Actual transparent background. NO text, labels, numbers, watermarks, scenery, shadows on a ground plane or UI borders. A square atlas, perfect evenly spaced alignment matters for CSS sprites.",
+    "Use case: stylized-concept. Create a transparent GAME SPRITE ATLAS with EXACTLY 3 columns and 3 rows, 9 equal square cells. No visible grid. One full-body character centred inside EACH cell, all edges inside its cell, broad 15% transparent margins. Characters never cross cells. Match the reference image's polished hand-painted warm fantasy strategy-game style, natural linen/petrol/sage/wood palette, soft sunlight, clear silhouettes when small. All face LEFT. Original designs, not official Trimps artwork. Reading order from top-left across rows: walking tree guardian; stone golem; molten lava creature; frost creature with icicle crown; skeleton imp; copper-and-iron robot; faceted crystal creature; atom-inspired scientific imp with orbiting rings; living balloon blimp creature. All 9 characters distinct and equally sized within their cells. Actual transparent background. NO text, labels, numbers, watermarks, scenery, shadows on a ground plane or UI borders. A square atlas, perfect evenly spaced alignment matters for CSS sprites.",
+    "Use case: stylized-concept. Create a transparent GAME SPRITE ATLAS with EXACTLY 3 columns and 3 rows, 9 equal square cells. No visible grid. One full-body character centred inside EACH cell, all edges inside its cell, broad 15% transparent margins. Characters never cross cells. Match the reference image's polished hand-painted warm fantasy strategy-game style, natural linen/petrol/sage/wood palette, soft sunlight, clear silhouettes when small. All face LEFT. Original designs, not official Trimps artwork. Reading order from top-left across rows: small wizard imp with pointed hat; small goblin imp; pumpkin creature; festive gift-box imp; neutral wilderness ranger imp in linen and leather; prison warden imp with a key; water spirit with flowing fins; eldritch shadow creature with tentacles; mutant imp with asymmetric horns. All 9 characters distinct and equally sized within their cells. Actual transparent background. NO text, labels, numbers, watermarks, scenery, shadows on a ground plane or UI borders. A square atlas, perfect evenly spaced alignment matters for CSS sprites."
+  ],
+  "groups": [
+    [
+      "spider with eight visible legs",
+      "armoured beetle",
+      "praying mantis",
+      "large butterfly",
+      "penguin",
+      "turtle with broad shell",
+      "coiled snake",
+      "tentacled squid",
+      "curled shrimp"
+    ],
+    [
+      "stocky gorilla ape",
+      "hippopotamus",
+      "duck",
+      "platypus with broad bill and flat tail",
+      "wild cat",
+      "kangaroo",
+      "squirrel with bushy tail",
+      "turkey bird",
+      "small dragon"
+    ],
+    [
+      "walking tree guardian",
+      "stone golem",
+      "molten lava creature",
+      "frost creature with icicle crown",
+      "skeleton imp",
+      "copper-and-iron robot",
+      "faceted crystal creature",
+      "atom-inspired scientific imp with orbiting rings",
+      "living balloon blimp creature"
+    ],
+    [
+      "small wizard imp with pointed hat",
+      "small goblin imp",
+      "pumpkin creature",
+      "festive gift-box imp",
+      "neutral wilderness ranger imp in linen and leather",
+      "prison warden imp with a key",
+      "water spirit with flowing fins",
+      "eldritch shadow creature with tentacles",
+      "mutant imp with asymmetric horns"
+    ]
+  ],
+  "atlas": "3 columns x 3 rows per file, transparent; CSS sprite selection without editing the originals",
+  "license": "Original project-generated illustrative artwork; distributed with the project under GPL-3.0-or-later; not official original portraits"
+}

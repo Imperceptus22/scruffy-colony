@@ -1,0 +1,23 @@
+{
+  "id": "U05",
+  "key": "header-wood",
+  "name": "Holzkopf",
+  "group": "interface",
+  "file": "assets/U05-header-wood.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 990,
+    "width": 620,
+    "height": 546
+  },
+  "nativeSize": {
+    "width": 620,
+    "height": 546
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "3b202dd3fa17a1e7b385e430e217a6333f58229fc167811debbc3685f9df6f3c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

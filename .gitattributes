@@ -1,0 +1,12 @@
+* text=auto
+# Preserve the original byte manifest on Windows and in Linux CI.
+app/src/main/assets/game/** -text
+# Preserve original artwork prompts, atlas manifests and all recorded source hashes.
+artwork/diorama/** -text whitespace=-blank-at-eol,-blank-at-eof
+# Verbatim guide snapshot: preserve source bytes, including original trailing spaces.
+docs/sources/truth-new-player-guide-16392.html -text whitespace=-blank-at-eol
+gradlew text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+# Preserve upstream font licence bytes, including their original blank-line spaces.
+website/assets/fonts/*-OFL.txt -text whitespace=-blank-at-eol

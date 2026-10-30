@@ -1,0 +1,23 @@
+{
+  "id": "B09",
+  "key": "Hub",
+  "name": "Hub",
+  "group": "buildings",
+  "file": "assets/B09-Hub.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 645,
+    "width": 410,
+    "height": 379
+  },
+  "nativeSize": {
+    "width": 410,
+    "height": 379
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "00a1d08a214d36e547709a8a140236ebca39130fd8e20452ceb53e466b94b0f9",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

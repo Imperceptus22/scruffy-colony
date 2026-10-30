@@ -1,0 +1,98 @@
+{
+  "checkedOn": "2026-10-16",
+  "basis": "56671b64abc456a7ef09351bcde4653e17162291",
+  "upstream": "b9edb1dfee270ebf81bef8d934dc71276bf8d963",
+  "method": "Public GitHub commit API, pinned main.js blame, path history with checked rename; original local clone unchanged",
+  "licenseCommits": [
+    {
+      "sha": "5aab77c128b3662b788d20677d65c838cf52f38a",
+      "date": "2015-07-03T19:37:43.0000000Z",
+      "message": "License",
+      "files": [
+        {
+          "status": "modified",
+          "path": "config.js"
+        },
+        {
+          "status": "modified",
+          "path": "index.html"
+        },
+        {
+          "status": "modified",
+          "path": "main.js"
+        },
+        {
+          "status": "modified",
+          "path": "updates.js"
+        }
+      ],
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/5aab77c128b3662b788d20677d65c838cf52f38a"
+    },
+    {
+      "sha": "b95e4ca13e02a2480e53a6d4797cf0c85cb8cd1d",
+      "date": "2016-03-19T04:48:49.0000000Z",
+      "message": "license fix",
+      "files": [
+        {
+          "status": "added",
+          "path": "license.txt"
+        }
+      ],
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/b95e4ca13e02a2480e53a6d4797cf0c85cb8cd1d"
+    }
+  ],
+  "introducedFiles": [
+    {
+      "conclusion": "Repository introduction proves provenance, not third-party ownership or a separate asset license",
+      "message": "5.5.0",
+      "sha": "422de4123af28bce1de5f980ed4a85e8fdb32485",
+      "path": "objects.js",
+      "status": "added",
+      "date": "2021-05-15T04:06:48.0000000Z",
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/422de4123af28bce1de5f980ed4a85e8fdb32485"
+    },
+    {
+      "conclusion": "Repository introduction proves provenance, not third-party ownership or a separate asset license",
+      "message": "4.10.0\n\ndruopitee help me",
+      "sha": "14c29d4733fbe7e7dfb651710e9b61533b3c4911",
+      "path": "playerSpire.js",
+      "status": "added",
+      "date": "2018-12-10T01:14:47.0000000Z",
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/14c29d4733fbe7e7dfb651710e9b61533b3c4911"
+    },
+    {
+      "conclusion": "Repository introduction proves provenance, not third-party ownership or a separate asset license",
+      "message": "Setting up game",
+      "sha": "ae4d353f2b424c27634f8cac3bfd3e33d7767800",
+      "path": "css/bg2.png",
+      "status": "added",
+      "date": "2015-07-03T19:23:12.0000000Z",
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/ae4d353f2b424c27634f8cac3bfd3e33d7767800"
+    },
+    {
+      "conclusion": "Renamed from css/bg.png, which was already in the initial repository. This traces path provenance, not third-party ownership or a separate asset license.",
+      "message": "2.0",
+      "sha": "1be6370faa30b6a77daf0512dd52fb5fd1045cb7",
+      "path": "css/bg2_vert.png",
+      "status": "renamed",
+      "date": "2015-08-23T00:33:01.0000000Z",
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/1be6370faa30b6a77daf0512dd52fb5fd1045cb7",
+      "previousPath": "css/bg.png",
+      "previousPathOrigin": {
+        "sha": "ae4d353f2b424c27634f8cac3bfd3e33d7767800",
+        "date": "2015-07-03T19:23:12Z",
+        "status": "added",
+        "url": "https://github.com/Trimps/Trimps.github.io/commit/ae4d353f2b424c27634f8cac3bfd3e33d7767800"
+      }
+    },
+    {
+      "conclusion": "Repository introduction proves provenance, not third-party ownership or a separate asset license",
+      "message": "favicon",
+      "sha": "984805026213d30243202276f81d3edfbc57bfce",
+      "path": "favicon.ico",
+      "status": "added",
+      "date": "2015-12-26T21:08:35.0000000Z",
+      "url": "https://github.com/Trimps/Trimps.github.io/commit/984805026213d30243202276f81d3edfbc57bfce"
+    }
+  ]
+}

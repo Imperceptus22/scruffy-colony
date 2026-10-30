@@ -1,0 +1,23 @@
+{
+  "id": "R03",
+  "key": "Metal",
+  "name": "Metal",
+  "group": "resources",
+  "file": "assets/R03-Metal.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 836,
+    "top": 0,
+    "width": 418,
+    "height": 430
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 430
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "d028bda1063bac12c1af2396dfaff7f5c529fb2c5c246a69c75a95ee90cbdec3",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

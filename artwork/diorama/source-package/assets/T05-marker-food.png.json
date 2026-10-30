@@ -1,0 +1,23 @@
+{
+  "id": "T05",
+  "key": "marker-food",
+  "name": "Nahrung",
+  "group": "terrain",
+  "file": "assets/T05-marker-food.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 512,
+    "top": 341,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "24b1c9cf98d39fbb1d96ddc2753abd94f89c2de3132fab83ba853c910670ac41",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

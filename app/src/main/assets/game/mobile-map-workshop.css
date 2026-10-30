@@ -1,0 +1,104 @@
+/* C: creation first, illustrated biome choices, selected map and compact inventory. */
+#mobile-return-world{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;width:100%;border:1px solid var(--accent);border-radius:5px;background:var(--surface);color:var(--accent);font-weight:700;}
+#mobile-return-world::before{content:'';width:18px;height:18px;background:currentColor;mask:var(--mi-back) center/contain no-repeat;}
+#mobile-map-world{min-height:48px;width:100%;margin:8px 0 12px;}
+#mobile-return-world:disabled{color:var(--muted);border-color:var(--line);opacity:1;}
+#battleBtnsColumn #mapsBtnText[data-compact-icon]{font-size:0!important;line-height:0!important;}
+#mobile-maps-scene[hidden]{display:none!important;}
+.mobile-workshop-tabs{display:flex;gap:8px;margin:8px 0 14px;}
+.mobile-workshop-tabs button{flex:1;min-width:0;border-radius:5px;font-size:.875rem;padding:8px;}
+.mobile-workshop-tabs [aria-pressed="true"]{background:var(--accent);color:var(--onaccent);border-color:var(--accent);font-weight:700;text-decoration:underline 2px;text-underline-offset:4px;}
+.mobile-workshop-hero{width:100%;height:148px;border-radius:5px;overflow:hidden;}
+.mobile-biome-art{position:relative;overflow:hidden;min-width:0;}
+.mobile-biome-art svg{display:block;width:100%;height:100%;}
+.mobile-workshop-hero>.mobile-biome-art{width:100%;height:100%;}
+.mobile-biome-neutral{display:grid;place-items:center;background:var(--wash);color:var(--accent);}
+.mobile-biome-neutral>span{font-size:2.5rem;}
+.mobile-biome-caption{margin:6px 0 12px;font-size:.875rem;font-weight:600;}
+#mobile-workshop-create #mobile-fragments{margin:0 0 12px;}
+#mobile-workshop-create #mapsCreateRow{display:flex!important;flex-direction:column;align-items:stretch;gap:12px;}
+#mobile-workshop-create #mapsCreateRow{background:transparent!important;border:0;padding:0!important;margin:0!important;text-align:left;}
+#mobile-maps>#mobile-map-presets-head{border:0;border-radius:0;background:transparent;padding:0;}
+#mobile-map-presets h3{text-align:left;}
+#mobile-workshop-create #advMapsControlBtns{display:none;}
+#mobile-workshop-create #mobile-map-presets{margin:0;padding:0;border:0;}
+#mobile-map-presets>h3{font-size:1rem;margin:4px 0 8px;}
+#mobile-map-presets>p:not(#mobile-preset-note){display:none;}
+#mobile-map-presets .mobile-map-slots{gap:6px;}
+.mobile-preset-options{margin:8px 0;}
+.mobile-preset-options summary,.mobile-map-advanced summary{padding:12px 0;min-height:44px;font-size:.875rem;cursor:pointer;}
+.mobile-preset-options p{font-size:.8125rem;margin:8px 0;}
+#mobile-workshop-create #mapLevelContainer{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.875rem!important;}
+#mobile-workshop-create #advBiomeContainer{display:grid!important;grid-template-columns:1fr minmax(120px,55%);width:100%;gap:8px;align-items:center;padding:0!important;}
+#advBiomeContainer>br{display:none;}
+#mobile-workshop-create #advBiomeContainer .advSelect{width:100%;min-width:0;font-size:.875rem;}
+.mobile-biome-tiles{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;}
+.mobile-biome-tiles button{min-width:0;padding:0;overflow:hidden;border-radius:5px;}
+.mobile-biome-tiles .mobile-biome-art{height:52px;}
+.mobile-biome-tiles button>span{display:block;padding:5px 2px;font-size:.75rem;overflow-wrap:anywhere;}
+.mobile-biome-tiles [aria-pressed="true"]{background:var(--selected);border-color:var(--accent);box-shadow:inset 0 -2px var(--accent);}
+#mobile-workshop-create #advMapsRow:not([style*="display: none"]){display:flex!important;flex-direction:column;gap:10px;margin:14px 0;}
+#mobile-workshop-create #advMapsRow>.mapConfigContainer{width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4px;border-bottom:1px solid var(--line);padding:8px 0!important;}
+#mobile-workshop-create #advMapsRow br{display:none;}
+#mobile-workshop-create #advMapsRow .mapInput{grid-column:1/-1;grid-row:2;}
+#mobile-workshop-create #advMapsRow .advMapsTitle{font-size:.875rem!important;text-align:left;}
+#mobile-workshop-create #advMapsRow [id$="AdvMapsText"]{text-align:right;font-size:.8125rem!important;}
+#mobile-workshop-create #advMapsRow2:not([style*="display: none"]){grid-template-columns:1fr;gap:12px;}
+#mobile-workshop-create #advMapsRow2>.mapConfigContainer{width:100%;padding:8px 0!important;}
+#mobile-workshop-create #advMapsRow2>.mapConfigContainer:empty{display:none;}
+#mobile-workshop-create #advMapsRow2 br{display:none;}
+#mobile-workshop-create #advMapsRow2 .advMapsTitle{font-size:.875rem!important;}
+.mobile-map-create-actions{border-top:1px solid var(--line);padding-top:12px;margin-top:8px;}
+#mobile-workshop-create #mapCostContainer{text-align:left;margin-bottom:8px;font-size:.875rem!important;overflow-wrap:anywhere;}
+#mobile-workshop-create #mapCreateBtn{width:100%!important;display:block;font-size:1rem!important;text-align:center;}
+#mobile-workshop-list #selectedMapContainer{border-top:0;padding-top:0;}
+#selectedMapContainer[hidden]{display:none!important;}
+#mobile-workshop-list #selectedMapCol{width:100%;margin:10px 0;}
+#mobile-workshop-list #selectedMapName{font-size:1.2rem!important;min-height:44px;display:flex;align-items:center;cursor:pointer;text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere;}
+.mobile-map-meta{font-size:.8125rem;color:var(--muted);margin:0;}
+#mobile-workshop-list #mobile-selected-map-stats{gap:10px;margin:12px 0;}
+#mobile-workshop-list #mobile-selected-map-stats .mapStatsValue{font-size:1rem!important;font-weight:600;}
+#mobile-workshop-list #mobile-selected-map-stats>div{text-align:left;}
+#mobile-workshop-list #mobile-map-state{font-size:.8125rem;margin-top:12px;}
+#mobile-workshop-list #mobile-map-transition{width:100%;}
+#mobile-workshop-list #mapsHere:not([style*="display: none"]),#mobile-workshop-list #voidMapsHere:not([style*="display: none"]){display:flex!important;flex-direction:column;gap:0;}
+#mobile-workshop-list .mapThing{position:relative;padding:12px 8px 12px 82px!important;min-height:88px!important;text-align:left!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0;}
+#mobile-workshop-list .mapThing .mobile-map-thumb{position:absolute;left:0;top:12px;width:70px;height:64px;border-radius:4px;}
+#mobile-workshop-list .mapThing .thingName{display:inline-block;min-height:32px;text-decoration:underline;text-underline-offset:3px;}
+.mobile-map-card-meta{display:block;font-size:.75rem!important;color:var(--muted);}
+#mobile-workshop-list .voidMap .mobile-map-card-meta{color:#633c86;font-weight:700;}
+#mobile-workshop-list .blackMap .mobile-map-card-meta{color:var(--ink);font-weight:700;}
+#mobile-workshop-list .voidMap .mobile-map-thumb{background:#e5ddeb;color:#633c86;}
+#mobile-workshop-list .blackMap .mobile-map-thumb{background:var(--ink);color:var(--onaccent);}
+#mobile-workshop-list .noRecycle:not(.voidMap):not(.blackMap) .thingName{color:var(--wood);}
+#mobile-workshop-list .noRecycleDone:not(.voidMap):not(.blackMap) .thingName{color:var(--danger);}
+#mobile-workshop-list .bwUpgradeAvailable .thingName{background:var(--bonus);color:var(--bonus-ink);}
+.mobile-map-info .mobile-workshop-hero{height:150px;}
+.mobile-map-info h2{font-size:1.25rem;overflow-wrap:anywhere;margin:12px 0;}
+.mobile-map-info-values{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px 8px;margin:12px 0;padding:12px 0;border-block:1px solid var(--line);}
+.mobile-map-info-values dt{font-size:.75rem;color:var(--muted);font-weight:400;overflow-wrap:anywhere;}
+.mobile-map-info-values dd{font-size:.9375rem;font-weight:600;margin:0;overflow-wrap:anywhere;}
+.mobile-map-run{background:var(--surface);border:1px solid var(--line);padding:12px;border-radius:5px;margin:12px 0;}
+.mobile-map-run h3{font-size:1rem;margin:0 0 10px;}
+.mobile-map-run p{font-size:.875rem;}
+.mobile-map-info-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.mobile-map-info-actions button{flex:1;font-size:.875rem;}
+
+/* A: compact map controls inside the selected workshop. */
+#mobile-workshop-create #advMapsRow:not([style*="display: none"]){gap:0;margin:8px 0;}
+#mobile-workshop-create #advMapsRow>.mapConfigContainer{padding:3px 0!important;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;}
+#mobile-workshop-create #advMapsRow .mapInput[type="range"]{appearance:none;-webkit-appearance:none;grid-column:1/-1;width:100%;min-height:44px;height:44px;margin:0;padding:0;border:0!important;background:transparent!important;box-shadow:none;touch-action:pan-y;}
+#mobile-workshop-create input[type="range"]::-webkit-slider-runnable-track{height:4px;border:0;border-radius:3px;background:linear-gradient(to right,var(--accent) 0 var(--map-drag-fill,var(--map-fill)),var(--track) var(--map-drag-fill,var(--map-fill)) 100%);}
+#mobile-workshop-create input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-9px;background:var(--surface);border:3px solid var(--accent);border-radius:50%;transform:translateX(var(--map-thumb-offset,0px));}
+#mobile-workshop-create input[type="range"]::-moz-range-track{height:4px;background:var(--track);border:0;}
+#mobile-workshop-create input[type="range"]::-moz-range-thumb{width:16px;height:16px;background:var(--surface);border:3px solid var(--accent);border-radius:50%;}
+#mobile-map-cost{margin:0 0 10px;padding:0;text-align:left;}
+#mobile-map-cost>div{display:flex;align-items:baseline;justify-content:space-between;gap:6px;flex-wrap:wrap;}
+#mobile-map-cost strong{font-family:"B2 Space",sans-serif;font-size:1.05rem;}
+#mobile-map-cost>div+div{margin-top:5px;font-size:.75rem;color:var(--muted);}
+#mobile-map-cost .mobile-map-deficit{color:var(--danger);font-weight:700;}
+#mapCostContainer[hidden]{display:none!important;}
+.mobile-help-external{display:flex;align-items:center;min-height:44px;color:var(--accent);font-weight:600;text-decoration:underline;}
+.mobile-map-range{grid-column:1/-1;grid-row:2;position:relative;min-height:44px;}
+.mobile-map-range input{pointer-events:none;}
+.mobile-range-touch{position:absolute;inset:0;display:block;touch-action:pan-y;}

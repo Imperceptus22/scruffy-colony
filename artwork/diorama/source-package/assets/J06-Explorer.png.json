@@ -1,0 +1,23 @@
+{
+  "id": "J06",
+  "key": "Explorer",
+  "name": "Explorer",
+  "group": "jobs",
+  "file": "assets/J06-Explorer.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 443,
+    "width": 444,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 444
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "6ec71f399e94f07c47313f457d1fc3c6b86fd371a9eb1dfbe06017038b2d109f",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

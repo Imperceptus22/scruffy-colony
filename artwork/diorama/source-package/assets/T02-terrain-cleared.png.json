@@ -1,0 +1,23 @@
+{
+  "id": "T02",
+  "key": "terrain-cleared",
+  "name": "Geräumtes Feld",
+  "group": "terrain",
+  "file": "assets/T02-terrain-cleared.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 512,
+    "top": 0,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "f23caea5d7068e926aca2d77971af79f0880eb7c22cade8a8131a69bedb2afc4",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

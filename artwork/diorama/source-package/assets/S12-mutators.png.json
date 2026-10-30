@@ -1,0 +1,23 @@
+{
+  "id": "S12",
+  "key": "mutators",
+  "name": "Mutatoren",
+  "group": "scenes",
+  "file": "assets/S12-mutators.png",
+  "approved": false,
+  "source": "special/03-late-systems.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/late-systems.prompt.txt",
+  "sha256": "f78c3d6d34fc6cf1f26f74db9fa6a53d0338f7737d4fe2abe7c27d17e339041a",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

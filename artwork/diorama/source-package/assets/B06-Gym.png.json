@@ -1,0 +1,23 @@
+{
+  "id": "B06",
+  "key": "Gym",
+  "name": "Gym",
+  "group": "buildings",
+  "file": "assets/B06-Gym.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 375,
+    "top": 337,
+    "width": 400,
+    "height": 308
+  },
+  "nativeSize": {
+    "width": 400,
+    "height": 308
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "56f49afa1e90aa94acc446262dd040424462ac8442cde9c83d0fba2c053cd03c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

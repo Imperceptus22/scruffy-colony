@@ -1,0 +1,23 @@
+{
+  "id": "M06",
+  "key": "Gardens",
+  "name": "Gardens",
+  "group": "biomes",
+  "file": "assets/M06-Gardens.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 443,
+    "width": 444,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 444
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "75b03fc13fb54ee97d4264177356775641d3245b5b5381b60acff0983419632d",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

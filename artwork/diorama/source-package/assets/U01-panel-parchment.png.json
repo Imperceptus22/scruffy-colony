@@ -1,0 +1,23 @@
+{
+  "id": "U01",
+  "key": "panel-parchment",
+  "name": "Pergamentfläche",
+  "group": "interface",
+  "file": "assets/U01-panel-parchment.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 542,
+    "height": 610
+  },
+  "nativeSize": {
+    "width": 542,
+    "height": 610
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "222991d11574963ae2e86fb7a458b1a4dbb6edae192b630b873129bfcdbb908c",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

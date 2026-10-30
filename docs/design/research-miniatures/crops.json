@@ -1,0 +1,1304 @@
+{
+ "side": 292,
+ "size": 160,
+ "motifs": [
+  {
+   "sheet": "a",
+   "pos": 1,
+   "name": "A01",
+   "cell": [
+    0,
+    0,
+    328,
+    305
+   ],
+   "bbox": [
+    50,
+    83,
+    307,
+    291
+   ],
+   "w": 258,
+   "h": 209,
+   "touchesCell": false,
+   "file": "U-R01-Dagadder.webp",
+   "id": "Dagadder"
+  },
+  {
+   "sheet": "a",
+   "pos": 2,
+   "name": "A02",
+   "cell": [
+    328,
+    0,
+    625,
+    305
+   ],
+   "bbox": [
+    349,
+    72,
+    607,
+    289
+   ],
+   "w": 259,
+   "h": 218,
+   "touchesCell": false,
+   "file": "U-R02-Megamace.webp",
+   "id": "Megamace"
+  },
+  {
+   "sheet": "a",
+   "pos": 3,
+   "name": "A03",
+   "cell": [
+    625,
+    0,
+    927,
+    305
+   ],
+   "bbox": [
+    647,
+    51,
+    903,
+    286
+   ],
+   "w": 257,
+   "h": 236,
+   "touchesCell": false,
+   "file": "U-R03-Polierarm.webp",
+   "id": "Polierarm"
+  },
+  {
+   "sheet": "a",
+   "pos": 4,
+   "name": "A04",
+   "cell": [
+    927,
+    0,
+    1253,
+    305
+   ],
+   "bbox": [
+    949,
+    73,
+    1215,
+    288
+   ],
+   "w": 267,
+   "h": 216,
+   "touchesCell": false,
+   "file": "U-R04-Axeidic.webp",
+   "id": "Axeidic"
+  },
+  {
+   "sheet": "a",
+   "pos": 5,
+   "name": "A05",
+   "cell": [
+    0,
+    305,
+    323,
+    600
+   ],
+   "bbox": [
+    44,
+    326,
+    308,
+    581
+   ],
+   "w": 265,
+   "h": 256,
+   "touchesCell": false,
+   "file": "U-R05-Greatersword.webp",
+   "id": "Greatersword"
+  },
+  {
+   "sheet": "a",
+   "pos": 6,
+   "name": "A06",
+   "cell": [
+    323,
+    305,
+    624,
+    600
+   ],
+   "bbox": [
+    344,
+    332,
+    612,
+    577
+   ],
+   "w": 269,
+   "h": 246,
+   "touchesCell": false,
+   "file": "U-R06-Harmbalest.webp",
+   "id": "Harmbalest"
+  },
+  {
+   "sheet": "a",
+   "pos": 7,
+   "name": "A07",
+   "cell": [
+    624,
+    305,
+    927,
+    600
+   ],
+   "bbox": [
+    644,
+    350,
+    912,
+    572
+   ],
+   "w": 269,
+   "h": 223,
+   "touchesCell": false,
+   "file": "U-R07-Supershield.webp",
+   "id": "Supershield"
+  },
+  {
+   "sheet": "a",
+   "pos": 8,
+   "name": "A08",
+   "cell": [
+    927,
+    305,
+    1253,
+    600
+   ],
+   "bbox": [
+    947,
+    353,
+    1218,
+    573
+   ],
+   "w": 272,
+   "h": 221,
+   "touchesCell": false,
+   "file": "U-R08-Shieldblock.webp",
+   "id": "Shieldblock"
+  },
+  {
+   "sheet": "a",
+   "pos": 9,
+   "name": "A09",
+   "cell": [
+    0,
+    600,
+    326,
+    877
+   ],
+   "bbox": [
+    41,
+    631,
+    307,
+    857
+   ],
+   "w": 267,
+   "h": 227,
+   "touchesCell": false,
+   "file": "U-R09-Bootboost.webp",
+   "id": "Bootboost"
+  },
+  {
+   "sheet": "a",
+   "pos": 10,
+   "name": "A10",
+   "cell": [
+    326,
+    600,
+    625,
+    877
+   ],
+   "bbox": [
+    347,
+    625,
+    609,
+    860
+   ],
+   "w": 263,
+   "h": 236,
+   "touchesCell": false,
+   "file": "U-R10-Hellishmet.webp",
+   "id": "Hellishmet"
+  },
+  {
+   "sheet": "a",
+   "pos": 11,
+   "name": "A11",
+   "cell": [
+    625,
+    600,
+    923,
+    877
+   ],
+   "bbox": [
+    644,
+    635,
+    906,
+    857
+   ],
+   "w": 263,
+   "h": 223,
+   "touchesCell": false,
+   "file": "U-R11-Pantastic.webp",
+   "id": "Pantastic"
+  },
+  {
+   "sheet": "a",
+   "pos": 12,
+   "name": "A12",
+   "cell": [
+    923,
+    600,
+    1253,
+    877
+   ],
+   "bbox": [
+    944,
+    655,
+    1214,
+    859
+   ],
+   "w": 271,
+   "h": 205,
+   "touchesCell": false,
+   "file": "U-R12-Smoldershoulder.webp",
+   "id": "Smoldershoulder"
+  },
+  {
+   "sheet": "a",
+   "pos": 13,
+   "name": "A13",
+   "cell": [
+    0,
+    877,
+    324,
+    1253
+   ],
+   "bbox": [
+    40,
+    907,
+    307,
+    1169
+   ],
+   "w": 268,
+   "h": 263,
+   "touchesCell": false,
+   "file": "U-R13-Bestplate.webp",
+   "id": "Bestplate"
+  },
+  {
+   "sheet": "a",
+   "pos": 14,
+   "name": "A14",
+   "cell": [
+    324,
+    877,
+    627,
+    1253
+   ],
+   "bbox": [
+    344,
+    909,
+    612,
+    1169
+   ],
+   "w": 269,
+   "h": 261,
+   "touchesCell": false,
+   "file": "U-R14-GambesOP.webp",
+   "id": "GambesOP"
+  },
+  {
+   "sheet": "a",
+   "pos": 15,
+   "name": "A15",
+   "cell": [
+    627,
+    877,
+    927,
+    1253
+   ],
+   "bbox": [
+    643,
+    900,
+    912,
+    1168
+   ],
+   "w": 270,
+   "h": 269,
+   "touchesCell": false,
+   "file": "U-R15-equipment-optimization.webp",
+   "id": "equipment-optimization"
+  },
+  {
+   "sheet": "a",
+   "pos": 16,
+   "name": "A16",
+   "cell": [
+    927,
+    877,
+    1253,
+    1253
+   ],
+   "bbox": [
+    946,
+    926,
+    1220,
+    1170
+   ],
+   "w": 275,
+   "h": 245,
+   "touchesCell": false,
+   "file": "U-R16-research.webp",
+   "id": "research"
+  },
+  {
+   "sheet": "b",
+   "pos": 1,
+   "name": "B01",
+   "cell": [
+    0,
+    0,
+    321,
+    315
+   ],
+   "bbox": [
+    49,
+    57,
+    297,
+    293
+   ],
+   "w": 249,
+   "h": 237,
+   "touchesCell": false,
+   "file": "U-R17-Speedminer.webp",
+   "id": "Speedminer"
+  },
+  {
+   "sheet": "b",
+   "pos": 2,
+   "name": "B02",
+   "cell": [
+    321,
+    0,
+    628,
+    315
+   ],
+   "bbox": [
+    344,
+    57,
+    603,
+    292
+   ],
+   "w": 260,
+   "h": 236,
+   "touchesCell": false,
+   "file": "U-R18-Speedlumber.webp",
+   "id": "Speedlumber"
+  },
+  {
+   "sheet": "b",
+   "pos": 3,
+   "name": "B03",
+   "cell": [
+    628,
+    0,
+    942,
+    315
+   ],
+   "bbox": [
+    655,
+    50,
+    922,
+    293
+   ],
+   "w": 268,
+   "h": 244,
+   "touchesCell": false,
+   "file": "U-R19-Speedfarming.webp",
+   "id": "Speedfarming"
+  },
+  {
+   "sheet": "b",
+   "pos": 4,
+   "name": "B04",
+   "cell": [
+    942,
+    0,
+    1253,
+    315
+   ],
+   "bbox": [
+    961,
+    61,
+    1211,
+    293
+   ],
+   "w": 251,
+   "h": 233,
+   "touchesCell": false,
+   "file": "U-R20-Speedscience.webp",
+   "id": "Speedscience"
+  },
+  {
+   "sheet": "b",
+   "pos": 5,
+   "name": "B05",
+   "cell": [
+    0,
+    315,
+    326,
+    611
+   ],
+   "bbox": [
+    40,
+    360,
+    307,
+    585
+   ],
+   "w": 268,
+   "h": 226,
+   "touchesCell": false,
+   "file": "U-R21-Speedexplorer.webp",
+   "id": "Speedexplorer"
+  },
+  {
+   "sheet": "b",
+   "pos": 6,
+   "name": "B06",
+   "cell": [
+    326,
+    315,
+    629,
+    611
+   ],
+   "bbox": [
+    345,
+    341,
+    610,
+    585
+   ],
+   "w": 266,
+   "h": 245,
+   "touchesCell": false,
+   "file": "U-R22-Megaminer.webp",
+   "id": "Megaminer"
+  },
+  {
+   "sheet": "b",
+   "pos": 7,
+   "name": "B07",
+   "cell": [
+    629,
+    315,
+    935,
+    611
+   ],
+   "bbox": [
+    651,
+    338,
+    916,
+    585
+   ],
+   "w": 266,
+   "h": 248,
+   "touchesCell": false,
+   "file": "U-R23-Megalumber.webp",
+   "id": "Megalumber"
+  },
+  {
+   "sheet": "b",
+   "pos": 8,
+   "name": "B08",
+   "cell": [
+    935,
+    315,
+    1253,
+    611
+   ],
+   "bbox": [
+    957,
+    347,
+    1210,
+    586
+   ],
+   "w": 254,
+   "h": 240,
+   "touchesCell": false,
+   "file": "U-R24-Megafarming.webp",
+   "id": "Megafarming"
+  },
+  {
+   "sheet": "b",
+   "pos": 9,
+   "name": "B09",
+   "cell": [
+    0,
+    611,
+    321,
+    896
+   ],
+   "bbox": [
+    46,
+    636,
+    300,
+    877
+   ],
+   "w": 255,
+   "h": 242,
+   "touchesCell": false,
+   "file": "U-R25-Megascience.webp",
+   "id": "Megascience"
+  },
+  {
+   "sheet": "b",
+   "pos": 10,
+   "name": "B10",
+   "cell": [
+    321,
+    611,
+    627,
+    896
+   ],
+   "bbox": [
+    348,
+    649,
+    603,
+    876
+   ],
+   "w": 256,
+   "h": 228,
+   "touchesCell": false,
+   "file": "U-R26-Efficiency.webp",
+   "id": "Efficiency"
+  },
+  {
+   "sheet": "b",
+   "pos": 11,
+   "name": "B11",
+   "cell": [
+    627,
+    611,
+    937,
+    896
+   ],
+   "bbox": [
+    652,
+    651,
+    911,
+    876
+   ],
+   "w": 260,
+   "h": 226,
+   "touchesCell": false,
+   "file": "U-R27-Potency.webp",
+   "id": "Potency"
+  },
+  {
+   "sheet": "b",
+   "pos": 12,
+   "name": "B12",
+   "cell": [
+    937,
+    611,
+    1253,
+    896
+   ],
+   "bbox": [
+    963,
+    639,
+    1210,
+    875
+   ],
+   "w": 248,
+   "h": 237,
+   "touchesCell": false,
+   "file": "U-R28-Coordination.webp",
+   "id": "Coordination"
+  },
+  {
+   "sheet": "b",
+   "pos": 13,
+   "name": "B13",
+   "cell": [
+    0,
+    896,
+    319,
+    1253
+   ],
+   "bbox": [
+    52,
+    915,
+    293,
+    1160
+   ],
+   "w": 242,
+   "h": 246,
+   "touchesCell": false,
+   "file": "U-R29-TrainTacular.webp",
+   "id": "TrainTacular"
+  },
+  {
+   "sheet": "b",
+   "pos": 14,
+   "name": "B14",
+   "cell": [
+    319,
+    896,
+    626,
+    1253
+   ],
+   "bbox": [
+    348,
+    929,
+    603,
+    1160
+   ],
+   "w": 256,
+   "h": 232,
+   "touchesCell": false,
+   "file": "U-R30-Bounty.webp",
+   "id": "Bounty"
+  },
+  {
+   "sheet": "b",
+   "pos": 15,
+   "name": "B15",
+   "cell": [
+    626,
+    896,
+    933,
+    1253
+   ],
+   "bbox": [
+    650,
+    920,
+    911,
+    1160
+   ],
+   "w": 262,
+   "h": 241,
+   "touchesCell": false,
+   "file": "U-R31-Egg.webp",
+   "id": "Egg"
+  },
+  {
+   "sheet": "b",
+   "pos": 16,
+   "name": "B16",
+   "cell": [
+    933,
+    896,
+    1253,
+    1253
+   ],
+   "bbox": [
+    955,
+    920,
+    1210,
+    1160
+   ],
+   "w": 256,
+   "h": 241,
+   "touchesCell": false,
+   "file": "U-R32-Gymystic.webp",
+   "id": "Gymystic"
+  },
+  {
+   "sheet": "c",
+   "pos": 1,
+   "name": "C01",
+   "cell": [
+    0,
+    0,
+    334,
+    312
+   ],
+   "bbox": [
+    59,
+    72,
+    319,
+    288
+   ],
+   "w": 261,
+   "h": 217,
+   "touchesCell": false,
+   "file": "U-R33-Miners.webp",
+   "id": "Miners"
+  },
+  {
+   "sheet": "c",
+   "pos": 2,
+   "name": "C02",
+   "cell": [
+    334,
+    0,
+    631,
+    312
+   ],
+   "bbox": [
+    350,
+    71,
+    613,
+    288
+   ],
+   "w": 264,
+   "h": 218,
+   "touchesCell": false,
+   "file": "U-R34-Scientists.webp",
+   "id": "Scientists"
+  },
+  {
+   "sheet": "c",
+   "pos": 3,
+   "name": "C03",
+   "cell": [
+    631,
+    0,
+    925,
+    312
+   ],
+   "bbox": [
+    644,
+    69,
+    909,
+    289
+   ],
+   "w": 266,
+   "h": 221,
+   "touchesCell": false,
+   "file": "U-R35-Trainers.webp",
+   "id": "Trainers"
+  },
+  {
+   "sheet": "c",
+   "pos": 4,
+   "name": "C04",
+   "cell": [
+    925,
+    0,
+    1253,
+    312
+   ],
+   "bbox": [
+    941,
+    79,
+    1203,
+    288
+   ],
+   "w": 263,
+   "h": 210,
+   "touchesCell": false,
+   "file": "U-R36-Explorers.webp",
+   "id": "Explorers"
+  },
+  {
+   "sheet": "c",
+   "pos": 5,
+   "name": "C05",
+   "cell": [
+    0,
+    312,
+    329,
+    599
+   ],
+   "bbox": [
+    51,
+    329,
+    319,
+    585
+   ],
+   "w": 269,
+   "h": 257,
+   "touchesCell": false,
+   "file": "U-R37-Magmamancers.webp",
+   "id": "Magmamancers"
+  },
+  {
+   "sheet": "c",
+   "pos": 6,
+   "name": "C06",
+   "cell": [
+    329,
+    312,
+    622,
+    599
+   ],
+   "bbox": [
+    340,
+    354,
+    610,
+    586
+   ],
+   "w": 271,
+   "h": 233,
+   "touchesCell": false,
+   "file": "U-R38-UberHut.webp",
+   "id": "UberHut"
+  },
+  {
+   "sheet": "c",
+   "pos": 7,
+   "name": "C07",
+   "cell": [
+    622,
+    312,
+    919,
+    599
+   ],
+   "bbox": [
+    639,
+    349,
+    906,
+    584
+   ],
+   "w": 268,
+   "h": 236,
+   "touchesCell": false,
+   "file": "U-R39-UberHouse.webp",
+   "id": "UberHouse"
+  },
+  {
+   "sheet": "c",
+   "pos": 8,
+   "name": "C08",
+   "cell": [
+    919,
+    312,
+    1253,
+    599
+   ],
+   "bbox": [
+    932,
+    338,
+    1207,
+    586
+   ],
+   "w": 276,
+   "h": 249,
+   "touchesCell": false,
+   "file": "U-R40-UberMansion.webp",
+   "id": "UberMansion"
+  },
+  {
+   "sheet": "c",
+   "pos": 9,
+   "name": "C09",
+   "cell": [
+    0,
+    599,
+    325,
+    891
+   ],
+   "bbox": [
+    46,
+    627,
+    313,
+    873
+   ],
+   "w": 268,
+   "h": 247,
+   "touchesCell": false,
+   "file": "U-R41-UberHotel.webp",
+   "id": "UberHotel"
+  },
+  {
+   "sheet": "c",
+   "pos": 10,
+   "name": "C10",
+   "cell": [
+    325,
+    599,
+    622,
+    891
+   ],
+   "bbox": [
+    341,
+    637,
+    608,
+    875
+   ],
+   "w": 268,
+   "h": 239,
+   "touchesCell": false,
+   "file": "U-R42-UberResort.webp",
+   "id": "UberResort"
+  },
+  {
+   "sheet": "c",
+   "pos": 11,
+   "name": "C11",
+   "cell": [
+    622,
+    599,
+    923,
+    891
+   ],
+   "bbox": [
+    639,
+    616,
+    904,
+    876
+   ],
+   "w": 266,
+   "h": 261,
+   "touchesCell": false,
+   "file": "U-R43-Gigastation.webp",
+   "id": "Gigastation"
+  },
+  {
+   "sheet": "c",
+   "pos": 12,
+   "name": "C12",
+   "cell": [
+    923,
+    599,
+    1253,
+    891
+   ],
+   "bbox": [
+    941,
+    649,
+    1210,
+    874
+   ],
+   "w": 270,
+   "h": 226,
+   "touchesCell": false,
+   "file": "U-R44-Blockmaster.webp",
+   "id": "Blockmaster"
+  },
+  {
+   "sheet": "c",
+   "pos": 13,
+   "name": "C13",
+   "cell": [
+    0,
+    891,
+    327,
+    1253
+   ],
+   "bbox": [
+    47,
+    929,
+    311,
+    1159
+   ],
+   "w": 265,
+   "h": 231,
+   "touchesCell": false,
+   "file": "U-R45-Trapstorm.webp",
+   "id": "Trapstorm"
+  },
+  {
+   "sheet": "c",
+   "pos": 14,
+   "name": "C14",
+   "cell": [
+    327,
+    891,
+    622,
+    1253
+   ],
+   "bbox": [
+    345,
+    925,
+    610,
+    1159
+   ],
+   "w": 266,
+   "h": 235,
+   "touchesCell": false,
+   "file": "U-R46-Battle.webp",
+   "id": "Battle"
+  },
+  {
+   "sheet": "c",
+   "pos": 15,
+   "name": "C15",
+   "cell": [
+    622,
+    891,
+    920,
+    1253
+   ],
+   "bbox": [
+    637,
+    928,
+    907,
+    1160
+   ],
+   "w": 271,
+   "h": 233,
+   "touchesCell": false,
+   "file": "U-R47-Bloodlust.webp",
+   "id": "Bloodlust"
+  },
+  {
+   "sheet": "c",
+   "pos": 16,
+   "name": "C16",
+   "cell": [
+    920,
+    891,
+    1253,
+    1253
+   ],
+   "bbox": [
+    934,
+    908,
+    1210,
+    1160
+   ],
+   "w": 277,
+   "h": 253,
+   "touchesCell": false,
+   "file": "U-R48-Prismatic.webp",
+   "id": "Prismatic"
+  },
+  {
+   "sheet": "d",
+   "pos": 1,
+   "name": "D01",
+   "cell": [
+    0,
+    0,
+    322,
+    300
+   ],
+   "bbox": [
+    36,
+    37,
+    310,
+    287
+   ],
+   "w": 275,
+   "h": 251,
+   "touchesCell": false,
+   "file": "U-R49-Prismalicious.webp",
+   "id": "Prismalicious"
+  },
+  {
+   "sheet": "d",
+   "pos": 2,
+   "name": "D02",
+   "cell": [
+    322,
+    0,
+    626,
+    300
+   ],
+   "bbox": [
+    341,
+    68,
+    618,
+    287
+   ],
+   "w": 278,
+   "h": 220,
+   "touchesCell": false,
+   "file": "U-R50-Anger.webp",
+   "id": "Anger"
+  },
+  {
+   "sheet": "d",
+   "pos": 3,
+   "name": "D03",
+   "cell": [
+    626,
+    0,
+    930,
+    300
+   ],
+   "bbox": [
+    641,
+    36,
+    922,
+    286
+   ],
+   "w": 282,
+   "h": 251,
+   "touchesCell": false,
+   "file": "U-R51-Rage.webp",
+   "id": "Rage"
+  },
+  {
+   "sheet": "d",
+   "pos": 4,
+   "name": "D04",
+   "cell": [
+    930,
+    0,
+    1253,
+    300
+   ],
+   "bbox": [
+    945,
+    62,
+    1222,
+    279
+   ],
+   "w": 278,
+   "h": 218,
+   "touchesCell": false,
+   "file": "U-R52-Formations.webp",
+   "id": "Formations"
+  },
+  {
+   "sheet": "d",
+   "pos": 5,
+   "name": "D05",
+   "cell": [
+    0,
+    300,
+    326,
+    599
+   ],
+   "bbox": [
+    38,
+    318,
+    310,
+    581
+   ],
+   "w": 273,
+   "h": 264,
+   "touchesCell": false,
+   "file": "U-R53-Dominance.webp",
+   "id": "Dominance"
+  },
+  {
+   "sheet": "d",
+   "pos": 6,
+   "name": "D06",
+   "cell": [
+    326,
+    300,
+    627,
+    599
+   ],
+   "bbox": [
+    342,
+    334,
+    613,
+    582
+   ],
+   "w": 272,
+   "h": 249,
+   "touchesCell": false,
+   "file": "U-R54-Barrier.webp",
+   "id": "Barrier"
+  },
+  {
+   "sheet": "d",
+   "pos": 7,
+   "name": "D07",
+   "cell": [
+    627,
+    300,
+    931,
+    599
+   ],
+   "bbox": [
+    643,
+    330,
+    920,
+    581
+   ],
+   "w": 278,
+   "h": 252,
+   "touchesCell": false,
+   "file": "U-R55-attackRelic.webp",
+   "id": "attackRelic"
+  },
+  {
+   "sheet": "d",
+   "pos": 8,
+   "name": "D08",
+   "cell": [
+    931,
+    300,
+    1253,
+    599
+   ],
+   "bbox": [
+    945,
+    333,
+    1223,
+    582
+   ],
+   "w": 279,
+   "h": 250,
+   "touchesCell": false,
+   "file": "U-R56-enemyAttackRelic.webp",
+   "id": "enemyAttackRelic"
+  },
+  {
+   "sheet": "d",
+   "pos": 9,
+   "name": "D09",
+   "cell": [
+    0,
+    599,
+    323,
+    1253
+   ],
+   "bbox": [
+    34,
+    623,
+    313,
+    869
+   ],
+   "w": 280,
+   "h": 247,
+   "touchesCell": false,
+   "file": "U-R57-radonRelic.webp",
+   "id": "radonRelic"
+  },
+  {
+   "sheet": "d",
+   "pos": 10,
+   "name": "D10",
+   "cell": [
+    323,
+    599,
+    627,
+    1253
+   ],
+   "bbox": [
+    338,
+    632,
+    616,
+    870
+   ],
+   "w": 279,
+   "h": 239,
+   "touchesCell": false,
+   "file": "U-R58-scienceRelic.webp",
+   "id": "scienceRelic"
+  },
+  {
+   "sheet": "d",
+   "pos": 11,
+   "name": "D11",
+   "cell": [
+    627,
+    599,
+    1253,
+    1253
+   ],
+   "bbox": [
+    643,
+    624,
+    921,
+    870
+   ],
+   "w": 279,
+   "h": 247,
+   "touchesCell": false,
+   "file": "U-R59-breedRelic.webp",
+   "id": "breedRelic"
+  }
+ ]
+}

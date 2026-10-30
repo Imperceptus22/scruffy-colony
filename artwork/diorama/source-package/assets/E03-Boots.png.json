@@ -1,0 +1,23 @@
+{
+  "id": "E03",
+  "key": "Boots",
+  "name": "Boots",
+  "group": "equipment",
+  "file": "assets/E03-Boots.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 0,
+    "width": 443,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 443
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "efa9fee14e6c92289b14f3bb95a152d81d9009e26b196c76e78fb90d83b5626e",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

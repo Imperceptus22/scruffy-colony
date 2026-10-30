@@ -1,0 +1,13 @@
+Use case: stylized-concept
+Asset type: high-resolution 2x2 atlas plate of four separate shallow landscape diorama scene illustrations for a mobile game UI
+Primary request: One single square atlas in an exact two-column by two-row grid. Four equal rectangular landscape scene panels, each occupying exactly one quadrant with clean, obvious straight boundaries and a narrow neutral dark-petrol gutter between cells. Each quadrant is fully self-contained and does not bleed or overlap its neighbor. Ordered top-left Player Spire; top-right Spire Assault; bottom-left Alchemy; bottom-right Mutators.
+Input images: Images 1-4 are visual style and lighting references only; do not copy their UI, text, frames, named characters, or gameplay state.
+Scene/backdrop: Player Spire: miniature cutaway tower with readable stacked interior floors, stone and timber construction, empty of characters. Spire Assault: a miniature approach path leading toward a fortified tower gate, defensive stonework, no characters, no combat claims. Alchemy: compact alchemy workbench with a small cauldron and assorted potion bottles, no labels. Mutators: organic root and small tree tableau growing from dark petrol slate, with restrained purple accents; evocative natural forms only, no literal branching skill tree nodes or diagrams.
+Style/medium: exquisite tactile miniature diorama, painterly 3D, handcrafted game environment, consistent scale and finish across all four panels.
+Composition/framing: four equally sized landscape rectangles, each seen at a gentle elevated three-quarter view, the scene occupies the middle with safe breathing room. Clearly separated precise 2x2 layout, no external framing. Each quadrant readable alone after independent crop.
+Lighting/mood: warm top-left lantern light, gentle shadows, cozy and quietly rendered background.
+Color palette: wood, earth, moss, stone, deep petrol; restrained purple only in mutators.
+Materials/textures: detailed carved wood, earth, moss, stone, glass and aged metal.
+Text (verbatim): none.
+Constraints: no text, no labels, no numerals, no buttons, no interface, no game-state claims, no new characters or monsters, no redesigned sprites. Keep clear room where an existing character or sprite could later be composited; no character is present.
+Avoid: flat SVG look, busy backgrounds, photorealistic people, creatures, sprites, borders or ornamental frame, captions, banners, bleed between panels, unequal cells, pretend literal skill tree nodes.

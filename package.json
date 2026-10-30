@@ -1,0 +1,7 @@
+{
+  "name": "scruffy-colony-development",
+  "private": true,
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

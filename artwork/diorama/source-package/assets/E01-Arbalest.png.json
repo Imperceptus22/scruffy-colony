@@ -1,0 +1,23 @@
+{
+  "id": "E01",
+  "key": "Arbalest",
+  "name": "Arbalest",
+  "group": "equipment",
+  "file": "assets/E01-Arbalest.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 443,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 443
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "9a49ccb56e69cf70df5b9f07ff5fb7743223adcc34366c0f7b54dc0e6c6978d8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

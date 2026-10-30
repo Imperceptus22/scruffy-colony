@@ -1,0 +1,425 @@
+/* Wood and parchment for the sub views outside the colony pages (Diorama only, user approval 26.10.2026):
+   the configuration windows AutoEquip / AutoStructure / AutoJobs (V-194 A, parchment list), Player Spire with its
+   upgrades and layouts views and Nature (V-190 A, parchment cards), Mastery (V-192) and the Dimensional Generator (V-196).
+   Every rule starts with html[data-graphics="diorama"] and the view's own root (#tooltipDiv:has(.autoCheckbox),
+   #mobile-spire, #playerSpirePopout.mobile-spire-host, #natureContainer, #talentsContainer, #mobile-generator), so
+   Classic and the colony pages stay untouched. Values, handlers, saving and the original elements stay those of the game
+   and its adapters; only ground, surfaces, ink, order and states change. To withdraw it, delete this file and its <link>
+   in index.html (and the Mastery helpers in mobile-diorama-subviews.js).
+   Border images: the slice stays complete (56 62 62 56); a slab leaves out an edge with width 0, and the background under
+   a border image stays transparent. */
+
+/* ================= Configuration windows (V-194 A) ================= */
+/* The original dialogs Configure AutoEquip / AutoStructure / AutoJobs (recognised by .autoCheckbox) become one parchment
+   card on the wood: one column, a section head with a one-line explanation, each row check box · name · percent · Up To. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) {
+  --ink:#2d3025; --muted:#5b4c36; --frame:#8e6839;
+  color:var(--ink)!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px 15px 15px 14px stretch!important;
+  filter:drop-shadow(0 4px 8px #000a); padding:14px 16px 12px!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#tipTitle,#tipText,#tipText *,label,span:not(.btn)) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipTitle { padding:4px 100px 2px 0!important; text-align:left!important; font:700 1.3rem/1.2 var(--n-serif)!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) hr { border-color:#9a7a4d88!important; margin:6px 0!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #mobile-tooltip-close { position:absolute!important; top:12px; right:14px; margin:0!important; min-height:44px; }
+/* V-213: the small × is the petrol plate of the other windows. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #mobile-tooltip-close:not([hidden]) {
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoJobsError:not(:empty) { color:#8e1a0a!important; font-weight:700; }
+/* Help: a small outlined chip next to the welcome line instead of a large gold block. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipText>p:has(#autoTooltipHelpBtn) { display:flex; align-items:center; gap:8px; margin:0 0 6px!important; font-size:.9rem!important; color:var(--muted)!important; }
+/* AutoStructure explains itself in one long paragraph: quiet, smaller text above the list. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipText>p:first-child:not(:has(#autoTooltipHelpBtn)) { margin:0 0 6px!important; font-size:.85rem!important; line-height:1.35!important; color:var(--muted)!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoTooltipHelpBtn {
+  font-size:.8rem!important; min-height:44px; padding:0 14px!important; display:inline-flex; align-items:center; color:var(--ink)!important;
+  background:#f3e7ce99!important; border:1.5px solid #6f5634!important; border-image:none!important; border-radius:22px!important; box-shadow:none!important;
+}
+/* Real check boxes: a 24 px parchment box; checked = petrol with a white tick (state not by colour alone). */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .autoCheckbox {
+  display:inline-grid!important; place-items:center; flex:none; width:24px; height:24px; margin:0 8px 0 0; border-radius:5px; vertical-align:middle;
+  background:#fffaf0; border:2px solid #6f5634; font-size:0!important; color:#fff!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .autoCheckbox::before { content:""!important; font:700 16px/1 var(--font-body); }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .autoCheckbox.icon-checkbox-checked { background:#2c5b63; border-color:#173a40; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .autoCheckbox.icon-checkbox-checked::before { content:"\2713"!important; color:#fff; }
+/* The original forces label{display:inline!important}; here a label is a 44 px flex row. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) label { display:flex!important; align-items:center; min-height:44px; margin:0!important; font-weight:600!important; white-space:normal; overflow-wrap:break-word; }
+/* Fields: light parchment inputs with a bronze rim, 40 px high inside a 44 px row. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(select,input:not([type="checkbox"])) {
+  box-sizing:border-box; height:40px; min-width:0; margin:0!important; padding:0 6px!important; color:var(--ink)!important; background:#fffaf0!important;
+  border:1px solid var(--frame)!important; border-radius:5px!important; font:600 .9rem/1 var(--font-data)!important; box-shadow:inset 0 1px 2px #5a3b1a44;
+}
+/* Footer and group buttons: Apply = amber plate, Cancel and group toggles = parchment outline. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipCost .maxCenter { display:flex; gap:10px; justify-content:flex-end; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipCost .btn { min-height:44px; margin:0!important; padding:0 18px!important; display:inline-flex; align-items:center; font-weight:700!important; box-shadow:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #confirmTooltipBtn {
+  color:#392810!important; background:#e5ad43!important; border-style:solid!important; border-color:transparent!important; border-width:7px!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipCost .btn.btn-danger[onclick^="cancelTooltip"],
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .toggleAllBtn {
+  color:var(--ink)!important; background:#f3e7ce99!important; border:1.5px solid #6f5634!important; border-image:none!important; border-radius:6px!important; box-shadow:none!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #highestTierOnlyBtn[data-on="true"] { color:#fff8e6!important; background:#2c5b63!important; border-color:#173a40!important; }
+/* The list: the original table rows dissolve into one flex column; the left original column (Armor, the ratio jobs) comes
+   first, the right one (Weapons, the percent jobs) as the second section. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) { display:block!important; width:100%!important; font-size:1rem!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable)>tbody { display:flex!important; flex-direction:column; gap:2px; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) tr { display:contents!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) td { display:block!important; width:auto!important; padding:0 2px!important; border:0!important; border-bottom:1px solid #9a7a4d44!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) td:not(:has(*)) { display:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="checkboxArmor"],[data-mobile-has~="autoJobsError"]):is(#tooltipDiv) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) td:first-child { order:1; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="checkboxArmor"],[data-mobile-has~="autoJobsError"]):is(#tooltipDiv) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) td:nth-child(2) { order:3; }
+/* A row: check box and name, then percent (76 px) and Up To (86 px). A name that does not fit beside the fields keeps its
+   words whole and the fields move right-aligned into a second line (the approval preview cut long names at 130 %). */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row { display:flex!important; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:2px 6px; margin:0!important; width:auto!important; border:0!important; }
+/* Bootstrap's clearfix pseudo elements would become flex items of every row. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .row::before, html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) .row::after { display:none!important; content:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row>[class*="col-"] { flex:0 0 76px; width:auto!important; padding:0!important; border:0!important; float:none!important; min-width:0; text-align:left!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row>:first-child { flex:1 0 auto; max-width:100%; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row>[class*="col-"]:last-child:not(:first-child) { flex:0 0 86px; }
+/* Narrow or enlarged text (below 19rem: 360 px, or 130 %): a row with a percent field gives the name its own line and
+   keeps percent and Up To together beneath it, instead of leaving one field alone in a second line. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #tipText { container-type:inline-size; }
+@container (max-width:19rem) {
+  html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row:where([data-mobile-has~="select"]):is(*,mobile-has)>:first-child { flex-basis:100%; }
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) select { width:100%; }
+/* The section head explains "Up To" once; in the row only the field stays, so it never runs past the card. Labels that say
+   something else (Gigastation "At W", the Nursery zone) keep their words. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row>[class*="col-"]:last-child label { font-size:0!important; min-height:0; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable) .row>[class*="col-"]:last-child input { width:100%!important; font-size:.9rem!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoPurchaseConfigTable label:where([data-mobile-has~="structQuantGigastation"]):is(*,#mobile-has) { flex-direction:column; align-items:stretch; gap:1px; font-size:.7rem!important; color:var(--muted)!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoPurchaseConfigTable label:where([data-mobile-has~="structQuantGigastation"]):is(*,#mobile-has) input { height:30px; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoPurchaseConfigTable .row>.col-xs-12:only-child { flex:1 1 100%; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoPurchaseConfigTable label:where([data-mobile-has~="structZoneNursery"]):is(*,#mobile-has) { justify-content:space-between; gap:8px; font-size:.9rem!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoPurchaseConfigTable label:where([data-mobile-has~="structZoneNursery"]):is(*,#mobile-has) input { flex:none; width:86px!important; margin:0!important; }
+/* Section heads with a one-line explanation, as flex items of the list. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable)>tbody::before,
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) :is(#autoPurchaseConfigTable,#autoStructureConfigTable)>tbody::after {
+  white-space:pre-line; padding:8px 4px 4px; color:var(--ink); font:700 .95rem/1.3 var(--n-serif); border-bottom:2px solid #9a7a4d88;
+}
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="checkboxArmor"]):is([id]) #autoPurchaseConfigTable>tbody::before { order:0; content:"Armor\A Buy when the price is below % of your stock \00b7  Up To: limit, 0 = none"; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="checkboxArmor"]):is([id]) #autoPurchaseConfigTable>tbody::after { order:2; content:"Weapons"; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="structConfigHut"]):is(#tooltipDiv) #autoPurchaseConfigTable>tbody::before { order:0; content:"Buildings\A Buy when the price is below % of your stock \00b7  Up To: limit, 0 = none"; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable>tbody::before { order:0; content:"Workspace jobs (ratio)\A Shares the free workspaces in this ratio"; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable>tbody::after { order:2; content:"Resource jobs (percent)\A Spends up to % of the resource \00b7  Up To: limit, 0 = none"; }
+/* Scientist's "Up To" (the original puts it into the right column of the Scientist row, or into its own row once four
+   percent jobs exist) belongs to the Scientist in the ratio section, labelled as such. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:nth-child(2):where([data-mobile-has~="autoJobQuantScientist"]):is(*,#mobile-has) { order:1; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobQuantScientist2"]):is(*,#mobile-has) { order:1; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:nth-child(2):where([data-mobile-has~="autoJobQuantScientist"]):is(*,#mobile-has) .row>span { flex:1 0 auto; padding:0 0 0 32px!important; font-size:0!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:nth-child(2):where([data-mobile-has~="autoJobQuantScientist"]):is(*,#mobile-has) .row>span::before,
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobQuantScientist2"]):is(*,#mobile-has) .row>.col-xs-6:first-child::before { content:"Scientist \00b7  Up To"; font:600 .9rem/1.2 var(--font-body); color:var(--muted); }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:nth-child(2):where([data-mobile-has~="autoJobQuantScientist"]):is(*,#mobile-has) .row>label { flex:0 0 86px; display:block!important; font-size:0!important; min-height:0; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:nth-child(2):where([data-mobile-has~="autoJobQuantScientist"]):is(*,#mobile-has) .row>label>input { width:100%!important; font-size:.9rem!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobQuantScientist2"]):is(*,#mobile-has) .row>.col-xs-6:first-child { font-size:0!important; padding-left:32px!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobQuantScientist2"]):is(*,#mobile-has) .row>.col-xs-6:last-child { font-size:0!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobQuantScientist2"]):is(*,#mobile-has) input { width:100%!important; font-size:.9rem!important; }
+/* Gather on Portal: its own row at the end of the ratio section, label and field. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobSelfGather"]):is(*,#mobile-has) { display:flex!important; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:4px 6px; min-height:44px; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobSelfGather"]):is(*,#mobile-has)>[class*="col-"] { flex:1 0 auto; width:auto!important; padding:0!important; float:none!important; font-weight:600; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoJobsError"]):is(#tooltipDiv) #autoStructureConfigTable td:where([data-mobile-has~="autoJobSelfGather"]):is(*,#mobile-has)>[class*="col-"]:last-child { flex:0 0 140px; }
+/* Options card: group toggles, Only Buy and the percent helpers in one parchment well. */
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoEquipMiscTable { display:block!important; margin:8px 0 0; padding:6px; border-radius:8px; background:#c9ad7c66; box-shadow:inset 0 1px 3px #5a3b1a66; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoEquipMiscTable :is(tbody,tr) { display:flex!important; flex-wrap:wrap; gap:6px; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoEquipMiscTable td { display:block!important; flex:1 1 45%; padding:0!important; }
+html[data-graphics="diorama"] #tooltipDiv:where([data-mobile-has~="autoCheckbox"]):is([id]) #autoEquipMiscTable :is(.btn,select) { width:100%; min-height:44px; height:auto; margin:0!important; white-space:normal; font-size:.8rem!important; line-height:1.2!important; }
+
+/* ================= Player Spire (V-190 A) ================= */
+/* Wood ground; the head is one parchment band (title over Runestones); status, plan, upgrade and layout cards are nailed
+   parchment; build tools small parchment cards; the footer framed plates like the combat bar (open view = amber plate).
+   Applies to all three adapter views: tower, upgrades and controls (layouts). */
+html[data-graphics="diorama"] #mobile-spire {
+  --ink:#2d3025; --muted:#5b4c36; --frame:#8e6839;
+  background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; color:var(--ink)!important;
+}
+html[data-graphics="diorama"] #mobile-spire .ms-header {
+  margin:6px 8px 0!important; background:none!important; border-style:solid!important; border-color:transparent!important; border-radius:0!important; border-width:12px 9px 0 8px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 9px 0 8px stretch!important;
+}
+html[data-graphics="diorama"] #mobile-spire .ms-wallet {
+  margin:0 8px!important; width:auto!important; padding:4px 12px 8px!important; text-align:left; color:var(--ink)!important; font-weight:700!important;
+  background:none!important; border-style:solid!important; border-color:transparent!important; border-radius:0!important; border-width:0 9px 12px 8px!important; box-shadow:none!important; text-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 9px 12px 8px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #mobile-spire .ms-header :is(h1,button) { color:var(--ink)!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-header h1 { font:700 1.3rem/1.2 var(--n-serif)!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-scroll { padding:4px 8px 16px!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-pane>h2 { color:#f3e7ce!important; text-shadow:0 1px 2px #000!important; padding-left:4px; }
+html[data-graphics="diorama"] #mobile-spire .ms-status {
+  margin:6px 0 0; padding:8px 12px!important; border:1px solid transparent!important; background:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 11px 10px stretch!important; filter:drop-shadow(0 2px 2px #0008);
+}
+html[data-graphics="diorama"] #mobile-spire .ms-status button { color:var(--ink)!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-status :is(small,strong) { color:var(--ink)!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-status small { color:var(--muted)!important; }
+html[data-graphics="diorama"] #mobile-spire :is(.ms-growth,.ms-selection) { color:var(--ink)!important; background:#f3e7cedd!important; border:1px solid var(--frame); border-radius:6px; }
+html[data-graphics="diorama"] #mobile-spire :is(.ms-growth,.ms-selection) * { color:inherit!important; }
+/* Tower plan: one nailed parchment card; empty cells are sunken fields in the parchment, traps light fields with their
+   symbol (the original trap colours stay), enemies the dark marker of the adapter. */
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .ms-board {
+  padding:12px 13px 13px 12px!important; background:none!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .playerSpireCell { border:1px solid #8e6839!important; border-radius:5px!important; box-shadow:0 1px 1px #5a3b1a55; }
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .playerSpireCell[data-trap=""] { background:#c9ad7c!important; box-shadow:inset 0 2px 4px #5a3b1a99!important; }
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .playerSpireCell[data-trap=""]::after { color:#5b4c36!important; }
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .playerSpireCell[data-first="true"]::before { color:#2d3025!important; }
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host :is(.ms-story-details,.ms-story-details *,#playerSpireTutorial,#playerSpireTutorial *) { color:#2d3025!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #playerSpirePopout.mobile-spire-host .spireTrapIcon:not(:empty) { color:#2d3025!important; background:#fffaf0e6!important; border:1px solid #8e6839!important; }
+/* Build tools: small parchment cards with a bronze rim; the selected tool gets a gold frame and a bold name. */
+html[data-graphics="diorama"] #mobile-spire #ms-tools button {
+  color:var(--ink)!important; background:#f3e7ce!important; border:1.5px solid #8e6839!important; border-image:none!important; border-radius:6px!important;
+  box-shadow:0 2px 3px #0006!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #mobile-spire #ms-tools button * { color:inherit!important; }
+html[data-graphics="diorama"] #mobile-spire #ms-tools button[aria-pressed="true"] { outline:3px solid #e2a63b; outline-offset:-2px; font-weight:800!important; }
+/* Upgrades and layouts: one nailed parchment card each; a trap card carries its trap colour as a left stripe. */
+html[data-graphics="diorama"] #mobile-spire :is(.ms-upgrade,.ms-layout) {
+  --trap:#8e6839; margin:0 0 10px; padding:8px 12px 10px 16px!important; color:var(--ink)!important; background:none!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; box-shadow:inset 5px 0 0 var(--trap); filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade[data-trap="Fire"] { --trap:#b8452e; }
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade[data-trap="Frost"] { --trap:#3b7f9a; }
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade[data-trap="Poison"] { --trap:#4d7a3e; }
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade[data-trap="Lightning"] { --trap:#b0921f; }
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade[data-trap="Strength"] { --trap:#9a7426; }
+html[data-graphics="diorama"] #mobile-spire .ms-upgrade:is([data-trap="Condenser"],[data-trap="Knowledge"]) { --trap:#6d5a90; }
+html[data-graphics="diorama"] #mobile-spire :is(.ms-upgrade,.ms-layout) :is(h2,h3,p,span,strong,b,small) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-spire :is(.ms-upgrade,.ms-layout)>h2 { margin:2px 0 4px!important; font:700 1.08rem/1.25 var(--n-serif)!important; }
+/* Buttons in the panes: Upgrade / Load = amber plate (bold), the others a parchment outline, disabled a dashed muted
+   outline, destructive a rust outline. */
+html[data-graphics="diorama"] #mobile-spire .ms-pane button:not(#ms-tools button,#ms-status button) {
+  color:var(--ink)!important; background:#f3e7ce!important; border:1.5px solid #6f5634!important; border-image:none!important; border-radius:6px!important;
+  box-shadow:0 1px 2px #0005!important; text-shadow:none!important; font-weight:700!important;
+}
+html[data-graphics="diorama"] #mobile-spire .ms-pane button.ms-primary:not(:disabled,#ms-tools button) {
+  color:#392810!important; background:#e5ad43!important; border-style:solid!important; border-color:transparent!important; border-width:7px!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; font-weight:800!important;
+}
+html[data-graphics="diorama"] #mobile-spire .ms-pane button:not(#ms-tools button,#ms-status button):disabled { color:#4f4a40!important; background:#f3e7ce66!important; border:1.5px dashed #8d8371!important; opacity:1; }
+html[data-graphics="diorama"] #mobile-spire .ms-pane button.ms-danger:not(#ms-tools button) { color:#8e1a0a!important; border-color:#8e1a0a!important; }
+/* Footer: framed petrol plates like the combat bar; the open view is the amber plate, underlined (not by colour alone). */
+html[data-graphics="diorama"] #mobile-spire .ms-nav { background:#2b1d13!important; border-top:1px solid #6f5634!important; }
+html[data-graphics="diorama"] #mobile-spire .ms-nav button {
+  color:#fff8e6!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important; text-shadow:0 1px 1px #0008!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important; font-weight:700!important;
+}
+html[data-graphics="diorama"] #mobile-spire .ms-nav button[aria-current="page"] {
+  color:#392810!important; text-shadow:none!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important; text-decoration:underline 2px; text-underline-offset:3px;
+}
+
+/* ================= Nature (V-190) ================= */
+/* One nailed parchment card per empowerment, its colour as the left stripe; buy rows as light wells, Info a quiet icon. */
+html[data-graphics="diorama"] #mobile-colony-detail:has(#natureContainer) { background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; }
+html[data-graphics="diorama"] #natureContainer .tabColNature {
+  --emp:#3f7a2b; box-sizing:border-box; width:100%!important; margin:0 0 10px!important; padding:10px 12px 10px 16px!important; color:#2d3025!important;
+  background:none!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:inset 6px 0 0 var(--emp)!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #natureContainer .tabColWind { --emp:#4c5fa8; }
+html[data-graphics="diorama"] #natureContainer .tabColIce { --emp:#3b8db0; }
+html[data-graphics="diorama"] #natureContainer :is(.natureTop,.natureTitle,.natureTop *:not(.natureBigIcon,.natureSmallIcon),.natureBuyIcon,.natureBuyIcon *:not(.orange,.red,.natureBigIcon,.natureSmallIcon)) { color:#2d3025!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #natureContainer .natureTitle { font:700 1.2rem/1.2 var(--n-serif)!important; text-align:left!important; }
+html[data-graphics="diorama"] #natureContainer .natureBuyIcon {
+  background:#fffaf0aa!important; border:1px solid #9a7a4d88!important; border-radius:6px!important; box-shadow:0 1px 2px #5a3b1a33!important;
+}
+html[data-graphics="diorama"] #natureContainer .natureBuyIcon :is(.orange,.red) { color:#8e1a0a!important; font-weight:700; }
+html[data-graphics="diorama"] #natureContainer :is(.natureBigIcon,.natureSmallIcon) { color:var(--emp)!important; }
+html[data-graphics="diorama"] #natureContainer .mobile-info { color:#2d3025!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; }
+html[data-graphics="diorama"] #natureContainer .infoSpanNature { color:#2d3025!important; background:#f3e7ce!important; border:1px solid #8e6839!important; border-radius:12px!important; }
+html[data-graphics="diorama"] #natureContainer .infoSpanNature * { color:#2d3025!important; }
+
+/* ================= Mastery (V-192) ================= */
+/* Head as a parchment band (Dark Essence, Affordable, Respec, next cost), the Buyable / All filter as a segment track,
+   one nailed parchment card per tier with its heading and the original "n left" line, entries as rows: monogram
+   medallion · full name over a one-line effect · state · Info. The state is not told by colour alone: owned = tick,
+   buyable = gold plate "Buy", locked = lock with "Locked" or "Needs previous". Texts and helpers: mobile-diorama-subviews.js. */
+html[data-graphics="diorama"] #mobile-colony-detail:has(#talentsContainer) { background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; }
+html[data-graphics="diorama"] #talentsContainer { --ink:#2d3025; --muted:#5b4c36; color:var(--ink)!important; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg {
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"title respec" "afford respec"; align-items:center; gap:0 10px;
+  margin:6px 0 0!important; padding:2px 12px 0!important; background:none!important; border-style:solid!important; border-color:transparent!important; border-width:12px 13px 0 12px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 0 12px stretch!important;
+}
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg::before, html[data-graphics="diorama"] #talentsContainer>.row.noMarg::after { display:none!important; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div { width:auto!important; padding:0!important; float:none!important; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(1) { grid-area:afford; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(2) { grid-area:title; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(3) { grid-area:respec; }
+html[data-graphics="diorama"] #talentsContainer #talentsTitle,
+html[data-graphics="diorama"] #talentsContainer #talentsTitle * { text-align:left!important; color:var(--ink)!important; text-shadow:none!important; font:700 1.25rem/1.25 var(--n-serif)!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsAffordable { text-align:left!important; color:#2b5e1c!important; text-shadow:none!important; font:700 .85rem/1.3 var(--font-body)!important; }
+html[data-graphics="diorama"] #talentsContainer #talentRespecBtn {
+  min-height:44px; display:flex; align-items:center; padding:0 12px!important; color:#8e1a0a!important; background:#f3e7ce99!important; text-shadow:none!important;
+  border:1.5px solid #8e1a0a!important; border-image:none!important; border-radius:6px!important; box-shadow:none!important; font:700 .85rem/1.2 var(--font-body)!important; text-align:center;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsCost {
+  margin:0 0 8px!important; padding:2px 12px 6px!important; text-align:left!important; color:var(--muted)!important; text-shadow:none!important; background:none!important;
+  border-style:solid!important; border-color:transparent!important; border-width:0 13px 13px 12px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #talentsContainer #talentsCost * { color:var(--ink)!important; font-weight:700; text-shadow:none!important; }
+/* Filter: Buyable | All as one sunken segment track; the active choice is the amber plate, bold and underlined. */
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter {
+  display:flex; margin:0 0 10px; padding:2px; border-radius:10px; background:#c9ad7c; box-shadow:inset 0 2px 4px #5a3b1a99, inset 0 0 0 1px #8e6839;
+}
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button {
+  flex:1 1 0; min-height:44px; margin:0; padding:0 10px!important; color:#3a2a14!important; background:transparent!important; text-shadow:none!important;
+  border:0!important; border-image:none!important; border-radius:8px!important; box-shadow:none!important; font:600 .95rem/1.2 var(--font-body)!important;
+}
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button[aria-pressed="true"] {
+  color:#2a1606!important; font-weight:800!important; text-decoration:underline 3px; text-underline-offset:4px; border-radius:0!important;
+  border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; filter:drop-shadow(0 2px 2px #5a3b1aaa);
+}
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-empty { margin:0 0 10px; padding:10px 12px; color:var(--ink)!important; background:#f3e7cedd; border:1px solid #8e6839; border-radius:6px; font-weight:600; }
+html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentTierRow:not(:has(.talentNotPurchased:not(.talentReqNeeded))),
+html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentRowLocked,
+html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"][data-mastery-afford="false"] #talentsHere tr.talentTierRow,
+html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere td.talentContainer:has(>.talentItem:is(.talentPurchased,.talentReqNeeded)) { display:none!important; }
+/* One card per tier. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable, html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable>tbody { display:block!important; width:100%!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow {
+  display:grid!important; grid-template-columns:minmax(0,1fr); gap:4px; margin:0 0 10px; padding:6px 12px 8px!important;
+  background:none!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
+  filter:drop-shadow(0 2px 3px #0009);
+}
+/* The tier number comes from the row position (data-tier, mobile-diorama-subviews.js), so filtered rows do not renumber. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow::before { content:"Tier " attr(data-tier); color:var(--ink); font:700 1.1rem/1.3 var(--n-serif); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow>th.visually-hidden {
+  position:static!important; width:auto!important; height:auto!important; clip:auto!important; clip-path:none!important; margin:-4px 0 4px!important; overflow:visible!important; white-space:normal!important;
+  color:var(--muted)!important; font:600 .78rem/1.2 var(--font-body)!important; text-align:left; border-bottom:1px solid #9a7a4d66; padding:0 0 3px!important;
+}
+/* The original also marks a finished tier as locked (nothing left to allow); only rows with open entries grey out. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentRowLocked:has(.talentNotPurchased) { filter:drop-shadow(0 2px 3px #0009) grayscale(.35); }
+/* A tier beyond the purchase power holds only anonymous lock tiles: one line instead of six empty rows. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked) :is(td.talentContainer:has(>.talentLocked),th.visually-hidden) { display:none!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked)::after { content:"\1F512\FE0E  Revealed as you buy more masteries"; color:var(--muted); font:600 .85rem/1.3 var(--font-body); }
+/* Entry: the original button (purchase) and the Info button beside it. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer { display:grid!important; grid-template-columns:minmax(0,1fr) 44px; align-items:center; gap:4px; width:auto!important; padding:0!important; border:0!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem {
+  display:grid!important; grid-template-columns:34px minmax(0,1fr) auto; grid-template-rows:auto auto; align-items:center; gap:0 8px; width:100%!important; height:auto!important; max-height:none!important; min-height:52px;
+  padding:5px 6px!important; margin:0!important; overflow:visible!important; color:var(--ink)!important; background:#fffaf0aa!important; text-align:left!important;
+  border:1px solid #9a7a4d66!important; border-image:none!important; border-radius:6px!important; box-shadow:none!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem>br { display:none; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon {
+  grid-row:1/3; display:grid; place-items:center; width:34px; height:34px; margin:0!important; border-radius:50%; color:#fff8e6!important;
+  background:radial-gradient(circle at 35% 30%,#b8894a,#6b4416); border:1px solid #4a2c0c; box-shadow:inset 0 1px 0 #e0bd8566, 0 1px 2px #2c1e1466;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon>* { display:none!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon::before { content:attr(data-mono); font:800 .8rem/1 var(--font-data); letter-spacing:.02em; text-shadow:0 1px 0 #2e1a06; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentName {
+  grid-column:2; grid-row:1; position:static!important; height:auto!important; max-height:none!important; color:var(--ink)!important;
+  font:700 .95rem/1.2 var(--font-body)!important; white-space:normal!important; overflow:visible!important; text-overflow:clip!important;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .mobile-mastery-effect { grid-column:2; grid-row:2; color:var(--muted)!important; font:500 .8rem/1.25 var(--font-body)!important; white-space:normal; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem::after { grid-column:3; grid-row:1/3; justify-self:end; padding:4px 10px; border-radius:4px; font:700 .78rem/1.2 var(--font-body); white-space:nowrap; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased::after { content:"Buy"; color:#392810; background:linear-gradient(#e9b450,#c98a2c); border:1px solid #7a4f14; }
+/* Not enough Dark Essence for the next mastery: no gold plate, the reason in words. */
+html[data-graphics="diorama"] #talentsContainer[data-mastery-afford="false"] #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased:not(.talentReqNeeded)::after { content:"Need Essence"; color:#4f4a40; background:none; border:1px solid #8d837188; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem.talentPurchased { background:#dfe8d6aa!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem.talentPurchased::after { content:"\2713  Owned"; color:#2b5e1c; border:1px solid #2b5e1c88; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowLocked .talentItem.talentNotPurchased::after { content:"\1F512\FE0E  Locked"; color:#4f4a40; border:1px solid #8d837188; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased.talentReqNeeded::after { content:"Needs previous"; color:#4f4a40; background:none; border:1px solid #8d837188; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info {
+  width:44px; min-height:44px; margin:0!important; padding:0!important; color:var(--ink)!important; background:transparent!important; text-shadow:none!important;
+  border:0!important; border-image:none!important; box-shadow:none!important; font:600 .7rem/1 var(--font-body)!important;
+}
+/* Narrow or enlarged text: the state moves under the name, so name and effect keep the row's width. */
+@container mastery (max-width:20rem) {
+  html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem { grid-template-columns:34px minmax(0,1fr); grid-template-rows:auto auto auto; }
+  html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem::after { grid-column:2; grid-row:3; justify-self:start; margin-top:3px; }
+  html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon { grid-row:1/4; }
+}
+html[data-graphics="diorama"] #talentsContainer #talentsHere { container:mastery / inline-size; }
+
+/* ================= Dimensional Generator (V-196) ================= */
+/* Head as a parchment band with the views Generator | Upgrades | Automation as its segment track (the only way to the
+   upgrades, mobile-generator.js); status and figures one nailed card with sunken bars; mode a segment track (active =
+   amber plate, bold, underlined); limit and automation parchment cards; upgrades parchment cards with a framed purchase. */
+html[data-graphics="diorama"] #mobile-generator {
+  --ink:#2d3025; --muted:#5b4c36; --frame:#8e6839; --track:#c9ad7c;
+  background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; color:var(--ink)!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-header {
+  margin:6px 8px 0!important; background:none!important; border-style:solid!important; border-color:transparent!important; border-width:12px 9px 0 8px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 9px 0 8px stretch!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-header :is(h1,button) { color:var(--ink)!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-header h1 { font:700 1.3rem/1.2 var(--n-serif)!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-nav {
+  margin:0 8px!important; padding:4px 6px 6px!important; gap:0!important; background:none!important; border-style:solid!important; border-color:transparent!important; border-width:0 9px 12px 8px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 9px 12px 8px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #mobile-generator .mg-nav button {
+  min-height:44px; color:#3a2a14!important; background:var(--track)!important; border:0!important; border-left:1px solid #9a7a4d88!important; border-image:none!important; border-radius:0!important;
+  box-shadow:inset 0 2px 4px #5a3b1a66!important; text-shadow:none!important; font-weight:600!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-nav button:first-child { border-radius:10px 0 0 10px!important; border-left:0!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-nav button:not([hidden]):last-of-type,
+html[data-graphics="diorama"] #mobile-generator .mg-nav button:has(+button[hidden]) { border-radius:0 10px 10px 0!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-nav button[aria-current="page"] {
+  color:#2a1606!important; font-weight:800!important; text-decoration:underline 3px; text-underline-offset:4px; box-shadow:none!important;
+  border:1px solid transparent!important; border-radius:0!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-wallet { margin:8px 8px 0!important; padding-left:14px!important; color:#f3e7ce!important; background:transparent!important; text-shadow:0 1px 2px #000!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-body { padding:6px 8px 16px!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-body>:is(h2,.mg-muted) { margin-top:8px; padding-left:6px; color:#f3e7ce!important; text-shadow:0 1px 2px #000!important; }
+/* Status card: the status line as the card head, the four figures and two sunken bars below. */
+html[data-graphics="diorama"] #mobile-generator .mg-status {
+  margin:6px 0 0!important; padding:8px 14px 2px!important; color:#1f4a52!important; font:800 1rem/1.3 var(--font-data)!important; background:none!important; text-shadow:none!important;
+  border-style:solid!important; border-color:transparent!important; border-width:12px 13px 0 12px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 0 12px stretch!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-grid {
+  margin:0 0 8px!important; padding:4px 14px 6px!important; background:none!important; border-radius:0!important;
+  border-style:solid!important; border-color:transparent!important; border-width:0 13px 13px 12px!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #mobile-generator .mg-grid>div { background:transparent!important; border-color:#9a7a4d66!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-grid :is(small,span,strong) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-grid small { color:var(--muted)!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-grid progress { appearance:none; height:12px; border:1px solid #6f5634; border-radius:6px; background:#b99a66; box-shadow:inset 0 2px 2px #4a2f12aa; overflow:hidden; }
+html[data-graphics="diorama"] #mobile-generator .mg-grid progress::-webkit-progress-bar { background:#b99a66; }
+html[data-graphics="diorama"] #mobile-generator .mg-grid progress::-webkit-progress-value { background:#2c5b63; }
+html[data-graphics="diorama"] #mobile-generator #mg-storage-bar::-webkit-progress-value { background:#b4621b; }
+/* Mode: one segment track; the active mode is the amber plate, bold and underlined (not by colour alone). */
+html[data-graphics="diorama"] #mobile-generator .mg-modes { gap:0!important; padding:2px!important; border-radius:10px; background:var(--track)!important; box-shadow:inset 0 2px 4px #5a3b1a99, inset 0 0 0 1px #8e6839; }
+html[data-graphics="diorama"] #mobile-generator .mg-modes button {
+  min-height:44px; color:#3a2a14!important; background:transparent!important; border:0!important; border-left:1px solid #9a7a4d88!important; border-image:none!important; border-radius:0!important;
+  box-shadow:none!important; text-shadow:none!important; font-weight:600!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-modes button:first-child { border-left:0!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-modes button[aria-pressed="true"] {
+  color:#2a1606!important; font-weight:800!important; text-decoration:underline 3px; text-underline-offset:4px;
+  border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; filter:drop-shadow(0 2px 2px #5a3b1aaa);
+}
+html[data-graphics="diorama"] #mobile-generator :is(.mg-limit,.mg-automation) {
+  color:var(--ink)!important; background:none!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
+}
+html[data-graphics="diorama"] #mobile-generator :is(.mg-limit,.mg-automation) :is(h2,label,p,span,strong,small,div) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-limit input[type="range"] { background:#c9ad7c!important; border:1px solid #8e6839!important; border-radius:10px!important; box-shadow:inset 0 2px 3px #5a3b1a88!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-wide:not(.mg-primary) {
+  min-height:44px; color:#fff8e6!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important; text-shadow:0 1px 1px #0008!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important; font-weight:700!important;
+}
+/* Upgrades: parchment cards; the open card shows the change and the framed purchase. */
+html[data-graphics="diorama"] #mobile-generator .mg-upgrade {
+  margin:0 0 6px!important; padding:0 8px 4px!important; background:none!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 11px 10px stretch!important; filter:drop-shadow(0 2px 2px #0008);
+}
+html[data-graphics="diorama"] #mobile-generator .mg-upgrade-toggle { padding:8px 8px 8px 10px!important; color:var(--ink)!important; background:transparent!important; border:0!important; border-image:none!important; box-shadow:none!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-upgrade :is(span,strong,p,li,b,div,small,h2,h3):not(.mg-required,.mg-error) { color:var(--ink)!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator :is(.mg-required,.mg-error) { color:#8e1a0a!important; text-shadow:none!important; font-weight:700; }
+html[data-graphics="diorama"] #mobile-generator .mg-primary:not(:disabled) {
+  min-height:44px; color:#392810!important; background:#e5ad43!important; border-style:solid!important; border-color:transparent!important; border-width:7px!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; font-weight:800!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #mobile-generator .mg-primary:disabled { color:#4f4a40!important; background:#f3e7ce66!important; border:2px dashed #8d8371!important; border-image:none!important; border-radius:4px!important; opacity:1; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-installed { color:var(--ink)!important; background:#f3e7cedd!important; border:1px solid var(--frame)!important; border-image:none!important; border-radius:6px!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-generator .mg-installed * { color:var(--ink)!important; }

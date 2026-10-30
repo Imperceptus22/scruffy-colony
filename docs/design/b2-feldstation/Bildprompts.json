@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "../four-worlds/colony-art.png",
+  "outputs": [
+    {
+      "file": "walddorf.png",
+      "origin": "Unveränderte Illustration der ursprünglichen Variante B"
+    },
+    {
+      "file": "feldstation.png",
+      "prompt": "Create a new variation of the supplied wide colony illustration, preserving its premium painterly style and horizontal 3:1 composition. This is only decorative art for a mobile game header, no UI, no letters, no numbers. Theme: a warm, tidy woodland field station. Replace the tall farmhouse silhouettes with a low timber-and-canvas workshop and two modest cabins, orderly stacks of timber and tools, a small cultivated wheat patch, evergreen trees and the same distant mountain world. Visual emphasis on a compact well-organized settlement and practical natural materials, not technology or a laboratory. More restrained and graphic than the reference, broad legible silhouettes at 340px wide, warm pale linen sky #eee5d4, muted petrol foliage #315b59, warm honey wood #bd8e4e, sage accents. No people, no new gameplay objects, no labels, no decorative overlay, no machinery, no futuristic devices. Keep the artwork quiet so UI text beside it would remain the main focus."
+    },
+    {
+      "file": "abendlager.png",
+      "prompt": "Edit the supplied wide colony landscape into a cozy evening version of exactly the same settlement and visual family. Preserve the composition, houses, trees, wheat field, mountains and the hand-painted premium illustration style. This is a decorative header asset, not a UI mockup. Aspect 3:1. The sun has set: deep muted forest-green sky #1f302a and blue-green mountains, warm amber light visible in the cabin windows, a quiet honey-colored horizon, soft warm reflections on timber, subdued wheat and foliage. Friendly and warm, not sinister, no horror, no high-contrast black neon, no purple, no cyberpunk, no magical glowing objects. Silhouettes stay readable at a small 340px mobile header. No text, labels, logos, UI panels or characters."
+    }
+  ]
+}

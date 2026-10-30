@@ -1,0 +1,23 @@
+{
+  "id": "M02",
+  "key": "Mountain",
+  "name": "Mountain",
+  "group": "biomes",
+  "file": "assets/M02-Mountain.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 443,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "e864751a5ec71b68ff67d768408b161199678756e3069ebe68e57179ccdb32f6",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

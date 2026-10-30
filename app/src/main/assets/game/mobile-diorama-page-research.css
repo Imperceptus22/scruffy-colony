@@ -1,0 +1,81 @@
+/* Diorama page layer Forschung (upgrades). Loads after the shared Diorama layers and belongs to the research page round.
+   Every rule starts with html[data-graphics="diorama"] body[data-diorama-page="upgrades"],
+   so it touches no other page (mobile-diorama.js mirrors the page into body[data-diorama-page]). Shared building
+   blocks (purchase tile, chip, info, amount tabs, colony scene head, header, navigation, dialogs, tokens) stay in
+   mobile-diorama.css, mobile-diorama-night.css and mobile-diorama-header.css. */
+/* ---- Colony tabs (Mastery, Nature, Spire): one night tile each, original state as an accent bar ---- */
+/* The original paints Nature in the current empowerment colour and Spire gold (red while paused) as full
+   backgrounds; here all three share the night panel and keep that state as a 3px background strip at the bottom, so it still reads. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2>li>a {
+  background:linear-gradient(var(--research-tab-accent,transparent),var(--research-tab-accent,transparent)) bottom/100% 3px no-repeat,
+    linear-gradient(180deg,var(--n-panel2),var(--n-panel))!important; color:var(--n-ivory)!important;
+  border:1px solid var(--n-line)!important; border-radius:5px;
+  gap:6px; font-weight:600;
+}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2>li.tabSelected>a { border-color:var(--n-gold)!important; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2>li.empowerTabPoison { --research-tab-accent:#5fbf5f; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2>li.empowerTabWind { --research-tab-accent:#8fa2e6; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2>li.empowerTabIce { --research-tab-accent:#79c3f2; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #playerSpireTab { --research-tab-accent:var(--n-gold); }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #playerSpireTab.pausedSpire { --research-tab-accent:#e2584a; }
+/* The original's empowerment glyph (flask for Poison) was shrunk to a 3px speck; shown at text size in the accent colour. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #natureA>.icomoon { font-size:1.1em!important; color:var(--research-tab-accent,var(--n-gold)); }
+/* ---- Amount bar: research always buys one level (buyUpgrade ignores buyAmt), so the bar has no effect here (user, round 3) ---- */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #numTabs { display:none!important; }
+/* ---- Package C: colony lists, research, portal overview ---- */
+/* F03, calmer: "new" is a small gold dot before the title instead of a filled "!" disc on every card;
+   the "!" stays in the DOM for screen readers. Empty original badges stay hidden. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-item-meta .thingName { display:flex; align-items:baseline; gap:7px; min-width:0; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-item-meta .thingName>.alert.badge:not(:empty),
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabsUl2 .alert.badge:not(:empty) {
+  flex:none; display:inline-block; box-sizing:border-box; width:8px; height:8px; min-width:0; padding:0; margin:0;
+  border-radius:50%; background:var(--n-gold)!important; box-shadow:0 0 0 2px rgba(217,170,98,.25); font-size:0; line-height:0;
+  align-self:center;
+}
+/* In a card title the dot sits on the first line, also when a long name wraps. Its offset follows the title's own
+   size (em), because Android text zoom scales font sizes but not rem lengths; the "!" glyph stays in the DOM, painted transparent. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-item-meta .thingName>.alert.badge:not(:empty) {
+  align-self:flex-start; font-size:1em; color:transparent!important; margin-top:calc(.62em - 4px);
+}
+/* Research cards: a grid keeps name, action and info on one row at every width and text size; the name wraps
+   (at spaces, hyphenated only for one overlong word) and the cost list spans the card below. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:not([hidden]):not([data-colony-page-hidden]) {
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto auto; align-items:center; gap:2px 8px!important;
+  padding-left:10px!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.mobile-item-meta { grid-column:1; grid-row:1; min-width:0; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.thing { grid-column:2; grid-row:1; margin-left:0!important; min-height:48px; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.mobile-info { grid-column:3; grid-row:1; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.mobile-price,
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>p { grid-column:1/-1; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .thingName { overflow-wrap:break-word; hyphens:auto; }
+/* Cost list: resource names start upper case like the rest of the page; numbers keep their width while they tick. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-price {
+  white-space:normal; overflow-wrap:break-word; color:var(--n-muted)!important; text-transform:capitalize;
+  font-variant-numeric:tabular-nums; line-height:1.35; margin-top:2px;
+}
+/* Affordable now: a faint warm glow behind the card and full-strength cost; the original button colour stays the signal. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:not([hidden]):not([data-colony-page-hidden]):has(>.thingColorCanAfford) { background:linear-gradient(90deg,rgba(217,170,98,.13),rgba(217,170,98,.03) 75%)!important; }
+/* Short cost line (user, round 2): an affordable research shows no cost at all, an unaffordable one only its
+   bottleneck resource and the original wait time; the full list stays in Info. The adapter marks the bottleneck in
+   data-bottleneck / data-bottleneck-wait; without that mark (cost met but locked otherwise) the full original list shows. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanAfford)>.mobile-price { display:none; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanNotAfford)>.mobile-price[data-bottleneck] {
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:0; font-size:0!important;
+}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanNotAfford)>.mobile-price[data-bottleneck]::before {
+  content:"Needs " attr(data-bottleneck); font-size:.8rem!important; color:var(--n-ivory); font-weight:600;
+}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanNotAfford)>.mobile-price[data-bottleneck]::after {
+  content:"· " attr(data-bottleneck-wait); margin-left:.4em; padding-right:.3em; font-size:.8rem!important; color:var(--n-muted); text-transform:none; order:1;
+}
+/* V-244: a price beyond storage keeps its wait and adds "(Storage)" in the rust of the missing resource (parchment), after the
+   wait; the space sits after the wait, so a wrapped mark starts flush under "Needs". */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanNotAfford)>.mobile-price[data-bottleneck]>.mobile-storage-flag {
+  order:2; font-size:.8rem!important; color:var(--pk-rust,#e39a7b); font-weight:700;
+}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:has(>.thingColorCanNotAfford)>.mobile-price[data-bottleneck]>.mobile-storage-flag::before { content:"(Storage)"; }
+/* Not affordable: the action recedes (muted label, quiet border) so the affordable cards stand out in long lists. */
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.thingColorCanNotAfford {
+  color:var(--n-muted)!important; border-color:rgba(101,83,59,.7)!important; background:rgba(8,18,22,.35)!important; font-weight:500;
+}

@@ -1,0 +1,256 @@
+/* Time Portal in wood and parchment (Diorama only, user approval 26.10.2026): the portal confirmation (V-203) and the
+   Time Portal page with its steps Challenge, Perks and Review (V-204 A, parchment cards on wood like the colony pages).
+   The confirmation sits in the dialog frame of mobile-diorama-dialogs.css (V-197) and adds its order: title band, the
+   summary and the original question in dark ink, the warnings as equal hint cards with a coloured edge, and the two
+   actions always visible at the bottom of the card while the footer of the portal page is hidden.
+   Every rule starts with html[data-graphics="diorama"] and #tooltipDiv.mobile-portal-confirm:has(#mobile-portal-review)
+   (with the frame's own exclusions, so it outranks the frame), #portalWrapper or body:has(the open confirmation).
+   mobile-portal.js never removes the class from #tooltipDiv, so the rules also need the summary it builds: every later
+   dialog of the session keeps the plain frame. Texts, handlers and the
+   original elements stay those of the game and of mobile-portal.js. To withdraw it, delete this file and its <link> in
+   index.html (the confirmation then falls back to the plain dialog frame). */
+
+/* ================= Portal confirmation (V-203) ================= */
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) {
+  max-height:calc(100dvh - 24px)!important; overflow:auto!important; padding-bottom:0!important;
+}
+html[data-graphics="diorama"] body:has(#tooltipDiv.mobile-portal-confirm[style*="block"] #mobile-portal-review) #mobile-portal-footer { visibility:hidden!important; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #mobile-tooltip-close {
+  position:absolute!important; margin:0!important; /* place: the title band rule of mobile-diorama-dialogs.css (V-219) */
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipTitle { padding-right:56px!important; min-height:44px; }
+/* Order inside the text: summary, the original question, then the warnings and the settings hint. */
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText {
+  display:flex!important; flex-direction:column; text-align:left!important;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText>* { order:2; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText>#mobile-portal-review { order:0; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText>#portalConfirmStory { order:1; margin:8px 0!important; font-weight:600; text-align:left!important; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText>br { display:none; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #mobile-portal-review>img {
+  max-height:96px; width:100%; object-fit:cover; border-radius:3px;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #mobile-portal-review h2 {
+  margin:8px 0 2px!important; font:700 1.15rem/1.2 var(--n-serif,serif)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #mobile-portal-review p {
+  margin:2px 0!important; opacity:1!important; background:none!important; border:0!important; padding:0!important; font-size:.9rem!important;
+}
+/* Warnings: equal hint cards with a coloured edge instead of a red wall of text. */
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(#addChallenge:not(:empty),.portalError) {
+  display:block!important; margin:6px 0!important; padding:8px 10px!important; text-align:left!important; font:600 .85rem/1.35 var(--font-body)!important;
+  background:#f6e7c6!important; border:1px solid #b89566!important; border-left:4px solid #9b2c12!important; border-radius:3px!important;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(#addChallenge,.portalError) *:not(.btn) {
+  background:none!important; font-size:inherit!important;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText .heirloomRecycleWarning.portalError:not(#mobile-portal-none) { border-left-color:#5a2a8c!important; }
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(#addChallenge,.portalError) :is(span,small):not(.btn) {
+  display:block; margin-top:4px; font-weight:400; color:var(--muted)!important;
+}
+/* Buttons inside a warning (e.g. Spend Magmite) stay petrol plates with light text, here and on the review step. */
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipText :is(#addChallenge,.portalError) .btn,
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review :is(#addChallenge,.portalError) .btn {
+  display:inline-flex; align-items:center; min-height:44px; margin:6px 0 0!important; padding:0 14px!important; font-weight:700!important;
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; text-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+/* Actions always visible at the bottom of the card: Start new run as the amber plate, Keep editing as the petrol plate.
+   Start new run has no #confirmTooltipBtn; :not(#mobile-portal-none) lifts it over the frame's petrol rule. */
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost {
+  position:sticky; bottom:0; z-index:1; display:flex!important; flex-direction:column; gap:8px; margin:8px -4px 0!important; padding:10px 6px 12px!important;
+  background:#efdcb3!important; border-top:1px solid #b89566; font-size:0!important; /* hides the original &nbsp; between the actions */
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost .btn {
+  justify-content:center; width:100%!important; max-width:none!important; box-sizing:border-box; margin:0!important; white-space:normal!important; line-height:1.15!important;
+  font-size:1.05rem!important;
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobile-has~="mobile-portal-review"]):is(#tooltipDiv):not(:where([data-mobile-has~="autoCheckbox"],[data-mobile-has~="alchemyCraftTable"],[data-mobile-has~="autoItemsDiv"]):is(#tooltipDiv),[data-diorama-scene]) #tipCost .btn[onclick^="activatePortal"]:not(#mobile-portal-none) {
+  color:#2a1606!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important;
+}
+
+/* ================= Time Portal page (V-204 A) ================= */
+/* Dark plank wood like the colony pages, the head as a parchment band, nailed parchment cards with dark ink. */
+html[data-graphics="diorama"] #portalWrapper {
+  background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; color:#2d3025;
+}
+/* V-264: the band with its full wooden frame and the buttons inside it: equal padding above and below keeps Overview,
+   title and close vertically centred, the side padding keeps them off the frame (8-9px). */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-header {
+  background:transparent!important; color:#2d3025!important; border:1px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 8px 9px 9px 8px stretch!important;
+  box-sizing:border-box; gap:8px; padding:9px 13px 9px 12px!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-header :is(#mobile-portal-view-title,span) { color:#2d3025!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-view-title { min-width:0; overflow-wrap:anywhere; line-height:1.2; }
+/* Close and Overview as petrol plates instead of the dark circle. */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-header :is(#cancelPortalBtn,#mobile-portal-back) {
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+  flex:none; box-sizing:border-box; min-height:46px; height:46px; margin:0!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-header #cancelPortalBtn { width:46px!important; }
+/* Arrow and word with room on both sides, on one line. */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-header #mobile-portal-back {
+  display:inline-flex; align-items:center; padding:0 12px!important; white-space:nowrap; font:600 .85rem/1 var(--font-data)!important;
+}
+html[data-graphics="diorama"] #mobile-portal-overview #portalTitle,
+html[data-graphics="diorama"] #mobile-portal-overview>p { color:#f6e7c6!important; text-shadow:0 1px 2px #000; }
+html[data-graphics="diorama"] #portalWrapper #titleCol2>div,
+html[data-graphics="diorama"] #mobile-portal-overview>button,
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-card,#mobile-challenge-facts,#mobile-portal-run-review dl,#mobile-portal-chosen,.mobile-perk) {
+  background:transparent!important; color:#2d3025!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
+  filter:drop-shadow(0 2px 3px #0008); padding:10px 14px!important;
+}
+html[data-graphics="diorama"] #portalWrapper :is(#titleCol2>div,.mobile-portal-card,#mobile-challenge-facts,#mobile-portal-run-review dl,#mobile-portal-chosen,.mobile-perk) * { color:#2d3025; }
+html[data-graphics="diorama"] #mobile-portal-overview>button strong,
+html[data-graphics="diorama"] #portalWrapper #portalHelium { color:#7a4b0c!important; }
+/* Main actions as the amber plate, other actions as petrol plates. */
+html[data-graphics="diorama"] #portalWrapper :is(#mobile-portal-prepare,#mobile-portal-step-next,#activatePortalBtn) {
+  color:#2a1606!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-prepare * { color:#2a1606!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#mobile-portal-step-back,#mobile-portal-run-review dl button,#mobile-portal-chosen button,.mobile-perk-buy) {
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-steps li { color:#f6e7c6!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-steps li[aria-current] { color:#f0c46c!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review h2 { color:#f6e7c6!important; text-shadow:0 1px 2px #000; }
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-footer {
+  background:#2c1e14 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px!important; border-top:2px solid #6b4a2a!important;
+}
+/* Challenge tiles as small parchment cards, the chosen one with the amber edge; hints on the review as hint cards.
+   Tiles with an inline colour of the original (C2/C3 progress, black = done) keep it; the locked preview of the next
+   challenge (.nextChallenge) stays a dashed outline on the wood, finished ones a paler card. */
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing:not([style*="background-color"],.nextChallenge) {
+  background:#f3e2bf!important; color:#2d3025!important; border:1px solid #9a7442!important; border-radius:3px!important; box-shadow:0 1px 2px #0006!important;
+}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing:not([style*="background-color"],.nextChallenge) * { color:#2d3025!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.finishedChallenge:not([style*="background-color"],.nextChallenge) { background:#e3cfa6!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.nextChallenge {
+  background:transparent!important; color:#f6e7c6!important; border:1px dashed #b89566!important; border-radius:3px!important; box-shadow:none!important; text-shadow:0 1px 2px #000;
+}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.nextChallenge * { color:#f6e7c6!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing[style*="background-color"] { border:1px solid #9a7442!important; border-radius:3px!important; }
+html[data-graphics="diorama"] #portalWrapper #challengesHere .challengeThing.cBorderOn { outline:3px solid #c8891e!important; outline-offset:-1px; border-color:#8a5a12!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review :is(.portalError,#addChallenge:not(:empty),p:not(dl *)) {
+  display:block; text-align:left!important; margin:8px 0!important; padding:8px 10px!important; color:#2d3025!important; background:#f6e7c6!important;
+  border:1px solid #b89566!important; border-left:4px solid #9b2c12!important; border-radius:3px; font:600 .85rem/1.35 var(--font-body)!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review :is(.portalError,#addChallenge) *:not(.btn) { color:#2d3025!important; text-align:left!important; }
+/* What is kept is information, not a warning: a neutral edge. */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review p.mobile-portal-kept:not(#mobile-portal-none) { border-left-color:#9a7442!important; }
+/* The original question on the review step: a plain parchment card (no warning edge), so it never stands bare on the wood. */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review #portalConfirmStory {
+  margin:8px 0!important; padding:8px 10px!important; color:#2d3025!important; background:#f6e7c6!important; text-shadow:none!important;
+  border:1px solid #b89566!important; border-radius:3px; font:600 .85rem/1.35 var(--font-body)!important; text-align:left!important;
+}
+/* Text that stands directly on the wood is light ivory; segment and filter buttons are dark wood plates. */
+html[data-graphics="diorama"] #portalWrapper :is(#mobile-portal-perk-balance,.mobile-challenge-legend,#mobile-portal-challenges>h2,#mobile-portal-perks h2,#mobile-portal-perks h3,#mobile-portal-perks>p,#mobile-portal-perks>div>p,#ptabInfoText) {
+  color:#f6e7c6!important; text-shadow:0 1px 2px #000!important;
+}
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) { background:#2c1e14cc!important; border-color:#8a6d44!important; }
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) button { color:#f6e7c6!important; background:transparent!important; }
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) button[aria-pressed="true"] { color:#2a1606!important; background:#e0a640!important; }
+
+/* ================= Challenge text on parchment (V-264) ================= */
+/* With a run in progress (viewingUpgrades) the step shows the active Challenge: heading, the original text and Abandon
+   sit together on one nailed parchment card instead of the original black box. While choosing a new run, the complete
+   original rules (the details below the tiles) are the same card. Dark ink throughout; bold highlights such as Zone 40
+   keep their weight and get the dark brown of the other highlights. Elements with an inline text colour of the original keep it. */
+html[data-graphics="diorama"] #portalWrapper:not([data-portal-run]) #mobile-portal-challenges,
+html[data-graphics="diorama"] #portalWrapper #mobile-challenge-rules {
+  color:#2d3025!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
+  filter:drop-shadow(0 2px 3px #0008); padding:12px 16px!important;
+}
+html[data-graphics="diorama"] #portalWrapper:not([data-portal-run]) #mobile-portal-challenges>h2 { margin:0 0 6px!important; color:#2d3025!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #portalWrapper #viewChallenge { max-height:none!important; overflow:visible!important; background:transparent!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#viewChallengeText,#extraChallengeStuff,#mobile-challenge-rules>summary,#specificChallengeDescription) {
+  color:#2d3025!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #portalWrapper #specificChallengeDescription { margin:4px 0 0!important; padding:0!important; background:transparent!important; border:0!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#viewChallengeText,#extraChallengeStuff,#specificChallengeDescription) *:not(.btn,.btn *,.dailyTop,.dailyTop *,[style^="color"],[style*=" color"],[style*=";color"]) { color:inherit!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#viewChallengeText,#extraChallengeStuff,#specificChallengeDescription) :is(b,strong):not([style^="color"],[style*=" color"],[style*=";color"]) { color:#6b3f08!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-challenge-rules>summary { font-weight:700; }
+html[data-graphics="diorama"] #portalWrapper #mobile-challenge-rules[open]>summary { border-bottom:1px solid #c9ab7a; }
+/* Abandon Challenge (btn-warning) as the brick plate of a warning action; Finish Daily (btn-success) keeps its own plate. */
+html[data-graphics="diorama"] #portalWrapper #viewChallenge #cancelChallengeBtn.btn-warning {
+  min-height:48px; margin:4px 0 0!important; color:#fff4ea!important; background:#8f2f17!important; border:1px solid #5e1c0b!important; border-image:none!important;
+  border-radius:4px!important; box-shadow:0 1px 2px #0006!important; text-shadow:none!important;
+}
+
+/* ================= Perks step controls and the Perky planner (V-227) ================= */
+/* The neighbouring steps' style carried over: rows of controls as dark wood plates with the chosen one amber, the
+   planner's sections as parchment cards with dark ink, its head as the parchment band, Back/Close and secondary
+   actions as petrol plates, the main action as the amber plate. Function and texts stay those of mobile-perky.js. */
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-presets {
+  margin:8px 0!important; padding:2px 12px!important; color:#2d3025!important; background:#f6e7c6!important; border:1px solid #b89566!important; border-radius:3px;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-presets summary { color:#2d3025!important; font-weight:700; text-shadow:none!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#portalTabs,#portalPresetsTabs) {
+  padding:3px!important; background:#2c1e14cc!important; border:1px solid #8a6d44!important; border-radius:4px;
+}
+html[data-graphics="diorama"] #portalWrapper :is(#portalTabs,#portalPresetsTabs) li>a {
+  color:#f6e7c6!important; background:transparent!important; border:1px solid #6b4a2a!important; border-radius:3px!important; font-weight:700;
+}
+/* Large text: the six amounts as two rows of three, so Custom and Max never run into each other. */
+html[data-graphics="diorama"] #portalWrapper:where(:root[data-text-zoom="large"] *) #portalTabs { grid-template-columns:repeat(3,minmax(0,1fr))!important; }
+html[data-graphics="diorama"] #portalWrapper :is(#portalTabs,#portalPresetsTabs) li.tabSelected>a { color:#2a1606!important; background:#e0a640!important; border-color:#8a5a12!important; }
+/* Save, Load and Rename stay muted until a preset is chosen (tabNotEnabled of the original). */
+html[data-graphics="diorama"] #portalWrapper #portalPresetsTabs li.tabNotEnabled>a { color:#b9a988!important; border-style:dashed!important; font-weight:600; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky-entry:disabled { opacity:.65; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky-entry {
+  color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+
+/* Planner head: the parchment band of the portal page with petrol Back and Close. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-header {
+  margin-bottom:10px; padding:6px 8px 6px 10px!important; color:#2d3025!important; border:1px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 9px 12px 8px stretch!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-header h1 { color:#2d3025!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-header button,.pk-footer button:not(.pk-primary)) { min-width:56px; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-header button,.pk-footer button:not(.pk-primary),.pk-stepper button) {
+  padding:6px 12px!important; color:#fff6e2!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-primary {
+  color:#2a1606!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important; font-weight:700;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch!important;
+}
+
+/* Sections as parchment cards in dark ink; nothing of the planner stands bare on the wood. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-budget,.pk-goal,.pk-summary,.pk-mode,.pk-body>.pk-detail,.pk-body>.pk-table) {
+  margin:8px 0!important; color:#2d3025!important; background:transparent!important; border:1px solid transparent!important; border-radius:0!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
+  filter:drop-shadow(0 2px 3px #0008); padding:10px 14px!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-body>.pk-table { border-collapse:separate; border-spacing:0; padding:6px 10px!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-budget,.pk-goal,.pk-summary,.pk-mode,.pk-detail,.pk-table) :is(span,strong,p,h2,th,td,summary,label,small) { color:#2d3025!important; text-shadow:none!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-facts span,.pk-table th,.pk-help,.pk-goal>p,.pk-field) { color:#5b4a33!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-table th,.pk-table td) { border-bottom-color:#c9ab7a!important; }
+/* Signs stay visible; the colours are dark enough for the parchment (contrast above 4.5:1). */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-table td.pk-increase { color:#1d5a2b!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-table td.pk-decrease { color:#8f2410!important; }
+/* Headings between the cards stand on the wood in light ivory. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-body>h2 { color:#f6e7c6!important; text-shadow:0 1px 2px #000!important; }
+/* Notes as hint cards: staged = neutral edge, warnings and errors = red edge. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-loaded,.pk-warning,.pk-status:not([hidden]),.pk-body>p:not([class])) {
+  display:block; margin:8px 0!important; padding:8px 10px!important; color:#2d3025!important; background:#f6e7c6!important; text-shadow:none!important;
+  border:1px solid #b89566!important; border-left:4px solid #9a7442!important; border-radius:3px; font:600 .85rem/1.35 var(--font-body)!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(.pk-warning,.pk-status:not([hidden])) { border-left-color:#9b2c12!important; }
+/* Fields and the preset weights inside the goal card. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky :is(input,textarea,select) { color:#2d3025!important; background:#fffaf0!important; border:1px solid #9a7442!important; border-radius:3px!important; }
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-weights>div { background:#efdcb3!important; border:1px solid #c9ab7a; border-radius:3px; }
+/* Footer: the dark wood bar of the portal page with ivory help text. */
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-footer {
+  background:#2c1e14 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px!important; border-top:2px solid #6b4a2a!important; padding:10px 8px 14px!important;
+}
+html[data-graphics="diorama"] #portalWrapper #mobile-perky .pk-footer>.pk-help { color:#f6e7c6!important; text-shadow:0 1px 2px #000!important; }

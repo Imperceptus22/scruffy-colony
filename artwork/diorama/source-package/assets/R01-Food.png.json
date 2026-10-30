@@ -1,0 +1,23 @@
+{
+  "id": "R01",
+  "key": "Food",
+  "name": "Food",
+  "group": "resources",
+  "file": "assets/R01-Food.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 418,
+    "height": 430
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 430
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "7e6a49478e42edaf253d0f02c1cdc8c399317091dce0ca09ecc4b2937e150e13",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

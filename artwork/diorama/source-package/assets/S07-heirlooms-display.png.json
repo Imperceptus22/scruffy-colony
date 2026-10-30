@@ -1,0 +1,23 @@
+{
+  "id": "S07",
+  "key": "heirlooms-display",
+  "name": "Heirlooms",
+  "group": "scenes",
+  "file": "assets/S07-heirlooms-display.png",
+  "approved": false,
+  "source": "special/02-systems.png",
+  "sourceRect": {
+    "left": 10,
+    "top": 637,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/systems.edit.prompt.txt",
+  "sha256": "48e62b86063c614ca27745f2b3ece41a5c95faa32e6f628426dfcb3770c32c0d",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

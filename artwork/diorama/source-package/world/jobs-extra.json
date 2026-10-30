@@ -1,0 +1,24 @@
+{
+  "atlas": "jobs-extra",
+  "approved": false,
+  "grid": {
+    "columns": 3,
+    "rows": 1
+  },
+  "ordered_item_ids": [
+    "Amalgamator",
+    "Meteorologist",
+    "Worshipper"
+  ],
+  "empty_slots": [],
+  "reference_roles": [
+    "combat-map-concepts-2026-10-24/B-diorama.png: lighting/material reference",
+    "diorama-app-concepts-2026-10-24/01-resources.png: Scruffy Colony resource style reference",
+    "diorama-app-concepts-2026-10-24/04-map-workshop.png: map diorama style reference",
+    "world/jobs.png: existing eight-role portrait atlas style/identity reference"
+  ],
+  "source_output_hint_path": "<home>\\.codex\\generated_images\\01a16f65-0ba0-7f93-a673-b8122561c4fb\\exec-3379c380-ef89-4a0d-8f43-fe184f73150e.png",
+  "prompt_file": "jobs-extra.prompt.txt",
+  "source_keys_verified": "origin/integration/next:app/src/main/assets/game/config.js jobs block",
+  "excluded_existing_job": "Dragimp (intentionally no new art)"
+}

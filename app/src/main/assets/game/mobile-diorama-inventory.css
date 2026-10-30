@@ -1,0 +1,214 @@
+/* Shared purchase tile for buildings and equipment (material layer; the night layer overrides it). Owned by the page
+   coordinator: list-specific rules live in mobile-diorama-page-buildings.css and mobile-diorama-page-equipment.css,
+   which load last. */
+/* F11: buildings and equipment are one framed list surface with quiet divider rows (no nested frame per row).
+   Row: small proportional miniature, name, owned/level, effect, full wrapping cost and note, the buy action in the
+   same row on the right and the info button beside it. Colours come from the shared variables so the structure
+   survives a later palette change. */
+html[data-graphics="diorama"] #buildingsHere,
+html[data-graphics="diorama"] #equipmentHere {
+  --dio-row-rule:var(--line);
+  --dio-row-best:#f6deaa;
+  --dio-row-best-mark:#c98a1f;
+  container-type:inline-size;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:0 12px!important;
+  margin:4px 0 8px;
+  padding:0 var(--dio-gap);
+  background-color:var(--paper);
+  border-style:solid;
+  border-color:transparent;
+  border-width:var(--dio-panel-border);
+  border-image:var(--dio-panel);
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile {
+  border-top:1px solid var(--dio-row-rule);
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile:first-child,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile:first-child {
+  border-top-color:transparent;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:60px minmax(0,auto) minmax(0,1fr) auto;
+  /* The last (note) row absorbs the miniature's extra height, so hidden rows never open blank lines. */
+  grid-template-rows:auto auto auto minmax(0,1fr);
+  align-content:center;
+  align-items:center;
+  gap:1px 8px;
+  width:100%!important;
+  min-width:0;
+  min-height:0;
+  margin:0!important;
+  padding:5px 48px 5px 0!important;
+  text-align:left;
+  color:var(--ink)!important;
+  background:transparent!important;
+  border:0!important;
+  border-image:none!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-tile-name>.alert.badge,
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-tile-name>.alert.badge {
+  min-width:1.25em;
+  margin-right:4px;
+  padding:1px 4px;
+  text-align:center;
+  vertical-align:.05em;
+}
+/* The info button stays a sibling of the purchase button, centred in its own 48px lane at the row end. */
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.mobile-info,
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.mobile-info {
+  top:50%;
+  right:0;
+  width:44px!important;
+  min-width:44px!important;
+  height:44px!important;
+  transform:translateY(-50%);
+  color:var(--ink)!important;
+  background:transparent!important;
+}
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-tile-name {
+  grid-area:name;
+  min-width:0;
+  min-height:0;
+  padding:0;
+  color:var(--ink)!important;
+  font:600 .95rem/1.2 var(--font-data);
+  text-align:left;
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-core,
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-values,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-core {
+  display:contents;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-item-art,
+html[data-graphics="diorama"] #equipmentHere .mobile-item-art {
+  grid-area:art;
+  align-self:center;
+  justify-self:center;
+  width:56px!important;
+  height:56px!important;
+  max-width:100%;
+  object-fit:contain;
+  background:transparent!important;
+  border:0!important;
+  border-radius:4px;
+  box-shadow:none;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-owned b,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-owned b {
+  color:var(--ink)!important;
+  font-size:.95rem;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-tile-price,
+html[data-graphics="diorama"] #equipmentHere .mobile-tile-price {
+  grid-area:price;
+  min-width:0;
+  margin:0;
+  padding:0;
+  overflow:visible;
+  color:var(--ink);
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-materials,
+html[data-graphics="diorama"] #equipmentHere .mobile-materials {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-start;
+  gap:1px 10px;
+  min-width:0;
+  overflow:visible;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-material,
+html[data-graphics="diorama"] #equipmentHere .mobile-material {
+  display:flex;
+  align-items:center;
+  width:auto;
+  min-width:0;
+  gap:3px;
+  color:var(--ink);
+  font-size:.85rem;
+  line-height:1.2;
+}
+html[data-graphics="diorama"] #buildingsHere .mobile-material b,
+html[data-graphics="diorama"] #equipmentHere .mobile-material b { font-weight:600; white-space:nowrap; }
+html[data-graphics="diorama"] #buildingsHere .mobile-purchase-note,
+html[data-graphics="diorama"] #equipmentHere .mobile-purchase-note {
+  grid-area:note;
+  min-width:0;
+  min-height:0;
+  margin:0;
+  padding:0;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.2;
+  overflow-wrap:break-word;
+}
+/* Action in the same row: at least 48px high, label never split. */
+html[data-graphics="diorama"] #buildingsHere .diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .diorama-action-label:not([hidden]) {
+  grid-area:action;
+  display:grid;
+  place-items:center;
+  align-self:center;
+  min-width:76px;
+  min-height:48px;
+  padding:2px 8px;
+  color:var(--onaccent);
+  font:600 .85rem/1.1 var(--font-body);
+  text-align:center;
+  white-space:nowrap;
+  background-color:var(--accent);
+  border-style:solid;
+  border-color:transparent;
+  border-width:9px;
+  border-image:var(--dio-btn);
+  text-shadow:none;
+}
+html[data-graphics="diorama"] #buildingsHere .thing:disabled>.diorama-action-label:not([hidden]),
+html[data-graphics="diorama"] #equipmentHere .thing:disabled>.diorama-action-label:not([hidden]) {
+  color:#fff4df;
+  background-color:#62594b;
+  border-image:var(--dio-btn-disabled);
+  text-shadow:0 1px 1px #2a2119;
+}
+/* Best-value highlight: a warm row tint and a marker bar, no second frame. */
+html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing.efficientYes,
+html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing.efficientYes {
+  padding-left:6px!important;
+  background:var(--dio-row-best)!important;
+  box-shadow:inset 4px 0 0 var(--dio-row-best-mark)!important;
+}
+/* Narrow or enlarged text: name and values get the full width; the action moves next to cost and note. */
+@container (max-width:20rem) {
+  html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile>.thing,
+  html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile>.thing {
+    grid-template-columns:48px minmax(0,1fr) auto;
+  }
+  html[data-graphics="diorama"] #buildingsHere .mobile-item-art,
+  html[data-graphics="diorama"] #equipmentHere .mobile-item-art {
+    width:48px!important;
+    height:48px!important;
+  }
+}
+@media (min-width:620px) {
+  html[data-graphics="diorama"] #buyHere #buildingsHere>.mobile-inventory-tile:nth-child(2),
+  html[data-graphics="diorama"] #buyHere #equipmentHere>.mobile-inventory-tile:nth-child(2) {
+    border-top-color:transparent;
+  }
+}
+/* Real resource art in the cost line of the shared buy tile (buildings and equipment); each page sets size and the gems default. */
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="food"] { background-image:url("mobile-assets/diorama/R01-Food.webp"); }
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="wood"] { background-image:url("mobile-assets/diorama/R02-Wood.webp"); }
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="metal"] { background-image:url("mobile-assets/diorama/R03-Metal.webp"); }
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="science"] { background-image:url("mobile-assets/diorama/R04-Science.webp"); }
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="fragments"] { background-image:url("mobile-assets/diorama/R05-Fragments.webp"); }
+html[data-graphics="diorama"] #buyHere :is(#buildingsHere,#equipmentHere) .mobile-material-icon[data-resource="helium"] { background-image:url("mobile-assets/diorama/R07-Helium.webp"); }

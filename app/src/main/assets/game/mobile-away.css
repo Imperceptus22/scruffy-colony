@@ -1,0 +1,66 @@
+/* Keep the original Away controls usable on a portrait phone. */
+#offlineInnerWrapper { padding-top: 12px; }
+#offlineTitle { font-size: 1.25rem; line-height: 1.4; }
+#offlineInnerWrapper > .row { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 12px 0; }
+#offlineInnerWrapper > .row > div {
+    width: 100% !important;
+    float: none;
+    position: static !important;
+    height: auto;
+    left: auto !important;
+    padding: 0;
+    border: 0;
+}
+#offlineProgressWrapper { position: relative; height: 36px; margin: 12px 0; }
+#offlineProgressText { padding: 8px; font-size: .875rem; line-height: 20px; }
+#offlineExtraInfo { font-size: 1rem; text-align: left; }
+#offlineTimeOffline { width: 100%; font-size: 1rem; line-height: 1.45; margin-bottom: 8px; }
+#offlineExtraBtnsContainer { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+#offlineWrapper .offlineExtraBtn, #offlineWrapper .offlineMapBtn {
+    width: auto;
+    max-width: 100%;
+    min-width: 44px;
+    min-height: 48px;
+    padding: 10px 12px;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    white-space: normal;
+}
+#offlineMapBtnsInner { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+#limitTimewarpSlider { display: block; width: 100%; min-height: 48px; margin: 8px 0; }
+#offlineTimeOffline .twLimitSpeed { display: block; font-size: .875rem; line-height: 1.4; }
+#offlineWrapper #offlineFormations, #offlineWrapper #offlineSettingContainer, #offlineWrapper #offlineEffective { width: 100%; }
+#offlineWrapper #offlineSettingContainer { font-size: 1rem; }
+#offlineWrapper #offlineSettingContainer [style*="font-size"] { font-size: 1rem !important; }
+#offlineWrapper #offlineSettingContainer input, #offlineWrapper #offlineSettingContainer select { min-height: 44px; font-size: 1rem; }
+#offlineTimeOffline [style*="font-size"] { font-size: 1rem !important; }
+#offlineTimeOffline input, #offlineTimeOffline select, #offlineTimeOffline [role="button"] { min-height: 44px; font-size: 1rem; }
+#offlineFormations .offlineForm { min-width: 44px; min-height: 44px; font-size: 1rem; }
+
+/* V-297: approved parchment sheet; original visibility and action handlers remain authoritative. */
+html[data-graphics="diorama"] #offlineWrapper { --ink:#302e23; --accent:#205958; background:#422919 url("mobile-assets/diorama/P01-dark-wood.webp")!important; color:var(--ink)!important; padding:12px!important; }
+html[data-graphics="diorama"] #offlineInnerWrapper {
+    background:transparent!important; border:14px solid transparent; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch;
+    padding:12px; width:100%; color:var(--ink)!important;
+}
+html[data-graphics="diorama"] #offlineTitle { font:700 1.6rem/1.25 var(--n-serif); color:#244f43; }
+html[data-graphics="diorama"] #offlineInnerWrapper :is(#offlineZoneNumber,#offlineCellNumber,#offlineExtraInfo,#offlineTimeOffline,#offlineMapText,#offlineEffective) { color:var(--ink)!important; }
+html[data-graphics="diorama"] #offlineProgressWrapper { background:#dcc8a2!important; box-shadow:none; }
+html[data-graphics="diorama"] #offlineProgress { background:#b9d5be!important; }
+html[data-graphics="diorama"] #offlineProgressText { color:var(--ink)!important; }
+html[data-graphics="diorama"] #offlineMapBtnsInner:not([style*="display: none"]) { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); }
+html[data-graphics="diorama"] #offlineMapBtnsInner .offlineMapBtn { width:100%; min-width:0; overflow-wrap:anywhere; hyphens:auto; }
+html[data-graphics="diorama"] #offlineTimeOffline { background:transparent!important; }
+html[data-graphics="diorama"] #limitTimewarpSlider { background:#dcc8a2; accent-color:var(--accent); }
+html[data-graphics="diorama"] #offlineWrapper :is(.offlineExtraBtn,.offlineMapBtn) { background:transparent!important; border:9px solid transparent!important; border-image:var(--dio-btn)!important; color:#fff8e6!important; }
+html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) {
+    --ink:#302e23; --muted:#64543c;
+    background:transparent!important; border:14px solid transparent!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch!important;
+    border-radius:0; color:var(--ink)!important; padding:12px;
+}
+html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) :is(#tipTitle2,#tipText2,#tipCost2) { color:var(--ink)!important; }
+html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) #tipTitle2 { font-family:var(--n-serif); color:#244f43!important; }
+html[data-graphics="diorama"] #tipText2>div:has(#toggleofflineProgresstimewarp) { padding:12px; }
+html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) .optionContainer { width:100%!important; }
+html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) .settingsBtn { width:auto!important; max-width:100%; padding:10px 16px!important; overflow-wrap:anywhere; }

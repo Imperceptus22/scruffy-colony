@@ -1,0 +1,122 @@
+/* Concept header: the approved reference strip carries wordmark, plank and More plate (docs/design/diorama-night).
+   The live zone number and a transparent, accessible More button sit on top; positions are fractions of the
+   1706x196 strip, so they follow the screen width. Previous graphics never loads these rules.
+   The strip is cut out with alpha and floats over the page: each page's scene runs up to the top edge behind it. */
+html[data-graphics="diorama"] body #mobile-header#mobile-header {
+  position:absolute; top:var(--mobile-banner-height,0px); left:0; right:0; z-index:6;
+  display:block; width:100%; height:auto; min-height:0; aspect-ratio:1706/196; container-type:inline-size;
+  padding:0; border:0; border-image:none; box-shadow:none; text-shadow:none;
+  background:transparent url("mobile-assets/diorama-night/header-strip.webp") top center/100% 100% no-repeat;
+  filter:drop-shadow(0 3px 4px #0009);
+}
+/* Scene band height below the header; pages start where the band fades out. */
+html[data-graphics="diorama"] body { --dio-hero:96px; }
+/* Defaults on the root so a layer can set its own insets on body. */
+html[data-graphics="diorama"] { --dio-scene-top:14px; --dio-scene-side:13px; }
+html[data-graphics="diorama"] .mobile-page { margin-top:calc(var(--mobile-header-height) + var(--dio-hero) - 10px); }
+html[data-graphics="diorama"] #mobile-status { position:absolute; top:calc(var(--mobile-banner-height,0px) + var(--mobile-header-height)); left:0; right:0; z-index:7; }
+html[data-graphics="diorama"] #mobile-status:empty { display:none; }
+/* The recovery notice is the only in-flow element before the pages: it starts below the floating header and sits
+   above the scene band, so the save-safety instructions stay readable. The sticky banner is already in flow above it. */
+html[data-graphics="diorama"] #mobile-recovery { position:relative; z-index:8; margin-top:calc(var(--mobile-header-height) + 8px); }
+/* With the notice shown, the status line (often the reason for it) joins the flow above it instead of floating under it. */
+html[data-graphics="diorama"] body:where([data-mobile-has~="recovery"]):is(*,#mobile-has):is(*,.mobile-has) #mobile-status:not(:empty) { position:relative; top:auto; margin-top:var(--mobile-header-height); }
+/* V-259: a status line closed by a tap keeps its text but is hidden; the notice then keeps its own header distance. */
+html[data-graphics="diorama"] #mobile-status:not(:empty):not([hidden])+#mobile-recovery { margin-top:8px; }
+/* Colony, More and Map chamber: the scene band is anchored to the document top (no positioned ancestor), below the
+   Development banner when one is shown. */
+html[data-graphics="diorama"] #mobile-colony-content::before,
+html[data-graphics="diorama"] #mobile-more::before,
+html[data-graphics="diorama"] #mobile-maps::before {
+  position:absolute; top:var(--mobile-banner-height,0px); left:0; width:100%; margin:0; z-index:0;
+  height:calc(var(--mobile-header-height) + var(--dio-hero));
+  border:0; border-radius:0; box-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-more::before { content:""; background:var(--diorama-scene) center 40%/cover no-repeat; }
+html[data-graphics="diorama"] #mobile-maps::before {
+  content:""; background:var(--diorama-scene,url("mobile-assets/diorama/H04-combat-clearing.webp")) center 60%/cover no-repeat;
+}
+/* Combat: the scene lives inside the original, positioned #rightCol, so it grows upward in flow over the
+   page and container insets (--dio-scene-top above, --dio-scene-side at the sides; each layer sets its own) instead. */
+html[data-graphics="diorama"] #mobile-battle { margin-top:0; }
+html[data-graphics="diorama"] #mobile-combat-scene#mobile-combat-scene {
+  width:calc(100% + 2 * var(--dio-scene-side)); height:calc(var(--mobile-header-height) + var(--dio-hero))!important; min-height:0; max-height:none;
+  aspect-ratio:auto; margin:calc(-1 * var(--dio-scene-top)) calc(-1 * var(--dio-scene-side)) 0; border:0; border-radius:0; box-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-combat-scene .mobile-trimp-art,
+html[data-graphics="diorama"] #mobile-combat-scene #mobile-enemy-art { top:auto; height:var(--dio-hero); }
+/* Clean transition from every scene band into the page below. */
+html[data-graphics="diorama"] #mobile-colony-content::before,
+html[data-graphics="diorama"] #mobile-more::before,
+html[data-graphics="diorama"] #mobile-maps::before,
+html[data-graphics="diorama"] #mobile-combat-scene#mobile-combat-scene {
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 18px),transparent); mask-image:linear-gradient(#000 calc(100% - 18px),transparent);
+}
+/* The wordmark is part of the image; the text stays in the accessibility tree. */
+html[data-graphics="diorama"] body #mobile-header#mobile-header strong {
+  position:absolute; left:8%; top:22%; width:38%; height:52%; overflow:hidden;
+  color:transparent; font-size:1px; line-height:1; white-space:nowrap;
+}
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-zone {
+  position:absolute; left:57%; width:18.5%; top:32%; margin:0; padding:0; border:0;
+  text-align:center; white-space:nowrap; color:#173f3c;
+  /* Sized to the painted field (18.5% of the strip), not to the root font: "Zone 999" always fits the plank. Android
+     text zoom multiplies even container units, so --text-zoom (mobile-ui.js) cancels it for this painted sign. */
+  font:800 calc(3.6cqw / var(--text-zoom,1))/1 var(--font-body);
+}
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-more-button {
+  position:absolute; left:77.5%; top:15%; width:19.6%; height:70%; min-width:0; min-height:0;
+  margin:0; padding:0; color:transparent; font-size:0;
+  background:transparent!important; border:0; border-image:none; border-radius:6px; box-shadow:none; filter:none;
+}
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-more-button::before { display:none; }
+/* The painted plate is 70% of the strip height (29px at 360px); the touch area is centred on it and at least 44px tall. */
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-more-button::after {
+  content:""; position:absolute; left:-2px; right:-2px; top:50%; height:max(44px,calc(100% + 12px)); transform:translateY(-50%);
+}
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-more-button:focus-visible {
+  outline:3px solid #9be4df; outline-offset:1px;
+}
+/* The Previous graphics brand glyph would sit on the painted wordmark. */
+html[data-graphics="diorama"] body #mobile-header#mobile-header::before,
+html[data-graphics="diorama"] body #mobile-header#mobile-header strong::before { content:none; display:none; }
+
+/* V-202: the bone tag is a small parchment tag hanging under the More plate (right edge of the plate, 97% of the strip);
+   the find note is a parchment card with the amber Bone Trader plate. Both keep 44px targets. The night button rule
+   (mobile-diorama-night.css) paints every button with !important, so the plates repeat their own look the same way. */
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-bone-tag {
+  top:calc(100% + 1px); right:3.2%; height:28px; padding:0 9px 0 5px; gap:3px;
+  background:none!important; border:1px solid transparent!important; border-radius:0!important; box-shadow:none!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 8px 9px 9px 8px stretch!important;
+  color:#3a2710!important; font:800 .8rem/1 var(--font-data); text-shadow:none; filter:drop-shadow(0 2px 2px #000a);
+}
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-bone-tag:focus-visible { outline:3px solid #9be4df; outline-offset:1px; }
+/* Bone Jar in the Resources scene (MALAUFTRAG C): a 44 px prop (its own touch area) at the lower right of the scene band,
+   centred at 93.5 % of the width, foot at 92 % of the band height but never above 46 px under the header, so it stays clear
+   of the bone tag and its touch area at every width; its foot stays above the page. The picture follows the jar's stage.
+   A calm warm glow around the jar's outline sets it apart from the brown scene in every stage (V-239 A, user choice
+   28.10.2026); the full jar glows brighter and wider. No animation. */
+html[data-graphics="diorama"] body[data-diorama-page="resources"] #mobile-bone-jar-prop:not([hidden]) {
+  --jar-w:44px;
+  position:absolute; z-index:5; display:block; width:var(--jar-w); height:calc(var(--jar-w) * 1.07); min-width:44px; min-height:44px;
+  left:calc(93.5% - var(--jar-w) / 2); top:calc(var(--mobile-banner-height,0px) + max((var(--mobile-header-height) + var(--dio-hero)) * .92 - var(--jar-w) * 1.07, var(--mobile-header-height) + 46px));
+  padding:0!important; background:var(--jar-art) center bottom/contain no-repeat!important; border:0!important; border-radius:0!important;
+  box-shadow:none!important; filter:drop-shadow(0 0 3px #fff1c8) drop-shadow(0 0 8px #f6cf78) drop-shadow(0 0 14px #f0c46c99) drop-shadow(0 2px 2px #000a);
+}
+html[data-graphics="diorama"] body[data-diorama-page="resources"] #mobile-bone-jar-prop[data-stage="2"] { filter:drop-shadow(0 0 4px #fff4d0) drop-shadow(0 0 12px #ffd270) drop-shadow(0 0 22px #f0a83ccc) drop-shadow(0 2px 2px #000a); }
+html[data-graphics="diorama"] body[data-diorama-page="resources"] #mobile-bone-jar-prop:focus-visible { outline:3px solid #9be4df; outline-offset:2px; }
+/* Bone Jar full: the plaque glows amber (its own box-shadow is off in this style). */
+html[data-graphics="diorama"] body #mobile-header#mobile-header #mobile-bone-tag[data-jar-full] { filter:drop-shadow(0 0 4px #f0c46c) drop-shadow(0 0 2px #e0a640) drop-shadow(0 2px 2px #000a); }
+html[data-graphics="diorama"] body #mobile-bone-note#mobile-bone-note {
+  background:none; border:1px solid transparent; border-radius:0; box-shadow:none; color:#3a2710;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 11px 10px stretch;
+  filter:drop-shadow(0 3px 5px #000b); padding:8px 10px 8px 12px;
+}
+html[data-graphics="diorama"] body #mobile-bone-note .mobile-bone-note-text span { color:#5a3d16; }
+html[data-graphics="diorama"] body #mobile-bone-note#mobile-bone-note .mobile-bone-note-open {
+  background:none!important; color:#2a1606!important; border:7px solid transparent!important; border-radius:0!important; box-shadow:none!important; text-shadow:none;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; font:800 .84rem/1 var(--font-body); padding:0 6px;
+}
+html[data-graphics="diorama"] body #mobile-bone-note#mobile-bone-note .mobile-bone-note-close {
+  background:#3a2710!important; color:#f3e6c8!important; border:0!important; border-image:none!important; border-radius:50%!important; box-shadow:0 1px 2px #0008!important;
+}

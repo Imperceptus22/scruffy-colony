@@ -1,0 +1,86 @@
+/* Approved 30.10.2026: Help C, Heirlooms A, Achievements A. Original actions and Classic stay intact. */
+/* V-312: approved compact parchment card; original achievement data and click handlers stay in place. */
+html[data-graphics="diorama"] #achievementPopup {
+  --ink:#302e23; --muted:#64543c; --line:#b99560;
+  top:calc(var(--mobile-banner-height,0px) + 12px)!important;
+  background:#efe1c5!important; color:var(--ink)!important; border:14px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch!important;
+  border-radius:0!important; padding:10px 12px!important; text-align:left;
+  max-height:calc(100dvh - var(--mobile-banner-height,0px) - var(--mobile-nav-height,96px) - 32px);
+  scrollbar-color:var(--muted) transparent;
+}
+html[data-graphics="diorama"] #achievementPopup .achievementBtns { align-items:center; justify-content:space-between; margin:0 0 12px; }
+html[data-graphics="diorama"] #achievementPopup .mobile-achievement-caption { display:block; font-size:.75rem; line-height:1.3; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+html[data-graphics="diorama"] #achievementPopup #mobile-achievement-close { min-width:44px; min-height:44px; padding:4px; margin-left:12px; border:0; background:transparent; color:var(--ink); font-size:1.8rem; }
+html[data-graphics="diorama"] #achievementPopup>.row { display:grid; grid-template-columns:64px minmax(0,1fr); align-items:center; gap:12px; }
+html[data-graphics="diorama"] #achievementPopup>.row::before,html[data-graphics="diorama"] #achievementPopup>.row::after { display:none; }
+html[data-graphics="diorama"] #achievementPopup>.row>div { float:none; width:auto; padding:0; min-width:0; }
+html[data-graphics="diorama"] #achievementPopup #achievementPopupIconContainer { text-align:center; }
+html[data-graphics="diorama"] #achievementPopup :is(#achievementPopupTitle,.achievementPopupIcon) {
+  color:var(--ink)!important; -webkit-text-fill-color:currentColor!important; background:none!important; text-shadow:none!important;
+}
+html[data-graphics="diorama"] #achievementPopup #achievementPopupTitle { display:block; font:700 1.4rem/1.2 var(--n-serif); overflow-wrap:anywhere; }
+html[data-graphics="diorama"] #achievementPopup .achievementPopupIcon { font-size:2.6rem; }
+html[data-graphics="diorama"] #achievementPopup .icon-alarmclock::before { content:"◷"; }
+html[data-graphics="diorama"] #achievementPopup .mobile-achievement-tier { display:block; color:var(--muted); font-size:.8rem; margin-top:4px; }
+html[data-graphics="diorama"] #achievementPopup #achievementPopupDescription { margin:0; padding:14px 0; font-size:1rem; line-height:1.45; overflow-wrap:anywhere; }
+html[data-graphics="diorama"] #achievementPopup #achievementPopupReward { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:12px 0; margin-bottom:12px; border-block:1px solid var(--line); color:#205958; font-size:1rem; line-height:1.4; font-weight:700; }
+html[data-graphics="diorama"] #achievementPopup #achievementPopupReward b { color:var(--muted); font-weight:400; }
+html[data-graphics="diorama"] #achievementPopup #mobile-achievement-view { display:flex; width:100%; min-height:48px; margin:0; padding:4px; border:9px solid transparent; border-image:var(--dio-btn)!important; border-radius:0; background:transparent!important; color:#fff8e6!important; font-size:1rem; font-weight:700; }
+html[data-graphics="diorama"] :is(#mobile-help-panel,#heirloomWrapper.mobile-heirlooms,#heirloomsPopup,#achievementWrapper) {
+  --paper:#efe1c5; --surface:#faf0db; --ink:#302e23; --muted:#64543c; --accent:#205958; --onaccent:#fff8e6; --line:#b99560; --selected:#d9e6d2; --danger:#8e1a0a;
+  background:transparent!important; color:var(--ink)!important; border:14px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch!important; border-radius:0!important;
+  scrollbar-color:#64543c transparent;
+}
+/* Ratgeber first: one scrollable reading surface, with the original guide details below. */
+html[data-graphics="diorama"] #mobile-help-panel { inset:calc(var(--mobile-banner-height,0px) + 8px) 8px 8px; padding:0; }
+html[data-graphics="diorama"] #mobile-help-panel>header { padding:4px 6px 12px; flex:none; }
+html[data-graphics="diorama"] #mobile-help-title { font:700 1.6rem/1.15 var(--n-serif); }
+html[data-graphics="diorama"] #mobile-help-content { min-height:0; padding:0 10px 20px; }
+html[data-graphics="diorama"] #mobile-help-content h3 { font:700 1.5rem/1.2 var(--n-serif); color:#244f43; margin:24px 0 12px; }
+html[data-graphics="diorama"] #mobile-help-panel>header button { min-height:48px; background:transparent!important; border:9px solid transparent!important; border-image:var(--dio-btn)!important; color:#fff8e6!important; padding:2px 4px; }
+html[data-graphics="diorama"] #mobile-help-content>button { background:transparent!important; color:var(--ink)!important; border:0!important; border-bottom:1px solid var(--line)!important; border-image:none!important; box-shadow:none!important; }
+html[data-graphics="diorama"] #mobile-help-content .mobile-help-goal { border-block:1px solid var(--line); padding:12px 0; margin:20px 0 26px; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-header{background:transparent!important;color:var(--ink)!important;padding:4px 4px 10px;gap:6px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-header h1,html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms h2,html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms #selectedHeirloomTitle{font-family:var(--n-serif,serif)!important;color:#244f43!important}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-wallet{background-color:transparent!important;padding-left:4px;min-height:90px;background-size:88px 88px;padding-right:96px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-scroll{padding:0 4px 16px;scrollbar-color:#64543c transparent}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-item{color:var(--ink)!important;background:transparent!important}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-actions{background:transparent!important;padding-inline:4px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms button:not(.mh-item){background:transparent!important;border:9px solid transparent!important;border-image:var(--dio-btn)!important;color:#fff8e6!important;box-shadow:none!important;text-shadow:none!important;min-height:48px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms :is(.mh-types,.mh-detail-tabs) button[aria-pressed="false"]{border:1px solid #9a7442!important;border-image:none!important;background:#f3e4c7!important;color:#244f43!important;border-radius:3px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms :is(#modUpgradeBtn,#modUpgradeBtn10,#modUpgradeBtn100){border-image:var(--dio-btn-amber)!important;color:#302e23!important}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms #recycleHeirloomBtn{border:1px solid #8e1a0a!important;border-image:none!important;color:#8e1a0a!important}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-header button{padding:0!important;min-width:44px}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms :is(.mh-note,.mh-empty,.mh-status,.mh-capacity,.mh-item-text small,.mh-section h2 span,.mh-pair small){color:var(--muted)!important}
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms :is(input,select){color:var(--ink)!important;background:#faf0db!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementMainButtons{background:#eddbb8!important;margin:0 -8px;padding:4px 4px 8px;border-color:#ab8956}
+html[data-graphics="diorama"] #achievementWrapper #achievementMainButtons>span,html[data-graphics="diorama"] #achievementWrapper .mobile-achieve-info{border:1px solid #49756c!important;background:#f6e8ca!important;color:#205958!important;min-width:48px;min-height:48px;border-radius:3px!important}
+html[data-graphics="diorama"] #achievementWrapper :is(.achievementMainTitle,.achievementTitle){font-family:var(--n-serif,serif)!important;color:#244f43!important}
+html[data-graphics="diorama"] #achievementWrapper .achievementMainTitle{font-size:1.6rem!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementMainButtons .achievementMainTitle{margin-right:auto;align-self:center;width:auto!important;border:0!important;background:transparent!important;padding:0!important;display:block!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementHeader>br{display:none}
+html[data-graphics="diorama"] #achievementWrapper .achievementTitle{font-size:1.25rem!important;margin:18px 0 10px!important}
+html[data-graphics="diorama"] #achievementWrapper .littleAchievementWrapper{gap:0!important}
+html[data-graphics="diorama"] #achievementWrapper .achievementContainer{background:transparent!important;color:#302e23!important;border:0!important;border-bottom:1px solid #ac895570!important;border-radius:0!important;padding:12px 0!important;min-height:72px!important}
+html[data-graphics="diorama"] #achievementWrapper .mobile-achieve-name{font:600 .95rem var(--font-body)!important}
+html[data-graphics="diorama"] #achievementWrapper .mobile-achieve-status{font-size:.8rem!important;color:#64543c!important}
+html[data-graphics="diorama"] #achievementWrapper .achieveColorGreen .mobile-achieve-status{color:#285744!important;font-weight:650}
+html[data-graphics="diorama"] #achievementWrapper .achieveColorYellow .mobile-achieve-status{color:#744c0b!important;font-weight:650}
+html[data-graphics="diorama"] #achievementWrapper .achieveColorRed .mobile-achieve-status{color:#8e1a0a!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementHover{border:14px solid transparent!important;border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px stretch!important;background:transparent!important;padding:10px!important;color:#302e23!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementHover :is(#achievementHoverTitle,#achievementHoverDescription,#achievementHoverProgress,#achievementHoverReward){color:#302e23!important}
+html[data-graphics="diorama"] #achievementWrapper #achievementHelpContainer{color:#64543c!important;line-height:1.6!important;text-align:left!important}
+/* Keep space for the development banner and readable headings at enlarged font sizes. */
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms { padding:0!important; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-comparison th { white-space:normal; font-size:inherit; hyphens:auto; overflow-wrap:normal; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms .mh-comparison :is(th,td):first-child { width:32%; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms button.mh-item.is-selected { background:var(--selected)!important; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms :is(.heirloomChanceBtnContainer span,.renameHeirloomBtn) { background:var(--surface)!important; color:var(--ink)!important; border:1px solid var(--line)!important; }
+html[data-graphics="diorama"] #heirloomsPopup { box-shadow:none!important; padding:10px!important; }
+html[data-graphics="diorama"] #achievementWrapper { padding:0 8px 30px!important; top:var(--mobile-banner-height,0px)!important; height:calc(100% - var(--mobile-banner-height,0px))!important; }
+html[data-graphics="diorama"] #achievementWrapper #achievementMainButtons { flex-wrap:wrap; }
+html[data-graphics="diorama"] #achievementWrapper #achievementMainButtons .achievementMainTitle { height:auto!important; min-height:0!important; font-size:1.6rem!important; flex:1; min-width:0; overflow-wrap:anywhere; text-align:left; }
+html[data-graphics="diorama"] #heirloomWrapper.mobile-heirlooms #recycleAllHeirloomsBtn { border:1px solid var(--danger)!important; border-image:none!important; color:var(--danger)!important; }
+html[data-graphics="diorama"] #achievementWrapper .achievementContainer:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }

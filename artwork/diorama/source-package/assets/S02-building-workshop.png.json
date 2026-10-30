@@ -1,0 +1,23 @@
+{
+  "id": "S02",
+  "key": "building-workshop",
+  "name": "Bauwerkstatt",
+  "group": "scenes",
+  "file": "assets/S02-building-workshop.png",
+  "approved": false,
+  "source": "special/01-common-scenes.png",
+  "sourceRect": {
+    "left": 637,
+    "top": 10,
+    "width": 607,
+    "height": 607
+  },
+  "nativeSize": {
+    "width": 607,
+    "height": 607
+  },
+  "sourcePrompt": "special/common-scenes.prompt.txt",
+  "sha256": "bceb77167433a6724df098b5c0794d36f7803aaa32db39d9b508fea8a0452d20",
+  "needsEdgeReview": false,
+  "productionReady": false
+}

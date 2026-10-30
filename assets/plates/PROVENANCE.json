@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-24",
+  "tool": "image_gen.imagegen",
+  "reference": "docs/design/portal-homepage/approved-comp.png",
+  "referenceSha256": "EF89CA49B05D260CA3744EBA254E504A6538CF287F23408B4BC239BDB4FEFB72",
+  "hero": {
+    "source": "hero-art.png",
+    "nativeDimensions": [
+      1810,
+      869
+    ],
+    "originalGeneratedFile": "exec-02a7904a-5007-41e4-8c1d-d134db5c3187.png",
+    "shippingFile": "website/assets/hero.webp",
+    "conversion": "Pillow WebP quality88 method6; no resampling or retouching",
+    "prompt": "Create a clean production background illustration matching the provided approved homepage scene, removing ALL lettering, UI, buttons, wordmarks, black redaction rectangles and symbols added by the website. Wide cinematic panorama approximately 2.1:1, native 3072x1472 if supported. Full bleed opaque painterly high quality storybook fantasy. Preserve composition: a huge ancient stone arch portal with engraved aged bronze astronomical rings occupies right half, luminous cyan turquoise spiral; two small lovable furry pointed-eared travelers with round wooden shields walking toward it in the lower middle. Dark evergreen forest branches frame left, distant blue mountains in center-left, warm small lanterns along mossy stone path. Keep left upper 45% quiet dark blue forest/mountains suitable for ivory headline overlay. Portal is fully recognisable, cyan controlled, woodland textures detailed. This is artwork only: absolutely NO text, letters, logos, website controls or black masks. Closely match original scene geometry and character scale."
+  },
+  "cycle": {
+    "source": "cycle-art.png",
+    "nativeDimensions": [
+      2048,
+      683
+    ],
+    "originalGeneratedFile": "exec-d6c7be72-4ea8-4004-92fc-1aab273d6b4a.png",
+    "shippingFile": "website/assets/cycle.webp",
+    "conversion": "Pillow WebP quality88 method6; no resampling or retouching",
+    "prompt": "Generate a clean production very wide background illustration from this reference, artwork only. Preserve four connected storybook woodland fantasy vignettes in order across one continuous horizontal strip: 1 far left adorable furry pointed-ear traveler carrying logs in sunlit forest, 2 center-left tiny warm illuminated timber colony cottage, 3 center-right back view of furry adventurer in teal scarf looking at mountain waterfall vista, 4 far right ancient mossy stone arched portal glowing cyan. Composition panoramic approximately 8:1, request native 3072x384 or highest native wide resolution. Dark blue forest ground, warm aged gold accents, detailed painterly game-art look matching reference. No words, no labels, no icons, no website UI, no arrows, no text whatsoever. Full bleed opaque background with dark lower margin to transition into page. Do not make a collage with dividing borders."
+  },
+  "fonts": {
+    "crimsonPro": "https://raw.githubusercontent.com/google/fonts/main/ofl/crimsonpro/CrimsonPro%5Bwght%5D.ttf (downloaded 2026-10-24; OFL bundled)",
+    "manrope": "Copied from existing app font-manrope-variable.woff2 with Manrope-OFL.txt"
+  },
+  "hashes": {
+    "assets\\plates\\hero-art.png": "167f24cb2bb1befc2585c17ee73f239f4c2a434dbceaca725fede5a8e05daaf9",
+    "assets\\plates\\cycle-art.png": "28ae1832eb0f14f4f03b082e16872f1146cb760f2928ae77a4f2dd8f77d0d740",
+    "website\\assets\\hero.webp": "8a52b62326126ca025b819b0c281d46225273707b5ef67f6585b8c7521f2e3b3",
+    "website\\assets\\cycle.webp": "162bf733835bccd0447788da0760d6519f4d2d473642d0a7a71ab21a458b9c04",
+    "website\\assets\\fonts\\crimson-pro.ttf": "16aa9fb7300a93637da51fac03a071b2ff08b6bbf65f99c794c25f040b58af6a",
+    "website\\assets\\fonts\\manrope.woff2": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+  },
+  "boneJar": {
+    "date": "2026-10-28",
+    "tool": "built-in image generation tool (ChatGPT session), exported to 1024x1024 RGBA PNG",
+    "brief": "docs/design/bone-jar/MALAUFTRAG.md",
+    "approved": true,
+    "note": "Design and scene position accepted by the user on 2026-10-28 (PR #365); the source sidecars keep approved:false by convention. The stages show the same jar design but are not pixel-identical. A few outer pixels keep alpha 1/255.",
+    "items": [
+      {
+        "source": "artwork/diorama/source-package/assets/R10-bone-jar-0.png",
+        "sidecar": "artwork/diorama/source-package/assets/R10-bone-jar-0.png.json",
+        "prompt": "artwork/diorama/source-package/assets/R10-bone-jar-0.png.prompt.txt",
+        "nativeDimensions": [
+          1024,
+          1024
+        ],
+        "shippingFile": "app/src/main/assets/game/mobile-assets/diorama/R10-bone-jar-0.webp",
+        "sourceSha256": "bd1175422087ad8b4c822216ed77e19b29b52a4db6350b44a6b342f6fd1695ef",
+        "shippingSha256": "791a597825702b8b9decc8cd32b03113a7ef9f79748eaa754f2db2e89df14dac"
+      },
+      {
+        "source": "artwork/diorama/source-package/assets/R10-bone-jar-1.png",
+        "sidecar": "artwork/diorama/source-package/assets/R10-bone-jar-1.png.json",
+        "prompt": "artwork/diorama/source-package/assets/R10-bone-jar-1.png.prompt.txt",
+        "nativeDimensions": [
+          1024,
+          1024
+        ],
+        "shippingFile": "app/src/main/assets/game/mobile-assets/diorama/R10-bone-jar-1.webp",
+        "sourceSha256": "d2b69314012a4c3eac6f2240098dc2a63ce0053542fcbac970e6202c761919e7",
+        "shippingSha256": "0f8f3b5875883cc208e9fd0d19143272c4909f4d77eab03b456cfa1c83e903b3"
+      },
+      {
+        "source": "artwork/diorama/source-package/assets/R10-bone-jar-2.png",
+        "sidecar": "artwork/diorama/source-package/assets/R10-bone-jar-2.png.json",
+        "prompt": "artwork/diorama/source-package/assets/R10-bone-jar-2.png.prompt.txt",
+        "nativeDimensions": [
+          1024,
+          1024
+        ],
+        "shippingFile": "app/src/main/assets/game/mobile-assets/diorama/R10-bone-jar-2.webp",
+        "sourceSha256": "23e216c83d59aef894b4fd42dc851e2f5f6000214d18dc4d7a73288a3f6bb927",
+        "shippingSha256": "59c744d9186aa34691d44345487aed98a3b38d9a64c6db8d8bd1c1d31473392d"
+      },
+      {
+        "source": "artwork/diorama/source-package/assets/S13-bone-jar.png",
+        "sidecar": "artwork/diorama/source-package/assets/S13-bone-jar.png.json",
+        "prompt": "artwork/diorama/source-package/assets/S13-bone-jar.png.prompt.txt",
+        "nativeDimensions": [
+          1024,
+          1024
+        ],
+        "shippingFile": "app/src/main/assets/game/mobile-assets/diorama/S13-bone-jar.webp",
+        "sourceSha256": "e33119b8bd489f918894f20e2fbf96c9f15c37f1898bf1bfd7af08fbd45e073e",
+        "shippingSha256": "8ead45de9518d4369a47beb342687ff30771b5bbe28e2bc5945b5aaf72a6758b"
+      }
+    ],
+    "conversion": "sharp: R10 stages cropped to one shared square (alpha > 16 plus 12 px margin, 819 px at 127,120) so the jar keeps its place, then 256x256; S13 cropped to its alpha box plus 8 px, then 256 px wide; WebP quality 88, alpha quality 100, effort 6; no retouching"
+  },
+  "gameplayJourney": {
+    "date": "2026-10-28",
+    "tool": "image_gen.imagegen",
+    "reference": "docs/design/portal-homepage/gameplay-approved-comp.png",
+    "referenceSha256": "59ad8bffe39cbea0a9ce00bb71ca3a1518a576ae670120bf67e8478ab5343344",
+    "source": "gameplay-journey.png",
+    "nativeDimensions": [
+      2172,
+      724
+    ],
+    "originalGeneratedFile": "exec-f6ee15e8-6a34-4a20-b2aa-919fcb0bf917.png",
+    "shippingFile": "website/assets/gameplay/journey.webp",
+    "conversion": "Sharp WebP quality 88; no resampling or retouching",
+    "prompt": "docs/design/portal-homepage/gameplay-journey-prompt.txt",
+    "sourceSha256": "039430969386eeb3c06834c3de2c7eb6c4f6d6623a0b2fedd93d6a8895b3239d",
+    "shippingSha256": "7e19dec6941056444b4bd0f4a43b55fb2e7dac61ca8f864704e34b92c8182bdf"
+  }
+}

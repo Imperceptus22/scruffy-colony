@@ -1,0 +1,292 @@
+/* Optional material layer. Original nodes, visibility and state classes stay authoritative. */
+html[data-graphics="diorama"] {
+  --paper:#efe1c5; --surface:#faf0db; --ink:#302e23; --muted:#64543c;
+  --accent:#205958; --onaccent:#fff8e6; --line:#c4a777; --selected:#d9e6d2;
+  --wash:#e6d4b4; --nav:#ead7b3; --enemy:#f4dfc2; --rule:#805a35;
+  color-scheme:light;
+  /* Measured frame geometry: slices enclose every nail, brass plate and leaf cluster, so no ornament
+     is stretched into an edge or into the text-bearing centre. Widths keep the source proportions. */
+  --dio-panel:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch;
+  --dio-panel-border:12px 13px 13px 12px;
+  --dio-sign:url("mobile-assets/diorama/U05-header-wood.webp") 34 112 36 112 fill / 9px 30px 9px 30px stretch;
+  --dio-sign-border:9px 30px;
+  --dio-btn:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch;
+  --dio-btn-amber:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 9px stretch;
+  --dio-btn-disabled:url("mobile-assets/diorama/U04-button-disabled.webp") 72 fill / 9px stretch;
+  /* Secondary action of the same family: the petrol/brass rim without its filled centre. */
+  --dio-btn-rim:url("mobile-assets/diorama/U02-button-petrol.webp") 72 / 9px stretch;
+  --dio-gap:6px;
+}
+html[data-graphics="diorama"] body {
+  background:#35261b!important;
+  background-image:linear-gradient(#1c130e70,#1c130e70),url("mobile-assets/diorama/P01-dark-wood.webp")!important;
+  background-size:auto,100% auto!important; color:var(--ink)!important;
+}
+html[data-graphics="diorama"] ::selection { background:#d5b36c; color:#241f16; }
+html[data-graphics="diorama"] :focus-visible { outline:3px solid #286d68; outline-offset:3px; }
+html[data-graphics="diorama"] input { caret-color:var(--accent); }
+/* The header lives in mobile-diorama-header.css (cut-out concept strip). */
+html[data-graphics="diorama"] .mobile-page {
+  background:transparent; color:var(--ink); padding:8px 6px 16px;
+  border:0; margin:0 5px;
+}
+html[data-graphics="diorama"] .mobile-page h1,
+html[data-graphics="diorama"] .mobile-page h2 {
+  color:var(--ink); text-shadow:none; background:#efdabb;
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-sign-border)!important;
+  padding:3px 2px!important; border-image:var(--dio-sign)!important; border-radius:0!important;
+}
+html[data-graphics="diorama"] #mobile-colony-content::before {
+  height:120px; margin:0 0 10px; border-radius:5px;
+  background-image:var(--diorama-scene); background-size:100% 100%; background-position:center;
+  border:1px solid #76512e;
+}
+html[data-graphics="diorama"] #mobile-resource-summary { background:var(--surface); border-color:var(--line); }
+html[data-graphics="diorama"] #mobile-colony[data-category="jobs"]:is(*,#mobile-has),
+html[data-graphics="diorama"] #mobile-colony[data-category="upgrades"]:is(*,#mobile-has) {
+  background:#efe1c5; border-style:solid; border-color:transparent; border-width:var(--dio-panel-border);
+  border-image:var(--dio-panel);
+}
+html[data-graphics="diorama"] #mobile-colony-content[data-category="jobs"]::before,
+html[data-graphics="diorama"] #mobile-colony-content[data-category="upgrades"]::before { background-size:cover; }
+html[data-graphics="diorama"] #mobile-status:not(:empty),
+html[data-graphics="diorama"] #mobile-colony-content>p,
+html[data-graphics="diorama"] #mobile-colony-content>small {
+  color:#493d2b; background:#eddbbb; padding:6px 9px; margin:5px 6px;
+  border:1px solid #af8b56; border-radius:3px;
+}
+/* Real raster rims scale independently of the quiet text-bearing centers. */
+html[data-graphics="diorama"] .mobile-purchase,
+html[data-graphics="diorama"] .mm-pane {
+  background:var(--surface); color:var(--ink);
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-panel-border)!important;
+  border-image:var(--dio-panel)!important; box-shadow:0 2px 4px #291c1826;
+}
+/* Text sits inside the paper, a small constant gap from the visible inner edge. */
+html[data-graphics="diorama"] .mobile-purchase:not([data-diorama-art^="jobs:"]) { padding:2px var(--dio-gap)!important; }
+/* The purchase and selection handlers remain on their original buttons.
+   Controls whose original colour IS the game state (mutator nodes, toggles, unselected choices, More list rows,
+   heirloom items, achievement info, Player Spire status tiles, Spire Assault controls) keep their own appearance: a filled petrol slice would paint over that state.
+   :not(:where(...)) adds no specificity, so later Diorama sheets still override as before. */
+html[data-graphics="diorama"] button:not(.thing):not(.mobile-info):not(:where(.mutatorBox)):not(:where(#mutMenu *)):not(:where(.mh-item)):not(:where(.mh-types [aria-pressed="false"])):not(:where(#mobile-more .mm-group>*)):not(:where(#mobile-perk-filters>*)):not(:where(.mobile-perk-info)):not(:where(#mobile-portal-back)):not(:where(.mobile-achieve-info)):not(:where(.ms-status>*)):not(:where(#autoBattleMenuButtons>*)):not(:where(#abLevelButtons>*)):not(:where(.ml-assault-close>*)),
+html[data-graphics="diorama"] .btn:not(.thing):not(:where(.mutatorBox)):not(:where(#mutMenu *)):not(:where(.mh-item)):not(:where(.mh-types [aria-pressed="false"])):not(:where(#mobile-more .mm-group>*)):not(:where(#mobile-perk-filters>*)):not(:where(.mobile-perk-info)):not(:where(#mobile-portal-back)):not(:where(.mobile-achieve-info)):not(:where(.ms-status>*)):not(:where(#autoBattleMenuButtons>*)):not(:where(#abLevelButtons>*)):not(:where(.ml-assault-close>*)),
+html[data-graphics="diorama"] .workBtn {
+  color:var(--onaccent); background-color:var(--accent); background-image:none;
+  border:1px solid transparent; border-image:var(--dio-btn); border-radius:4px; text-shadow:none;
+}
+/* Original info-coloured dialog actions (Custom amount Apply/Cancel, confirmations) draw on petrol too. */
+html[data-graphics="diorama"] .btn.btn-info:not(.thing):not(:where(#mutMenu *)):not(:where(#mobile-more .mm-group>*)),
+html[data-graphics="diorama"] .btn.btn-primary:not(.thing):not(:where(#mutMenu *)):not(:where(#mobile-more .mm-group>*)),
+html[data-graphics="diorama"] .btn.btn-success:not(.thing):not(:where(#mutMenu *)):not(:where(#mobile-more .mm-group>*)) {
+  color:var(--onaccent)!important; background-color:var(--accent)!important; border-image:var(--dio-btn)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv .btn:not(.thing) { min-height:44px; padding:8px 14px!important; }
+/* Secondary role: Cancel in ordinary dialogs. The portal confirmation keeps its own order and wording. */
+html[data-graphics="diorama"] #tooltipDiv:not(.mobile-portal-confirm) #tipCost .btn[onclick^="cancelTooltip"] {
+  color:var(--accent)!important; background-color:#f6ead2!important; border-image:var(--dio-btn-rim)!important;
+}
+html[data-graphics="diorama"] button:not(.thing):disabled:not(:where(.mutatorBox)):not(:where(#mutMenu *)),
+html[data-graphics="diorama"] .btn.disabled:not(:where(.mutatorBox)):not(:where(#mutMenu *)) {
+  /* Light ink on the stone slice (measured centre #826d5f, 4.5:1). The stone itself marks the state, so no
+     extra fading: the state word ("Playing") stays readable. */
+  color:#fff4df; background:#62594b; border-color:transparent; opacity:1;
+  border-image:var(--dio-btn-disabled); text-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-colony-tabs [aria-selected="true"] {
+  color:#392810!important; background:#e5ad43!important;
+  border-image:var(--dio-btn-amber);
+}
+html[data-graphics="diorama"] #mobile-colony-tabs button { min-height:48px; }
+html[data-graphics="diorama"] .mobile-info { color:var(--muted)!important; background:transparent!important; border-image:none; box-shadow:none; }
+html[data-graphics="diorama"] #buyHere .mobile-inventory-tile>.mobile-info {
+  top:7px; right:10px; color:#203f36!important; background:#f8ecd6!important;
+  border:0!important; border-image:none!important; border-radius:50%; box-shadow:none;
+}
+html[data-graphics="diorama"] #buyHere #equipmentHere .mobile-tile-name,
+html[data-graphics="diorama"] #buyHere #buildingsHere .mobile-tile-name { padding-right:56px; }
+html[data-graphics="diorama"] #numTabs li.tabNotSelected>a { background:var(--surface)!important; color:var(--ink)!important; border-color:#b99d6c!important; }
+html[data-graphics="diorama"] #numTabs li.tabSelected>a { background:var(--accent)!important; color:var(--onaccent)!important; border-color:var(--accent)!important; }
+/* F16: one constant gap between all amount fields, including the custom value and its adjuster. */
+html[data-graphics="diorama"] #numTabs .nav { gap:var(--dio-gap)!important; }
+html[data-graphics="diorama"] #numTabs #tab5 { gap:var(--dio-gap); grid-template-columns:minmax(0,1fr) 30px; }
+html[data-graphics="diorama"] #numTabs .nav { grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,2.1fr) minmax(0,1fr); }
+html[data-graphics="diorama"] #numTabs li>a { min-height:48px; }
+html[data-graphics="diorama"] #mobile-nav {
+  color:#fff0cf; background:#35261b url("mobile-assets/diorama/P01-dark-wood.webp") center/320px;
+  padding:4px; height:auto; gap:2px;
+  /* The native shell already pads the WebView for system bars; env() here would reserve it twice. */
+  border:2px solid #77502a; box-shadow:0 -3px 7px #20140c88;
+}
+html[data-graphics="diorama"] #mobile-nav button {
+  min-height:48px; min-width:44px; height:62px; padding:5px 1px;
+  flex-direction:column; gap:2px; color:#fff0cf!important;
+  background:transparent url("mobile-assets/diorama/P04-nav-slot.webp") center/100% 100% no-repeat!important;
+  border:1px solid transparent; border-image:none!important; border-radius:3px; box-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-nav button::before {
+  width:29px; height:29px; mask:none; -webkit-mask:none;
+  background:var(--diorama-nav-icon) center/contain no-repeat; filter:drop-shadow(0 1px 1px #0008);
+}
+html[data-graphics="diorama"] #mobile-nav [data-page="battle"] { --diorama-nav-icon:url("mobile-assets/diorama/N01-combat.webp"); }
+html[data-graphics="diorama"] #mobile-nav [data-page="equipment"] { --diorama-nav-icon:url("mobile-assets/diorama/N02-equipment.webp"); }
+html[data-graphics="diorama"] #mobile-nav [data-page="resources"] { --diorama-nav-icon:url("mobile-assets/diorama/N03-resources.webp"); }
+html[data-graphics="diorama"] #mobile-nav [data-page="buildings"] { --diorama-nav-icon:url("mobile-assets/diorama/N04-buildings.webp"); }
+html[data-graphics="diorama"] #mobile-nav [data-page="jobs"] { --diorama-nav-icon:url("mobile-assets/diorama/N05-jobs.webp"); }
+html[data-graphics="diorama"] #mobile-nav [data-page="upgrades"] { --diorama-nav-icon:url("mobile-assets/diorama/N06-research.webp"); }
+html[data-graphics="diorama"] #mobile-nav .diorama-nav-label:not([hidden]) {
+  /* Six labels fit at 360 px even with large system text; icons and accessible names carry the meaning too. */
+  font:600 clamp(10px,2.9vw,.75rem)/1.1 var(--font-body); white-space:nowrap;
+  letter-spacing:-.2px; text-shadow:0 1px 1px #1c130b;
+}
+/* Android text zoom multiplies every font size; --text-zoom (mobile-ui.js) lets the labels stop at the width that
+   fits six per bar (2.9% of the bar each), so large system text never runs them into each other. */
+html[data-graphics="diorama"] #mobile-nav { container-type:inline-size; }
+html[data-graphics="diorama"] #mobile-nav .diorama-nav-label:not([hidden]) { font-size:min(clamp(10px,2.9vw,.75rem), calc(2.9cqw / var(--text-zoom,1))); }
+html[data-graphics="diorama"] #mobile-nav button[aria-current="page"] {
+  background:#205958 url("mobile-assets/diorama/P04-nav-slot.webp") center/100% 100% no-repeat!important;
+  background-blend-mode:luminosity; box-shadow:0 0 0 2px #ffbc4e,inset 0 0 6px #dba335; z-index:1;
+}
+html[data-graphics="diorama"] #mobile-nav button[aria-current="page"]::after { content:none; }
+html[data-graphics="diorama"] #buyHere .thingColorCanNotAfford { color:#5f513f!important; }
+html[data-graphics="diorama"] .mobile-inventory-tile>.thing[data-diorama-art] .mobile-item-art {
+  content:var(--diorama-art); object-fit:contain;
+}
+html[data-graphics="diorama"] .mobile-tile-owned,
+html[data-graphics="diorama"] .mobile-item-effect,
+html[data-graphics="diorama"] .mobile-tile-price { color:var(--ink); }
+html[data-graphics="diorama"] .mobile-material-missing { color:#a34327; }
+html[data-graphics="diorama"] .mobile-purchase[data-diorama-art^="jobs:"] {
+  padding:8px 8px 8px 82px; background-image:var(--diorama-art); background-size:72px 88px;
+  background-repeat:no-repeat; background-position:5px center;
+}
+html[data-graphics="diorama"] .mobile-trimp-art,
+html[data-graphics="diorama"] #mobile-enemy-art { height:124px; width:140px; max-width:42%; }
+html[data-graphics="diorama"] #goodGuyBar { background:#3e7955; }
+html[data-graphics="diorama"] #badGuyBar { background:#a64c38; }
+html[data-graphics="diorama"] .mobile-portal-hero { content:url("mobile-assets/diorama/S06-portal.webp"); aspect-ratio:2.7; object-position:center 45%; }
+/* More: the page lies on the wood; each pane or detail page is one parchment sheet (no sheet-in-sheet). */
+html[data-graphics="diorama"] #mobile-more { background-color:transparent; }
+html[data-graphics="diorama"] #mobile-more .mm-detail {
+  background:var(--surface); color:var(--ink); padding:4px var(--dio-gap) 10px;
+  border-style:solid; border-color:transparent; border-width:var(--dio-panel-border);
+  border-image:var(--dio-panel); box-shadow:0 2px 4px #291c1826;
+}
+html[data-graphics="diorama"] #mobile-more .mm-tabs button,
+html[data-graphics="diorama"] #mobile-more .mm-detail-head button,
+html[data-graphics="diorama"] #mobile-more .mm-entry,
+html[data-graphics="diorama"] #mobile-more .mm-group>button,
+html[data-graphics="diorama"] #mobile-more .mm-about>button {
+  color:var(--ink); background:#f4e6cc; border-image:none; text-shadow:none;
+}
+html[data-graphics="diorama"] #mobile-more .mm-group>* { color:var(--ink)!important; background-color:transparent!important; border-image:none; }
+/* About rows mix three original button kinds; they read as one list like every other More group. */
+html[data-graphics="diorama"] #mobile-more .mm-about>button {
+  display:block; width:100%; min-height:48px; margin:0; padding:14px 8px; text-align:left;
+  background:transparent; border:0; border-bottom:1px solid var(--line); border-radius:0; box-shadow:none;
+  font:400 1rem var(--font-body);
+}
+/* Framed sheets and signs: the colour stays inside the raster rim, so no pale corners show on the wood. */
+html[data-graphics="diorama"] .mobile-page h1,
+html[data-graphics="diorama"] .mobile-page h2,
+html[data-graphics="diorama"] .mm-pane,
+html[data-graphics="diorama"] #mobile-more .mm-detail,
+html[data-graphics="diorama"] #mobile-portal-overview>h1,
+html[data-graphics="diorama"] #mobile-portal-overview>button,
+html[data-graphics="diorama"] #portalWrapper #titleCol2>div { background-clip:padding-box; }
+html[data-graphics="diorama"] #mobile-more .mm-group>.tealColor { background-color:var(--selected)!important; }
+html[data-graphics="diorama"] #mobile-more .mm-tabs { background:#ead7b3; border-bottom-color:#b99d6c; margin:0 0 10px; }
+html[data-graphics="diorama"] #mobile-more .mm-tabs button { display:flex; align-items:center; justify-content:center; text-align:center; min-height:48px; }
+html[data-graphics="diorama"] #mobile-more .mm-tabs button[aria-current="page"] {
+  color:var(--onaccent); background:var(--accent);
+}
+/* Detail head: Back plus one sign that names the page. */
+html[data-graphics="diorama"] #mobile-more .mm-detail-head { gap:var(--dio-gap); margin:0 0 10px; background:transparent; border:0; }
+html[data-graphics="diorama"] #mobile-more .mm-detail-head button { flex:none; min-height:48px; background:transparent; }
+html[data-graphics="diorama"] #mobile-more .mm-detail-head h2 { flex:1; min-width:0; }
+/* Save slot names are list entries, not section signs. */
+html[data-graphics="diorama"] .mobile-page .mobile-save-slot h2 {
+  background:none; border:0!important; border-image:none!important; padding:0!important;
+  font:700 1.05rem/1.3 var(--font-data); color:var(--ink);
+}
+/* F14 Graphic style: the page sign already names the choice; the field label stays for assistive technology. */
+html[data-graphics="diorama"] #mobile-more .qol-page>label.mobile-graphic-style:is(*,mobile-has)>span {
+  position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap;
+}
+html[data-graphics="diorama"] #mobile-more .qol-page:has(>label>select[aria-label="Graphic style"])::before {
+  content:""; display:block; height:120px; margin:0 0 10px; border:1px solid #76512e; border-radius:5px;
+  background:url("mobile-assets/diorama/S01-colony.webp") center/cover;
+}
+html[data-graphics="diorama"] #mobile-more select[aria-label="Graphic style"] {
+  width:100%; min-height:56px; padding:8px 12px; color:var(--ink); background-color:#fff8e9;
+  border:2px solid var(--accent); border-radius:5px; font:600 1.05rem var(--font-body);
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm {
+  color:var(--ink)!important; background:#f5e6c9!important;
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-panel-border)!important;
+  border-image:var(--dio-panel)!important;
+}
+html[data-graphics="diorama"] .mobile-portal-confirm #mobile-portal-review>img {
+  content:url("mobile-assets/diorama/S06-portal.webp");
+  aspect-ratio:2.4; width:100%; height:auto; object-fit:cover;
+}
+html[data-graphics="diorama"] .mobile-portal-confirm #tipTitle {
+  color:#203f36; background:#eed9b5; padding:3px 2px;
+  border-style:solid; border-color:transparent; border-width:var(--dio-sign-border);
+  border-image:var(--dio-sign);
+}
+html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm #tipCost .btn {
+  color:var(--onaccent)!important; min-height:48px; text-shadow:none;
+}
+html[data-graphics="diorama"] .mh-header,
+html[data-graphics="diorama"] .mm-detail-head,
+html[data-graphics="diorama"] #mobile-portal-header { background:#f0dfbf; color:var(--ink); border-color:var(--line); }
+html[data-graphics="diorama"] #heirloomWrapper,
+html[data-graphics="diorama"] #portalWrapper { background-color:var(--paper)!important; }
+html[data-graphics="diorama"] #heirloomWrapper .mh-wallet {
+  background-image:url("mobile-assets/diorama/S07-heirlooms-display.webp"); background-position:right center;
+  background-size:100px 100px; background-repeat:no-repeat; min-height:100px; padding-right:110px;
+}
+/* Player Spire wallet: its text started on the 9px brass rim of the petrol slice. */
+html[data-graphics="diorama"] #mobile-spire .ms-wallet { padding-inline:calc(9px + var(--dio-gap))!important; }
+html[data-graphics="diorama"] #playerSpireInfoPanel,
+html[data-graphics="diorama"] #playerSpireSmallPanel { border-color:var(--line)!important; }
+html[data-graphics="diorama"] .diorama-object { pointer-events:none; user-select:none; }
+
+/* F13 Portal overview: same type, parchment and petrol action as the colony; content and order unchanged. */
+html[data-graphics="diorama"] #mobile-portal-overview>h1 {
+  margin:10px 0 6px; background:#efdabb; color:var(--ink);
+  border-style:solid; border-color:transparent; border-width:var(--dio-sign-border); border-image:var(--dio-sign);
+  padding:4px 2px;
+}
+html[data-graphics="diorama"] #mobile-portal-overview #portalTitle {
+  font:800 1.4rem/1.2 var(--font-data)!important; letter-spacing:-.3px; color:#203f36; margin:0;
+}
+html[data-graphics="diorama"] #mobile-portal-mode { color:var(--muted); font-family:var(--font-body); }
+html[data-graphics="diorama"] #portalWrapper #titleCol2>div,
+html[data-graphics="diorama"] #mobile-portal-overview>button {
+  background:var(--surface); color:var(--ink); border-radius:0;
+  border-style:solid!important; border-color:transparent!important; border-width:var(--dio-panel-border)!important;
+  border-image:var(--dio-panel)!important; box-shadow:0 2px 4px #291c1826;
+}
+html[data-graphics="diorama"] #portalWrapper #titleCol2>div { padding:8px var(--dio-gap); }
+html[data-graphics="diorama"] #portalWrapper #portalHelium { color:var(--accent); border-bottom-color:var(--line); }
+html[data-graphics="diorama"] #mobile-portal-overview>button {
+  margin:var(--dio-gap) 0; padding:6px var(--dio-gap); min-height:64px; text-shadow:none;
+  font:700 1.02rem/1.3 var(--font-data);
+}
+html[data-graphics="diorama"] #mobile-portal-overview>button strong { color:var(--accent); font:600 .85rem/1.4 var(--font-body); }
+html[data-graphics="diorama"] #mobile-portal-knowledge,
+html[data-graphics="diorama"] #mobile-portal-tools { border-bottom-color:#b99d6c; }
+html[data-graphics="diorama"] #portalWrapper summary { font:600 .95rem var(--font-data); color:var(--ink); }
+html[data-graphics="diorama"] #portalWrapper #activatePortalBtn { min-height:52px; font:700 1.05rem var(--font-data); }
+/* Map pictures (V-164) show only their own biome: never the map chamber scene they would inherit while loading. */
+html[data-graphics="diorama"] .mobile-biome-art { --diorama-scene:none; }
+/* My Maps (V-165): map names in dark ink on the parchment cards. Unique maps keep the original meaning of their colours
+   (mobile-map-workshop.css): green while they still unlock something, red once done, both dark enough for parchment. */
+html[data-graphics="diorama"] body[data-diorama-page="maps"] #mobile-workshop-list .mapThing .thingName { color:#3a2a14!important; text-decoration-color:#3a2a1488!important; }
+html[data-graphics="diorama"] body[data-diorama-page="maps"] #mobile-workshop-list .mapThing.noRecycle:not(.voidMap):not(.blackMap) .thingName { color:#2f5a2a!important; }
+html[data-graphics="diorama"] body[data-diorama-page="maps"] #mobile-workshop-list .mapThing.noRecycleDone:not(.voidMap):not(.blackMap) .thingName { color:#8a2a1c!important; }
+/* Darkness and Void cards: the workshop's dark or lilac thumbnail ground (mobile-map-workshop.css, an ID rule) would also
+   clear the painted tile (V-175: Void maps showed an empty lilac field). The lilac stays as the Void frame (V-154). */
+html[data-graphics="diorama"] body[data-diorama-page="maps"] #mobile-workshop-list :is(.blackMap,.voidMap) .mobile-map-thumb[data-diorama-scene] { background-image:var(--diorama-scene); background-position:center; background-size:contain; background-repeat:no-repeat; }
+html[data-graphics="diorama"] body[data-diorama-page="maps"] #mobile-workshop-list .voidMap .mobile-map-thumb[data-diorama-scene] { box-shadow:inset 0 0 0 2px #9d86c0; }

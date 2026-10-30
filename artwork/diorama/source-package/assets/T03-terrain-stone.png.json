@@ -1,0 +1,23 @@
+{
+  "id": "T03",
+  "key": "terrain-stone",
+  "name": "Steinfeld",
+  "group": "terrain",
+  "file": "assets/T03-terrain-stone.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 1024,
+    "top": 0,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "faa1e6f28980d8162f0290beabe9a38a876b057d115319c1fe28ece12efed67a",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

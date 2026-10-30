@@ -1,0 +1,23 @@
+{
+  "id": "E04",
+  "key": "Breastplate",
+  "name": "Breastplate",
+  "group": "equipment",
+  "file": "assets/E04-Breastplate.png",
+  "approved": false,
+  "source": "objects/equipment-01-arbalest-greatsword.png",
+  "sourceRect": {
+    "left": 1330,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 444,
+    "height": 443
+  },
+  "sourcePrompt": "objects/equipment-01-arbalest-greatsword.png.prompt.txt",
+  "sha256": "539208188d0cce98ecb8ececdce7a09cb7b45e7e72edfce4f866e2968272aa05",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

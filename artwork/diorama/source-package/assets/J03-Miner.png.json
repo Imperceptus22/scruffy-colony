@@ -1,0 +1,23 @@
+{
+  "id": "J03",
+  "key": "Miner",
+  "name": "Miner",
+  "group": "jobs",
+  "file": "assets/J03-Miner.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 0,
+    "width": 443,
+    "height": 443
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 443
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "8c1e1cc5972aaf88f4eea5d238202047d42b369d425984fe0b18eca61eb7a3c8",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

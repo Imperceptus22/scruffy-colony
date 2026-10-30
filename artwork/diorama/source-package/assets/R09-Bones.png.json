@@ -1,0 +1,23 @@
+{
+  "id": "R09",
+  "key": "Bones",
+  "name": "Bones",
+  "group": "resources",
+  "file": "assets/R09-Bones.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 836,
+    "top": 810,
+    "width": 418,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 444
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "4490ecb137bd865f54dbe1fa08fba2777da44099fc4ce4054378ad4481302a4d",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

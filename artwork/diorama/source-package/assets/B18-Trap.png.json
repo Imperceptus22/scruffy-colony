@@ -1,0 +1,23 @@
+{
+  "id": "B18",
+  "key": "Trap",
+  "name": "Trap",
+  "group": "buildings",
+  "file": "assets/B18-Trap.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 856,
+    "top": 411,
+    "width": 398,
+    "height": 389
+  },
+  "nativeSize": {
+    "width": 398,
+    "height": 389
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "7df461dd19ec8f01ad013cceb2c55c4ae1fc6eca861e43c44e8854956c325e4b",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "R08",
+  "key": "Radon",
+  "name": "Radon",
+  "group": "resources",
+  "file": "assets/R08-Radon.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 418,
+    "top": 810,
+    "width": 418,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 444
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "6362655f9b9fea0787dec5c6822cac30d19b8adb642d8f716a7013850b0618f0",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

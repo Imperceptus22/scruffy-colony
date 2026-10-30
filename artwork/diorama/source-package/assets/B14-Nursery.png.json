@@ -1,0 +1,23 @@
+{
+  "id": "B14",
+  "key": "Nursery",
+  "name": "Nursery",
+  "group": "buildings",
+  "file": "assets/B14-Nursery.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 418,
+    "top": 0,
+    "width": 418,
+    "height": 411
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 411
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "08c589202595f8a74e608e1b0aa8835fddc1c00d1a4d676ae741f6135ab4527f",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

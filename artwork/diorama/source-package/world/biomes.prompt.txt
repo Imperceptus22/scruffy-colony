@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: high-resolution 4x2 atlas of eight rectangular miniature cutaway map biome previews for Scruffy Colony.
+Input images: Image 1 is the game diorama reference; Images 2 and 3 define its warm upper-left lighting, handcrafted mossy terrain, wood and stone material language and polished 3D miniature rendering.
+Primary request: show exactly eight distinct terrain dioramas inside rectangular tile-shaped cells in this precise row-major order: Random, Mountain, Forest, Sea, Depths, Gardens, Farmlands, Void. Random = visibly mixed small landscape with forest, mountain, shore and cave hints. Mountain = high rocky snow-tipped peaks. Forest = lush mossy green woodland and conifers. Sea = bright coast with blue water and beach. Depths = dark underground cavern with blue crystals. Gardens = cultivated lush enchanted garden beds and abundant green plants. Farmlands = golden crop rows and a small field. Void = eerie dark purple-black rocky wasteland with subtle violet void energy, clearly distinct from Depths.
+Scene/backdrop: each tile itself contains an opaque natural landscape inset/cutaway on a rectangular slab; outside each slab and between cells is transparent.
+Composition/framing: exactly 4 equal columns by 2 rows, generous transparent gutters, consistent tile dimensions, viewpoint and scale, each miniature fills its own tile without bleeding into another. Three-quarter slightly elevated view; small diorama tile, clearly readable at icon size.
+Lighting/mood: warm upper-left key light; only Void is ominous/cool, other biomes natural and inviting.
+Materials/textures: richly detailed miniature terrain with soil cutaway sides, moss, rock, trees, water, crops, tiny flowers, hand-crafted 3D diorama style; no flat vector illustration.
+Text (verbatim): none.
+Constraints: exact eight rectangular landscape tiles; no people, creatures, props unrelated to biome, no UI, no map controls, no labels, lettering, numerals, signs, borders, frames, or watermark. Preserve transparent background in gutters.

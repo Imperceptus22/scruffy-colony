@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: transparent game-art atlas, equipment sheet 2 of 2
+Primary request: Create exactly these 6 separate, highly detailed, physically crafted 3D painterly equipment miniatures, one centered in each cell in row-major order, matching the given names: Helmet (single closed medieval steel helmet with nasal guard and restrained brass edge), Mace (single compact steel flanged mace with wooden/leather grip), Pants (single pair of rugged brown leather-and-cloth trousers with stitched seams), Polearm (single long wooden polearm with steel spear point and small side blade), Shield (single round wooden shield reinforced by dark iron rim, central boss and a few rivets), Shoulderguards (a matched pair of articulated steel shoulder guards with leather straps).
+Input images: Image 1 is style/material-quality reference for buildings; Image 2 is style/material-quality reference for equipment. Use both only for crafted miniature quality, muted warm palette, lighting and material treatment; ignore all interface and text.
+Scene/backdrop: No environment or backdrop; only the individual equipment miniatures and small contact shadows.
+Subject: Exactly 6 objects in row-major order: Helmet, Mace, Pants, Polearm, Shield, Shoulderguards.
+Style/medium: Realistic hand-painted 3D miniature diorama objects, exceptionally detailed, coherent companion equipment set.
+Composition/framing: Landscape atlas, 3 columns x 2 rows. Each object fully visible and centered in its own equal-sized cell with generous transparent gutters. Consistent three-quarter view, slightly elevated camera. Keep every object and contact shadow inside its cell.
+Lighting/mood: Consistent warm natural light from upper left; subtle, soft contact shadow beneath each object.
+Color palette: Muted warm leather browns, forest green cloth, aged silver steel, subtle brass accents.
+Materials/textures: Tactile leather grain and stitching, finely forged slightly worn steel, tiny rivets and wrapped grips, crisp hand-painted surface detail.
+Text (verbatim): none.
+Constraints: Genuine transparent background with alpha; no backdrop, ground plane, display case, scenery, labels or props. Silhouettes must clearly distinguish each object.
+Avoid: Text, labels, numerals, UI, frames, border lines, cards, pedestals, watermarks, extra objects, duplicate weapons/armor, connected objects, cartoon-flat style, clipped silhouettes, object or shadow overlaps between cells.

@@ -1,0 +1,22 @@
+{
+  "mergedAssets": {
+    "debug": {
+      "images": 85,
+      "originalPngs": 0,
+      "allRuntimeHashesMatch": true
+    },
+    "preview": {
+      "images": 85,
+      "originalPngs": 0,
+      "allRuntimeHashesMatch": true
+    },
+    "release": {
+      "images": 85,
+      "originalPngs": 0,
+      "allRuntimeHashesMatch": true
+    }
+  },
+  "noApkCreated": true,
+  "existingApksUnchanged": 3,
+  "android": "compileDebugSources compilePreviewSources compileReleaseSources mergeDebugAssets mergePreviewAssets mergeReleaseAssets testDebugUnitTest lintDebug lintPreview lintRelease successful"
+}

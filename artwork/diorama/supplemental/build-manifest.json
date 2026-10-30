@@ -1,0 +1,474 @@
+{
+  "sourceManifestSha256": "82bd5290776344982a78752d280e107c2d6c91b64b8552ad4c4230c18e7ec2b5",
+  "headerReplacementManifestSha256": "d604e69a8821ad6cb9cbf471c46262c865d2a68f3c53f23f460fbdb19af1e749",
+  "combatSceneManifestSha256": "62289a69be39f9ab9f623775ee3f976883107d75930f66e2ecddb7aeb1f345f0",
+  "count": 14,
+  "items": [
+    {
+      "id": "P01",
+      "key": "dark-wood",
+      "domain": "materials",
+      "mapKey": "dark-wood",
+      "filename": "P01-dark-wood.webp",
+      "sourceGroup": "materials",
+      "sourceAtlas": "source-atlases/materials.png",
+      "sourcePrompt": "prompts/materials.prompt.txt",
+      "sourceRect": {
+        "left": 2,
+        "top": 2,
+        "width": 622,
+        "height": 620
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 622,
+        "height": 620
+      },
+      "sourceSize": {
+        "width": 622,
+        "height": 620
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 510
+      },
+      "sourceAtlasSha256": "0d7de705dd95b0d1f625d2306c047b9f2a5d4ff47835f3a63175c1c66721dbd7",
+      "sourcePromptSha256": "96f5a003eb20b8069641bd8badd538185264cccf7f3a6833f33b0c7265890bcb",
+      "outputSha256": "3f57ee781e5e62d1e5a3823446249aed1b1e5fca2cc2672b7100d3bd6aef4f64"
+    },
+    {
+      "id": "P02",
+      "key": "padded-bay",
+      "domain": "materials",
+      "mapKey": "padded-bay",
+      "filename": "P02-padded-bay.webp",
+      "sourceGroup": "materials",
+      "sourceAtlas": "source-atlases/materials.png",
+      "sourcePrompt": "prompts/materials.prompt.txt",
+      "sourceRect": {
+        "left": 630,
+        "top": 2,
+        "width": 622,
+        "height": 620
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 622,
+        "height": 620
+      },
+      "sourceSize": {
+        "width": 622,
+        "height": 620
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 510
+      },
+      "sourceAtlasSha256": "0d7de705dd95b0d1f625d2306c047b9f2a5d4ff47835f3a63175c1c66721dbd7",
+      "sourcePromptSha256": "96f5a003eb20b8069641bd8badd538185264cccf7f3a6833f33b0c7265890bcb",
+      "outputSha256": "637f14508d81785018f5c7349bcb25eecfa8585b4ca6ebf075f4555242762ea1"
+    },
+    {
+      "id": "P03",
+      "key": "resource-shelf",
+      "domain": "materials",
+      "mapKey": "resource-shelf",
+      "filename": "P03-resource-shelf.webp",
+      "sourceGroup": "materials",
+      "sourceAtlas": "source-atlases/materials.png",
+      "sourcePrompt": "prompts/materials.prompt.txt",
+      "sourceRect": {
+        "left": 12,
+        "top": 850,
+        "width": 730,
+        "height": 220
+      },
+      "renditionCrop": {
+        "left": 16,
+        "top": 11,
+        "width": 708,
+        "height": 183
+      },
+      "sourceSize": {
+        "width": 730,
+        "height": 220
+      },
+      "outputSize": {
+        "width": 512,
+        "height": 132
+      },
+      "sourceAtlasSha256": "0d7de705dd95b0d1f625d2306c047b9f2a5d4ff47835f3a63175c1c66721dbd7",
+      "sourcePromptSha256": "96f5a003eb20b8069641bd8badd538185264cccf7f3a6833f33b0c7265890bcb",
+      "outputSha256": "3a11dfa0860561774e2c98c9ff94f4cdace011f2b1f476231023d01611ff22aa"
+    },
+    {
+      "id": "P04",
+      "key": "nav-slot",
+      "domain": "materials",
+      "mapKey": "nav-slot",
+      "filename": "P04-nav-slot.webp",
+      "sourceGroup": "materials",
+      "sourceAtlas": "source-atlases/materials.png",
+      "sourcePrompt": "prompts/materials.prompt.txt",
+      "sourceRect": {
+        "left": 750,
+        "top": 700,
+        "width": 460,
+        "height": 430
+      },
+      "renditionCrop": {
+        "left": 12,
+        "top": 15,
+        "width": 426,
+        "height": 405
+      },
+      "sourceSize": {
+        "width": 460,
+        "height": 430
+      },
+      "outputSize": {
+        "width": 426,
+        "height": 405
+      },
+      "sourceAtlasSha256": "0d7de705dd95b0d1f625d2306c047b9f2a5d4ff47835f3a63175c1c66721dbd7",
+      "sourcePromptSha256": "96f5a003eb20b8069641bd8badd538185264cccf7f3a6833f33b0c7265890bcb",
+      "outputSha256": "a51fdab9ccbdccb794fa8e3d9df46356dd34cc7bc0f87f1c974f8d8ef01e02e4"
+    },
+    {
+      "id": "H01",
+      "key": "resources-workstations",
+      "domain": "scenes",
+      "mapKey": "colony",
+      "filename": "H01-resources-workstations.webp",
+      "sourceGroup": "header-replacements",
+      "sourceAtlas": "source-atlases/header-replacements/H01.png",
+      "sourcePrompt": "prompts/header-replacements/H01.prompt.txt",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "replaces": "resources-workstations",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "sourceSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 640,
+        "height": 213
+      },
+      "sourceAtlasSha256": "cc61bf80f504cc8509054dd90903c277501dc4a0cef69500a74fc3ee8f4439a7",
+      "sourcePromptSha256": "3f5159032521c1442920aebb7f344094bb19709b76001712facef4b9291a6ab2",
+      "outputSha256": "9b235b8a5ba69573de279955b940af1e5a283a4d648d3bcd88bd3593f910981f"
+    },
+    {
+      "id": "H02",
+      "key": "building-workshop",
+      "domain": "scenes",
+      "mapKey": "building-workshop",
+      "filename": "H02-building-workshop.webp",
+      "sourceGroup": "header-replacements",
+      "sourceAtlas": "source-atlases/header-replacements/H02.png",
+      "sourcePrompt": "prompts/header-replacements/H02.prompt.txt",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "replaces": "building-workshop",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "sourceSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 640,
+        "height": 213
+      },
+      "sourceAtlasSha256": "db40ddc329bd986e9a0bbff470ac516565b4cd4e0bfe67bb4cd0f5317e3fc60a",
+      "sourcePromptSha256": "ec36024a66d1a42ef96d586c22d65e06366c0c3f7b83bc2937ad2d7b09d84966",
+      "outputSha256": "197f5c3a357ceee007ff94f43f881d0fa5969357aea48d14dbfc6171c3bfb7b2"
+    },
+    {
+      "id": "H03",
+      "key": "equipment-armory",
+      "domain": "scenes",
+      "mapKey": "equipment-armory",
+      "filename": "H03-equipment-armory.webp",
+      "sourceGroup": "header-replacements",
+      "sourceAtlas": "source-atlases/header-replacements/H03.png",
+      "sourcePrompt": "prompts/header-replacements/H03.prompt.txt",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "replaces": "equipment-armory",
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "sourceSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 640,
+        "height": 213
+      },
+      "sourceAtlasSha256": "d9de74ebe97309b0e1d6ce21443c016b46565ed25c22038cf30c8825fcc067d0",
+      "sourcePromptSha256": "b7110dfff3ddb3945bd8de42cb31c79bc16c6d28142c0ab017767a08e17bea19",
+      "outputSha256": "8f6215769a66c85251b45cee95faf8f74b7ac1a152ecf79cd4a6acfdce8a0110"
+    },
+    {
+      "id": "N01",
+      "key": "combat",
+      "domain": "navigation",
+      "mapKey": "combat",
+      "filename": "N01-combat.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 59,
+        "top": 77,
+        "width": 453,
+        "height": 435
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 100,
+        "height": 96
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "0addb3b7fa9aefaa60c82f4b03e5781c5cebe18ddb916ab0aaabd2a4d2a55ffc"
+    },
+    {
+      "id": "N02",
+      "key": "equipment",
+      "domain": "navigation",
+      "mapKey": "equipment",
+      "filename": "N02-equipment.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 46,
+        "width": 483,
+        "height": 466
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 100,
+        "height": 96
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "0aa53ab535caf22df53c29a4ada856067c9c4a5c048ef812580cadab2b68be96"
+    },
+    {
+      "id": "N03",
+      "key": "resources",
+      "domain": "navigation",
+      "mapKey": "resources",
+      "filename": "N03-resources.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 32,
+        "top": 78,
+        "width": 460,
+        "height": 434
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 100,
+        "height": 94
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "cad1f7b28f1982406bcd0d579fd01a0b4b397e79f100000dbafc568f105d3af0"
+    },
+    {
+      "id": "N04",
+      "key": "buildings",
+      "domain": "navigation",
+      "mapKey": "buildings",
+      "filename": "N04-buildings.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 43,
+        "top": 0,
+        "width": 469,
+        "height": 478
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 98,
+        "height": 100
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "5666c2cca18004dbab7c6626ccebf8ab9ef7803ed074a3bb3e0d235eed24fac0"
+    },
+    {
+      "id": "N05",
+      "key": "jobs",
+      "domain": "navigation",
+      "mapKey": "jobs",
+      "filename": "N05-jobs.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 459
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 100,
+        "height": 90
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "6aaad003c4a87b8110c3fa6fdabed3f01af2c940430a336d0ca7c912627801ae"
+    },
+    {
+      "id": "N06",
+      "key": "research",
+      "domain": "navigation",
+      "mapKey": "research",
+      "filename": "N06-research.webp",
+      "sourceGroup": "nav-glyphs",
+      "sourceAtlas": "source-atlases/nav-glyphs.png",
+      "sourcePrompt": "prompts/nav-glyphs.prompt.txt",
+      "sourceRect": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 460,
+        "height": 480
+      },
+      "sourceSize": {
+        "width": 512,
+        "height": 512
+      },
+      "outputSize": {
+        "width": 96,
+        "height": 100
+      },
+      "sourceAtlasSha256": "3ae6434ae39554b82cd32a6142b8632d420b738f331b88380723ad5b9e3a8857",
+      "sourcePromptSha256": "6348dd71fae49f19709f30706194ee85aae301f94a3709997c8a3016c9f146bb",
+      "outputSha256": "c21856b8291a3887532d4b3d3486c3e18f8c9a3c62b61bba5a3bc3d97fef7fbb"
+    },
+    {
+      "id": "H04",
+      "key": "combat-clearing",
+      "domain": "scenes",
+      "mapKey": "combat-clearing",
+      "filename": "H04-combat-clearing.webp",
+      "sourceGroup": "combat-clearing",
+      "sourceAtlas": "source-atlases/combat-clearing/H04.png",
+      "sourcePrompt": "prompts/combat-clearing/H04.prompt.txt",
+      "sourceManifestSha256": "62289a69be39f9ab9f623775ee3f976883107d75930f66e2ecddb7aeb1f345f0",
+      "sourceRect": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "renditionCrop": {
+        "left": 0,
+        "top": 0,
+        "width": 2172,
+        "height": 724
+      },
+      "sourceSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "outputSize": {
+        "width": 640,
+        "height": 213
+      },
+      "sourceAtlasSha256": "d36bb96bf0cf48360200f211da17912c4c734e3c9750609bb30f9ab51f03edd1",
+      "sourcePromptSha256": "aab34fe9019c0713a55d5a3e334b5afe175ec3b74320bdf2d9dafabe6b8eed68",
+      "outputSha256": "e58e721e52f7953b75490c39dac8fc260ab2289d67ee4af162cbabae4b715ecf"
+    }
+  ]
+}

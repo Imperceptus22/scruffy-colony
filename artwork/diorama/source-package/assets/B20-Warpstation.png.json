@@ -1,0 +1,23 @@
+{
+  "id": "B20",
+  "key": "Warpstation",
+  "name": "Warpstation",
+  "group": "buildings",
+  "file": "assets/B20-Warpstation.png",
+  "approved": false,
+  "source": "objects/buildings-02-microchip-wormhole.png",
+  "sourceRect": {
+    "left": 418,
+    "top": 800,
+    "width": 418,
+    "height": 454
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 454
+  },
+  "sourcePrompt": "objects/buildings-02-microchip-wormhole.png.prompt.txt",
+  "sha256": "1fc9ab8f71087885a1aa935229b03116e06d53a3a4eb616130b73c610bec2f74",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

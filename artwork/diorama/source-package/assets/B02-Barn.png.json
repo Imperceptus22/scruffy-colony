@@ -1,0 +1,23 @@
+{
+  "id": "B02",
+  "key": "Barn",
+  "name": "Barn",
+  "group": "buildings",
+  "file": "assets/B02-Barn.png",
+  "approved": false,
+  "source": "objects/buildings-01-antenna-mansion.png",
+  "sourceRect": {
+    "left": 375,
+    "top": 0,
+    "width": 400,
+    "height": 337
+  },
+  "nativeSize": {
+    "width": 400,
+    "height": 337
+  },
+  "sourcePrompt": "objects/buildings-01-antenna-mansion.png.prompt.txt",
+  "sha256": "0800cfef79168f724636ba9251da84c2a8b780d64109018d86e26ba5bff2ba99",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

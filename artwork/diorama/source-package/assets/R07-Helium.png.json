@@ -1,0 +1,23 @@
+{
+  "id": "R07",
+  "key": "Helium",
+  "name": "Helium",
+  "group": "resources",
+  "file": "assets/R07-Helium.png",
+  "approved": false,
+  "source": "world/resources.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 810,
+    "width": 418,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 418,
+    "height": 444
+  },
+  "sourcePrompt": "world/resources.prompt.txt",
+  "sha256": "3029127eaa4b62dc539f1657ec3e597df657b2c48d2f6c2060f66b2fc96c08bc",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

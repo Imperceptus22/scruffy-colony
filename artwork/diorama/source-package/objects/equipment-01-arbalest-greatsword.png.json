@@ -1,0 +1,23 @@
+{
+  "file": "equipment-01-arbalest-greatsword.png",
+  "approved": false,
+  "grid": {
+    "rows": 2,
+    "cols": 4
+  },
+  "orderedItemIds": [
+    "Arbalest",
+    "Battleaxe",
+    "Boots",
+    "Breastplate",
+    "Dagger",
+    "Gambeson",
+    "Greatsword",
+    null
+  ],
+  "references": [
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\02-buildings.png",
+    "<projects>\\Repositories\\Trimps Mobile\\output\\diorama-app-concepts-2026-10-24\\03-equipment.png"
+  ],
+  "sourceOutputHint": "<home>\\.codex\\generated_images\\01a16f64-4160-75f1-a1b3-6b9e9e873da0\\exec-3ecc9eec-8852-4560-939f-30aa0c4671f9.png"
+}

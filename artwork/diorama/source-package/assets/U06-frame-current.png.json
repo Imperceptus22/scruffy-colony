@@ -1,0 +1,23 @@
+{
+  "id": "U06",
+  "key": "frame-current",
+  "name": "Aktuelles Feld",
+  "group": "interface",
+  "file": "assets/U06-frame-current.png",
+  "approved": false,
+  "source": "interface/interface-materials.png",
+  "sourceRect": {
+    "left": 620,
+    "top": 990,
+    "width": 404,
+    "height": 546
+  },
+  "nativeSize": {
+    "width": 404,
+    "height": 546
+  },
+  "sourcePrompt": "interface/interface-materials.prompt.txt",
+  "sha256": "bebd6ce326a0076fc733ea6ce7ba169663bd2d7e7be85d41894fa649eb206135",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

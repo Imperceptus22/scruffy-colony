@@ -1,0 +1,23 @@
+{
+  "id": "M07",
+  "key": "Farmlands",
+  "name": "Farmlands",
+  "group": "biomes",
+  "file": "assets/M07-Farmlands.png",
+  "approved": false,
+  "source": "world/biomes.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "world/biomes-transparency-fix.prompt.txt",
+  "sha256": "efdd2a2a93da8613df7125f11c227bc13bd9de68a46edf513ecada4a970c4903",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

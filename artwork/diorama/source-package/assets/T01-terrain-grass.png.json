@@ -1,0 +1,23 @@
+{
+  "id": "T01",
+  "key": "terrain-grass",
+  "name": "Grasfeld",
+  "group": "terrain",
+  "file": "assets/T01-terrain-grass.png",
+  "approved": false,
+  "source": "interface/terrain-markers.png",
+  "sourceRect": {
+    "left": 0,
+    "top": 0,
+    "width": 512,
+    "height": 341
+  },
+  "nativeSize": {
+    "width": 512,
+    "height": 341
+  },
+  "sourcePrompt": "interface/terrain-markers.prompt.txt",
+  "sha256": "649e7e2f4d732890981d70f8494f11357a2ea1224d1fa0cc64113625b955c2c7",
+  "needsEdgeReview": true,
+  "productionReady": false
+}

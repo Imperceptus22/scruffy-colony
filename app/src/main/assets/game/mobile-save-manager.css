@@ -1,0 +1,26 @@
+.mobile-save-manager { position:fixed; inset:0; z-index:8500; background:var(--paper); color:var(--ink); padding:16px; overflow:auto; }
+.mobile-save-manager-head { display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:16px; }
+.mobile-save-manager-head h1 { margin:0; font-size:1.45rem; }
+.mobile-save-manager p { font-size:.875rem; color:var(--muted); }
+.mobile-save-slot { padding:16px 0; border-bottom:1px solid var(--line); }
+.mobile-save-slot-head { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.mobile-save-slot-head h2 { font-size:1rem; margin:0; }
+.mobile-save-active { background:var(--selected); padding:4px 8px; font-size:.875rem; }
+.mobile-save-slot > button { width:100%; }
+.mobile-save-manager button.mobile-primary { background:var(--accent); color:var(--onaccent); }
+/* V-248: deleting is a quiet secondary action under the slot, never the first thing to tap. */
+.mobile-save-slot > button.mobile-save-delete { width:auto; min-height:44px; margin-top:8px; padding:8px 12px; font-size:.875rem; color:var(--danger, #9b2c1f); background:transparent; border:1px solid currentColor; }
+.mobile-active-save { font-size:.875rem; color:var(--muted); margin:8px 0 16px; }
+.mobile-development-banner { position:sticky; top:0; z-index:8400; display:flex; justify-content:space-between; align-items:center; gap:8px; padding:8px 16px; background:var(--bonus); color:var(--bonus-ink); border-bottom:1px solid var(--bonus-line); font-size:.875rem; }
+.mobile-development-banner strong,.mobile-development-banner span { display:block; }
+.mobile-development-banner button { flex:none; min-height:44px; font-size:.875rem; padding:8px; }
+.mobile-save-manager-result { overflow-wrap:anywhere; }
+/* V-261: own delete question; Cancel and Delete side by side. Delete is a solid rust button in both styles (.btn-danger keeps
+   the Diorama gold plate off it; this rule wins over the general danger colours). */
+.mobile-save-confirm { width:min(100% - 32px, 480px); max-height:85dvh; overflow:auto; margin:auto; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--surface, var(--paper)); color:var(--ink); }
+.mobile-save-confirm::backdrop { background:#263f3980; }
+.mobile-save-confirm h2 { margin:0 0 8px; font-size:1.1rem; }
+.mobile-save-confirm p { margin:8px 0; font-size:.875rem; color:var(--muted); overflow-wrap:anywhere; }
+.mobile-save-confirm-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; margin-top:16px; }
+.mobile-save-confirm-actions button { min-height:48px; min-width:112px; padding:8px 16px; }
+.mobile-save-confirm-actions button.mobile-save-delete.btn-danger { color:#fff!important; background:#9b2c1f!important; border:1px solid #9b2c1f!important; font-weight:600; }

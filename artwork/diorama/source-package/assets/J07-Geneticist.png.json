@@ -1,0 +1,23 @@
+{
+  "id": "J07",
+  "key": "Geneticist",
+  "name": "Geneticist",
+  "group": "jobs",
+  "file": "assets/J07-Geneticist.png",
+  "approved": false,
+  "source": "world/jobs.png",
+  "sourceRect": {
+    "left": 887,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "nativeSize": {
+    "width": 443,
+    "height": 444
+  },
+  "sourcePrompt": "world/jobs.prompt.txt",
+  "sha256": "700982d9fed962bde3ffe34f8dd3748d86b4d61f1761120d18a7a0b51c485348",
+  "needsEdgeReview": true,
+  "productionReady": false
+}
