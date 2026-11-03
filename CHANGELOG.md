@@ -1,5 +1,8 @@
 # Änderungen
 
+## 1.01 – Bone Charges
+- Bone Charges now use a compact parchment row with a clear count and separate information button.
+
 ## 1.00 – Scruffy Colony 1.0
 - German help, ADVISOR and legal information now declare their language for correct pronunciation and text handling.
 - Enemy ability information, including Fast and dynamic modifiers, and the Gobbleby food bonus now appear in German when German is selected.

@@ -266,6 +266,7 @@ a { color:var(--green); text-underline-offset:3px; }
 #miscColumn .playerGather { flex:none; }
 #foodBar { background:var(--food); } #woodBar { background:var(--wood); } #metalBar { background:var(--metal); }
 #boneShrineBtn { grid-column:1 / -1; position:static; width:auto; min-height:48px; font-size:.875rem; }
+.mobile-bone-charges { display:none; }
 #trimpsColumn { padding:12px; margin:0 0 10px; border:1px solid var(--line); border-radius:12px; }
 #trimpsColumn .row { display:flex; align-items:center; gap:6px; }
 #trimpsColumn .row > div { width:auto; flex:1; }

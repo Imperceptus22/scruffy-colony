@@ -75,6 +75,11 @@ var MobileI18nDe = (() => {
     };
     // Exact own strings as rendered (trimmed). Original game phrases are not listed here and stay English.
     const strings = {
+        "Bone Charges":"Bone Charges", "Bone Shrine":"Bone Shrine", "Pandemonium":"Pandemonium",
+        "Bone Charges info":"Info zu Bone Charges", "Use 1 Bone Charge":"1 Knochenladung einsetzen",
+        "Recharging":"Wird aufgeladen", "Tap to use":"Zum Einsetzen antippen", "Full · Tap to use":"Vorrat voll · Zum Einsetzen antippen",
+        "Game paused":"Spiel pausiert", "Cannot use here":"Hier nicht einsetzbar",
+        "Bone Charges now use a compact parchment row with a clear count and separate information button.":"Bone Charges erscheinen jetzt als kompakte Pergamentzeile mit klarer Anzahl und separater Info-Schaltfläche.",
         "Enemy ability information, including Fast and dynamic modifiers, and the Gobbleby food bonus now appear in German when German is selected.":"Informationen zu Gegnerfähigkeiten einschließlich Fast und dynamischer Effekte sowie der Gobbleby-Nahrungsbonus erscheinen bei deutscher Sprachwahl auf Deutsch.",
         "Achievement notifications use a compact parchment card with readable rewards and the original achievement actions in Diorama mode.":"Erfolgsmeldungen erscheinen im Diorama-Stil als kompakte Pergamentkarte mit gut lesbarer Belohnung und den vorhandenen Erfolgsaktionen.",
         "Achievement unlocked":"Erfolg freigeschaltet","View achievements":"Erfolge ansehen","Tier":"Stufe",

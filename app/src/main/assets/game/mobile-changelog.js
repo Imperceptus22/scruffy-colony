@@ -1,6 +1,14 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.01",
+    "label": "1.01",
+    "title": "Bone Charges",
+    "notes": [
+      "Bone Charges now use a compact parchment row with a clear count and separate information button."
+    ]
+  },
+  {
     "version": "1.00",
     "label": "1.0",
     "title": "Scruffy Colony 1.0",

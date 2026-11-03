@@ -20,6 +20,38 @@ var MobileBones = (() => {
     // V-237: texts that are compared again or painted from an attribute are written translated (mobile-i18n.js).
     const t = text => typeof MobileI18n === 'undefined' ? text : MobileI18n.t(text);
     const el = (tag, cls, text) => { const node = document.createElement(tag); if (cls) node.className = cls; if (text !== undefined) node.textContent = text; return node; };
+    let chargeRow, chargeUse, chargeHint, chargeCount;
+    function shrineCharges() {
+        const original = byId('boneShrineBtn');
+        if (!original) return;
+        const bonus = game.permaBoneBonuses.boosts;
+        // Keep the engine-written button intact for Classic and updateBtn(); Diorama has two separate native buttons.
+        if (!chargeRow) {
+            chargeRow = el('div', 'mobile-bone-charges');
+            // Native button keys must not also reach the game's Space-to-pause shortcut.
+            window.addEventListener('keydown', event => {
+                if (chargeRow.contains(event.target) && (event.key === ' ' || event.key === 'Enter')) event.stopPropagation();
+            }, true);
+            chargeUse = el('button', 'mobile-bone-charge-use'); chargeUse.type = 'button';
+            const image = el('img'); image.src = icon('boosts'); image.alt = '';
+            const copy = el('span', 'mobile-bone-charge-copy');
+            copy.append(el('strong', '', 'Bone Charges'), chargeHint = el('span', 'mobile-bone-charge-hint'));
+            const amount = el('span', 'mobile-bone-charge-amount');
+            amount.append(chargeCount = el('span', 'mobile-bone-charge-count'), el('small', '', ' / 10'));
+            chargeUse.append(image, copy, amount);
+            chargeUse.onclick = () => { game.permaBoneBonuses.boosts.consume(); shrineCharges(); };
+            const info = el('button', 'mobile-info mobile-bone-charge-info', 'Info'); info.type = 'button';
+            info.setAttribute('aria-label', t('Bone Charges info')); info.onclick = () => TrimpsUI.info('Bone Shrine', null);
+            chargeRow.append(chargeUse, info); original.after(chargeRow);
+        }
+        chargeRow.hidden = bonus.owned <= 0;
+        const paused = game.options.menu.pauseGame.enabled, blocked = game.global.challengeActive === 'Pandemonium';
+        chargeUse.disabled = bonus.owned <= 0 || bonus.charges <= 0 || !!paused || blocked;
+        const hint = t(paused ? 'Game paused' : blocked ? 'Cannot use here' : bonus.charges === 0 ? 'Recharging' : bonus.charges === 10 ? 'Full · Tap to use' : 'Tap to use');
+        for (const [node, text] of [[chargeCount, String(bonus.charges)], [chargeHint, hint]])
+            if (node.textContent !== text) node.textContent = text;
+        chargeUse.setAttribute('aria-label', t('Use 1 Bone Charge') + ' · ' + bonus.charges + ' / 10');
+    }
     function infoButton(title, text) {
         const button = document.createElement('button');
         button.className = 'mobile-info'; button.textContent = 'Info';
@@ -243,6 +275,7 @@ var MobileBones = (() => {
         select(selected);
     }
     function refresh() {
+        shrineCharges();
         if (!panels || !bonesShown) return;
         // Original updateBones may redraw these offers while the trader stays open.
         bonusCards('singleRunBonuses', game.singleRunBonuses, 'SingleBonusBox');
