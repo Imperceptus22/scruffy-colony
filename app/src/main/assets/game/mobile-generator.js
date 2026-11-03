@@ -1,6 +1,7 @@
 // C: compact workbench. The original generator keeps all prices, purchases and simulation.
 var MobileGenerator = (() => {
-    const $=id=>document.getElementById(id), n=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
+    const t=text=>typeof MobileI18n==='undefined'?text:MobileI18nGame.t(MobileI18n.t(text));
+    const $=id=>document.getElementById(id), n=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=t(text);return e;};
     let panel,body,view='generator',selected='',installed=false,owner,signature='';
     const available=()=>game.global.universe===1&&mutations.Magma.active();
     function button(text,action,cls=''){const b=n('button',cls,text);b.type='button';b.onclick=()=>{action();refresh();};return b;}

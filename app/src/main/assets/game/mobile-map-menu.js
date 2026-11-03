@@ -6,6 +6,12 @@ var MobileMapMenu = (() => {
     let pending=null, returning=null, requesting=false, starting=false, inventoryKey='', creationState=null;
     let lastState=null, lastMapActive=false, chamberArrival=null;
     const available=()=>Boolean(game.global.mapsUnlocked);
+    function defaultCreationLevel(){
+        if(!available())return;
+        byId('mapLevelInput').value=game.global.world;
+        byId('advExtraLevelSelect').value='0';
+        updateMapCost();
+    }
     function cancel(){pending=null;returning=null;}
     function beforeTravel(){if(!requesting)cancel();}
     function beforeRun(){if(!starting)cancel();}
@@ -94,7 +100,7 @@ var MobileMapMenu = (() => {
         if(unlocked)byId('preMaps').style.display='block';
         byId('mobile-map-access').hidden=unlocked;
         if(!unlocked)return;
-        if(creationState!==state){resetAdvMaps();creationState=state;}
+        if(creationState!==state){resetAdvMaps();defaultCreationLevel();creationState=state;}
         refreshMapBiomes();
         const key=JSON.stringify(state.mapsOwnedArray);
         if(key!==inventoryKey){refreshMaps();inventoryKey=key;}
@@ -121,5 +127,5 @@ var MobileMapMenu = (() => {
         const world=document.createElement('button');world.id='mobile-return-world';world.type='button';world.hidden=true;world.onclick=returnToWorld;byId('battleBtnsColumn').append(world);
         const direct=document.createElement('button');direct.id='mobile-map-world';direct.type='button';direct.hidden=true;direct.onclick=returnToWorld;host.prepend(direct);
     }
-    return {setup,refresh,start,returnToWorld,contextAction,available,cancel,beforeTravel,beforeRun,beforeSwitch,inventoryChanged};
+    return {setup,refresh,start,returnToWorld,contextAction,available,cancel,beforeTravel,beforeRun,beforeSwitch,inventoryChanged,defaultCreationLevel};
 })();

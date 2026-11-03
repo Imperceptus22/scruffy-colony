@@ -76,6 +76,9 @@ var MobileI18nDe = (() => {
     // Exact own strings as rendered (trimmed). Original game phrases are not listed here and stay English.
     const strings = {
         "Bone Charges":"Bone Charges", "Bone Shrine":"Bone Shrine", "Pandemonium":"Pandemonium",
+        "Bone Charges now appear directly under Resources, above the gathering controls.":"Bone Charges stehen jetzt direkt unter Ressourcen, oberhalb der Sammel-Schaltflächen.",
+        "German Bone Charge help, permanent bone offers and remaining text gaps in quantity, automation, generator and Spire views are translated.":"Die Bone-Charges-Hilfe, dauerhafte Knochenangebote und weitere Textlücken bei Mengen, Automatisierung, Generator und Spire sind jetzt ins Deutsche übersetzt.",
+        "New maps default to the current run's World zone; manual changes and explicitly selected presets remain editable.":"Neue Maps starten mit der Weltzone des aktuellen Runs als Stufenvorgabe. Manuelle Änderungen und bewusst gewählte Presets bleiben möglich.",
         "Bone Charges info":"Info zu Bone Charges", "Use 1 Bone Charge":"1 Knochenladung einsetzen",
         "Recharging":"Wird aufgeladen", "Tap to use":"Zum Einsetzen antippen", "Full · Tap to use":"Vorrat voll · Zum Einsetzen antippen",
         "Game paused":"Spiel pausiert", "Cannot use here":"Hier nicht einsetzbar",

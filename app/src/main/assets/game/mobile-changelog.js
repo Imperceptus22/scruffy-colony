@@ -1,6 +1,16 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.02",
+    "label": "1.02",
+    "title": "Ressourcen und Maps",
+    "notes": [
+      "Bone Charges now appear directly under Resources, above the gathering controls.",
+      "German Bone Charge help, permanent bone offers and remaining text gaps in quantity, automation, generator and Spire views are translated.",
+      "New maps default to the current run's World zone; manual changes and explicitly selected presets remain editable."
+    ]
+  },
+  {
     "version": "1.01",
     "label": "1.01",
     "title": "Bone Charges",

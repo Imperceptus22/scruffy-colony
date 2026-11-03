@@ -1,5 +1,10 @@
 # Änderungen
 
+## 1.02 – Ressourcen und Maps
+- Bone Charges now appear directly under Resources, above the gathering controls.
+- German Bone Charge help, permanent bone offers and remaining text gaps in quantity, automation, generator and Spire views are translated.
+- New maps default to the current run's World zone; manual changes and explicitly selected presets remain editable.
+
 ## 1.01 – Bone Charges
 - Bone Charges now use a compact parchment row with a clear count and separate information button.
 

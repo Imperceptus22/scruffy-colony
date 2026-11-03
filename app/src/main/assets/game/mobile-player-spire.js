@@ -2,7 +2,8 @@
 var MobilePlayerSpire = (() => {
     const $ = id => document.getElementById(id);
     let view = 'tower', root, scroll, panes, signature = '', queued = false, owner, storyOpen=false;
-    const node = (tag, cls, text) => { const n=document.createElement(tag); if(cls)n.className=cls; if(text!==undefined)n.textContent=text; return n; };
+    const t=text=>typeof MobileI18n==='undefined'?text:MobileI18nGame.t(MobileI18n.t(text));
+    const node = (tag, cls, text) => { const n=document.createElement(tag); if(cls)n.className=cls; if(text!==undefined)n.textContent=t(text); return n; };
     function button(text, action, cls='') { const n=node('button',cls,text);n.type='button';n.onclick=()=>{action();refresh();};return n; }
     const info = action => TrimpsUI.infoAction(action, false);
     const occupants = new Map();

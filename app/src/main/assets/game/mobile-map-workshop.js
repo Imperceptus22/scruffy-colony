@@ -2,7 +2,7 @@
 var MobileMapWorkshop = (() => {
     const t=value=>typeof MobileI18n==='undefined'?value:MobileI18n.t(value);
     const byId=id=>document.getElementById(id),art={Forest:[0,0],Mountain:[768,0],Sea:[0,512],Depths:[768,512]};
-    let view='create',state=null,lastSelectedText='';
+    let view='create',state=null,lastSelectedText='',creationOpen=false;
     const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
     const button=(text,action)=>{const n=el('button','',text);n.type='button';n.onclick=action;return n;};
     function translateLabels(root){if(!root||typeof MobileI18n==='undefined'||MobileI18n.lang!=='de')return;if(root.id==='selectedMapContainer')byId('mobile-selected-map-stats').style.gridTemplateColumns='repeat(auto-fit,minmax(120px,1fr))';const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode,next=t(node.data);if(next!==node.data)node.data=next;}}
@@ -26,7 +26,12 @@ var MobileMapWorkshop = (() => {
     const resource=map=>game.mapConfig.locations[map.location]?.resourceType;
     const scales=map=>map.location==='Void'||map.location==='Darkness';
     const level=map=>scales(map)?game.global.world:map.level;
-    function show(next){if(next==='create'&&game.global.voidMapsToggled)toggleVoidMaps();view=next;refresh();window.scrollTo(0,0);}
+    function show(next){
+        if(next==='create'&&game.global.voidMapsToggled)toggleVoidMaps();
+        // Returning from the preset editor continues the same edit; the map list starts a new creation.
+        if(next==='create'&&view==='manage')creationOpen=true;
+        view=next;refresh();window.scrollTo(0,0);
+    }
     function setup(){
         const pre=byId('preMaps'),create=el('section'),list=el('section');create.id='mobile-workshop-create';list.id='mobile-workshop-list';
         create.setAttribute('aria-label',t('Map Workshop'));list.setAttribute('aria-label',t('My Maps'));
@@ -96,8 +101,11 @@ var MobileMapWorkshop = (() => {
     function refresh(){
         if(typeof MobileMapControls!=='undefined')MobileMapControls.refresh();
         if(!byId('mobile-workshop-create'))return;
-        if(state!==game.global){state=game.global;view='create';}
+        if(state!==game.global){state=game.global;view='create';creationOpen=false;}
         if(game.global.voidMapsToggled)view='list';
+        const creating=view==='create'&&document.body.dataset.mobilePage==='maps';
+        if(creating&&!creationOpen)MobileMapMenu.defaultCreationLevel();
+        creationOpen=creating;
         const balance=el('span');balance.innerHTML=prettify(game.resources.fragments.owned);const balanceText=t('Fragments')+' · '+balance.textContent;if(byId('mobile-list-fragments').textContent!==balanceText)byId('mobile-list-fragments').textContent=balanceText;
         byId('mobile-workshop-create').hidden=view!=='create';byId('mobile-workshop-list').hidden=view!=='list';
         if(typeof MobileMapPresets!=='undefined')MobileMapPresets.refresh(view);

@@ -140,6 +140,7 @@ var MobileI18nDeRest = (() => {
 
     // ------------------------------------------------------------------ Window titles and own buttons of the tooltip window
     const titleStrings = {
+        'Custom': 'Eigene Menge',
         'Helium Per Hour': 'Helium pro Stunde', 'Radon Per Hour': 'Radon pro Stunde',
         'Trimps Per Second': 'Scruffies pro Sekunde', 'Max Trimps': 'Höchstzahl Scruffies', 'World Info': 'Zoneninfo',
         'Fast': 'Schnell', 'Superheated': 'Überhitzt', 'Electric': 'Elektrisch', 'Pierce': 'Durchschlag', 'Nom': 'Gefräßig', 'Momentum': 'Schwung',
@@ -216,6 +217,13 @@ var MobileI18nDeRest = (() => {
         if (what === 'Helium Per Hour') {
             const text = doc.getElementById('tipText'), next = text && customText(text.innerHTML);
             if (next != null) { text.innerHTML = next; text.lang = 'de'; }
+        }
+        if (what === 'Configure AutoStructure' && doc.createTreeWalker) {
+            const root=doc.getElementById('tipText'), walker=root&&doc.createTreeWalker(root,4);
+            while(walker&&walker.nextNode()){
+                const node=walker.currentNode, key=node.data.trim(), name=layer.name('buildings',key);
+                if(name)node.data=node.data.replace(key,name);
+            }
         }
         for (const [name, test, id, english, german] of buttons) {
             if (what !== name || (test && !(typeof attached === 'string' && test.test(attached)))) continue;
@@ -415,12 +423,133 @@ var MobileI18nDeRest = (() => {
     ];
     const logProbe = /^(?:\S+ and the map it came from|Before you even reali[sz]e|The corruption quickly swirls|The land looks even healthier)/;
 
+    // Real text-node boundaries matter: bold numbers split several original explanations into separate nodes.
+    const correctedStrings = branded({
+        'Maps unlock as you progress in the original game.': 'Maps werden im Spielverlauf freigeschaltet.',
+        'Multi upgrades': 'Mehrfachverbesserungen', 'One-time upgrades': 'Einmalige Verbesserungen', 'Installed': 'Installiert',
+        'Generator upgrades': 'Generator-Verbesserungen', 'Generator automation': 'Generator-Automatisierung',
+        'Starting Setting:': 'Startmodus:', 'At Zone': 'Bei Zone', "Don't Change At Zone": 'Modus beibehalten',
+        'Set to Gain Fuel': 'Treibstoff sammeln', 'Set to Gain Mi': 'Mi sammeln', 'Set to Hybrid': 'Hybrid verwenden',
+        'Must use either 0 or a Zone number larger than 230': 'Wähle 0 oder eine Zonennummer größer als 230.',
+        'Installed · no further purchase.': 'Installiert · kein weiterer Kauf möglich.', 'Requires Hybridization and Storage.': 'Benötigt Hybridization und Storage.',
+        'Fuel capacity before limit': 'Treibstoffkapazität vor Begrenzung', 'Fuel per cell': 'Treibstoff je Feld', 'Overclock penalty': 'Overclock-Abzug',
+        'Housing per tick follows the original fuel, capacity and housing bonuses. Fuel and extra storage are separate.': 'Der Wohnraum je Takt richtet sich nach den ursprünglichen Treibstoff-, Kapazitäts- und Wohnraumboni. Treibstoff und Zusatzlager sind getrennt.',
+        'Build · select, then tap a cell': 'Bauen · auswählen, dann ein Feld antippen', 'Max placed': 'Höchstzahl platziert',
+        'Choose a tool, then tap a cell.': 'Wähle ein Werkzeug und tippe dann auf ein Feld.', 'Sell a trap or tower': 'Eine Falle oder einen Turm verkaufen',
+        'All upgrades installed.': 'Alle Verbesserungen installiert.', 'Upgrade info': 'Info zur Verbesserung', 'Trap info': 'Falleninfo',
+        'Threat': 'Bedrohung', 'Enemies': 'Gegner', 'Defeated enemy': 'Besiegter Gegner', 'Story and quest': 'Geschichte und Aufgabe', 'Player Spire views': 'Player-Spire-Ansichten',
+        'Up To:': 'Bis zu:', 'At W:': 'Ab W:', "Don't buy Nurseries Until Z:": 'Kinderstuben erst ab Z:',
+        'Toggle All Structures On': 'Alle Gebäude aktivieren', 'Toggle All Structures Off': 'Alle Gebäude deaktivieren',
+        'Custom': 'Eigene Menge', 'Automation': 'Automatisierung', 'Fuel': 'Treibstoff', 'Extra storage': 'Zusatzlager',
+        'Housing / tick': 'Wohnraum / Takt', 'Next tick': 'Nächster Takt', 'Pause generator': 'Generator pausieren', 'Resume generator': 'Generator fortsetzen',
+        'Fuel capacity limit': 'Treibstofflimit', '1%–100% · Takes effect immediately.': '1%–100% · Wirkt sofort.', 'Zone rules ›': 'Zonenregeln ›',
+        'Supervision unlocks pause, fuel limits and zone rules.': 'Supervision schaltet Pause, Treibstofflimits und Zonenregeln frei.',
+        'Supervision is required for generator automation.': 'Für die Generator-Automatisierung benötigst du Supervision.',
+        'View Supervision upgrade': 'Supervision ansehen', 'Starting mode & two zone rules': 'Startmodus und zwei Zonenregeln',
+        'Use 0 to disable a rule, or zone 231 and above. Starting mode changes immediately.': 'Mit 0 deaktivierst du eine Regel. Sonst wähle Zone 231 oder höher. Der Startmodus ändert sich sofort.',
+        'Lowering the limit keeps stored fuel. The next overclock consumes excess fuel.': 'Beim Senken des Limits bleibt der gespeicherte Treibstoff erhalten. Der nächste Overclock verbraucht den Überschuss.',
+        'Save zone rules': 'Zonenregeln speichern', 'Zone rules saved.': 'Zonenregeln gespeichert.',
+        'Traps & Upgrades': 'Fallen & Verbesserungen', 'Layouts & Controls': 'Layouts & Steuerung', 'Tower': 'Turm',
+        'Empty': 'Leer', 'Details & note': 'Details & Notiz', 'Spire controls': 'Spire-Steuerung',
+        'Pause Spire': 'Spire pausieren', 'Resume Spire': 'Spire fortsetzen', 'Sell': 'Verkaufen', 'Shift up': 'Nach oben verschieben', 'Shift down': 'Nach unten verschieben',
+        'Sell all traps & towers': 'Alle Fallen & Türme verkaufen', 'Compact view': 'Kompakte Ansicht', 'Enlarge view': 'Ansicht vergrößern',
+        'Story & quest': 'Geschichte & Aufgabe', 'Seal Spire': 'Spire versiegeln', 'Unseal Spire': 'Spire entsiegeln',
+        'The Spire is sealed.': 'Die Spire ist versiegelt.', 'Spire sealed': 'Spire versiegelt',
+        'Continue the Spire quest to unlock upgrades.': 'Setze die Spire-Aufgabe fort, um Verbesserungen freizuschalten.',
+        'Follow the Story & quest to grow your Spire.': 'Folge der Geschichte & Aufgabe, um deine Spire auszubauen.',
+        'Maximum floors reached.': 'Höchste Etagenzahl erreicht.',
+        'The Spire is sealed. Bonuses from 11 of each Tower remain active. Unsealing removes the 11th towers.': 'Die Spire ist versiegelt. Die Boni von je 11 Türmen jeder Art bleiben aktiv. Beim Entsiegeln werden die jeweils elften Türme entfernt.',
+        'Seal the Spire to gain bonuses from 11 of each Tower. Enemies stop spawning. You can unseal through Settings.': 'Versiegle die Spire, um die Boni von je 11 Türmen jeder Art zu erhalten. Es erscheinen keine Gegner mehr. In den Einstellungen kannst du sie wieder entsiegeln.',
+        'damage.': 'Schaden.', 'Multiply Frost Trap damage': 'Multipliziert den Schaden von Frost Trap', 'Double': 'Verdoppelt',
+        'Lightning Trap gains': 'Lightning Trap erhält', 'stacks of Shocked.': 'Stapel Shocked.',
+        'Permanent Upgrades': 'Dauerhafte Verbesserungen',
+        "The Bone Trader saves these bad boys for his best customers. Unlock all 10 Exotic Imports and you'll be judged worthy.":
+            'Der Knochenhändler bewahrt diese Verbesserungen für seine besten Kunden auf. Schalte alle 10 Rare Kin frei, um Zugang zu erhalten.',
+        'These upgrades all persist through Portals, each one can be purchased a maximum of 10 times. Prices increase by 10 Bones per purchase.':
+            'Diese Verbesserungen bleiben beim Portal erhalten. Jede lässt sich höchstens 10-mal kaufen. Der Preis steigt bei jedem Kauf um 10 Knochen.',
+        'Automatically gain Helium equal to the amount you earned on your best run.': 'Du erhältst sofort so viel Helium wie in deinem besten Run.',
+        'Automatically gain Radon equal to the amount you earned on your best run.': 'Du erhältst sofort so viel Radon wie in deinem besten Run.',
+        'These all last until your next Portal. Use them wisely!': 'Diese Boni gelten bis zu deinem nächsten Portal. Setze sie gezielt ein!',
+        'Exotic Imp-orts will be unlocked permanently once purchased. Each has a': 'Gekaufte Rare Kin bleiben dauerhaft freigeschaltet. Jede Art hat eine Erscheinungschance von',
+        '% chance to spawn per cell and better loot than normal enemies. Any stacking multipliers from killing Imp-orts reset on Portal but the imps do not have to be unlocked again.':
+            '% je Feld und bringt bessere Beute als normale Gegner. Durch besiegte Rare Kin gesammelte Multiplikatoren werden beim Portal zurückgesetzt. Die Rare Kin selbst bleiben freigeschaltet.',
+        'Currently at maximum charges!': 'Dein Ladungsvorrat ist voll!',
+        'In total, will grant': 'Insgesamt erhältst du',
+        'A negative number for a resource means that resources would be wasted if another storage is not purchased, but purchasing that last storage leaves you with fewer of that resource than you have now. This can be resolved by emptying your storage before Worshipping.':
+            'Ein negativer Ressourcenwert bedeutet: Ohne ein weiteres Lager würde ein Teil der Beute verloren gehen; der Bau dieses letzten Lagers kostet aber mehr, als du dazugewinnst. Leere das entsprechende Lager vor dem Einsatz einer Knochenladung, um das zu vermeiden.',
+        'Upgrade your Void Map harvesting devices with the power of Bone! Each upgrade will cause 1 out of 100 Void Maps you find to be duplicated, guaranteed.':
+            'Verbessere deine Void-Map-Sammler mit Knochenkraft! Jede Stufe sorgt garantiert dafür, dass von je 100 gefundenen Void Maps eine weitere dupliziert wird.',
+        'You are about to purchase a level of Bone Void Maps, causing +1 out of 100 Void Maps you find to be duplicated. Is this what you wanted to do?':
+            'Du kaufst eine Stufe Bone Void Maps. Dadurch wird von je 100 gefundenen Void Maps eine weitere dupliziert. Möchtest du fortfahren?',
+        'Use more Bones to lure even more Exotic Imports to your World. Each level increases the chance per cell for each Exotic Import to spawn by +0.05%.':
+            'Locke mit Knochen noch mehr Rare Kin in deine Welt. Jede Stufe erhöht die Erscheinungschance je Feld für jede Art um +0.05%.',
+        'You are about to purchase a level of More Imports, increasing the chance per cell of each Exotic Import to spawn by +0.05%. Is this what you wanted to do?':
+            'Du kaufst eine Stufe More Imports. Dadurch steigt die Erscheinungschance je Feld für jede Art der Rare Kin um +0.05%. Möchtest du fortfahren?',
+        'Teach the most gifted of your Trimps to multitask, allowing +5% per level of your employed Trimps to breed while they work, and allowing +5% per level of your unemployed Trimps to help gather resources whenever the town is full.':
+            'Bringe deinen begabtesten Scruffies Multitasking bei. Je Stufe können +5% der beschäftigten Scruffies während der Arbeit brüten. Außerdem helfen +5% der unbeschäftigten Scruffies beim Ressourcensammeln, solange die Kolonie voll ist.',
+        'You are about to purchase a level of Multitasking, allowing +5% per level of your employed Trimps to breed while they work and +5% per level of your unemployed Trimps to help gather whenever the town is full. Is this what you wanted to do?':
+            'Du kaufst eine Stufe Multitasking: Je Stufe brüten +5% der beschäftigten Scruffies während der Arbeit, und +5% der unbeschäftigten helfen beim Sammeln, solange die Kolonie voll ist. Möchtest du fortfahren?',
+        'Type a number below to purchase a specific amount. You can also use shorthand such as 2e5 and 200k to select that large number, or fractions such as 1/2 and 50% to select that fraction of your available workspaces.':
+            'Gib unten die gewünschte Kaufmenge ein. Kurzformen wie 2e5 oder 200k stehen für große Zahlen. Mit Brüchen wie 1/2 oder 50% wählst du den entsprechenden Anteil deiner verfügbaren Arbeitsplätze.',
+        "Here you can choose which structures will be automatically purchased when AutoStructure is toggled on. Check a box to enable the automatic purchasing of that structure, set the dropdown to specify the cost-to-resource % that the structure should be purchased below, and set the 'Up To:' box to the maximum number of that structure you'd like purchased":
+            'Hier legst du fest, welche Gebäude AutoStructure automatisch kauft. Aktiviere das Kästchen beim gewünschten Gebäude. Wähle im Menü, welchen Prozentsatz deiner Vorräte die Kosten unterschreiten müssen, und trage unter ‚Bis zu:‘ die gewünschte Höchstzahl ein',
+        '(0 for no limit)': '(0 für unbegrenzt)',
+        ". For example, setting the dropdown to 10% and the 'Up To:' box to 50 for 'House' will cause a House to be automatically purchased whenever the costs of the next house are less than 10% of your Food, Metal, and Wood, as long as you have less than 50 houses. 'W' for Gigastation is the required minimum amount of Warpstations before a Gigastation is purchased.":
+            '. Beispiel: Mit 10% und ‚Bis zu: 50‘ beim Haus wird automatisch ein Haus gekauft, wenn seine Kosten weniger als 10% deiner Vorräte an Nahrung, Metall und Holz betragen und du weniger als 50 Häuser hast. ‚W‘ bei Gigastation ist die erforderliche Mindestzahl an Warpstations vor einem Kauf.',
+        'Gain Fuel': 'Treibstoff sammeln', 'Gain Mi': 'Mi sammeln', 'Save current': 'Aktuelles Layout speichern',
+        'All Fire Traps gain': 'Alle Fire Traps erhalten',
+        ', and increase the duration of Chilled by 1 cell.': ' und verlängert Chilled um 1 Feld.',
+        'the amount of Toxicity added when an enemy steps on any Poison Trap.': 'die Toxicity, die ein Gegner beim Betreten einer Poison Trap erhält.',
+        'damage, and Lightning Trap now adds': 'Schaden; Lightning Trap gewährt jetzt',
+        'Each Strength Tower grants an additional 15% attack to your Trimps.': 'Jeder Strength Tower gewährt deinen Scruffies zusätzlich 15% Attack.',
+        'Each Condenser Tower grants an additional 5% Helium earned from all sources.': 'Jeder Condenser Tower erhöht das Helium aus allen Quellen zusätzlich um 5%.',
+        'Each Knowledge Tower grants an additional 7.5% Fluffy Exp earned from all sources.': 'Jeder Knowledge Tower erhöht die Fluffy-Exp aus allen Quellen zusätzlich um 7.5%.'
+    });
+    const correctedPatterns = [
+        [/^(?:.* )?is not a valid number$/, () => 'Bitte gib eine gültige Zahl ein.'],
+        [/^Buy (.+) · (\S+) Mi$/, (_, name, cost) => name + ' kaufen · ' + cost + ' Mi'],
+        [/^✓ (\d+) installed · (Hide|Show)$/, (_, count, action) => '✓ ' + count + ' installiert · ' + (action==='Hide'?'Ausblenden':'Anzeigen')],
+        [/^Upgrades survive Portal\. No refunds\. (\S+)% of unspent Mi decays on Portal\.$/, (_, pct) => 'Verbesserungen bleiben beim Portal erhalten. Keine Erstattung. ' + pct + '% der nicht ausgegebenen Mi verfallen beim Portal.'],
+        [/^(?:One-time upgrade\. |Level (\d+) → (\d+)\. )(?:(?:Missing (\S+) Mi\.)|(?:(\S+) Mi left after purchase\.))$/, (_, level, next, missing, balance) => (level?'Stufe '+level+' → '+next+'. ':'Einmalige Verbesserung. ') + (missing?'Es fehlen '+missing+' Mi.':balance+' Mi verbleiben nach dem Kauf.')],
+        [/^Floor (\d+), column (\d+): (.+)$/, (_, floor, column, trap) => 'Etage ' + floor + ', Spalte ' + column + ': ' + (trap==='Empty'?'Leer':trap)],
+        [/^(.+) selected · (\S+) Rs next$/, (_, name, cost) => name + ' ausgewählt · als Nächstes ' + cost + ' Rs'],
+        [/^(AutoStructure|AutoJobs|AutoUpgrade|AutoPrestige|AutoGold|AutoEquip) (On|Off)$/, (_, name, state) => name + (state==='On'?' An':' Aus')],
+        [/^by (\S+)$/, (_, factor) => 'mit ' + factor],
+        [/^(\S+) placed · next costs (\S+) Rs$/, (_, count, cost) => count + ' platziert · nächste kostet ' + cost + ' Rs'],
+        [/^Next: (.+) · (\S+) Rs$/, (_, upgrade, cost) => 'Nächste: ' + upgrade + ' · ' + cost + ' Rs'],
+        [/^Reach Z(\d+)$/, (_, zone) => 'Erreiche Z' + zone],
+        [/^(Running|Paused) · (Gain Mi|Gain Fuel|Hybrid) · Zone (\d+)$/, (_, state, mode, zone) => (state==='Running'?'Läuft':'Pausiert') + ' · ' + {'Gain Mi':'Mi sammeln','Gain Fuel':'Treibstoff sammeln',Hybrid:'Hybrid'}[mode] + ' · Zone ' + zone],
+        [/^Collecting (Fuel|Mi)( · Eradicated forces Gain Fuel\.)?$/, (_, resource, forced) => (resource==='Fuel'?'Sammelt Treibstoff':'Sammelt Mi') + (forced?' · Eradicated erzwingt das Sammeln von Treibstoff.':'')],
+        [/^(\S+)% · (\S+) fuel$/, (_, pct, fuel) => pct + '% · ' + fuel + ' Treibstoff'],
+        [/^Zone rule (\d+)$/, (_, index) => 'Zonenregel ' + index],
+        [/^Mode for zone rule (\d+)$/, (_, index) => 'Modus für Zonenregel ' + index],
+        [/^Spire plan · (\d+) floors$/, (_, floors) => 'Spire-Plan · ' + floors + ' Etagen'],
+        [/^Next floor · Threat (.+) · Spirestones (.+)$/, (_, threat, stones) => 'Nächste Etage · Bedrohung ' + threat + ' · Spirestones ' + stones],
+        [/^Drops (\d+) cells? worth of (Gems|Fragments)$/, (_, cells, resource) => 'Lässt ' + (resource==='Gems'?'Edelsteine':'Fragmente') + ' im Wert von ' + cells + (cells==='1'?' Feld':' Feldern') + ' fallen'],
+        [/^Gain (\S+)% of your current Scruffies as extra housing$/, (_, pct) => 'Zusätzlicher Wohnraum für ' + pct + '% deiner aktuellen Scruffies'],
+        [/^Stacking x(\S+) to (Scruffy breed speed|resource gathering speed|looted resources \(not Helium\))$/, (_, mult, stat) => 'Stapelbarer Faktor x' + mult + ' auf ' + {'Scruffy breed speed':'das Zuchttempo','resource gathering speed':'das Sammeltempo','looted resources (not Helium)':'Ressourcenbeute (außer Helium)'}[stat]],
+        [/^(\S+) secs of production for (1 random resource|all basic resources) as loot$/, (_, seconds, resources) => seconds + ' Sekunden Produktion ' + (resources==='1 random resource'?'einer zufälligen Ressource':'aller Hauptressourcen') + ' als Beute'],
+        [/^\+(\S+)% damage for (\S+) seconds in maps$/, (_, pct, seconds) => '+' + pct + '% Schaden für ' + seconds + ' Sekunden in Maps'],
+        [/^\+(\S+)% (Map Loot|Breed Speed|Scruffy Damage)$/, (_, pct, stat) => '+' + pct + '% ' + {'Map Loot':'Map-Beute','Breed Speed':'Zuchttempo','Scruffy Damage':'Scruffy-Schaden'}[stat]],
+        [/^Gain 1 Bone Charge every (\S+) hours, up to a max of 10 Bone Charges that persist through Portals\. Consume 1 Bone Charge to gain (\S+) minutes of all primary resources as loot\. Gain \+10 mins per level, levels 5 and 10 reduce time to gain a charge by 30 minutes each\.$/,
+            (_, hours, minutes) => 'Du erhältst alle ' + hours + ' Stunden 1 Knochenladung, bis zu einem Vorrat von 10. Die Ladungen bleiben beim Portal erhalten. Eine Ladung gewährt dir die Beute von ' + minutes + ' Minuten Produktion aller Hauptressourcen. Jede Stufe bringt +10 Minuten; Stufe 5 und 10 verkürzen die Aufladezeit jeweils um 30 Minuten.'],
+        [/^You are about to purchase a level of Bone Shrine, granting \+10 minutes of primary resources as loot when worshipping the Shrine(, and -30 minutes on the cooldown time per charge)?\. Is this what you wanted to do\?$/,
+            (_, faster) => 'Du kaufst eine Stufe Bone Shrine. Damit erhältst du beim Einsatz einer Knochenladung +10 Minuten Produktion der Hauptressourcen als Beute' + (faster ? '; die Aufladezeit je Ladung sinkt außerdem um 30 Minuten' : '') + '. Möchtest du fortfahren?'],
+        [/^Click this button or press \(O\/o\) to use a Bone Charge by worshipping at the Bone Shrine\. Will grant (\d+) minutes of gathering for Food, Wood, and Metal as loot, meaning they get bonuses that apply to gathering AND looting\. Will automatically build any storage buildings required to hold your spoils, and deduct their prices from the pot\.$/,
+            (_, minutes) => 'Tippe auf Bone Charges, um eine Knochenladung am Bone Shrine einzusetzen. Du erhältst ' + minutes + ' Minuten Produktion von Nahrung, Holz und Metall als Beute. Dabei gelten sowohl Sammel- als auch Beuteboni. Benötigte Lagergebäude werden automatisch gebaut; ihre Kosten werden von der Beute abgezogen.'],
+        [/^(\S+) Food, (\S+) Wood, and (\S+) Metal after building (\d+) Barns?, (\d+) Sheds?, and (\d+) Forges?\.$/,
+            (_, food, wood, metal, barns, sheds, forges) => food + ' Nahrung, ' + wood + ' Holz und ' + metal + ' Metall nach dem Bau von ' + barns + (barns==='1'?' Scheune, ':' Scheunen, ') + sheds + ' Schuppen und ' + forges + (forges==='1'?' Schmiede.':' Schmieden.')],
+        [/^(Charge|Charges)\. Will gain (?:a|another) charge in (.+)\.$/, (_, charge, time) => (charge==='Charge'?'Knochenladung.':'Knochenladungen.') + ' Die nächste Ladung erhältst du in ' + time.replace(/\b(mins?|hours?)\b/g, unit=>({min:'Minute',mins:'Minuten',hour:'Stunde',hours:'Stunden'})[unit]) + '.'],
+        [/^Total cost: (\S+) Rs$/, (_, cost) => 'Gesamtkosten: ' + cost + ' Rs']
+    ];
     const catalog = {breakdownStrings, breakdownPatterns, breakdownText, breakdownAreas, joined, watchBreakdowns, titleStrings, titlePatterns, titleText, buttons, customStrings, customPatterns, customText,
         decorate, wrapTooltip, strings, patterns, probe, logStrings, logPatterns, logProbe};
     function install(win) {
         layer = win.MobileI18nGame;
         if (!layer || !layer.active || layer.lang !== 'de') { layer = null; return false; }
         if (!layer.extend('de', {strings, patterns, probe})) return false;
+        layer.extend('de', {strings:correctedStrings, patterns:correctedPatterns,
+            fields:{permaBoneBonuses:['text','confirmation']}, scope:'#boneWrapper,#mobile-spire,#mobile-generator,#mobile-map-access'});
         layer.registerLog('de', {strings: logStrings, patterns: logPatterns, probe: logProbe});
         wrapTooltip(win);
         const doc = win.document;

@@ -22,8 +22,9 @@ var MobileBones = (() => {
     const el = (tag, cls, text) => { const node = document.createElement(tag); if (cls) node.className = cls; if (text !== undefined) node.textContent = text; return node; };
     let chargeRow, chargeUse, chargeHint, chargeCount;
     function shrineCharges() {
-        const original = byId('boneShrineBtn');
-        if (!original) return;
+        const original = byId('boneShrineBtn'), resourcePanel = byId('mobile-resource-panel');
+        // Startup can refresh bonuses before the colony has mounted its resource controls.
+        if (!original || !resourcePanel) return;
         const bonus = game.permaBoneBonuses.boosts;
         // Keep the engine-written button intact for Classic and updateBtn(); Diorama has two separate native buttons.
         if (!chargeRow) {
@@ -42,7 +43,7 @@ var MobileBones = (() => {
             chargeUse.onclick = () => { game.permaBoneBonuses.boosts.consume(); shrineCharges(); };
             const info = el('button', 'mobile-info mobile-bone-charge-info', 'Info'); info.type = 'button';
             info.setAttribute('aria-label', t('Bone Charges info')); info.onclick = () => TrimpsUI.info('Bone Shrine', null);
-            chargeRow.append(chargeUse, info); original.after(chargeRow);
+            chargeRow.append(chargeUse, info); resourcePanel.append(chargeRow);
         }
         chargeRow.hidden = bonus.owned <= 0;
         const paused = game.options.menu.pauseGame.enabled, blocked = game.global.challengeActive === 'Pandemonium';

@@ -36,7 +36,8 @@ var ColonyPages = (() => {
             control.addEventListener('click',requestRefresh);
             actions.appendChild(control);
         }
-        resources.prepend(actions);
+        const resourcePanel = document.createElement('div'); resourcePanel.id = 'mobile-resource-panel';
+        resourcePanel.append(actions); resources.prepend(resourcePanel);
         const population = byId('trimpsColumn'), buy = byId('buyCol');
         content.append(resources, population, buy);
         const turkimp = population.querySelector('#turkimpBuff'), turkimpTime = turkimp.querySelector('#turkimpTime');
