@@ -86,12 +86,12 @@
   <div class="startup-title" aria-label="Scruffy Colony"><span>Scruffy</span><span>Colony</span></div>
   <div class="startup-loading">
     <div class="startup-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span lang="en">Preparing your colony …</span><span lang="de">Kolonie wird vorbereitet …</span>
+    <span id="mobile-startup-message"><span lang="en">Preparing your colony …</span><span lang="de">Kolonie wird vorbereitet …</span></span>
   </div>
   <div id="mobile-startup-version"></div>
 </div>
 <div id="mobile-status" role="status">Checking save...</div>
-<div id="mobile-recovery" hidden>The stored save could not be loaded safely. Playing, saving and importing remain locked. First try exporting the existing save. Verify that export or an existing browser backup before resetting app data in Android Settings. You can then import the verified backup. Do not delete app data without a verified backup. <button onclick="TrimpsMobile.exportFile()">Export existing save</button></div>
+<div id="mobile-recovery" hidden>The stored save could not be loaded safely. Playing, saving and importing remain locked. Try reloading the game. If it still fails, export the existing save. Verify that export or an existing browser backup before resetting app data in Android Settings. You can then import the verified backup. Do not delete app data without a verified backup. <button type="button" onclick="location.reload()">Reload game</button> <button onclick="TrimpsMobile.exportFile()">Export existing save</button></div>
 	<noscript>
 	<div id="checkJavascript" style="position: absolute; height: 100%; width: 100%; font-size: 2vw; padding: 10%; color: white; background-color: black; z-index: 1000000;">
 		For some reason, your browser is having trouble loading this game. This game runs on javascript, and if you have an addon such as noscript, you may need to tell it to allow scripts from http://trimps.github.io, which is where this game is hosted.<br/><br/>

@@ -9,6 +9,7 @@ function mobileSettingDefaults() {
 }
 var TrimpsMobile = (() => {
     let ready = false, background = false, nativeId = 0, appVersion = '', appBuild = 0, lifecycleGeneration = 0;
+    let restorePhase = '';
     let pendingLoad = false, awayPreferences = null, resumeAfterChange = false;
     let activeSlot = null, developmentAllowed = false, switching = false, documentsBusy = 0, changing = false;
     const session = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
@@ -169,7 +170,10 @@ var TrimpsMobile = (() => {
             if (reply.ok && reply.result && typeof reply.result.foreground === 'boolean') background = !reply.result.foreground;
             reply.ok ? pending.resolve(reply.result) : pending.reject(new Error(String(reply.result)));
         };
-        const ok = await transactions.restore();
+        let ok;
+        restorePhase = 'checking';
+        try { ok = await transactions.restore(() => { restorePhase = 'retrying'; }); }
+        finally { restorePhase = ''; }
         if (ok) {
             ready = true;
             // N.00 shows as N.0, e.g. 1.0 / 1.0-preview for versionName 1.00 (V-205); all other numbers keep two decimals.
@@ -329,7 +333,7 @@ var TrimpsMobile = (() => {
         return false;
     }
     return {initialize,saveNow,importSave,importFile,exportFile,suspend,resume,handleBack,bridge,freeze,reconcileAway,completeAway,version:()=>appVersion,build:()=>appBuild,ready:()=>ready,
-        slot:()=>activeSlot,storageKey,developmentAllowed:()=>developmentAllowed,busy:()=>switching||changing||documentsBusy>0,applySaveChange,
+        slot:()=>activeSlot,storageKey,restorePhase:()=>restorePhase,developmentAllowed:()=>developmentAllowed,busy:()=>switching||changing||documentsBusy>0,applySaveChange,
         slotInfo,slots:()=>bridge('slots'),status,selectSlot:id=>changeSlot(id),deleteSlot:id=>deleteSlot(id),startDevelopment:text=>changeSlot('dev',text)};
 })();
 

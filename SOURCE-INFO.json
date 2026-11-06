@@ -1,8 +1,8 @@
 {
   "app": "Scruffy Colony",
-  "version": "1.02",
-  "versionCode": 90,
-  "commit": "812020a67e8b53a1e1ade8c8c99f60db7ec89e05",
+  "version": "1.03",
+  "versionCode": 91,
+  "commit": "4e082026c35a94c1a096127a277e68cf4893a8c1",
   "files": 1268,
   "dependencySources": 32
 }

@@ -1,6 +1,6 @@
 # Scruffy Colony – source code
 
-This repository holds the complete corresponding source of the Android game **Scruffy Colony**, version 1.02 (versionCode 90). Each published version is one commit with a matching tag, for example `v1.02`. Pick the tag that matches the version of your installed app, as shown on its Google Play page or in Android's app info.
+This repository holds the complete corresponding source of the Android game **Scruffy Colony**, version 1.03 (versionCode 91). Each published version is one commit with a matching tag, for example `v1.03`. Pick the tag that matches the version of your installed app, as shown on its Google Play page or in Android's app info.
 
 Scruffy Colony is an independent Android adaptation of [Trimps](https://trimps.github.io/) by Zach Hood / Greensatellite ([original source](https://github.com/Trimps/Trimps.github.io)). It is not an official release by the original developer. Website and support: [scruffycolony.de](https://scruffycolony.de).
 

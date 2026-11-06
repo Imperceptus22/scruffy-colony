@@ -10,6 +10,16 @@
     function check() {
         const version = win.TrimpsMobile?.version?.(), label = doc.getElementById('mobile-startup-version');
         if (label && version) label.textContent = 'Version ' + version.replace(/^(\d+)\.00(?=$|-)/, '$1.0');
+        const restorePhase = win.TrimpsMobile?.restorePhase?.();
+        if (restorePhase === 'retrying') {
+            const message = doc.getElementById('mobile-startup-message');
+            const lang = win.MobileI18n?.lang === 'de' ? 'de' : 'en';
+            const text = lang === 'de' ? 'Spielstand wird erneut geprüft …' : 'Checking save again …';
+            if (message && message.textContent !== text) {
+                message.lang = lang;
+                message.textContent = text;
+            }
+        }
         const recovery = doc.getElementById('mobile-recovery'), status = doc.getElementById('mobile-status');
         const failed = (recovery && !recovery.hidden) || (status && /failed|could not|unavailable/i.test(status.textContent));
         const ready = win.mobileStartupScriptsReady && win.MobileGraphicStyle && win.MobileI18n &&
@@ -17,7 +27,7 @@
             (!win.MobileI18n.lang || win.MobileI18n.lang === 'en' || win.MobileTexts);
         if (failed) finish('error');
         else if (ready) requestAnimationFrame(() => requestAnimationFrame(() => finish('ready')));
-        else if (performance.now() - started >= limit) finish('timeout');
+        else if (!restorePhase && performance.now() - started >= limit) finish('timeout');
         else setTimeout(check, 50);
     }
     if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', check, {once:true}); else check();

@@ -1,6 +1,14 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.03",
+    "label": "1.03",
+    "title": "Zuverlässiger Spielstart",
+    "notes": [
+      "The game checks the same save once more if the initial check times out or its worker fails. If loading still fails, reload directly from the recovery screen."
+    ]
+  },
+  {
     "version": "1.02",
     "label": "1.02",
     "title": "Ressourcen und Maps",

@@ -66,7 +66,7 @@ var SaveTransactions = (() => {
                 } finally { if (frozen && !pending) engine.thaw(); }
             });
         }
-        function restore() {
+        function restore(onValidationRetry) {
             return serial(async () => {
                 engine.freeze();
                 try {
@@ -74,12 +74,14 @@ var SaveTransactions = (() => {
                     if (state.deleted) write(null);
                     const source = state.deleted ? null : state.rollback || state.lastGood || engine.read();
                     if (source) {
-                        const apply = async text => {
-                            await validate(text);
-                            if (engine.load(text) !== true) throw new Error('LOAD');
-                            write(text);
-                        };
-                        await apply(source);
+                        try { await validate(source); }
+                        catch (error) {
+                            if (!onValidationRetry || (error?.code !== 'VALIDATION_TIMEOUT' && error?.code !== 'WORKER_ERROR')) throw error;
+                            onValidationRetry();
+                            await validate(source);
+                        }
+                        if (engine.load(source) !== true) throw new Error('LOAD');
+                        write(source);
                         if (state.rollback) await bridge('rollback');
                     }
                     blocked = false;

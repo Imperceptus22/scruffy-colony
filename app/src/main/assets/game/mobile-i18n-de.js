@@ -175,7 +175,7 @@ var MobileI18nDe = (() => {
         "Stored saves could not be listed. Close this page and try again.":"Die gespeicherten Spielstände konnten nicht aufgelistet werden. Schließe diese Seite und versuche es erneut.",
         "Save selection unavailable":"Spielstandauswahl nicht verfügbar",
         // Save status and confirmations (mobile-save.js, index.html)
-        "Checking save...":"Spielstand wird geprüft …","Game saved.":"Spiel gespeichert.","Game saved":"Spiel gespeichert",
+        "Checking save...":"Spielstand wird geprüft …","Reload game":"Erneut laden","Game saved.":"Spiel gespeichert.","Game saved":"Spiel gespeichert",
         "Replace the current save with the imported one?":"Den aktuellen Spielstand durch den importierten ersetzen?",
         "Offline progress is running. Your last confirmed save is safe.":"Der Offline-Fortschritt läuft. Dein zuletzt bestätigter Spielstand ist sicher.",
         "Import is locked: reload to verify the stored save first.":"Import gesperrt: Lade neu, damit der gespeicherte Spielstand zuerst geprüft wird.",
@@ -187,7 +187,7 @@ var MobileI18nDe = (() => {
         "Save selection could not be verified. Reload or choose a confirmed save in Game saves.":"Die Spielstandauswahl konnte nicht bestätigt werden. Lade neu oder wähle unter Spielstände einen bestätigten Spielstand.",
         "Save protection is unavailable. The app will not save.":"Der Speicherschutz ist nicht verfügbar. Die App speichert nicht.",
         "Research":"Forschung",
-        "The stored save could not be loaded safely. Playing, saving and importing remain locked. First try exporting the existing save. Verify that export or an existing browser backup before resetting app data in Android Settings. You can then import the verified backup. Do not delete app data without a verified backup.":"Der gespeicherte Spielstand konnte nicht sicher geladen werden. Spielen, Speichern und Importieren bleiben gesperrt. Versuche zuerst, den vorhandenen Spielstand zu exportieren. Prüfe diesen Export oder eine vorhandene Browser-Sicherung, bevor du die App-Daten in den Android-Einstellungen zurücksetzt. Danach kannst du die geprüfte Sicherung importieren. Lösche App-Daten nicht ohne geprüfte Sicherung.",
+        "The stored save could not be loaded safely. Playing, saving and importing remain locked. Try reloading the game. If it still fails, export the existing save. Verify that export or an existing browser backup before resetting app data in Android Settings. You can then import the verified backup. Do not delete app data without a verified backup.":"Der gespeicherte Spielstand konnte nicht sicher geladen werden. Spielen, Speichern und Importieren bleiben gesperrt. Lade das Spiel erneut. Wenn der Fehler weiterhin auftritt, exportiere den vorhandenen Spielstand. Prüfe diesen Export oder eine vorhandene Browser-Sicherung, bevor du die App-Daten in den Android-Einstellungen zurücksetzt. Danach kannst du die geprüfte Sicherung importieren. Lösche App-Daten nicht ohne geprüfte Sicherung.",
         "Export existing save":"Vorhandenen Spielstand exportieren",
         // Info windows (mobile-ui.js)
         "License text":"Lizenztext","Loading license…":"Lizenz wird geladen …",

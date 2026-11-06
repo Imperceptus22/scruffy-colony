@@ -1,5 +1,8 @@
 # Änderungen
 
+## 1.03 – Zuverlässiger Spielstart
+- The game checks the same save once more if the initial check times out or its worker fails. If loading still fails, reload directly from the recovery screen.
+
 ## 1.02 – Ressourcen und Maps
 - Bone Charges now appear directly under Resources, above the gathering controls.
 - German Bone Charge help, permanent bone offers and remaining text gaps in quantity, automation, generator and Spire views are translated.
