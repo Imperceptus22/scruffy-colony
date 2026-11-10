@@ -1,14 +1,14 @@
 # Scruffy Colony – source code
 
-This repository holds the complete corresponding source of the Android game **Scruffy Colony**, version 1.03 (versionCode 91). Each published version is one commit with a matching tag, for example `v1.03`. Pick the tag that matches the version of your installed app, as shown on its Google Play page or in Android's app info.
+This repository holds the corresponding source release for the Android game **Scruffy Colony**, version 1.04 (versionCode 92). Each published version is one commit with a matching tag, for example `v1.04`. Pick the tag that matches the version of your installed app, as shown on its Google Play page or in Android's app info.
 
 Scruffy Colony is an independent Android adaptation of [Trimps](https://trimps.github.io/) by Zach Hood / Greensatellite ([original source](https://github.com/Trimps/Trimps.github.io)). It is not an official release by the original developer. Website and support: [scruffycolony.de](https://scruffycolony.de).
 
 ## Licences
 
-- The program is licensed under the GNU General Public License, version 3 or later (`COPYING`). The unchanged original licence text and all bundled licences are in `app/src/main/assets/game/license.txt` and `app/src/main/assets/game/licenses/`.
-- Third-party components, artwork origins and their licences: `docs/THIRD_PARTY_NOTICES.md`, `docs/legal/asset-inventory.csv` and `docs/legal/runtime-dependencies.csv`.
-- Library sources: `third-party-sources/` holds the unmodified source archives of the bundled libraries; `docs/legal/dependency-sources.json` lists their origin and SHA-256. Unminified Decimal.js 7.2.4 is in `docs/sources/`.
+- The program is licensed under the GNU General Public License, version 3 or later (`COPYING`). The unchanged original licence text and the game asset licences are in `app/src/main/assets/game/license.txt` and `app/src/main/assets/game/licenses/`.
+- Third-party components and licences: `docs/THIRD_PARTY_NOTICES.md` and `docs/legal/runtime-dependencies.csv`. `docs/legal/asset-inventory.csv` is a historical provenance snapshot from the release preparation.
+- Library sources: `third-party-sources/` holds the unmodified source JARs published for the listed open-source dependencies. `docs/legal/dependency-sources.json` records their origins and SHA-256 values and identifies dependencies for which the vendor Maven repository did not provide a source JAR. Gradle retrieves Google Play Billing and its Google Play services dependencies from Google Maven under the licences declared in their POMs. Unminified Decimal.js 7.2.4 is in `docs/sources/`.
 
 ## Contents
 
@@ -35,4 +35,4 @@ On Windows use `gradlew.bat`. The first build downloads Gradle and the dependenc
 - `assembleDebug` uses your local Android debug key. `assemblePreview` uses the test-only preview key in `app/signing/`, which is public on purpose; never use it for production.
 - For a release build supply your own key with `TRIMPS_RELEASE_KEYSTORE` and `TRIMPS_RELEASE_PASSWORD` (alias `trimps-release`). Production keys are not included. A build signed with your key cannot update the version installed from Google Play.
 - Google Play purchases only work in the version distributed through Google Play.
-- Generated data and images are already included. To regenerate them, run the matching script in `tools/` or `docs/design/`. Image tools need `npm ci` for sharp; `build-development-saves.cjs` and `build-map-specials.cjs` also need Playwright with Chromium (`npm install playwright`).
+- Generated data and images are already included. To regenerate them, run the matching script in `tools/` or `docs/design/`. Image tools need `npm ci` for sharp; `build-development-saves.cjs` and `build-map-specials.cjs` also need Playwright with Chromium (`npm install playwright`, then `npx playwright install chromium`).

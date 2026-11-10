@@ -18,6 +18,7 @@ var MobileI18nDePortal = (() => {
         'Browse Perks →': 'Perks ansehen →', 'Upgrade Perks →': 'Perks verbessern →', 'Jumps to step 2 of the flow': 'Springt zu Schritt 2 des Ablaufs',
         'Browse Challenges →': 'Challenges ansehen →', 'Choose Challenge': 'Challenge wählen', 'No Challenge': 'Keine Challenge',
         'Apply changes': 'Änderungen übernehmen', 'Review new run': 'Neuen Durchlauf prüfen', 'Start new run': 'Neuen Durchlauf starten',
+        'Action blocked by Heirloom protection.': 'Aktion durch Heirloom-Schutz blockiert.',
         'Manage Perks without ending your current run.': 'Verwalte deine Perks, ohne den aktuellen Durchlauf zu beenden.',
         'Prepare Perks and choose a Challenge for your next run.': 'Bereite deine Perks vor und wähle eine Challenge für deinen nächsten Durchlauf.',
         '← Overview': '← Übersicht', '← Challenge': '← Challenge', '← Perks': '← Perks', 'Next: Perks →': 'Weiter: Perks →', 'Next: Review →': 'Weiter: Prüfen →',

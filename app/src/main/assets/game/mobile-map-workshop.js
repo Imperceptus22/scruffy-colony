@@ -99,6 +99,7 @@ var MobileMapWorkshop = (() => {
         tooltipUpdateFunction=()=>{if(!body.isConnected||game.global!==origin||!game.global.mapsOwnedArray.includes(map)){tooltipUpdateFunction='';return;}update();};
     }
     function refresh(){
+        if(document.body.dataset.mobilePage!=='maps'){creationOpen=false;return;}
         if(typeof MobileMapControls!=='undefined')MobileMapControls.refresh();
         if(!byId('mobile-workshop-create'))return;
         if(state!==game.global){state=game.global;view='create';creationOpen=false;}
@@ -116,7 +117,7 @@ var MobileMapWorkshop = (() => {
         for(const tile of byId('mobile-biome-tiles').children){tile.hidden=![...byId('biomeAdvMapsSelect').options].some(o=>o.value===tile.dataset.biome&&!o.disabled);tile.setAttribute('aria-pressed',String(tile.dataset.biome===biome));}
         byId('mobile-map-advanced').hidden=byId('advMapsRow2').style.display==='none';
         const map=selected(),selectedContainer=byId('selectedMapContainer');selectedContainer.hidden=!map;
-        if(map){setPicture(byId('mobile-selected-biome'),map.location);const text=t((scales(map)?'Zone '+level(map)+' · scales with Zone':'Lv '+map.level)+' · '+map.location+' · '+(resource(map)||'—')+' · '+map.size+' cells');if(byId('mobile-selected-map-meta').textContent!==text)byId('mobile-selected-map-meta').textContent=text;byId('selectedMapName').setAttribute('aria-label',t('Map info: '+map.name));if(map.location==='Darkness')byId('mapStatsItems').textContent=String(itemCount(map));const selectedText=selectedContainer.textContent;if(selectedText!==lastSelectedText){translateLabels(selectedContainer);lastSelectedText=selectedContainer.textContent;}}
+        if(map){setPicture(byId('mobile-selected-biome'),map.location);const text=t((scales(map)?'Zone '+level(map)+' · scales with Zone':'Lv '+map.level)+' · '+map.location+' · '+(resource(map)||'—')+' · '+map.size+' cells');if(byId('mobile-selected-map-meta').textContent!==text)byId('mobile-selected-map-meta').textContent=text;byId('selectedMapName').setAttribute('aria-label',t('Map info: '+map.name));if(map.location==='Darkness'){const items=String(itemCount(map));if(byId('mapStatsItems').textContent!==items)byId('mapStatsItems').textContent=items;}const selectedText=selectedContainer.textContent;if(selectedText!==lastSelectedText){translateLabels(selectedContainer);lastSelectedText=selectedContainer.textContent;}}
         for(const map of game.global.mapsOwnedArray){const card=byId(map.id);if(!card?.classList.contains('mapThing'))continue;
             if(!card.querySelector('.mobile-map-thumb')){card.prepend(picture(map.location,'mobile-map-thumb'));const meta=el('span','mobile-map-card-meta');card.append(meta);}
             const cardMeta=card.querySelector('.mobile-map-card-meta'),cardText=t(map.location)+' · '+t(resource(map)||'—');if(cardMeta.textContent!==cardText)cardMeta.textContent=cardText;

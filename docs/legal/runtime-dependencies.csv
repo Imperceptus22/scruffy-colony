@@ -5,24 +5,42 @@ androidx.annotation,annotation-experimental,1.4.1,"The Apache Software License, 
 androidx.annotation,annotation-jvm,1.8.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.arch.core,core-common,2.2.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.arch.core,core-runtime,2.2.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
-androidx.collection,collection,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.collection,collection,1.1.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.1.0/collection-1.1.0.pom
 androidx.concurrent,concurrent-futures,1.1.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.core,core,1.13.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.core,core-ktx,1.13.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.core,core-viewtree,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.customview,customview,1.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/customview/customview/1.0.0/customview-1.0.0.pom
+androidx.fragment,fragment,1.8.9,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.8.9/fragment-1.8.9.pom
 androidx.interpolator,interpolator,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.lifecycle,lifecycle-common,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.lifecycle,lifecycle-livedata,2.6.2,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.6.2/lifecycle-livedata-2.6.2.pom
 androidx.lifecycle,lifecycle-livedata-core,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.lifecycle,lifecycle-runtime,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.lifecycle,lifecycle-viewmodel,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.lifecycle,lifecycle-viewmodel-savedstate,2.6.2,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.loader,loader,1.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/loader/loader/1.0.0/loader-1.0.0.pom
 androidx.profileinstaller,profileinstaller,1.4.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.savedstate,savedstate,1.2.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.startup,startup-runtime,1.1.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.tracing,tracing,1.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 androidx.versionedparcelable,versionedparcelable,1.1.1,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+androidx.viewpager,viewpager,1.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/androidx/viewpager/viewpager/1.0.0/viewpager-1.0.0.pom
 androidx.webkit,webkit,1.14.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
+com.android.billingclient,billing,8.3.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/android/billingclient/billing/8.3.0/billing-8.3.0.pom
+com.google.android.datatransport,transport-api,3.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-api/3.0.0/transport-api-3.0.0.pom
+com.google.android.datatransport,transport-backend-cct,3.1.8,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.8/transport-backend-cct-3.1.8.pom
+com.google.android.datatransport,transport-runtime,3.1.8,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.8/transport-runtime-3.1.8.pom
+com.google.android.gms,play-services-base,18.5.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-base/18.5.0/play-services-base-18.5.0.pom
+com.google.android.gms,play-services-basement,18.9.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.9.0/play-services-basement-18.9.0.pom
+com.google.android.gms,play-services-location,19.0.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-location/19.0.0/play-services-location-19.0.0.pom
+com.google.android.gms,play-services-places-placereport,17.0.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-places-placereport/17.0.0/play-services-places-placereport-17.0.0.pom
+com.google.android.gms,play-services-tasks,18.2.0,Android Software Development Kit License,https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.2.0/play-services-tasks-18.2.0.pom
+com.google.firebase,firebase-encoders,17.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders/17.0.0/firebase-encoders-17.0.0.pom
+com.google.firebase,firebase-encoders-json,18.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-json/18.0.0/firebase-encoders-json-18.0.0.pom
+com.google.firebase,firebase-encoders-proto,16.0.0,"The Apache Software License, Version 2.0",https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-proto/16.0.0/firebase-encoders-proto-16.0.0.pom
 com.google.guava,listenablefuture,1.0,"The Apache Software License, Version 2.0",POM parent com.google.guava:guava-parent:26.0-android in local Gradle cache
+javax.inject,javax.inject,1,"The Apache Software License, Version 2.0",https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom
 org.jetbrains,annotations,23.0.0,"The Apache Software License, Version 2.0",POM metadata in local Gradle cache
 org.jetbrains.kotlin,kotlin-stdlib,2.2.21,Apache-2.0,POM metadata in local Gradle cache
 org.jetbrains.kotlin,kotlin-stdlib-common,2.2.21,Apache-2.0,POM metadata in local Gradle cache

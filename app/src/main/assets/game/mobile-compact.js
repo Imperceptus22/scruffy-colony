@@ -78,6 +78,7 @@ var MobileCompact = (() => {
     }
     function refreshMaps(){
         if(typeof MobileMapWorkshop!=='undefined')MobileMapWorkshop.refresh();
+        if(document.body.dataset.mobilePage!=='maps')return;
         placeMapHeader();
         if(byId('mobile-preset-note').dataset.preset!==String(game.global.selectedMapPreset))presetNote();
         const value=document.createElement('span');value.innerHTML=prettify(game.resources.fragments.owned);

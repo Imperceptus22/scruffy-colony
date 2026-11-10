@@ -59,13 +59,13 @@ Die APK wird zusammen mit dem vollständigen Quellcode des exakt getaggten Stand
 
 Die gemischte IcoMoon-Sammlung mit 1.812 Glyphen ist nicht Bestandteil der APK oder des Quellcodepakets dieser Fassung. Generatorname allein belegt keine Lizenz der enthaltenen Icon-Pakete (https://icomoon.io/faq). Entfernte Dateien bleiben mit Originalhash in docs/upstream-manifest.json unter excludedFromApp dokumentiert. Der unveränderte ursprüngliche Klon bleibt lokal unangetastet. Stattdessen nutzt die App Systemzeichen; unbekannte Symbolnamen erscheinen als Raute. Originale Spielregeln, IDs und Spielstanddaten bleiben erhalten.
 
-PlayFab wird nicht mitgeliefert; Social-/Kaufanbindungen sind deaktiviert. Im Original enthaltene Trimps-Hintergründe und Spielbilder bleiben unter den mitgelieferten Programmhinweisen mit Herkunft im Manifest dokumentiert. Namensrechte und eine umfassende öffentliche/kommerzielle Veröffentlichung sind weiterhin kein Ergebnis dieser privaten Testbereitstellung.
+PlayFab wird nicht mitgeliefert. Google Play Billing 8.3.0 ist für die In-App-Käufe eingebunden. Seine aufgelösten Abhängigkeiten und die jeweiligen POM-Lizenzangaben stehen im [Laufzeitinventar](legal/runtime-dependencies.csv). Das [Quelleninventar](legal/dependency-sources.json) verzeichnet die mitgelieferten Source-JARs und die Artefakte ohne Source-JAR beim jeweiligen Maven-Anbieter. Im Original enthaltene Trimps-Hintergründe und Spielbilder bleiben unter den mitgelieferten Programmhinweisen mit Herkunft im Manifest dokumentiert. Namensrechte und eine umfassende öffentliche/kommerzielle Veröffentlichung sind weiterhin kein Ergebnis dieser privaten Testbereitstellung.
 
 Der feste Preview-Schlüssel ist absichtlich kein Geheimnis: Kennwort android, Alias trimps-preview. Er dient nur Test-Updates, niemals einem Store- oder Produktiv-Release. Er enthält keine persönlichen Daten oder Produktivzugänge.
 
 ## Ergänzung für die Veröffentlichungsvorbereitung vom 16. Oktober 2026
 
-Die [dateibezogene Inventarliste](legal/asset-inventory.csv) erfasst alle Dateien unter `app/src/main/assets/game/` einschließlich SHA-256, Herkunftsgruppe, Lizenzgrundlage und Prüfstatus. Sie ändert keine Originallizenz. Für Dateien mit ungeklärter Versionszuordnung steht ausdrücklich `upstream-scope-open`; eine Hashübereinstimmung ist kein Nachweis von Nutzungsrechten.
+Die [dateibezogene Inventarliste](legal/asset-inventory.csv) dokumentiert den damaligen Stand unter `app/src/main/assets/game/` mit SHA-256, Herkunftsgruppe, Lizenzgrundlage und Prüfstatus. Die Prüfsummen beziehen sich auf diese historische Bestandsaufnahme. Sie ändert keine Originallizenz. Für Dateien mit ungeklärter Versionszuordnung steht ausdrücklich `upstream-scope-open`; eine Hashübereinstimmung ist kein Nachweis von Nutzungsrechten.
 
 | Bestandteil | Lizenzgrundlage und Herkunft |
 | --- | --- |

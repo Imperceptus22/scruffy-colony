@@ -1,6 +1,15 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.04",
+    "label": "1.04",
+    "title": "Zuverlässigere Abläufe",
+    "notes": [
+      "Protected Heirlooms now explain why a new run cannot start, and purchase confirmations avoid stacking repeated retries.",
+      "Background game views do less repeated work while keeping their current display and gameplay behavior."
+    ]
+  },
+  {
     "version": "1.03",
     "label": "1.03",
     "title": "Zuverlässiger Spielstart",

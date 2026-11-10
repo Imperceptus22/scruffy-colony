@@ -21,14 +21,14 @@ const html = fs.readFileSync(path.join(game, 'index.html'), 'utf8');
 assert(!html.includes('src="Playfab/'), 'PlayFab script must not be loaded');
 const references = [];
 for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) references.push([game, match[1]]);
-for (const dir of ['css']) {
-    for (const file of fs.readdirSync(path.join(game, dir)).filter(x => x.endsWith('.css'))) {
-        const folder = path.join(game, dir);
+for (const [folder, files] of [[path.join(game, 'css'), fs.readdirSync(path.join(game, 'css')).filter(x => x.endsWith('.css'))],
+    [game, fs.readdirSync(game).filter(x => /^mobile.*\.css$/.test(x))]]) {
+    for (const file of files) {
         for (const match of fs.readFileSync(path.join(folder, file), 'utf8').matchAll(/url\(['"]?([^'"\)]+)['"]?\)/g)) references.push([folder, match[1]]);
     }
 }
 for (const [base, ref] of references) {
-    if (/^(data:|https?:|#)/.test(ref)) continue;
+    if (/^(data:|https?:|#|var\()/i.test(ref.trim())) continue;
     const resolved = path.resolve(base, decodeURIComponent(ref.split(/[?#]/)[0]));
     assert(resolved.startsWith(game + path.sep), `Outside assets: ${ref}`);
     assert(fs.existsSync(resolved), `Missing reference: ${ref}`);

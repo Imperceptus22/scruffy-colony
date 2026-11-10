@@ -4,7 +4,7 @@ Geprüft am 24.10.2026 gegen integration/next, Commit d27e7e7. Die Grafikzuordnu
 
 Die alten Grafiktafeln sind bereits projekteigene Illustrationen. „Noch offen“ bedeutet hier: noch kein eigenes Modell im neueren gemeinsamen Imp-Stil. Die Vorschläge sind freie gestalterische Deutungen, keine Original-Lore und keine Änderungen an Werten, Fähigkeiten, Freischaltungen oder Spielständen. Die Tafeln sind Präsentationsentwürfe; transparente Einzelgrafiken müssten nach Auswahl separat produziert werden.
 
-Turkimp ist bereits in V-132 / #204 erfasst: https://github.com/Imperceptus22/trimps-mobile/issues/204
+Turkimp ist bereits im Projektvorgang V-132 erfasst.
 
 ## 01 – Tiermerkmale und Verwandte
 

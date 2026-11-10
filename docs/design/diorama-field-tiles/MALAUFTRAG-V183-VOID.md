@@ -1,6 +1,6 @@
 # Void-Feldkacheln malen – Auftrag für das Bildwerkzeug (V-183)
 
-Stand 25.10.2026. Issue: [V-183](https://github.com/Imperceptus22/trimps-mobile/issues/279). Void-Karten zeigen im Diorama-Stil noch das Originalraster (einfarbig dunkelviolett, Symbole als Glyphen). Ziel ist eine dritte Tafel C im Stil von Tafel A und B.
+Stand 25.10.2026. Projektvorgang V-183. Void-Karten zeigen im Diorama-Stil noch das Originalraster (einfarbig dunkelviolett, Symbole als Glyphen). Ziel ist eine dritte Tafel C im Stil von Tafel A und B.
 
 ## Was es im Void-Raster gibt (Originalcode, `upstream/trimps`)
 - Jede Zelle einer Void-Karte trägt zusätzlich `voidCell` (`main.js`, Rasteraufbau). Farben im Original: offen #33095b, besiegt #8114ff, Overkill #845def.

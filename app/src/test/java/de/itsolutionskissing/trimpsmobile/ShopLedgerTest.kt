@@ -37,6 +37,26 @@ class ShopLedgerTest {
     }
     @get:Rule val temporary = TemporaryFolder()
 
+    @Test fun acknowledgeRetryHasAtMostOnePendingTaskAndCloseCancelsIt() {
+        val pending = mutableListOf<Runnable>()
+        var retries = 0
+        val retry = AcknowledgeRetry(
+            { task, delay -> assertEquals(60_000L, delay); pending += task; true },
+            { task -> pending.remove(task) },
+            { retries++ }
+        )
+        retry.schedule(); retry.schedule()
+        assertEquals(1, pending.size)
+        pending.removeAt(0).run()
+        assertEquals(1, retries)
+        retry.schedule()
+        val cancelled = pending.single()
+        retry.close()
+        assertTrue(pending.isEmpty())
+        cancelled.run()
+        assertEquals(1, retries)
+    }
+
     @Test fun creditedTokensSurviveReopenAndAreRecordedOnce() {
         val root = temporary.newFolder()
         assertFalse(ShopLedger(root).isCredited("token-a"))

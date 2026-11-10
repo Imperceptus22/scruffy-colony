@@ -1,10 +1,11 @@
 // View state is independent of the engine's chamber flags. A start intent never enters a save.
 var MobileMapMenu = (() => {
     const byId=id=>document.getElementById(id);
+    const setText=(node,value)=>{if(node.textContent!==value)node.textContent=value;};
     // V-243 steps 4d/4i: the own map, return and transition labels use the stage 1 catalog (Zur Welt, Map starten …); English stays unchanged.
     const tr=value=>typeof MobileI18n==='undefined'?value:MobileI18n.t(value);
     let pending=null, returning=null, requesting=false, starting=false, inventoryKey='', creationState=null;
-    let lastState=null, lastMapActive=false, chamberArrival=null;
+    let lastState=null, lastMapActive=false, chamberArrival=null, descriptionKey=null,fragmentBalance=game.resources.fragments.owned,voidRenderKey=null;
     const available=()=>Boolean(game.global.mapsUnlocked);
     function defaultCreationLevel(){
         if(!available())return;
@@ -102,23 +103,34 @@ var MobileMapMenu = (() => {
         if(!unlocked)return;
         if(creationState!==state){resetAdvMaps();defaultCreationLevel();creationState=state;}
         refreshMapBiomes();
-        const key=JSON.stringify(state.mapsOwnedArray);
-        if(key!==inventoryKey){refreshMaps();inventoryKey=key;}
+        if(document.body.dataset.mobilePage==='maps'){
+            const key=JSON.stringify(state.mapsOwnedArray);
+            if(key!==inventoryKey){refreshMaps();inventoryKey=key;}
+            const fragments=game.resources.fragments.owned;
+            if(fragments!==fragmentBalance){if(getHighestLevelCleared()>=getUnlockZone('extra'))updateExtraLevelColors();fragmentBalance=fragments;}
+        }else descriptionKey=null;
         const current=state.mapsOwnedArray.find(map=>map.id===state.currentMapId);
         const selected=current||state.mapsOwnedArray.find(map=>map.id===state.lookingAtMap);
-        if(selected)renderMapDescription(selected);else clearMapDescription();
+        if(document.body.dataset.mobilePage==='maps'){
+            const run=byId('selectMapBtn'),key=JSON.stringify([selected,typeof MobileI18n==='undefined'?'en':MobileI18n.lang,state.world,state.mapsUnlocked,run.style.visibility,state.lastClearedMapCell,state.challengeActive,state.mapExtraBonus,state.universe,game.mapUnlocks]);
+            if(key!==descriptionKey){if(selected)renderMapDescription(selected);else clearMapDescription();descriptionKey=JSON.stringify([selected,typeof MobileI18n==='undefined'?'en':MobileI18n.lang,state.world,state.mapsUnlocked,run.style.visibility,state.lastClearedMapCell,state.challengeActive,state.mapExtraBonus,state.universe,game.mapUnlocks]);}
+        }
         if(selected){const card=byId(selected.id);if(card)swapClass('mapElement','mapElementSelected',card);}
         const run=byId('selectMapBtn'),active=Boolean(state.mapsActive&&!state.preMapsActive);
-        run.textContent=tr(pending?'Waiting for combat to end':active?'Go to current combat':current?'Continue map':'Run map');
-        run.setAttribute('aria-label',run.textContent);run.setAttribute('aria-disabled',String(Boolean(pending)));
-        byId('recycleMapBtn').style.visibility=selected&&!active&&(!selected.noRecycle||current)?'visible':'hidden';
-        byId('recycleMapBtn').textContent=tr(current?.noRecycle?'Abandon map':'Recycle Map');
+        setText(run,tr(pending?'Waiting for combat to end':active?'Go to current combat':current?'Continue map':'Run map'));
+        if(run.getAttribute?.('aria-label')!==run.textContent)run.setAttribute('aria-label',run.textContent);
+        const pendingText=String(Boolean(pending));if(run.getAttribute?.('aria-disabled')!==pendingText)run.setAttribute('aria-disabled',pendingText);
+        const recycle=byId('recycleMapBtn'),visibility=selected&&!active&&(!selected.noRecycle||current)?'visible':'hidden';if(recycle.style.visibility!==visibility)recycle.style.visibility=visibility;
+        setText(byId('recycleMapBtn'),tr(current?.noRecycle?'Abandon map':'Recycle Map'));
         const action=byId('mobile-map-transition');action.hidden=!(pending||current||state.preMapsActive||state.switchToMaps||state.switchToWorld);
-        action.textContent=tr(state.preMapsActive?'Return to World':state.switchToMaps||state.switchToWorld?'Abandon soldiers':'To map chamber');
-        const note=byId('mobile-map-state');note.textContent=tr(returning?'Return to World queued. Wait, or explicitly abandon your soldiers.':pending?'Map start queued. Wait, or explicitly abandon your soldiers.':current?'Finish or abandon the current map before selecting another.':'');note.hidden=!note.textContent;
-        const world=byId('mobile-return-world');if(world){world.hidden=!state.mapsActive&&!returning;world.textContent=tr(returning?'Return queued · Waiting':'Return to World');world.disabled=Boolean(returning);world.setAttribute('aria-disabled',String(Boolean(returning)));}
-        const direct=byId('mobile-map-world');if(direct){direct.hidden=!state.preMapsActive&&!state.mapsActive&&!returning;direct.disabled=Boolean(returning);direct.textContent=tr(returning?'Return queued · Waiting':'← Return to World');}
-        renderVoidMaps();updateMapCost();
+        setText(action,tr(state.preMapsActive?'Return to World':state.switchToMaps||state.switchToWorld?'Abandon soldiers':'To map chamber'));
+        const note=byId('mobile-map-state');setText(note,tr(returning?'Return to World queued. Wait, or explicitly abandon your soldiers.':pending?'Map start queued. Wait, or explicitly abandon your soldiers.':current?'Finish or abandon the current map before selecting another.':''));note.hidden=!note.textContent;
+        const world=byId('mobile-return-world');if(world){world.hidden=!state.mapsActive&&!returning;world.disabled=Boolean(returning);const disabled=String(Boolean(returning));if(world.getAttribute?.('aria-disabled')!==disabled)world.setAttribute('aria-disabled',disabled);}
+        const direct=byId('mobile-map-world');if(direct){direct.hidden=!state.preMapsActive&&!state.mapsActive&&!returning;direct.disabled=Boolean(returning);setText(direct,tr(returning?'Return queued · Waiting':'← Return to World'));}
+        if(document.body.dataset.mobilePage==='maps'){
+            const key=JSON.stringify([state.voidMapsToggled,state.totalVoidMaps,state.preMapsActive,state.mapsUnlocked,state.world,state.challengeActive,state.mapExtraBonus,state.universe,getHighestLevelCleared(),byId('mapLevelInput').value,Fluffy.isRewardActive('stickler'),typeof u2Mutations!=='undefined'&&Boolean(u2Mutations.tree?.Heirlots?.purchased),typeof u2Mutations!=='undefined'&&Boolean(u2Mutations.tree?.Heirmazing?.purchased)]);
+            if(key!==voidRenderKey){renderVoidMaps();voidRenderKey=key;}
+        }
     }
     function setup(){
         const host=byId('mobile-maps'),note=document.createElement('p');note.id='mobile-map-state';note.setAttribute('role','status');note.hidden=true;

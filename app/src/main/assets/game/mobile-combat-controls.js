@@ -38,7 +38,7 @@ var MobileCombatControls=(()=>{
   for(const[id,label]of Object.entries(labels))byId(id).dataset.shortLabel=label;
   mapButton.hidden=active||!available(maps);
   for(const {node,source}of rows)node.hidden=!available(source);
-  if(!world.hidden)world.textContent=world.disabled?'Return queued':'World';
+  if(!world.hidden){const label=world.disabled?'Return queued':'World',text=typeof MobileI18nGame==='undefined'?label:MobileI18nGame.t(label);if(world.textContent!==text)world.textContent=text;}
   if(dialog.open&&document.body.dataset.mobilePage!=='battle')dialog.close();
  }
  const observer=new MutationObserver(refresh);

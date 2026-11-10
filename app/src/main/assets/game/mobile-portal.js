@@ -147,6 +147,9 @@ var MobilePortal = (() => {
         // activatePortal stays the only start; if it declines (e.g. the Daily changed) its message is shown on the review.
         // A second tap after a successful start (portal closed, review still set) must not run activatePortal again.
         if(!portalWindowOpen||view!=='review')return;
+        if(typeof MobileHeirloomTools!=='undefined'&&MobileHeirloomTools.portalBlocked()){
+            if(!byId('mobile-portal-heirloom-protection-error')){const notice=el('p','mobile-portal-heirloom-protection-error','portalError');text(notice,'Action blocked by Heirloom protection.');byId('mobile-portal-run-review').prepend(notice);}return;
+        }
         const story=byId('portalStory').innerHTML;activatePortal();
         if(!portalWindowOpen||view!=='review')return;
         show('review');if(byId('portalStory').innerHTML!==story){const notice=el('p','','portalError');notice.innerHTML=byId('portalStory').innerHTML;byId('mobile-portal-run-review').prepend(notice);}

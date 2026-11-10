@@ -1,5 +1,9 @@
 # Änderungen
 
+## 1.04 – Zuverlässigere Abläufe
+- Protected Heirlooms now explain why a new run cannot start, and purchase confirmations avoid stacking repeated retries.
+- Background game views do less repeated work while keeping their current display and gameplay behavior.
+
 ## 1.03 – Zuverlässiger Spielstart
 - The game checks the same save once more if the initial check times out or its worker fails. If loading still fails, reload directly from the recovery screen.
 

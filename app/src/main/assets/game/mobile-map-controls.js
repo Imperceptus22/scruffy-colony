@@ -48,15 +48,19 @@ var MobileMapControls = (() => {
     function refresh() {
         if (!price) return;
         const cost=originalCost(true), available=game.resources.fragments.owned, valid=Number.isFinite(cost);
-        price.textContent=valid?t(numberText(cost)+' Fragments'):t('Choose a valid level');
-        stock.textContent=t('Available: '+numberText(available));
-        balance.textContent=valid?t((available>=cost?'Remaining: ':'Missing: ')+numberText(Math.abs(available-cost))):'';
+        const priceText=valid?t(numberText(cost)+' Fragments'):t('Choose a valid level'),stockText=t('Available: '+numberText(available)),balanceText=valid?t((available>=cost?'Remaining: ':'Missing: ')+numberText(Math.abs(available-cost))):'';
+        if(price.textContent!==priceText)price.textContent=priceText;
+        if(stock.textContent!==stockText)stock.textContent=stockText;
+        if(balance.textContent!==balanceText)balance.textContent=balanceText;
         balance.classList.toggle('mobile-map-deficit',valid&&available<cost);
         for(const type of ['loot','size','difficulty']){
             const range=document.getElementById(type+'AdvMapsRange'),text=document.getElementById(type+'AdvMapsText');
-            range.style.setProperty('--map-fill',(Number(range.value)/9*100)+'%');
-            text.textContent=text.textContent.replace(/^Min /,'').replace(', Max ','–').replace(/ cells$/,'')+(type==='size'?' cells':'');
-            range.setAttribute('aria-valuetext',text.textContent+'; quality '+range.value+' of 9');
+            const fill=(Number(range.value)/9*100)+'%';
+            if(range.style.getPropertyValue('--map-fill')!==fill)range.style.setProperty('--map-fill',fill);
+            const textValue=text.textContent.replace(/^Min /,'').replace(', Max ','–').replace(/ cells$/,'')+(type==='size'?' cells':'');
+            if(text.textContent!==textValue)text.textContent=textValue;
+            const valueText=textValue+'; quality '+range.value+' of 9';
+            if(range.getAttribute('aria-valuetext')!==valueText)range.setAttribute('aria-valuetext',valueText);
         }
     }
     function setup() {

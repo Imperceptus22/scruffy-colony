@@ -14,7 +14,8 @@ var MobileHeirloomTools=(()=>{
         return [];
     }
     const protectedExtras=(extra,ids)=>extra.filter(i=>ids.includes(key(i)));
-    if(typeof document==='undefined')return{key,resolve,compare,protectedExtras};
+    const hasProtectedExtras=(extra,ids)=>protectedExtras(extra,ids).length>0;
+    if(typeof document==='undefined')return{key,resolve,compare,protectedExtras,hasProtectedExtras};
     const {el,button,number,note}=MobileQolPages,host=el('section',undefined,'qol-page'),content=el('div'),sets=el('div'),message=el('p'),name=el('input'),nameLabel=el('label','Set name');host.id='qol-heirloom-tools';name.id='qol-heirloom-set-name';name.maxLength=32;nameLabel.htmlFor=name.id;
     document.querySelector('#heirloomWrapper .mh-tools').append(host);host.append(content,el('h3','Manual equipment sets'),nameLabel,name,button('Save equipped set',saveSet),sets,message);message.setAttribute('role','status');
     function inventory(){return[...types.map(t=>game.global[t+'Equipped']).filter(i=>i?.name),...game.global.heirloomsCarried,...game.global.heirloomsExtra];}
@@ -46,12 +47,13 @@ var MobileHeirloomTools=(()=>{
         content.append(el('p','Local sets and protection belong to this save. Protecting temporary items blocks recycling and Portal until you carry, equip or unprotect them. Carry limits still apply.'));renderSets();note(content);
     }
     function block(){cancelTooltip();tooltip('Heirloom protection','customText','update','Carry, equip or unprotect protected temporary Heirlooms before recycling or restarting a run (Portal, challenge restart or universe return). Carry limits still apply.');say('Action blocked by Heirloom protection.');}
+    function portalBlocked(){return hasProtectedExtras(game.global.heirloomsExtra,protection());}
     const recycle=recycleHeirloom;recycleHeirloom=function(){if(protection().includes(key(getSelectedHeirloom()))){block();return;}return recycle.apply(this,arguments);};
     const bulk=recycleAllHeirloomsClicked;recycleAllHeirloomsClicked=function(){if(protectedExtras(game.global.heirloomsExtra,protection()).length){block();return;}return bulk.apply(this,arguments);};
-    const portal=activatePortal;activatePortal=function(){if(protectedExtras(game.global.heirloomsExtra,protection()).length){block();return;}return portal.apply(this,arguments);};
+    const portal=activatePortal;activatePortal=function(){if(portalBlocked()){block();return;}return portal.apply(this,arguments);};
     const abandon=abandonChallenge;abandonChallenge=function(){if(game.challenges[game.global.challengeActive]?.mustRestart&&protectedExtras(game.global.heirloomsExtra,protection()).length){block();return;}return abandon.apply(this,arguments);};
     const universe=screwThisUniverse;screwThisUniverse=function(confirmed){if(confirmed&&protectedExtras(game.global.heirloomsExtra,protection()).length){block();return;}return universe.apply(this,arguments);};
     const reset=resetGame;resetGame=function(keepPortal){if(keepPortal&&protectedExtras(game.global.heirloomsExtra,protection()).length){block();return;}return reset.apply(this,arguments);};
-    return{refresh,key,resolve,compare,protectedExtras,isProtected};
+    return{refresh,key,resolve,compare,protectedExtras,isProtected,portalBlocked};
 })();
 if(typeof module!=='undefined')module.exports=MobileHeirloomTools;

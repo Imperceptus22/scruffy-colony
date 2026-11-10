@@ -5,7 +5,7 @@ var MobileQolNavigator=(()=>{
     const {el,button,note}=MobileQolPages;
     function state(){const g=game.global;return{storage:g.autoStorageAvailable,upgrades:g.autoUpgradesAvailable,jobs:bwRewardUnlocked('AutoJobs'),structure:bwRewardUnlocked('AutoStructure'),equip:g.autoEquipUnlocked,maps:g.canMapAtZone};}
     function hint(key){const voids={storage:'AutoStorage',equip:'AutoEquip',maps:'MapAtZone'};if(voids[key])return 'Original unlock: complete a Void Map at zone '+game.mapUnlocks[voids[key]].world+' or higher in Universe 1.';if(key==='jobs'||key==='structure')return 'Original unlock: complete Bionic Wonderland level '+game.bwRewards[key==='jobs'?'AutoJobs':'AutoStructure'].requires+'.';return 'Original unlock: break the planet at zone 60 in Universe 1. Availability also follows the original challenge rules.';}
-    let renderPage=null;
+    let renderPage=null,lastSnapshotAt=0;
     const environment=()=>({Fluffy,autoBattle,playerSpire,playerSpireTraps,u2Mutations,bwRewardUnlocked,getAllowedTalentTiers,getObsidianStart});
     function snapshot(){
         const saved=MobileQolStore.get('unlockDiscoveries',{}),seen={};
@@ -75,7 +75,7 @@ var MobileQolNavigator=(()=>{
         spoilers.onchange=()=>{MobileQolStore.set('qolSpoilers',spoilers.checked);render(snapshot());};search.oninput=()=>render(snapshot());
         renderPage=rows=>{if(host.isConnected)render(rows);else renderPage=null;};render(snapshot());
     }
-    function refresh(){const rows=snapshot();if(renderPage)renderPage(rows);}
+    function refresh(){const open=MobileMore.currentPage()==='qol';if(!open&&Date.now()-lastSnapshotAt<10000)return;lastSnapshotAt=Date.now();const rows=snapshot();if(open&&renderPage)renderPage(rows);}
     MobileMore.registerPage('qol','Quality of life','game',build);return{entries,state,refresh,snapshot};
 })();
 if(typeof module!=='undefined')module.exports=MobileQolNavigator;

@@ -1,7 +1,7 @@
 // Presentation only. Retain original nodes/handlers and never change battle/map state on navigation.
 var MobileDesign = (() => {
     const byId=id=>document.getElementById(id);
-    let page='colony', lastEnemy='', logScroll=0, followLog=true, logAnchor=null, logSequence=0, queueSignature='';
+    let page='colony', lastEnemy='', logScroll=0, followLog=true, logAnchor=null, logSequence=0, queueSignature='',queueProgressObserver=null,observedQueueProgress=null;
     function button(text, action, cls='') {
         const node=document.createElement('button');node.textContent=text;node.className=cls;node.onclick=action;return node;
     }
@@ -81,7 +81,7 @@ var MobileDesign = (() => {
     function setupQueue(){
         const summary=document.createElement('p');summary.id='mobile-queue-summary';byId('mobile-queue-title').after(summary);
         const groups=document.createElement('div');groups.id='mobile-queue-groups';byId('queueItemsHere').before(groups);
-        new MutationObserver(refreshQueue).observe(byId('queueItemsHere'),{childList:true,subtree:true,attributes:true,attributeFilter:['style']});refreshQueue();
+        new MutationObserver(refreshQueue).observe(byId('queueItemsHere'),{childList:true});refreshQueue();
     }
     function setupButtonFeedback(){
         let pressed=null,timer=null,started=0;
@@ -98,18 +98,18 @@ var MobileDesign = (() => {
         window.addEventListener('blur',release);
     }
     function refreshQueue(){
+        observeQueueProgress();
         const entries=game.global.buildingsQueue,summary=byId('mobile-queue-summary');
         const first=entries[0]?.split('.'),time=byId('queueTimeRemaining')?.textContent.replace(/^\s*-\s*/,'').replace(/ Seconds?/,' s').trim();
         const text=first ? first[0]+' ×'+(first[1]||1)+(time ? ' · '+time : ' · Waiting') : 'No buildings queued';
         if(summary.textContent!==text)summary.textContent=text;summary.hidden=false;
-        const groups=MobileInventory.queueGroups(entries);
-        byId('mobile-queue-title').textContent='Build Queue · '+groups.length+' type'+(groups.length===1?'':'s');
-        const progress=byId('mobile-queue-progress');
-        if(progress)progress.firstElementChild.style.transform=entries.length ? (byId('animationDiv')?.style.transform||'scaleX(0)') : 'scaleX(0)';
         const originalRows=[...byId('queueItemsHere').children];
         const signature=JSON.stringify([entries,originalRows.map(row=>row.id)]);
         if(signature===queueSignature)return;
         queueSignature=signature;
+        const groups=MobileInventory.queueGroups(entries);
+        const title=byId('mobile-queue-title'),titleText='Build Queue · '+groups.length+' type'+(groups.length===1?'':'s');
+        if(title.textContent!==titleText)title.textContent=titleText;
         const host=byId('mobile-queue-groups'),open=new Set([...host.querySelectorAll('details[open]')].map(row=>row.dataset.queueType));
         host.replaceChildren();
         for(const group of groups){
@@ -125,6 +125,8 @@ var MobileDesign = (() => {
             host.append(details);
         }
     }
+    function syncQueueProgress(){const fill=byId('mobile-queue-progress')?.firstElementChild;if(!fill)return;const transform=game.global.buildingsQueue.length?(byId('animationDiv')?.style.transform||'scaleX(0)'):'scaleX(0)';if(fill.style.transform!==transform)fill.style.transform=transform;}
+    function observeQueueProgress(){const bar=byId('animationDiv');if(bar!==observedQueueProgress){queueProgressObserver?.disconnect();observedQueueProgress=bar;if(bar){queueProgressObserver??=new MutationObserver(syncQueueProgress);queueProgressObserver.observe(bar,{attributes:true,attributeFilter:['style']});}}syncQueueProgress();}
     function setupCombat(){
         const scene=document.createElement('div');scene.id='mobile-combat-scene';scene.setAttribute('aria-hidden','true');
         scene.innerHTML='<img class="mobile-trimp-art" src="mobile-assets/trimps.png" alt=""><div id="mobile-enemy-art"></div><span class="mobile-duel-mark"></span>';

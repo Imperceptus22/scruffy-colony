@@ -35,6 +35,7 @@ class BoneShop(private val activity: Activity, private val webView: WebView, pri
     private val flow = ShopFlow(ledger, ::send, { token -> consume(token) }, { token -> acknowledge(token) })
     private var closed = false
     private var connecting = false
+    private val acknowledgeRetry = AcknowledgeRetry(webView::postDelayed, webView::removeCallbacks) { if (!closed) queryPurchases() }
 
     fun attach(): Boolean {
         if (!WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) return false
@@ -62,6 +63,7 @@ class BoneShop(private val activity: Activity, private val webView: WebView, pri
 
     fun close() {
         closed = true
+        acknowledgeRetry.close()
         reply = null
         client?.endConnection()
         client = null
@@ -166,7 +168,7 @@ class BoneShop(private val activity: Activity, private val webView: WebView, pri
             if (result.responseCode == BillingClient.BillingResponseCode.OK) return@acknowledgePurchase
             Log.w("TrimpsMobile", "Acknowledge failed: ${result.responseCode}")
             // Credited but not acknowledged reports again as "credited → acknowledge": ask Play again in a minute.
-            webView.postDelayed({ if (!closed) queryPurchases() }, 60_000)
+            acknowledgeRetry.schedule()
         }
     }
 
