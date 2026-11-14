@@ -1,5 +1,9 @@
 # Änderungen
 
+## 1.05 – Speichern und Spielstart
+- Saves containing Void Maps duplicated by the Bone Trader can be saved, exported and loaded without changing either map.
+- Loading waits until all game interface modules are ready, preventing a startup failure that could disappear after reloading.
+
 ## 1.04 – Zuverlässigere Abläufe
 - Protected Heirlooms now explain why a new run cannot start, and purchase confirmations avoid stacking repeated retries.
 - Background game views do less repeated work while keeping their current display and gameplay behavior.

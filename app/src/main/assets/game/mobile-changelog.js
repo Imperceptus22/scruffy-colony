@@ -1,6 +1,15 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.05",
+    "label": "1.05",
+    "title": "Speichern und Spielstart",
+    "notes": [
+      "Saves containing Void Maps duplicated by the Bone Trader can be saved, exported and loaded without changing either map.",
+      "Loading waits until all game interface modules are ready, preventing a startup failure that could disappear after reloading."
+    ]
+  },
+  {
     "version": "1.04",
     "label": "1.04",
     "title": "Zuverlässigere Abläufe",

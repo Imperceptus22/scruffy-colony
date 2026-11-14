@@ -99,6 +99,8 @@ var TrimpsMobile = (() => {
         }
     }
     const engine = {
+        // Native restore can start early; its loader needs the later inventory and UI adapters.
+        beforeLoad:()=>document.readyState === 'loading' ? new Promise(resolve=>document.addEventListener('DOMContentLoaded',resolve,{once:true})) : undefined,
         serialize:()=>saveOriginal(true), read:()=>localStorage.getItem(storageKey()),
         write:text=>text === null ? localStorage.removeItem(storageKey()) : localStorage.setItem(storageKey(),text),
         load:text=>{ const ok = loadOriginal(text); mobileSettingDefaults(); freeze(); return ok; },

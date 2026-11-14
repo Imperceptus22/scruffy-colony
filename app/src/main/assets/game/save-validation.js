@@ -107,10 +107,14 @@ var SaveValidation = (() => {
         }
         if (g.mapsOwnedArray !== undefined) {
             if (!Array.isArray(g.mapsOwnedArray)) fail('INVALID');
-            const ids = new Set();
+            const ids = new Map();
             for (const map of g.mapsOwnedArray) {
-                if (!map || typeof map !== 'object' || !/^map\d+$/.test(map.id) || ids.has(map.id) || typeof map.name !== 'string') fail('INVALID');
-                ids.add(map.id);
+                if (!map || typeof map !== 'object' || !/^map\d+$/.test(map.id) || typeof map.name !== 'string') fail('INVALID');
+                // Only the original Bone Trader's pair of identical Void maps may share an id.
+                const previous = ids.get(map.id);
+                if (previous && (previous.count !== 1 || previous.map.location !== 'Void' || map.location !== 'Void' ||
+                    previous.map.name !== map.name || previous.map.noRecycle !== true || map.noRecycle !== true)) fail('INVALID');
+                ids.set(map.id, {map, count:previous ? 2 : 1});
                 // Normal maps use 50 ±25 cells (talents may reduce them); unique Bog/Big Wall maps reach 150.
                 if (!Number.isInteger(map.size) || map.size < 1 || map.size > 150) fail('INVALID', 'global.mapsOwnedArray.size');
                 for (const name of ['level', 'loot', 'size', 'difficulty', 'stacked']) {

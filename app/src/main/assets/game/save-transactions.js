@@ -71,6 +71,7 @@ var SaveTransactions = (() => {
                 engine.freeze();
                 try {
                     const state = await bridge('restore');
+                    await engine.beforeLoad?.();
                     if (state.deleted) write(null);
                     const source = state.deleted ? null : state.rollback || state.lastGood || engine.read();
                     if (source) {
