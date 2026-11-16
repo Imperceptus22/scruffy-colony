@@ -1,6 +1,16 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.10",
+    "label": "1.10",
+    "title": "RoboTrimp und Bionic Wonderland",
+    "notes": [
+      "RoboTrimp now shows MagnetoShriek with a named control, its current status and the remaining cooldown.",
+      "The Info panel explains both combat abilities and lists the Bionic Wonderland rewards you have unlocked.",
+      "Bionic Wonderland upgrades show a compact notice in combat."
+    ]
+  },
+  {
     "version": "1.05",
     "label": "1.05",
     "title": "Speichern und Spielstart",

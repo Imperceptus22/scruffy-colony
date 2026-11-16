@@ -236,6 +236,7 @@ var MobileDesign = (() => {
         MobileMapMenu.refresh();
         if(typeof MobileCompact!=='undefined')MobileCompact.refreshMaps();
         if(typeof MobileCombatControls!=='undefined')MobileCombatControls.refresh();
+        if(typeof MobileRoboTrimp!=='undefined')MobileRoboTrimp.refresh();
         if(typeof MobileQolNavigator!=='undefined')MobileQolNavigator.refresh();
         if(typeof MobileEarlyColony!=='undefined')MobileEarlyColony.refresh();
         byId('mobile-maps').dataset.chamber=String(game.global.preMapsActive);

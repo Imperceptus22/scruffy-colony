@@ -4618,6 +4618,7 @@ function resetGame(keepPortal, resetting) {
 	}
 	game = null;
 	game = newGame();
+	if (typeof MobileRoboTrimp !== 'undefined') MobileRoboTrimp.watchUnlocks();
 	game.global.autoSave = autoSave;
 	game.global.messages = messages;
 	game.options = options;

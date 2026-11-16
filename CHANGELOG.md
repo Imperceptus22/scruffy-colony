@@ -1,5 +1,10 @@
 # Änderungen
 
+## 1.10 – RoboTrimp und Bionic Wonderland
+- RoboTrimp now shows MagnetoShriek with a named control, its current status and the remaining cooldown.
+- The Info panel explains both combat abilities and lists the Bionic Wonderland rewards you have unlocked.
+- Bionic Wonderland upgrades show a compact notice in combat.
+
 ## 1.05 – Speichern und Spielstart
 - Saves containing Void Maps duplicated by the Bone Trader can be saved, exported and loaded without changing either map.
 - Loading waits until all game interface modules are ready, preventing a startup failure that could disappear after reloading.

@@ -1,0 +1,110 @@
+#roboTrimpBtn { display: none !important; }
+body[data-mobile-page="battle"]:has(#mobile-robo-dock:not([hidden])) {
+    padding-bottom: calc(var(--mobile-nav-height, 60px) + var(--mobile-robo-height, 48px) + 16px) !important;
+}
+#mobile-robo-dock {
+    position: fixed;
+    z-index: 6;
+    inset: auto 0 var(--mobile-nav-height, 60px);
+}
+#mobile-robo-dock[hidden], #mobile-robo-dock aside[hidden] { display: none; }
+.mobile-robo-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px;
+    background: #123639;
+    color: #fff5dd;
+    border-top: 1px solid #a77a43;
+}
+.mobile-robo-bar strong, .mobile-robo-bar small { display: block; overflow-wrap: anywhere; }
+.mobile-robo-bar small { color: #f1d4a5; line-height: 1.2; }
+:is(#mobile-robo-dock, #mobile-robo-info) button {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 3px 8px;
+    border: 1px solid currentColor;
+    border-radius: 7px;
+    background: transparent;
+    color: inherit;
+    font-weight: bold;
+    line-height: 1.2;
+}
+#mobile-robo-dock, #mobile-robo-info {
+    --robo-action-color: #30210f;
+    --robo-action-bg: #efb750;
+}
+html[data-graphics="diorama"] body :is(#mobile-robo-dock, #mobile-robo-info) button {
+    background: transparent !important;
+    color: inherit !important;
+    border: 1px solid currentColor !important;
+    border-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+#mobile-robo-dock .mobile-robo-action, #mobile-robo-info .mobile-robo-action {
+    color: var(--robo-action-color);
+    background: var(--robo-action-bg);
+}
+html[data-graphics="diorama"] body :is(#mobile-robo-dock, #mobile-robo-info) .mobile-robo-action {
+    color: var(--robo-action-color) !important;
+    background: var(--robo-action-bg) !important;
+}
+#mobile-robo-dock .mobile-robo-action[data-state="armed"],
+#mobile-robo-info .mobile-robo-action[data-state="armed"] {
+    --robo-action-color: #153a27;
+    --robo-action-bg: #c7e4c6;
+}
+#mobile-robo-dock .mobile-robo-action:disabled, #mobile-robo-info .mobile-robo-action:disabled {
+    --robo-action-bg: #e5dac1;
+    --robo-action-color: #4c4232;
+    opacity: 1;
+}
+#mobile-robo-dock aside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: min(calc(100% - 20px), 520px);
+    margin: 0 auto 6px;
+    padding: 4px 6px 4px 12px;
+    border: 1px solid #9b6837;
+    border-radius: 10px;
+    background: #f9e7bd;
+    color: #382310;
+    box-shadow: 0 4px 12px #18100065;
+}
+#mobile-robo-info {
+    box-sizing: border-box;
+    position: fixed;
+    inset: auto 0 0;
+    width: min(100%, 590px);
+    max-width: 100%;
+    max-height: min(83dvh, 650px);
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid var(--line, #9b6837);
+    border-radius: 16px 16px 0 0;
+    color: var(--ink, #382310);
+    background: var(--surface, #f9e7bd);
+    overflow: hidden;
+}
+#mobile-robo-info[open] { display: flex; flex-direction: column; }
+#mobile-robo-info::backdrop { background: #15100dcc; }
+html[data-graphics="diorama"] #mobile-robo-info {
+    color: #382310;
+    border-color: #9b6837;
+    background: linear-gradient(135deg, #ffefcc, #f0d49d);
+}
+#mobile-robo-info :is(header, footer) { display: flex; align-items: center; gap: 8px; padding: 8px 12px; }
+#mobile-robo-info footer { justify-content: space-between; border-top: 1px solid #9b683788; }
+#mobile-robo-info header div { flex: 1; }
+#mobile-robo-info h2 { margin: 0; font-size: 1.12rem; }
+#mobile-robo-info h3 { margin: 8px 0 4px; font-size: 1rem; }
+#mobile-robo-info p, #mobile-robo-info ul { margin: 0; }
+.mobile-robo-details { overflow-y: auto; padding: 0 12px 8px; }
+.mobile-robo-ability { display: grid; grid-template-columns: 1fr auto; gap: 1px 8px; padding: 5px 0; }
+.mobile-robo-ability p { grid-column: 1 / -1; }
+#mobile-robo-info ul { padding: 0; list-style: none; }
+#mobile-robo-info li { border-top: 1px solid #9b683755; padding: 3px 0; display: flex; flex-wrap: wrap; column-gap: 8px; }
