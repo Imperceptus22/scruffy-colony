@@ -22,25 +22,31 @@ var MobileRoboTrimp = (() => {
         DecaBuild: t('Builds ten of the same item at once.', 'Baut zehn gleiche Aufträge gleichzeitig.')
     };
     const percent = new Intl.NumberFormat(de ? 'de' : 'en', { style: 'percent', maximumFractionDigits: 1 });
-    const dock = document.createElement('section');
-    dock.id = 'mobile-robo-dock';
-    dock.lang = de ? 'de' : 'en';
-    dock.hidden = true;
-    dock.innerHTML = `
-        <aside hidden><span role="status" data-original-text></span><button type="button" aria-label="${t('Dismiss notice', 'Hinweis schließen')}">×</button></aside>
-        <div class="mobile-robo-bar">
-            <div><strong>MagnetoShriek</strong><small role="status" data-original-text></small></div>
-            <button type="button" class="mobile-robo-action"></button>
-            <button type="button" aria-haspopup="dialog">Info</button>
-        </div>`;
+    const info = document.createElement('button');
+    info.id = 'mobile-robo-button';
+    info.type = 'button';
+    info.className = 'mobile-combat-icon';
+    info.hidden = true;
+    info.setAttribute('aria-label', 'RoboTrimp');
+    info.setAttribute('aria-haspopup', 'dialog');
+    info.setAttribute('data-original-text', '');
+    info.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M12 7V3M2 12v4m20-4v4M8 13h1m6 0h1"/></svg>';
+    document.getElementById('mobile-combat-more').after(info);
+
+    const notice = document.createElement('aside');
+    notice.id = 'mobile-robo-notice';
+    notice.lang = de ? 'de' : 'en';
+    notice.hidden = true;
+    notice.innerHTML = `<span role="status" data-original-text></span><button type="button" aria-label="${t('Dismiss notice', 'Hinweis schließen')}">×</button>`;
+    document.body.append(notice);
     const dialog = document.createElement('dialog');
     dialog.id = 'mobile-robo-info';
-    dialog.lang = dock.lang;
+    dialog.lang = notice.lang;
     dialog.setAttribute('aria-labelledby', 'mobile-robo-title');
     dialog.innerHTML = `
         <header>
             <img src="mobile-assets/imp-family/Robotrimp.webp" alt="" width="48" height="48">
-            <div><h2 id="mobile-robo-title" data-original-text>RoboTrimp &amp; Bionic Wonderland</h2><p></p></div>
+            <div><h2 id="mobile-robo-title" data-original-text>RoboTrimp</h2><p></p></div>
             <button type="button" aria-label="${t('Close info', 'Info schließen')}">×</button>
         </header>
         <div class="mobile-robo-details">
@@ -54,15 +60,13 @@ var MobileRoboTrimp = (() => {
             <ul></ul>
         </div>
         <footer><span role="status"></span><button type="button" class="mobile-robo-action"></button></footer>`;
-    document.body.append(dock, dialog);
+    document.body.append(dialog);
 
-    const notice = dock.querySelector('aside');
-    const status = dock.querySelector('small');
     const dialogLevel = dialog.querySelector('header p');
     const dialogStatus = dialog.querySelector('footer span');
     const rewards = dialog.querySelector('ul');
     const [attack, shriek] = dialog.querySelectorAll('.mobile-robo-ability b');
-    const [dismiss, toggle, info] = dock.querySelectorAll('button');
+    const dismiss = notice.querySelector('button');
     const [close, dialogToggle] = dialog.querySelectorAll('button');
     let lastLevel;
     let lastState;
@@ -100,7 +104,7 @@ var MobileRoboTrimp = (() => {
     function refresh() {
         const { roboTrimpLevel: level, roboTrimpCooldown: cooldown, universe } = game.global;
         const visible = universe === 1 && level > 0 && document.body.dataset.mobilePage === 'battle';
-        if (dock.hidden === visible) dock.hidden = !visible;
+        if (info.hidden === visible) info.hidden = !visible;
         if (!visible && dialog.open) dialog.close();
         if (level !== lastLevel && !notice.hidden) notice.hidden = true;
         if (pendingUnlock !== level) pendingUnlock = undefined;
@@ -134,13 +138,10 @@ var MobileRoboTrimp = (() => {
             off: t('Arm', 'Scharfstellen'), armed: t('Turn off', 'Ausschalten'),
             active: t('In effect', 'Wirkt'), cooldown: remaining, locked: label
         }[state];
-        status.textContent = `${label} · ${t('RoboTrimp Lv.', 'RoboTrimp St.')} ${level}`;
-        dialogStatus.textContent = cooldown > 0 ? remaining : label;
-        for (const button of [toggle, dialogToggle]) {
-            button.textContent = action;
-            button.disabled = state !== 'armed' && state !== 'off';
-            button.dataset.state = state;
-        }
+        dialogStatus.textContent = state === 'active' && cooldown > 0 ? remaining : label;
+        dialogToggle.textContent = action;
+        dialogToggle.disabled = state !== 'armed' && state !== 'off';
+        dialogToggle.dataset.state = state;
         lastLevel = level;
         lastState = state;
         lastCooldown = cooldown;
@@ -150,13 +151,10 @@ var MobileRoboTrimp = (() => {
         }
     }
 
-    toggle.onclick = dialogToggle.onclick = () => { magnetoShriek(); refresh(); };
+    dialogToggle.onclick = () => { magnetoShriek(); refresh(); };
     info.onclick = () => { dialog.showModal(); close.focus(); };
     close.onclick = () => dialog.close();
     dismiss.onclick = () => { notice.hidden = true; info.focus(); };
-    new ResizeObserver(([entry]) => {
-        document.documentElement.style.setProperty('--mobile-robo-height', entry.target.offsetHeight + 'px');
-    }).observe(dock.querySelector('.mobile-robo-bar'));
     function showUnlock() {
         const level = game.global.roboTrimpLevel;
         const mapLevel = getHighestBionic();

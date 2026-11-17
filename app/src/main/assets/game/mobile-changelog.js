@@ -1,6 +1,26 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.16",
+    "label": "1.16",
+    "title": "Einheitliches Diorama-Zeitportal",
+    "notes": [
+      "All Diorama portal steps share a stationary parchment background. Challenge details open below the selected Challenge.",
+      "Locked Challenges are readable on parchment, and completed Challenges are grouped in a collapsible section at the bottom.",
+      "Perk names, levels and costs are displayed without shadows in Diorama."
+    ]
+  },
+  {
+    "version": "1.15",
+    "label": "1.15",
+    "title": "Zeitportal und RoboTrimp",
+    "notes": [
+      "Open RoboTrimp from the robot icon next to Combat Tools. Arm or turn off MagnetoShriek inside the RoboTrimp panel.",
+      "The Diorama Challenge list sits on stationary parchment and opens details below the selected Challenge.",
+      "Change Perks one level at a time with plus and minus. The list shows pending changes and why a purchase is unavailable."
+    ]
+  },
+  {
     "version": "1.10",
     "label": "1.10",
     "title": "RoboTrimp und Bionic Wonderland",

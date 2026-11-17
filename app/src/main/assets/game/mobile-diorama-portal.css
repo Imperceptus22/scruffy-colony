@@ -71,10 +71,75 @@ html[data-graphics="diorama"] #tooltipDiv.mobile-portal-confirm:where([data-mobi
 }
 
 /* ================= Time Portal page (V-204 A) ================= */
-/* Dark plank wood like the colony pages, the head as a parchment band, nailed parchment cards with dark ink. */
+/* The portal steps share a parchment surface. Perky retains its wood backdrop. */
 html[data-graphics="diorama"] #portalWrapper {
   background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; color:#2d3025;
 }
+html[data-graphics="diorama"] #portalWrapper[data-portal-view]:not([data-perky-open]) {
+  box-sizing:border-box;
+  background:linear-gradient(145deg,#faefd3,#efd9ac) padding-box, #422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px border-box!important;
+  border-inline:7px solid transparent;
+  padding-inline:10px!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view] #mobile-portal-steps li {color:#54402a!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view] #mobile-portal-steps li[aria-current] {color:#214f46!important;border-bottom-color:#214f46;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view] #mobile-portal-steps .mobile-portal-step-label {font-size:.75rem;}
+html[data-graphics="diorama"] #portalWrapper:is([data-portal-view="challenges"],[data-portal-view="perks"]) :is(#mobile-portal-perk-balance,#mobile-portal-challenges>h2,#mobile-portal-perks h2,#mobile-portal-perks h3) {color:#2d3025!important;text-shadow:none!important;}
+html[data-graphics="diorama"] #portalWrapper:is([data-portal-view="challenges"],[data-portal-view="perks"]) :is(#mobile-portal-universe,#mobile-portal-c2,#mobile-portal-chosen) {
+  background:#f8e8c5!important;border:1px solid #b79a71!important;border-image:none!important;box-shadow:none!important;padding:5px 8px!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="perks"] #mobile-portal-perk-edit-note {color:#392d1c!important;text-shadow:none!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="perks"] #portalUpgradesHere .mobile-perk {
+  background:transparent!important;border:0!important;border-bottom:1px solid #bda275!important;border-radius:0!important;padding:6px 0!important;
+  box-shadow:none!important;text-shadow:none!important;filter:none;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="perks"] #portalUpgradesHere .mobile-perk * {text-shadow:none!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="perks"] #portalUpgradesHere .mobile-perk-actions button {
+  background:#f9eccd!important;color:#244d43!important;border:1px solid #a7895c!important;border-image:none!important;box-shadow:none!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="perks"] #portalUpgradesHere .mobile-perk-actions .mobile-perk-buy:not(:disabled) {
+  background:#eeb64f!important;color:#33220e!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #challengesHere,
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #challengesHere>ul {
+  display:flex;flex-direction:column;gap:0;padding:0;min-width:0;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #mobile-portal-challenges #challengesHere .challengeThing {
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 10px;
+  min-width:0;height:auto;padding:8px 10px!important;text-align:left;
+  background:transparent!important;border:0!important;border-bottom:1px solid #bda275!important;border-radius:0!important;
+  border-image:none!important;box-shadow:none!important;color:#2d3025!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #mobile-portal-challenges #challengesHere .challengeThing * {color:inherit!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #challengesHere .challengeThing .thingName::before {display:none;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #mobile-portal-challenges #challengesHere :is(#challenge0,#challengeDaily) {
+  margin-bottom:6px;border:1px solid #aa8857!important;border-radius:4px!important;
+}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #mobile-portal-challenges #challengesHere .challengeThing[aria-pressed="true"] {background:#e8e5cb!important;}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .mobile-challenge-badge:not(:empty) {
+  min-width:0;overflow-wrap:anywhere;font-size:.78rem;font-weight:700;padding:2px 5px;border:1px solid #a78b63;border-radius:4px;
+}
+html[data-graphics="diorama"] #portalWrapper #challengesHere :is(.nextChallenge,[data-next-unlock]) {order:2;}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .nextChallenge {margin-top:8px;border-top:1px solid #a78b63!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view="challenges"] #challengesHere .challengeThing.nextChallenge {text-shadow:none;}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .mobile-completed-challenges {
+  order:3;margin-top:12px;border:1px solid #a7895c;border-radius:4px;background:#f9eccd;color:#2d3025;
+}
+html[data-graphics="diorama"] #portalWrapper #challengesHere .mobile-completed-challenges>summary {
+  position:relative;min-height:48px;align-content:center;padding:8px 32px 8px 12px;cursor:pointer;font-weight:700;color:inherit;
+}
+html[data-graphics="diorama"] #portalWrapper .mobile-completed-challenges>summary::after {
+  content:"";position:absolute;inset-inline-end:14px;top:50%;width:8px;height:8px;
+  border:solid currentColor;border-width:0 2px 2px 0;transform:translateY(-50%) rotate(-45deg);
+}
+html[data-graphics="diorama"] #portalWrapper .mobile-completed-challenges[open]>summary::after {transform:translateY(-65%) rotate(45deg);}
+html[data-graphics="diorama"] #portalWrapper #challengesHere :is(#mobile-challenge-facts,#mobile-challenge-rules) {
+  margin:0 0 6px!important;padding:6px 9px!important;background:#fff1cd!important;border:1px solid #ba9a69!important;border-radius:4px!important;
+  border-image:none!important;box-shadow:none!important;
+}
+html[data-graphics="diorama"] #portalWrapper #challengesHere #mobile-challenge-facts h3 {font-size:1rem;margin:0 0 4px;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view] #mobile-portal-footer {background:#f3e3bf!important;border-top:1px solid #bda275!important;}
+html[data-graphics="diorama"] #portalWrapper[data-portal-view] #mobile-portal-footer button {font-size:clamp(.8rem,4vw,1rem)!important;}
 /* V-264: the band with its full wooden frame and the buttons inside it: equal padding above and below keeps Overview,
    title and close vertically centred, the side padding keeps them off the frame (8-9px). */
 html[data-graphics="diorama"] #portalWrapper #mobile-portal-header {
@@ -95,8 +160,8 @@ html[data-graphics="diorama"] #portalWrapper #mobile-portal-header #cancelPortal
 html[data-graphics="diorama"] #portalWrapper #mobile-portal-header #mobile-portal-back {
   display:inline-flex; align-items:center; padding:0 12px!important; white-space:nowrap; font:600 .85rem/1 var(--font-data)!important;
 }
-html[data-graphics="diorama"] #mobile-portal-overview #portalTitle,
-html[data-graphics="diorama"] #mobile-portal-overview>p { color:#f6e7c6!important; text-shadow:0 1px 2px #000; }
+html[data-graphics="diorama"] #mobile-portal-overview :is(#portalTitle,#mobile-portal-mode,#portalTotalHelium,#portalTotalSpent,#portalTotalPortals),
+html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review h2 { color:#2d3025!important; text-shadow:none; }
 html[data-graphics="diorama"] #portalWrapper #titleCol2>div,
 html[data-graphics="diorama"] #mobile-portal-overview>button,
 html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-card,#mobile-challenge-facts,#mobile-portal-run-review dl,#mobile-portal-chosen,.mobile-perk) {
@@ -119,7 +184,6 @@ html[data-graphics="diorama"] #portalWrapper :is(#mobile-portal-step-back,#mobil
 }
 html[data-graphics="diorama"] #portalWrapper #mobile-portal-steps li { color:#f6e7c6!important; }
 html[data-graphics="diorama"] #portalWrapper #mobile-portal-steps li[aria-current] { color:#f0c46c!important; }
-html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review h2 { color:#f6e7c6!important; text-shadow:0 1px 2px #000; }
 html[data-graphics="diorama"] #portalWrapper #mobile-portal-footer {
   background:#2c1e14 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px!important; border-top:2px solid #6b4a2a!important;
 }
@@ -153,9 +217,9 @@ html[data-graphics="diorama"] #portalWrapper #mobile-portal-run-review #portalCo
 html[data-graphics="diorama"] #portalWrapper :is(#mobile-portal-perk-balance,.mobile-challenge-legend,#mobile-portal-challenges>h2,#mobile-portal-perks h2,#mobile-portal-perks h3,#mobile-portal-perks>p,#mobile-portal-perks>div>p,#ptabInfoText) {
   color:#f6e7c6!important; text-shadow:0 1px 2px #000!important;
 }
-html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) { background:#2c1e14cc!important; border-color:#8a6d44!important; }
-html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) button { color:#f6e7c6!important; background:transparent!important; }
-html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-portal-remove,#mobile-perk-filters) button[aria-pressed="true"] { color:#2a1606!important; background:#e0a640!important; }
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-perk-filters) { background:#2c1e14cc!important; border-color:#8a6d44!important; }
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-perk-filters) button { color:#f6e7c6!important; background:transparent!important; }
+html[data-graphics="diorama"] #portalWrapper :is(.mobile-portal-segments,#mobile-perk-filters) button[aria-pressed="true"] { color:#2a1606!important; background:#e0a640!important; }
 
 /* ================= Challenge text on parchment (V-264) ================= */
 /* With a run in progress (viewingUpgrades) the step shows the active Challenge: heading, the original text and Abandon

@@ -21,17 +21,17 @@
 #portalWrapper summary{min-height:48px;padding:12px 0;cursor:pointer;}
 #portalWrapper #portalRow,#portalWrapper #titleCol1:has(#portalError[style*="display: none"]){display:none;}
 #portalWrapper #perkCol>.challengeTitle{display:none;}
-#portalWrapper #portalUpgradesHere{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:8px;overflow:visible!important;height:auto!important;padding:0!important;}
-.mobile-perk{display:grid;grid-template-columns:28px minmax(0,1fr) 48px;align-content:start;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:8px;min-width:0;}
-.mobile-perk-symbol{display:grid;place-items:center;width:28px;height:30px;color:var(--accent);}
-.mobile-perk-symbol svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.mobile-perk-name{grid-column:2/4;grid-row:1;font:.95rem var(--font-data);font-weight:600;overflow-wrap:anywhere;padding-right:42px;min-height:2.5em;display:flex;align-items:center;}
-.mobile-perk-info{grid-column:3;grid-row:1;width:48px;height:48px;padding:0!important;font-size:.7rem!important;border:0;background:transparent;}
-.mobile-perk-level{grid-column:1/4;font-size:.8rem;color:var(--muted);}
-.mobile-perk-level>span{font:600 1.05rem var(--font-data);color:var(--ink);}
-.mobile-perk-effect{grid-column:1/4;font-size:.73rem;min-height:2.6em;line-height:1.4;color:var(--muted);overflow-wrap:anywhere;}
-#portalWrapper .mobile-perk-buy{grid-column:1/4;float:none;width:100%!important;min-height:48px;height:auto!important;padding:6px!important;margin:0!important;font:.85rem var(--font-data)!important;overflow-wrap:anywhere;}
-#portalWrapper .mobile-perk-buy:disabled{opacity:1;}
+#portalWrapper #portalUpgradesHere{display:grid!important;grid-template-columns:minmax(0,1fr);overflow:visible!important;height:auto!important;padding:0!important;}
+.mobile-perk{display:flex;flex-wrap:wrap;align-items:center;gap:5px 8px;padding:6px 4px;border-bottom:1px solid var(--pp-frame);min-width:0;}
+.mobile-perk-content{flex:1 0 7.5rem;min-width:min-content;max-width:100%;display:grid;gap:2px;}
+.mobile-perk-name{font:700 .95rem/1.2 var(--font-data);}
+.mobile-perk-level,.mobile-perk-price{font-size:.78rem;color:var(--pp-muted);}
+.mobile-perk-actions{display:flex;gap:4px;margin-inline-start:auto;}
+#portalWrapper .mobile-perk-actions button{flex:0 0 48px;width:48px!important;min-width:48px;min-height:48px;height:48px!important;padding:4px!important;margin:0!important;border:1px solid var(--pp-rim)!important;border-image:none!important;border-radius:4px!important;box-shadow:none!important;color:var(--pp-ink)!important;background:var(--pp-panel)!important;font:700 1.2rem var(--font-data)!important;}
+#portalWrapper .mobile-perk-actions .mobile-perk-buy:not(:disabled){color:var(--pp-on-primary)!important;background:var(--pp-primary)!important;}
+#portalWrapper .mobile-perk-actions button:disabled{opacity:.6;}
+#portalWrapper #pnumTabs{display:none!important;}
+#mobile-portal-perk-edit-note{margin:6px 0 8px;padding:7px 8px;border:1px solid var(--pp-frame);font-size:.8rem;color:var(--pp-ink);}
 #portalWrapper #equalityScaling{width:100%!important;min-height:80px;}
 #mobile-perk-filters{display:flex;gap:2px;border-bottom:1px solid var(--line);margin:8px 0 12px;}
 #mobile-perk-filters button{flex:1;min-width:0;min-height:48px;border:0;border-radius:0;background:transparent;padding:3px;font-size:.76rem;}
@@ -106,12 +106,10 @@
 #portalWrapper #mobile-portal-universe #swapPortalUniverseBtn{flex:none;align-content:center;text-align:center;position:static!important;float:none!important;width:auto!important;max-width:55%;min-height:44px;margin:0!important;padding:8px 12px!important;font:600 .8rem var(--font-data)!important;}
 #mobile-portal-c2{flex-wrap:wrap;}
 #mobile-portal-c2>small{flex:1 1 8rem;}
-.mobile-portal-segments,#mobile-portal-remove{display:flex;flex:none;border:1px solid var(--pp-rim);border-radius:4px;overflow:hidden;}
-#portalWrapper .mobile-portal-segments button,#portalWrapper #mobile-portal-remove button{min-height:44px;min-width:0;margin:0;padding:4px 12px!important;border:0!important;border-image:none!important;border-radius:0!important;background:transparent!important;color:var(--pp-muted)!important;box-shadow:none!important;font:600 .85rem var(--font-data)!important;}
+.mobile-portal-segments{display:flex;flex:none;border:1px solid var(--pp-rim);border-radius:4px;overflow:hidden;}
+#portalWrapper .mobile-portal-segments button{min-height:44px;min-width:0;margin:0;padding:4px 12px!important;border:0!important;border-image:none!important;border-radius:0!important;background:transparent!important;color:var(--pp-muted)!important;box-shadow:none!important;font:600 .85rem var(--font-data)!important;}
 #portalWrapper .mobile-portal-segments button{min-width:76px;}
 #portalWrapper .mobile-portal-segments button[aria-pressed="true"]{background:var(--pp-gold)!important;color:var(--pp-on-gold)!important;}
-#portalWrapper #mobile-portal-remove [data-removing="false"][aria-pressed="true"]{background:var(--accent)!important;color:var(--onaccent)!important;}
-#portalWrapper #mobile-portal-remove [data-removing="true"][aria-pressed="true"]{background:var(--pp-brick)!important;color:#fff4ea!important;}
 #portalWrapper #mobile-portal-challenges #swapToCurrentChallengeBtn{width:100%;margin:0 0 8px;font:600 .85rem var(--font-data);}
 /* Step 1 */
 #mobile-portal-challenges h2{font:650 1.25rem var(--n-serif,var(--font-data));color:var(--pp-ink);}
@@ -132,12 +130,7 @@
 #mobile-portal-chosen{padding:6px 6px 6px 12px;border-left:3px solid var(--pp-gold);}
 #portalWrapper #mobile-portal-chosen button{flex:none;min-height:44px;margin:0;padding:6px 14px!important;font:600 .85rem var(--font-data)!important;}
 /* Add | Remove sits beside the categories and takes its own row when they need the width (130 % text, 360 px). */
-#mobile-portal-filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin:8px 0 12px;border-bottom:1px solid var(--line);}
-#mobile-portal-filter-row #mobile-perk-filters{flex:1 1 13.5rem;min-width:0;margin:0;border:0;}
 #portalWrapper #mobile-perk-filters button{padding:3px 1px;}
-#mobile-portal-filter-row #mobile-portal-remove{margin-left:auto;margin-bottom:4px;}
-#portalWrapper #mobile-portal-remove button{padding:4px 8px!important;font-size:.78rem!important;}
-#portalWrapper[data-portal-removing] .mobile-perk-buy:not(:disabled){background:transparent!important;color:var(--pp-brick-ink)!important;border:1px solid var(--pp-brick)!important;border-image:none!important;box-shadow:none!important;}
 #mobile-portal-perks #mobile-portal-tools{margin-top:16px;}
 /* Step 3: the review page built from the original confirmation */
 #mobile-portal-run-review>img{width:100%;height:auto;object-fit:cover;border-radius:5px;}

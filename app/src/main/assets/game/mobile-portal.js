@@ -6,6 +6,8 @@ var MobilePortal = (() => {
     function meta(name){const base=name.replace(/_II$/,'');return {group:Object.keys(groups).find(key=>groups[key].includes(base))||'Trimps',effect:effects[base]||'Original effect · Info',icon:['Power','Overkill','Range','Anticipation','Criticality','Hunger','Frenzy','Tenacity'].includes(base)?'sword':['Toughness','Resilience','Prismal','Equality','Championism'].includes(base)?'shield':base==='Agility'?'clock':base==='Packrat'?'box':base==='Bait'?'trap':['Pheromones','Carpentry','Trumps'].includes(base)?'heart':groups.Economy.includes(base)?'bag':'spark'};}
     // V-157: outside viewingUpgrades the overview leads into the guided new run: 1 Challenge, 2 Perks, 3 Review.
     let view='overview',filter='All',wasOpen=false,scheduled=false,keepView=false,building=false;
+    let completedOpen=false;
+    const completedPositions=new WeakMap();
     const steps={challenges:1,perks:2,review:3},order=['overview','challenges','perks','review'];
     // V-243 step 4d: own labels pass through the translator of the language catalog (identity in English). text() compares
     // the translated value, so a German label is written once and never rewritten every refresh.
@@ -14,7 +16,6 @@ var MobilePortal = (() => {
     const run=()=>!game.global.viewingUpgrades,currency=()=>portalUniverse===2?'Radon':'Helium',squared=()=>challengeSquaredMode?' C'+(portalUniverse===2?'³':'²'):'';
     function button(label,action,id){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=action;if(id)b.id=id;return b;}
     function el(tag,id,className,content){const n=document.createElement(tag);if(id)n.id=id;if(className)n.className=className;if(content!==undefined)n.textContent=content;return n;}
-    function svg(name){return '<svg aria-hidden="true" viewBox="0 0 24 24"><use href="mobile-assets/portal-symbols.svg#'+name+'"/></svg>';}
     function show(next){
         if((next==='review'||next==='challenges')&&!run())next='overview';
         if(next!=='perks'&&typeof MobilePerky!=='undefined')MobilePerky.close();
@@ -25,10 +26,66 @@ var MobilePortal = (() => {
         root.scrollTop=0;refresh();
     }
     function back(){if(byId('portalWrapper').style.display==='none'||view==='overview')return false;show(run()?order[order.indexOf(view)-1]:'overview');return true;}
-    function open(){if(keepView){keepView=false;refresh();return;}wasOpen=false;filter='All';for(const b of byId('mobile-perk-filters').children)b.setAttribute('aria-pressed',String(b.textContent==='All'));refresh();}
+    function open(){if(keepView){keepView=false;refresh();return;}wasOpen=false;completedOpen=false;filter='All';for(const b of byId('mobile-perk-filters').children)b.setAttribute('aria-pressed',String(b.textContent==='All'));refresh();}
+    function beforeChallengesRebuild(){
+        const rules=byId('mobile-challenge-rules'),home=byId('challengeDescription');
+        if(rules&&rules.parentNode!==home)home.append(rules);
+        const facts=byId('mobile-challenge-facts'),heading=byId('mobile-portal-challenges')?.querySelector('h2');
+        if(facts&&heading.nextElementSibling!==facts)heading.after(facts);
+        const completed=byId('challengesHere')?.querySelector('.mobile-completed-challenges');
+        if(completed)completedOpen=completed.open;
+    }
+    function challengeRows(home, selected){
+        const rows=home.querySelectorAll('.challengeThing');
+        const lockedFocus=[...rows].find(row=>row.classList.contains('nextChallenge')&&row.classList.contains('cBorderOn'));
+        for(const row of rows){
+            const key=row.id.slice('challenge'.length);
+            const locked=row.classList.contains('nextChallenge');
+            const picked=!locked&&(key===selected||(key==='0'&&!selected&&!lockedFocus));
+            const selection=picked?tr('Selected'):'';
+            const unlock=locked?game.challenges[key]?.unlockString:null;
+            const requirement=typeof unlock==='function'?game.challenges[key].unlockString():unlock;
+            const state=locked?'Next unlock':row.classList.contains('challengeRepeatable')?'Repeatable':
+                row.classList.contains('finishedChallenge')?'Completed':challengeSquaredMode&&key!=='0'?'Zone '+getC2HighestReached(key):'';
+            let badge=row.querySelector('.mobile-challenge-badge');
+            if(!badge){
+                badge=el('span','','mobile-challenge-badge');
+                row.append(badge);
+                if(row.tagName!=='BUTTON'&&!row.hasAttribute('role'))row.setAttribute('role','button');
+                row.tabIndex=0;
+                row.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();row.click();}});
+                row.addEventListener('click',()=>{refreshChallenge();byId(row.id)?.focus();});
+            }
+            row.setAttribute('aria-pressed',String(picked));
+            text(badge,[state&&tr(state),requirement,selection].filter(Boolean).join(' · '));
+        }
+        return lockedFocus||[...rows].find(row=>row.id==='challenge'+selected);
+    }
+    function groupCompletedChallenges(here){
+        let section=here.querySelector('.mobile-completed-challenges');
+        const rows=[...here.querySelectorAll('.finishedChallenge')];
+        if(!rows.length)return;
+        if(!section){
+            section=el('details','','mobile-completed-challenges');
+            section.append(el('summary'),el('div'));
+            section.open=completedOpen;
+            here.append(section);
+        }
+        text(section.firstElementChild,'Completed Challenges');
+        const list=section.children[1];
+        for(const row of rows){
+            if(row.parentNode===list)continue;
+            const position=document.createComment('completed challenge');
+            row.before(position);
+            completedPositions.set(row,position);
+            list.append(row);
+        }
+    }
     function refreshChallenge(){
         const name=game.global.selectedChallenge,challenge=game.challenges[name],host=byId('mobile-challenge-facts');
+        const diorama=document.documentElement?.dataset.graphics==='diorama';
         const brief={Discipline:['Lower minimum damage, higher maximum damage.','Complete Dimension of Anger.'],Metal:['No Miners until the Challenge is completed.','Complete Dimension of Anger.']};
+        if(diorama)brief.Balance=['Enemies become stronger.','Clear Zone 40 and earn the Helium collected so far again.'];
         const known=!challengeSquaredMode&&brief[name];
         // Step 1 names the selected Challenge above the tiles; the short facts exist for the first Challenges only.
         host.hidden=!challenge||!run();
@@ -36,15 +93,48 @@ var MobilePortal = (() => {
             const reward=known&&challenge.unlocks?(isPerkUnlocked(challenge.unlocks,true)?'Perk '+challenge.unlocks+' is already unlocked.':'Unlocks the Perk '+challenge.unlocks+'.'):'See the original conditions.';
             const signature=JSON.stringify([name,squared(),known,reward]);
             if(host.dataset.signature!==signature){host.dataset.signature=signature;host.replaceChildren(el('h3','','',name+squared()));
-                if(!known)host.append(el('p','','mobile-challenge-more','Complete rules, goal and reward below the list.'));
+                if(!known){if(!diorama)host.append(el('p','','mobile-challenge-more','Complete rules, goal and reward below the list.'));}
+                else if(diorama&&name==='Balance')host.append(el('p','','',tr(known[0])+' '+tr(known[1])));
                 else for(const [label,value] of [['Rule',known[0]],['Goal',known[1]],['Reward',reward]]){const row=document.createElement('p');row.append(el('strong','','',label),document.createElement('br'),value);host.append(row);}}
         }
         // Later/dynamic challenge rules retain their complete original controls and values.
         const details=byId('mobile-challenge-rules');
-        if(details.dataset.selection!==name+'|'+challengeSquaredMode){details.dataset.selection=name+'|'+challengeSquaredMode;details.open=!!challenge&&!known;}
+        let selectedRow;
+        if(!diorama){
+            beforeChallengesRebuild();
+            const completed=byId('challengesHere').querySelector('.mobile-completed-challenges');
+            if(completed){
+                for(const row of [...completed.children[1].children]){
+                    const position=completedPositions.get(row);
+                    position.before(row);
+                    position.remove();
+                }
+                completed.remove();
+            }
+            details.hidden=false;
+        }else if(view==='challenges'){
+            const here=byId('challengesHere');
+            const daily=byId('challengeDaily'),none=byId('challenge0');
+            if(daily&&none&&daily.parentNode===none.parentNode&&none.nextElementSibling!==daily)none.after(daily);
+            selectedRow=challengeRows(here,name);
+            groupCompletedChallenges(here);
+            details.hidden=!selectedRow;
+            host.hidden=!selectedRow||!known;
+            if(selectedRow){
+                const locked=selectedRow.classList.contains('nextChallenge');
+                const front=daily||none;
+                if(!challengeSquaredMode&&!locked&&front&&selectedRow!==front&&selectedRow.parentNode===front.parentNode&&front.nextElementSibling!==selectedRow)front.after(selectedRow);
+                if(selectedRow.nextElementSibling!==host||host.nextElementSibling!==details)selectedRow.after(host,details);
+                host.toggleAttribute('data-next-unlock',locked);
+                details.toggleAttribute('data-next-unlock',locked);
+            }else if(details.parentNode!==byId('challengeDescription'))beforeChallengesRebuild();
+        }
+        const selection=(selectedRow?.id||name)+'|'+challengeSquaredMode+'|'+diorama;
+        if(details.dataset.selection!==selection){details.dataset.selection=selection;details.open=!known&&(!!challenge||(diorama&&!details.hidden));}
     }
     function effectText(name,perk){const base=name.replace(/_II$/,'');const label=meta(name).effect;if(['Power','Toughness','Looting','Motivation','Packrat','Pheromones','Agility','Artisanistry','Resourceful','Resilience','Carpentry'].includes(base))return label+' '+(['Agility','Artisanistry','Resourceful'].includes(base)?'−':'+')+prettify(perk.modifier*100)+'% per level';if(['Bait','Trumps'].includes(base))return label+' +'+perk.modifier+' per level';return label;}
     function decoratePerks(){
+        const formatLevel=value=>game.options?.menu.formatPerkLevels.enabled?prettify(value):String(value);
         for(const action of [...byId('portalUpgradesHere').querySelectorAll('button.portalThing')]){
             const name=action.id,perk=game.portal[name];
             if(!perk){
@@ -58,23 +148,35 @@ var MobilePortal = (() => {
             }
             if(!action.closest('.mobile-perk')){
                 const article=document.createElement('article');article.className='mobile-perk';article.dataset.perk=name;const priority=['Power','Toughness','Agility','Looting','Motivation','Packrat','Pheromones','Trumps','Bait'].indexOf(name);article.style.order=priority<0?100:priority;action.before(article);
-                const data=meta(name),heading=document.createElement('strong');heading.className='mobile-perk-name';heading.textContent=name.replaceAll('_',' ');
-                const icon=document.createElement('span');icon.className='mobile-perk-symbol';icon.innerHTML=svg(data.icon);
-                const info=button('Info',()=>TrimpsUI.info(name,'portal'));info.className='mobile-perk-info';info.setAttribute('aria-label','Info '+heading.textContent);
-                const level=document.createElement('span');level.className='mobile-perk-level';level.append('Level ',byId(name+'Owned'));
-                const effect=document.createElement('small');effect.className='mobile-perk-effect';effect.textContent=effectText(name,perk);
+                const heading=el('strong','','mobile-perk-name',name.replaceAll('_',' '));
+                const info=button('ⓘ',()=>TrimpsUI.info(name,'portal'));info.className='mobile-perk-info';info.setAttribute('aria-label','Info '+heading.textContent);
+                info.title=typeof MobileI18nGame==='undefined'?effectText(name,perk):MobileI18nGame.t(effectText(name,perk));
+                const level=el('span','','mobile-perk-level'),price=el('span','','mobile-perk-price');
+                const content=el('div','','mobile-perk-content');content.append(heading,level,price);
                 // Keep original optional readout IDs alive for updatePerkLevel, without duplicate prices.
                 const readouts=document.createElement('span');readouts.hidden=true;
+                readouts.append(byId(name+'Owned'));
                 for(const suffix of ['Price','Spent','screenReaderPerkAfford']){const node=byId(suffix==='screenReaderPerkAfford'?suffix+name:name+suffix);if(node)readouts.append(node);}
-                action.replaceChildren();action.onmouseover=null;action.onmouseout=null;action.classList.add('mobile-perk-buy');action.setAttribute('aria-label','Increase '+heading.textContent);
-                article.append(icon,heading,info,level,effect,action,readouts);
+                const minus=button('−',()=>{buyPortalUpgrade(name,-1);refresh();});minus.className='mobile-perk-minus';
+                minus.setAttribute('aria-label',tr('Decrease '+heading.textContent));
+                action.textContent='+';action.onmouseover=null;action.onmouseout=null;action.classList.add('mobile-perk-buy');
+                action.onclick=()=>{buyPortalUpgrade(name,1);refresh();};
+                const controls=el('div','','mobile-perk-actions');controls.append(minus,action,info);
+                article.append(content,controls,readouts);
             }
             const article=action.closest('.mobile-perk');article.hidden=filter!=='All'&&meta(name).group!==filter;
-            const removing=game.global.removingPerks,amount=getPerkBuyCount(name),maxed=action.classList.contains('perkColorMaxed');
-            const price=maxed?'Max':prettify(getPortalUpgradePrice(name,false,amount))+' '+(portalUniverse===2?'Rn':'He');
-            text(action,removing?'− Remove':'+'+prettify(amount)+' · '+price);
-            action.disabled=!action.classList.contains('perkColorOn')||(game.global.viewingUpgrades&&game.global.challengeActive==='Hypothermia');
-            action.setAttribute('aria-label',tr((removing?'Remove ':'Increase ')+name.replaceAll('_',' ')+': '+(removing?'Original amount':price)));
+            const base=getPerkLevel(name,true),pending=perk.levelTemp;
+            const inherited=name==='Tenacity'||name==='Greed'?game.portal.Masterfulness.radLevel+game.portal.Masterfulness.levelTemp:0;
+            const maximum=perk.max&&base+pending>=perk.max;
+            const blocked=game.global.viewingUpgrades&&game.global.challengeActive==='Hypothermia';
+            const cost=getPortalUpgradePrice(name,false,1),budget=game.resources.helium;
+            const affordable=Number.isFinite(cost)&&cost<=budget.respecMax-budget.totalSpentTemp;
+            const price=prettify(cost)+' '+(portalUniverse===2?'Rn':'He');
+            text(article.querySelector('.mobile-perk-level'),'Level '+formatLevel(base+inherited+pending)+(pending?' · '+(pending>0?'+':'')+formatLevel(pending)+' pending':''));
+            text(article.querySelector('.mobile-perk-price'),blocked?'Changes disabled':maximum?'Maximum level':'Cost: '+price+(affordable?'':' · Not enough resources'));
+            action.disabled=blocked||!!maximum||!affordable;
+            article.querySelector('.mobile-perk-minus').disabled=blocked||pending+(game.global.respecActive?base:0)<=0;
+            action.setAttribute('aria-label',tr('Increase '+name.replaceAll('_',' ')+': '+price));
         }
     }
     function refresh(){
@@ -88,7 +190,7 @@ var MobilePortal = (() => {
         const current=byId('viewChallenge'),currentHost=byId(flow?'challengeCol':'mobile-portal-overview');
         if(current.parentNode!==currentHost){if(flow)currentHost.prepend(current);else currentHost.append(current);current.classList.toggle('mobile-portal-card',!flow);}
         const chosen=(game.global.selectedChallenge||'No Challenge')+(game.global.selectedChallenge?squared():'');
-        root.toggleAttribute('data-portal-run',flow);root.dataset.portalStep=String(step);root.toggleAttribute('data-portal-removing',!!game.global.removingPerks);
+        root.toggleAttribute('data-portal-run',flow);root.dataset.portalStep=String(step);
         text(byId('mobile-portal-view-title'),view==='overview'?'Time Portal':flow?'New run':view==='perks'?'Perk Atlas':'Challenge');
         byId('mobile-portal-back').hidden=view==='overview'||flow;
         for(const item of byId('mobile-portal-steps').children){const n=+item.dataset.step;item.toggleAttribute('data-done',n<step);if(n===step)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');}
@@ -107,14 +209,14 @@ var MobilePortal = (() => {
         text(c2.querySelector('[data-squared="true"]'),label);text(c2.querySelector('small'),'Mode · '+label+' bonus '+byId('challengeSquaredBonusAmt').textContent+'%');
         for(const b of c2.querySelectorAll('button'))b.setAttribute('aria-pressed',String((b.dataset.squared==='true')===!!challengeSquaredMode));
         // C²/C³ buttons carry their progress colour instead of the state classes, so the key is shown for Normal only.
-        byId('mobile-challenge-legend').hidden=!!challengeSquaredMode;
-        const none=byId('challenge0')?.querySelector('.thingName');if(none&&none.textContent==='None')none.textContent='No Challenge';
-        // Step 2: chosen Challenge, readable balance above Perky, Add | Remove beside the categories.
+        byId('mobile-challenge-legend').hidden=!!challengeSquaredMode||document.documentElement?.dataset.graphics==='diorama';
+        const none=byId('challenge0')?.querySelector('.thingName');if(none&&none.textContent==='None')text(none,'No Challenge');
+        // Step 2: keep the original balance, presets, improvement confirmation and optimizer.
         text(byId('mobile-portal-chosen-name'),chosen);
         const entry=byId('mobile-perky-entry'),balance=byId('mobile-portal-perk-balance');
         if(entry){if(flow&&balance.nextElementSibling!==entry)balance.after(entry);else if(!flow&&entry.nextElementSibling!==balance)balance.before(entry);}
-        const remove=byId('mobile-portal-remove');remove.hidden=byId('ptabRemove').style.display==='none';
-        for(const b of remove.children)b.setAttribute('aria-pressed',String((b.dataset.removing==='true')===!!game.global.removingPerks));
+        text(byId('mobile-portal-perk-edit-note'),game.global.respecActive?
+            'Respec active. Minus can remove existing levels.':'Minus undoes pending levels. Removing existing levels requires Respec.');
         const tools=byId('mobile-portal-tools');tools.hidden=![...tools.children].some(n=>n.tagName!=='SUMMARY'&&n.style.display!=='none');
         const back=byId('mobile-portal-step-back'),next=byId('mobile-portal-step-next');
         text(back,['','← Overview','← Challenge','← Perks'][step]||'');text(next,['','Next: Perks →','Next: Review →','Start new run'][step]||'');
@@ -196,10 +298,8 @@ var MobilePortal = (() => {
         const presets=document.createElement('details');presets.id='mobile-portal-presets';presets.innerHTML='<summary>Presets · Load, Save and Import/Export</summary>';byId('portalPresets').before(presets);presets.append(byId('portalPresets'));
         const filters=document.createElement('nav');filters.id='mobile-perk-filters';filters.setAttribute('aria-label','Perk categories');
         for(const category of ['All','Combat','Economy','Trimps']){const tab=button(category,()=>{filter=category;for(const b of filters.children)b.setAttribute('aria-pressed',String(b===tab));decoratePerks();});tab.setAttribute('aria-pressed',String(category==='All'));filters.append(tab);}
-        // Add | Remove switches the original removingPerks through toggleRemovePerks, shown whenever the original shows its tab.
-        const remove=el('div','mobile-portal-remove');remove.setAttribute('role','group');remove.setAttribute('aria-label','Add or remove Perk levels');
-        for(const [label,removing] of [['+ Add',false],['− Remove',true]]){const b=button(label,()=>{if(!!game.global.removingPerks!==removing)toggleRemovePerks();refresh();});b.dataset.removing=String(removing);remove.append(b);}
-        const filterRow=el('div','mobile-portal-filter-row');filterRow.append(filters,remove);byId('portalUpgradesHere').before(filterRow);
+        const editNote=el('p','mobile-portal-perk-edit-note');
+        byId('portalUpgradesHere').before(filters,editNote);
         const challenges=document.createElement('section');challenges.id='mobile-portal-challenges';challenges.innerHTML='<h2>Choose a Challenge</h2>';root.insertBefore(challenges,byId('titleRow'));challenges.append(byId('challengeCol'));
         const universe=el('div','mobile-portal-universe','mobile-portal-card'),universeText=el('div');universeText.append(el('small','','','Universe'),el('strong','mobile-portal-universe-name'));universe.append(universeText,byId('swapPortalUniverseBtn'));
         // The original swap re-runs portalClicked (and with it MobilePortal.open); the guided run stays on step 1.
@@ -212,7 +312,7 @@ var MobilePortal = (() => {
         // V-171: key to the state marks mobile-portal.css draws from the original classes (finishedChallenge, challengeRepeatable).
         const legend=el('p','mobile-challenge-legend','mobile-challenge-legend','✓ completed · ↻ repeatable');byId('challengesHere').before(legend);
         const facts=document.createElement('section');facts.id='mobile-challenge-facts';challenges.querySelector('h2').after(facts);
-        const rules=document.createElement('details');rules.id='mobile-challenge-rules';rules.innerHTML='<summary>Complete original rules · Goal and reward</summary>';byId('specificChallengeDescription').before(rules);rules.append(byId('specificChallengeDescription'));
+        const rules=document.createElement('details');rules.id='mobile-challenge-rules';rules.innerHTML='<summary>Complete original rules · Goal and reward</summary>';byId('specificChallengeDescription').before(rules);rules.append(byId('flagMustRestart'),byId('specificChallengeDescription'));
         const review=el('section','mobile-portal-run-review');
         const tools=document.createElement('details');tools.id='mobile-portal-tools';tools.innerHTML='<summary>Respec & Tools</summary>';
         for(const id of ['respecPortalBtn','clearPerksBtn','respecMutatorsBtn'])tools.append(byId(id));
@@ -231,12 +331,12 @@ var MobilePortal = (() => {
         if(typeof text!=='function')return false;
         tr=text;if(typeof markup==='function')html=markup;
         const root=byId('portalWrapper');if(!root)return true;
-        const fixed='#mobile-portal-back,#portalTotalHelium,#portalTotalSpent,#portalTotalPortals,#mobile-portal-prepare,#mobile-portal-steps,#mobile-portal-chosen small,#mobile-portal-chosen>button,#mobile-portal-presets>summary,#mobile-portal-remove,#mobile-portal-universe small,#mobile-portal-tools>summary,#presetTabSave,#presetTabLoad,#presetTabRename,#presetTabExport,#presetTabImport';
+        const fixed='#mobile-portal-back,#portalTotalHelium,#portalTotalSpent,#portalTotalPortals,#mobile-portal-prepare,#mobile-portal-steps,#mobile-portal-chosen small,#mobile-portal-chosen>button,#mobile-portal-presets>summary,#mobile-portal-universe small,#mobile-portal-tools>summary,#presetTabSave,#presetTabLoad,#presetTabRename,#presetTabExport,#presetTabImport';
         for(const node of root.querySelectorAll(fixed)){const walker=document.createTreeWalker(node,4);while(walker.nextNode()){const t=walker.currentNode,next=tr(t.data);if(next!==t.data){t.data=next;t.parentElement.lang='de';}}}
-        for(const node of root.querySelectorAll('#cancelPortalBtn,#mobile-portal-steps,#mobile-perk-filters,#mobile-portal-remove,#mobile-portal-c2,#mobile-portal-overview>img'))
+        for(const node of root.querySelectorAll('#cancelPortalBtn,#mobile-portal-steps,#mobile-perk-filters,#mobile-portal-c2,#mobile-portal-overview>img'))
             for(const name of ['aria-label','alt']){const value=node.getAttribute(name);if(value){const next=tr(value);if(next!==value)node.setAttribute(name,next);}}
         refresh();return true;
     }
-    return {meta,show,open,back,refresh,decorateConfirmation,translate};
+    return {meta,show,open,back,refresh,beforeChallengesRebuild,decorateConfirmation,translate};
 })();
 if(typeof module!=='undefined')module.exports=MobilePortal;

@@ -142,7 +142,6 @@ var MobileI18nDeGame = (() => {
         ...Object.entries({Story:'Geschichte', Loot:'Beute', Unlocks:'Freisch.', Combat:'Kampf'}).map(([key, german]) =>
             'html[data-graphics="diorama"][data-language="de"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #mobile-log-panel .logFlt[data-log-icon="' + key + '"]::after{content:"' + german + '";}'),
         'html[data-language="de"] #badGuyCol.mobile-enemy-pending::after{content:"Nächster Gegner:\\A" attr(data-enemy-name);}',
-        'html[data-graphics="diorama"][data-language="de"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more::after{content:"Werkzeuge";}',
         'html[data-graphics="diorama"][data-language="de"] body[data-diorama-page="resources"] #mobile-resource-block .mobile-fill-time::before{content:"Voll: ";}',
         'html[data-graphics="diorama"][data-language="de"] body[data-diorama-page="resources"] #mobile-resource-actions::before{content:"Ressourcen";}',
         'html[data-graphics="diorama"][data-language="de"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleContainer #gridRow>#mobile-combat-map-head #battleSideTitle[data-cell]:not([data-cells="0"])::before{content:"Feld " attr(data-cell) " von " attr(data-cells);}',

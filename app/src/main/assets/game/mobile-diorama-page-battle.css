@@ -242,10 +242,10 @@ html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama
 }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer,
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps,
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more { min-width:0; width:auto; margin:0; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.mobile-combat-icon { min-width:0; width:auto; margin:0; }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn,
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps,
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more {
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.mobile-combat-icon {
   box-sizing:border-box; width:100%; min-width:44px; min-height:52px; padding:0 2px!important;
   display:flex!important; flex-direction:row; align-items:center; justify-content:center; gap:4px;
   font-size:0!important; line-height:0!important; color:#fff8e6!important; background:#205958!important;
@@ -256,8 +256,7 @@ html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama
 /* The adapter's hidden attribute (Maps inside a map, Repeat outside one) and original inline hiding still win. */
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[style*="display: none"],
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>[hidden],
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps[hidden],
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more[hidden] { display:none!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps[hidden] { display:none!important; }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn::before,
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::before {
   content:""!important; display:block!important; flex:0 0 18px; width:18px; height:18px; transform:none;
@@ -265,16 +264,13 @@ html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama
 }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps { --compact-icon:var(--mi-maps); }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[data-short-label]::after,
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::after,
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more::after {
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::after {
   position:static; width:auto; height:auto; min-width:0; padding:0; border-radius:0;
   background:transparent!important; color:inherit!important;
   font:700 clamp(.78rem,3.4vw,.9rem)/1.15 var(--font-body); white-space:normal; text-align:center; overflow-wrap:normal;
 }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary .fightBtn[data-short-label]::after { content:attr(data-short-label)!important; }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps::after { content:"Maps"; }
-/* "…" opens the Combat tools sheet (Map Chamber, Configure Maps, Combat info, further original actions). */
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more::after { content:"Tools"; }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary #fightBtn {
   color:#392810!important; background:#e5ad43!important; border-image:var(--dio-btn-amber)!important; text-shadow:none;
 }
@@ -628,7 +624,7 @@ html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary { display:flex!important; gap:6px!important; }
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.battleSideBtnContainer,
 html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-maps { flex:1 1 0; }
-html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>#mobile-combat-more { flex:0 0 auto; width:auto; min-width:64px; padding:0 8px!important; }
+html[data-graphics="diorama"] body:is([data-diorama-page="battle"],[data-diorama-page="maps"]) #battleBtnsColumn.mobile-combat-primary>.mobile-combat-icon { flex:0 0 52px; width:52px; min-width:48px; }
 /* Round 2 (reference-combat.png): Combat Log as one parchment card. Title and filter pills share a row
    (the pills wrap below the title when they do not fit), a rule, then compact message lines.
    The two original wrappers only contribute their children; nodes, handlers and filter states stay original. */

@@ -1766,6 +1766,7 @@ function challengeActive(what){
 }
 
 function displayChallenges() {
+	if (typeof MobilePortal !== 'undefined') MobilePortal.beforeChallengesRebuild();
 	var challengeCount = 0;
 	game.global.selectedChallenge = "";
 	const tagName = (usingScreenReader ? "li" : "div");
@@ -3519,25 +3520,27 @@ function getPerkBuyCount(perkName){
 	return toBuy;
 }
 
-function buyPortalUpgrade(what){
+function buyPortalUpgrade(what, direction){
+	var direct = direction === 1 || direction === -1;
 	if (game.global.challengeActive == "Hypothermia" && game.global.viewingUpgrades){
 		document.getElementById('portalStory').innerHTML = "<span style='color: red'>You cannot change your perks while on the Hypothermia Challenge!</span>";
 		return;
 	}
 	if (!game.global.kongBonusMode && !game.global.portalActive && !game.global.respecActive && !game.global.viewingUpgrades) return;
-	if (game.global.buyAmt != "Max" && isNaN(game.global.buyAmt)) {
+	if (!direct && game.global.buyAmt != "Max" && isNaN(game.global.buyAmt)) {
 		numTab(1);
 		return;
 	}
 	var toBuy = game.portal[what];
-	if (game.global.removingPerks){
-		removePerk(what);
+	if (direct ? direction === -1 : game.global.removingPerks){
+		if (direct && toBuy.levelTemp + (game.global.respecActive ? getPerkLevel(what, true) : 0) <= 0) return;
+		removePerk(what, direct ? 1 : undefined);
 		updateAllPerkColors();
 		enablePerkConfirmBtn();
 		document.getElementById("totalHeliumSpent").innerHTML = prettify(countHeliumSpent(true, true));
 		return;
 	}
-	var levelsToAdd = getPerkBuyCount(what);
+	var levelsToAdd = direct ? 1 : getPerkBuyCount(what);
 	if (toBuy.max < getPerkLevel(what, true) + toBuy.levelTemp + levelsToAdd) return;
 	var price = getPortalUpgradePrice(what, false, levelsToAdd);
 	var canSpend = game.resources.helium.respecMax - game.resources.helium.totalSpentTemp;
@@ -3548,10 +3551,10 @@ function buyPortalUpgrade(what){
 		toBuy.heliumSpentTemp += price;
 		canSpend -= price;
 		updatePerkLevel(what);
-		if(!usingScreenReader && typeof MobilePortal === "undefined") tooltip(what, "portal", "update");
+		if(!direct && !usingScreenReader && typeof MobilePortal === "undefined") tooltip(what, "portal", "update");
 		document.getElementById("portalHeliumOwned").innerHTML = prettify(canSpend);
 		enablePerkConfirmBtn();
-		if (game.global.buyAmt == "Max") displayPortalUpgrades(true);
+		if (!direct && game.global.buyAmt == "Max") displayPortalUpgrades(true);
 		else updateAllPerkColors();
 	}
 	document.getElementById("totalHeliumSpent").innerHTML = prettify(countHeliumSpent(true, true));
@@ -3735,8 +3738,8 @@ function importPerks() {
 	document.getElementById("totalHeliumSpent").innerHTML = prettify(countHeliumSpent(true, true));
 }
 
-function removePerk(what) {
-	var removeAmt = game.global.buyAmt;
+function removePerk(what, directAmount) {
+	var removeAmt = directAmount ?? game.global.buyAmt;
 	var perkLevel = getPerkLevel(what, true);
 	if (removeAmt == "Max") removeAmt = Math.ceil((perkLevel + game.portal[what].levelTemp) * game.global.maxSplit);
 	if (isNumberBad(removeAmt)){
@@ -3775,7 +3778,8 @@ function removePerk(what) {
 	toBuy.heliumSpentTemp -= refund;
 	if (forceZeroSpent) {
 		toBuy.heliumSpentTemp = perkSpent * -1;
-		toBuy.levelTemp = perkLevel * -1;
+		// At large balances even a full one-level refund can be smaller than the rounding error.
+		if (directAmount === undefined) toBuy.levelTemp = perkLevel * -1;
 	}
 	if (toBuy.levelTemp + perkLevel == 0){
 		var roundingError = toBuy.heliumSpentTemp + perkSpent;
@@ -3787,7 +3791,7 @@ function removePerk(what) {
 	}
 	game.resources.helium.totalSpentTemp -= refund;
 	updatePerkLevel(what);
-	tooltip(what, "portal", "update");
+	if (directAmount === undefined) tooltip(what, "portal", "update");
 	var canSpend = game.resources.helium.respecMax;
 	document.getElementById("portalHeliumOwned").innerHTML = prettify(canSpend - game.resources.helium.totalSpentTemp);
 }

@@ -1,5 +1,15 @@
 # Änderungen
 
+## 1.16 – Einheitliches Diorama-Zeitportal
+- All Diorama portal steps share a stationary parchment background. Challenge details open below the selected Challenge.
+- Locked Challenges are readable on parchment, and completed Challenges are grouped in a collapsible section at the bottom.
+- Perk names, levels and costs are displayed without shadows in Diorama.
+
+## 1.15 – Zeitportal und RoboTrimp
+- Open RoboTrimp from the robot icon next to Combat Tools. Arm or turn off MagnetoShriek inside the RoboTrimp panel.
+- The Diorama Challenge list sits on stationary parchment and opens details below the selected Challenge.
+- Change Perks one level at a time with plus and minus. The list shows pending changes and why a purchase is unavailable.
+
 ## 1.10 – RoboTrimp und Bionic Wonderland
 - RoboTrimp now shows MagnetoShriek with a named control, its current status and the remaining cooldown.
 - The Info panel explains both combat abilities and lists the Bionic Wonderland rewards you have unlocked.

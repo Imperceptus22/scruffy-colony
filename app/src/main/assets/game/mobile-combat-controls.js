@@ -25,7 +25,9 @@ var MobileCombatControls=(()=>{
   source.addEventListener('click',()=>dialog.close());
  }
  const mapButton=document.createElement('button');mapButton.id='mobile-combat-maps';mapButton.textContent='Maps';mapButton.onclick=()=>byId('mapsBtnText').click();host.append(mapButton);
- const more=document.createElement('button');more.id='mobile-combat-more';more.textContent='…';more.setAttribute('aria-label','Combat tools');more.setAttribute('aria-haspopup','dialog');host.append(more);
+ const more=document.createElement('button');more.type='button';more.id='mobile-combat-more';more.className='mobile-combat-icon';
+ more.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6a5 5 0 0 1 6-3.5L16 6l2 2 3.5-3.5a5 5 0 0 1-6 6L6 20a2.1 2.1 0 1 1-3-3l9.5-9.5A5 5 0 0 1 13.5 6Z"/></svg>';
+ more.setAttribute('aria-label','Combat tools');more.setAttribute('aria-haspopup','dialog');host.append(more);
  more.onclick=()=>{refresh();dialog.showModal();close.focus();};close.onclick=()=>dialog.close();
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
  const world=byId('mobile-return-world'),mapHead=document.createElement('div'),mapTitle=byId('battleSideTitle');

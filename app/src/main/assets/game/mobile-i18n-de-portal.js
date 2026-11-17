@@ -27,7 +27,14 @@ var MobileI18nDePortal = (() => {
         'Prepare new run': 'Neuen Durchlauf vorbereiten', '1 Challenge · 2 Perks · 3 Review': '1 Challenge · 2 Perks · 3 Prüfen',
         'New run steps': 'Schritte des neuen Durchlaufs', 'Review': 'Prüfen', 'Change': 'Wechseln',
         'Presets · Load, Save and Import/Export': 'Presets · Laden, Speichern und Import/Export', 'Perk categories': 'Perk-Kategorien',
-        'Add or remove Perk levels': 'Perk-Stufen hinzufügen oder entfernen', '+ Add': '+ Hinzufügen', '− Remove': '− Entfernen',
+        'Selected': 'Ausgewählt', 'Completed': 'Abgeschlossen', 'Repeatable': 'Wiederholbar', 'Next unlock': 'Nächste Freischaltung',
+        'Completed Challenges': 'Abgeschlossene Challenges',
+        'Enemies become stronger.': 'Gegner sind stärker.',
+        'Clear Zone 40 and earn the Helium collected so far again.': 'Schließe Zone 40 ab. Du bekommst das bis dahin verdiente Helium zusätzlich.',
+        'See the original conditions.': 'Details in den vollständigen Regeln.',
+        'Respec active. Minus can remove existing levels.': 'Respec aktiv. Minus kann bestehende Stufen abbauen.',
+        'Minus undoes pending levels. Removing existing levels requires Respec.': 'Minus nimmt vorgemerkte Stufen zurück. Bestehende Stufen lassen sich beim Respec abbauen.',
+        'Changes disabled': 'Änderungen gesperrt', 'Maximum level': 'Maximalstufe',
         'Universe': 'Universum', 'Challenge mode': 'Challenge-Modus', 'Respec & Tools': 'Respec & Werkzeuge', 'Info Equality Scaling': 'Info Equality Scaling',
         'Your current run will end': 'Dein aktueller Durchlauf endet', 'No changes': 'Keine Änderungen', 'Edit': 'Ändern', 'Keep editing selection': 'Auswahl weiter bearbeiten',
         'Resources, buildings, jobs and current combat will reset. Permanent progress such as Perks, Helium/Radon and Bones is retained under the original rules.':
@@ -43,7 +50,10 @@ var MobileI18nDePortal = (() => {
         [/^Universe (\d) · (Helium|Radon)(?: · (.+))?$/, (_, n, what, name) => 'Universum ' + n + ' · ' + what + (name === undefined ? '' : ' · ' + challenge(name))],
         [/^Mode · (C[²³]) bonus (\S+)$/, (_, c, n) => 'Modus · ' + c + '-Bonus ' + n],
         [/^Increase (.+): (.+)$/, (_, perk, price) => perk + ' erhöhen: ' + price],
-        [/^Remove (.+): Original amount$/, (_, perk) => perk + ' senken: ursprünglicher Betrag'],
+        [/^Decrease (.+)$/, (_, perk) => perk + ' senken'],
+        [/^Level (.+) · (.+) pending$/, (_, base, pending) => 'Stufe ' + base + ' · ' + pending + ' vorgemerkt'],
+        [/^Level (.+)$/, (_, base) => 'Stufe ' + base],
+        [/^Cost: (.+?)( · Not enough resources)?$/, (_, cost, low) => cost + (low ? ' · Budget reicht nicht' : '')],
         [/^Edit (Challenge|Perks)$/, (_, what) => what + ' ändern']
     ];
     // Leading and trailing whitespace stays (text nodes such as " earned in total").
