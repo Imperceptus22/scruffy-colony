@@ -1,5 +1,8 @@
 # Änderungen
 
+## 1.26 – Private Kartenautomatik
+- The existing installation code also gives access to Map At Zone after maps open. It stays off until enabled and grants no Void Map reward.
+
 ## 1.21 – Private Automatik
 - Quality of life can accept a code for AutoJobs and AutoStructure on this installation. The original Bionic Wonderland rewards keep their normal requirements.
 

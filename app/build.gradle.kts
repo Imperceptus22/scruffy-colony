@@ -8,8 +8,8 @@ android {
         applicationId = "de.itsolutionskissing.scruffycolony"
         minSdk = 26
         targetSdk = 36
-        versionCode = 98
-        versionName = "1.21"
+        versionCode = 99
+        versionName = "1.26"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }

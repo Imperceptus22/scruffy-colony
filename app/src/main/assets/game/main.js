@@ -35,6 +35,12 @@ if (typeof usingScreenReader === 'undefined'){
 var srTooltipMode = "click"
 document.getElementById("versionNumber").innerHTML = game.global.stringVersion;
 
+const originalMapAtZoneNewGame = newGame;
+newGame = function(){
+    return installMobileMapAtZone(originalMapAtZoneNewGame.apply(this, arguments));
+};
+installMobileMapAtZone(game);
+
 var autoSaveTimeout;
 var mobileRuntimeSuspended = true;
 var mobileGameTimer, mobileCostTimer;
@@ -10887,7 +10893,7 @@ function mapsSwitch(updateOnly, fromRecycle, fromTravel) {
 	var recycleBtn = document.getElementById("recycleMapBtn");
 	recycleBtn.innerHTML = "Recycle Map";
 	document.getElementById("mapsBtn").className = "btn btn-warning fightBtn";
-	document.getElementById('togglemapAtZone2').style.display = (game.global.canMapAtZone) ? "block" : "none";
+	refreshMapAtZoneButton();
     if (game.global.preMapsActive) {
 		// Switching to Map Chamber.
 		refreshMaps();
@@ -13444,7 +13450,7 @@ function checkMapAtZoneWorld(runMap){
 	var totalPortals = getTotalPortals();
 	var doneStr = totalPortals + "_" + game.global.world + "_" + nextCell;
 	if (game.global.universe == 2 && game.global.spireActive) doneStr += "_" + game.global.spireLevel;
-	if (game.options.menu.mapAtZone.enabled && game.global.canMapAtZone && !game.global.preMapsActive){
+	if (mobileAutomationAvailable("MapAtZone") && mobileMapAtZoneEnabled() && !game.global.preMapsActive){
 		for (var x = 0; x < currentSetting.length; x++){
 			if (x >= game.options.menu.mapAtZone.getMaxSettings()) break;
 			if (currentSetting[x].done == doneStr) continue;
@@ -13648,6 +13654,7 @@ function mobileHasPrivateAutomation(){
 }
 
 function mobileAutomationAvailable(name){
+    if (name === "MapAtZone") return game.global.canMapAtZone || (game.global.mapsUnlocked && mobileHasPrivateAutomation());
     return bwRewardUnlocked(name) || ((name === "AutoJobs" || name === "AutoStructure") && mobileHasPrivateAutomation());
 }
 
@@ -13660,6 +13667,55 @@ function mobileAutomationEnabled(name, setting, next){
     const key = 'private-' + name + '-u' + game.global.universe;
     if (next !== undefined) MobileQolStore.set(key, next);
     return MobileQolStore.get(key, bwRewardUnlocked(name) && setting.enabled) === true;
+}
+
+function mobileMapAtZoneEnabled(next){
+    const option = game.options.menu.mapAtZone;
+    if (!mobileHasPrivateAutomation()) {
+        if (next !== undefined) option.enabled = Number(next);
+        return option.enabled;
+    }
+    const key = 'private-MapAtZone-u' + game.global.universe;
+    if (next === false) {
+        MobileQolStore.set(key, false);
+        return 0;
+    }
+    const optIn = MobileQolStore.get(key, null);
+    if (next !== true && typeof optIn !== 'string') {
+        return Number(optIn === null && game.global.canMapAtZone && option.enabled);
+    }
+    // A killed process can restore older rules than the local switch. Only run the accepted rules.
+    const presets = game.global.universe === 2 ? [option.setZoneU2, option.setZoneU2B] : [option.setZone, option.setZoneB];
+    if (!presets.every(rows => Array.isArray(rows) && rows.every(rule => rule && typeof rule === 'object' && !Array.isArray(rule)))) return 0;
+    const rules = JSON.stringify(presets.map(rows => rows.map(({done, ...rule}) => rule)));
+    if (next === true) {
+        MobileQolStore.set(key, rules);
+        return 1;
+    }
+    return Number(optIn === rules);
+}
+
+function installMobileMapAtZone(g){
+    const option = g.options.menu.mapAtZone;
+    option.lockUnless = () => mobileAutomationAvailable("MapAtZone");
+    const originalSave = option.save;
+    option.save = function(reopen){
+        if (!mobileHasPrivateAutomation()) return originalSave.call(this, reopen);
+        // Keep the original editor and validation; route only its successful enable write locally.
+        const localSwitch = new Proxy(this, {
+            set(target, property, value){
+                if (property !== 'enabled') return Reflect.set(target, property, value);
+                mobileMapAtZoneEnabled(Boolean(value));
+                return true;
+            }
+        });
+        return originalSave.call(localSwitch, reopen);
+    };
+    return g;
+}
+
+function refreshMapAtZoneButton(){
+    document.getElementById('togglemapAtZone2').style.display = mobileAutomationAvailable("MapAtZone") ? "block" : "none";
 }
 
 function getNextLockedBwReward(){
@@ -20389,7 +20445,7 @@ document.addEventListener('keydown', function (e) {
 					confirmCheck.onclick();
 				}
 			}
-			else if (checkLettersOk() && game.global.canMapAtZone){
+			else if (checkLettersOk() && mobileAutomationAvailable("MapAtZone")){
 				cancelTooltip();
 				toggleSetting("mapAtZone", undefined, false, false, false, true);
 			}

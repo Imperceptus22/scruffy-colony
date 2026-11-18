@@ -342,6 +342,8 @@ var TrimpsMobile = (() => {
     function refreshAutomationControls() {
         toggleAutoJobs(true);
         toggleAutoStructure(true);
+        refreshMapAtZoneButton();
+        toggleSetting('mapAtZone', null, false, true);
     }
     async function redeemAutomation(code = '') {
         if (code && (!ready || switching || changing || usingRealTimeOffline)) throw new Error('STORAGE');

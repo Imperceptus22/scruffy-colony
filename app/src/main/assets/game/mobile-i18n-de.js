@@ -206,6 +206,7 @@ var MobileI18nDe = (() => {
         // Quality of life page frame (mobile-qol-navigator.js); feature cards from the unlock catalog stay English
         "Hide storage buildings":"Lagergebäude ausblenden",
         "Hide Barn, Shed and Forge while AutoStorage is on. They reappear when it is off.":"Scheune, Schuppen und Schmiede ausblenden, solange AutoStorage an ist. Sie erscheinen wieder, wenn es aus ist.",
+        "Configure Map At Zone":"Map At Zone konfigurieren",
         "Private automation":"Private Automatik",
         "Installation ID":"Installations-ID",
         "Activation code":"Freischaltcode",

@@ -766,7 +766,7 @@ function tooltip(what, isItIn, event, textString, attachFunction, numCheck, rena
 				accessibleTooltips['togglemapsOnSpireCM'] = getSettingsHTMLTooltipArgs('mapsOnSpire')
 				settingCount++;
 			}
-			if (game.global.canMapAtZone){
+			if (mobileAutomationAvailable("MapAtZone")){
 				if (settingCount % 2 == 0) tooltipText += "<br/><br/>";
 				tooltipText +=  getSettingHtml(game.options.menu.mapAtZone, 'mapAtZone', null, "CM");
 				accessibleTooltips['togglemapsOnSpireCM'] = getSettingsHTMLTooltipArgs('mapsOnSpire')
@@ -979,7 +979,7 @@ function tooltip(what, isItIn, event, textString, attachFunction, numCheck, rena
 			tooltipText += "<tr><td>M/m</td><td>Toggle (M)aps</td><td>R/r</td><td>Toggle Map (R)epeat</td></tr>";
 			tooltipText += "<tr><td>Up</td><td>Increase Map level</td><td>Down</td><td>Decrease Map level</td></tr>";
 			tooltipText += "<tr><td>C/c</td><td>(C)ontinue/Run Map</td><td>";
-			if (game.global.canMapAtZone) tooltipText += "Z/z</td><td>Map at (Z)one"
+			if (mobileAutomationAvailable("MapAtZone")) tooltipText += "Z/z</td><td>Map at (Z)one"
 			else tooltipText += "</td><td>"
 			tooltipText += "</td></tr>";
 		}
@@ -4879,7 +4879,7 @@ function resetGame(keepPortal, resetting) {
 	document.getElementById("goodGuyHealthMax").innerHTML = "0";
 	document.getElementById("trimpsFighting").innerHTML = "1";
 	document.getElementById("critSpan").innerHTML = "";
-	document.getElementById('togglemapAtZone2').style.display = (game.global.canMapAtZone) ? "block" : "none";
+	refreshMapAtZoneButton();
 	document.getElementById('heliumName').innerHTML = heliumOrRadon();
 	document.getElementById('goodGuyBlockName').innerHTML = (game.global.universe == 2) ? "<span class='energyShieldIcon icomoon icon-shield2'></span>" : "BLK";
 	document.getElementById("energyShield").style.width = "0%";
@@ -6435,7 +6435,8 @@ function searchSettings(elem){
 
 function getSettingsHTMLTooltipArgs(id) {
 	let optionItem = game.options.menu[id]
-	return [optionItem.titles[optionItem.enabled], "customText", game.options.menu[id].description]
+	const enabled = id === "mapAtZone" ? mobileMapAtZoneEnabled() : optionItem.enabled;
+	return [optionItem.titles[enabled], "customText", game.options.menu[id].description]
 }
 
 function getSettingHtml(optionItem, item, forceClass, appendId){
@@ -6469,13 +6470,14 @@ function getSettingHtml(optionItem, item, forceClass, appendId){
 		configBtn = `<button aria-label='Configure ${name}' ${configBtnClick}><span class='glyphicon glyphicon-cog'></span></button>`
 		configClass = "settingsBtnConfig"
 	}
-	var text = optionItem.titles[optionItem.enabled];
+	const enabled = item === "mapAtZone" ? mobileMapAtZoneEnabled() : optionItem.enabled;
+	var text = optionItem.titles[enabled];
 	var tooltip = ``
 	if (usingScreenReader) {}
 	else {
 		tooltip = `onmouseover='tooltip("${text}", "customText", event, "${optionItem.description}")' onmouseout='tooltip("hide")'`
 	}
-	return `<div class='optionContainer ${forceClass}'><button id='toggle${item + appendId}' class='noselect settingsBtn settingBtn${optionItem.enabled} ${configClass}' onclick='toggleSetting("${item}"${((appendId) ? "" : ", this")})' ${tooltip}>${text}</button>${configBtn}</div>`;
+	return `<div class='optionContainer ${forceClass}'><button id='toggle${item + appendId}' class='noselect settingsBtn settingBtn${enabled} ${configClass}' onclick='toggleSetting("${item}"${((appendId) ? "" : ", this")})' ${tooltip}>${text}</button>${configBtn}</div>`;
 }
 
 function saveNumFormatSetting(){
@@ -6528,9 +6530,14 @@ function toggleSetting(setting, elem, fromPortal, updateOnly, backwards, fromHot
 		lastPause = new Date().getTime();
 	}
 	var menuOption = game.options.menu[setting];
-	if (setting == "mapAtZone" && !updateOnly && (menuOption.enabled == 0 || fromHotkey)){
-		tooltip('Set Map At Zone', null, 'update');
-		return;
+	const mapAtZone = setting === "mapAtZone";
+	if (mapAtZone && !updateOnly) {
+		if (!mobileAutomationAvailable("MapAtZone")) return;
+		if (!mobileMapAtZoneEnabled() || fromHotkey) {
+			tooltip('Set Map At Zone', null, 'update');
+			return;
+		}
+		mobileMapAtZoneEnabled(false);
 	}
 	if (setting == "usePlayFab" && !updateOnly){
 		if (menuOption.enabled == 0){
@@ -6544,7 +6551,7 @@ function toggleSetting(setting, elem, fromPortal, updateOnly, backwards, fromHot
 		}
 	}
 	var toggles = menuOption.titles.length;
-	if (!updateOnly){
+	if (!updateOnly && !mapAtZone){
 		if (backwards && toggles > 2){
 			menuOption.enabled--;
 			if (menuOption.enabled < 0) menuOption.enabled = toggles - 1;
@@ -6564,6 +6571,7 @@ function toggleSetting(setting, elem, fromPortal, updateOnly, backwards, fromHot
 		displayPortalUpgrades(true);
 		return;
 	}
+	const enabled = mapAtZone ? mobileMapAtZoneEnabled() : menuOption.enabled;
 	var menuElem = [];
 	menuElem[0] = (elem && elem + "" != '[object Window]') ? elem : document.getElementById("toggle" + setting); // SR shenanigans, if we've lost scope grab the elem again.
 	if (typeof menuOption.secondLocation !== 'undefined'){
@@ -6573,15 +6581,15 @@ function toggleSetting(setting, elem, fromPortal, updateOnly, backwards, fromHot
 	}
 	for (var x = 0; x < menuElem.length; x++){
 		if (menuElem[x] === null) continue;
-		menuElem[x].innerHTML = menuOption.titles[menuOption.enabled];
-		swapClass("settingBtn", "settingBtn" + menuOption.enabled, menuElem[x]);
+		menuElem[x].innerHTML = menuOption.titles[enabled];
+		swapClass("settingBtn", "settingBtn" + enabled, menuElem[x]);
 		if (setting == "deleteSave") return;
 		if (!updateOnly && elem) cancelTooltip(true);
-		if (!usingScreenReader) { menuElem[x].onmouseover = function(event) {tooltip(menuOption.titles[menuOption.enabled], "customText", event, menuOption.description)}; }
-		else { makeAccessibleTooltip(menuElem[x].id, [menuOption.titles[menuOption.enabled], "customText", menuOption.description]) }
+		if (!usingScreenReader) { menuElem[x].onmouseover = function(event) {tooltip(menuOption.titles[mapAtZone ? mobileMapAtZoneEnabled() : menuOption.enabled], "customText", event, menuOption.description)}; }
+		else { makeAccessibleTooltip(menuElem[x].id, [menuOption.titles[enabled], "customText", menuOption.description]) }
 	}
-	if (!updateOnly && elem && !usingScreenReader) tooltip(menuOption.titles[menuOption.enabled], "customText", 'update', menuOption.description)
-	screenReaderAssert(menuOption.titles[menuOption.enabled])
+	if (!updateOnly && elem && !usingScreenReader) tooltip(menuOption.titles[enabled], "customText", 'update', menuOption.description)
+	screenReaderAssert(menuOption.titles[enabled])
 }
 
 	function achievementCompatibilityUnlock() {

@@ -1,6 +1,14 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.26",
+    "label": "1.26",
+    "title": "Private Kartenautomatik",
+    "notes": [
+      "The existing installation code also gives access to Map At Zone after maps open. It stays off until enabled and grants no Void Map reward."
+    ]
+  },
+  {
     "version": "1.21",
     "label": "1.21",
     "title": "Private Automatik",

@@ -40,6 +40,8 @@ var MobileQolNavigator=(()=>{
         controls.hidden = true;
         controls.append(button('Configure AutoJobs',()=>tooltip('Configure AutoJobs',null,'update')),
             button('Configure AutoStructure',()=>tooltip('Configure AutoStructure',null,'update')));
+        const maps = button('Configure Map At Zone',()=>tooltip('Set Map At Zone',null,'update'));
+        controls.append(maps);
         idLabel.append(id);
         codeLabel.append(code);
         form.append(idLabel,codeLabel,submit,status,controls);
@@ -56,6 +58,7 @@ var MobileQolNavigator=(()=>{
                 if (result.enabled) {
                     idLabel.hidden = codeLabel.hidden = submit.hidden = true;
                     code.value = '';
+                    maps.hidden = !mobileAutomationAvailable('MapAtZone');
                     controls.hidden = false;
                     status.textContent = 'Private automation is available.';
                 } else {

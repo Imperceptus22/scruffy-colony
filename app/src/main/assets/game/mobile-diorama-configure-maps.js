@@ -30,7 +30,9 @@ var createMobileConfigureMaps = win => {
     function state(key){
         if(key==='repeatBtn2')return {index:win.game&&win.game.global.repeatMap?1:0,count:2};
         const option=win.game&&win.game.options.menu[key];
-        return option&&Array.isArray(option.titles)?{index:option.enabled,count:option.titles.length}:null;
+        if(!option||!Array.isArray(option.titles))return null;
+        const index=key==='mapAtZone' ? win.mobileMapAtZoneEnabled?.() ?? option.enabled : option.enabled;
+        return {index,count:option.titles.length};
     }
     const keyOf=button=>button.id==='repeatBtn2'?'repeatBtn2':(button.id.match(/^toggle(.+)CM$/)||[])[1];
     function sync(list){
