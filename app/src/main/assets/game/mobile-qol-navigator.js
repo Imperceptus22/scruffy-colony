@@ -20,6 +20,57 @@ var MobileQolNavigator=(()=>{
         if(changed)MobileQolStore.set('unlockDiscoveries',seen);
         return rows;
     }
+    function privateAutomationPanel(host) {
+        if (typeof TrimpsNative === 'undefined') return;
+        const panel = el('details', undefined, 'unlock-category');
+        panel.id = 'private-automation';
+        const form = el('form', undefined, 'unlock-card');
+        const id = el('input'), code = el('input'), submit = el('button','Activate');
+        const idLabel = el('label','Installation ID'), codeLabel = el('label','Activation code');
+        const status = el('p'), controls = el('div');
+        id.readOnly = true;
+        code.required = true;
+        code.maxLength = 110;
+        code.autocomplete = 'off';
+        code.spellcheck = false;
+        code.setAttribute('autocapitalize','none');
+        status.setAttribute('role','status');
+        submit.type = 'submit';
+        submit.disabled = true;
+        controls.hidden = true;
+        controls.append(button('Configure AutoJobs',()=>tooltip('Configure AutoJobs',null,'update')),
+            button('Configure AutoStructure',()=>tooltip('Configure AutoStructure',null,'update')));
+        idLabel.append(id);
+        codeLabel.append(code);
+        form.append(idLabel,codeLabel,submit,status,controls);
+        panel.append(el('summary','Private automation'),form);
+        host.append(panel);
+        let busy = false;
+        async function request(value = '') {
+            if (busy) return;
+            busy = true;
+            submit.disabled = true;
+            try {
+                const result = await TrimpsMobile.redeemAutomation(value);
+                id.value = result.installation;
+                if (result.enabled) {
+                    idLabel.hidden = codeLabel.hidden = submit.hidden = true;
+                    code.value = '';
+                    controls.hidden = false;
+                    status.textContent = 'Private automation is available.';
+                } else {
+                    status.textContent = result.accepted === false ? 'Invalid activation code for this installation.' : '';
+                }
+            } catch (_) {
+                status.textContent = 'Could not save or read the activation.';
+            } finally {
+                submit.disabled = !id.value;
+                busy = false;
+            }
+        }
+        panel.ontoggle = () => { if (panel.open && !id.value) void request(); };
+        form.onsubmit = event => { event.preventDefault(); if (code.value.trim()) void request(code.value.trim()); };
+    }
     function build(host){
         const preferences=el('section'),hideLabel=el('label'),hide=el('input'),copy=el('span');preferences.className='qol-display-preferences';
         hide.type='checkbox';hide.id='qol-hide-storage';hide.setAttribute('role','switch');hide.checked=MobileQolStore.get('hideStorageBuildings',false)===true;
@@ -44,6 +95,7 @@ var MobileQolNavigator=(()=>{
         boneCopy.append(el('strong','Show Bone Trader hints'),el('small','After a bone find, a short note offers the Bone Trader; the Time Portal review lists your bones. The bone tag under the header stays.'));
         boneLabel.append(boneCopy,bone);preferences.append(boneLabel);
         bone.onchange=()=>{MobileQolStore.set('boneHints',bone.checked);if(!bone.checked)MobileBoneHints.hideNote();};
+        privateAutomationPanel(host);
         const label=el('label'),spoilers=el('input'),search=el('input'),list=el('div'),message=el('p');
         spoilers.type='checkbox';spoilers.id='qol-show-spoilers';spoilers.checked=MobileQolStore.get('qolSpoilers',false)===true;
         label.className='unlock-spoiler';label.append(spoilers,document.createTextNode('Show undiscovered features (spoilers)'));

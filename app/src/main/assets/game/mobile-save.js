@@ -10,6 +10,7 @@ function mobileSettingDefaults() {
 var TrimpsMobile = (() => {
     let ready = false, background = false, nativeId = 0, appVersion = '', appBuild = 0, lifecycleGeneration = 0;
     let restorePhase = '';
+    let privateAutomation = false;
     let pendingLoad = false, awayPreferences = null, resumeAfterChange = false;
     let activeSlot = null, developmentAllowed = false, switching = false, documentsBusy = 0, changing = false;
     const session = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
@@ -164,6 +165,7 @@ var TrimpsMobile = (() => {
             if (reply.ok && pending.type === 'restore' && reply.result?.slot) {
                 if (pending.slot !== null && pending.slot !== reply.result.slot) { pending.reject(new Error('STORAGE')); return; }
                 if (!['1','2','3','dev'].includes(reply.result.slot)) { pending.reject(new Error('STORAGE')); return; }
+                privateAutomation = reply.result.privateAutomation === true;
                 activeSlot = reply.result.slot;
                 developmentAllowed = reply.result.developmentAllowed === true;
             }
@@ -181,7 +183,10 @@ var TrimpsMobile = (() => {
             // N.00 shows as N.0, e.g. 1.0 / 1.0-preview for versionName 1.00 (V-205); all other numbers keep two decimals.
             status('Trimps Mobile ' + appVersion.replace(/^(\d+)\.00(?=$|-)/, '$1.0') + ' · Original ' + game.global.stringVersion + ' · Offline');
             // The welcome of a new game opens with the guided start (mobile-guided-start.js).
-            if (!engine.read()) mobileSettingDefaults();
+            if (!engine.read()) {
+                mobileSettingDefaults();
+                if (privateAutomation) refreshAutomationControls();
+            }
             if (!usingRealTimeOffline && !background) await saveNow();
         } else {
             freeze();
@@ -334,7 +339,20 @@ var TrimpsMobile = (() => {
         if (game.global.lockTooltip || document.getElementById('tooltipDiv').style.display !== 'none') { cancelTooltip(); return true; }
         return false;
     }
-    return {initialize,saveNow,importSave,importFile,exportFile,suspend,resume,handleBack,bridge,freeze,reconcileAway,completeAway,version:()=>appVersion,build:()=>appBuild,ready:()=>ready,
+    function refreshAutomationControls() {
+        toggleAutoJobs(true);
+        toggleAutoStructure(true);
+    }
+    async function redeemAutomation(code = '') {
+        if (code && (!ready || switching || changing || usingRealTimeOffline)) throw new Error('STORAGE');
+        const result = await bridge('privateAutomation', code);
+        if (result.enabled === true && !privateAutomation) {
+            privateAutomation = true;
+            refreshAutomationControls();
+        }
+        return result;
+    }
+    return {initialize,saveNow,privateAutomation:()=>privateAutomation,redeemAutomation,importSave,importFile,exportFile,suspend,resume,handleBack,bridge,freeze,reconcileAway,completeAway,version:()=>appVersion,build:()=>appBuild,ready:()=>ready,
         slot:()=>activeSlot,storageKey,restorePhase:()=>restorePhase,developmentAllowed:()=>developmentAllowed,busy:()=>switching||changing||documentsBusy>0,applySaveChange,
         slotInfo,slots:()=>bridge('slots'),status,selectSlot:id=>changeSlot(id),deleteSlot:id=>deleteSlot(id),startDevelopment:text=>changeSlot('dev',text)};
 })();

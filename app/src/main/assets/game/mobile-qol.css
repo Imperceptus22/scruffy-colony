@@ -49,6 +49,10 @@
 #mobile-preset-editor #advMapsSaveBtn{background:var(--accent);color:var(--onaccent);border-color:var(--accent);}
 #mobile-equipment-research [role="status"]{grid-column:1/-1;font-size:.875rem;margin:4px 0;}
 #mobile-equipment-research [role="status"]:empty{display:none;}
+#private-automation [hidden]{display:none;}
+#private-automation label:not([hidden]){display:block;margin-top:8px;}
+#private-automation input{display:block;width:100%;max-width:100%;box-sizing:border-box;min-height:44px;}
+#private-automation button{width:100%;}
 .qol-display-preferences{margin-bottom:20px;}
 .qol-display-preferences label{display:flex!important;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:12px 0;border-block:1px solid var(--line);}
 .qol-display-preferences small{display:block;font-size:.8rem;color:var(--muted);margin-top:5px;}

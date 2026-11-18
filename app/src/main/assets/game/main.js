@@ -5098,7 +5098,7 @@ function buyAutoJobs(allowRatios){
 	if (game.options.menu.pauseGame.enabled)
 		return;
 	var setting = getAutoJobsSetting();
-	if (!setting.enabled || !bwRewardUnlocked("AutoJobs")) return;
+	if (!mobileAutomationAvailable("AutoJobs") || !mobileAutomationEnabled("AutoJobs", setting)) return;
 	if (loops - lastAutoJob < 20) return;
 	if (allowRatios) lastAutoJob = loops;
 	var trimps = game.resources.trimps;
@@ -5147,7 +5147,7 @@ function buyAutoJobs(allowRatios){
 function autoBalanceJob(which){
 	//Fired when miners and scientists are unlocked and maybe other places later, requires autoJobs
 	var setting = getAutoJobsSetting();
-	if (!setting || !setting.enabled || !bwRewardUnlocked("AutoJobs")) return;
+	if (!setting || !bwRewardUnlocked("AutoJobs") || !mobileAutomationEnabled("AutoJobs", setting)) return;
 	if (!setting[which] || !setting[which].enabled || !setting.Farmer || !setting.Farmer.enabled || setting.Farmer.ratio == 0) return;
 	var want = game.jobs.Farmer.owned * (setting[which].ratio / setting.Farmer.ratio);
 	want = Math.floor(want);
@@ -13265,7 +13265,7 @@ function nextWorld() {
 	}
 	if (challengeActive('Watch')) {
 		if (game.global.world > 6) dropPrestiges();
-		if (!getAutoJobsSetting().enabled) assignExtraWorkers();
+		if (!mobileAutomationEnabled("AutoJobs", getAutoJobsSetting())) assignExtraWorkers();
 	}
 	if (challengeActive('Lead')) {
 		if (game.global.world % 2 === 0) game.challenges.Lead.stacks = 200;
@@ -13640,6 +13640,26 @@ function getHighestBionic(){
 function bwRewardUnlocked(name){
 	if (getHighestBionic() >= game.bwRewards[name].requires) return true;
 	return false;
+}
+
+// Private access grants the tools without granting the Bionic rewards.
+function mobileHasPrivateAutomation(){
+    return typeof TrimpsMobile !== 'undefined' && TrimpsMobile.privateAutomation?.() === true;
+}
+
+function mobileAutomationAvailable(name){
+    return bwRewardUnlocked(name) || ((name === "AutoJobs" || name === "AutoStructure") && mobileHasPrivateAutomation());
+}
+
+function mobileAutomationEnabled(name, setting, next){
+    if (!mobileHasPrivateAutomation()){
+        if (next !== undefined) setting.enabled = next;
+        return setting.enabled;
+    }
+    // A prior save or import may contain enabled settings, but early use needs local opt-in.
+    const key = 'private-' + name + '-u' + game.global.universe;
+    if (next !== undefined) MobileQolStore.set(key, next);
+    return MobileQolStore.get(key, bwRewardUnlocked(name) && setting.enabled) === true;
 }
 
 function getNextLockedBwReward(){
@@ -18081,17 +18101,18 @@ function getAutoStructureSetting(){
 
 function toggleAutoStructure(noChange, forceOff){
 	var setting = getAutoStructureSetting();
-	if (!noChange) setting.enabled = !setting.enabled;
+	var enabled = mobileAutomationEnabled("AutoStructure", setting);
+	if (!noChange) enabled = mobileAutomationEnabled("AutoStructure", setting, !enabled);
 	var btnElem = document.getElementById('autoStructureBtn');
-	if (bwRewardUnlocked("AutoStructure") && !forceOff)
+	if (mobileAutomationAvailable("AutoStructure") && !forceOff)
 		btnElem.style.display = 'block';
 	else{
 		btnElem.style.display = 'none';
 		return;
 	}
-	var color = (setting.enabled) ? "colorSuccess" : "colorDanger";
+	var color = enabled ? "colorSuccess" : "colorDanger";
 	swapClass("color", color, btnElem);
-	var text = (setting.enabled) ? "AutoStructure On" : "AutoStructure Off";
+	var text = enabled ? "AutoStructure On" : "AutoStructure Off";
 	document.getElementById('autoStructureText').innerHTML = text;
 }
 
@@ -18101,17 +18122,18 @@ function getAutoJobsSetting(){
 
 function toggleAutoJobs(noChange, forceOff){
 	var setting = getAutoJobsSetting();
-	if (!noChange) setting.enabled = !setting.enabled;
+	var enabled = mobileAutomationEnabled("AutoJobs", setting);
+	if (!noChange) enabled = mobileAutomationEnabled("AutoJobs", setting, !enabled);
 	var btnElem = document.getElementById('autoJobsBtn');
-	if (bwRewardUnlocked("AutoJobs") && !forceOff)
+	if (mobileAutomationAvailable("AutoJobs") && !forceOff)
 		btnElem.style.display = 'block';
 	else{
 		btnElem.style.display = 'none';
 		return;
 	}
-	var color = (setting.enabled) ? "colorSuccess" : "colorDanger";
+	var color = enabled ? "colorSuccess" : "colorDanger";
 	swapClass("color", color, btnElem);
-	var text = (setting.enabled) ? "AutoJobs On" : "AutoJobs Off";
+	var text = enabled ? "AutoJobs On" : "AutoJobs Off";
 	document.getElementById('autoJobsText').innerHTML = text;
 }
 
@@ -18295,7 +18317,7 @@ function buyAutoStructures(){
 	var maxBuild = 1;
 	if (bwRewardUnlocked("DoubleBuild")) maxBuild = 2;
 	if (bwRewardUnlocked("DecaBuild")) maxBuild = 10;
-	if (!setting.enabled || !bwRewardUnlocked("AutoStructure")) return;
+	if (!mobileAutomationAvailable("AutoStructure") || !mobileAutomationEnabled("AutoStructure", setting)) return;
 	var order = ["Tribute", "Smithy", "Nursery", "Laboratory", "Gym", "Warpstation", "Hut", "House", "Mansion", "Hotel", "Resort", "Gateway", "Collector", "Wormhole"];
 	for (var x = 0; x < order.length; x++){
 		var item = order[x];
@@ -19999,7 +20021,7 @@ function gameLoop(makeUp, now) {
 		if ((game.global.alchemyUnlocked && game.global.universe == 2) || game.global.challengeActive == "Alchemy") alchObj.autoCraft();
 		if (game.permaBoneBonuses.boosts.owned > 0) game.permaBoneBonuses.boosts.checkCharges();
 	}
-	if (bwRewardUnlocked("AutoJobs")){
+	if (mobileAutomationAvailable("AutoJobs")){
 		//Ratio jobs every 30 seconds (or every zone, see nextWorld)
 		if (loops % 300 == 0){
 			buyAutoJobs(true);

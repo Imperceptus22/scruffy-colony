@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var webView: WebView
     private lateinit var content: FrameLayout
     private var bridge: SaveBridge? = null
+    private val privateAutomation by lazy { PrivateAutomation(noBackupFilesDir) }
     private var shop: BoneShop? = null
     // An unreadable purchase record keeps the shop off instead of crediting purchases again (or crashing the game).
     private val shopLedger by lazy { runCatching { ShopLedger(filesDir) }.onFailure { Log.w("TrimpsMobile", "Purchase ledger unreadable", it) }.getOrNull() }
@@ -168,7 +169,7 @@ class MainActivity : ComponentActivity() {
             showRendererFailure()
             content.post { recoverGameView() }
         }, { finish() }, { showUnsavedExit() }, { applyPreviousGraphics(current); syncLifecycle(current) })
-        bridge = SaveBridge(webView, SlotStore(filesDir, BuildConfig.DEBUG), documents) { foreground }
+        bridge = SaveBridge(webView, SlotStore(filesDir, BuildConfig.DEBUG), documents, privateAutomation) { foreground }
         // V-220: bone packs; a recovered renderer gets a new shop on the new page.
         shop?.close()
         shop = shopLedger?.let { ledger -> BoneShop(this, webView, ledger).also { it.attach() } }

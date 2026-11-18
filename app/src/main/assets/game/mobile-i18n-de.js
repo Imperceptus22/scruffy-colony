@@ -206,6 +206,13 @@ var MobileI18nDe = (() => {
         // Quality of life page frame (mobile-qol-navigator.js); feature cards from the unlock catalog stay English
         "Hide storage buildings":"Lagergebäude ausblenden",
         "Hide Barn, Shed and Forge while AutoStorage is on. They reappear when it is off.":"Scheune, Schuppen und Schmiede ausblenden, solange AutoStorage an ist. Sie erscheinen wieder, wenn es aus ist.",
+        "Private automation":"Private Automatik",
+        "Installation ID":"Installations-ID",
+        "Activation code":"Freischaltcode",
+        "Activate":"Freischalten",
+        "Private automation is available.":"Die private Automatik ist verfügbar.",
+        "Invalid activation code for this installation.":"Der Freischaltcode ist für diese Installation ungültig.",
+        "Could not save or read the activation.":"Die Freigabe konnte nicht gespeichert oder gelesen werden.",
         "Display preferences":"Anzeigeoptionen","Show ADVISOR tips automatically":"ADVISOR-Tipps automatisch zeigen",
         "In the first run of this save, ADVISOR opens by itself when a new tip is ready. The gold star always opens it.":"Im ersten Durchlauf dieses Spielstands öffnet sich ADVISOR von selbst, sobald ein neuer Tipp bereitsteht. Der goldene Stern öffnet ihn jederzeit.",
         "Show Bone Trader hints":"Hinweise zum Knochenhändler zeigen",

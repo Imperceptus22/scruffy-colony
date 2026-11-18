@@ -1,6 +1,14 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.21",
+    "label": "1.21",
+    "title": "Private Automatik",
+    "notes": [
+      "Quality of life can accept a code for AutoJobs and AutoStructure on this installation. The original Bionic Wonderland rewards keep their normal requirements."
+    ]
+  },
+  {
     "version": "1.16",
     "label": "1.16",
     "title": "Einheitliches Diorama-Zeitportal",

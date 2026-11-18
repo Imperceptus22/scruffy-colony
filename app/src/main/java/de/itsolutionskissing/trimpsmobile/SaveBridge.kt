@@ -7,7 +7,13 @@ import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
 import org.json.JSONObject
 
-class SaveBridge(private val webView: WebView, private val slots: SlotStore, private val documents: SaveDocuments, private val isForeground: () -> Boolean = { true }) {
+internal class SaveBridge(
+    private val webView: WebView,
+    private val slots: SlotStore,
+    private val documents: SaveDocuments,
+    private val automation: PrivateAutomation,
+    private val isForeground: () -> Boolean = { true },
+) {
     private var closed = false
     @Volatile private var activeSession: String? = null
 
@@ -53,6 +59,11 @@ class SaveBridge(private val webView: WebView, private val slots: SlotStore, pri
                         return slots.store(id)
                     }
                     val result: Any? = when (type) {
+                        "privateAutomation" -> {
+                            check(requestedSlot != null && requestedSlot == slots.current)
+                            require(payload.length <= 110)
+                            automation.manage(payload)
+                        }
                         "slotInfo" -> slots.info()
                         "slots" -> slots.list()
                         "readSlot" -> slots.store(payload).read().let { JSONObject().put("lastGood", it.lastGood ?: JSONObject.NULL).put("rollback", it.rollback ?: JSONObject.NULL).put("deleted", it.deleted) }
@@ -75,7 +86,7 @@ class SaveBridge(private val webView: WebView, private val slots: SlotStore, pri
                             boundStore().commit(payload, purchase); true
                         }
                         "rollback" -> boundStore().restoreRollback()
-                        "restore" -> boundStore().read().let { JSONObject().put("lastGood", it.lastGood ?: JSONObject.NULL).put("rollback", it.rollback ?: JSONObject.NULL).put("deleted", it.deleted).put("slot", slots.current).put("developmentAllowed", slots.developmentAllowed).put("normal", runCatching { slots.normalSelection() }.getOrNull()).put("appVersion", BuildConfig.VERSION_NAME).put("appBuild", BuildConfig.VERSION_CODE) }
+                        "restore" -> boundStore().read().let { JSONObject().put("lastGood", it.lastGood ?: JSONObject.NULL).put("rollback", it.rollback ?: JSONObject.NULL).put("deleted", it.deleted).put("slot", slots.current).put("developmentAllowed", slots.developmentAllowed).put("normal", runCatching { slots.normalSelection() }.getOrNull()).put("appVersion", BuildConfig.VERSION_NAME).put("appBuild", BuildConfig.VERSION_CODE).put("privateAutomation", automation.enabled()) }
                         else -> error("Unsupported operation")
                     }
                     respond(result)

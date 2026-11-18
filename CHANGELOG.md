@@ -1,5 +1,8 @@
 # Änderungen
 
+## 1.21 – Private Automatik
+- Quality of life can accept a code for AutoJobs and AutoStructure on this installation. The original Bionic Wonderland rewards keep their normal requirements.
+
 ## 1.16 – Einheitliches Diorama-Zeitportal
 - All Diorama portal steps share a stationary parchment background. Challenge details open below the selected Challenge.
 - Locked Challenges are readable on parchment, and completed Challenges are grouped in a collapsible section at the bottom.

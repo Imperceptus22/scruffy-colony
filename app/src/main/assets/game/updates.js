@@ -513,12 +513,14 @@ function tooltip(what, isItIn, event, textString, attachFunction, numCheck, rena
 			}
 		}
 		if (percentJobs.length >= 4) tooltipText += "<tr><td style='width: 40%'><div class='row'><div class='col-xs-6' style='padding-right: 5px'>&nbsp;</div><div class='col-xs-6 lowPad' style='text-align: right'>Up To: <input class='jobConfigQuantity' id='autoJobQuantScientist2' value='" + prettify(sciMax) + "'></div></div></td><td style='width: 60%'>&nbsp;</td></tr>";
-		tooltipText += "<tr><td style='width: 40%'><div class='col-xs-7' style='padding-right: 5px'>Gather on Portal:</div><div class='col-xs-5 lowPad' style='text-align: right'><select style='width: 100%' id='autoJobSelfGather'><option value='0'>Nothing</option>";
-		var values = ['Food', 'Wood', 'Metal', 'Science'];
-		for (var x = 0; x < values.length; x++){
-			tooltipText += "<option" + ((settingGroup.portalGather && settingGroup.portalGather == values[x].toLowerCase()) ? " selected='selected'" : "") + " value='" + values[x].toLowerCase() + "'>" + values[x] + "</option>";
+		if (bwRewardUnlocked("AutoJobs") || !mobileAutomationAvailable("AutoJobs")) {
+			tooltipText += "<tr><td style='width: 40%'><div class='col-xs-7' style='padding-right: 5px'>Gather on Portal:</div><div class='col-xs-5 lowPad' style='text-align: right'><select style='width: 100%' id='autoJobSelfGather'><option value='0'>Nothing</option>";
+			var values = ['Food', 'Wood', 'Metal', 'Science'];
+			for (var x = 0; x < values.length; x++){
+				tooltipText += "<option" + ((settingGroup.portalGather && settingGroup.portalGather == values[x].toLowerCase()) ? " selected='selected'" : "") + " value='" + values[x].toLowerCase() + "'>" + values[x] + "</option>";
+			}
+			tooltipText += "</select></div></td></tr>";
 		}
-		tooltipText += "</select></div></td></tr>";
 		tooltipText += "</tbody></table>";
 		costText = "<div class='maxCenter'><div id='confirmTooltipBtn' class='btn-lg btn btn-info' onclick='saveAutoJobsConfig()'>Apply</div><div class='btn btn-lg btn-danger' role=button tabindex=0 onclick='cancelTooltip()'>Cancel</div></div>";
 		game.global.lockTooltip = true;
@@ -4805,7 +4807,7 @@ function resetGame(keepPortal, resetting) {
 			game.c2[cItem] = c2s[cItem];
 		}
 		if (game.global.challengeActive == "Trapper" || game.global.challengeActive == "Trappapalooza"){
-			getAutoJobsSetting().enabled = false;
+			mobileAutomationEnabled("AutoJobs", getAutoJobsSetting(), false);
 		}
 		alchObj.portal();
 		game.global.ogU2MutationSeed = game.global.u2MutationSeed;
