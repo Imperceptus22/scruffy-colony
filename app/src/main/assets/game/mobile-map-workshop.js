@@ -45,6 +45,10 @@ var MobileMapWorkshop = (() => {
         const createTab=button(t('Create Map'),()=>show('create')),listTab=button(t('My Maps'),()=>show('list'));createTab.id='mobile-workshop-create-tab';listTab.id='mobile-workshop-list-tab';tabs.append(createTab,listTab);
         pre.before(byId('mobile-map-presets-head'),tabs);
         byId('mobile-map-presets-head').querySelector('h2').textContent=t('Map Workshop');
+        const mapAtZone=button('Map At Zone',()=>{if(mobileAutomationAvailable('MapAtZone'))tooltip('Set Map At Zone',null,'update');});
+        mapAtZone.id='mobile-map-at-zone';mapAtZone.hidden=true;
+        mapAtZone.setAttribute('aria-label',t('Configure Map At Zone'));mapAtZone.setAttribute('aria-haspopup','dialog');
+        byId('mobile-map-presets-head').append(mapAtZone);
         byId('mobile-map-presets-head').after(byId('mobile-map-world'));
         const hero=el('div','mobile-workshop-hero');hero.id='mobile-create-biome';
         const caption=el('p','mobile-biome-caption');caption.id='mobile-create-biome-caption';
@@ -102,6 +106,7 @@ var MobileMapWorkshop = (() => {
         if(document.body.dataset.mobilePage!=='maps'){creationOpen=false;return;}
         if(typeof MobileMapControls!=='undefined')MobileMapControls.refresh();
         if(!byId('mobile-workshop-create'))return;
+        byId('mobile-map-at-zone').hidden=!mobileAutomationAvailable('MapAtZone');
         if(state!==game.global){state=game.global;view='create';creationOpen=false;}
         if(game.global.voidMapsToggled)view='list';
         const creating=view==='create'&&document.body.dataset.mobilePage==='maps';

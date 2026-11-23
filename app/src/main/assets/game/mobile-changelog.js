@@ -1,6 +1,22 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.28",
+    "label": "1.28",
+    "title": "Map At Zone direkt auf dem Kartenbildschirm",
+    "notes": [
+      "Open Map At Zone directly beside the map screen title once it is available. The button opens its settings while automation is running too."
+    ]
+  },
+  {
+    "version": "1.27",
+    "label": "1.27",
+    "title": "Hilfe für Map At Zone",
+    "notes": [
+      "Map At Zone explains how to set up the first rule directly in the window, with an example and a guide to map and zone repeats."
+    ]
+  },
+  {
     "version": "1.26",
     "label": "1.26",
     "title": "Private Kartenautomatik",

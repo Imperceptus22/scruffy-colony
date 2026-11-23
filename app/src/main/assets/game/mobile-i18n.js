@@ -13,7 +13,7 @@ var createMobileI18n = win => {
     // The page stays lang="en": most of its text is the original game's. Translated elements get lang="de" (speech, hyphenation).
     if(doc?.documentElement?.dataset)doc.documentElement.dataset.language=lang;
     // Own interface only: the original game's windows keep their English text even where a phrase is identical.
-    const scope='#mobile-header,#mobile-nav,#mobile-more,.mobile-save-manager,.mobile-development-banner,#mobile-help-panel,#mobile-save-feedback,#mobile-status,#mobile-recovery,#tipTitle,#mobile-license-text,#mobile-import-result,#mobile-overlay-close,#mobile-achievement-close,#achievementPopup .achievementBtnGo,#boneWrapper,#mobile-bone-note,#mobile-bone-jar-prop,#mobile-combat-tools';
+    const scope='#mobile-header,#mobile-nav,#mobile-more,.mobile-save-manager,.mobile-development-banner,#mobile-help-panel,#mobile-save-feedback,#mobile-status,#mobile-recovery,#tipTitle,#mobile-license-text,#mobile-import-result,#mobile-overlay-close,#mobile-achievement-close,#achievementPopup .achievementBtnGo,#boneWrapper,#mobile-bone-note,#mobile-bone-jar-prop,.mobile-maz-guide,#mobile-combat-tools';
     const skipped='script,style,textarea,code';
     const attributes=['title','aria-label','placeholder','href'];
     let strings=new Map(),patterns=[],links=new Map(),branded=null;

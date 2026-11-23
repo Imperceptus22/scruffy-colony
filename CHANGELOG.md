@@ -1,5 +1,11 @@
 # Änderungen
 
+## 1.28 – Map At Zone direkt auf dem Kartenbildschirm
+- Open Map At Zone directly beside the map screen title once it is available. The button opens its settings while automation is running too.
+
+## 1.27 – Hilfe für Map At Zone
+- Map At Zone explains how to set up the first rule directly in the window, with an example and a guide to map and zone repeats.
+
 ## 1.26 – Private Kartenautomatik
 - The existing installation code also gives access to Map At Zone after maps open. It stays off until enabled and grants no Void Map reward.
 
