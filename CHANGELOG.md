@@ -1,5 +1,9 @@
 # Änderungen
 
+## 1.38 – Mastery-Feldhandbuch und Forschungsautomatik
+- Explore all 60 Masteries in the Diorama field guide with illustrated entries, readable effects and larger artwork in Info.
+- Research keeps a single automation directly accessible. When several unlock, open Automation to see and change their modes together.
+
 ## 1.28 – Map At Zone direkt auf dem Kartenbildschirm
 - Open Map At Zone directly beside the map screen title once it is available. The button opens its settings while automation is running too.
 

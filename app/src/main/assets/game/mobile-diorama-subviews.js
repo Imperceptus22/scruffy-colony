@@ -1,7 +1,4 @@
-// Mastery helpers for the Diorama sub views (V-192). The original displayTalents keeps building the table, prices,
-// purchases and requirements; this adapter only adds one short effect line per mastery (own texts, the original text
-// stays behind Info), an Info button beside each entry, a monogram for the symbol and a "Buyable / All" filter.
-// Classic hides the additions (mobile-b2.css); the look lives in mobile-diorama-subviews.css.
+// The field guide extends the original mastery table and tooltip; the game owns requirements, prices and purchases.
 var MobileMastery = (() => {
     const $ = id => document.getElementById(id);
     // One line per mastery in plain words; numbers follow the original descriptions.
@@ -68,11 +65,8 @@ var MobileMastery = (() => {
         angelic: 'Trimps heal 50% of remaining health before each attack'
     };
     let filter = 'all';
-    // One uniform medallion per mastery: the initials of its capitalised words, without the level numeral. Several
-    // original icon glyphs have no symbol in the app and showed a placeholder rhomb.
-    const monogram = name => name.split(/\s+/).filter(w => /^[A-Z]/.test(w) && !/^[IVX]+$/.test(w)).slice(0, 2).map(w => w[0]).join('');
-    // The name without the screen reader status the original appends to .talentName in that mode.
-    const nameOf = (key, node) => (game.talents[key] && game.talents[key].name) || (node ? node.textContent : key);
+    const local = (english, german) => typeof MobileI18n !== 'undefined' && MobileI18n.lang === 'de' ? german : english;
+    const illustration = key => 'mobile-assets/mastery-fieldguide/' + key + '.webp';
     function button(text, action, cls) {
         const b = document.createElement('button'); b.type = 'button'; b.className = cls; b.textContent = text; b.onclick = action; return b;
     }
@@ -80,11 +74,90 @@ var MobileMastery = (() => {
     const affordable = () => game.global.essence >= getNextTalentCost() || prettify(game.global.essence) == prettify(getNextTalentCost());
     // A mastery can be bought now: its row is open, it is not owned, its requirement is owned and the Essence suffices.
     const open = item => !!item.closest('.talentRowUnlocked') && item.classList.contains('talentNotPurchased') && !item.classList.contains('talentReqNeeded') && !item.classList.contains('talentLocked');
+    function status(item, afford) {
+        if (item.classList.contains('talentPurchased')) return local('✓ Owned', '✓ Gekauft');
+        if (!item.closest('.talentRowUnlocked')) return local('Locked', 'Gesperrt');
+        if (item.classList.contains('talentReqNeeded')) return local('Needs previous', 'Voraussetzung fehlt');
+        return afford ? local('Buy', 'Kaufen') : local('Need Essence', 'Essenz fehlt');
+    }
+    function focusDetail(key, actions, close) {
+        const dialog = $('tooltipDiv');
+        dialog.setAttribute('role', 'dialog');
+        dialog.setAttribute('aria-modal', 'true');
+        dialog.setAttribute('aria-labelledby', 'tipTitle');
+        close.focus({preventScroll:true});
+        function trapTab(event) {
+            if (event.key !== 'Tab') return;
+            const stops = [...dialog.querySelectorAll('button:not(:disabled), a[href], [tabindex="0"]')].filter(node => node.getClientRects().length);
+            const first = stops[0], last = stops[stops.length - 1];
+            if (!first) return;
+            const active = document.activeElement;
+            if (!dialog.contains(active) || active === (event.shiftKey ? first : last)) {
+                event.preventDefault();
+                (event.shiftKey ? last : first).focus();
+            }
+        }
+        document.addEventListener('keydown', trapTab, true);
+        // Back, Close and purchase all clear tipCost. A purchase also rebuilds (and may filter out) its entry.
+        const cleanup = new MutationObserver(() => {
+            if (actions.isConnected) return;
+            cleanup.disconnect();
+            document.removeEventListener('keydown', trapTab, true);
+            if ($('mobile-mastery-detail-buy')) return;
+            for (const attr of ['role','aria-modal','aria-labelledby']) dialog.removeAttribute(attr);
+            if (dialog.style.display !== 'none') return;
+            const info = $('mastery' + key)?.parentElement.querySelector('.mobile-mastery-info');
+            const target = info?.getClientRects().length ? info : $('mobile-mastery-filter')?.querySelector('[aria-pressed="true"]');
+            if (target?.getClientRects().length) target.focus();
+        });
+        cleanup.observe(actions.parentElement, {childList:true});
+    }
+    function showInfo(key) {
+        TrimpsUI.infoAction(() => {
+            // Explicit Info also works when the player has disabled hover tooltips.
+            tooltip(key, 'talents', 'update', undefined, undefined, undefined, undefined, undefined, undefined, true);
+            const title = $('tipTitle'), cost = $('tipCost'), item = $('mastery' + key);
+            if ($('tooltipDiv').style.display === 'none') return;
+            const cover = document.createElement('img');
+            cover.className = 'mobile-mastery-cover'; cover.alt = ''; cover.src = illustration(key);
+            const tier = document.createElement('small');
+            tier.className = 'mobile-mastery-caption'; tier.textContent = local('Tier ', 'Reihe ') + game.talents[key].tier + ' · Mastery';
+            title.prepend(cover, tier);
+            const summary = document.createElement('span');
+            summary.className = 'mobile-mastery-effect'; summary.textContent = effects[key];
+            title.append(summary);
+            const actions = document.createElement('div');
+            actions.className = 'mobile-mastery-detail-actions';
+            const buy = button(status(item, affordable()), () => {
+                if (!open(item) || !affordable()) return;
+                cancelTooltip();
+                purchaseTalent(key);
+            }, 'mobile-mastery-detail-buy');
+            buy.id = 'mobile-mastery-detail-buy'; buy.dataset.key = key;
+            buy.disabled = !open(item) || !affordable();
+            const close = button(local('Close', 'Schließen'), () => cancelTooltip(), 'mobile-mastery-detail-close');
+            actions.append(buy, close);
+            if (game.talents[key].purchased && !ctrlPressed) cost.replaceChildren();
+            cost.append(actions);
+            $('tooltipDiv').scrollTop = 0;
+            focusDetail(key, actions, close);
+        }, false);
+    }
     function setFilter(next) {
         filter = next; const container = $('talentsContainer'); if (!container) return;
         const afford = affordable();
         container.dataset.masteryFilter = filter; container.dataset.masteryAfford = String(afford);
         container.querySelectorAll('#mobile-mastery-filter button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
+        for (const item of container.querySelectorAll('#talentsHere .talentItem[id^="mastery"]')) {
+            const label = item.querySelector('.mobile-mastery-state');
+            if (label) label.textContent = status(item, afford);
+        }
+        const buy = $('mobile-mastery-detail-buy');
+        if (buy) {
+            const item = $('mastery' + buy.dataset.key);
+            buy.disabled = !item || !open(item) || !afford;
+            if (item) buy.textContent = status(item, afford);
+        }
         const empty = $('mobile-mastery-empty');
         if (empty) empty.hidden = filter !== 'buyable' || (afford && [...container.querySelectorAll('#talentsHere .talentItem')].some(open));
     }
@@ -97,22 +170,27 @@ var MobileMastery = (() => {
             here.before(bar, empty);
         }
         // Tier numbers come from the row position, so hidden rows (filter) do not renumber the visible ones.
-        here.querySelectorAll('tr.talentTierRow').forEach((row, index) => { row.dataset.tier = String(index + 1); });
+        here.querySelectorAll('tr.talentTierRow').forEach((row, index) => { row.dataset.tier = String(index + 1);
+            if (row.querySelector('.talentLocked')) row.dataset.lockedNote = local('Revealed as you buy more masteries', 'Wird mit weiteren Masteries aufgedeckt'); });
         // Entries of tiers beyond the purchase power are anonymous lock tiles without an id: nothing to explain there.
         for (const item of here.querySelectorAll('.talentItem[id^="mastery"]')) {
-            const key = item.id.replace(/^mastery/, ''), name = item.querySelector('.talentName'), icon = item.querySelector('.talentIcon');
-            if (icon && !icon.dataset.mono) icon.dataset.mono = monogram(nameOf(key, name));
-            if (effects[key] && !item.querySelector('.mobile-mastery-effect')) {
-                const line = document.createElement('span'); line.className = 'mobile-mastery-effect'; line.textContent = effects[key];
-                (name || item).after(line);
-            }
-            const cell = item.parentElement;
-            if (cell && !cell.querySelector('.mobile-mastery-info')) {
-                // Long original texts (Master of the Void, Liquification) stay open until closed: no auto close.
-                const info = button('Info', event => { event.stopPropagation(); TrimpsUI.infoAction(() => tooltip(key, 'talents', 'update'), false); }, 'mobile-info mobile-mastery-info');
-                info.setAttribute('aria-label', 'Info ' + nameOf(key, name));
-                cell.append(info);
-            }
+            const key = item.id.slice('mastery'.length), cell = item.parentElement;
+            if (cell.querySelector('.mobile-mastery-info')) continue;
+            // Keep the original purchase button and its accessible name. The Field Guide exposes only its action.
+            const state = document.createElement('span');
+            state.className = 'mobile-mastery-state'; state.hidden = true; item.append(state);
+            const art = document.createElement('span');
+            art.className = 'mobile-mastery-art'; art.hidden = true; art.setAttribute('aria-hidden', 'true');
+            art.style.backgroundImage = 'url("' + illustration(key) + '")';
+            const name = game.talents[key].name;
+            const heading = document.createElement('strong');
+            heading.className = 'mobile-mastery-name'; heading.hidden = true; heading.textContent = name;
+            if (name.split(/\s+/).some(word => word.length >= 15)) cell.dataset.longName = 'true';
+            const line = document.createElement('span');
+            line.className = 'mobile-mastery-effect'; line.textContent = effects[key];
+            const info = button('Info', event => { event.stopPropagation(); showInfo(key); }, 'mobile-info mobile-mastery-info');
+            info.setAttribute('aria-label', 'Info ' + name);
+            cell.append(art, heading, line, info);
         }
         setFilter(filter);
     }
@@ -126,12 +204,18 @@ var MobileMastery = (() => {
             const original = updateTalentNumbers;
             updateTalentNumbers = function () {
                 const result = original.apply(this, arguments), container = $('talentsContainer');
+                const count = $('talentsAffordable');
+                if (count && typeof MobileI18n !== 'undefined' && MobileI18n.lang === 'de') {
+                    // The engine compares its English count each tick; localize only the field guide's presentation.
+                    const shown = count.textContent.replace(' Affordable', ' finanzierbar');
+                    if (count.dataset.label !== shown) count.dataset.label = shown;
+                }
                 if (container && container.dataset.masteryAfford !== String(affordable())) setFilter(filter);
                 return result;
             };
         }
         decorate();
     }
-    return { decorate, setFilter, effects, monogram };
+    return { decorate, setFilter, effects };
 })();
 if (typeof module !== 'undefined') module.exports = MobileMastery;

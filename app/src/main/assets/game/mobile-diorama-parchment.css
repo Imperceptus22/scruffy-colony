@@ -216,76 +216,31 @@ html[data-graphics="diorama"] body[data-diorama-page="upgrades"] {
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] :is(.mobile-page,#outerBuyContainer,#buyContainer,#buyCol,#buyHere,#upgradesHere,#upgradesContainer) {
   background:transparent!important; border-color:transparent!important; box-shadow:none!important;
 }
+/* Approved field-guide header: one original mode inline, multiple modes in a native modal sheet. */
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs {
-  display:flex!important; flex-wrap:wrap; align-items:center; gap:4px 8px;
-  margin:2px 0 6px!important; padding:3px 6px 3px 10px!important; background:none!important;
-  border:1px solid transparent!important;
-  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 11px 10px stretch!important;
-  filter:drop-shadow(0 2px 3px #0009);
+  display:flex!important; flex-direction:column; align-items:stretch; gap:8px;
+  margin:3px 0 8px!important; padding:12px 14px!important;
+  background:#f9f2df!important; color:#243c33; border:1px solid #866f46!important; border-radius:7px;
+  box-shadow:0 2px 5px #231c1460!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs::before {
-  content:"Research"; flex:none; padding:2px 0; color:var(--pk-ink); font:700 1.3rem/1.15 var(--n-serif);
+  content:"Research"; color:#243c33; font:650 1.45rem/1.15 var(--n-serif); text-align:left;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2:not([hidden]) {
-  flex:1 1 15rem; display:flex!important; margin:0!important; padding:0!important; gap:6px!important;
+  display:flex!important; flex-wrap:wrap; gap:6px!important; margin:0!important; padding:0!important;
   background:transparent!important; border:0!important; box-shadow:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2:not(:has(>li:not([style*="none"]))) { display:none!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li { flex:1 1 0; min-width:0; margin:0!important; background:transparent!important; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li { flex:0 1 auto; min-width:0; margin:0!important; background:transparent!important; }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li>a {
-  min-height:44px!important; padding:0 4px!important; color:#fff8e6!important; font-weight:700!important;
-  border:1px solid transparent!important; border-radius:0!important; background:transparent!important;
-  border-image:url("mobile-assets/diorama/U02-button-petrol.webp") 72 fill / 9px stretch!important;
-  filter:drop-shadow(0 2px 2px #3b240f99);
-  text-decoration:underline 3px var(--research-tab-accent,transparent)!important; text-underline-offset:5px;
+  min-height:48px!important; padding:4px 10px!important; color:#fffae9!important; font:700 .9rem/1.25 var(--font-body)!important;
+  border:1px solid #25473e!important; border-radius:5px!important; background:#2c5148!important; border-image:none!important;
+  box-shadow:inset 0 -3px var(--research-tab-accent,transparent)!important; text-decoration:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2 .alert.badge:not(:empty) { background:#f2c66d!important; }
-/* The "Upgrades" label on the wood repeats the band title. The title row hosts AutoUpgrade, AutoPrestige and AutoGold;
-   it collapses while none of them is unlocked. */
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleSpan { display:none!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv { margin:0!important; padding:0!important; min-height:0!important; line-height:0!important; font-size:0!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv>.row,
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv>.row>[class*="col-"] { margin:0!important; padding:0!important; min-height:0!important; }
-/* V-191: once an automation is unlocked, the title row becomes the lower slab of the Research band and every
-   automation a compact switch in the AutoStorage build (original text as the label, track and knob for the state),
-   instead of a full-width red bar. Off = colorDanger / settingBtn0; any other original state counts as on. */
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"]:where([data-mobile-has~="auto-upgrade"]):is(*,#mobile-has):is(*,.mobile-has):is(*,.mobile-has) #buyTabs {
-  margin-bottom:0!important; background:none!important; border-width:10px 11px 0 10px!important;
-  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 0 10px stretch!important;
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"]:where([data-mobile-has~="auto-upgrade"]):is(*,#mobile-has):is(*,.mobile-has):is(*,.mobile-has) #buyHere { margin-top:0!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv:where([data-mobile-has~="auto-upgrade"]):is(*,.mobile-has):is(*,.mobile-has) {
-  width:auto!important; margin:0 0 6px!important; padding:0 6px 0 10px!important; line-height:normal!important; font-size:1rem!important; background:none!important;
-  border-style:solid!important; border-color:transparent!important; border-width:0 11px 11px 10px!important;
-  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 11px 11px 10px stretch!important;
-  filter:drop-shadow(0 2px 3px #0009);
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv:where([data-mobile-has~="auto-upgrade"]):is(*,.mobile-has):is(*,.mobile-has)>.row {
-  display:flex!important; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:0 10px;
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv>.row>[class*="col-"] { flex:none; width:auto!important; float:none!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv>.row>[class*="col-"]:not(:has(.autoUpgradeBtn[style*="block"])) { display:none!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv .autoUpgradeBtn[style*="block"] {
-  display:flex!important; align-items:center; width:auto!important; height:auto!important; min-height:44px; margin:0!important; padding:0!important;
-  overflow:visible; border:0!important; border-radius:0!important; background:transparent!important; box-shadow:none!important; color:var(--pk-ink)!important;
-  --track:#a98c5e; --surface:#f3e7ce; --muted:#6f5634; --accent:#2c5b63;
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv :is(#autoUpgradeBtn[style*="block"],#autoPrestigeBtn[style*="block"],#autoGoldenBtn[style*="block"]>#autoGoldenText) {
-  position:relative; display:flex!important; align-items:center; width:auto!important; max-width:9.5rem; min-height:44px; margin:0!important;
-  padding:4px 50px 4px 0!important; color:var(--pk-ink)!important; background:transparent!important; cursor:pointer;
-  font:600 .75rem/1.3 var(--font-body)!important; text-align:left!important; white-space:normal;
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv :is(#autoUpgradeBtn[style*="block"],#autoPrestigeBtn[style*="block"],#autoGoldenBtn[style*="block"]>#autoGoldenText)::before {
-  content:''; position:absolute; right:4px; top:calc(50% - 12px); width:40px; height:24px; border-radius:20px; background:var(--track);
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv :is(#autoUpgradeBtn[style*="block"],#autoPrestigeBtn[style*="block"],#autoGoldenBtn[style*="block"]>#autoGoldenText)::after {
-  content:''; position:absolute; right:23px; top:calc(50% - 9px); width:18px; height:18px; border-radius:50%; background:var(--surface); border:1px solid var(--muted);
-}
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv :is(#autoUpgradeBtn[style*="block"]:not(.colorDanger),#autoPrestigeBtn[style*="block"]:not(.settingBtn0),#autoGoldenBtn[style*="block"]:not(.settingBtn0)>#autoGoldenText)::before { background:var(--accent); }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv :is(#autoUpgradeBtn[style*="block"]:not(.colorDanger),#autoPrestigeBtn[style*="block"]:not(.settingBtn0),#autoGoldenBtn[style*="block"]:not(.settingBtn0)>#autoGoldenText)::after { right:7px; border-color:var(--surface); }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv #goldConfig:not([style*="none"]) {
-  display:grid!important; place-items:center; float:none!important; width:44px!important; height:44px; margin:0!important; background:transparent!important; color:var(--muted)!important;
-}
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv { display:none!important; }
+
+
 
 /* Golden Upgrades (V-191): one parchment card "Golden Upgrade · choose one" above the research, the options side by
    side as amber plates. The original builder puts them first into #upgradesHere and removes them from it again, so the

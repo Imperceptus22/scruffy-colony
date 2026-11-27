@@ -120,7 +120,13 @@ var MobileQolNavigator=(()=>{
                     if(old&&document.getElementById(old.id)?.style.display!=='none')row.append(button(old.config?'Configure '+old.name:'Open '+old.name,()=>{
                         if(!state()[old.key]){message.textContent='This feature is no longer available in the current save.';refresh();return;}
                         const target=document.getElementById(old.id);if(!target||target.style.display==='none'){message.textContent='Unlocked, but unavailable under the current original game rules.';return;}
-                        if(old.config)tooltip(old.config,null,'update');else{TrimpsUI.select('colony');document.querySelector('#mobile-nav [data-page="'+old.page+'"]').click();target.scrollIntoView({block:'center'});}
+                        if (old.config) { tooltip(old.config,null,'update'); return; }
+                        TrimpsUI.select(old.page);
+                        if (old.key === 'upgrades') {
+                            requestAnimationFrame(() => {
+                                if (!MobileResearchAutomation.focusUpgrade()) target.scrollIntoView({block:'center'});
+                            });
+                        } else target.scrollIntoView({block:'center'});
                     }));section.append(row);
                 }list.append(section);
             }

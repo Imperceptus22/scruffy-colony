@@ -233,109 +233,115 @@ html[data-graphics="diorama"] #natureContainer .mobile-info { color:#2d3025!impo
 html[data-graphics="diorama"] #natureContainer .infoSpanNature { color:#2d3025!important; background:#f3e7ce!important; border:1px solid #8e6839!important; border-radius:12px!important; }
 html[data-graphics="diorama"] #natureContainer .infoSpanNature * { color:#2d3025!important; }
 
-/* ================= Mastery (V-192) ================= */
-/* Head as a parchment band (Dark Essence, Affordable, Respec, next cost), the Buyable / All filter as a segment track,
-   one nailed parchment card per tier with its heading and the original "n left" line, entries as rows: monogram
-   medallion · full name over a one-line effect · state · Info. The state is not told by colour alone: owned = tick,
-   buyable = gold plate "Buy", locked = lock with "Locked" or "Needs previous". Texts and helpers: mobile-diorama-subviews.js. */
-html[data-graphics="diorama"] #mobile-colony-detail:has(#talentsContainer) { background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important; }
-html[data-graphics="diorama"] #talentsContainer { --ink:#2d3025; --muted:#5b4c36; color:var(--ink)!important; }
+/* Field guide: the original purchase button remains the action in every illustrated row. */
+html[data-graphics="diorama"] #mobile-colony-detail:has(#talentsContainer) {
+  --ink:#263e35; --muted:#526457; --paper:#fbf6e7; --line:#c6c0a8; --accent:#295d4e;
+  background:var(--paper)!important; color:var(--ink)!important; padding:12px!important;
+}
+html[data-graphics="diorama"] #talentsContainer { color:var(--ink)!important; }
+html[data-graphics="diorama"] #talentsContainer::before {
+  content:"Masteries"; display:block; margin:2px 0 12px; color:var(--ink); font:600 2rem/1.12 var(--font-brand,Georgia,serif); letter-spacing:-.04em;
+}
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg {
-  display:grid!important; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"title respec" "afford respec"; align-items:center; gap:0 10px;
-  margin:6px 0 0!important; padding:2px 12px 0!important; background:none!important; border-style:solid!important; border-color:transparent!important; border-width:12px 13px 0 12px!important;
-  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 0 12px stretch!important;
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"title respec" "afford respec"; align-items:center; gap:0 8px;
+  margin:0!important; padding:0!important; background:none!important; border:0!important;
+}
+@media (max-width:340px) {
+  html[data-graphics="diorama"] #talentsContainer>.row.noMarg { grid-template-areas:"title title" "afford respec"; }
 }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg::before, html[data-graphics="diorama"] #talentsContainer>.row.noMarg::after { display:none!important; }
-html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div { width:auto!important; padding:0!important; float:none!important; }
+html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div { width:auto!important; float:none!important; padding:0!important; }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(1) { grid-area:afford; }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(2) { grid-area:title; }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(3) { grid-area:respec; }
-html[data-graphics="diorama"] #talentsContainer #talentsTitle,
-html[data-graphics="diorama"] #talentsContainer #talentsTitle * { text-align:left!important; color:var(--ink)!important; text-shadow:none!important; font:700 1.25rem/1.25 var(--n-serif)!important; }
-html[data-graphics="diorama"] #talentsContainer #talentsAffordable { text-align:left!important; color:#2b5e1c!important; text-shadow:none!important; font:700 .85rem/1.3 var(--font-body)!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsTitle, html[data-graphics="diorama"] #talentsContainer #talentsTitle * {
+  color:var(--ink)!important; text-align:left!important; text-shadow:none!important; font:700 1.05rem/1.25 var(--font-data)!important;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsAffordable, html[data-graphics="diorama"] #talentsContainer #talentsCost {
+  margin:2px 0 6px!important; color:var(--muted)!important; font:600 .8rem/1.4 var(--font-body)!important; text-shadow:none!important; text-align:left!important;
+}
+html[data-graphics="diorama"] #talentsContainer #talentsAffordable[data-label] { font-size:0!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsAffordable[data-label]::after { content:attr(data-label); font-size:.8rem; }
 html[data-graphics="diorama"] #talentsContainer #talentRespecBtn {
-  min-height:44px; display:flex; align-items:center; padding:0 12px!important; color:#8e1a0a!important; background:#f3e7ce99!important; text-shadow:none!important;
-  border:1.5px solid #8e1a0a!important; border-image:none!important; border-radius:6px!important; box-shadow:none!important; font:700 .85rem/1.2 var(--font-body)!important; text-align:center;
+  min-height:48px; max-width:14ch; padding:6px 8px!important; color:var(--ink)!important; background:transparent!important; border:1px solid var(--line)!important;
+  border-radius:5px!important; text-shadow:none!important; box-shadow:none!important; font:650 .78rem/1.35 var(--font-body)!important; text-align:center;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsCost {
-  margin:0 0 8px!important; padding:2px 12px 6px!important; text-align:left!important; color:var(--muted)!important; text-shadow:none!important; background:none!important;
-  border-style:solid!important; border-color:transparent!important; border-width:0 13px 13px 12px!important;
-  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 0 13px 13px 12px stretch!important; filter:drop-shadow(0 2px 3px #0009);
-}
-html[data-graphics="diorama"] #talentsContainer #talentsCost * { color:var(--ink)!important; font-weight:700; text-shadow:none!important; }
-/* Filter: Buyable | All as one sunken segment track; the active choice is the amber plate, bold and underlined. */
-html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter {
-  display:flex; margin:0 0 10px; padding:2px; border-radius:10px; background:#c9ad7c; box-shadow:inset 0 2px 4px #5a3b1a99, inset 0 0 0 1px #8e6839;
-}
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter { display:flex; gap:2px; padding:3px; margin:8px 0 14px; border:1px solid var(--line); border-radius:7px; background:#ebe9d9; }
 html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button {
-  flex:1 1 0; min-height:44px; margin:0; padding:0 10px!important; color:#3a2a14!important; background:transparent!important; text-shadow:none!important;
-  border:0!important; border-image:none!important; border-radius:8px!important; box-shadow:none!important; font:600 .95rem/1.2 var(--font-body)!important;
+  flex:1; min-height:48px; margin:0!important; padding:5px 10px!important; color:var(--ink)!important; background:transparent!important; text-shadow:none!important;
+  border:0!important; border-radius:4px!important; box-shadow:none!important; font:600 .9rem/1.3 var(--font-body)!important;
 }
-html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button[aria-pressed="true"] {
-  color:#2a1606!important; font-weight:800!important; text-decoration:underline 3px; text-underline-offset:4px; border-radius:0!important;
-  border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 7px stretch!important; filter:drop-shadow(0 2px 2px #5a3b1aaa);
-}
-html[data-graphics="diorama"] #talentsContainer #mobile-mastery-empty { margin:0 0 10px; padding:10px 12px; color:var(--ink)!important; background:#f3e7cedd; border:1px solid #8e6839; border-radius:6px; font-weight:600; }
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button[aria-pressed="true"] { background:var(--accent)!important; color:#fff9e9!important; font-weight:800!important; text-decoration:underline; text-underline-offset:3px; }
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-empty { color:var(--muted); margin:8px 0; }
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentTierRow:not(:has(.talentNotPurchased:not(.talentReqNeeded))),
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentRowLocked,
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"][data-mastery-afford="false"] #talentsHere tr.talentTierRow,
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere td.talentContainer:has(>.talentItem:is(.talentPurchased,.talentReqNeeded)) { display:none!important; }
-/* One card per tier. */
+html[data-graphics="diorama"] #talentsContainer #talentsHere { container:mastery / inline-size; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable, html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable>tbody { display:block!important; width:100%!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow {
-  display:grid!important; grid-template-columns:minmax(0,1fr); gap:4px; margin:0 0 10px; padding:6px 12px 8px!important;
-  background:none!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 12px 13px 13px 12px stretch!important;
-  filter:drop-shadow(0 2px 3px #0009);
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto; align-items:baseline; gap:0 6px; margin:12px 0!important; padding:0!important; background:transparent!important; border:0!important;
 }
-/* The tier number comes from the row position (data-tier, mobile-diorama-subviews.js), so filtered rows do not renumber. */
-html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow::before { content:"Tier " attr(data-tier); color:var(--ink); font:700 1.1rem/1.3 var(--n-serif); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow::before { content:"Tier " attr(data-tier); color:var(--ink); font:650 1.25rem/1.5 var(--font-brand,Georgia,serif); }
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow>th.visually-hidden {
-  position:static!important; width:auto!important; height:auto!important; clip:auto!important; clip-path:none!important; margin:-4px 0 4px!important; overflow:visible!important; white-space:normal!important;
-  color:var(--muted)!important; font:600 .78rem/1.2 var(--font-body)!important; text-align:left; border-bottom:1px solid #9a7a4d66; padding:0 0 3px!important;
+  position:static!important; width:auto!important; height:auto!important; clip:auto!important; clip-path:none!important; margin:0!important; overflow:visible!important; white-space:normal!important;
+  color:var(--muted)!important; font:600 .74rem/1.4 var(--font-body)!important; text-align:right; padding:2px 0!important;
 }
-/* The original also marks a finished tier as locked (nothing left to allow); only rows with open entries grey out. */
-html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentRowLocked:has(.talentNotPurchased) { filter:drop-shadow(0 2px 3px #0009) grayscale(.35); }
-/* A tier beyond the purchase power holds only anonymous lock tiles: one line instead of six empty rows. */
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked) :is(td.talentContainer:has(>.talentLocked),th.visually-hidden) { display:none!important; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked)::after { content:"\1F512\FE0E  Revealed as you buy more masteries"; color:var(--muted); font:600 .85rem/1.3 var(--font-body); }
-/* Entry: the original button (purchase) and the Info button beside it. */
-html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer { display:grid!important; grid-template-columns:minmax(0,1fr) 44px; align-items:center; gap:4px; width:auto!important; padding:0!important; border:0!important; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem {
-  display:grid!important; grid-template-columns:34px minmax(0,1fr) auto; grid-template-rows:auto auto; align-items:center; gap:0 8px; width:100%!important; height:auto!important; max-height:none!important; min-height:52px;
-  padding:5px 6px!important; margin:0!important; overflow:visible!important; color:var(--ink)!important; background:#fffaf0aa!important; text-align:left!important;
-  border:1px solid #9a7a4d66!important; border-image:none!important; border-radius:6px!important; box-shadow:none!important; text-shadow:none!important;
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked)::after { content:attr(data-locked-note); color:var(--muted); grid-column:1/-1; font:600 .82rem/1.4 var(--font-body); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer {
+  display:grid!important; grid-column:1/-1; grid-template-columns:clamp(64px,22%,86px) fit-content(52%) auto minmax(0,1fr); grid-template-rows:auto auto auto;
+  gap:4px 8px; align-items:start; width:100%!important; padding:10px 0!important; text-align:left; border:0!important; border-top:1px solid var(--line)!important;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem>br { display:none; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon {
-  grid-row:1/3; display:grid; place-items:center; width:34px; height:34px; margin:0!important; border-radius:50%; color:#fff8e6!important;
-  background:radial-gradient(circle at 35% 30%,#b8894a,#6b4416); border:1px solid #4a2c0c; box-shadow:inset 0 1px 0 #e0bd8566, 0 1px 2px #2c1e1466;
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-art {
+  display:block!important; grid-column:1; grid-row:1/4; width:100%; aspect-ratio:1; border-radius:6px; background-color:#e3d3af; background-position:center; background-size:cover; box-shadow:inset 0 0 0 1px #79644255;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon>* { display:none!important; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon::before { content:attr(data-mono); font:800 .8rem/1 var(--font-data); letter-spacing:.02em; text-shadow:0 1px 0 #2e1a06; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentName {
-  grid-column:2; grid-row:1; position:static!important; height:auto!important; max-height:none!important; color:var(--ink)!important;
-  font:700 .95rem/1.2 var(--font-body)!important; white-space:normal!important; overflow:visible!important; text-overflow:clip!important;
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-name {
+  display:block!important; grid-column:2/-1; grid-row:1; color:var(--ink); font:700 1.02rem/1.24 var(--font-data); letter-spacing:-.025em;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .mobile-mastery-effect { grid-column:2; grid-row:2; color:var(--muted)!important; font:500 .8rem/1.25 var(--font-body)!important; white-space:normal; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem::after { grid-column:3; grid-row:1/3; justify-self:end; padding:4px 10px; border-radius:4px; font:700 .78rem/1.2 var(--font-body); white-space:nowrap; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased::after { content:"Buy"; color:#392810; background:linear-gradient(#e9b450,#c98a2c); border:1px solid #7a4f14; }
-/* Not enough Dark Essence for the next mastery: no gold plate, the reason in words. */
-html[data-graphics="diorama"] #talentsContainer[data-mastery-afford="false"] #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased:not(.talentReqNeeded)::after { content:"Need Essence"; color:#4f4a40; background:none; border:1px solid #8d837188; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem.talentPurchased { background:#dfe8d6aa!important; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem.talentPurchased::after { content:"\2713  Owned"; color:#2b5e1c; border:1px solid #2b5e1c88; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowLocked .talentItem.talentNotPurchased::after { content:"\1F512\FE0E  Locked"; color:#4f4a40; border:1px solid #8d837188; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased.talentReqNeeded::after { content:"Needs previous"; color:#4f4a40; background:none; border:1px solid #8d837188; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-effect { grid-column:2/-1; grid-row:2; color:var(--muted)!important; font:550 .84rem/1.4 var(--font-body); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem,
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info {
-  width:44px; min-height:44px; margin:0!important; padding:0!important; color:var(--ink)!important; background:transparent!important; text-shadow:none!important;
-  border:0!important; border-image:none!important; box-shadow:none!important; font:600 .7rem/1 var(--font-body)!important;
+  display:inline-flex!important; align-items:center; justify-content:center; align-self:end; width:auto!important; min-width:48px; min-height:48px; height:auto!important; grid-row:3;
+  padding:5px 9px!important; margin:0!important; color:var(--ink)!important; background:transparent!important; text-shadow:none!important; box-shadow:none!important;
+  border:1px solid var(--line)!important; border-radius:5px!important; font:650 .8rem/1.28 var(--font-body)!important; white-space:normal!important;
 }
-/* Narrow or enlarged text: the state moves under the name, so name and effect keep the row's width. */
-@container mastery (max-width:20rem) {
-  html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem { grid-template-columns:34px minmax(0,1fr); grid-template-rows:auto auto auto; }
-  html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem::after { grid-column:2; grid-row:3; justify-self:start; margin-top:3px; }
-  html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentIcon { grid-row:1/4; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem { grid-column:2; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info { grid-column:3; justify-self:start; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info::before { display:none!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem :is(.talentIcon,br) { display:none!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentName { position:absolute!important; clip-path:inset(50%); width:1px!important; height:1px!important; overflow:hidden!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-state { display:inline!important; }
+html[data-graphics="diorama"] #talentsContainer[data-mastery-afford="true"] #talentsHere .talentRowUnlocked td.talentContainer>.talentNotPurchased:not(.talentReqNeeded) {
+  color:#fff9e9!important; background:var(--accent)!important; border-color:var(--accent)!important;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere { container:mastery / inline-size; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem.talentPurchased { color:var(--accent)!important; background:transparent!important; border-color:transparent!important; }
+@container mastery (max-width:23rem) {
+  html[data-graphics="diorama"] #talentsContainer #talentsHere td[data-long-name] .mobile-mastery-name { grid-column:1/-1; }
+  html[data-graphics="diorama"] #talentsContainer #talentsHere td[data-long-name] .mobile-mastery-art { grid-row:2/4; }
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) {
+  display:flex!important; flex-direction:column; inset:0!important; width:auto!important; height:auto!important; margin:0!important; max-height:none!important; padding:12px 16px!important; border:0!important; border-image:none!important; border-radius:0!important; background:#fbf6e7!important; color:#263e35!important; text-align:left!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #mobile-tooltip-close { display:none!important; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipTitle {
+  padding:0!important; margin:0!important; color:#263e35!important; background:none!important; border:0!important; box-shadow:none!important; text-shadow:none!important; text-align:left!important; font:650 clamp(1.2rem,6.5vw,1.6rem)/1.18 var(--font-brand,Georgia,serif)!important; letter-spacing:-.035em;
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-cover { display:block; width:100%; height:clamp(136px,30dvh,280px); object-fit:cover; background:#e9dcc3; border-radius:5px; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-caption { display:block; margin:12px 0 4px; color:#54685b; text-transform:uppercase; font:650 .72rem/1.3 var(--font-data); letter-spacing:.08em; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-effect { display:block; margin:8px 0; color:#34483c; font:650 .96rem/1.4 var(--font-body); letter-spacing:normal; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) :is(#tipText,#tipCost) {
+  padding:8px 0!important; margin:0!important; color:#374a3e!important; border:0!important; background:none!important; text-align:left!important; text-shadow:none!important; font:500 .92rem/1.5 var(--font-body)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) :is(#tipText,#tipTitle,#tipCost) { flex:none; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost { position:sticky; bottom:-12px; padding:10px 0 12px!important; margin-top:auto!important; background:#fbf6e7!important; border-top:1px solid #c6c0a8!important; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-detail-actions { display:flex; gap:8px; margin:12px 0 0; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-detail-actions :is(.mobile-mastery-detail-close,.mobile-mastery-detail-buy) {
+  flex:1; min-height:48px; padding:6px 10px!important; background:#fbf6e7!important; color:#263e35!important; border:1px solid #aaa992!important; border-radius:5px!important; box-shadow:none!important; text-shadow:none!important; font:650 .84rem/1.3 var(--font-body)!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost #mobile-mastery-detail-buy:not(:disabled) { background:#295d4e!important; color:#fff9e9!important; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #mobile-mastery-detail-buy:disabled { color:#526457!important; background:#ebe9d9!important; }
+
 
 /* ================= Dimensional Generator (V-196) ================= */
 /* Head as a parchment band with the views Generator | Upgrades | Automation as its segment track (the only way to the

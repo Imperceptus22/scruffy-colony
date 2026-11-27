@@ -28,8 +28,6 @@ var MobileHas = (() => {
         ['body', '#tutorialDiv[style*="display: block"]', 'tutorial-open', 'tutorialDiv', ['style'], false],
         ['body', '#mobile-recovery:not([hidden])', 'recovery', 'mobile-recovery', ['hidden'], false],
         ['body', '#mobile-maps[data-map-active="true"]', 'map-active', 'mobile-maps', ['data-map-active'], false],
-        ['body', '#upgradesTitleDiv .autoUpgradeBtn[style*="block"]', 'auto-upgrade', 'upgradesTitleDiv', ['style'], true],
-        ['#upgradesTitleDiv', '.autoUpgradeBtn[style*="block"]', 'auto-upgrade', 'upgradesTitleDiv', ['style'], true],
         ['#jobsTitleDiv>.row', '#autoJobsBtn[style*="block"]', 'auto-jobs', 'autoJobsBtn', ['style'], false],
         ['#trimps>.row', '#fluffyBox:not([style*="none"])', 'fluffy-shown', 'fluffyBox', ['style'], false],
         ['#mobile-more', '.mm-detail:not([hidden]), #mm-saves:not([hidden])', 'page-open', 'mobile-more', ['hidden'], true]

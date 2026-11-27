@@ -1,6 +1,15 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.38",
+    "label": "1.38",
+    "title": "Mastery-Feldhandbuch und Forschungsautomatik",
+    "notes": [
+      "Explore all 60 Masteries in the Diorama field guide with illustrated entries, readable effects and larger artwork in Info.",
+      "Research keeps a single automation directly accessible. When several unlock, open Automation to see and change their modes together."
+    ]
+  },
+  {
     "version": "1.28",
     "label": "1.28",
     "title": "Map At Zone direkt auf dem Kartenbildschirm",

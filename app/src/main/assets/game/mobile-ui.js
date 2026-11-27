@@ -523,6 +523,7 @@ var TrimpsUI = (() => {
         select('colony');
     }
     function back() {
+        if (typeof MobileResearchAutomation !== 'undefined' && MobileResearchAutomation.back()) return true;
         if (typeof MobileRoboTrimp !== 'undefined' && MobileRoboTrimp.back()) return true;
         if (typeof MobileSaveManager !== 'undefined' && MobileSaveManager.back()) return true;
         const visible = id => { const node = byId(id); return node && getComputedStyle(node).display !== 'none'; };

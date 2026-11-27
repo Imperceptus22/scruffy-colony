@@ -257,14 +257,7 @@ var MobileI18nDePerks = (() => {
     const fullProbe = new RegExp(probe.source + '|^Respec \\(');
     // Labels the Diorama Mastery view draws itself (content: in mobile-diorama-subviews.css), German with the same selectors.
     const view = 'html[data-graphics="diorama"][data-language="de"] #talentsContainer #talentsHere ';
-    const css = [
-        view + 'tr.talentTierRow::before{content:"Reihe " attr(data-tier);}',
-        view + '.talentRowUnlocked .talentItem.talentNotPurchased::after{content:"Kaufen";}',
-        'html[data-graphics="diorama"][data-language="de"] #talentsContainer[data-mastery-afford="false"] #talentsHere .talentRowUnlocked .talentItem.talentNotPurchased:not(.talentReqNeeded)::after{content:"Essence fehlt";}',
-        view + '.talentItem.talentPurchased::after{content:"\\2713  Gekauft";}',
-        view + '.talentRowLocked .talentItem.talentNotPurchased::after{content:"\\1F512\\FE0E  Gesperrt";}',
-        view + '.talentRowUnlocked .talentItem.talentNotPurchased.talentReqNeeded::after{content:"Vorgänger fehlt";}'
-    ].join('\n');
+    const css = view + 'tr.talentTierRow::before{content:"Reihe " attr(data-tier);}';
     const catalog = {strings, patterns, probe:fullProbe, fields:{portal:['tooltip'], talents:['description']},
         scope:'.mobile-perk-effect,.mobile-perk-level,.mobile-mastery-effect,#mobile-mastery-filter,#mobile-mastery-empty,#talentsHere th,#talentsHere .talentLocked,#talentRespecBtn,#talentsCost', css, perks, masteries, own, labels};
     if (typeof MobileI18nGame !== 'undefined' && MobileI18nGame.extend('de', catalog) && typeof document !== 'undefined' && document.head) {
