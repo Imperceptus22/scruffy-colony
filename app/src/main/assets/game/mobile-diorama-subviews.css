@@ -235,12 +235,23 @@ html[data-graphics="diorama"] #natureContainer .infoSpanNature * { color:#2d3025
 
 /* Field guide: the original purchase button remains the action in every illustrated row. */
 html[data-graphics="diorama"] #mobile-colony-detail:has(#talentsContainer) {
-  --ink:#263e35; --muted:#526457; --paper:#fbf6e7; --line:#c6c0a8; --accent:#295d4e;
-  background:var(--paper)!important; color:var(--ink)!important; padding:12px!important;
+  --ink:#302012; --muted:#51402b; --line:#a78455; --accent:#e4a344; --owned:#225929;
+  background:#422e20 url("mobile-assets/diorama/P01-dark-wood.webp") center/240px repeat!important;
+  color:var(--ink)!important; padding:8px!important; display:grid; grid-template:0 auto / minmax(0,1fr); align-content:start; align-items:start;
 }
-html[data-graphics="diorama"] #talentsContainer { color:var(--ink)!important; }
+/* The original Close remains a labelled 48px target, in the top corner of the book. */
+html[data-graphics="diorama"] #mobile-colony-detail>button:has(+div>#talentsContainer) {
+  justify-self:end; justify-content:center; align-items:center; width:48px!important; height:48px; min-height:48px!important; top:5px;
+  margin:5px 6px 0 0!important; padding:0!important; gap:0!important; font-size:0!important; text-shadow:none!important;
+  background:linear-gradient(#fce8c4,#edcc9d)!important; color:#302012!important; border:1px solid #a78455!important;
+  border-radius:5px!important; box-shadow:0 1px 2px #67472766!important;
+}
+html[data-graphics="diorama"] #talentsContainer {
+  padding:16px 12px!important; color:var(--ink)!important; background:none!important; border:1px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px 14px 14px 14px stretch round!important;
+}
 html[data-graphics="diorama"] #talentsContainer::before {
-  content:"Masteries"; display:block; margin:2px 0 12px; color:var(--ink); font:600 2rem/1.12 var(--font-brand,Georgia,serif); letter-spacing:-.04em;
+  content:"Masteries"; display:block; margin:0 0 8px; min-height:40px; padding-right:56px; color:var(--ink); font:700 clamp(1.7rem,9vw,2.2rem)/1.12 var(--n-serif,Georgia,serif); letter-spacing:-.04em;
 }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg {
   display:grid!important; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"title respec" "afford respec"; align-items:center; gap:0 8px;
@@ -255,7 +266,7 @@ html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(1) { g
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(2) { grid-area:title; }
 html[data-graphics="diorama"] #talentsContainer>.row.noMarg>div:nth-child(3) { grid-area:respec; }
 html[data-graphics="diorama"] #talentsContainer #talentsTitle, html[data-graphics="diorama"] #talentsContainer #talentsTitle * {
-  color:var(--ink)!important; text-align:left!important; text-shadow:none!important; font:700 1.05rem/1.25 var(--font-data)!important;
+  color:var(--ink)!important; text-align:left!important; text-shadow:none!important; font:700 1.25rem/1.2 var(--n-serif,Georgia,serif)!important;
 }
 html[data-graphics="diorama"] #talentsContainer #talentsAffordable, html[data-graphics="diorama"] #talentsContainer #talentsCost {
   margin:2px 0 6px!important; color:var(--muted)!important; font:600 .8rem/1.4 var(--font-body)!important; text-shadow:none!important; text-align:left!important;
@@ -263,15 +274,18 @@ html[data-graphics="diorama"] #talentsContainer #talentsAffordable, html[data-gr
 html[data-graphics="diorama"] #talentsContainer #talentsAffordable[data-label] { font-size:0!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsAffordable[data-label]::after { content:attr(data-label); font-size:.8rem; }
 html[data-graphics="diorama"] #talentsContainer #talentRespecBtn {
-  min-height:48px; max-width:14ch; padding:6px 8px!important; color:var(--ink)!important; background:transparent!important; border:1px solid var(--line)!important;
-  border-radius:5px!important; text-shadow:none!important; box-shadow:none!important; font:650 .78rem/1.35 var(--font-body)!important; text-align:center;
+  min-height:48px; max-width:14ch; padding:6px 8px!important; color:var(--ink)!important; background:linear-gradient(#fce8c4,#edcc9d)!important; border:1px solid var(--line)!important;
+  border-radius:5px!important; text-shadow:none!important; box-shadow:0 1px 2px #67472766!important; font:650 .78rem/1.35 var(--font-body)!important; text-align:center;
 }
-html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter { display:flex; gap:2px; padding:3px; margin:8px 0 14px; border:1px solid var(--line); border-radius:7px; background:#ebe9d9; }
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter { display:flex; gap:2px; padding:2px; margin:10px 0 13px; border:1px solid #a77c42; border-radius:6px; background:linear-gradient(#f5dbb1,#e9c797); box-shadow:0 2px 3px #583a2055; }
 html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button {
   flex:1; min-height:48px; margin:0!important; padding:5px 10px!important; color:var(--ink)!important; background:transparent!important; text-shadow:none!important;
   border:0!important; border-radius:4px!important; box-shadow:none!important; font:600 .9rem/1.3 var(--font-body)!important;
 }
-html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button[aria-pressed="true"] { background:var(--accent)!important; color:#fff9e9!important; font-weight:800!important; text-decoration:underline; text-underline-offset:3px; }
+html[data-graphics="diorama"] #talentsContainer #mobile-mastery-filter button[aria-pressed="true"] {
+  background:transparent!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 8px stretch!important;
+  color:var(--ink)!important; font-weight:800!important; text-decoration:underline; text-underline-offset:3px;
+}
 html[data-graphics="diorama"] #talentsContainer #mobile-mastery-empty { color:var(--muted); margin:8px 0; }
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentTierRow:not(:has(.talentNotPurchased:not(.talentReqNeeded))),
 html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #talentsHere tr.talentRowLocked,
@@ -280,9 +294,9 @@ html[data-graphics="diorama"] #talentsContainer[data-mastery-filter="buyable"] #
 html[data-graphics="diorama"] #talentsContainer #talentsHere { container:mastery / inline-size; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable, html[data-graphics="diorama"] #talentsContainer #talentsHere .talentTable>tbody { display:block!important; width:100%!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow {
-  display:grid!important; grid-template-columns:minmax(0,1fr) auto; align-items:baseline; gap:0 6px; margin:12px 0!important; padding:0!important; background:transparent!important; border:0!important;
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto; align-items:baseline; gap:6px; margin:12px 0!important; padding:0!important; background:transparent!important; border:0!important;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow::before { content:"Tier " attr(data-tier); color:var(--ink); font:650 1.25rem/1.5 var(--font-brand,Georgia,serif); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow::before { content:"Tier " attr(data-tier); color:var(--ink); font:700 1.35rem/1.35 var(--n-serif,Georgia,serif); }
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow>th.visually-hidden {
   position:static!important; width:auto!important; height:auto!important; clip:auto!important; clip-path:none!important; margin:0!important; overflow:visible!important; white-space:normal!important;
   color:var(--muted)!important; font:600 .74rem/1.4 var(--font-body)!important; text-align:right; padding:2px 0!important;
@@ -290,16 +304,17 @@ html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow>th
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked) :is(td.talentContainer:has(>.talentLocked),th.visually-hidden) { display:none!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere tr.talentTierRow:has(.talentLocked)::after { content:attr(data-locked-note); color:var(--muted); grid-column:1/-1; font:600 .82rem/1.4 var(--font-body); }
 html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer {
-  display:grid!important; grid-column:1/-1; grid-template-columns:clamp(64px,22%,86px) fit-content(52%) auto minmax(0,1fr); grid-template-rows:auto auto auto;
-  gap:4px 8px; align-items:start; width:100%!important; padding:10px 0!important; text-align:left; border:0!important; border-top:1px solid var(--line)!important;
+  display:grid!important; grid-column:1/-1; grid-template-columns:clamp(58px,29%,104px) fit-content(48%) auto minmax(0,1fr); grid-template-rows:auto auto auto;
+  gap:3px 7px; align-items:start; width:100%!important; padding:10px!important; text-align:left; background:none!important; border:1px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 8px 9px 8px 9px stretch!important; filter:drop-shadow(0 1px 2px #53371e66);
 }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-art {
-  display:block!important; grid-column:1; grid-row:1/4; width:100%; aspect-ratio:1; border-radius:6px; background-color:#e3d3af; background-position:center; background-size:cover; box-shadow:inset 0 0 0 1px #79644255;
+  display:block!important; grid-column:1; grid-row:1/4; width:100%; aspect-ratio:1; align-self:center; border-radius:5px; background-color:#e3d3af; background-position:center; background-size:cover; box-shadow:inset 0 0 0 1px #79644255;
 }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-name {
-  display:block!important; grid-column:2/-1; grid-row:1; color:var(--ink); font:700 1.02rem/1.24 var(--font-data); letter-spacing:-.025em;
+  display:block!important; grid-column:2/-1; grid-row:1; color:var(--ink); font:700 1.17rem/1.12 var(--n-serif,Georgia,serif); letter-spacing:-.025em;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-effect { grid-column:2/-1; grid-row:2; color:var(--muted)!important; font:550 .84rem/1.4 var(--font-body); }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-effect { grid-column:2/-1; grid-row:2; color:var(--muted)!important; font:550 .91rem/1.36 var(--font-body); }
 html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem,
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info {
   display:inline-flex!important; align-items:center; justify-content:center; align-self:end; width:auto!important; min-width:48px; min-height:48px; height:auto!important; grid-row:3;
@@ -307,40 +322,44 @@ html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-inf
   border:1px solid var(--line)!important; border-radius:5px!important; font:650 .8rem/1.28 var(--font-body)!important; white-space:normal!important;
 }
 html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem { grid-column:2; }
-html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info { grid-column:3; justify-self:start; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info { grid-column:3; justify-self:start; color:var(--ink)!important; background:linear-gradient(#fce8c4,#edcc9d)!important; box-shadow:0 1px 2px #67472766!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-info::before { display:none!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem :is(.talentIcon,br) { display:none!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .talentItem .talentName { position:absolute!important; clip-path:inset(50%); width:1px!important; height:1px!important; overflow:hidden!important; }
 html[data-graphics="diorama"] #talentsContainer #talentsHere .mobile-mastery-state { display:inline!important; }
 html[data-graphics="diorama"] #talentsContainer[data-mastery-afford="true"] #talentsHere .talentRowUnlocked td.talentContainer>.talentNotPurchased:not(.talentReqNeeded) {
-  color:#fff9e9!important; background:var(--accent)!important; border-color:var(--accent)!important;
+  color:#2b1905!important; background:var(--accent)!important; background-clip:content-box!important; border-color:transparent!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 8px stretch!important;
 }
-html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem.talentPurchased { color:var(--accent)!important; background:transparent!important; border-color:transparent!important; }
+html[data-graphics="diorama"] #talentsContainer #talentsHere td.talentContainer>.talentItem.talentPurchased { color:var(--owned)!important; background:transparent!important; border-color:transparent!important; }
 @container mastery (max-width:23rem) {
   html[data-graphics="diorama"] #talentsContainer #talentsHere td[data-long-name] .mobile-mastery-name { grid-column:1/-1; }
   html[data-graphics="diorama"] #talentsContainer #talentsHere td[data-long-name] .mobile-mastery-art { grid-row:2/4; }
 }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) {
-  display:flex!important; flex-direction:column; inset:0!important; width:auto!important; height:auto!important; margin:0!important; max-height:none!important; padding:12px 16px!important; border:0!important; border-image:none!important; border-radius:0!important; background:#fbf6e7!important; color:#263e35!important; text-align:left!important;
+  display:flex!important; flex-direction:column; inset:6px!important; width:auto!important; height:auto!important; margin:0!important; max-height:none!important; padding:14px 14px 10px!important; border:1px solid transparent!important; border-radius:0!important; background:none!important; color:#302012!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 14px 14px 14px 14px stretch!important; text-align:left!important;
 }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #mobile-tooltip-close { display:none!important; }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipTitle {
-  padding:0!important; margin:0!important; color:#263e35!important; background:none!important; border:0!important; box-shadow:none!important; text-shadow:none!important; text-align:left!important; font:650 clamp(1.2rem,6.5vw,1.6rem)/1.18 var(--font-brand,Georgia,serif)!important; letter-spacing:-.035em;
+  padding:0!important; margin:0!important; color:#302012!important; background:none!important; border:0!important; box-shadow:none!important; text-shadow:none!important; text-align:left!important; font:650 clamp(1.2rem,6.5vw,1.6rem)/1.18 var(--n-serif,Georgia,serif)!important; letter-spacing:-.035em;
 }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-cover { display:block; width:100%; height:clamp(136px,30dvh,280px); object-fit:cover; background:#e9dcc3; border-radius:5px; }
-html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-caption { display:block; margin:12px 0 4px; color:#54685b; text-transform:uppercase; font:650 .72rem/1.3 var(--font-data); letter-spacing:.08em; }
-html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-effect { display:block; margin:8px 0; color:#34483c; font:650 .96rem/1.4 var(--font-body); letter-spacing:normal; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-caption { display:block; margin:12px 0 4px; color:#6a4e2d; text-transform:uppercase; font:650 .72rem/1.3 var(--font-data); letter-spacing:.08em; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-effect { display:block; margin:8px 0; color:#382813; font:650 .96rem/1.4 var(--font-body); letter-spacing:normal; }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) :is(#tipText,#tipCost) {
-  padding:8px 0!important; margin:0!important; color:#374a3e!important; border:0!important; background:none!important; text-align:left!important; text-shadow:none!important; font:500 .92rem/1.5 var(--font-body)!important;
+  padding:8px 0!important; margin:0!important; color:#46331e!important; border:0!important; background:none!important; text-align:left!important; text-shadow:none!important; font:500 .92rem/1.5 var(--font-body)!important;
 }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) :is(#tipText,#tipTitle,#tipCost) { flex:none; }
-html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost { position:sticky; bottom:-12px; padding:10px 0 12px!important; margin-top:auto!important; background:#fbf6e7!important; border-top:1px solid #c6c0a8!important; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost { position:sticky; bottom:-12px; padding:10px 0 12px!important; margin-top:auto!important; background:#efd4a6!important; border-top:1px solid #b49565!important; }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-detail-actions { display:flex; gap:8px; margin:12px 0 0; }
 html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) .mobile-mastery-detail-actions :is(.mobile-mastery-detail-close,.mobile-mastery-detail-buy) {
-  flex:1; min-height:48px; padding:6px 10px!important; background:#fbf6e7!important; color:#263e35!important; border:1px solid #aaa992!important; border-radius:5px!important; box-shadow:none!important; text-shadow:none!important; font:650 .84rem/1.3 var(--font-body)!important;
+  flex:1; min-height:48px; padding:6px 10px!important; background:linear-gradient(#fce8c4,#edcc9d)!important; color:#302012!important; border:1px solid #a78455!important; border-radius:5px!important; box-shadow:none!important; text-shadow:none!important; font:650 .84rem/1.3 var(--font-body)!important;
 }
-html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost #mobile-mastery-detail-buy:not(:disabled) { background:#295d4e!important; color:#fff9e9!important; }
-html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #mobile-mastery-detail-buy:disabled { color:#526457!important; background:#ebe9d9!important; }
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #tipCost #mobile-mastery-detail-buy:not(:disabled) {
+  background:transparent!important; color:#2b1905!important; border:1px solid transparent!important; border-image:url("mobile-assets/diorama/U03-button-amber.webp") 72 fill / 8px stretch!important;
+}
+html[data-graphics="diorama"] #tooltipDiv:has(#mobile-mastery-detail-buy) #mobile-mastery-detail-buy:disabled { color:#4e4535!important; background:#e6ceaa!important; }
 
 
 /* ================= Dimensional Generator (V-196) ================= */

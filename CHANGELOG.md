@@ -1,5 +1,8 @@
 # Änderungen
 
+## 1.39 – Holz und Pergament für Forschung und Masteries
+- Research, its automation settings and the illustrated Mastery field guide now share the wooden frames, parchment panels and gold buttons of the other Diorama screens.
+
 ## 1.38 – Mastery-Feldhandbuch und Forschungsautomatik
 - Explore all 60 Masteries in the Diorama field guide with illustrated entries, readable effects and larger artwork in Info.
 - Research keeps a single automation directly accessible. When several unlock, open Automation to see and change their modes together.

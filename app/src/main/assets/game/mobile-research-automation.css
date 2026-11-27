@@ -1,42 +1,57 @@
-/* Research mode picker. The native dialog keeps keyboard navigation inside the sheet. */
+/* Native mode sheet in the same riveted parchment and amber as the research cards. */
 #mobile-research-automation, #research-automation-sheet {
-  --research-ink:#243c33; --research-muted:#486250; --research-line:#c9c5a9;
-  color:var(--research-ink); text-align:left; font:500 1rem/1.4 var(--font-body);
+  color:#2d261b; text-align:left; font:500 1rem/1.4 var(--font-body);
 }
 #mobile-research-automation[hidden], #research-automation-sheet:not([open]),
 #mobile-research-automation [hidden], #research-automation-sheet [hidden] { display:none!important; }
 #mobile-research-automation button, #research-automation-sheet button {
-  min-height:48px; text-align:start; white-space:normal; border:0; border-radius:0;
-  color:var(--research-ink)!important; background:var(--automation-fill,transparent)!important; box-shadow:none!important;
-  border:var(--automation-border,0)!important; border-bottom:var(--automation-divider,var(--automation-border,0))!important;
-  border-radius:var(--automation-radius,0)!important; text-shadow:none!important; font:inherit; line-height:1.35;
+  box-sizing:border-box; min-height:48px; color:inherit!important; text-align:start; white-space:normal;
+  border:0!important; border-radius:0!important; background:transparent!important; box-shadow:none!important;
+  text-shadow:none!important; font:inherit; line-height:1.35;
+}
+#mobile-research-automation button:focus-visible, #research-automation-sheet button:focus-visible {
+  outline:2px solid #235855; outline-offset:-3px;
 }
 #mobile-research-automation .research-automation-heading {
-  display:block; padding:8px 0 1px; border-top:1px solid var(--research-line);
-  color:var(--research-muted); font:700 .72rem/1.4 var(--font-data); letter-spacing:.09em; text-transform:uppercase;
+  display:block; padding:4px 0 2px; color:#493d27; font:700 1rem/1.25 var(--n-serif);
 }
-#mobile-research-automation #research-automation-summary,
+#mobile-research-automation #research-automation-summary {
+  display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; padding:9px 15px;
+  border:1px solid transparent!important;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 8px 9px 9px 8px stretch!important;
+  filter:drop-shadow(0 1px 1px #51391d66);
+}
+#research-automation-summary strong, .research-automation-rows strong {
+  font:700 1.05rem/1.2 var(--n-serif);
+}
+#research-automation-summary span {
+  color:#30281a; text-align:end; font:650 .88rem/1.3 var(--font-body);
+}
+#research-automation-summary span::after { content:"\2304"; padding-inline-start:.35em; }
 .research-automation-rows button[data-automation] {
-  display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; padding:7px 1px;
+  display:grid; grid-template-columns:minmax(max-content,1fr) minmax(0,1.05fr); align-items:center;
+  gap:6px; width:100%; padding:6px 0;
 }
-#mobile-research-automation #research-automation-summary, .research-automation-rows #research-autogold-config {
-  --automation-border:1px solid #aab79d; --automation-fill:#e6ead7; --automation-radius:6px; padding:8px 10px;
+.research-automation-rows button>span {
+  display:block; padding:9px 8px; color:#231a0d; font:700 .9rem/1.3 var(--font-body); text-align:center;
+  border:1px solid transparent; border-image:var(--dio-btn-amber); filter:drop-shadow(0 1px 1px #51391d66);
 }
-#research-automation-summary span, .research-automation-rows button>span {
-  color:var(--research-muted); text-align:end; font:650 .85rem/1.35 var(--font-body);
-}
-#research-automation-summary span::after { content:"\2304"; padding-inline-start:.55em; }
-.research-automation-rows button>span::after { content:"\21bb"; padding-inline-start:.4em; }
-.research-automation-rows strong { font-size:.95rem; }
+.research-automation-rows button>span::after { content:"\21bb"; padding-inline-start:.35em; }
 #research-automation-sheet {
-  position:fixed; inset:auto 0 0; box-sizing:border-box; width:min(100%,32rem); max-width:100%; max-height:83vh;
-  margin:0 auto; overflow:auto; padding:10px 16px max(14px,env(safe-area-inset-bottom)); border:1px solid #968866;
-  border-radius:16px 16px 0 0; background:#fbf4e2; box-shadow:0 -5px 22px #1d241e33;
+  position:fixed; inset:auto 0 max(5px,env(safe-area-inset-bottom)) 0; box-sizing:border-box; width:min(calc(100% - 8px),32rem); max-width:100%;
+  max-height:85vh; margin:0 auto; overflow:auto; padding:14px 17px 17px;
+  background:transparent; border:1px solid transparent; border-radius:0;
+  border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 16px 17px 17px 16px stretch;
+  filter:drop-shadow(0 -2px 5px #291a0b80);
 }
-#research-automation-sheet::backdrop { background:#17261d88; }
-#research-automation-sheet::before { content:""; display:block; width:40px; height:4px; border-radius:2px; margin:0 auto 10px; background:#b9b9a3; }
-#research-automation-sheet header { display:flex; align-items:center; justify-content:space-between; gap:8px; }
-#research-automation-sheet h2 { margin:0; color:inherit; font:650 1.4rem/1.2 var(--n-serif); }
-#research-automation-sheet header button { min-width:48px; --automation-border:1px solid var(--research-line); --automation-radius:6px; font-size:1.35rem; text-align:center; }
-#research-automation-sheet button[data-automation] { padding:10px 2px; --automation-divider:1px solid var(--research-line); }
-.research-automation-rows #research-autogold-config { width:100%; margin-top:8px; text-align:center; font-size:.9rem; }
+#research-automation-sheet::backdrop { background:#21170e94; }
+#research-automation-sheet header { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:4px; }
+#research-automation-sheet h2 { margin:0; color:inherit; font:700 1.5rem/1.2 var(--n-serif); }
+#research-automation-sheet header button, .research-automation-rows #research-autogold-config {
+  color:#302417!important; background:linear-gradient(#fbe3b8,#efd09b)!important;
+  border:1px solid #9b7546!important; border-radius:5px!important; box-shadow:0 1px 2px #593c1877!important; text-align:center;
+}
+#research-automation-sheet header button { min-width:48px; font:700 1.5rem/1 var(--font-body); }
+#research-automation-sheet button[data-automation] { border-top:1px solid #a684544d!important; }
+#research-automation-sheet button[data-automation]:first-child { border-top:0!important; }
+.research-automation-rows #research-autogold-config { width:100%; padding:6px 10px; margin-top:8px; font-size:.9rem; }

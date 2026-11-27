@@ -1,6 +1,14 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.39",
+    "label": "1.39",
+    "title": "Holz und Pergament für Forschung und Masteries",
+    "notes": [
+      "Research, its automation settings and the illustrated Mastery field guide now share the wooden frames, parchment panels and gold buttons of the other Diorama screens."
+    ]
+  },
+  {
     "version": "1.38",
     "label": "1.38",
     "title": "Mastery-Feldhandbuch und Forschungsautomatik",

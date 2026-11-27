@@ -216,26 +216,29 @@ html[data-graphics="diorama"] body[data-diorama-page="upgrades"] {
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] :is(.mobile-page,#outerBuyContainer,#buyContainer,#buyCol,#buyHere,#upgradesHere,#upgradesContainer) {
   background:transparent!important; border-color:transparent!important; box-shadow:none!important;
 }
-/* Approved field-guide header: one original mode inline, multiple modes in a native modal sheet. */
+/* One riveted parchment board holds the research destinations and automation. */
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs {
   display:flex!important; flex-direction:column; align-items:stretch; gap:8px;
-  margin:3px 0 8px!important; padding:12px 14px!important;
-  background:#f9f2df!important; color:#243c33; border:1px solid #866f46!important; border-radius:7px;
-  box-shadow:0 2px 5px #231c1460!important;
+  margin:3px 0 6px!important; padding:14px 14px 12px!important;
+  color:var(--pk-ink); background:transparent!important; border:1px solid transparent!important;
+  border-radius:0!important; border-image:var(--dio-panel)!important; box-shadow:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs::before {
-  content:"Research"; color:#243c33; font:650 1.45rem/1.15 var(--n-serif); text-align:left;
+  content:"Research"; color:var(--pk-ink); font:700 1.6rem/1.15 var(--n-serif); text-align:left;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2:not([hidden]) {
   display:flex!important; flex-wrap:wrap; gap:6px!important; margin:0!important; padding:0!important;
   background:transparent!important; border:0!important; box-shadow:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2:not(:has(>li:not([style*="none"]))) { display:none!important; }
-html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li { flex:0 1 auto; min-width:0; margin:0!important; background:transparent!important; }
+html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li { flex:1 0 auto; min-width:0; margin:0!important; background:transparent!important; }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2>li>a {
-  min-height:48px!important; padding:4px 10px!important; color:#fffae9!important; font:700 .9rem/1.25 var(--font-body)!important;
-  border:1px solid #25473e!important; border-radius:5px!important; background:#2c5148!important; border-image:none!important;
-  box-shadow:inset 0 -3px var(--research-tab-accent,transparent)!important; text-decoration:none!important;
+  min-height:48px!important; padding:6px 9px!important; color:#251b10!important; font:700 1.05rem/1.18 var(--n-serif)!important;
+  border:6px solid transparent!important; border-radius:5px!important;
+  border-image:url("mobile-assets/diorama/U03-button-amber.webp") 48 / 6px stretch!important;
+  background:linear-gradient(#f3c16c9c,#f1b65e80),#ba874d url("mobile-assets/diorama/P01-dark-wood.webp") center/190px auto!important;
+  box-shadow:inset 0 -3px var(--research-tab-accent,transparent),inset 0 1px 2px #f5ce83,0 2px 2px #452d1599!important;
+  text-decoration:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #buyTabs #buyTabsUl2 .alert.badge:not(:empty) { background:#f2c66d!important; }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesTitleDiv { display:none!important; }
@@ -301,7 +304,7 @@ html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere {
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:not([hidden]):not([data-colony-page-hidden]),
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase:not([hidden]):not([data-colony-page-hidden]):has(>.thingColorCanAfford) {
   display:grid!important; grid-template-columns:52px minmax(0,1fr) auto 44px!important;
-  grid-template-areas:"art meta btn info" "art price price price"; align-items:center; column-gap:8px!important; row-gap:0!important;
+  grid-template-areas:var(--research-card-areas, "art meta btn info" "art price price price"); align-items:center; column-gap:8px!important; row-gap:0!important;
   padding:6px 5px 6px 10px!important; margin:0!important; border:1px solid transparent!important; border-radius:0!important;
   background:transparent!important; box-shadow:none!important;
   border-image:url("mobile-assets/diorama/U01-panel-parchment.webp") 56 62 62 56 fill / 10px 11px 11px 10px stretch!important;
@@ -337,6 +340,12 @@ html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .
   color:#4f4a40!important; background:#f3e7ce66!important; border:2px solid #8d8371!important; border-image:none!important; border-radius:4px!important; font-weight:600!important; box-shadow:none!important;
 }
 html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere .mobile-purchase>.thingColorCanNotAfford * { color:var(--pk-muted)!important; }
+/* Android text zoom can enlarge glyphs without enlarging the rem breakpoint of a container query. */
+@media (max-width:600px) {
+  html[data-graphics="diorama"] body[data-diorama-page="upgrades"] #upgradesHere:where(html[data-text-zoom="large"] *) {
+    --research-card-areas:"art meta meta info" "art btn btn info" "art price price info";
+  }
+}
 /* Narrow or enlarged text (360 px / 130 %): the name gets the full row, Research moves beside Owned, Info keeps the
    right edge over the whole card height. The art slot stays (user, 25.10.2026), 48 px. */
 @container (max-width:22rem) {
