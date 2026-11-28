@@ -52,6 +52,7 @@ html[data-graphics="diorama"] #offlineProgressText { color:var(--ink)!important;
 html[data-graphics="diorama"] #offlineMapBtnsInner:not([style*="display: none"]) { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); }
 html[data-graphics="diorama"] #offlineMapBtnsInner .offlineMapBtn { width:100%; min-width:0; overflow-wrap:anywhere; hyphens:auto; }
 html[data-graphics="diorama"] #offlineTimeOffline { background:transparent!important; }
+html[data-graphics="diorama"] #offlineEffective { background:transparent; }
 html[data-graphics="diorama"] #limitTimewarpSlider { background:#dcc8a2; accent-color:var(--accent); }
 html[data-graphics="diorama"] #offlineWrapper :is(.offlineExtraBtn,.offlineMapBtn) { background:transparent!important; border:9px solid transparent!important; border-image:var(--dio-btn)!important; color:#fff8e6!important; }
 html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) {
@@ -64,3 +65,50 @@ html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) #
 html[data-graphics="diorama"] #tipText2>div:has(#toggleofflineProgresstimewarp) { padding:12px; }
 html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) .optionContainer { width:100%!important; }
 html[data-graphics="diorama"] #tooltipDiv2:has(#toggleofflineProgresstimewarp) .settingsBtn { width:auto!important; max-width:100%; padding:10px 16px!important; overflow-wrap:anywhere; }
+
+/* Keep the timer and tap targets in place as the original redraws its telemetry and changes maps. */
+#offlineWrapper { overflow-anchor: none; }
+#offlineInnerWrapper { font-variant-numeric: tabular-nums; }
+#offlineInnerWrapper > .row { grid-template-columns: minmax(0, 1fr); }
+#offlineInnerWrapper > .row::before, #offlineInnerWrapper > .row::after { content: none; }
+#offlineInnerWrapper :is(#offlineMapText, #offlineRunDetails, #offlineInMapDescription) { overflow-wrap: anywhere; }
+#offlineProgressWrapper, #offlineExtraInfo, #offlineTimeOffline:has(> #limitTimewarpSlider) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+#offlineProgressWrapper { height: auto; min-height: 36px; }
+#offlineProgressWrapper > *, #offlineProgressWrapper::before, #offlineExtraInfo > span, #offlineExtraInfo::before {
+    grid-area: 1 / 1;
+}
+#offlineProgressText, #offlineProgressWrapper::before {
+    position: relative;
+    padding: 6px;
+    align-self: center;
+    font-weight: bold;
+    font-size: .875rem;
+    line-height: 1.35;
+    text-align: center;
+}
+#offlineProgressText { z-index: 1; }
+#offlineProgressWrapper::before, #offlineExtraInfo::before, #offlineTimeOffline:has(> #limitTimewarpSlider)::after {
+    content: attr(data-sizing-text);
+    visibility: hidden;
+    pointer-events: none;
+}
+#offlineTimeOffline > #limitTimewarpSlider { grid-area: 2 / 1; }
+#offlineTimeOffline > .twLimitSpeed, #offlineTimeOffline:has(> #limitTimewarpSlider)::after {
+    grid-area: 3 / 1;
+    font-size: .875rem;
+    line-height: 1.4;
+}
+#offlineWrapper #offlineMapBtnsInner:not([style*="display: none"]) {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr));
+}
+#offlineWrapper #offlineMapBtnsInner .offlineMapBtn {
+    min-width: 0;
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+#offlineMapText, #offlineInMapDescription { margin-top: 8px; }
+#offlineRunDetails { font-size: 1rem; text-align: left; }

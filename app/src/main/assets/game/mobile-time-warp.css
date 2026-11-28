@@ -1,0 +1,223 @@
+/* Diorama Time Warp. The original controls remain available in Classic and before the adapter mounts. */
+#timeCompass, #compassOverlay:not([open]) { display:none; }
+html[data-graphics="diorama"] #offlineWrapper.compass-ready {
+    animation:none; padding:0!important;
+    background:#35251b url(mobile-assets/diorama/P01-dark-wood.webp) center / 24rem auto!important;
+}
+html[data-graphics="diorama"] #offlineWrapper.compass-ready > #offlineInnerWrapper { display:none; }
+html[data-graphics="diorama"] #timeCompass {
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr) minmax(0,min(calc(16.2rem + 12px),50%)) auto;
+    width:100%;
+    height:100%; min-height:0;
+    padding:0;
+    color:#382817;
+    font:500 1rem/1.35 var(--font-body);
+    text-align:left;
+    font-variant-numeric:tabular-nums;
+    isolation:isolate;
+}
+#timeCompass .compass-content { display:contents; }
+#timeCompass *, #compassOverlay * { box-sizing:border-box; }
+#timeCompass :is(h2,p), #compassOverlay :is(h3,h4,p) { margin:0; }
+#timeCompass svg:not(.dial-lines), #compassOverlay svg { flex:none; }
+#timeCompass button { font:inherit; color:inherit; }
+#timeCompass button:focus-visible, #compassOverlay :focus-visible { outline:3px solid #b68632; outline-offset:-3px; }
+#timeCompass .head {
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    min-height:clamp(48px,8vh,3.65rem); padding:4px clamp(10px,4vw,24px);
+    background:linear-gradient(0deg,#1b1009b8,transparent 66%),url(mobile-assets/diorama/P01-dark-wood.webp) center 21% / cover;
+    border-bottom:2px solid #ac8953;
+    color:#ffe1a6; text-shadow:0 2px 2px #29190d;
+}
+#timeCompass .head h2 { min-width:0; color:inherit; font:650 clamp(1.16rem,7.2vw,1.65rem)/1.05 var(--n-serif); }
+#timeCompass .mini, #compassOverlay .mini {
+    flex:none; display:grid; place-items:center; position:relative;
+    width:44px; height:44px; min-height:44px; margin:0; padding:0;
+    background:transparent!important; color:inherit!important; border:0!important; border-image:none!important; box-shadow:none!important;
+}
+#timeCompass .mini::before, #compassOverlay .mini::before {
+    position:absolute; inset:5px; border:1px solid currentColor; border-radius:50%; opacity:.65; content:"";
+}
+#timeCompass .dial-scene {
+    display:grid; place-content:center; min-height:0; padding:8px 4px; container-type:size;
+    background:linear-gradient(90deg,#21160ec9,#1d241949 24%,#2423173d 75%,#291c13ac),
+               linear-gradient(#35261540,#231a1299),url(mobile-assets/diorama/H04-combat-clearing.webp) 53% center / cover;
+    border-bottom:2px solid #af8b52;
+}
+#timeCompass .dial-plate { display:grid; justify-items:center; filter:drop-shadow(0 3px 4px #21190d); }
+#timeCompass .dial {
+    position:relative; width:min(13rem,26vh,calc(100cqh - 1.8rem)); aspect-ratio:1; border-radius:50%;
+    background:radial-gradient(circle,#f4ddb1 0,#d2b37e 49%,#785a36 59%,#b8965d 62%,#d7b36c 65%,#584028 68%,#e3c48c 70%,#4d3825 72%);
+    box-shadow:0 2px 1px #2b180f,0 0 0 1px #6d4b29;
+}
+#timeCompass .dial-lines { display:block; position:absolute; inset:0; width:100%; height:100%; fill:none; }
+#timeCompass .edge { stroke:#5e452b; stroke-width:1.8; }
+#timeCompass .track { stroke:#594b2f; stroke-width:9; }
+#timeCompass .hand { stroke:#397c70; stroke-width:7; }
+#timeCompass .tick { stroke:#e4c68b; stroke-width:1.3; }
+#timeCompass .dial-middle {
+    position:absolute; inset:18% 15%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.14rem;
+    color:#3a2b1b; text-align:center;
+}
+#timeCompass .dial-middle b { font:650 2.32rem/1.05 var(--n-serif); white-space:nowrap; }
+#timeCompass .dial-middle em { font:600 1.15rem/1 var(--n-serif); }
+#timeCompass .dial-middle small { font:700 .67rem/1.15 var(--font-body); }
+#timeCompass .dial-middle strong { font:650 1.45rem/1.05 var(--n-serif); white-space:nowrap; }
+#timeCompass .dial-base {
+    margin-top:5px; padding:3px 9px; border:1px solid #b8985e; border-radius:4px;
+    background:#251b13ed; color:#ffe4b9; text-align:center; font:700 .75rem/1.2 var(--font-body);
+}
+#timeCompass .paper, #compassOverlay .paper {
+    border:1px solid transparent;
+    border-image:url(mobile-assets/diorama/U01-panel-parchment.webp) 56 62 62 56 fill / 12px 13px 13px 12px stretch;
+    filter:drop-shadow(0 2px 2px #170a0699);
+}
+#timeCompass .c-sheet {
+    display:grid; grid-auto-rows:max-content; align-content:start; min-height:0; overflow:auto; margin:6px 8px;
+    padding:clamp(8px,1.6vh,13px) clamp(13px,4.8vw,22px); color:#412e1b;
+}
+#timeCompass .offline-band {
+    display:flex; justify-content:center; align-items:center; gap:6px; padding:4px 0 7px;
+    border-bottom:1px solid #ac8a5c88; font:650 1.38rem/1.12 var(--n-serif); text-align:center;
+}
+#timeCompass .places {
+    display:flex; justify-content:center; align-items:center; gap:.5rem;
+    min-height:2.45rem; color:#563d24; font-size:.89rem; font-weight:600;
+}
+#timeCompass .places b { font-size:1.1em; color:#342418; }
+#timeCompass .places i { height:.92rem; width:1px; background:#a7885f; }
+#timeCompass .message {
+    display:flex; align-items:center; gap:.5rem; padding:4px 0; border-block:1px solid #b4946669;
+    height:4.7rem; color:#59432e;
+}
+#timeCompass .message p {
+    max-height:100%; min-width:0; overflow:auto; overflow-wrap:anywhere;
+    font:italic 1.12rem/1.15 var(--n-serif); color:inherit; text-align:left;
+}
+#timeCompass .message svg, #timeCompass .places svg { color:#80603c; }
+#timeCompass .dispatch {
+    position:relative; display:grid; grid-auto-rows:max-content; align-content:center; gap:2px; min-height:5rem;
+    padding:5px 17px 3px 0; border:0!important; border-image:none!important; border-radius:0; background:transparent!important; box-shadow:none!important; text-shadow:none!important; text-align:left; color:#43301c!important;
+}
+#timeCompass .dispatch .context-label { color:#745837; font-size:.72rem; font-weight:700; }
+#timeCompass .dispatch b {
+    display:block;
+    font:650 1.25rem/1.05 var(--n-serif); overflow-wrap:anywhere;
+}
+#timeCompass .dispatch small { color:#58432c; font-size:.73rem; font-weight:650; line-height:1.15; }
+#timeCompass .dispatch > svg { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+#timeCompass footer {
+    position:sticky; z-index:1; bottom:0; display:grid; gap:5px; padding:3px 12px max(9px,env(safe-area-inset-bottom));
+    border-top:1px solid #967249;
+    background:linear-gradient(#23170ed9,#21150eea),url(mobile-assets/diorama/P01-dark-wood.webp) center / 23rem;
+    color:#f8ddb1;
+}
+#timeCompass .indicator {
+    display:flex; align-items:center; justify-content:center; gap:.35rem; height:2.35rem;
+    padding:2px 0; font-size:.77rem; line-height:1.16; font-weight:680; text-align:center;
+}
+#timeCompass .is-warn { color:#ffd190; }
+#timeCompass .twins { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+#timeCompass footer button {
+    display:flex; align-items:center; justify-content:center; gap:5px; min-width:0; min-height:46px;
+    padding:7px 10px; border:1px solid transparent; border-radius:0;
+    font-size:.88rem; line-height:1.15; font-weight:800; text-align:center;
+}
+#timeCompass .twins button { height:max(46px,calc(2.1rem + 16px)); }
+#timeCompass .metal { border:1px solid transparent!important; border-image:url(mobile-assets/diorama/U02-button-petrol.webp) 67 fill / 10px stretch!important; background:transparent!important; color:#fff1ce!important; box-shadow:none!important; text-shadow:0 1px 2px #0b241d; }
+#timeCompass .amber { border:1px solid transparent!important; border-image:url(mobile-assets/diorama/U03-button-amber.webp) 69 fill / 10px stretch!important; background:transparent!important; color:#43270e!important; text-shadow:none!important; box-shadow:none!important; }
+#timeCompass .end { border:1px solid #946d45!important; border-image:none!important; border-radius:4px; background:#39241acd!important; color:#f7dbb2!important; box-shadow:none!important; text-shadow:none!important; }
+
+html[data-graphics="diorama"] #compassOverlay[open] {
+    position:fixed; inset:0; z-index:5; display:flex; align-items:flex-end; justify-content:center;
+    width:100%; max-width:none; height:100%; max-height:none; margin:0; padding:6px; border:0; background:#130f0bc4; color:#42311f; text-align:left;
+}
+#compassOverlay::backdrop { background:transparent; }
+#timeCompass [hidden], #compassOverlay [hidden] { display:none!important; }
+#compassOverlay .tray {
+    width:min(100%,34rem); max-height:96%; min-height:0; display:flex; flex-direction:column;
+    padding:12px clamp(14px,4vw,22px) 18px;
+}
+#compassOverlay .tray-top { display:flex; align-items:center; justify-content:space-between; gap:8px; flex:none; margin-bottom:5px; border-bottom:1px solid #ae9065; }
+#compassOverlay .tray h3 { font:650 1.65rem/1.12 var(--n-serif); color:#45311d; }
+#compassOverlay .tray h4 { margin:3px 0 7px; color:#513b25; font:650 1.22rem/1.1 var(--n-serif); }
+#compassOverlay .tray-body { min-height:0; overflow:auto; overscroll-behavior:contain; overflow-wrap:anywhere; }
+#compassOverlay .tray h4 { hyphens:auto; font-size:clamp(1rem,5.4vw,1.22rem); }
+#compassOverlay .tool-section { padding:9px 0; border-bottom:1px solid #ae90655e; }
+#compassOverlay .tool-section:last-child { border-bottom:0; }
+#compassOverlay :is(#offlineMapBtns,#offlineZoneBtns) {
+    position:static; width:100%; height:auto; float:none; margin:0; padding:0; border:0;
+    color:#42311f; font-size:.95rem; text-align:left;
+}
+#compassOverlay #offlineMapText, #compassOverlay #offlineInMapDescription { margin:4px 0 10px; line-height:1.45; }
+#compassOverlay #offlineMapBtnsInner:not([style*="display: none"]) { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+html[data-graphics="diorama"] #compassOverlay #offlineMapBtnsInner .offlineMapBtn {
+    width:100%; margin:0; padding:7px; border:1px solid #a17b47!important; border-image:none!important;
+    border-radius:4px!important; background:linear-gradient(100deg,#fff0cfb3,#c7a66f6e)!important; color:#4e361e!important;
+    text-align:left; font:.86rem/1.25 var(--font-body)!important; white-space:normal;
+}
+#compassOverlay #offlineInMapDescription [style*="font-size"] { font-size:.9rem!important; }
+#compassOverlay .tool-section .offlineExtraBtn, #compassOverlay #offlineZoneBtn {
+    min-height:46px; margin:4px 0; padding:6px 14px; font-size:.93rem!important; font-weight:700;
+}
+#compassOverlay #offlineTimeOffline { text-align:left; color:#4c3823; }
+#compassOverlay #offlineTimeOffline input[type="range"] { width:100%; accent-color:#226e62; }
+#compassOverlay #offlineTimeOffline input[type="range"] {
+    appearance:none; background:transparent!important; border:0!important; box-shadow:none!important; padding:0 8px; margin:0;
+}
+#compassOverlay #offlineTimeOffline input[type="range"]::-webkit-slider-runnable-track {
+    height:6px; border-radius:4px; border:1px solid #9a7444; background:#c9ad7c;
+}
+#compassOverlay #offlineTimeOffline input[type="range"]::-webkit-slider-thumb {
+    appearance:none; width:20px; height:20px; margin-top:-8px; border:2px solid #634d30; border-radius:50%; background:#33796e;
+}
+#compassOverlay #offlineMapBtns { display:flex; flex-direction:column; }
+#compassOverlay #offlineMapText { order:-1; }
+#compassOverlay .map-open { display:flex; align-items:center; gap:.65rem; margin:4px 0 9px; }
+#compassOverlay .map-open img { flex:none; width:3.8rem; height:3.3rem; object-fit:contain; }
+#compassOverlay .map-open :is(b,small) { display:block; overflow-wrap:anywhere; }
+#compassOverlay .map-open b { font:650 1.24rem/1.15 var(--n-serif); }
+#compassOverlay .map-open small { margin-top:3px; font-size:.83rem; }
+#compassOverlay .map-open:not([hidden]) ~ #offlineZoneBtns #offlineInMapDescription > :is(span:first-child,br:nth-child(2)) { display:none; }
+#compassOverlay .notice { color:#684223; font-weight:700; }
+#compassOverlay #offlineFormations { text-align:left; }
+#compassOverlay #offlineFormations .offlineForm { float:none; display:inline-grid; place-items:center; margin:2px; padding:0; }
+#compassOverlay #offlineTimeOffline:has(> #limitTimewarpSlider)::after { content:none; }
+#compassOverlay .tray-body [hidden] { display:none!important; }
+
+/* The dial sizes to its text. Short windows scroll the middle instead of shrinking its brass face. */
+@media (orientation:portrait) {
+    html[data-graphics="diorama"] #timeCompass { grid-template-rows:auto minmax(0,1fr) auto; }
+    #timeCompass .compass-content {
+        display:flex; flex-direction:column; min-height:0; overflow:auto; overscroll-behavior:contain;
+    }
+    #timeCompass .dial-scene {
+        flex:none; min-height:36vh; padding:8px 4px; container-type:normal;
+    }
+    #timeCompass .dial {
+        width:min(90vw,max(12.15rem,calc(clamp(190px,26vh,210px) * var(--text-zoom,1))));
+    }
+    #timeCompass .c-sheet { flex:1 0 auto; overflow:visible; }
+}
+@media (orientation:landscape) and (min-width:510px) and (max-height:620px) {
+    html[data-graphics="diorama"] #timeCompass {
+        grid-template-columns:minmax(0, .87fr) minmax(0, 1.13fr);
+        grid-template-rows:auto minmax(0,1fr) auto; min-height:100%; height:100%;
+    }
+    #timeCompass .head { grid-column:1/-1; min-height:44px; padding-block:0; }
+    #timeCompass .dial-scene { padding:2px; overflow:auto; align-content:safe center; }
+    #timeCompass .dial { width:min(37vw,max(9.8rem,calc(158px * var(--text-zoom,1)))); }
+    #timeCompass .dial-base { padding:2px 6px; margin-top:2px; font-size:.67rem; }
+    #timeCompass .dial-middle b { font-size:1.65rem; }
+    #timeCompass .dial-middle small { font-size:.6rem; }
+    #timeCompass .dial-middle strong { font-size:1.1rem; }
+    #timeCompass .c-sheet { min-height:0; overflow-y:auto; margin:4px; padding:7px 13px; }
+    #timeCompass .offline-band { font-size:1rem; padding-block:2px; }
+    #timeCompass .places { min-height:1.5rem; }
+    #timeCompass .message { height:3rem; }
+    #timeCompass .message p { font-size:1rem; }
+    #timeCompass .dispatch { min-height:3.2rem; gap:1px; }
+    #timeCompass footer { grid-column:1/-1; grid-template-columns:minmax(0,.95fr) minmax(0,2fr) minmax(0,.9fr); align-items:center; padding:4px 8px; }
+    #timeCompass .indicator { height:3.1rem; font-size:.7rem; }
+}

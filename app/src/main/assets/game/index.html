@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="mobile-symbols.css">
     <link rel="stylesheet" href="mobile-b2.css">
     <link rel="stylesheet" href="mobile-away.css">
+    <link rel="stylesheet" href="mobile-time-warp.css">
     <link rel="stylesheet" href="mobile-design.css">
     <link rel="stylesheet" href="mobile-compact.css">
     <link rel="stylesheet" href="mobile-map-workshop.css">
@@ -119,20 +120,7 @@
 				</div>
 			</div>
 			<div class='row'>
-				<div id='offlineMapBtns' class='col-xs-6'>
-					<div id='offlineMapText' style='text-align: center;'>Wanna run a map?</div>
-					<div id='offlineMapBtnsInner'>
-						<span id="offlineMapBtn0" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(0);">World Level Map</span>
-						<span id="offlineMapBtn1" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-1);">-1 Level map</span>
-						<span id="offlineMapBtn2" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-2);">-2 Level map</span>
-						<span id="offlineMapBtn3" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-3);">-3 Level map</span>
-					</div>
-				</div>
-				<div id='offlineZoneBtns' class='col-xs-6'>
-					<div id='offlineInMapDescription' style='text-align: center;'></div>
-					<span id='offlineZoneBtn' onclick="offlineProgress.leaveMap();" class="offlineExtraBtn btn btn-md btn-primary">Back to World</span>
-				</div>
-				<div id='offlineExtraBtnsContainer' class='col-xs-6' style='position: absolute; left: 50%; width: 25%;'>
+				<div id='offlineExtraBtnsContainer' class='col-xs-6'>
 					<div id='offlineTimeOffline'></div>
 					<div class='btn btn-lg btn-info offlineExtraBtn' onclick="tooltip('Lost Time', null, 'update');">What is This?!</div>
 					<div class='btn btn-lg btn-danger offlineExtraBtn' onclick='offlineProgress.finish()'>Stop Here</div>
@@ -140,8 +128,22 @@
 					<div class='btn btn-lg btn-primary offlineExtraBtn' id='offlineFightBtn' onclick='offlineProgress.fightClicked()'>Start Fighting</div>
 					<div id='offlineFormations'></div>
 					<div id='offlineSettingContainer'></div>
-					<div id='offlineEffective'></div>
 				</div>
+				<div id='offlineMapBtns' class='col-xs-6'>
+					<div id='offlineMapBtnsInner'>
+						<span id="offlineMapBtn0" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(0);">World Level Map</span>
+						<span id="offlineMapBtn1" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-1);">-1 Level map</span>
+						<span id="offlineMapBtn2" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-2);">-2 Level map</span>
+						<span id="offlineMapBtn3" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-3);">-3 Level map</span>
+					</div>
+					<div id='offlineMapText' style='text-align: center;'>Wanna run a map?</div>
+				</div>
+				<div id='offlineZoneBtns' class='col-xs-6'>
+					<span id='offlineZoneBtn' onclick="offlineProgress.leaveMap();" class="offlineExtraBtn btn btn-md btn-primary">Back to World</span>
+					<div id='offlineInMapDescription' style='text-align: center;'></div>
+				</div>
+				<div id='offlineRunDetails'></div>
+				<div id='offlineEffective'></div>
 			</div>
 			
 		</div>
@@ -1534,6 +1536,8 @@
 <script src="mobile-i18n-de-rest.js"></script>
 <script src="mobile-i18n-de-buttons.js"></script>
 <script src="mobile-i18n-de-away.js"></script>
+<script src="mobile-away-layout.js"></script>
+<script src="mobile-time-compass.js"></script>
 <script src="mobile-i18n-de-perk-research.js"></script>
 <script>window.mobileStartupScriptsReady = true;</script>
 </body>

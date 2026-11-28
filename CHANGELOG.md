@@ -1,5 +1,11 @@
 # Änderungen
 
+## 1.45 – Zeitkompass
+- The Diorama time compass shows offline progress and remaining time on its dial. Open Maps or Controls from the wooden bar while catch-up runs.
+
+## 1.40 – Stabile Aufholansicht
+- During offline catch-up, changing progress messages no longer shift the controls when text wraps.
+
 ## 1.39 – Holz und Pergament für Forschung und Masteries
 - Research, its automation settings and the illustrated Mastery field guide now share the wooden frames, parchment panels and gold buttons of the other Diorama screens.
 

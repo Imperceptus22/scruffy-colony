@@ -1,6 +1,22 @@
 // Generated from CHANGELOG.md. Run node tools/build-mobile-changelog.cjs.
 var MobileChangelog = Object.freeze([
   {
+    "version": "1.45",
+    "label": "1.45",
+    "title": "Zeitkompass",
+    "notes": [
+      "The Diorama time compass shows offline progress and remaining time on its dial. Open Maps or Controls from the wooden bar while catch-up runs."
+    ]
+  },
+  {
+    "version": "1.40",
+    "label": "1.40",
+    "title": "Stabile Aufholansicht",
+    "notes": [
+      "During offline catch-up, changing progress messages no longer shift the controls when text wraps."
+    ]
+  },
+  {
     "version": "1.39",
     "label": "1.39",
     "title": "Holz und Pergament für Forschung und Masteries",

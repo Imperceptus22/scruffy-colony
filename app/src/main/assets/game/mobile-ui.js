@@ -523,6 +523,7 @@ var TrimpsUI = (() => {
         select('colony');
     }
     function back() {
+        if (typeof MobileTimeCompass !== 'undefined' && MobileTimeCompass.back()) return true;
         if (typeof MobileResearchAutomation !== 'undefined' && MobileResearchAutomation.back()) return true;
         if (typeof MobileRoboTrimp !== 'undefined' && MobileRoboTrimp.back()) return true;
         if (typeof MobileSaveManager !== 'undefined' && MobileSaveManager.back()) return true;

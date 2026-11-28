@@ -111,7 +111,7 @@ var MobileI18nDeAway = (() => {
         }
         return {render};
     }
-    if (typeof window !== 'undefined' && window.document) install(window);
-    return {strings, patterns, duration, install};
+    const installed = typeof window !== 'undefined' && window.document ? install(window) : null;
+    return {strings, patterns, duration, install, render:installed?.render};
 })();
 if (typeof module !== 'undefined') module.exports = MobileI18nDeAway;
